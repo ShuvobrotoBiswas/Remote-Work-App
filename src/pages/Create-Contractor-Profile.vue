@@ -189,23 +189,40 @@
     <div class="row flex-center items-start">
       <div flat bordered class="my-card" style="max-width: 800px">
         <div class="q-pa-md">
-          <div class="col-9 text-h7 text-bold">
+          <div class="col-9 text-h6 text-bold">
             Add relevent projects from you portfolio
           </div>
         </div>
         <div class="row bid1 text-center">
           <div class="col bid2">
-            <q-img src="~assets/Avator5.png" sizes="10px"> </q-img>
+            <q-img src="~assets/Avator5.png" class="image1"> </q-img>
+            <div class="q-pa-mg text-center text-h7">LOGO Design</div>
           </div>
           <div class="col bid2">
-            <q-img src="~assets/Avator6.png"> </q-img>
+            <q-img src="~assets/Avator6.png" class="image1"> </q-img>
+            <div class="q-pa-mg text-center text-h7">LOGO Design</div>
           </div>
           <div class="col bid2">
-            <q-img src="~assets/Avator7.png"> </q-img>
+            <q-img src="~assets/Avator7.png" class="image1"> </q-img>
+            <div class="q-pa-mg text-center text-h7">LOGO Design</div>
           </div>
           <div class="col bid2">
-            <q-img src="~assets/Avator8.png"> </q-img>
+            <q-img src="~assets/Avator8.png" class="image1"> </q-img>
+            <div class="q-pa-mg text-center text-h7">LOGO Design</div>
           </div>
+        </div>
+        <!-- <div class="flex-break"></div> -->
+        <!-- Add Company Div -->
+
+        <div class="row q-pa-md">
+          <q-btn
+            size="10px"
+            rounded
+            color="black"
+            icon="add"
+            label="Add Companies"
+            class="text-white text-h7"
+          ></q-btn>
         </div>
       </div>
     </div>
@@ -218,31 +235,54 @@
           <div class="row">
             <div class="col-9 text-h6">Add Company</div>
             <div class="col-6">
-              <q-img
-                src="~assets/Avator2.png"
-                style="height: 40px; max-width: 40px"
-              >
-              </q-img>
+              <div rounded class="company">
+                <q-img class="flex-center"
+                  src="~assets/Avator2.png"
+                  style="height: 40px; max-width: 40px"
+                >
+                </q-img>
+                <q-btn size="8px" label="Change logo"></q-btn>
+              </div>
+              <div class="text-bold text-h7 q-py-md">
+                Company Name (Company #1)*
+              </div>
+              <div class="text-bold text-h7">
+                Address:* (Via dei faggi 24, Roma, 254321, Italy)
+              </div>
             </div>
-            <div class="col-6"></div>
-            <div class="row">
-              <div class="col"></div>
-              <div class="row"></div>
-              <div class="row"></div>
-              <div class="row"></div>
-              <div class="row"></div>
-              <div class="row"></div>
-              <div class="row"></div>
-              <div class="row"></div>
-              <div class="row"></div>
-              <q-btn
-                size="10px"
-                rounded
-                color="black"
-                icon="edit"
-                label="Edit Profile"
-                class="text-white text-h7"
-              ></q-btn>
+            <div class="col-6">
+              <div > <strong>Fiscal code:*</strong> (MTS SMI 84R11 Z114H) </div>
+              <div class="q-py-md"> <strong>Add Legal Note company owner</strong> </div>
+              <div> <strong>Register number:*</strong> (123 456 789) </div>
+              <div > <strong>Web address:</strong> (https://domain.com) </div>
+              <div class="q-py-md">  <strong>Phone:</strong> (+39 321 654 987) </div>
+              <div> <strong>Freelanchers associated</strong> </div>
+              <div>
+                <div class="q-py-md">
+                <q-btn
+                  size="7px"
+                  rounded
+                  color="white"
+                  class="text-black q-mr-sm text-h7"
+                  >Gil Dobrica ✠</q-btn
+                >
+                <q-btn
+                  size="7px"
+                  rounded
+                  color="white"
+                  class="text-black q-mr-sm text-h7"
+                  > Viorica Dancila ✠</q-btn
+                >
+                <q-btn
+                  size="7px"
+                  rounded
+                  color="white"
+                  class="text-black q-mr-sm text-h7"
+                  >Gabriel Cotabita ✠</q-btn
+                >
+              </div>
+              </div>
+              <div> Hello </div>
             </div>
           </div>
         </div>
@@ -252,7 +292,6 @@
     <!-- Footer Div -->
 
     <div class="row flex-center q-pa-md">
-      <!-- <div class="col"></div> -->
       <q-btn
         size="10px"
         rounded
@@ -308,4 +347,14 @@ export default defineComponent({
 .bid2
   border: 1px solid rgba(86,61,124,.2)
   height: 100px
+
+.image1
+  height: 70px
+  width: 80px
+
+.company
+  background: white
+  height: 75px
+  width: 85px
+  rounded
 </style>
