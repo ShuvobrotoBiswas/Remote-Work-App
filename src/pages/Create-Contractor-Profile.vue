@@ -236,7 +236,8 @@
             <div class="col-9 text-h6">Add Company</div>
             <div class="col-6">
               <div rounded class="company">
-                <q-img class="flex-center"
+                <q-img
+                  class="flex-center"
                   src="~assets/Avator2.png"
                   style="height: 40px; max-width: 40px"
                 >
@@ -251,38 +252,55 @@
               </div>
             </div>
             <div class="col-6">
-              <div > <strong>Fiscal code:*</strong> (MTS SMI 84R11 Z114H) </div>
-              <div class="q-py-md"> <strong>Add Legal Note company owner</strong> </div>
-              <div> <strong>Register number:*</strong> (123 456 789) </div>
-              <div > <strong>Web address:</strong> (https://domain.com) </div>
-              <div class="q-py-md">  <strong>Phone:</strong> (+39 321 654 987) </div>
-              <div> <strong>Freelanchers associated</strong> </div>
+              <div><strong>Fiscal code:*</strong> (MTS SMI 84R11 Z114H)</div>
+              <div class="q-py-md">
+                <strong>Add Legal Note company owner</strong>
+              </div>
+              <div><strong>Register number:*</strong> (123 456 789)</div>
+              <div><strong>Web address:</strong> (https://domain.com)</div>
+              <div class="q-py-md">
+                <strong>Phone:</strong> (+39 321 654 987)
+              </div>
+              <div><strong>Freelanchers associated</strong></div>
               <div>
                 <div class="q-py-md">
+                  <q-btn
+                    size="7px"
+                    rounded
+                    color="white"
+                    class="text-black q-mr-sm text-h7"
+                    >Gil Dobrica ✠</q-btn
+                  >
+                  <q-btn
+                    size="7px"
+                    rounded
+                    color="white"
+                    class="text-black q-mr-sm text-h7"
+                  >
+                    Viorica Dancila ✠</q-btn
+                  >
+                  <q-btn
+                    size="7px"
+                    rounded
+                    color="white"
+                    class="text-black q-mr-sm text-h7"
+                    >Gabriel Cotabita ✠</q-btn
+                  >
+                </div>
                 <q-btn
                   size="7px"
                   rounded
                   color="white"
-                  class="text-black q-mr-sm text-h7"
-                  >Gil Dobrica ✠</q-btn
-                >
-                <q-btn
-                  size="7px"
-                  rounded
-                  color="white"
-                  class="text-black q-mr-sm text-h7"
-                  > Viorica Dancila ✠</q-btn
-                >
-                <q-btn
-                  size="7px"
-                  rounded
-                  color="white"
-                  class="text-black q-mr-sm text-h7"
-                  >Gabriel Cotabita ✠</q-btn
+                  outline
+                  class="text-black q-mr-sm text-bold text-h7"
+                  icon="add"
+                  >Add freelance account</q-btn
                 >
               </div>
-              </div>
-              <div> Hello </div>
+            </div>
+            <div class="row text-bold">Add an Company description</div>
+            <div class="row flex-left description">
+             <input><input>
             </div>
           </div>
         </div>
@@ -357,4 +375,6 @@ export default defineComponent({
   height: 75px
   width: 85px
   rounded
+
+.description
 </style>
