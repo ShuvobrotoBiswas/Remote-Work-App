@@ -64,7 +64,7 @@
         </q-card-section>
         <q-separator />
 
-        <!-- Card 2 & 3 Div -->
+        <!-- Card 2 & 3 & 4 Div -->
 
         <div class="row">
           <div class="q-pa-md col-6 flex-center items-start q-gutter-md">
@@ -102,6 +102,59 @@
               </div>
             </q-card>
           </div>
+
+          <!-- Card 2 -->
+
+          <div class="q-pa-md col-6 flex-center items-start q-gutter-md">
+            <q-card
+              class="my-card text-black bg-grey-4"
+              style="max-width: 360px"
+            >
+              <div class="q-pa-md">
+                <div class="row">
+                  <div class="col-9 text-h7 text-bold">
+                    Company [Company#1]/ID verification
+                  </div>
+                  <div class="col-9 text-h7">
+                    Upload documents for verification
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col text-bold text-h7 text-center">
+                  Company certificate
+                </div>
+                <div class="col text-bold text-h7 text-center">
+                  Billing Address
+                </div>
+                <div class="col text-bold text-h7 text-center">Fiscal Code</div>
+                <div class="col text-bold text-h7 text-center">
+                  Legal note Company Owner
+                </div>
+              </div>
+              <div class="row flex-center">
+                <div class="col flex-center">
+                  <q-btn color="black" round dense icon="add"> </q-btn>
+                  <div>.</div>
+                </div>
+                <div class="col flex-center">
+                  <q-btn color="black" round dense icon="done"> </q-btn>
+                  <div>Billing.pdf</div>
+                </div>
+                <div class="col flex-center">
+                  <q-btn color="black" round dense icon="add"> </q-btn>
+                  <div>.</div>
+                </div>
+                <div class="col flex-center">
+                  <q-btn color="black" round dense icon="done"> </q-btn>
+                  <div>Legal.pdf</div>
+                </div>
+              </div>
+            </q-card>
+          </div>
+
+          <!-- Card 3 -->
+
           <div class="q-pa-md col-6 flex-center items-start q-gutter-md">
             <q-card
               class="my-card text-black bg-grey-4"
@@ -160,7 +213,7 @@
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: "IndexPage",
+  // name: "IndexPage",
   setup() {
     return {
       lorem:
