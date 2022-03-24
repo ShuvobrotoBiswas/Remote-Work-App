@@ -1,5 +1,30 @@
 <template>
   <div>
+    <q-header>
+      <q-toolbar class="bg-white">
+        <q-toolbar-title>
+          <div class="text-green">
+            <q-img
+              src="~assets/Avator3.png"
+              style="height: 35px; max-width: 110px"
+            ></q-img>
+          </div>
+        </q-toolbar-title>
+
+        <div class="text-grey text-bold">Hello,</div>
+        <div class="text-black text-bold">Meat</div>
+        <div>
+          <q-avatar>
+            <q-img
+              src="~assets/Avator14.png"
+              style="height: 27px; max-width: 27px"
+            >
+            </q-img>
+          </q-avatar>
+        </div>
+        <div class="text-black q-mr-sm">LOGOUT</div>
+      </q-toolbar>
+    </q-header>
     <div class="flex-break"></div>
     <div class="text-h7 text-center">Hi Florin, welcome to your dashboard!</div>
     <div class="flex-break q-py-md"></div>
@@ -59,7 +84,7 @@
       <div flat bordered class="my-card" style="max-width: 750px">
         <q-card-section>
           <div class="text-h6 text-center">
-            Your Profile/Accounts (account and companies)
+            Your client Profile/Accounts (client and companies)
           </div>
         </q-card-section>
         <q-separator />
@@ -67,13 +92,12 @@
           <div class="row">
             <div class="col-5">
               <!-- <q-avatar size="100px" class="q-mb-sm"> -->
-              <q-img sizes="200px" src="~/assets/Avator1.png"></q-img>
+              <q-img sizes="200px" src="~/assets/Avator13.png"></q-img>
               <!-- </q-avatar> -->
             </div>
 
-            
             <div class="col-7">
-              <div class="text-h6 text-bold">Tom Petty</div>
+              <div class="text-h6 text-bold">Meat Loaf</div>
               <div class="text-h7 q-py-md">
                 <strong>Address:</strong> Street Name, etc.
               </div>
@@ -84,7 +108,7 @@
                 <strong>Phone:</strong> +04072123456789
               </div>
               <div class="text-h7">
-                <strong>CV:</strong> Tom Petty Europass CV
+                <strong>CV:</strong> Meat Loaf Europass CV
               </div>
               <div class="q-py-md">
                 <q-btn
@@ -162,44 +186,6 @@
               <div class="q-py-md"></div>
               <strong>Address:</strong> Via dei Faggi 24 , Rome, 254321, Italy
               <div></div>
-              <br />
-              <strong>Description</strong> <br />
-              <!-- <div class="q-py-md"></div> -->
-              {{ lorem }} <br />
-              <div class="q-py-md"></div>
-              <strong>Price range:</strong> €15-55/hour <br />
-              <div class="q-py-md"></div>
-              <Strong>Skills</Strong>
-              <div>
-                <q-btn
-                  size="7px"
-                  rounded
-                  color="white"
-                  class="text-black q-mr-sm text-h7"
-                  >Graphic Design</q-btn
-                >
-                <q-btn
-                  size="7px"
-                  rounded
-                  color="white"
-                  class="text-black q-mr-sm text-h7"
-                  >Logo Design</q-btn
-                >
-                <q-btn
-                  size="7px"
-                  rounded
-                  color="white"
-                  class="text-black q-mr-sm text-h7"
-                  >Web design</q-btn
-                >
-                <q-btn
-                  size="7px"
-                  rounded
-                  color="white"
-                  class="text-black text-h7"
-                  >UI design</q-btn
-                >
-              </div>
             </div>
             <div class="col-6">
               <div class="text-h7">
@@ -215,79 +201,6 @@
                 <strong>Website:</strong> https://domain.com
               </div>
               <div class="text-h7"><strong>Phone:</strong> +39 321 654 987</div>
-              <div class="text-h7 q-py-md">
-                <strong>Freelanchers associated</strong>
-              </div>
-              <div>
-                <q-btn
-                  size="7px"
-                  rounded
-                  color="white"
-                  class="text-black q-mr-sm text-h7"
-                  >Gill Dobrica</q-btn
-                >
-                <q-btn
-                  size="7px"
-                  rounded
-                  color="white"
-                  class="text-black q-mr-sm text-h7"
-                  >Viorica Dancila</q-btn
-                >
-                <q-btn
-                  size="7px"
-                  rounded
-                  color="white"
-                  class="text-black text-h7"
-                  >Gabriel Cotabita</q-btn
-                >
-              </div>
-              <br />
-              <div class="text-h7 q-py-md">
-                <strong>Projects job range</strong>
-              </div>
-              <div>
-                <q-btn
-                  size="7px"
-                  rounded
-                  color="white"
-                  class="text-black q-mr-sm text-h7"
-                  >Branding & Logo Design</q-btn
-                >
-                <q-btn
-                  size="7px"
-                  rounded
-                  color="white"
-                  class="text-black text-h7"
-                  >Web Design</q-btn
-                >
-              </div>
-              <br />
-              <div class="text-h7 q-py-md">
-                <strong>Relevent projects from your portfolio</strong>
-              </div>
-              <div>
-                <q-btn
-                  size="7px"
-                  rounded
-                  color="white"
-                  class="text-black q-mr-sm text-h7"
-                  >Logo Design</q-btn
-                >
-                <q-btn
-                  size="7px"
-                  rounded
-                  color="white"
-                  class="text-black q-mr-sm text-h7"
-                  >Website Design</q-btn
-                >
-                <q-btn
-                  size="7px"
-                  rounded
-                  color="white"
-                  class="text-black text-h7"
-                  >UX Design</q-btn
-                >
-              </div>
             </div>
             <div class="row">
               <div class="col"></div>
@@ -304,7 +217,7 @@
                 rounded
                 color="black"
                 icon="edit"
-                label="Edit Profile"
+                label="Edit Company"
                 class="text-white text-h7"
               ></q-btn>
             </div>
@@ -331,45 +244,6 @@
               <Strong>Company #2</Strong> <br />
               <div class="q-py-md"></div>
               <strong>Address:</strong> Via dei Faggi 24 , Rome, 254321, Italy
-              <div></div>
-              <br />
-              <strong>Description</strong> <br />
-              <!-- <div class="q-py-md"></div> -->
-              {{ lorem }} <br />
-              <div class="q-py-md"></div>
-              <strong>Price range:</strong> €15-55/hour <br />
-              <div class="q-py-md"></div>
-              <Strong>Skills</Strong>
-              <div>
-                <q-btn
-                  size="7px"
-                  rounded
-                  color="white"
-                  class="text-black q-mr-sm text-h7"
-                  >Graphic Design</q-btn
-                >
-                <q-btn
-                  size="7px"
-                  rounded
-                  color="white"
-                  class="text-black q-mr-sm text-h7"
-                  >Logo Design</q-btn
-                >
-                <q-btn
-                  size="7px"
-                  rounded
-                  color="white"
-                  class="text-black q-mr-sm text-h7"
-                  >Web design</q-btn
-                >
-                <q-btn
-                  size="7px"
-                  rounded
-                  color="white"
-                  class="text-black text-h7"
-                  >UI design</q-btn
-                >
-              </div>
             </div>
             <div class="col-6">
               <div class="text-h7">
@@ -385,79 +259,6 @@
                 <strong>Website:</strong> https://domain.com
               </div>
               <div class="text-h7"><strong>Phone:</strong> +39 321 654 987</div>
-              <div class="text-h7 q-py-md">
-                <strong>Freelanchers associated</strong>
-              </div>
-              <div>
-                <q-btn
-                  size="7px"
-                  rounded
-                  color="white"
-                  class="text-black q-mr-sm text-h7"
-                  >Gill Dobrica</q-btn
-                >
-                <q-btn
-                  size="7px"
-                  rounded
-                  color="white"
-                  class="text-black q-mr-sm text-h7"
-                  >Viorica Dancila</q-btn
-                >
-                <q-btn
-                  size="7px"
-                  rounded
-                  color="white"
-                  class="text-black text-h7"
-                  >Gabriel Cotabita</q-btn
-                >
-              </div>
-              <br />
-              <div class="text-h7 q-py-md">
-                <strong>Projects job range</strong>
-              </div>
-              <div>
-                <q-btn
-                  size="7px"
-                  rounded
-                  color="white"
-                  class="text-black q-mr-sm text-h7"
-                  >Branding & Logo Design</q-btn
-                >
-                <q-btn
-                  size="7px"
-                  rounded
-                  color="white"
-                  class="text-black text-h7"
-                  >Web Design</q-btn
-                >
-              </div>
-              <br />
-              <div class="text-h7 q-py-md">
-                <strong>Relevent projects from your portfolio</strong>
-              </div>
-              <div>
-                <q-btn
-                  size="7px"
-                  rounded
-                  color="white"
-                  class="text-black q-mr-sm text-h7"
-                  >Logo Design</q-btn
-                >
-                <q-btn
-                  size="7px"
-                  rounded
-                  color="white"
-                  class="text-black q-mr-sm text-h7"
-                  >Website Design</q-btn
-                >
-                <q-btn
-                  size="7px"
-                  rounded
-                  color="white"
-                  class="text-black text-h7"
-                  >UX Design</q-btn
-                >
-              </div>
             </div>
             <div class="row">
               <div class="col"></div>
@@ -483,7 +284,6 @@
       </q-card>
     </div>
     <div class="row flex-center q-pa-md">
-      <!-- <div class="col"></div> -->
       <q-btn
         size="10px"
         rounded
