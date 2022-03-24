@@ -122,15 +122,6 @@
                         type="checkbox"
                         v-model="group"
                       />
-                      <!-- <q-item clickable v-close-popup>
-                        <q-item-section>Adobe Illustrator</q-item-section>
-                      </q-item>
-                      <q-item clickable v-close-popup>
-                        <q-item-section>Adobe Photoshop</q-item-section>
-                      </q-item>
-                      <q-item clickable v-close-popup>
-                        <q-item-section>Adobe XD</q-item-section>
-                      </q-item> -->
                     </q-list>
                   </q-menu>
                 </template>
@@ -247,8 +238,9 @@
               <div class="text-bold text-h7 q-py-md">
                 Company Name (Company #1)*
               </div>
-              <div class=" text-h7">
-                <strong>Address:*</strong> (Via dei faggi 24, Roma, 254321, Italy)
+              <div class="text-h7">
+                <strong>Address:*</strong> (Via dei faggi 24, Roma, 254321,
+                Italy)
               </div>
             </div>
             <div class="col-6">
@@ -301,11 +293,30 @@
             <div class="row text-bold">Add an Company description</div>
             <div class="q-pa-md" style="max-width: 740px; min-width: 740px">
               <q-input v-model="description" clearable outlined />
-            <div class="row text-bold">Price range*</div>
-            <input type="text" v-model="pricelist1">
-            <input type="text" v-model="pricelist2">
+              <div class="row text-bold">Price range*</div>
+              <input type="text" v-model="pricelist1" />
+              <input type="text" v-model="pricelist2" />
             </div>
-            <div class="row text-bold">Projects Categories</div>
+            <div>
+              <div class="row text-bold">Projects Categories</div>
+              <q-input v-model="search" outlined type="search">
+                <template v-slot:append>
+                  <q-icon name="search" />
+                  <q-menu>
+                    <q-list style="min-width: 250px">
+                      <q-item clickable v-close-popup>
+                        <q-item-section>Graphic Tools</q-item-section>
+                      </q-item>
+                      <q-option-group
+                        :options="options"
+                        type="checkbox"
+                        v-model="group"
+                      />
+                    </q-list>
+                  </q-menu>
+                </template>
+              </q-input>
+            </div>
           </div>
         </div>
       </q-card>
@@ -350,12 +361,8 @@ export default defineComponent({
       description: ref(
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
       ),
-      pricelist1: ref(
-        '15|'
-      ),
-      pricelist2: ref(
-        '55|'
-      ),
+      pricelist1: ref("15|"),
+      pricelist2: ref("55|"),
     };
   },
 });
