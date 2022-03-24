@@ -193,18 +193,18 @@
             Add relevent projects from you portfolio
           </div>
         </div>
-        <div class="row bid1 text-center ">
+        <div class="row bid1 text-center">
           <div class="col bid2">
-            hello
+            <q-img src="~assets/Avator5.png" sizes="10px"> </q-img>
           </div>
           <div class="col bid2">
-            hello
+            <q-img src="~assets/Avator6.png"> </q-img>
           </div>
           <div class="col bid2">
-            hello
+            <q-img src="~assets/Avator7.png"> </q-img>
           </div>
           <div class="col bid2">
-            hello
+            <q-img src="~assets/Avator8.png"> </q-img>
           </div>
         </div>
       </div>
