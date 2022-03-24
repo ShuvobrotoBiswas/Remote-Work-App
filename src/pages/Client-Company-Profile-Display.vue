@@ -91,9 +91,7 @@
         <div class="q-pa-md">
           <div class="row">
             <div class="col-5">
-              <!-- <q-avatar size="100px" class="q-mb-sm"> -->
               <q-img sizes="200px" src="~/assets/Avator13.png"></q-img>
-              <!-- </q-avatar> -->
             </div>
 
             <div class="col-7">
