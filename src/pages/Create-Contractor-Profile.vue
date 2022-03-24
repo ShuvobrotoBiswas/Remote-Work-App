@@ -202,8 +202,6 @@
             <div class="q-pa-mg text-center text-h7">LOGO Design</div>
           </div>
         </div>
-        <!-- <div class="flex-break"></div> -->
-        <!-- Add Company Div -->
 
         <div class="row q-pa-md">
           <q-btn
@@ -297,28 +295,186 @@
               <input type="text" v-model="pricelist1" />
               <input type="text" v-model="pricelist2" />
             </div>
+
             <div>
               <div class="row text-bold">Projects Categories</div>
-              <q-input v-model="search" outlined type="search">
+              <q-input
+                style="width: 720px"
+                v-model="search"
+                outlined
+                type="search"
+              >
                 <template v-slot:append>
                   <q-icon name="search" />
                   <q-menu>
                     <q-list style="min-width: 250px">
                       <q-item clickable v-close-popup>
-                        <q-item-section>Graphic Tools</q-item-section>
+                        <q-item-section class="text-bold"
+                          >Design</q-item-section
+                        >
                       </q-item>
                       <q-option-group
-                        :options="options"
+                        :options="options1"
                         type="checkbox"
-                        v-model="group"
+                        v-model="group1"
                       />
+                      <q-item clickable v-close-popup>
+                        <q-item-section class="text-bold"
+                          >Development</q-item-section
+                        >
+                      </q-item>
                     </q-list>
                   </q-menu>
                 </template>
               </q-input>
+              <div>
+                <div class="q-py-md">
+                  <q-btn
+                    size="7px"
+                    rounded
+                    color="white"
+                    class="text-black q-mr-sm text-h7"
+                    >Branding & Logo Design ✠</q-btn
+                  >
+                  <q-btn
+                    size="7px"
+                    rounded
+                    color="white"
+                    class="text-black q-mr-sm text-h7"
+                  >
+                    Web Design ✠</q-btn
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="row text-bold">
+              <div class="col text-bold">
+                Projects Categories
+                <q-input
+                  style="width: 720px"
+                  v-model="search"
+                  outlined
+                  type="search"
+                >
+                  <template v-slot:append>
+                    <q-icon name="search" />
+                    <q-menu>
+                      <q-list style="min-width: 250px">
+                        <q-item clickable v-close-popup>
+                          <q-item-section class="text-bold"
+                            >Design</q-item-section
+                          >
+                        </q-item>
+                        <q-option-group
+                          :options="options1"
+                          type="checkbox"
+                          v-model="group1"
+                        />
+                        <q-item clickable v-close-popup>
+                          <q-item-section class="text-bold"
+                            >Development</q-item-section
+                          >
+                        </q-item>
+                      </q-list>
+                    </q-menu>
+                  </template>
+                </q-input>
+                <div>
+                  <div class="q-py-md">
+                    <q-btn
+                      size="7px"
+                      rounded
+                      color="white"
+                      class="text-black q-mr-sm text-h7"
+                      >Branding & Logo Design ✠</q-btn
+                    >
+                    <q-btn
+                      size="7px"
+                      rounded
+                      color="white"
+                      class="text-black q-mr-sm text-h7"
+                    >
+                      Graphic Design ✠</q-btn
+                    >
+                    <q-btn
+                      size="7px"
+                      rounded
+                      color="white"
+                      class="text-black q-mr-sm text-h7"
+                    >
+                      Logo Design ✠</q-btn
+                    >
+                    <q-btn
+                      size="7px"
+                      rounded
+                      color="white"
+                      class="text-black q-mr-sm text-h7"
+                    >
+                      Web Design ✠</q-btn
+                    >
+                    <q-btn
+                      size="7px"
+                      rounded
+                      color="white"
+                      class="text-black q-mr-sm text-h7"
+                    >
+                      UI Design ✠</q-btn
+                    >
+                    <q-btn
+                      size="7px"
+                      rounded
+                      color="white"
+                      class="text-black q-mr-sm text-h7"
+                    >
+                      UX Design ✠</q-btn
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row flex-center items-start">
+              <div flat bordered class="my-card" style="max-width: 800px">
+                <div class="q-pa-md">
+                  <div class="col-9 text-h6 text-bold">
+                    Add relevent projects from you portfolio
+                  </div>
+                </div>
+                <div class="row bid1 text-center">
+                  <div class="col bid2">
+                    <q-img src="~assets/Avator5.png" class="image1"> </q-img>
+                    <div class="q-pa-mg text-center text-h7">LOGO Design</div>
+                  </div>
+                  <div class="col bid2">
+                    <q-img src="~assets/Avator6.png" class="image1"> </q-img>
+                    <div class="q-pa-mg text-center text-h7">Website Design</div>
+                  </div>
+                  <div class="col bid2">
+                    <q-img src="~assets/Avator7.png" class="image1"> </q-img>
+                    <div class="q-pa-mg text-center text-h7">UX Design</div>
+                  </div>
+                  <div class="col bid2">
+                    <q-img src="~assets/Avator8.png" class="image1"> </q-img>
+                    <div class="q-pa-mg text-center text-h7">+ Add Project</div>
+                  </div>
+                </div>
+
+                <div class="row q-pa-md">
+                  <q-btn
+                    size="10px"
+                    rounded
+                    color="black"
+                    icon="add"
+                    label="Add Companies"
+                    class="text-white text-h7"
+                  ></q-btn>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+        <div>* Fields marked with "*" are mendatory.</div>
       </q-card>
     </div>
 
@@ -331,7 +487,14 @@
         color="black"
         icon="add"
         label="Add Companies"
-        class="text-white text-h7"
+        class="text-white text-h7 q-mr-sm"
+      ></q-btn>
+      <q-btn
+        size="10px"
+        rounded
+        outlined
+        label="Go to ID verification →"
+        class="text-h7"
       ></q-btn>
     </div>
   </div>
@@ -358,6 +521,8 @@ export default defineComponent({
         { label: "Adobe Photoshop" },
         { label: "Adobe XD" },
       ],
+      group1: ref([]),
+      options1: [{ label: "Branding & Logo Design" }, { label: "Web Design" }],
       description: ref(
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
       ),
