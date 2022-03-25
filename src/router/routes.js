@@ -1,5 +1,16 @@
 
 const routes = [
+
+  {
+    path: '/',
+    component: () => import('layouts/CreateNewAccount.vue'),
+    children: [
+      { path: '/Create-Account-Step1', component: () => import('src/pages/Create-Account-Step1.vue') },
+      { path: '/Create-Account-Step2', component: () => import('src/pages/Create-Account-Step2.vue') },
+      { path: '/Create-Account-Step2-1', component: () => import('src/pages/Create-Account-Step2-1.vue') },
+      { path: '/Create-Account-Step3', component: () => import('src/pages/Create-Account-Step3.vue') },
+ ]
+  },
   {
     path: '/',
     component: () => import('layouts/MainLayout.vue'),
@@ -14,6 +25,8 @@ const routes = [
       { path: '/Client-Profile-Display', component: () => import('src/pages/Client-Profile-Display.vue') },
       { path: '/Contractor-freelancer-profile-display', component: () => import('src/pages/Contractor-freelancer-profile-display.vue') },
       { path: '/Client-Company-Profile-Display', component: () => import('src/pages/Client-Company-Profile-Display.vue') },
+      { path: '/Create--Contractor-Company-Profile-Add-Freelancers', component: () => import('src/pages/Create--Contractor-Company-Profile-Add-Freelancers.vue') },
+
 
     ]
   },
