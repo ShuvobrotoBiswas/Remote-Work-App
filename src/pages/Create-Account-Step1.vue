@@ -4,12 +4,12 @@
 
     <div class="q-pa-md row flex flex-center items-start q-gutter-md">
       <q-card
-        class="my-card flex flex-center text-black bg-white"
+        class="my-card this-card flex flex-center text-black bg-white"
         style="max-width: 750px"
       >
         <div class="q-pa-md">
           <div class="row">
-            <div class="col-6 text-bold text-h7">
+            <div class="col-6 text-bold flex flex-center text-h7">
               I am looking for someone to work on my project.
             </div>
             <div class="col-6">
@@ -24,6 +24,7 @@
               </q-input>
               <div class="q-py-md">
                 <q-btn
+                  to="Create-Account-Step2"
                   size="10px"
                   rounded
                   color="black"
@@ -40,14 +41,14 @@
 
     <!-- Card 2 -->
 
-    <div class="q-pa-md row flex flex-center items-start q-gutter-md">
+    <div class="q-pa-md this-card row flex flex-center items-start q-gutter-md">
       <q-card
-        class="my-card q-pa-md row flex-center text-black bg-white"
+        class="my-card q-pa-md this-card row flex-center text-black bg-white"
         style="max-width: 750px"
       >
-        <div class="q-pa-md">
+        <div class="q-pa-md ">
           <div class="row">
-            <div class="col-6 text-bold text-h7">
+            <div class="col-6 text-bold flex flex-center text-h7">
               I want to work on a project or get hired.
             </div>
             <div class="col-6">
@@ -63,6 +64,7 @@
                 </q-input>
                 <div class="q-py-md">
                   <q-btn
+                    to="Create-Account-Step2-1"
                     size="10px"
                     rounded
                     color="black"
@@ -95,7 +97,7 @@ export default defineComponent({
       confirm_password1: ref(null),
       email1: ref(null),
       password1: ref(null),
-      submit: '',
+      submit: "",
     };
   },
 });
@@ -130,4 +132,8 @@ export default defineComponent({
   rounded
 
 .description
+
+.this-card
+  // background: rgba(255,0,0,.1)
+  border-radius: 30px
 </style>

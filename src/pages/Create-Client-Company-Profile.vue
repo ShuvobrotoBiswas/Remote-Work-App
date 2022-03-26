@@ -153,18 +153,26 @@
     <!-- Card 3 div -->
 
     <div class="q-pa-md row flex-center items-start q-gutter-md">
-      <q-card class="my-card text-black bg-grey-4" style="max-width: 800px">
+      <q-card
+        class="my-card this-card text-black bg-grey-4"
+        style="max-width: 800px"
+      >
         <div class="q-pa-md">
           <div class="row">
             <div class="col-9 text-h6">Company name [Company #2]</div>
             <div class="col-6">
-              <q-img
-                src="~assets/Avator2.png"
-                style="height: 40px; max-width: 40px"
-              >
-              </q-img>
-              <strong>Verification status</strong> <br />
-              ✓ Verified ✓ <br />
+              <div class="row justify-between" style="width: 200px">
+                <div class="my-home" style="width: 70px; height: 70px">
+                  <q-img
+                    src="~assets/Avator2.png"
+                    style="height: 40px; max-width: 40px"
+                  >
+                  </q-img>
+                  <p class="custom-text-me">Change Logo</p>
+                </div>
+                <strong>Verification status</strong> <br />
+                ✓ Verified ✓
+              </div>
               <Strong>Company Name</Strong>(Company #1) <br />
               <div class="q-py-md"></div>
               <strong>Address:</strong> Via dei Faggi 24 , Rome, 254321, Italy
@@ -274,4 +282,17 @@ export default defineComponent({
   rounded
 
 .description
+
+.this-card
+  // background: rgba(255,0,0,.1)
+  border-radius: 30px
+
+
+.my-home
+  border: 1px solid rgba(86,61,124,.2)
+  background: white
+  border-radius: 10px
+
+.custom-text-me
+  font-size: 7px
 </style>

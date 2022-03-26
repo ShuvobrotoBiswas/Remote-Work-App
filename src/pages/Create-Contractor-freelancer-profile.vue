@@ -88,9 +88,7 @@
     <div class="row flex-center items-start">
       <div flat bordered class="my-card" style="max-width: 800px">
         <q-card-section>
-          <div class="text-h6 text-bold text-center">
-            Create your profile (freelancer)
-          </div>
+          <div class="text-h6 text-bold">Create your profile (freelancer)</div>
         </q-card-section>
         <q-separator />
         <div class="q-pa-md">
@@ -115,20 +113,17 @@
                     />
                   </template>
                 </q-file>
-              </div>
-              <div class="q-pa-md">
-                <q-btn outline bottom-slots rounded> remove exsting </q-btn>
-              </div>
-              <div class="q-pa-md text-h7 text-bold">Europass & Portfolio</div>
-              <div class="q-pa-md">
-                <q-btn
-                  icon="link"
-                  class="q-mr-sm text-h7"
-                  rounded
-                  color="black"
-                >
-                  Link Your Europass CV
-                </q-btn>
+                <div class="q-pa-md">
+                  <q-btn outline  bottom-slots rounded> remove exsting </q-btn>
+                </div>
+                <div class="q-pa-md text-h7 text-bold">
+                  Europass & Portfolio
+                </div>
+                <div class="">
+                  <q-btn icon="link" class="text-h7" rounded color="black">
+                    Link Your Europass CV
+                  </q-btn>
+                </div>
               </div>
             </div>
             <div class="col-7">
@@ -305,10 +300,10 @@ export default defineComponent({
   margin-top: 1rem
 .bid1
   // background: rgba(255,0,0,.1)
-  border: 1px solid rgba(86,61,124,.2)
+  // border: 1px solid rgba(86,61,124,.2)
   margin-top: 1rem
 .bid2
-  border: 1px solid rgba(86,61,124,.2)
+  // border: 1px solid rgba(86,61,124,.2)
   height: 100px
 
 .image1

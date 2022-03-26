@@ -69,7 +69,7 @@
         <div class="row">
           <div class="q-pa-md col-6 flex-center items-start q-gutter-md">
             <q-card
-              class="my-card text-black bg-grey-4"
+              class="my-card this-card text-black bg-grey-4"
               style="max-width: 360px"
             >
               <div class="q-pa-md">
@@ -81,30 +81,46 @@
                     Upload at least two documents for verification
                   </div>
                 </div>
-              </div>
-              <div class="row">
-                <div class="col text-bold text-h7 text-center">
-                  Upload ID Card
-                </div>
-                <div class="col text-bold text-h7 text-center">
-                  Upload Address Proof
-                </div>
-              </div>
-              <div class="row flex-center">
-                <div class="col">
-                  <q-btn color="black" dense round icon="done"> </q-btn>
-                  <div class="text-h7">ID Card file.pdf</div>
-                </div>
-                <div class="col flex-center">
-                  <q-btn color="black" dense round icon="done"> </q-btn>
-                  <div class="text-h7">Address Proof.pdf</div>
+                <div class="row">
+                  <div class="col-4 q-pa-md text-h7 text center">
+                    <span
+                      style="display: block; margin-bottom: 15px"
+                      class="text-bold"
+                    >
+                      Add credit card</span
+                    >
+                    <q-btn
+                      color="black"
+                      dense
+                      round
+                      icon="done"
+                      style="margin-bottom: 15px"
+                    ></q-btn>
+                    <div class="text-h7">Credit card added</div>
+                  </div>
+                  <div class="col-5 q-pa-md text-h7 text center">
+                    <span
+                      style="display: block; margin-bottom: 15px"
+                      class="text-bold"
+                    >
+                      Add bank account</span
+                    >
+                    <q-btn
+                      color="black"
+                      dense
+                      round
+                      icon="add"
+                      style="margin-bottom: 15px"
+                    ></q-btn>
+                    <div class="text-h7">Address Proof.pdf</div>
+                  </div>
                 </div>
               </div>
             </q-card>
           </div>
           <div class="q-pa-md col-6 flex-center items-start q-gutter-md">
             <q-card
-              class="my-card text-black bg-grey-4"
+              class="my-card this-card text-black bg-grey-4"
               style="max-width: 360px"
             >
               <div class="q-pa-md">
@@ -116,23 +132,39 @@
                     Add any verify the payments method
                   </div>
                 </div>
-              </div>
-              <div class="row">
-                <div class="col text-bold text-h7 text-center">
-                  Add credit card
-                </div>
-                <div class="col text-bold text-h7 text-center">
-                  Add bank account
-                </div>
-              </div>
-              <div class="row flex-center">
-                <div class="col flex-center">
-                  <q-btn color="black" round dense icon="done"> </q-btn>
-                  <div>Credit card added</div>
-                </div>
-                <div class="col flex-center">
-                  <q-btn color="black" round dense icon="add"> </q-btn>
-                  <div>.</div>
+                <div class="row">
+                  <div class="col-4 q-pa-md text-h7 text center">
+                    <span
+                      style="display: block; margin-bottom: 15px"
+                      class="text-bold"
+                    >
+                      Add credit card</span
+                    >
+                    <q-btn
+                      color="black"
+                      dense
+                      round
+                      icon="done"
+                      style="margin-bottom: 15px"
+                    ></q-btn>
+                    <div class="text-h7">Credit card added</div>
+                  </div>
+                  <div class="col-5 q-pa-md text-h7 text center">
+                    <span
+                      style="display: block; margin-bottom: 15px"
+                      class="text-bold"
+                    >
+                      Add bank account</span
+                    >
+                    <q-btn
+                      color="black"
+                      dense
+                      round
+                      icon="add"
+                      style="margin-bottom: 15px"
+                    ></q-btn>
+                    <div class="text-h7">Address Proof.pdf</div>
+                  </div>
                 </div>
               </div>
             </q-card>
@@ -182,4 +214,9 @@ export default defineComponent({
   margin-top: 1rem
 .row
   // background: rgba(255,0,0,.1)
+
+
+.this-card
+  // background: rgba(255,0,0,.1)
+  border-radius: 30px
 </style>

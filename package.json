@@ -2,7 +2,7 @@
   "name": "remote-work",
   "version": "0.0.1",
   "description": "A Remote Work App",
-  "productName": "This is a remote work app",
+  "productName": "Remote Work",
   "author": "SHUVOBROTO BISWAS <93680258+ShuvobrotoBiswas@users.noreply.github.com>",
   "private": true,
   "scripts": {

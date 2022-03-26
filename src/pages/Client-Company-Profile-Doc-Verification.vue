@@ -69,7 +69,7 @@
         <div class="row">
           <div class="q-pa-md col-6 flex-center items-start q-gutter-md">
             <q-card
-              class="my-card text-black bg-grey-4"
+              class="my-card this-card text-black bg-grey-4"
               style="max-width: 360px"
             >
               <div class="q-pa-md">
@@ -77,27 +77,44 @@
                   <div class="col-9 text-h7 text-bold">
                     Personal ID verification
                   </div>
-                  <div class="col-9 text-h7">
+                  <div class="col-12 text-h7">
                     Upload at least two documents for verification
                   </div>
                 </div>
-              </div>
-              <div class="row">
-                <div class="col text-bold text-h7 text-center">
-                  Upload ID Card
-                </div>
-                <div class="col text-bold text-h7 text-center">
-                  Upload Address Proof
-                </div>
-              </div>
-              <div class="row flex-center">
-                <div class="col">
-                  <q-btn color="black" dense round icon="done"> </q-btn>
-                  <div class="text-h7">ID Card file.pdf</div>
-                </div>
-                <div class="col flex-center">
-                  <q-btn color="black" dense round icon="done"> </q-btn>
-                  <div class="text-h7">Address Proof.pdf</div>
+
+                <div class="row">
+                  <div class="col-3 q-pa-md text-h7 text center">
+                    <span
+                      style="display: block; margin-bottom: 15px"
+                      class="text-bold"
+                    >
+                      Upload ID Card</span
+                    >
+                    <q-btn
+                      color="black"
+                      dense
+                      round
+                      icon="done"
+                      style="margin-bottom: 15px"
+                    ></q-btn>
+                    <div class="text-h7">ID Card file.pdf</div>
+                  </div>
+                  <div class="col-5 q-pa-md text-h7 text center">
+                    <span
+                      style="display: block; margin-bottom: 15px"
+                      class="text-bold"
+                    >
+                      Upload Address Proof</span
+                    >
+                    <q-btn
+                      color="black"
+                      dense
+                      round
+                      icon="done"
+                      style="margin-bottom: 15px"
+                    ></q-btn>
+                    <div class="text-h7">Address Proof.pdf</div>
+                  </div>
                 </div>
               </div>
             </q-card>
@@ -107,47 +124,81 @@
 
           <div class="q-pa-md col-6 flex-center items-start q-gutter-md">
             <q-card
-              class="my-card text-black bg-grey-4"
-              style="max-width: 360px"
+              class="my-card this-card text-black bg-grey-4"
+              style="max-width: 380px"
             >
               <div class="q-pa-md">
                 <div class="row">
-                  <div class="col-9 text-h7 text-bold">
+                  <div class="col-10 text-h7 text-bold">
                     Company [Company#1]/ID verification
                   </div>
-                  <div class="col-9 text-h7">
+                  <div class="col-11 text-h7">
                     Upload documents for verification
                   </div>
                 </div>
-              </div>
-              <div class="row">
-                <div class="col text-bold text-h7 text-center">
-                  Company certificate
-                </div>
-                <div class="col text-bold text-h7 text-center">
-                  Billing Address
-                </div>
-                <div class="col text-bold text-h7 text-center">Fiscal Code</div>
-                <div class="col text-bold text-h7 text-center">
-                  Legal note Company Owner
-                </div>
-              </div>
-              <div class="row flex-center">
-                <div class="col flex-center">
-                  <q-btn color="black" round dense icon="add"> </q-btn>
-                  <div>.</div>
-                </div>
-                <div class="col flex-center">
-                  <q-btn color="black" round dense icon="done"> </q-btn>
-                  <div>Billing.pdf</div>
-                </div>
-                <div class="col flex-center">
-                  <q-btn color="black" round dense icon="add"> </q-btn>
-                  <div>.</div>
-                </div>
-                <div class="col flex-center">
-                  <q-btn color="black" round dense icon="done"> </q-btn>
-                  <div>Legal.pdf</div>
+                <div class="row">
+                  <div class="col-3 q-pa-md text-h7 text center">
+                    <span
+                      style="display: block; margin-bottom: 15px"
+                      class="text-bold"
+                    >
+                      Comapny certificate</span
+                    >
+                    <q-btn
+                      color="black"
+                      dense
+                      round
+                      icon="add"
+                      style="margin-bottom: 15px"
+                    ></q-btn>
+                  </div>
+                  <div class="col-3 q-pa-md text-h7 text center">
+                    <span
+                      style="display: block; margin-bottom: 15px"
+                      class="text-bold"
+                    >
+                      Billing Address </span
+                    >
+                    <q-btn
+                      color="black"
+                      dense
+                      round
+                      icon="done"
+                      style="margin-bottom: 15px"
+                    ></q-btn>
+                    <div class="text-h7">Billing.pdf</div>
+                  </div>
+                  <div class="col-2 q-pa-md text-h7 text center">
+                    <span
+                      style="display: block; margin-bottom: 15px"
+                      class="text-bold"
+                    >
+                      Fiscal Code</span
+                    >
+                    <q-btn
+                      color="black"
+                      dense
+                      round
+                      icon="add"
+                      style="margin-bottom: 15px"
+                    ></q-btn>
+                  </div>
+                  <div class="col-4 q-pa-md text-h7 text center">
+                    <span
+                      style="display: block; margin-bottom: 15px"
+                      class="text-bold"
+                    >
+                      Legal Note Company Owner</span
+                    >
+                    <q-btn
+                      color="black"
+                      dense
+                      round
+                      icon="done"
+                      style="margin-bottom: 15px"
+                    ></q-btn>
+                    <div class="text-h7">Legal.pdf</div>
+                  </div>
                 </div>
               </div>
             </q-card>
@@ -157,7 +208,7 @@
 
           <div class="q-pa-md col-6 flex-center items-start q-gutter-md">
             <q-card
-              class="my-card text-black bg-grey-4"
+              class="my-card this-card text-black bg-grey-4"
               style="max-width: 360px"
             >
               <div class="q-pa-md">
@@ -169,25 +220,42 @@
                     Add any verify the payments method
                   </div>
                 </div>
+                <div class="row">
+                  <div class="col-4 q-pa-md text-h7 text center">
+                    <span
+                      style="display: block; margin-bottom: 15px"
+                      class="text-bold"
+                    >
+                      Add credit card</span
+                    >
+                    <q-btn
+                      color="black"
+                      dense
+                      round
+                      icon="done"
+                      style="margin-bottom: 15px"
+                    ></q-btn>
+                    <div class="text-h7">Credit card added</div>
+                  </div>
+                  <div class="col-5 q-pa-md text-h7 text center">
+                    <span
+                      style="display: block; margin-bottom: 15px"
+                      class="text-bold"
+                    >
+                      Add bank account</span
+                    >
+                    <q-btn
+                      color="black"
+                      dense
+                      round
+                      icon="add"
+                      style="margin-bottom: 15px"
+                    ></q-btn>
+                    <div class="text-h7">Address Proof.pdf</div>
+                  </div>
+                </div>
               </div>
-              <div class="row">
-                <div class="col text-bold text-h7 text-center">
-                  Add credit card
-                </div>
-                <div class="col text-bold text-h7 text-center">
-                  Add bank account
-                </div>
-              </div>
-              <div class="row flex-center">
-                <div class="col flex-center">
-                  <q-btn color="black" round dense icon="done"> </q-btn>
-                  <div>Credit card added</div>
-                </div>
-                <div class="col flex-center">
-                  <q-btn color="black" round dense icon="add"> </q-btn>
-                  <div>.</div>
-                </div>
-              </div>
+
             </q-card>
           </div>
         </div>
@@ -235,4 +303,8 @@ export default defineComponent({
   margin-top: 1rem
 .row
   // background: rgba(255,0,0,.1)
+
+.this-card
+  // background: rgba(255,0,0,.1)
+  border-radius: 30px
 </style>

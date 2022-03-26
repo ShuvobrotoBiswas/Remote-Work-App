@@ -46,7 +46,7 @@
               >
               </q-input>
               <div class="q-py-md">
-                <q-btn
+                <q-btn to="Create-Account-Step3"
                   size="10px"
                   rounded
                   color="black"

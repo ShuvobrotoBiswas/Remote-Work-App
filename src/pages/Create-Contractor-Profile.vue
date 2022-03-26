@@ -291,8 +291,8 @@
             <div class="row text-bold">Add an Company description</div>
             <div class="q-pa-md" style="max-width: 740px; min-width: 740px">
               <q-input v-model="description" clearable outlined />
-              <div class="row text-bold">Price range*</div>
-              <input type="text" v-model="pricelist1" />
+              <div class="row  text-bold">Price range*</div>
+              <input class="q-mr-sm" type="text" v-model="pricelist1" />
               <input type="text" v-model="pricelist2" />
             </div>
 
@@ -350,7 +350,7 @@
 
             <div class="row text-bold">
               <div class="col text-bold">
-                Projects Categories
+                Skills*
                 <q-input
                   style="width: 720px"
                   v-model="search"
@@ -545,10 +545,11 @@ export default defineComponent({
   margin-top: 1rem
 .bid1
   // background: rgba(255,0,0,.1)
-  border: 1px solid rgba(86,61,124,.2)
+  // border: 1px solid rgba(86,61,124,.2)
   margin-top: 1rem
 .bid2
-  border: 1px solid rgba(86,61,124,.2)
+  // border: 1px solid rgba(86,61,124,.2)
+  // background: rgba(255,0,0,.1)
   height: 100px
 
 .image1

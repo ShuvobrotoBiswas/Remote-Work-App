@@ -12,17 +12,17 @@
 
     <div class="q-pa-md flex flex-center items-start q-gutter-md">
       <q-card
-        class="my-card flex flex-center text-black bg-white"
+        class="my-card flex this-card flex-center text-black bg-white"
         style="max-width: 800px"
       >
         <div class="q-pa-md">
-          <div class="row">
-            <div class="col-5 text-bold text-h7" style="width: 300px">
+          <div class="row flex flex-center">
+            <div class="col-5  text-bold text-h7" style="width: 300px">
               <q-input label="Email" type="email" v-model="email"> </q-input>
               <q-input label="Password" type="password" v-model="password">
               </q-input>
               <div class="q-py-md">
-                <q-btn
+                <q-btn to="Contractor-profile-display"
                   size="10px"
                   rounded
                   color="black"
@@ -89,4 +89,8 @@ export default defineComponent({
   rounded
 
 .description
+
+.this-card
+  // background: rgba(255,0,0,.1)
+  border-radius: 30px
 </style>
