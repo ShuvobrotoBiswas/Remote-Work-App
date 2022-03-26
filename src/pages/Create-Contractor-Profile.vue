@@ -185,21 +185,21 @@
           </div>
         </div>
         <div class="row bid1 text-center">
-          <div class="col bid2">
+          <div class="col my-home bid2 q-mr-sm" style="height:100px; width:20px">
             <q-img src="~assets/Avator5.png" class="image1"> </q-img>
-            <div class="q-pa-mg text-center text-h7">LOGO Design</div>
+            <div class="q-pa-mg text-center custom-text-me">LOGO Design</div>
           </div>
-          <div class="col bid2">
+          <div class="col my-home bid2 q-mr-sm" style="height:100px; width:20px">
             <q-img src="~assets/Avator6.png" class="image1"> </q-img>
-            <div class="q-pa-mg text-center text-h7">LOGO Design</div>
+            <div class="q-pa-mg text-center custom-text-me">LOGO Design</div>
           </div>
-          <div class="col bid2">
+          <div class="col my-home bid2 q-mr-sm" style="height:100px; width:20px">
             <q-img src="~assets/Avator7.png" class="image1"> </q-img>
-            <div class="q-pa-mg text-center text-h7">LOGO Design</div>
+            <div class="q-pa-mg text-center custom-text-me">LOGO Design</div>
           </div>
-          <div class="col bid2">
+          <div class="col my-home bid2 q-mr-sm" style="height:100px; width:20px">
             <q-img src="~assets/Avator8.png" class="image1"> </q-img>
-            <div class="q-pa-mg text-center text-h7">LOGO Design</div>
+            <div class="q-pa-mg text-center custom-text-me">LOGO Design</div>
           </div>
         </div>
 
@@ -224,14 +224,15 @@
           <div class="row">
             <div class="col-9 text-h6">Add Company</div>
             <div class="col-6">
-              <div rounded class="company">
-                <q-img
-                  class="flex-center"
-                  src="~assets/Avator2.png"
-                  style="height: 40px; max-width: 40px"
-                >
-                </q-img>
-                <q-btn size="8px" label="Change logo"></q-btn>
+              <div class="row justify-between" style="width: 300px">
+                <div class="my-home" style="width: 80px; height: 80px">
+                  <q-img
+                    src="~assets/Avator2.png"
+                    style="height: 40px; max-width: 40px"
+                  >
+                  </q-img>
+                  <p class="custom-text-me">Change Logo</p>
+                </div>
               </div>
               <div class="text-bold text-h7 q-py-md">
                 Company Name (Company #1)*
@@ -291,9 +292,9 @@
             <div class="row text-bold">Add an Company description</div>
             <div class="q-pa-md" style="max-width: 740px; min-width: 740px">
               <q-input v-model="description" clearable outlined />
-              <div class="row  text-bold">Price range*</div>
-              <input class="q-mr-sm" type="text" v-model="pricelist1" />
-              <input type="text" v-model="pricelist2" />
+              <div class="row q-py-md text-bold">Price range*</div>
+              <input style="max-width:80px; min-height:50px" class="q-mr-sm" type="text" maxlength="10" v-model="pricelist1" />
+              <input style="max-width:80px; min-height:50px" type="text" maxlength="10" v-model="pricelist2" />
             </div>
 
             <div>
@@ -441,22 +442,24 @@
                     Add relevent projects from you portfolio
                   </div>
                 </div>
-                <div class="row bid1 text-center">
-                  <div class="col bid2">
+                <div class="row  bid1 text-center">
+                  <div class="col my-home bid2 q-mr-sm">
                     <q-img src="~assets/Avator5.png" class="image1"> </q-img>
-                    <div class="q-pa-mg text-center text-h7">LOGO Design</div>
+                    <div class="q-pa-mg  text-center custom-text-me">LOGO Design</div>
                   </div>
-                  <div class="col bid2">
+                  <div class="col my-home bid2 q-mr-sm">
                     <q-img src="~assets/Avator6.png" class="image1"> </q-img>
-                    <div class="q-pa-mg text-center text-h7">Website Design</div>
+                    <div class="q-pa-mg text-center custom-text-me">
+                      Website Design
+                    </div>
                   </div>
-                  <div class="col bid2">
-                    <q-img src="~assets/Avator7.png" class="image1"> </q-img>
-                    <div class="q-pa-mg text-center text-h7">UX Design</div>
+                  <div class="col my-home bid2 q-mr-sm">
+                    <q-img src="~assets/Avator7.png " class="image1"> </q-img>
+                    <div class="q-pa-mg text-center custom-text-me">UX Design</div>
                   </div>
-                  <div class="col bid2">
+                  <div class="col my-home bid2">
                     <q-img src="~assets/Avator8.png" class="image1"> </q-img>
-                    <div class="q-pa-mg text-center text-h7">+ Add Project</div>
+                    <div class="q-pa-mg text-center custom-text-me">+ Add Project</div>
                   </div>
                 </div>
 
@@ -563,4 +566,14 @@ export default defineComponent({
   rounded
 
 .description
+
+
+.my-home
+  border: 1px solid rgba(86,61,124,.2)
+  background: white
+  border-radius: 10px
+
+
+.custom-text-me
+  font-size: 8px
 </style>

@@ -198,21 +198,21 @@
           </div>
         </div>
         <div class="row bid1 text-center">
-          <div class="col bid2">
+          <div class="col my-home bid2 q-mr-sm">
             <q-img src="~assets/Avator5.png" class="image1"> </q-img>
-            <div class="q-pa-mg text-center text-h7">LOGO Design</div>
+            <div class="q-pa-mg text-center custom-text-me">LOGO Design</div>
           </div>
-          <div class="col bid2">
+          <div class="col my-home bid2 q-mr-sm">
             <q-img src="~assets/Avator6.png" class="image1"> </q-img>
-            <div class="q-pa-mg text-center text-h7">Website Design</div>
+            <div class="q-pa-mg text-center custom-text-me">Website Design</div>
           </div>
-          <div class="col bid2">
+          <div class="col my-home bid2 q-mr-sm">
             <q-img src="~assets/Avator7.png" class="image1"> </q-img>
-            <div class="q-pa-mg text-center text-h7">UX Design</div>
+            <div class="q-pa-mg text-center custom-text-me">UX Design</div>
           </div>
-          <div class="col bid2">
+          <div class="col my-home bid2 q-mr-sm">
             <q-img src="~assets/Avator8.png" class="image1"> </q-img>
-            <div class="q-pa-mg text-center text-h7">+ Add Project</div>
+            <div class="q-pa-mg text-center custom-text-me">+ Add Project</div>
           </div>
         </div>
 
@@ -317,4 +317,13 @@ export default defineComponent({
   rounded
 
 .description
+
+.my-home
+  border: 1px solid rgba(86,61,124,.2)
+  background: white
+  border-radius: 10px
+
+
+.custom-text-me
+  font-size: 8px
 </style>
