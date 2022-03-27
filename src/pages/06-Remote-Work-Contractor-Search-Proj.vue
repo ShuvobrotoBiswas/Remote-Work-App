@@ -1,0 +1,278 @@
+<template>
+  <div>
+    <!-- Header Div -->
+
+    <q-header>
+      <q-toolbar class="bg-white">
+        <q-toolbar-title>
+          <div class="text-green">
+            <q-img
+              src="~assets/Avator3.png"
+              style="height: 35px; max-width: 110px"
+            ></q-img>
+          </div>
+        </q-toolbar-title>
+
+        <div>
+          <q-avatar>
+            <q-img
+              src="~assets/Avator12.png"
+              style="height: 27px; max-width: 27px"
+            >
+            </q-img>
+          </q-avatar>
+        </div>
+        <div class="text-black q-mr-sm">LOGOUT</div>
+      </q-toolbar>
+    </q-header>
+
+    <!-- Body Div -->
+
+    <div class="flex-break"></div>
+    <div class="text-h7 text-center">Hi Florin, welcome to your dashboard!</div>
+    <div class="flex-break q-py-md"></div>
+    <q-separator />
+    <div class="">
+      <div class="row">
+        <div class="col"></div>
+        <div class="col">
+          <div class="text-black text-h7 text-center">
+            <q-btn dense flat color="black" icon="person"></q-btn>
+            <div>Profile</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="text-black text-h7 text-center">
+            <q-btn dense flat color="black" icon="addchart"></q-btn>
+            <div>Post a Project</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="text-black text-h7 text-center">
+            <q-btn
+              dense
+              flat
+              color="black"
+              icon="insert_chart_outlined"
+            ></q-btn>
+            <div>Projects</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="text-black text-h7 text-center">
+            <q-btn dense flat color="black" icon="mark_email_unread"></q-btn>
+            <div>Messages</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="text-black text-h7 text-center">
+            <q-btn dense flat color="black" icon="local_atm"></q-btn>
+            <div>Accounts</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="text-black text-h7 text-center">
+            <q-btn dense flat color="black" icon="tune"></q-btn>
+            <div>Settings</div>
+          </div>
+        </div>
+        <div class="col"></div>
+      </div>
+    </div>
+    <q-separator />
+
+    <!-- Card 1 Div -->
+    <div class="row flex-center items-start">
+      <div style="max-width: 1000px">
+        <div class="q-pa-md">
+          <div class="row">
+            <div class="col-5">
+              <q-card class="bg-grey-1">
+                <p class="text-h6 q-pa-md">Filter by</p>
+                <div class="q-pa-md bg-grey-1" style="max-width: 350px">
+                  <q-list bordered class="rounded-borders">
+                    <q-expansion-item
+                      dense
+                      dense-toggle
+                      expand-separator
+                      label="Search/Select a Category"
+                    >
+                      <q-card>
+                        <q-card-section>
+                          <q-input v-model="search" outlined type="search">
+                            <template v-slot:append>
+                              <q-icon name="search" />
+                              <q-menu>
+                                <q-list style="min-width: 250px">
+                                  <q-item clickable v-close-popup>
+                                    <q-item-section
+                                      >Gill dobrica</q-item-section
+                                    >
+                                  </q-item>
+                                  <q-item clickable v-close-popup>
+                                    <q-item-section
+                                      >Gian Doodle</q-item-section
+                                    > </q-item
+                                  ><q-item clickable v-close-popup>
+                                    <q-item-section
+                                      >Gironde Xavier</q-item-section
+                                    > </q-item
+                                  ><q-item clickable v-close-popup>
+                                    <q-item-section
+                                      >Gogu Radulescu</q-item-section
+                                    >
+                                  </q-item>
+                                </q-list>
+                              </q-menu>
+                            </template>
+                          </q-input>
+                        </q-card-section>
+                      </q-card>
+                    </q-expansion-item>
+
+                    <q-expansion-item
+                      dense
+                      dense-toggle
+                      expand-separator
+                      label="Payment"
+                    >
+                      <q-card>
+                        <q-card-section>
+                          <div class="q-pa-md">
+                            <div class="text-bold">
+                              <q-checkbox
+                                color="cyan"
+                                v-model="checkbox1"
+                                label=" Hourly"
+                              ></q-checkbox>
+                            </div>
+                            <q-checkbox
+                              color="cyan"
+                              v-model="checkbox2"
+                            ></q-checkbox>
+                            <input
+                              style="max-width: 80px; min-height: 50px"
+                              class="q-mr-sm"
+                              type="text"
+                              maxlength="10"
+                              v-model="pricelist1"
+                            />
+                            <input
+                              style="max-width: 80px; min-height: 50px"
+                              type="text"
+                              maxlength="10"
+                              v-model="pricelist2"
+                            />
+                          </div>
+                          <div class="q-pa-md">
+                            <div class="text-bold">
+                              <q-checkbox
+                                color="cyan"
+                                v-model="checkbox1"
+                                label="Fixed price"
+                              ></q-checkbox>
+                            </div>
+                          </div>
+                        </q-card-section>
+                      </q-card>
+                    </q-expansion-item>
+
+                    <q-expansion-item
+                      dense
+                      dense-toggle
+                      expand-separator
+                      label="Drafts"
+                    >
+                      <q-card>
+                        <q-card-section>
+                          Lorem ipsum dolor sit amet, consectetur adipisicing
+                          elit. Quidem, eius reprehenderit eos corrupti commodi
+                          magni quaerat ex numquam, dolorum officiis modi facere
+                          maiores architecto suscipit iste eveniet doloribus
+                          ullam aliquid.
+                        </q-card-section>
+                      </q-card>
+                    </q-expansion-item>
+                  </q-list>
+                </div>
+              </q-card>
+            </div>
+
+            <div class="col-7">
+              <q-card-section>
+                <div class="text-h6 text-center">
+                  Your client Profile/Accounts (client and companies)
+                </div>
+              </q-card-section>
+            </div>
+          </div>
+
+          <q-separator />
+        </div>
+      </div>
+    </div>
+    <!-- Card 3 div -->
+
+    <!-- Footer Div -->
+  </div>
+</template>
+
+<script>
+import { defineComponent } from "vue";
+import { ref } from "vue";
+export default defineComponent({
+  // name: "IndexPage",
+  setup() {
+    return {
+      lorem:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      onItemClick() {
+        // console.log('Clicked on an Item')
+      },
+      description: ref(),
+      pricelist1: ref("15|"),
+      pricelist2: ref("55|"),
+      checkbox1: ref(true),
+      checkbox2: ref(true),
+      checkbox3: ref(true),
+      checkbox4: ref(true),
+      checkbox5: ref(true),
+      checkbox6: ref(true),
+      checkbox7: ref(true),
+      checkbox8: ref(true),
+      checkbox9: ref(true),
+    };
+  },
+});
+</script>
+<style lang="sass" scoped>
+.my-card
+  width: 100%
+  max-width: 250px
+
+.row > div
+  padding: 10px 15px
+  // background: rgba(86,61,124,.15)
+  border: 1px solid rgba(86,61,124,.2)
+.row + .row
+  margin-top: 1rem
+.bid1
+  // background: rgba(255,0,0,.1)
+  border: 1px solid rgba(86,61,124,.2)
+  margin-top: 1rem
+.bid2
+  border: 1px solid rgba(86,61,124,.2)
+  height: 100px
+
+.image1
+  height: 70px
+  width: 80px
+
+.company
+  background: white
+  height: 75px
+  width: 85px
+  rounded
+
+.description
+</style>

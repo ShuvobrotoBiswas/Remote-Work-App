@@ -27,6 +27,7 @@ const routes = [
       { path: '/Contractor-freelancer-profile-display', component: () => import('src/pages/Contractor-freelancer-profile-display.vue') },
       { path: '/Client-Company-Profile-Display', component: () => import('src/pages/Client-Company-Profile-Display.vue') },
       { path: '/Create--Contractor-Company-Profile-Add-Freelancers', component: () => import('src/pages/Create--Contractor-Company-Profile-Add-Freelancers.vue') },
+      { path: '/06-Remote-Work-Contractor-Search-Proj', component: () => import('src/pages/06-Remote-Work-Contractor-Search-Proj.vue') },
 
 
     ]
