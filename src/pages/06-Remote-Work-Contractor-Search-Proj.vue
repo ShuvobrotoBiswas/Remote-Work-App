@@ -92,12 +92,13 @@
                 <div class="q-pa-md bg-grey-1" style="max-width: 350px">
                   <q-list bordered class="rounded-borders">
                     <q-expansion-item
+                      class="text"
                       dense
                       dense-toggle
                       expand-separator
                       label="Search/Select a Category"
                     >
-                      <q-card>
+                      <q-card class="bg-grey-2">
                         <q-card-section>
                           <q-input v-model="search" outlined type="search">
                             <template v-slot:append>
@@ -136,7 +137,7 @@
                       expand-separator
                       label="Payment"
                     >
-                      <q-card>
+                      <q-card class="bg-grey-2">
                         <q-card-section>
                           <div class="q-pa-md">
                             <div class="text-bold">
@@ -164,8 +165,9 @@
                               v-model="pricelist2"
                             />
                           </div>
-                          <div class="q-pa-md text-bold">
+                          <div class="q-pa-md">
                             <q-checkbox
+                              class="text-bold"
                               color="cyan"
                               v-model="checkbox3"
                               label="Fixed price"
@@ -222,7 +224,7 @@
                       expand-separator
                       label="Project duration"
                     >
-                      <q-card>
+                      <q-card class="bg-grey-2">
                         <q-card-section>
                           <div class="row">
                             <q-checkbox
@@ -261,7 +263,7 @@
                       expand-separator
                       label="Project  type"
                     >
-                      <q-card>
+                      <q-card class="bg-grey-2">
                         <q-card-section>
                           <div class="row">
                             <q-checkbox
@@ -300,7 +302,7 @@
                       expand-separator
                       label="Availability in hours/week"
                     >
-                      <q-card>
+                      <q-card class="bg-grey-2">
                         <q-card-section>
                           <div class="row">
                             <q-checkbox
@@ -322,6 +324,189 @@
                               v-model="checkbox21"
                               label="More than 30 h/w"
                             ></q-checkbox>
+                          </div>
+                        </q-card-section>
+                      </q-card>
+                    </q-expansion-item>
+
+                    <q-expansion-item
+                      dense
+                      dense-toggle
+                      expand-separator
+                      label="Client location"
+                    >
+                      <q-card class="bg-grey-2">
+                        <q-card-section>
+                          <q-input v-model="search" outlined type="search">
+                            <template v-slot:append>
+                              <q-icon name="search" />
+                              <q-menu>
+                                <q-list style="min-width: 250px">
+                                  <q-item clickable v-close-popup>
+                                    <q-item-section
+                                      >Gill dobrica</q-item-section
+                                    >
+                                  </q-item>
+                                  <q-item clickable v-close-popup>
+                                    <q-item-section
+                                      >Gian Doodle</q-item-section
+                                    > </q-item
+                                  ><q-item clickable v-close-popup>
+                                    <q-item-section
+                                      >Gironde Xavier</q-item-section
+                                    > </q-item
+                                  ><q-item clickable v-close-popup>
+                                    <q-item-section
+                                      >Gogu Radulescu</q-item-section
+                                    >
+                                  </q-item>
+                                </q-list>
+                              </q-menu>
+                            </template>
+                          </q-input>
+                        </q-card-section>
+                      </q-card>
+                    </q-expansion-item>
+                    <q-expansion-item
+                      dense
+                      dense-toggle
+                      expand-separator
+                      label="Client rating"
+                    >
+                      <q-card class="bg-grey-2">
+                        <q-card-section>
+                          <q-checkbox
+                            v-model="checkbox19"
+                            checked-icon="star"
+                            unchecked-icon="star_border"
+                            indeterminate-icon="help"
+                          />
+                          <q-checkbox
+                            v-model="checkbox20"
+                            checked-icon="star"
+                            unchecked-icon="star_border"
+                            indeterminate-icon="help"
+                          />
+                          <q-checkbox
+                            v-model="checkbox21"
+                            checked-icon="star"
+                            unchecked-icon="star_border"
+                            indeterminate-icon="help"
+                          />
+                          <q-checkbox
+                            v-model="checkbox22"
+                            checked-icon="star"
+                            unchecked-icon="star_border"
+                            indeterminate-icon="help"
+                          />
+                          <q-checkbox
+                            v-model="checkbox23"
+                            checked-icon="star"
+                            unchecked-icon="star_border"
+                            indeterminate-icon="help"
+                          />
+                        </q-card-section>
+                      </q-card>
+                    </q-expansion-item>
+                    <q-expansion-item
+                      dense
+                      dense-toggle
+                      expand-separator
+                      label="Free search in the job title"
+                    >
+                      <q-card class="bg-grey-2">
+                        <q-card-section>
+                          <q-input v-model="search" outlined type="search">
+                            <template v-slot:append>
+                              <q-icon name="search" />
+                              <q-menu>
+                                <q-list style="min-width: 250px">
+                                  <q-item clickable v-close-popup>
+                                    <q-item-section
+                                      >Gill dobrica</q-item-section
+                                    >
+                                  </q-item>
+                                  <q-item clickable v-close-popup>
+                                    <q-item-section
+                                      >Gian Doodle</q-item-section
+                                    > </q-item
+                                  ><q-item clickable v-close-popup>
+                                    <q-item-section
+                                      >Gironde Xavier</q-item-section
+                                    > </q-item
+                                  ><q-item clickable v-close-popup>
+                                    <q-item-section
+                                      >Gogu Radulescu</q-item-section
+                                    >
+                                  </q-item>
+                                </q-list>
+                              </q-menu>
+                            </template>
+                          </q-input>
+                        </q-card-section>
+                      </q-card>
+                    </q-expansion-item>
+                    <q-expansion-item
+                      dense
+                      dense-toggle
+                      expand-separator
+                      label="Search/Select skills"
+                    >
+                      <q-card class="bg-grey-2">
+                        <q-card-section>
+                          <q-input v-model="search" outlined type="search">
+                            <template v-slot:append>
+                              <q-icon name="search" />
+                              <q-menu>
+                                <q-list style="min-width: 250px">
+                                  <q-item clickable v-close-popup>
+                                    <q-item-section
+                                      >Gill dobrica</q-item-section
+                                    >
+                                  </q-item>
+                                  <q-item clickable v-close-popup>
+                                    <q-item-section
+                                      >Gian Doodle</q-item-section
+                                    > </q-item
+                                  ><q-item clickable v-close-popup>
+                                    <q-item-section
+                                      >Gironde Xavier</q-item-section
+                                    > </q-item
+                                  ><q-item clickable v-close-popup>
+                                    <q-item-section
+                                      >Gogu Radulescu</q-item-section
+                                    >
+                                  </q-item>
+                                </q-list>
+                              </q-menu>
+                            </template>
+                          </q-input>
+                          <div>
+                            <div class="q-py-md">
+                              <q-btn
+                                size="7px"
+                                rounded
+                                color="white"
+                                class="text-black q-mr-sm text-h7"
+                                >Illustrator ✠</q-btn
+                              >
+                              <q-btn
+                                size="7px"
+                                rounded
+                                color="white"
+                                class="text-black q-mr-sm text-h7"
+                              >
+                                Adobe XD ✠</q-btn
+                              >
+                              <q-btn
+                                size="7px"
+                                rounded
+                                color="white"
+                                class="text-black q-mr-sm text-h7"
+                              >
+                                Photoshop ✠</q-btn
+                              >
+                            </div>
                           </div>
                         </q-card-section>
                       </q-card>
@@ -386,10 +571,10 @@ export default defineComponent({
       checkbox17: ref(true),
       checkbox18: ref(true),
       checkbox19: ref(true),
-      checkbox20: ref(true),
-      checkbox21: ref(true),
-      checkbox22: ref(true),
-      checkbox23: ref(true),
+      checkbox20: ref(false),
+      checkbox21: ref(false),
+      checkbox22: ref(false),
+      checkbox23: ref(false),
       checkbox24: ref(true),
       checkbox25: ref(true),
       checkbox26: ref(true),
