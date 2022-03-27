@@ -1,6 +1,5 @@
 <template>
   <div>
-    <div></div>
     <div class="flex-break"></div>
     <div class="text-h7 text-center">Hi Florin, welcome to your dashboard!</div>
     <div class="flex-break q-py-md"></div>
