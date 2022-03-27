@@ -38,7 +38,7 @@
               <div class="q-pa-md" style="max-width: 1100px">
                 <p>
                   Search result: 3 contractors found
-                  <q-checkbox v-model="checkbox2">Select all </q-checkbox>
+                  <q-checkbox v-model="checkbox2" color="black">Select all </q-checkbox>
                 </p>
                 <div class="row">
                   <div class="row" style="width: 300px">
@@ -57,7 +57,7 @@
                       Senior Backend Developer
                     </div>
                     <div class="col">
-                      <q-checkbox v-model="checkbox2"></q-checkbox>
+                      <q-checkbox v-model="checkbox2" color="black"></q-checkbox>
                     </div>
                   </div>
                   <div class="row" style="width: 300px">
@@ -72,11 +72,11 @@
                       class="col-5 text-7 col-sm-7"
                       style="max-width: 140px; max-height: 80px"
                     >
-                      <strong> Gill Dobrica</strong> <br />
-                      Senior Backend Developer
+                      <strong> Viorica Dancila</strong> <br />
+                      Middle Backend Developer
                     </div>
                     <div class="col">
-                      <q-checkbox v-model="checkbox2"></q-checkbox>
+                      <q-checkbox v-model="checkbox2" color="black"></q-checkbox>
                     </div>
                   </div>
                   <div class="row" style="width: 300px">
@@ -91,11 +91,11 @@
                       class="col-5 text-7 col-sm-7"
                       style="max-width: 140px; max-height: 80px"
                     >
-                      <strong> Gill Dobrica</strong> <br />
-                      Senior Backend Developer
+                      <strong> Gabriel Cotabita</strong> <br />
+                      Java Developer
                     </div>
                     <div class="col">
-                      <q-checkbox v-model="checkbox2"></q-checkbox>
+                      <q-checkbox v-model="checkbox2" color="black"></q-checkbox>
                     </div>
                   </div>
                 </div>
