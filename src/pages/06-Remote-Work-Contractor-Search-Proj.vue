@@ -164,13 +164,52 @@
                               v-model="pricelist2"
                             />
                           </div>
-                          <div class="q-pa-md">
-                            <div class="text-bold">
+                          <div class="q-pa-md text-bold">
+                            <q-checkbox
+                              color="cyan"
+                              v-model="checkbox3"
+                              label="Fixed price"
+                            ></q-checkbox>
+                            <div class="row">
                               <q-checkbox
                                 color="cyan"
-                                v-model="checkbox1"
-                                label="Fixed price"
+                                v-model="checkbox4"
+                                label="Less than €50"
                               ></q-checkbox>
+                            </div>
+                            <div class="row">
+                              <q-checkbox
+                                color="cyan"
+                                v-model="checkbox5"
+                                label="€50 - €500"
+                              >
+                              </q-checkbox>
+                            </div>
+                            <div class="row">
+                              <q-checkbox
+                                color="cyan"
+                                v-model="checkbox6"
+                                label="€50 - €500"
+                              ></q-checkbox>
+                            </div>
+                            <div>
+                              <q-checkbox
+                                color="cyan"
+                                v-model="checkbox7"
+                              ></q-checkbox>
+                              <input
+                                style="max-width: 80px; min-height: 50px"
+                                class="q-mr-sm"
+                                type="text"
+                                maxlength="10"
+                                v-model="pricelist3"
+                              />
+                              <input
+                                style="max-width: 80px; min-height: 50px"
+                                type="text"
+                                maxlength="10"
+                                v-model="pricelist4"
+                              />
                             </div>
                           </div>
                         </q-card-section>
@@ -181,15 +220,109 @@
                       dense
                       dense-toggle
                       expand-separator
-                      label="Drafts"
+                      label="Project duration"
                     >
                       <q-card>
                         <q-card-section>
-                          Lorem ipsum dolor sit amet, consectetur adipisicing
-                          elit. Quidem, eius reprehenderit eos corrupti commodi
-                          magni quaerat ex numquam, dolorum officiis modi facere
-                          maiores architecto suscipit iste eveniet doloribus
-                          ullam aliquid.
+                          <div class="row">
+                            <q-checkbox
+                              color="cyan"
+                              v-model="checkbox8"
+                              label="Max. 2 weeks"
+                            ></q-checkbox>
+                          </div>
+                          <div class="row">
+                            <q-checkbox
+                              color="cyan"
+                              v-model="checkbox9"
+                              label="Max. 1 month"
+                            ></q-checkbox>
+                          </div>
+                          <div class="row">
+                            <q-checkbox
+                              color="cyan"
+                              v-model="checkbox10"
+                              label="Max. 3 month"
+                            ></q-checkbox>
+                          </div>
+                          <div class="row">
+                            <q-checkbox
+                              color="cyan"
+                              v-model="checkbox11"
+                              label="More than 3 month"
+                            ></q-checkbox>
+                          </div>
+                        </q-card-section>
+                      </q-card>
+                    </q-expansion-item>
+                    <q-expansion-item
+                      dense
+                      dense-toggle
+                      expand-separator
+                      label="Project  type"
+                    >
+                      <q-card>
+                        <q-card-section>
+                          <div class="row">
+                            <q-checkbox
+                              color="cyan"
+                              v-model="checkbox14"
+                              label="Well Defined Project"
+                            ></q-checkbox>
+                          </div>
+                          <div class="row">
+                            <q-checkbox
+                              color="cyan"
+                              v-model="checkbox15"
+                              label="On Going Work"
+                            ></q-checkbox>
+                          </div>
+                          <div class="row">
+                            <q-checkbox
+                              color="cyan"
+                              v-model="checkbox16"
+                              label="Guranteed Prize Contest"
+                            ></q-checkbox>
+                          </div>
+                          <div class="row">
+                            <q-checkbox
+                              color="cyan"
+                              v-model="checkbox17"
+                              label="Get an Information Quote"
+                            ></q-checkbox>
+                          </div>
+                        </q-card-section>
+                      </q-card>
+                    </q-expansion-item>
+                    <q-expansion-item
+                      dense
+                      dense-toggle
+                      expand-separator
+                      label="Availability in hours/week"
+                    >
+                      <q-card>
+                        <q-card-section>
+                          <div class="row">
+                            <q-checkbox
+                              color="cyan"
+                              v-model="checkbox19"
+                              label="20 h/w"
+                            ></q-checkbox>
+                          </div>
+                          <div class="row">
+                            <q-checkbox
+                              color="cyan"
+                              v-model="checkbox20"
+                              label="20 0 30 h/w"
+                            ></q-checkbox>
+                          </div>
+                          <div class="row">
+                            <q-checkbox
+                              color="cyan"
+                              v-model="checkbox21"
+                              label="More than 30 h/w"
+                            ></q-checkbox>
+                          </div>
                         </q-card-section>
                       </q-card>
                     </q-expansion-item>
@@ -232,6 +365,8 @@ export default defineComponent({
       description: ref(),
       pricelist1: ref("15|"),
       pricelist2: ref("55|"),
+      pricelist3: ref("15|"),
+      pricelist4: ref("2000|"),
       checkbox1: ref(true),
       checkbox2: ref(true),
       checkbox3: ref(true),
@@ -241,6 +376,23 @@ export default defineComponent({
       checkbox7: ref(true),
       checkbox8: ref(true),
       checkbox9: ref(true),
+      checkbox10: ref(true),
+      checkbox11: ref(true),
+      checkbox12: ref(true),
+      checkbox13: ref(true),
+      checkbox14: ref(true),
+      checkbox15: ref(true),
+      checkbox16: ref(true),
+      checkbox17: ref(true),
+      checkbox18: ref(true),
+      checkbox19: ref(true),
+      checkbox20: ref(true),
+      checkbox21: ref(true),
+      checkbox22: ref(true),
+      checkbox23: ref(true),
+      checkbox24: ref(true),
+      checkbox25: ref(true),
+      checkbox26: ref(true),
     };
   },
 });
@@ -253,7 +405,7 @@ export default defineComponent({
 .row > div
   padding: 10px 15px
   // background: rgba(86,61,124,.15)
-  border: 1px solid rgba(86,61,124,.2)
+  // border: 1px solid rgba(86,61,124,.2)
 .row + .row
   margin-top: 1rem
 .bid1
