@@ -161,8 +161,8 @@
           <div class="row">
             <div class="col-9 text-h6">Company name [Company #2]</div>
             <div class="col-6">
-              <div class="row justify-between" style="width: 200px">
-                <div class="my-home" style="width: 70px; height: 70px">
+              <div class="row justify-between" style="width: 250px">
+                <div class="my-home col-4" style="width: 77px; height: 70px">
                   <q-img
                     src="~assets/Avator2.png"
                     style="height: 40px; max-width: 40px"
@@ -170,8 +170,12 @@
                   </q-img>
                   <p class="custom-text-me">Change Logo</p>
                 </div>
-                <strong>Verification status</strong> <br />
-                ✓ Verified ✓
+                <div class="col-8">
+                  <strong>Verification status</strong> <br />
+                  <q-btn round icon="bookmark_border" size="7px" color="black"></q-btn>
+                  Verified
+                  <q-btn  round icon="done" outline color="black" size="7px" ></q-btn>
+                </div>
               </div>
               <Strong>Company Name</Strong>(Company #1) <br />
               <div class="q-py-md"></div>

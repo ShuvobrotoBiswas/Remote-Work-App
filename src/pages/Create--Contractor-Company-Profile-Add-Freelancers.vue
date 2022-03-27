@@ -1,10 +1,10 @@
 <template>
   <div class="row q-pa-md flex-center">
-    <q-card bordered style="width: 1000px; height: 600px">
+    <q-card bordered class="this-card" style="width: 1100px; height: 600px">
       <!-- Card 1 Div -->
 
       <div class="row flex-center items-start">
-        <div flat bordered class="my-card" style="max-width: 1000px">
+        <div flat bordered class="my-card" style="max-width: 1100px">
           <q-card-section>
             <div class="text-h6 text-bold">Add freelancer accounts</div>
           </q-card-section>
@@ -35,72 +35,67 @@
                   </template>
                 </q-input>
               </div>
-              <div class="q-pa-md" style="max-width: 950px">
+              <div class="q-pa-md" style="max-width: 1100px">
+                <p>
+                  Search result: 3 contractors found
+                  <q-checkbox v-model="checkbox2">Select all </q-checkbox>
+                </p>
                 <div class="row">
-                  <div class="col-sm-15">
-                    <p>
-                      Search result: 3 contractors found
-                      <q-checkbox v-model="checkbox2">Select all </q-checkbox>
-                    </p>
-
-                    <div class="row">
-                      <div
-                        class="col-5 text-h7 col-sm-3"
-                        style="max-width: 60px; max-height: 80px"
-                      >
-                        <q-avator>
-                          <q-img src="~assets/Avator13.png"></q-img>
-                        </q-avator>
-                      </div>
-                      <div
-                        class="col-5 text-h7 col-sm-7"
-                        style="max-width: 140px; max-height: 80px"
-                      >
-                        <strong>Gil Dobrica</strong>
-                        <div>Senior Backend Developer</div>
-                        <q-checkbox v-model="checkbox2"></q-checkbox>
-                      </div>
-                      <div
-                        class="col-5 text-h7 col-sm-7"
-                        style="max-width: 60px; max-height: 80px"
-                      >
-                        <q-avator>
-                          <q-img src="~assets/Avator13.png"></q-img>
-                        </q-avator>
-                      </div>
-                      <div
-                        class="col-5 text-h7 col-sm-7"
-                        style="max-width: 140px; max-height: 80px"
-                      >
-                        <strong>Gil Dobrica</strong>
-                        <div>Senior Backend Developer</div>
-                        <q-checkbox v-model="checkbox2"></q-checkbox>
-                      </div>
-                      <div
-                        class="col-5 text-h7 col-sm-7"
-                        style="max-width: 60px; max-height: 80px"
-                      >
-                        <q-avator>
-                          <q-img src="~assets/Avator13.png"></q-img>
-                        </q-avator>
-                      </div>
-                      <div
-                        class="col-5 text-h7 col-sm-7"
-                        style="max-width: 140px; max-height: 80px"
-                      >
-                        <strong>Gil Dobrica</strong>
-                        <div>Senior Backend Developer</div>
-                        <q-checkbox v-model="checkbox2"></q-checkbox>
-                      </div>
-
-                      <div
-                        class="col-5 text-h7 col-sm-7"
-                        style="max-width: 90px; max-height: 80px"
-                      ></div>
-                      <div
-                        class="col-5 text-h7 col-sm-7"
-                        style="max-width: 90px; max-height: 80px"
-                      ></div>
+                  <div class="row" style="width: 300px">
+                    <div class="" style="max-width: 80px; max-height: 80px">
+                      <q-img
+                        class="justify-around"
+                        style="width: 60px; height: 60px"
+                        src="~assets/Avator13.png"
+                      ></q-img>
+                    </div>
+                    <div
+                      class="col-5 text-7 col-sm-7"
+                      style="max-width: 140px; max-height: 80px"
+                    >
+                      <strong> Gill Dobrica</strong> <br />
+                      Senior Backend Developer
+                    </div>
+                    <div class="col">
+                      <q-checkbox v-model="checkbox2"></q-checkbox>
+                    </div>
+                  </div>
+                  <div class="row" style="width: 300px">
+                    <div class="" style="max-width: 80px; max-height: 80px">
+                      <q-img
+                        class="justify-around"
+                        style="width: 60px; height: 60px"
+                        src="~assets/Avator13.png"
+                      ></q-img>
+                    </div>
+                    <div
+                      class="col-5 text-7 col-sm-7"
+                      style="max-width: 140px; max-height: 80px"
+                    >
+                      <strong> Gill Dobrica</strong> <br />
+                      Senior Backend Developer
+                    </div>
+                    <div class="col">
+                      <q-checkbox v-model="checkbox2"></q-checkbox>
+                    </div>
+                  </div>
+                  <div class="row" style="width: 300px">
+                    <div class="" style="max-width: 80px; max-height: 80px">
+                      <q-img
+                        class="justify-around"
+                        style="width: 60px; height: 60px"
+                        src="~assets/Avator13.png"
+                      ></q-img>
+                    </div>
+                    <div
+                      class="col-5 text-7 col-sm-7"
+                      style="max-width: 140px; max-height: 80px"
+                    >
+                      <strong> Gill Dobrica</strong> <br />
+                      Senior Backend Developer
+                    </div>
+                    <div class="col">
+                      <q-checkbox v-model="checkbox2"></q-checkbox>
                     </div>
                   </div>
                 </div>
@@ -110,20 +105,22 @@
         </div>
         <div class="row q-pa-md">
           <q-btn
-            size="10px"
+            size="15px"
+            style="width: 180px"
             rounded
             color="black"
-            icon="close"
+            icon="cancel"
             label="Cancel"
             class="text-white text-h7"
           ></q-btn>
         </div>
-        <div >
+        <div>
           <q-btn
-            size="10px"
+            size="15px"
             rounded
+            style="width: 180px"
             color="black"
-            icon="done"
+            icon="check_circle"
             label="Done"
             class="text-white text-h7"
           ></q-btn>
@@ -176,7 +173,7 @@ export default defineComponent({
   // background: rgba(86,61,124,.15)
   // border: 1px solid rgba(86,61,124,.2)
 .row + .row
-  margin-top: 1rem
+  // margin-top: 1rem
 .bid1
   // background: rgba(255,0,0,.1)
   border: 1px solid rgba(86,61,124,.2)
@@ -196,4 +193,15 @@ export default defineComponent({
   rounded
 
 .description
+
+.avator-style
+  padding: 0px 0px
+  margin: 0px 0px
+  margin-top: 1rem
+  margin-down: 0rem
+
+
+.this-card
+  // background: rgba(255,0,0,.1)
+  border-radius: 30px
 </style>
