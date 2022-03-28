@@ -519,6 +519,7 @@
             <div class="col-7">
               <q-card-section>
                 <div class="text-h6 text-left">Search</div>
+                <q-separator color="light-blue-3" />
                 <div class="text-h6 q-py-md text-center">
                   <q-input
                     v-model="search"
@@ -632,7 +633,7 @@
                     >
                   </div>
                 </div>
-                <div class="row">
+                <div class="row" style="width: 400px">
                   <div class="col-">24 Project found</div>
                   <div class="col"></div>
                   <div class="col-">
@@ -653,7 +654,193 @@
                     </q-expansion-item>
                   </div>
                 </div>
-                <q-separator />
+                <q-separator color="light-blue-3" />
+                <div class="row" style="max-width: 500px">
+                  <div class="row">
+                    <p class="text-bold text-h7">
+                      Logo Design for Insurance Agency
+                    </p>
+                    <p class="my-font">
+                      Fixed price | Budget: €500 | 2 weeks | Algeria 1 hr.ago
+                    </p>
+                    <p class="text-h7">
+                      {{ text }}
+                    </p>
+                  </div>
+                  <div class="row">
+                    <q-btn
+                      size="7px"
+                      rounded
+                      color="white"
+                      class="text-black q-mr-sm text-h7"
+                      >Graphics Design ✠</q-btn
+                    >
+                    <q-btn
+                      size="7px"
+                      rounded
+                      color="white"
+                      class="text-black q-mr-sm text-h7"
+                    >
+                      Logo Design ✠</q-btn
+                    >
+                    <q-btn
+                      size="7px"
+                      rounded
+                      color="white"
+                      class="text-black q-mr-sm text-h7"
+                      >Branding & Logo Design ✠</q-btn
+                    >
+                    <q-btn
+                      size="7px"
+                      rounded
+                      color="white"
+                      class="text-black q-mr-sm text-h7"
+                    >
+                      Illustrator ✠</q-btn
+                    >
+                  </div>
+                  <div class="row flex-bottom q-pa-md">
+                    <q-btn
+                      size="7px"
+                      rounded
+                      color="white"
+                      class="text-black q-mr-sm"
+                      label="Read more"
+                    >
+                    </q-btn>
+                  </div>
+                </div>
+                <q-separator color="light-blue-3" />
+                <div class="row" style="max-width: 500px">
+                  <div class="row">
+                    <p class="text-bold text-h7">Logo Designer</p>
+                    <span>
+                      <p class="my-font">
+                        Fixed price | Budget: €49 | 2 weeks | Algeria 1 hr.ago
+                      </p>
+                    </span>
+                    <p class="text-h7">
+                      {{ lorem }}
+                    </p>
+                  </div>
+                  <div class="row">
+                    <q-btn
+                      size="7px"
+                      rounded
+                      color="white"
+                      class="text-black q-mr-sm text-h7"
+                      >Graphics Design ✠</q-btn
+                    >
+                    <q-btn
+                      size="7px"
+                      rounded
+                      color="white"
+                      class="text-black q-mr-sm text-h7"
+                    >
+                      Logo Design ✠</q-btn
+                    >
+                    <q-btn
+                      size="7px"
+                      rounded
+                      color="white"
+                      class="text-black q-mr-sm text-h7"
+                      >Branding & Logo Design ✠</q-btn
+                    >
+                    <q-btn
+                      size="7px"
+                      rounded
+                      color="white"
+                      class="text-black q-mr-sm text-h7"
+                    >
+                      Illustrator ✠</q-btn
+                    >
+                  </div>
+                  <div class="row flex-bottom q-pa-md">
+                    <q-btn
+                      size="7px"
+                      rounded
+                      color="white"
+                      class="text-black q-mr-sm"
+                      label="Read more"
+                    >
+                    </q-btn>
+                  </div>
+                </div>
+                <q-separator color="light-blue-3" />
+                <div class="row" style="max-width: 500px">
+                  <div class="row">
+                    <p class="text-bold text-h7">Need 3 HQ logos created</p>
+                    <br />
+                    <p class="my-font">
+                      Fixed price | Budget: €500 | 2 weeks | Algeria 1 hr.ago
+                    </p>
+                    <p class="text-h7">
+                      {{ lorem }}
+                    </p>
+                  </div>
+                  <div class="row">
+                    <q-btn
+                      size="7px"
+                      rounded
+                      color="white"
+                      class="text-black q-mr-sm text-h7"
+                      >Graphics Design ✠</q-btn
+                    >
+                    <q-btn
+                      size="7px"
+                      rounded
+                      color="white"
+                      class="text-black q-mr-sm text-h7"
+                    >
+                      Logo Design ✠</q-btn
+                    >
+                    <q-btn
+                      size="7px"
+                      rounded
+                      color="white"
+                      class="text-black q-mr-sm text-h7"
+                      >Branding & Logo Design ✠</q-btn
+                    >
+                    <q-btn
+                      size="7px"
+                      rounded
+                      color="white"
+                      class="text-black q-mr-sm text-h7"
+                    >
+                      Illustrator ✠</q-btn
+                    >
+                  </div>
+                  <div class="row flex-bottom q-pa-md">
+                    <q-btn
+                      size="7px"
+                      rounded
+                      color="white"
+                      class="text-black q-mr-sm"
+                      label="Read more"
+                    >
+                    </q-btn>
+                  </div>
+                </div>
+                <q-separator color="light-blue-3" />
+                <!-- Footer Div -->
+
+                <div class="row flex-center q-pa-md">
+                  <q-btn
+                    size="10px"
+                    rounded
+                    color="black"
+                    icon="add"
+                    label="Add Companies"
+                    class="text-white text-h7 q-mr-sm"
+                  ></q-btn>
+                  <q-btn
+                    size="10px"
+                    rounded
+                    outlined
+                    label="Go to ID verification →"
+                    class="text-h7"
+                  ></q-btn>
+                </div>
               </q-card-section>
             </div>
           </div>
@@ -663,8 +850,6 @@
       </div>
     </div>
     <!-- Card 3 div -->
-
-    <!-- Footer Div -->
   </div>
 </template>
 
@@ -711,6 +896,7 @@ export default defineComponent({
       checkbox24: ref(true),
       checkbox25: ref(true),
       checkbox26: ref(true),
+      text: " We have a logo that is about 13 years old and we are looking to update/change our branding, we need a logo that is more up to date and we want to keep the versatillity. We want to go bold/innovative with this change. Previous logo is attached for reference",
     };
   },
 });
@@ -745,4 +931,8 @@ export default defineComponent({
   rounded
 
 .description
+
+
+.my-font
+  font-size: 10px
 </style>
