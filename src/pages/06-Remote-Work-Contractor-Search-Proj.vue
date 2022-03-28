@@ -518,9 +518,142 @@
 
             <div class="col-7">
               <q-card-section>
-                <div class="text-h6 text-center">
-                  Your client Profile/Accounts (client and companies)
+                <div class="text-h6 text-left">Search</div>
+                <div class="text-h6 q-py-md text-center">
+                  <q-input
+                    v-model="search"
+                    outlined
+                    style="width: 400px"
+                    type="search"
+                  >
+                    <template v-slot:append>
+                      <q-icon name="search" />
+                      <q-menu>
+                        <q-list style="min-width: 250px">
+                          <q-item clickable v-close-popup>
+                            <q-item-section>{{}} </q-item-section>
+                          </q-item>
+                          <q-option-group
+                            :options="options"
+                            type="checkbox"
+                            v-model="group"
+                          />
+                        </q-list>
+                      </q-menu>
+                    </template>
+                  </q-input>
+                  <div class="q-py-md" style="width: 400px">
+                    <q-btn
+                      size="7px"
+                      rounded
+                      color="light-blue-3"
+                      class="text-white q-mr-sm text-h7"
+                      >Branding & Logo Design ✠</q-btn
+                    >
+                    <q-btn
+                      size="7px"
+                      rounded
+                      color="light-blue-3"
+                      class="text-white q-mr-sm text-h7"
+                    >
+                      Fixed price-Hourly €15-55 ✠</q-btn
+                    >
+                    <q-btn
+                      size="7px"
+                      rounded
+                      color="light-blue-3"
+                      class="text-white q-mr-sm text-h7"
+                    >
+                      Fixed price €50 ✠</q-btn
+                    >
+                    <q-btn
+                      size="7px"
+                      rounded
+                      color="light-blue-3"
+                      class="text-white q-mr-sm text-h7"
+                    >
+                      Fixed price Min. €15-Max. €2000 ✠</q-btn
+                    >
+                    <q-btn
+                      size="7px"
+                      rounded
+                      color="light-blue-3"
+                      class="text-white q-mr-sm text-h7"
+                    >
+                      Max. 2 weeks ✠</q-btn
+                    >
+                    <q-btn
+                      size="7px"
+                      rounded
+                      color="light-blue-3"
+                      class="text-white q-mr-sm text-h7"
+                    >
+                      Fixed price ✠</q-btn
+                    >
+                    <q-btn
+                      size="7px"
+                      rounded
+                      color="light-blue-3"
+                      class="text-white q-mr-sm text-h7"
+                    >
+                      20 h/w ✠</q-btn
+                    >
+                    <q-btn
+                      size="7px"
+                      rounded
+                      color="light-blue-3"
+                      class="text-white q-mr-sm text-h7"
+                    >
+                      Algeria ✠</q-btn
+                    >
+                    <q-btn
+                      size="7px"
+                      rounded
+                      color="light-blue-3"
+                      class="text-white q-mr-sm text-h7"
+                    >
+                      Illustrator ✠</q-btn
+                    >
+                    <q-btn
+                      size="7px"
+                      rounded
+                      color="light-blue-3"
+                      class="text-white q-mr-sm text-h7"
+                    >
+                      Adobe XD ✠</q-btn
+                    >
+                    <q-btn
+                      size="7px"
+                      rounded
+                      color="light-blue-3"
+                      style="text-bg-white"
+                      class="text-white q-mr-sm text-h7"
+                      >Photoshop ✠</q-btn
+                    >
+                  </div>
                 </div>
+                <div class="row">
+                  <div class="col-">24 Project found</div>
+                  <div class="col"></div>
+                  <div class="col-">
+                    <q-expansion-item
+                      dense
+                      dense-toggle
+                      expand-separator
+                      label="Sort by"
+                    >
+                      <q-card class="bg-grey-2">
+                        <q-card-section>
+                          <div class="row">relevence</div>
+                          <div class="row">Newest</div>
+                          <div class="row">Other</div>
+                          <div class="row">Etc.</div>
+                        </q-card-section>
+                      </q-card>
+                    </q-expansion-item>
+                  </div>
+                </div>
+                <q-separator />
               </q-card-section>
             </div>
           </div>
