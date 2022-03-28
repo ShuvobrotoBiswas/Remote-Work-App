@@ -16,7 +16,7 @@
         <div>
           <q-avatar>
             <q-img
-              src="~assets/Avator12.png"
+              src="~assets/Avator4.png"
               style="height: 27px; max-width: 27px"
             >
             </q-img>
@@ -699,30 +699,34 @@
                       Illustrator ✠</q-btn
                     >
                   </div>
-                  <div class="row flex-bottom q-pa-md">
-                    <q-btn
-                      size="7px"
-                      rounded
-                      color="white"
-                      class="text-black q-mr-sm"
-                      label="Read more"
-                    >
-                    </q-btn>
+                  <div class="row" style="width: 500px">
+                    <div class="col-8"></div>
+                    <div class="col-4">
+                      <q-btn
+                        size="7px"
+                        rounded
+                        color="cyan"
+                        class="text-black q-ml-md"
+                        label="Read more"
+                      >
+                      </q-btn>
+                    </div>
                   </div>
                 </div>
                 <q-separator color="light-blue-3" />
                 <div class="row" style="max-width: 500px">
                   <div class="row">
-                    <p class="text-bold text-h7">Logo Designer</p>
-                    <span>
-                      <p class="my-font">
-                        Fixed price | Budget: €49 | 2 weeks | Algeria 1 hr.ago
-                      </p>
-                    </span>
+                    <p class="text-bold q-my-none text-h7">Logo Designer</p>
+                  </div>
+                  <div class="row">
+                    <p class="my-font">
+                      Fixed price | Budget: €49 | 2 weeks | Algeria 1 hr.ago
+                    </p>
                     <p class="text-h7">
                       {{ lorem }}
                     </p>
                   </div>
+
                   <div class="row">
                     <q-btn
                       size="7px"
@@ -755,22 +759,29 @@
                       Illustrator ✠</q-btn
                     >
                   </div>
-                  <div class="row flex-bottom q-pa-md">
-                    <q-btn
-                      size="7px"
-                      rounded
-                      color="white"
-                      class="text-black q-mr-sm"
-                      label="Read more"
-                    >
-                    </q-btn>
+                  <div class="row" style="width: 500px">
+                    <div class="col-8"></div>
+                    <div class="col-4">
+                      <q-btn
+                        size="7px"
+                        rounded
+                        color="cyan"
+                        class="text-black q-ml-md"
+                        label="Read more"
+                      >
+                      </q-btn>
+                    </div>
                   </div>
                 </div>
                 <q-separator color="light-blue-3" />
                 <div class="row" style="max-width: 500px">
                   <div class="row">
-                    <p class="text-bold text-h7">Need 3 HQ logos created</p>
+                    <p class="text-bold q-my-none text-h7">
+                      Need 3 HQ logos created
+                    </p>
                     <br />
+                  </div>
+                  <div class="row">
                     <p class="my-font">
                       Fixed price | Budget: €500 | 2 weeks | Algeria 1 hr.ago
                     </p>
@@ -810,15 +821,18 @@
                       Illustrator ✠</q-btn
                     >
                   </div>
-                  <div class="row flex-bottom q-pa-md">
-                    <q-btn
-                      size="7px"
-                      rounded
-                      color="white"
-                      class="text-black q-mr-sm"
-                      label="Read more"
-                    >
-                    </q-btn>
+                   <div class="row" style="width: 500px">
+                    <div class="col-8"></div>
+                    <div class="col-4">
+                      <q-btn
+                        size="7px"
+                        rounded
+                        color="cyan"
+                        class="text-black q-ml-md"
+                        label="Read more"
+                      >
+                      </q-btn>
+                    </div>
                   </div>
                 </div>
                 <q-separator color="light-blue-3" />
@@ -826,18 +840,74 @@
 
                 <div class="row flex-center q-pa-md">
                   <q-btn
-                    size="10px"
+                    size="8px"
                     rounded
-                    color="black"
-                    icon="add"
-                    label="Add Companies"
+                    color="grey"
+                    label="First"
+                    class="text-white text-h7"
+                  ></q-btn>
+                  <q-btn
+                    size="6px"
+                    flat
+                    padding="6px"
+                    icon="arrow_back_ios_new"
+                    color="grey"
+                    class="text-white text-h7"
+                  ></q-btn>
+                  <q-btn
+                    size="6px"
+                    padding="6px"
+                    unelevated
+                    color="cyan"
+                    label="1"
                     class="text-white text-h7 q-mr-sm"
                   ></q-btn>
                   <q-btn
-                    size="10px"
+                    size="6px"
+                    padding="6px"
+                    outline
+                    color="grey"
+                    label="2"
+                    class="text-white text-bold text-h7 q-mr-sm"
+                  ></q-btn>
+                  <q-btn
+                    size="6px"
+                    padding="6px"
+                    outline
+                    color="grey"
+                    label="3"
+                    class="text-white text-bold text-h7 q-mr-sm"
+                  ></q-btn>
+                  <q-btn
+                    size="6px"
+                    padding="6px"
+                    outline
+                    color="grey"
+                    label="4"
+                    class="text-white text-bold text-h7 q-mr-sm"
+                  ></q-btn>
+                  <q-btn
+                    size="6px"
+                    padding="6px"
+                    outline
+                    color="grey"
+                    label="5"
+                    class="text-white text-bold text-h7"
+                  ></q-btn>
+                  <q-btn
+                    size="6px"
+                    icon="arrow_forward_ios"
+                    flat
+                    padding="6px"
+                    color="cyan"
+                    class="text-white text-h7"
+                  ></q-btn>
+                  <q-btn
+                    size="8px"
                     rounded
+                    color="cyan"
                     outlined
-                    label="Go to ID verification →"
+                    label="Last"
                     class="text-h7"
                   ></q-btn>
                 </div>
