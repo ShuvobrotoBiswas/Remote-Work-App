@@ -161,7 +161,7 @@
                     class="text-black q-mr-sm text-h7"
                     >Branding & Logo Design</q-btn
                   >
-                   <q-btn
+                  <q-btn
                     size="7px"
                     rounded
                     outline
@@ -177,86 +177,120 @@
                     Photoshop</q-btn
                   >
                 </div>
+
+                <q-separator />
+
+                <div class="row q-py-md text-bold text-h7">Attachments</div>
+                <q-btn
+                  size="13px"
+                  flat
+                  icon="content_copy"
+                  label="File1.pdf"
+                  class="text-black row text-h7"
+                ></q-btn>
+                <q-btn
+                  size="13px"
+                  flat
+                  color="black"
+                  icon="content_copy"
+                  label="File2.eps"
+                  class="text-grey row text-h7"
+                ></q-btn>
+                <q-btn
+                  size="13px"
+                  flat
+                  icon="content_copy"
+                  label="File3.psd"
+                  class="text-black row text-h7"
+                ></q-btn>
+
+                <q-separator />
+
+                <div class="row q-py-md">
+                  <div class="col">
+                    <div class="text-h7 text-bold">Client rating</div>
+                    <div class="text-h7">
+                      <q-checkbox
+                        v-model="checkbox19"
+                        checked-icon="star"
+                        size="25px"
+                        unchecked-icon="star_border"
+                        indeterminate-icon="help"
+                      />
+                      <q-checkbox
+                        v-model="checkbox20"
+                        size="25px"
+                        checked-icon="star"
+                        unchecked-icon="star_border"
+                        indeterminate-icon="help"
+                      />
+                      <q-checkbox
+                        v-model="checkbox21"
+                        size="25px"
+                        checked-icon="star"
+                        unchecked-icon="star_border"
+                        indeterminate-icon="help"
+                      />
+                      <q-checkbox
+                        v-model="checkbox22"
+                        size="25px"
+                        checked-icon="star"
+                        unchecked-icon="star_border"
+                        indeterminate-icon="help"
+                      />
+                      <q-checkbox
+                        v-model="checkbox23"
+                        size="25px"
+                        checked-icon="star"
+                        unchecked-icon="star_border"
+                        indeterminate-icon="help"
+                      />
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="text-h7 text-bold">Client Location</div>
+                    <div class="text-h7">Argentina</div>
+                  </div>
+                  <div class="col">
+                    <div class="text-h7 text-bold"></div>
+                    <div class="text-h7"></div>
+                  </div>
+                </div>
                 <!-- Footer Div -->
 
-                <div class="row flex-center q-pa-md">
-                  <q-btn
-                    size="8px"
-                    rounded
-                    color="grey"
-                    label="First"
-                    class="text-white text-h7"
-                  ></q-btn>
-                  <q-btn
-                    size="6px"
-                    flat
-                    padding="6px"
-                    icon="arrow_back_ios_new"
-                    color="grey"
-                    class="text-white text-h7"
-                  ></q-btn>
-                  <q-btn
-                    size="6px"
-                    padding="6px"
-                    unelevated
-                    color="cyan"
-                    label="1"
-                    class="text-white text-h7 q-mr-sm"
-                  ></q-btn>
-                  <q-btn
-                    size="6px"
-                    padding="6px"
-                    outline
-                    color="grey"
-                    label="2"
-                    class="text-white text-bold text-h7 q-mr-sm"
-                  ></q-btn>
-                  <q-btn
-                    size="6px"
-                    padding="6px"
-                    outline
-                    color="grey"
-                    label="3"
-                    class="text-white text-bold text-h7 q-mr-sm"
-                  ></q-btn>
-                  <q-btn
-                    size="6px"
-                    padding="6px"
-                    outline
-                    color="grey"
-                    label="4"
-                    class="text-white text-bold text-h7 q-mr-sm"
-                  ></q-btn>
-                  <q-btn
-                    size="6px"
-                    padding="6px"
-                    outline
-                    color="grey"
-                    label="5"
-                    class="text-white text-bold text-h7"
-                  ></q-btn>
-                  <q-btn
-                    size="6px"
-                    icon="arrow_forward_ios"
-                    flat
-                    padding="6px"
-                    color="cyan"
-                    class="text-white text-h7"
-                  ></q-btn>
-                  <q-btn
-                    size="8px"
-                    rounded
-                    color="cyan"
-                    outlined
-                    label="Last"
-                    class="text-h7"
-                  ></q-btn>
+                <div class="row flex-center">
+                  <div class="col ">
+                    <q-btn
+                      size="8px"
+                      rounded
+                      color="grey"
+                      label="Back to Search"
+                      class="text-white text-h7"
+                    ></q-btn>
+                  </div>
+
+                  <div class="col-5">
+                    <q-btn
+                      size="8px"
+                      rounded
+                      color="black"
+                      label="Request additional information"
+                      class="text-white text-h7"
+                    ></q-btn>
+                  </div>
+                  <div class="col-3">
+                    <q-btn
+                      size="8px"
+                      rounded
+                      color="black"
+                      label="Apply to project"
+                      class="text-white text-h7"
+                    ></q-btn>
+                  </div>
                 </div>
               </q-card-section>
             </div>
           </div>
-
-          <q-separator />
         </div>
       </div>
     </div>
@@ -272,6 +306,11 @@ export default defineComponent({
   setup() {
     return {
       text: " We have a logo that is about 13 years old and we are looking to update/change our branding, we need a logo that is more up to date and we want to keep the versatillity. We want to go bold/innovative with this change. Previous logo is attached for reference",
+      checkbox19: ref(true),
+      checkbox20: ref(true),
+      checkbox21: ref(false),
+      checkbox22: ref(false),
+      checkbox23: ref(false),
     };
   },
 });
