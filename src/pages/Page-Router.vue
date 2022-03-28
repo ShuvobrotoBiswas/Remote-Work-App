@@ -192,6 +192,15 @@
                   >
                   </q-btn>
                 </div>
+                <div class="q-pa-md">
+                  <q-btn
+                    to="08-Remote-Work-Contractor-Application-To-Project-By-Freelancer"
+                    label="08-Remote-Work-Contractor-Application-To-Project-By-Freelancer"
+                    outline
+                    style="color: goldenrod"
+                  >
+                  </q-btn>
+                </div>
 
 
               </q-list>

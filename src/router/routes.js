@@ -29,6 +29,7 @@ const routes = [
       { path: '/Create--Contractor-Company-Profile-Add-Freelancers', component: () => import('src/pages/Create--Contractor-Company-Profile-Add-Freelancers.vue') },
       { path: '/06-Remote-Work-Contractor-Search-Proj', component: () => import('src/pages/06-Remote-Work-Contractor-Search-Proj.vue') },
       { path: '/07-Remote-Work-Freelancer-Project-Display', component: () => import('src/pages/07-Remote-Work-Freelancer-Project-Display.vue') },
+      { path: '/08-Remote-Work-Contractor-Application-To-Project-By-Freelancer', component: () => import('src/pages/08-Remote-Work-Contractor-Application-To-Project-By-Freelancer.vue') },
 
 
 
