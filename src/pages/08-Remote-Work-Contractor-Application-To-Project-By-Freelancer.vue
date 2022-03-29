@@ -95,33 +95,134 @@
                   {{ lorem }}
                 </div>
                 <div class="row q-py-md">
-                  <div class="col">
-                    <div class="text-h7 text-bold">Category job Project</div>
-                    <div class="text-h7">Branding & logo Design</div>
+                  <div class="col-4">
+                    <div class="text-h7 text-bold">
+                      Type the requested Price
+                    </div>
+                    <div class="text-h7">
+                      <q-input v-model="price" outlined></q-input>
+                    </div>
                   </div>
-                  <div class="col">
-                    <div class="text-h7 text-bold">Project type</div>
-                    <div class="text-h7">Well Defined Project</div>
+                  <div class="col-3">
+                    <div class="text-h7 text-bold"></div>
+                    <div class="text-h7"></div>
                   </div>
-                  <div class="col">
-                    <div class="text-h7 text-bold">Payment</div>
-                    <div class="text-h7">Fixed price - €500</div>
+                  <div class="col-5">
+                    <div class="text-h7 text-bold">
+                      Type total execution time*
+                    </div>
+                    <div class="text-h7">
+                      <q-expansion-item
+                        dense
+                        dense-toggle
+                        expand-separator
+                        label="Execution Time"
+                      >
+                        <q-card class="bg-grey-2">
+                          <q-card-section>
+                            <div class="row">2 Weeks</div>
+                            <div class="row">1 Month</div>
+                            <div class="row">3 Month</div>
+                          </q-card-section>
+                        </q-card>
+                      </q-expansion-item>
+                    </div>
                   </div>
                 </div>
 
-
+                <q-separator />
+                <div class="row">
+                  <p class="text-bold text-h7">
+                    Answer to the question set by client.*
+                  </p>
+                  <div class="row q-pa-md">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua?
+                    <q-input
+                      v-model="input1"
+                      outlined
+                      style="width: 550px"
+                    ></q-input>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="row q-pa-md">
+                    Ut enim ad minim veniam veniam, quis nostrud exercitation et
+                    nisi ut aliquip?
+                    <q-input
+                      v-model="input2"
+                      outlined
+                      style="width: 550px"
+                    ></q-input>
+                  </div>
+                </div>
 
                 <q-separator />
 
+                <div class="row q-py-md">
+                  <div class="col-4">
+                    <div class="text-h7 text-bold">Offer validity*</div>
+                    <div class="text-h7">
+                      Pick a Date
+                      <div class="q-pa-md" style="max-width: 300px">
+                        <q-input
+                          style="width: 250px"
+                          filled
+                          v-model="date"
+                          mask="date"
+                          :rules="['date']"
+                        >
+                          {{ date }}
+                          <template v-slot:append>
+                            <q-icon name="event" class="cursor-pointer">
+                              <q-popup-proxy
+                                ref="qDateProxy"
+                                cover
+                                transition-show="scale"
+                                transition-hide="scale"
+                              >
+                                <q-date v-model="date" range>
+                                  <div class="row items-center justify-end">
+                                    <q-btn
+                                      v-close-popup
+                                      label="Close"
+                                      color="primary"
+                                      flat
+                                    />
+                                  </div>
+                                </q-date>
+                              </q-popup-proxy>
+                            </q-icon>
+                          </template>
+                        </q-input>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-2">
+                    <div class="text-h7 text-bold"></div>
+                    <div class="text-h7"></div>
+                  </div>
+                  <div class="col-6">
+                    <div class="text-h7 text-bold">Type of contractor*</div>
+                    <div class="text-h7">
+                      <div class="">
+                        <q-option-group
+                          v-model="group"
+                          :options="options"
+                          color="black"
+                          left-label
+                          inline
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
-
-                <q-separator />
-
-              
                 <!-- Footer Div -->
 
                 <div class="row flex-center">
-                  <div class="col ">
+                  <div class="col-4">
                     <q-btn
                       size="8px"
                       rounded
@@ -131,21 +232,13 @@
                     ></q-btn>
                   </div>
 
-                  <div class="col-5">
+                  <div class="col-4"></div>
+                  <div class="col-4">
                     <q-btn
                       size="8px"
                       rounded
                       color="black"
-                      label="Request additional information"
-                      class="text-white text-h7"
-                    ></q-btn>
-                  </div>
-                  <div class="col-3">
-                    <q-btn
-                      size="8px"
-                      rounded
-                      color="black"
-                      label="Apply to project"
+                      label="Send"
                       class="text-white text-h7"
                     ></q-btn>
                   </div>
@@ -175,6 +268,22 @@ export default defineComponent({
       checkbox21: ref(false),
       checkbox22: ref(false),
       checkbox23: ref(false),
+      price: ref("500 € |"),
+      input1: ref("Your answer here."),
+      input2: ref("Your answer here."),
+      date: ref("2020/07/08 , 2020/07/17"),
+      group: ref("op1"),
+
+      options: [
+        {
+          label: "Freelancer",
+          value: "op1",
+        },
+        {
+          label: "Agency",
+          value: "op2",
+        },
+      ],
     };
   },
 });
