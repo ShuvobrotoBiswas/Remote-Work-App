@@ -709,7 +709,6 @@ export default defineComponent({
   width: 85px
   rounded
 
-.description
 
 .image2
   background: grey

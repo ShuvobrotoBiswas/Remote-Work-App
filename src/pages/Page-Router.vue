@@ -219,6 +219,16 @@
                   >
                   </q-btn>
                 </div>
+                <div class="q-pa-md">
+                  <q-btn
+                    to="10-Remote-Work-Client-Milestones-List-For-Freelancer"
+                    label="10-Remote-Work-Client-Milestones-List-For-Freelancer"
+                    outline
+                    style="color: goldenrod"
+                  >
+                  </q-btn>
+                </div>
+
 
 
               </q-list>
