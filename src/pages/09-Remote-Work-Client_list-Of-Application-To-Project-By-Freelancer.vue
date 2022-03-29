@@ -29,6 +29,7 @@
     <!-- Body Div -->
 
     <div class="flex-break"></div>
+
     <div class="text-h7 text-center">Hi Florin, welcome to your dashboard!</div>
     <div class="flex-break q-py-md"></div>
     <q-separator />
@@ -83,138 +84,155 @@
 
     <!-- Card 1 Div -->
     <div class="row flex-center items-start">
-      <div style="max-width: 750px">
+      <div style="max-width: 950px">
         <div class="q-pa-md">
           <div class="row">
             <div>
               <q-card-section>
                 <div class="text-h5 text-bold q-py-md text-left">
-                  Application to project
+                  List of Application to project
                 </div>
-                <div class="row text-7 q-py-md text-left">
-                  {{ lorem }}
-                </div>
-                <div class="row q-py-md">
-                  <div class="col-4">
-                    <div class="text-h7 text-bold">
-                      Type the requested Price
-                    </div>
-                    <div class="text-h7">
-                      <q-input v-model="price" outlined></q-input>
-                    </div>
-                  </div>
+                <q-separator />
+
+                <div class="row">
                   <div class="col-3">
-                    <div class="text-h7 text-bold"></div>
-                    <div class="text-h7"></div>
-                  </div>
-                  <div class="col-5">
-                    <div class="text-h7 text-bold">
-                      Type total execution time*
+                    <div class="text-h7 row text-bold">Anna Doyle</div>
+                    <div class="text-h7 row">
+                      <q-img sizes="100px" src="~/assets/Avator16.png"></q-img>
                     </div>
-                    <div class="text-h7">
-                      <q-expansion-item
-                        dense
-                        dense-toggle
-                        expand-separator
-                        label="Execution Time"
-                      >
-                        <q-card class="bg-grey-2">
-                          <q-card-section>
-                            <div class="row">2 Weeks</div>
-                            <div class="row">1 Month</div>
-                            <div class="row">3 Month</div>
-                          </q-card-section>
-                        </q-card>
-                      </q-expansion-item>
-                    </div>
-                  </div>
-                </div>
-
-                <q-separator />
-                <div class="row">
-                  <p class="text-bold text-h7">
-                    Answer to the question set by client.*
-                  </p>
-                  <div class="row q-pa-md">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua?
-                    <q-input
-                      v-model="input1"
-                      outlined
-                      style="width: 550px"
-                    ></q-input>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="row q-pa-md">
-                    Ut enim ad minim veniam veniam, quis nostrud exercitation et
-                    nisi ut aliquip?
-                    <q-input
-                      v-model="input2"
-                      outlined
-                      style="width: 550px"
-                    ></q-input>
-                  </div>
-                </div>
-
-                <q-separator />
-
-                <div class="row q-py-md">
-                  <div class="col-4">
-                    <div class="text-h7 text-bold">Offer validity*</div>
-                    <div class="text-h7">
-                      Pick a Date
-                      <div class="q-pa-md" style="max-width: 300px">
-                        <q-input
-                          style="width: 250px"
-                          filled
-                          v-model="date"
-                          mask="date"
-                          :rules="['date']"
-                        >
-                          {{ date }}
-                          <template v-slot:append>
-                            <q-icon name="event" class="cursor-pointer">
-                              <q-popup-proxy
-                                ref="qDateProxy"
-                                cover
-                                transition-show="scale"
-                                transition-hide="scale"
-                              >
-                                <q-date v-model="date" range>
-                                  <div class="row items-center justify-end">
-                                    <q-btn
-                                      v-close-popup
-                                      label="Close"
-                                      color="primary"
-                                      flat
-                                    />
-                                  </div>
-                                </q-date>
-                              </q-popup-proxy>
-                            </q-icon>
-                          </template>
-                        </q-input>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-2">
-                    <div class="text-h7 text-bold"></div>
-                    <div class="text-h7"></div>
-                  </div>
-                  <div class="col-6">
-                    <div class="text-h7 text-bold">Type of contractor*</div>
-                    <div class="text-h7">
-                      <div class="">
-                        <q-option-group
-                          v-model="group"
-                          :options="options"
-                          color="black"
-                          left-label
-                          inline
+                    <div class="text-h7 row">
+                      <div class="col">Unverified</div>
+                      <div class="col">
+                        <q-btn
+                          outline
+                          round
+                          size="8px"
+                          color="grey"
+                          icon="military_tech"
                         />
                       </div>
+                    </div>
+                    <div class="text-h7 row">
+                      <div class="text-h7">
+                        <q-checkbox
+                          v-model="checkbox19"
+                          checked-icon="star"
+                          size="25px"
+                          color="black"
+                          unchecked-icon="star_border"
+                          indeterminate-icon="help"
+                        />
+                        <q-checkbox
+                          v-model="checkbox20"
+                          size="25px"
+                          color="black"
+                          checked-icon="star"
+                          unchecked-icon="star_border"
+                          indeterminate-icon="help"
+                        />
+                        <q-checkbox
+                          v-model="checkbox21"
+                          color="black"
+                          size="25px"
+                          checked-icon="star"
+                          unchecked-icon="star_border"
+                          indeterminate-icon="help"
+                        />
+                        <q-checkbox
+                          v-model="checkbox22"
+                          color="black"
+                          size="25px"
+                          checked-icon="star"
+                          unchecked-icon="star_border"
+                          indeterminate-icon="help"
+                        />
+                        <q-checkbox
+                          v-model="checkbox23"
+                          color="black"
+                          size="25px"
+                          checked-icon="star"
+                          unchecked-icon="star_border"
+                          indeterminate-icon="help"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-9">
+                    <div class="text-h7 row text-bold">
+                      Graphic Designer | UX | UI
+                    </div>
+                    <div class="my-font row">
+                      {{ designer }}
+                    </div>
+                    <div class="row">
+                      <div class="col">
+                        <div class="text-h7 text-bold">Requested price</div>
+                        <div class="text-h7">€500</div>
+                      </div>
+                      <div class="col">
+                        <div class="text-h7 text-bold">Exexution time</div>
+                        <div class="text-h7">2 weeks</div>
+                      </div>
+                      <div class="col">
+                        <div class="text-h7 text-bold">Offer validity</div>
+                        <div class="text-h7">3 days</div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col">
+                        <div class="text-h7 text-bold">Skills</div>
+                        <div class="text-h7">
+                          <q-btn
+                            outline
+                            size="6px"
+                            rounded
+                            color="black"
+                            label="Graphic Design"
+                          />
+                          <q-btn
+                            outline
+                            size="6px"
+                            rounded
+                            color="black"
+                            label="Logo Design"
+                          />
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="text-h7 text-bold">Type of contractor</div>
+                        <div class="text-h7">Freelancer</div>
+                      </div>
+                      <div class="col">
+                        <div class="text-h7 text-bold"></div>
+                        <div class="text-h7"></div>
+                      </div>
+                    </div>
+                    <div class="row text-h7 text-bold">
+                      Answer to your questions
+                    </div>
+                    <div class="row text-h7 bg-grey-4">
+                      <strong class="q-mr-sm">Q</strong>
+                      Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                      laboris nisi ut aliquip?
+                    </div>
+                    <div class="row text-h7 text-white bg-black">
+                      <strong class="q-mr-sm">A</strong>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                      ullamco laboris nisi ut aliquip.
+                    </div>
+                    <div class="row text-h7 bg-grey-4">
+                      <strong class="q-mr-sm">Q</strong>
+                      Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                      laboris nisi ut aliquip?
+                    </div>
+                    <div class="row text-h7 text-white bg-black">
+                      <strong class="q-mr-sm">A</strong>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                      ullamco laboris nisi ut aliquip.
                     </div>
                   </div>
                 </div>
@@ -223,7 +241,7 @@
                   <div flat bordered class="my-card" style="max-width: 1000px">
                     <div class="q-pa-md">
                       <div class="col-9 text-h6 text-bold">
-                        Select relevent projects from you portfolio*
+                        Relevent projects from you portfolio
                       </div>
                     </div>
                     <div class="row bid1 text-center">
@@ -249,7 +267,7 @@
                           Website Design
                         </div>
                       </div>
-                      <div class="col my-home bid2 image2  my-font q-mr-sm">
+                      <div class="col my-home bid2 image2 my-font q-mr-sm">
                         <q-img src="~assets/Avator7.png " class="image1">
                         </q-img>
                         <div class="q-pa-mg text-center custom-text-me">
@@ -257,7 +275,7 @@
                         </div>
                       </div>
                       <div class="col my-home bid2 my-font">
-                        <div class="row ">
+                        <div class="row">
                           <div class="col">
                             <q-btn
                               flat
@@ -325,7 +343,7 @@
                       size="8px"
                       rounded
                       color="grey"
-                      label="Back to Search"
+                      label="Ask more info"
                       class="text-white text-h7"
                     ></q-btn>
                   </div>
@@ -336,18 +354,292 @@
                       size="8px"
                       rounded
                       color="black"
-                      label="Send"
+                      label="Hire"
                       class="text-white text-h7"
                     ></q-btn>
                   </div>
                 </div>
+                <q-separator />
+                <div class="row">
+                  <div class="col-3">
+                    <div class="text-h7 row text-bold">Avraam iancu</div>
+                    <div class="text-h7 row">
+                      <q-img sizes="100px" src="~/assets/Avator17.png"></q-img>
+                    </div>
+                    <div class="text-h7 row">
+                      <div class="col">Unverified</div>
+                      <div class="col">
+                        <q-btn
+                          outline
+                          round
+                          size="8px"
+                          color="grey"
+                          icon="military_tech"
+                        />
+                      </div>
+                    </div>
+                    <div class="text-h7 row">
+                      <div class="text-h7">
+                        <q-checkbox
+                          v-model="checkbox19"
+                          checked-icon="star"
+                          size="25px"
+                          color="black"
+                          unchecked-icon="star_border"
+                          indeterminate-icon="help"
+                        />
+                        <q-checkbox
+                          v-model="checkbox20"
+                          size="25px"
+                          color="black"
+                          checked-icon="star"
+                          unchecked-icon="star_border"
+                          indeterminate-icon="help"
+                        />
+                        <q-checkbox
+                          v-model="checkbox21"
+                          color="black"
+                          size="25px"
+                          checked-icon="star"
+                          unchecked-icon="star_border"
+                          indeterminate-icon="help"
+                        />
+                        <q-checkbox
+                          v-model="checkbox22"
+                          color="black"
+                          size="25px"
+                          checked-icon="star"
+                          unchecked-icon="star_border"
+                          indeterminate-icon="help"
+                        />
+                        <q-checkbox
+                          v-model="checkbox23"
+                          color="black"
+                          size="25px"
+                          checked-icon="star"
+                          unchecked-icon="star_border"
+                          indeterminate-icon="help"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-9">
+                    <div class="text-h7 row text-bold">
+                      Type Designer | Logo Designer
+                    </div>
+                    <div class="my-font row">
+                      {{ designer }}
+                    </div>
+                    <div class="row">
+                      <div class="col">
+                        <div class="text-h7 text-bold">Requested price</div>
+                        <div class="text-h7">€500</div>
+                      </div>
+                      <div class="col">
+                        <div class="text-h7 text-bold">Exexution time</div>
+                        <div class="text-h7">2 weeks</div>
+                      </div>
+                      <div class="col">
+                        <div class="text-h7 text-bold">Offer validity</div>
+                        <div class="text-h7">3 days</div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col">
+                        <div class="text-h7 row text-bold">Skills</div>
+                        <div class="text-h7 r">
+                          <q-btn
+                            outline
+                            size="6px"
+                            rounded
+                            color="black"
+                            label="Graphic Design"
+                          />
+                          <q-btn
+                            outline
+                            size="6px"
+                            rounded
+                            color="black"
+                            label="Logo Design"
+                          />
+                          <q-btn
+                            outline
+                            size="6px"
+                            rounded
+                            color="black"
+                            label="Branding & Logo Design"
+                          />
+                          <q-btn
+                            outline
+                            size="6px"
+                            rounded
+                            color="black"
+                            label="Illustrator"
+                          />
+                          <q-btn
+                            outline
+                            size="6px"
+                            rounded
+                            color="black"
+                            label="InDesign"
+                          />
+                          <q-btn
+                            outline
+                            size="6px"
+                            rounded
+                            color="black"
+                            label="Photoshop"
+                          />
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+                <q-separator />
+                <div class="row">
+                  <div class="col-3">
+                    <div class="text-h7 row text-bold">alexandru cumpanasu</div>
+                    <div class="text-h7 row">
+                      <q-img sizes="100px" src="~/assets/Avator18.png"></q-img>
+                    </div>
+                    <div class="text-h7 row">
+                      <div class="col">Unverified</div>
+                      <div class="col">
+                        <q-btn
+                          outline
+                          round
+                          size="8px"
+                          color="grey"
+                          icon="military_tech"
+                        />
+                      </div>
+                    </div>
+                    <div class="text-h7 row">
+                      <div class="text-h7">
+                        <q-checkbox
+                          v-model="checkbox19"
+                          checked-icon="star"
+                          size="25px"
+                          color="black"
+                          unchecked-icon="star_border"
+                          indeterminate-icon="help"
+                        />
+                        <q-checkbox
+                          v-model="checkbox20"
+                          size="25px"
+                          color="black"
+                          checked-icon="star"
+                          unchecked-icon="star_border"
+                          indeterminate-icon="help"
+                        />
+                        <q-checkbox
+                          v-model="checkbox21"
+                          color="black"
+                          size="25px"
+                          checked-icon="star"
+                          unchecked-icon="star_border"
+                          indeterminate-icon="help"
+                        />
+                        <q-checkbox
+                          v-model="checkbox22"
+                          color="black"
+                          size="25px"
+                          checked-icon="star"
+                          unchecked-icon="star_border"
+                          indeterminate-icon="help"
+                        />
+                        <q-checkbox
+                          v-model="checkbox23"
+                          color="black"
+                          size="25px"
+                          checked-icon="star"
+                          unchecked-icon="star_border"
+                          indeterminate-icon="help"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-9">
+                    <div class="text-h7 row text-bold">
+                      Branding Designer
+                    </div>
+                    <div class="my-font row">
+                      {{ designer }}
+                    </div>
+                    <div class="row">
+                      <div class="col">
+                        <div class="text-h7 text-bold">Requested price</div>
+                        <div class="text-h7">€500</div>
+                      </div>
+                      <div class="col">
+                        <div class="text-h7 text-bold">Exexution time</div>
+                        <div class="text-h7">2 weeks</div>
+                      </div>
+                      <div class="col">
+                        <div class="text-h7 text-bold">Offer validity</div>
+                        <div class="text-h7">3 days</div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col">
+                        <div class="text-h7 row text-bold">Skills</div>
+                        <div class="text-h7 r">
+                          <q-btn
+                            outline
+                            size="6px"
+                            rounded
+                            color="black"
+                            label="Graphic Design"
+                          />
+                          <q-btn
+                            outline
+                            size="6px"
+                            rounded
+                            color="black"
+                            label="Logo Design"
+                          />
+                          <q-btn
+                            outline
+                            size="6px"
+                            rounded
+                            color="black"
+                            label="Branding & Logo Design"
+                          />
+                          <q-btn
+                            outline
+                            size="6px"
+                            rounded
+                            color="black"
+                            label="Illustrator"
+                          />
+                          <q-btn
+                            outline
+                            size="6px"
+                            rounded
+                            color="black"
+                            label="InDesign"
+                          />
+                          <q-btn
+                            outline
+                            size="6px"
+                            rounded
+                            color="black"
+                            label="Photoshop"
+                          />
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+                <q-separator />
               </q-card-section>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- Card 3 div -->
   </div>
 </template>
 
@@ -362,7 +654,7 @@ export default defineComponent({
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
       text: " We have a logo that is about 13 years old and we are looking to update/change our branding, we need a logo that is more up to date and we want to keep the versatillity. We want to go bold/innovative with this change. Previous logo is attached for reference",
       checkbox19: ref(true),
-      checkbox20: ref(true),
+      checkbox20: ref(false),
       checkbox21: ref(false),
       checkbox22: ref(false),
       checkbox23: ref(false),
@@ -382,6 +674,8 @@ export default defineComponent({
           value: "op2",
         },
       ],
+      designer:
+        "Senior Graphic Design Specialist with 6+ years of experience in the management of the complete design process, from conceptualization to delivery. Skilled with Adobe Creative Suite (Illustrator, Photoshop, InDesign) and web design applications. Able to stretch the boundaries of web design and digital storytelling to help my client's brands stand out. ",
     };
   },
 });
