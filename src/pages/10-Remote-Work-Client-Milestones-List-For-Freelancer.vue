@@ -82,12 +82,248 @@
     <q-separator />
 
     <!-- Card 1 Div -->
+
     <div class="row flex-center items-start">
-      <div style="max-width: 750px">
-       
+      <div style="width: 1000px">
+        <div class="q-pa-md">
+          <div class="row">
+            <div class="row" style="max-width: 950px">
+              <q-card-section>
+                <div class="text-h5 text-bold q-py-md text-left">
+                  Logo Design for Insurance Agency
+                </div>
+                <q-separator />
+                <div class="row">
+                  <div class="col">
+                    <div class="row text-h7 text-bold">Anna Doyle</div>
+                    <div class="text-h7 row">
+                      <q-img
+                        style="height: 70px; width: 70px"
+                        src="~/assets/Avator16.png"
+                      ></q-img>
+                    </div>
+                  </div>
+                  <div class="col"></div>
+                  <div class="col"></div>
+                  <div class="col">
+                    <q-btn
+                      rounded
+                      size="10px"
+                      style="position: absolute"
+                      unelevated
+                      color="black"
+                      class="text-white"
+                      label="Add milestone"
+                    />
+                  </div>
+                </div>
+                <div class="row">
+                  <q-tabs v-model="tab" class="text-teal">
+                    <q-tab class="text-black" label="Milestones" name="one" />
+                    <q-tab class="text-black" label="Feedback" name="two" />
+                  </q-tabs>
+                  <q-separator />
+
+                  <q-tab-panels v-model="tab" animated style="max-width: 950px">
+                    <q-tab-panel name="one">
+                      <div class="row" style="max-width: 950px">
+                        <div class="col-9">
+                          <div class="row">
+                            <div class="row">
+                              <p class="text-bold q-my-none text-h7">
+                                Milestone name 1
+                              </p>
+                            </div>
+                            <div class="row">
+                              <p class="my-font">
+                                <span class="text-grey-6"
+                                  >Due Feb.10 | Amount: €300 | Funded |</span
+                                >
+                                Change requested
+                              </p>
+                              <p class="text-h7">
+                                {{ lorem }}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-3">
+                          <div class="row flex-center">
+                            <q-btn
+                              rounded
+                              size="10px"
+                              style="position: absolute"
+                              unelevated
+                              color="black"
+                              class="text-white"
+                              label="Release Payment"
+                            />
+                          </div>
+                          <div class="row">
+                            <div class="col">
+                              <q-btn
+                                round
+                                size="10px"
+                                unelevated
+                                color="black"
+                                icon="edit"
+                                class="text-white"
+                              />
+                            </div>
+                            <div class="col"></div>
+                            <div class="col">
+                              <q-btn
+                                round
+                                size="10px"
+                                icon="delete"
+                                unelevated
+                                color="black"
+                                class="text-white"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row" style="max-width: 950px">
+                        <div class="col-9">
+                          <div class="row">
+                            <div class="row">
+                              <p class="text-bold q-my-none text-h7">
+                                Milestone name 2
+                              </p>
+                            </div>
+                            <div class="row">
+                              <p class="my-font">
+                                <span class="text-grey-6"
+                                  >Due Feb. 05 | Amount: €100 |</span
+                                >
+                              </p>
+                              <p class="text-h7">
+                                {{ lorem }}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-3">
+                          <div class="row flex-center">
+                            <q-btn
+                              rounded
+                              size="10px"
+                              style="width: 90px"
+                              unelevated
+                              color="black"
+                              class="text-white"
+                              label="Fund"
+                            />
+                          </div>
+                          <div class="row">
+                            <div class="col">
+                              <q-btn
+                                round
+                                size="10px"
+                                unelevated
+                                color="black"
+                                icon="edit"
+                                class="text-white"
+                              />
+                            </div>
+                            <div class="col"></div>
+                            <div class="col">
+                              <q-btn
+                                round
+                                size="10px"
+                                icon="delete"
+                                unelevated
+                                color="black"
+                                class="text-white"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row" style="max-width: 950px">
+                        <div class="col-9">
+                          <div class="row">
+                            <div class="row">
+                              <p class="text-bold q-my-none text-h7">
+                                Milestone name 3
+                              </p>
+                            </div>
+                            <div class="row">
+                              <p class="my-font">
+                                <span class="text-grey-6"
+                                  >Due Feb. 1 | Amount: €300</span
+                                >
+                              </p>
+                              <p class="text-h7">
+                                {{ lorem }}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-3">
+                          <div class="row flex-center">
+                            <q-btn
+                              rounded
+                              size="10px"
+                              unelevated
+                              style="width: 90px"
+                              color="black"
+                              class="text-white"
+                              label="Fund"
+                            />
+                          </div>
+                          <div class="row">
+                            <div class="col">
+                              <q-btn
+                                round
+                                size="10px"
+                                unelevated
+                                color="black"
+                                icon="edit"
+                                class="text-white"
+                              />
+                            </div>
+                            <div class="col"></div>
+                            <div class="col">
+                              <q-btn
+                                round
+                                size="10px"
+                                icon="delete"
+                                unelevated
+                                color="black"
+                                class="text-white"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </q-tab-panel>
+
+                    <q-tab-panel name="two"> Blank </q-tab-panel>
+                  </q-tab-panels>
+                </div>
+
+                <q-separator />
+              </q-card-section>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <!-- Card 3 div -->
+    <!-- Footer Div -->
+
+    <div class="row q-pa-md flex flex-center">
+      <q-btn
+        rounded
+        style="width: 90px"
+        size="10px"
+        label="hire"
+        unelevated
+        color="black"
+        class="text-white"
+      />
+    </div>
   </div>
 </template>
 
@@ -99,7 +335,7 @@ export default defineComponent({
   setup() {
     return {
       lorem:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "Short description: Lore ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
       text: " We have a logo that is about 13 years old and we are looking to update/change our branding, we need a logo that is more up to date and we want to keep the versatillity. We want to go bold/innovative with this change. Previous logo is attached for reference",
       checkbox19: ref(true),
       checkbox20: ref(true),
@@ -122,6 +358,7 @@ export default defineComponent({
           value: "op2",
         },
       ],
+      tab: ref("one"),
     };
   },
 });
@@ -129,7 +366,7 @@ export default defineComponent({
 <style lang="sass" scoped>
 .my-card
   width: 100%
-  max-width: 250px
+  max-width: 950px
 
 .row > div
   padding: 10px 15px
