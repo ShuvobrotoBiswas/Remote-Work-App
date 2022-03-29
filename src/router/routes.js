@@ -30,6 +30,8 @@ const routes = [
       { path: '/06-Remote-Work-Contractor-Search-Proj', component: () => import('src/pages/06-Remote-Work-Contractor-Search-Proj.vue') },
       { path: '/07-Remote-Work-Freelancer-Project-Display', component: () => import('src/pages/07-Remote-Work-Freelancer-Project-Display.vue') },
       { path: '/08-Remote-Work-Contractor-Application-To-Project-By-Freelancer', component: () => import('src/pages/08-Remote-Work-Contractor-Application-To-Project-By-Freelancer.vue') },
+      { path: '/01-remote-work-Client-Post-Proj', component: () => import('src/pages/01-remote-work-Client-Post-Proj.vue') },
+      { path: '/09-Remote-Work-Client_list-Of-Application-To-Project-By-Freelancer', component: () => import('src/pages/09-Remote-Work-Client_list-Of-Application-To-Project-By-Freelancer.vue') },
 
 
 

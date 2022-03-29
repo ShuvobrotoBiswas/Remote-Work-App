@@ -172,8 +172,17 @@
           <div class="q-pa-md">
             <div class="row">
               <q-list>
-              <p class="flex-center">Phase 2</p>
+                <p class="flex-center">Phase 2</p>
 
+                <div class="q-pa-md">
+                  <q-btn
+                    to="01-remote-work-Client-Post-Proj"
+                    label="01-remote-work-Client-Post-Proj"
+                    outline
+                    style="color: goldenrod"
+                  >
+                  </q-btn>
+                </div>
                 <div class="q-pa-md">
                   <q-btn
                     to="06-Remote-Work-Contractor-Search-Proj"
@@ -196,6 +205,15 @@
                   <q-btn
                     to="08-Remote-Work-Contractor-Application-To-Project-By-Freelancer"
                     label="08-Remote-Work-Contractor-Application-To-Project-By-Freelancer"
+                    outline
+                    style="color: goldenrod"
+                  >
+                  </q-btn>
+                </div>
+                <div class="q-pa-md">
+                  <q-btn
+                    to="09-Remote-Work-Client_list-Of-Application-To-Project-By-Freelancer"
+                    label="09-Remote-Work-Client_list-Of-Application-To-Project-By-Freelancer"
                     outline
                     style="color: goldenrod"
                   >
