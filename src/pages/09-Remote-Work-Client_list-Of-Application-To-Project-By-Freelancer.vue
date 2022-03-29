@@ -540,7 +540,7 @@
                           checked-icon="star"
                           unchecked-icon="star_border"
                           indeterminate-icon="help"
-                        />
+                        /> 
                         <q-checkbox
                           v-model="checkbox22"
                           color="black"
