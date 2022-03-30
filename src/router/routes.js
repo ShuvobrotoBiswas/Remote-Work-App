@@ -36,6 +36,10 @@ const routes = [
       { path: '/11-Remote-Work-Client-Milestones-Details-For-Freelancer', component: () => import('src/pages/11-Remote-Work-Client-Milestones-Details-For-Freelancer.vue') },
       { path: '/12-Remote-Work-Client-Feedback-To-Freelancer', component: () => import('src/pages/12-Remote-Work-Client-Feedback-To-Freelancer.vue') },
       { path: '/13-Remote-Work-Application-To-Project-By-Agency', component: () => import('src/pages/13-Remote-Work-Application-To-Project-By-Agency.vue') },
+      { path: '/14-Remote-Work-Client-Lest-Application-To-Project-By-Agency', component: () => import('src/pages/14-Remote-Work-Client-Lest-Application-To-Project-By-Agency.vue') },
+      { path: '/15-Remote-Work-Client-Milestones-List-For-Agency', component: () => import('src/pages/15-Remote-Work-Client-Milestones-List-For-Agency.vue') },
+
+
 
 
 

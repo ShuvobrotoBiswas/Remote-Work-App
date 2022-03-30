@@ -255,6 +255,24 @@
                   >
                   </q-btn>
                 </div>
+                <div class="q-pa-md">
+                  <q-btn
+                    to="14-Remote-Work-Client-Lest-Application-To-Project-By-Agency"
+                    label="14-Remote-Work-Client-Lest-Application-To-Project-By-Agency"
+                    outline
+                    style="color: goldenrod"
+                  >
+                  </q-btn>
+                </div>
+                <div class="q-pa-md">
+                  <q-btn
+                    to="15-Remote-Work-Client-Milestones-List-For-Agency"
+                    label="15-Remote-Work-Client-Milestones-List-For-Agency"
+                    outline
+                    style="color: goldenrod"
+                  >
+                  </q-btn>
+                </div>
 
 
 
