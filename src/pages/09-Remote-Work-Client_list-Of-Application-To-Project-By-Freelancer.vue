@@ -114,45 +114,11 @@
                     </div>
                     <div class="text-h7 row">
                       <div class="text-h7">
-                        <q-checkbox
-                          v-model="checkbox19"
-                          checked-icon="star"
-                          size="25px"
+                        <q-rating
+                          v-model="ratingModel"
+                          size="20px"
+                          :max="5"
                           color="black"
-                          unchecked-icon="star_border"
-                          indeterminate-icon="help"
-                        />
-                        <q-checkbox
-                          v-model="checkbox20"
-                          size="25px"
-                          color="black"
-                          checked-icon="star"
-                          unchecked-icon="star_border"
-                          indeterminate-icon="help"
-                        />
-                        <q-checkbox
-                          v-model="checkbox21"
-                          color="black"
-                          size="25px"
-                          checked-icon="star"
-                          unchecked-icon="star_border"
-                          indeterminate-icon="help"
-                        />
-                        <q-checkbox
-                          v-model="checkbox22"
-                          color="black"
-                          size="25px"
-                          checked-icon="star"
-                          unchecked-icon="star_border"
-                          indeterminate-icon="help"
-                        />
-                        <q-checkbox
-                          v-model="checkbox23"
-                          color="black"
-                          size="25px"
-                          checked-icon="star"
-                          unchecked-icon="star_border"
-                          indeterminate-icon="help"
                         />
                       </div>
                     </div>
@@ -186,6 +152,7 @@
                             outline
                             size="6px"
                             rounded
+                            class="q-mr-sm"
                             color="black"
                             label="Graphic Design"
                           />
@@ -380,45 +347,11 @@
                     </div>
                     <div class="text-h7 row">
                       <div class="text-h7">
-                        <q-checkbox
-                          v-model="checkbox19"
-                          checked-icon="star"
-                          size="25px"
+                        <q-rating
+                          v-model="ratingModel1"
+                          size="20px"
+                          :max="5"
                           color="black"
-                          unchecked-icon="star_border"
-                          indeterminate-icon="help"
-                        />
-                        <q-checkbox
-                          v-model="checkbox20"
-                          size="25px"
-                          color="black"
-                          checked-icon="star"
-                          unchecked-icon="star_border"
-                          indeterminate-icon="help"
-                        />
-                        <q-checkbox
-                          v-model="checkbox21"
-                          color="black"
-                          size="25px"
-                          checked-icon="star"
-                          unchecked-icon="star_border"
-                          indeterminate-icon="help"
-                        />
-                        <q-checkbox
-                          v-model="checkbox22"
-                          color="black"
-                          size="25px"
-                          checked-icon="star"
-                          unchecked-icon="star_border"
-                          indeterminate-icon="help"
-                        />
-                        <q-checkbox
-                          v-model="checkbox23"
-                          color="black"
-                          size="25px"
-                          checked-icon="star"
-                          unchecked-icon="star_border"
-                          indeterminate-icon="help"
                         />
                       </div>
                     </div>
@@ -451,6 +384,7 @@
                           <q-btn
                             outline
                             size="6px"
+                            class="q-mr-sm"
                             rounded
                             color="black"
                             label="Graphic Design"
@@ -459,6 +393,7 @@
                             outline
                             size="6px"
                             rounded
+                            class="q-mr-sm"
                             color="black"
                             label="Logo Design"
                           />
@@ -466,6 +401,7 @@
                             outline
                             size="6px"
                             rounded
+                            class="q-mr-sm"
                             color="black"
                             label="Branding & Logo Design"
                           />
@@ -473,6 +409,7 @@
                             outline
                             size="6px"
                             rounded
+                            class="q-mr-sm"
                             color="black"
                             label="Illustrator"
                           />
@@ -480,19 +417,20 @@
                             outline
                             size="6px"
                             rounded
+                            class="q-mr-sm"
                             color="black"
                             label="InDesign"
                           />
                           <q-btn
                             outline
                             size="6px"
+                            class="q-mr-sm"
                             rounded
                             color="black"
                             label="Photoshop"
                           />
                         </div>
                       </div>
-
                     </div>
                   </div>
                 </div>
@@ -517,53 +455,17 @@
                     </div>
                     <div class="text-h7 row">
                       <div class="text-h7">
-                        <q-checkbox
-                          v-model="checkbox19"
-                          checked-icon="star"
-                          size="25px"
+                        <q-rating
+                          v-model="ratingModel2"
+                          size="20px"
+                          :max="5"
                           color="black"
-                          unchecked-icon="star_border"
-                          indeterminate-icon="help"
-                        />
-                        <q-checkbox
-                          v-model="checkbox20"
-                          size="25px"
-                          color="black"
-                          checked-icon="star"
-                          unchecked-icon="star_border"
-                          indeterminate-icon="help"
-                        />
-                        <q-checkbox
-                          v-model="checkbox21"
-                          color="black"
-                          size="25px"
-                          checked-icon="star"
-                          unchecked-icon="star_border"
-                          indeterminate-icon="help"
-                        /> 
-                        <q-checkbox
-                          v-model="checkbox22"
-                          color="black"
-                          size="25px"
-                          checked-icon="star"
-                          unchecked-icon="star_border"
-                          indeterminate-icon="help"
-                        />
-                        <q-checkbox
-                          v-model="checkbox23"
-                          color="black"
-                          size="25px"
-                          checked-icon="star"
-                          unchecked-icon="star_border"
-                          indeterminate-icon="help"
                         />
                       </div>
                     </div>
                   </div>
                   <div class="col-9">
-                    <div class="text-h7 row text-bold">
-                      Branding Designer
-                    </div>
+                    <div class="text-h7 row text-bold">Branding Designer</div>
                     <div class="my-font row">
                       {{ designer }}
                     </div>
@@ -589,12 +491,14 @@
                             outline
                             size="6px"
                             rounded
+                            class="q-mr-sm"
                             color="black"
                             label="Graphic Design"
                           />
                           <q-btn
                             outline
                             size="6px"
+                            class="q-mr-sm"
                             rounded
                             color="black"
                             label="Logo Design"
@@ -603,12 +507,14 @@
                             outline
                             size="6px"
                             rounded
+                            class="q-mr-sm"
                             color="black"
                             label="Branding & Logo Design"
                           />
                           <q-btn
                             outline
                             size="6px"
+                            class="q-mr-sm"
                             rounded
                             color="black"
                             label="Illustrator"
@@ -616,6 +522,7 @@
                           <q-btn
                             outline
                             size="6px"
+                            class="q-mr-sm"
                             rounded
                             color="black"
                             label="InDesign"
@@ -623,13 +530,13 @@
                           <q-btn
                             outline
                             size="6px"
+                            class="q-mr-sm"
                             rounded
                             color="black"
                             label="Photoshop"
                           />
                         </div>
                       </div>
-
                     </div>
                   </div>
                 </div>
@@ -676,6 +583,9 @@ export default defineComponent({
       ],
       designer:
         "Senior Graphic Design Specialist with 6+ years of experience in the management of the complete design process, from conceptualization to delivery. Skilled with Adobe Creative Suite (Illustrator, Photoshop, InDesign) and web design applications. Able to stretch the boundaries of web design and digital storytelling to help my client's brands stand out. ",
+      ratingModel: ref(1),
+      ratingModel1: ref(1),
+      ratingModel2: ref(1),
     };
   },
 });

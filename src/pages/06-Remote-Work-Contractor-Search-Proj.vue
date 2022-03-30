@@ -375,35 +375,11 @@
                     >
                       <q-card class="bg-grey-2">
                         <q-card-section>
-                          <q-checkbox
-                            v-model="checkbox19"
-                            checked-icon="star"
-                            unchecked-icon="star_border"
-                            indeterminate-icon="help"
-                          />
-                          <q-checkbox
-                            v-model="checkbox20"
-                            checked-icon="star"
-                            unchecked-icon="star_border"
-                            indeterminate-icon="help"
-                          />
-                          <q-checkbox
-                            v-model="checkbox21"
-                            checked-icon="star"
-                            unchecked-icon="star_border"
-                            indeterminate-icon="help"
-                          />
-                          <q-checkbox
-                            v-model="checkbox22"
-                            checked-icon="star"
-                            unchecked-icon="star_border"
-                            indeterminate-icon="help"
-                          />
-                          <q-checkbox
-                            v-model="checkbox23"
-                            checked-icon="star"
-                            unchecked-icon="star_border"
-                            indeterminate-icon="help"
+                          <q-rating
+                            v-model="ratingModel"
+                            size="2em"
+                            :max="5"
+                            color="cyan"
                           />
                         </q-card-section>
                       </q-card>
@@ -821,7 +797,7 @@
                       Illustrator ✠</q-btn
                     >
                   </div>
-                   <div class="row" style="width: 500px">
+                  <div class="row" style="width: 500px">
                     <div class="col-8"></div>
                     <div class="col-4">
                       <q-btn
@@ -967,6 +943,7 @@ export default defineComponent({
       checkbox25: ref(true),
       checkbox26: ref(true),
       text: " We have a logo that is about 13 years old and we are looking to update/change our branding, we need a logo that is more up to date and we want to keep the versatillity. We want to go bold/innovative with this change. Previous logo is attached for reference",
+      ratingModel: ref(1),
     };
   },
 });

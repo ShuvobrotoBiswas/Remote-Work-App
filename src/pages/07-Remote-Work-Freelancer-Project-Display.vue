@@ -210,40 +210,11 @@
                   <div class="col">
                     <div class="text-h7 text-bold">Client rating</div>
                     <div class="text-h7">
-                      <q-checkbox
-                        v-model="checkbox19"
-                        checked-icon="star"
-                        size="25px"
-                        unchecked-icon="star_border"
-                        indeterminate-icon="help"
-                      />
-                      <q-checkbox
-                        v-model="checkbox20"
-                        size="25px"
-                        checked-icon="star"
-                        unchecked-icon="star_border"
-                        indeterminate-icon="help"
-                      />
-                      <q-checkbox
-                        v-model="checkbox21"
-                        size="25px"
-                        checked-icon="star"
-                        unchecked-icon="star_border"
-                        indeterminate-icon="help"
-                      />
-                      <q-checkbox
-                        v-model="checkbox22"
-                        size="25px"
-                        checked-icon="star"
-                        unchecked-icon="star_border"
-                        indeterminate-icon="help"
-                      />
-                      <q-checkbox
-                        v-model="checkbox23"
-                        size="25px"
-                        checked-icon="star"
-                        unchecked-icon="star_border"
-                        indeterminate-icon="help"
+                      <q-rating
+                        v-model="ratingModel"
+                        size="15px"
+                        :max="5"
+                        color="black"
                       />
                     </div>
                   </div>
@@ -259,7 +230,7 @@
                 <!-- Footer Div -->
 
                 <div class="row flex-center">
-                  <div class="col ">
+                  <div class="col">
                     <q-btn
                       size="8px"
                       rounded
@@ -306,11 +277,7 @@ export default defineComponent({
   setup() {
     return {
       text: " We have a logo that is about 13 years old and we are looking to update/change our branding, we need a logo that is more up to date and we want to keep the versatillity. We want to go bold/innovative with this change. Previous logo is attached for reference",
-      checkbox19: ref(true),
-      checkbox20: ref(true),
-      checkbox21: ref(false),
-      checkbox22: ref(false),
-      checkbox23: ref(false),
+      ratingModel: ref(2),
     };
   },
 });

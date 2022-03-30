@@ -95,11 +95,11 @@
                 <q-separator />
                 <div class="row">
                   <div class="col">
-                    <div class="row text-h7 text-bold">Anna Doyle</div>
+                    <div class="row text-h7 text-bold">AGENCY NAME</div>
                     <div class="text-h7 row">
                       <q-img
-                        style="height: 70px; width: 70px"
-                        src="~/assets/Avator16.png"
+                        style="height: 70px; width: 70px ;border-radius: 50%; ;border: 1px solid black"
+                        src="~/assets/Avator20.png"
                       ></q-img>
                     </div>
                   </div>
@@ -159,7 +159,7 @@
                               label="Release Payment"
                             />
                           </div>
-                          <div class="row ">
+                          <div class="row">
                             <div class="col">
                               <q-btn
                                 round
@@ -222,7 +222,40 @@
                       </div>
                     </q-tab-panel>
 
-                    <q-tab-panel name="two"> Blank </q-tab-panel>
+                    <q-tab-panel name="two">
+                      <div class="row" style="max-width: 950px">
+                        <div class="col-11">
+                          <div class="row">
+                            <div class="row">
+                              <p class="text-bold q-my-none text-h7">
+                                Give feedback to the contractor
+                              </p>
+                            </div>
+                            <div class="row">
+                              <p class="text-h7">
+                                {{ lorem }}
+                              </p>
+                            </div>
+                            <div class="row q-gutter-sm">
+                                  <q-radio
+                                    v-model="shape"
+                                    val="radio1"
+                                    class="q-mr-sm"
+                                    color="black"
+                                    label="I want to work with this contractor again"
+                                  />
+                                  <q-radio
+                                    v-model="shape"
+                                    color="black"
+                                    class="q-mr-sm"
+                                    val="rectangle"
+                                    label="I want to try a different contractor"
+                                  />
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+                    </q-tab-panel>
                   </q-tab-panels>
                 </div>
 
@@ -243,7 +276,18 @@
         label="back"
         unelevated
         color="black"
-        class="text-white"
+        class="text-white q-mr-lg"
+      />
+      <q-btn
+        rounded
+        style="width: 120px"
+        size="10px"
+        type="submit"
+        label="Send feedback"
+        unelevated
+        v-model="submit"
+        color="black"
+        class="text-white "
       />
     </div>
   </div>
@@ -257,7 +301,7 @@ export default defineComponent({
   setup() {
     return {
       lorem:
-        "Short description: Lore ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
+        "If you were to carry out a project similar to this one, would you want to work with this contractor again or do you want to try a different team?.",
       text: " We have a logo that is about 13 years old and we are looking to update/change our branding, we need a logo that is more up to date and we want to keep the versatillity. We want to go bold/innovative with this change. Previous logo is attached for reference",
       checkbox19: ref(true),
       checkbox20: ref(true),
@@ -280,7 +324,9 @@ export default defineComponent({
           value: "op2",
         },
       ],
-      tab: ref("one"),
+      tab: ref("two"),
+      shape: ref("radio1"),
+      submit: null,
     };
   },
 });

@@ -159,7 +159,7 @@
                               label="Release Payment"
                             />
                           </div>
-                          <div class="row">
+                          <div class="row q-pa-md">
                             <div class="col">
                               <q-btn
                                 round
@@ -216,7 +216,7 @@
                               label="Fund"
                             />
                           </div>
-                          <div class="row">
+                          <div class="row q-pa-md">
                             <div class="col">
                               <q-btn
                                 round
@@ -273,7 +273,7 @@
                               label="Fund"
                             />
                           </div>
-                          <div class="row">
+                          <div class="row q-pa-md">
                             <div class="col">
                               <q-btn
                                 round

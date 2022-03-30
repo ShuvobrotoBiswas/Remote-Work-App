@@ -52,180 +52,201 @@
       </div>
     </div>
     <q-separator />
-    <div>
-      <q-linear-progress size="25px" :value="progress1" color="accent">
-        <div class="absolute-full flex flex-center">
-          <q-badge color="white" text-color="accent" :label="progressLabel1" />
+
+    <div class="row flex-center items-start">
+      <div style="width: 1000px">
+        <div class="q-mt-xl">
+          <TimeLine />
         </div>
-      </q-linear-progress>
-    </div>
-    <div class="container">
-      <h5>1. DEFINE PROJECT</h5>
-      <h6>Project Catagory</h6>
-      <div class="q-gutter-sm">
-        <q-radio
-          left-label
-          v-model="shape"
-          val="line"
-          label="Well Defined Project"
-        />
-        <q-radio
-          left-label
-          v-model="shape"
-          val="rectangle"
-          label="Ongoing Work"
-        />
-        <q-radio
-          left-label
-          v-model="shape"
-          val="ellipse"
-          label="Market Research"
-        />
-        <q-radio
-          left-label
-          v-model="shape"
-          val="polygon"
-          label="Guaranted Prize Contest"
-        />
-      </div>
-      <h6>1.Project Template</h6>
-      <div>
-        <div class="row justify-around">
-          <div class="col-2">
-            <q-avatar
-              circle
-              size="64px"
-              font-size="48px"
-              color="cyan"
-              text-color="black"
-              icon="chevron_left"
-            />
-          </div>
-          <div class="col-2">
-            <q-avatar
-              square
-              size="100px"
-              font-size="82px"
-              color="cyan"
-              text-color="white"
-              icon="g_translate"
-            />
-            <p>Logo Design</p>
+        <h5>1. DEFINE PROJECT</h5>
+        <h6>Project Catagory</h6>
+        <div class="q-gutter-sm">
+          <q-radio
+            left-label
+            v-model="shape"
+            val="line"
+            label="Well Defined Project"
+          />
+          <q-radio
+            left-label
+            v-model="shape"
+            val="rectangle"
+            label="Ongoing Work"
+          />
+          <q-radio
+            left-label
+            v-model="shape"
+            val="ellipse"
+            label="Market Research"
+          />
+          <q-radio
+            left-label
+            v-model="shape"
+            val="polygon"
+            label="Guaranted Prize Contest"
+          />
+        </div>
+        <h6>1.Project Template</h6>
+        <div>
+          <div class="row bid1 text-center">
+            <div class="col-1 my-home q-mr-sm">
+              <q-btn
+                round
+                color="cyan"
+                class="flex-center"
+                icon="arrow_back_ios_new"
+              />
+            </div>
+            <div class="col my-home bid2 bg-cyan-1 my-font q-mr-sm">
+              <q-img src="~assets/Avator5.png" class="image1"> </q-img>
+              <div class="q-pa-mg text-center custom-text-me">LOGO Design</div>
+            </div>
+            <div class="col my-home bid2 my-font q-mr-sm">
+              <q-img src="~assets/Avator6.png" class="image1"> </q-img>
+              <div class="q-pa-mg text-center custom-text-me">
+                Website Design
+              </div>
+            </div>
+            <div class="col my-home bid2 my-font q-mr-sm">
+              <q-img src="~assets/Avator21.png " class="image1"> </q-img>
+              <div class="q-pa-mg text-center custom-text-me">Translation</div>
+            </div>
+            <div class="col my-home bid2 my-font">
+              <div class="row">
+                <div class="col">
+                  <q-btn
+                    flat
+                    size="5px"
+                    color="black"
+                    padding="5px"
+                    icon="check_box_outline_blank"
+                  />
+                </div>
+                <div class="col">
+                  <q-btn
+                    flat
+                    size="5px"
+                    color="black"
+                    padding="5px"
+                    icon="check_box_outline_blank"
+                  />
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <q-btn
+                    flat
+                    size="5px"
+                    color="black"
+                    padding="5px"
+                    icon="check_box_outline_blank"
+                  />
+                </div>
+                <div class="col">
+                  <q-btn
+                    flat
+                    size="5px"
+                    color="black"
+                    padding="5px"
+                    icon="add"
+                  />
+                </div>
+              </div>
+              <div class="q-pa-mg text-center custom-text-me">Others</div>
+            </div>
+            <div class="col-1 my-home q-mr-sm">
+              <q-btn
+                round
+                color="cyan"
+                class="flex-center"
+                icon="arrow_forward_ios"
+              />
+            </div>
           </div>
 
-          <div class="col-2">
-            <q-avatar
-              square
-              size="100px"
-              font-size="82px"
+          <q-separator />
+          <div>
+            <h6>2. Project From Scratch</h6>
+            <fieldset>
+              <legend>Project Title*</legend>
+              <q-input
+                borderless
+                v-model="text"
+                placeholder="Lorem ipsum dolor sit amet"
+              />
+            </fieldset>
+            <q-expansion-item
+              class="q-mt-md"
+              dense
+              dense-toggle
+              expand-separator
+              label="Project Catagory*"
+              style="max-width: 350px"
+            >
+              <q-card class="bg-grey-2">
+                <q-card-section>
+                  <div class="row">Logo Design</div>
+                  <div class="row">Cerate Website</div>
+                  <div class="row">Translation</div>
+                  <div class="row">Etc.</div>
+                </q-card-section>
+              </q-card>
+            </q-expansion-item>
+            <fieldset class="q-mt-md">
+              <legend>Project Description*</legend>
+              <q-input
+                borderless
+                v-model="text"
+                placeholder="Lorem ipsum dolor sit amet"
+              />
+            </fieldset>
+            <q-btn
+              class="q-mt-md"
               color="cyan"
-              text-color="white"
-              icon="g_translate"
+              icon="add"
+              label="Upload File"
             />
-            <p>Create Website</p>
-          </div>
-          <div class="col-2">
-            <q-avatar
-              square
-              size="100px"
-              font-size="82px"
-              color="cyan"
-              text-color="white"
-              icon="g_translate"
-            />
-            <p>Translation</p>
-          </div>
-          <div class="col-2">
-            <q-avatar
-              square
-              size="100px"
-              font-size="82px"
-              color="cyan"
-              text-color="white"
-              icon="g_translate"
-            />
-            <p>Others</p>
-          </div>
-          <div class="col-2">
-            <q-avatar
-              circle
-              size="64px"
-              font-size="48px"
-              color="cyan"
-              text-color="black"
-              icon="chevron_right"
-            />
+            <q-item tag="label" v-ripple>
+              <q-item-section avatar top>
+                <q-checkbox v-model="color" val="cyan" color="cyan" />
+              </q-item-section>
+              <q-item-section>
+                <q-item-label class="text-h7"
+                  >NDA(Non Disclosure agreement)- contractor undertakes not to
+                  disclose to anyone what is in the document for a period
+                  established by the client only contractors who sign the NDA
+                  will receive access to the project data.</q-item-label
+                >
+              </q-item-section>
+            </q-item>
+            <div class="row q-pa-md my-font">
+              <p>* Fields marked with "*" are mandatory.</p>
+            </div>
           </div>
         </div>
-        <q-separator />
-        <div>
-          <h6>2. Project From Scratch</h6>
-          <fieldset>
-            <legend>Project Title*</legend>
-            <q-input
-              borderless
-              v-model="text"
-              placeholder="Lorem ipsum dolor sit amet"
-            />
-          </fieldset>
-          <q-expansion-item
-            class="q-mt-md"
-            dense
-            dense-toggle
-            expand-separator
-            label="Project Catagory*"
-            style="max-width: 350px"
-          >
-            <q-card class="bg-grey-2">
-              <q-card-section>
-                <div class="row">Logo Design</div>
-                <div class="row">Cerate Website</div>
-                <div class="row">Translation</div>
-                <div class="row">Etc.</div>
-              </q-card-section>
-            </q-card>
-          </q-expansion-item>
-          <fieldset class="q-mt-md">
-            <legend>Project Description*</legend>
-            <q-input
-              borderless
-              v-model="text"
-              placeholder="Lorem ipsum dolor sit amet"
-            />
-          </fieldset>
-          <q-btn class="q-mt-md" color="cyan" icon="add" label="Upload File" />
-          <q-item tag="label" v-ripple>
-            <q-item-section avatar top>
-              <q-checkbox v-model="color" val="cyan" color="cyan" />
-            </q-item-section>
-            <q-item-section>
-              <q-item-label
-                >NDA(Non Disclosure agreement)- contractor undertakes not to
-                disclose to anyone what is in the document for a period
-                established by the client only contractors who sign the NDA will
-                receive access to the project data.</q-item-label
-              >
-            </q-item-section>
-          </q-item>
-          <p>Fields marked with "*" are mandatory</p>
+
+        <div class="flex flex-center">
+          <q-btn unelevated rounded color="primary" label="Next" />
         </div>
-      </div>
-      <div class="flex flex-center">
-        <q-btn unelevated rounded color="primary" label="Next" />
       </div>
     </div>
   </div>
 </template>
 <script>
-import { ref } from "vue";
+import { defineComponent, ref } from "vue";
+import TimeLine from "components/Timeline.vue";
 
-export default {
+export default defineComponent({
+  components: {
+    TimeLine,
+  },
   setup() {
     const submitResult = ref([]);
 
     return {
       shape: ref("line"),
       submitResult,
+      color: ref(true),
 
       onSubmit(evt) {
         const formData = new FormData(evt.target);
@@ -242,11 +263,47 @@ export default {
       },
     };
   },
-};
+});
 </script>
-<style>
-.container {
-  position: absolute;
-  left: 250px;
-}
+<style lang="sass" scoped>
+.container
+  width: 1200px
+  margin: auto
+
+.my-card
+  width: 100%
+  max-width: 250px
+
+.row > div
+  padding: 10px 15px
+  // background: rgba(86,61,124,.15)
+  // border: 1px solid rgba(86,61,124,.2)
+.row + .row
+  margin-top: 1rem
+.bid1
+  // background: rgba(255,0,0,.1)
+  // border: 1px solid rgba(86,61,124,.2)
+  margin-top: 1rem
+.bid2
+  border: 1px solid rgba(86,61,124,.2)
+  height: 100px
+
+.image1
+  height: 70px
+  width: 80px
+
+.company
+  background: white
+  height: 75px
+  width: 85px
+  rounded
+
+.description
+
+.image2
+  background: cyan
+
+
+.my-font
+  font-size: 10px
 </style>

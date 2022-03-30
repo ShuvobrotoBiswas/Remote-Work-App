@@ -95,11 +95,11 @@
                 <q-separator />
                 <div class="row">
                   <div class="col">
-                    <div class="row text-h7 text-bold">Anna Doyle</div>
+                    <div class="row text-h7 text-bold">AGENCY NAME</div>
                     <div class="text-h7 row">
                       <q-img
-                        style="height: 70px; width: 70px"
-                        src="~/assets/Avator16.png"
+                        style="height: 70px; width: 70px ;border-radius: 50%; ;border: 1px solid black"
+                        src="~/assets/Avator20.png"
                       ></q-img>
                     </div>
                   </div>
@@ -159,7 +159,7 @@
                               label="Release Payment"
                             />
                           </div>
-                          <div class="row ">
+                          <div class="row">
                             <div class="col">
                               <q-btn
                                 round

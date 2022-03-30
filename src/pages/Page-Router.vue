@@ -185,6 +185,42 @@
                 </div>
                 <div class="q-pa-md">
                   <q-btn
+                    to="02-remote-work-Client-Post-Proj"
+                    label="02-remote-work-Client-Post-Proj"
+                    outline
+                    style="color: goldenrod"
+                  >
+                  </q-btn>
+                </div>
+                <div class="q-pa-md">
+                  <q-btn
+                    to="03-remote-work-Client-Post-Proj"
+                    label="03-remote-work-Client-Post-Proj"
+                    outline
+                    style="color: goldenrod"
+                  >
+                  </q-btn>
+                </div>
+                <div class="q-pa-md">
+                  <q-btn
+                    to="04-remote-work-Client-Post-Proj"
+                    label="04-remote-work-Client-Post-Proj"
+                    outline
+                    style="color: goldenrod"
+                  >
+                  </q-btn>
+                </div>
+                <div class="q-pa-md">
+                  <q-btn
+                    to="05-remote-work-Client-Post-Proj"
+                    label="05-remote-work-Client-Post-Proj"
+                    outline
+                    style="color: goldenrod"
+                  >
+                  </q-btn>
+                </div>
+                <div class="q-pa-md">
+                  <q-btn
                     to="06-Remote-Work-Contractor-Search-Proj"
                     label="06-Remote-Work-Contractor-Search-Proj"
                     outline
@@ -273,9 +309,24 @@
                   >
                   </q-btn>
                 </div>
-
-
-
+                <div class="q-pa-md">
+                  <q-btn
+                    to="16-Remote-Work-Client-Milestones-Details-For-Agency"
+                    label="16-Remote-Work-Client-Milestones-Details-For-Agency"
+                    outline
+                    style="color: goldenrod"
+                  >
+                  </q-btn>
+                </div>
+                <div class="q-pa-md">
+                  <q-btn
+                    to="17-Remote-Work-Client-Feedback-To-Agency"
+                    label="17-Remote-Work-Client-Feedback-To-Agency"
+                    outline
+                    style="color: goldenrod"
+                  >
+                  </q-btn>
+                </div>
               </q-list>
             </div>
           </div>

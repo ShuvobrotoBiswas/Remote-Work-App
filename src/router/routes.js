@@ -27,10 +27,14 @@ const routes = [
       { path: '/Contractor-freelancer-profile-display', component: () => import('src/pages/Contractor-freelancer-profile-display.vue') },
       { path: '/Client-Company-Profile-Display', component: () => import('src/pages/Client-Company-Profile-Display.vue') },
       { path: '/Create--Contractor-Company-Profile-Add-Freelancers', component: () => import('src/pages/Create--Contractor-Company-Profile-Add-Freelancers.vue') },
+      { path: '/01-remote-work-Client-Post-Proj', component: () => import('src/pages/01-remote-work-Client-Post-Proj.vue') },
+      { path: "/02-remote-work-Client-Post-Proj", component: () => import("src/pages/02-remote-work-Client-Post-Proj.vue"),},
+      { path: "/03-remote-work-Client-Post-Proj", component: () => import("src/pages/03-remote-work-Client-Post-Proj.vue"),},
+      { path: "/04-remote-work-Client-Post-Proj", component: () => import("src/pages/04-remote-work-Client-Post-Proj.vue"),},
+      { path: "/05-remote-work-Client-Post-Proj", component: () => import("src/pages/05-remote-work-Client-Post-Proj.vue"),},
       { path: '/06-Remote-Work-Contractor-Search-Proj', component: () => import('src/pages/06-Remote-Work-Contractor-Search-Proj.vue') },
       { path: '/07-Remote-Work-Freelancer-Project-Display', component: () => import('src/pages/07-Remote-Work-Freelancer-Project-Display.vue') },
       { path: '/08-Remote-Work-Contractor-Application-To-Project-By-Freelancer', component: () => import('src/pages/08-Remote-Work-Contractor-Application-To-Project-By-Freelancer.vue') },
-      { path: '/01-remote-work-Client-Post-Proj', component: () => import('src/pages/01-remote-work-Client-Post-Proj.vue') },
       { path: '/09-Remote-Work-Client_list-Of-Application-To-Project-By-Freelancer', component: () => import('src/pages/09-Remote-Work-Client_list-Of-Application-To-Project-By-Freelancer.vue') },
       { path: '/10-Remote-Work-Client-Milestones-List-For-Freelancer', component: () => import('src/pages/10-Remote-Work-Client-Milestones-List-For-Freelancer.vue') },
       { path: '/11-Remote-Work-Client-Milestones-Details-For-Freelancer', component: () => import('src/pages/11-Remote-Work-Client-Milestones-Details-For-Freelancer.vue') },
@@ -38,6 +42,9 @@ const routes = [
       { path: '/13-Remote-Work-Application-To-Project-By-Agency', component: () => import('src/pages/13-Remote-Work-Application-To-Project-By-Agency.vue') },
       { path: '/14-Remote-Work-Client-Lest-Application-To-Project-By-Agency', component: () => import('src/pages/14-Remote-Work-Client-Lest-Application-To-Project-By-Agency.vue') },
       { path: '/15-Remote-Work-Client-Milestones-List-For-Agency', component: () => import('src/pages/15-Remote-Work-Client-Milestones-List-For-Agency.vue') },
+      { path: '/16-Remote-Work-Client-Milestones-Details-For-Agency', component: () => import('src/pages/16-Remote-Work-Client-Milestones-Details-For-Agency.vue') },
+      { path: '/17-Remote-Work-Client-Feedback-To-Agency', component: () => import('src/pages/17-Remote-Work-Client-Feedback-To-Agency.vue') },
+
 
 
 
