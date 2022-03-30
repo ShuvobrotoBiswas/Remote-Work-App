@@ -156,7 +156,11 @@
                 <div class="row">
                   <div class="row q-pa-md">
                     <fieldset
-                      style="max-height: 100px; border-radius: 7px; width:600px"
+                      style="
+                        max-height: 100px;
+                        border-radius: 7px;
+                        width: 600px;
+                      "
                       class="q-pa-md"
                     >
                       <legend class="text-h7">
@@ -320,18 +324,229 @@
                         />
                       </div>
                     </div>
+                  </div>
+                </div>
+                <div class="flex-break q-pa-md"></div>
 
-                    <div class="row q-pa-md my-font">
-                      <p>* Fields marked with "*" are mandatory.</p>
+                <q-separator />
+                <div class="flex-break q-pa-md"></div>
+
+                <div class="row">
+                  <div class="row text-bold">
+                    Select the freelancers who work for the agency and who will
+                    be involved in the project.
+                  </div>
+                  <div class="row" style="width: 700px">
+                    <div class="col">
+                      <q-item tag="label" v-ripple>
+                        <q-item-section  avatar>
+                          <q-radio
+                            v-model="myChoice1"
+                            val="myChoice1"
+                            right-label
+                            color="black"
+                          />
+                        </q-item-section>
+                        <q-item-section >
+                          <q-item-label class="text-bold">ANNA DOYEL</q-item-label>
+                          <q-item-label caption>Programmer PHP </q-item-label>
+                        </q-item-section>
+                      </q-item>
+                    </div>
+                    <div class="col">
+                      <q-item tag="label" v-ripple>
+                        <q-item-section avatar>
+                          <q-radio
+                            v-model="myChoice2"
+                            val="myChoice2"
+                            right-label
+                            color="black"
+                          />
+                        </q-item-section>
+                        <q-item-section>
+                          <q-item-label class="text-bold">GIL DOBRICA</q-item-label>
+                          <q-item-label caption>Designer </q-item-label>
+                        </q-item-section>
+                      </q-item>
+                    </div>
+                    <div class="col">
+                      <q-item tag="label" v-ripple>
+                        <q-item-section avatar>
+                          <q-radio
+                            v-model="myChoice3"
+                            val="myChoice3"
+                            right-label
+                            color="black"
+                          />
+                        </q-item-section>
+                        <q-item-section>
+                          <q-item-label class="text-bold">GABI COTABITA</q-item-label>
+                          <q-item-label caption>Programmer PHP </q-item-label>
+                        </q-item-section>
+                      </q-item>
                     </div>
                   </div>
                 </div>
 
+                <div class="row">
+                  <div class="col my-box1 my-home q-mr-sm">
+                    <q-btn
+                      round
+                      color="grey"
+                      class="flex-center"
+                      icon="arrow_back_ios_new"
+                    />
+                  </div>
+                  <div class="col my-box q-mr-sm">
+                    <div class="row flex-center">CV</div>
+                    <div class="row">
+                      <q-img
+                        src="~assets/Avator19.png"
+                        style="height: 30px; width: 30px"
+                      ></q-img>
+                    </div>
+                  </div>
+                  <div class="col my-home bid2 my-font my-box q-mr-sm">
+                    Portfolio
+                    <div class="col">
+                      <q-btn
+                        flat
+                        size="5px"
+                        color="black"
+                        padding="5px"
+                        icon="check_box_outline_blank"
+                      />
+                      <q-btn
+                        flat
+                        size="5px"
+                        color="black"
+                        padding="5px"
+                        icon="check_box_outline_blank"
+                      />
+                    </div>
+                    <q-btn
+                      flat
+                      size="5px"
+                      color="black"
+                      padding="5px"
+                      icon="check_box_outline_blank"
+                    />
+                    <q-btn
+                      flat
+                      size="5px"
+                      color="black"
+                      padding="5px"
+                      icon="add"
+                    />
+                  </div>
+                  <div class="col my-box q-mr-sm">
+                    <div class="row flex-center">CV</div>
+                    <div class="row flex-center">
+                      <q-img
+                        src="~assets/Avator19.png"
+                        style="height: 30px; width: 30px"
+                      ></q-img>
+                    </div>
+                  </div>
+                  <div class="col my-home bid2 my-font my-box q-mr-sm">
+                    Portfolio
+                    <div class="col">
+                      <q-btn
+                        flat
+                        size="5px"
+                        color="black"
+                        padding="5px"
+                        icon="check_box_outline_blank"
+                      />
+                      <q-btn
+                        flat
+                        size="5px"
+                        color="black"
+                        padding="5px"
+                        icon="check_box_outline_blank"
+                      />
+                    </div>
+                    <q-btn
+                      flat
+                      size="5px"
+                      color="black"
+                      padding="5px"
+                      icon="check_box_outline_blank"
+                    />
+                    <q-btn
+                      flat
+                      size="5px"
+                      color="black"
+                      padding="5px"
+                      icon="add"
+                    />
+                  </div>
+                  <div class="col my-box q-mr-sm">
+                    <div class="row flex-center">CV</div>
+                    <div class="row">
+                      <q-img
+                        src="~assets/Avator19.png"
+                        style="height: 30px; width: 30px"
+                      ></q-img>
+                    </div>
+                  </div>
+                  <div class="col my-home bid2 my-font my-box q-mr-sm">
+                    Portfolio
+                    <div class="col">
+                      <q-btn
+                        flat
+                        size="5px"
+                        color="black"
+                        padding="5px"
+                        icon="check_box_outline_blank"
+                      />
+                      <q-btn
+                        flat
+                        size="5px"
+                        color="black"
+                        padding="5px"
+                        icon="check_box_outline_blank"
+                      />
+                    </div>
+                    <q-btn
+                      flat
+                      size="5px"
+                      color="black"
+                      padding="5px"
+                      icon="check_box_outline_blank"
+                    />
+                    <q-btn
+                      flat
+                      size="5px"
+                      color="black"
+                      padding="5px"
+                      icon="add"
+                    />
+                  </div>
+                  <div class="col my-box1 q-mr-sm my-home">
+                    <q-btn
+                      round
+                      color="black"
+                      class="flex-center"
+                      icon="arrow_forward_ios"
+                    />
+                  </div>
+                </div>
+                <div class="flex-break q-pa-md"></div>
+
+                <q-separator />
+
+                <div class="row q-pa-md my-font">
+                  <p>* Fields marked with "*" are mandatory.</p>
+                </div>
+
                 <!-- Footer Div -->
 
-                <div class="row flex-center">
-                  <div class="col-4">
+                <div class="row">
+                  <div class="col"></div>
+                  <div class="col">
                     <q-btn
+                      style="width: 100px"
                       size="8px"
                       rounded
                       color="grey"
@@ -339,9 +554,8 @@
                       class="text-white text-h7"
                     ></q-btn>
                   </div>
-
-                  <div class="col-4"></div>
-                  <div class="col-4">
+                  <div class="col"></div>
+                  <div class="col">
                     <q-btn
                       size="8px"
                       rounded
@@ -350,6 +564,7 @@
                       class="text-white text-h7"
                     ></q-btn>
                   </div>
+                  <div class="col"></div>
                 </div>
               </q-card-section>
             </div>
@@ -392,6 +607,9 @@ export default defineComponent({
           value: "op2",
         },
       ],
+      myChoice1: ref('myChoice1'),
+      myChoice2: ref('myChoice2'),
+      myChoice3: ref('myChoice3'),
     };
   },
 });
@@ -425,4 +643,19 @@ export default defineComponent({
 
 .my-font
   font-size: 10px
+
+
+.my-box
+  // background: grey
+  border: 1px solid rgba(86,61,124,.2)
+  height: 80px
+  width: 80px
+  border-radius: 7px
+
+.my-box1
+  // background: grey
+  // border: 1px solid rgba(86,61,124,.2)
+  height: 80px
+  width: 80px
+  border-radius: 7px
 </style>
