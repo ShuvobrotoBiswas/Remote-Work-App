@@ -1,4 +1,31 @@
 <template>
+  <!-- Header Div -->
+
+  <q-header>
+    <q-toolbar class="bg-white">
+      <q-toolbar-title>
+        <div class="text-green">
+          <q-img
+            src="~assets/Avator3.png"
+            style="height: 35px; max-width: 110px"
+          ></q-img>
+        </div>
+      </q-toolbar-title>
+
+      <div>
+        <q-avatar>
+          <q-img
+            src="~assets/Avator4.png"
+            style="height: 27px; max-width: 27px"
+          >
+          </q-img>
+        </q-avatar>
+      </div>
+      <div class="text-black q-mr-sm">LOGOUT</div>
+    </q-toolbar>
+  </q-header>
+
+  <!-- Body Div -->
   <div>
     <div class="flex-break"></div>
     <div class="text-h7 text-center">Hi Florin, welcome to your dashboard!</div>
@@ -52,79 +79,101 @@
       </div>
     </div>
     <q-separator />
-    <div>
-      <q-linear-progress size="25px" :value="progress1" color="accent">
-        <div class="absolute-full flex flex-center">
-          <q-badge color="white" text-color="accent" :label="progressLabel1" />
-        </div>
-      </q-linear-progress>
-    </div>
-    <div class="container">
-      <div class="q-mt-xl">
-        <TimeLine />
-      </div>
-      <h5>4. SEND INVITATIONS</h5>
-      <div style="max-width: 300px">
-        <p class="text-weight-bold">Search by name</p>
-        <q-input bottom-slots v-model="text" :dense="dense">
-          <template v-slot:append>
-            <q-icon name="search" />
-          </template>
-        </q-input>
-      </div>
-      <div class="flex">
-        <p class="q-ma-md">Search result: 3 contractors found</p>
-        <q-checkbox left-label v-model="val" label="Select all" />
-      </div>
 
-      <div class="flex">
-        <q-item clickable v-ripple>
-          <q-item-section side>
-            <q-avatar circle size="48px">
-              <img src="https://cdn.quasar.dev/img/avatar.png" />
-            </q-avatar>
-          </q-item-section>
-          <q-item-section>
-            <q-item-label>Gill Dobrica</q-item-label>
-            <q-item-label caption>Senior Bacend Developer</q-item-label>
-          </q-item-section>
-          <q-item-section side>
-            <q-checkbox v-model="val" />
-          </q-item-section>
-        </q-item>
-        <q-item clickable v-ripple>
-          <q-item-section side>
-            <q-avatar circle size="48px">
-              <img src="https://cdn.quasar.dev/img/avatar.png" />
-            </q-avatar>
-          </q-item-section>
-          <q-item-section>
-            <q-item-label>Vioroca Dancila</q-item-label>
-            <q-item-label caption>Middle Bacend Developer</q-item-label>
-          </q-item-section>
-          <q-item-section side>
-            <q-checkbox v-model="val" />
-          </q-item-section>
-        </q-item>
-        <q-item clickable v-ripple>
-          <q-item-section side>
-            <q-avatar circle size="48px">
-              <img src="https://cdn.quasar.dev/img/avatar.png" />
-            </q-avatar>
-          </q-item-section>
-          <q-item-section>
-            <q-item-label>Gabriel Cotabita</q-item-label>
-            <q-item-label caption>Java Developer</q-item-label>
-          </q-item-section>
-          <q-item-section side>
-            <q-checkbox v-model="val" />
-          </q-item-section>
-        </q-item>
+    <div class="row flex-center items-start">
+      <div style="width: 1000px">
+        <div class="q-mt-xl">
+          <div class="row timeline-wrap" style="max-width: 1000px">
+            <div id="timeline"></div>
+            <div class="marker mfirst timeline-icon one">
+              <p>1</p>
+            </div>
+            <div class="marker m2 timeline-icon two">
+              <p>2</p>
+            </div>
+            <div class="marker m3 timeline-icon three">
+              <p>3</p>
+            </div>
+            <div class="marker m4 timeline-icon four">
+              <p>4</p>
+            </div>
+            <div class="marker mlast timeline-icon five">
+              <p>5</p>
+            </div>
+          </div>
+        </div>
+        <p class="q-pa-md text-h6 text-bold">4. SEND INVITATIONS</p>
+        <div style="max-width: 300px" class="q-pq-md">
+          <p class="text-weight-bold ">Search by name</p>
+          <q-input bottom-slots v-model="text" :dense="dense">
+            <template v-slot:append>
+              <q-icon name="search" />
+            </template>
+          </q-input>
+        </div>
+        <div class="flex">
+          <p class="q-ma-md">Search result: 3 contractors found</p>
+          <q-checkbox left-label v-model="val" label="Select all" />
+        </div>
+
+        <div class="flex">
+          <q-item clickable v-ripple>
+            <q-item-section side>
+              <q-avatar circle size="48px">
+                <img src="https://cdn.quasar.dev/img/avatar.png" />
+              </q-avatar>
+            </q-item-section>
+            <q-item-section>
+              <q-item-label>Gill Dobrica</q-item-label>
+              <q-item-label caption>Senior Bacend Developer</q-item-label>
+            </q-item-section>
+            <q-item-section side>
+              <q-checkbox v-model="val" />
+            </q-item-section>
+          </q-item>
+          <q-item clickable v-ripple>
+            <q-item-section side>
+              <q-avatar circle size="48px">
+                <img src="https://cdn.quasar.dev/img/avatar.png" />
+              </q-avatar>
+            </q-item-section>
+            <q-item-section>
+              <q-item-label>Vioroca Dancila</q-item-label>
+              <q-item-label caption>Middle Bacend Developer</q-item-label>
+            </q-item-section>
+            <q-item-section side>
+              <q-checkbox v-model="val" />
+            </q-item-section>
+          </q-item>
+          <q-item clickable v-ripple>
+            <q-item-section side>
+              <q-avatar circle size="48px">
+                <img src="https://cdn.quasar.dev/img/avatar.png" />
+              </q-avatar>
+            </q-item-section>
+            <q-item-section>
+              <q-item-label>Gabriel Cotabita</q-item-label>
+              <q-item-label caption>Java Developer</q-item-label>
+            </q-item-section>
+            <q-item-section side>
+              <q-checkbox v-model="val" />
+            </q-item-section>
+          </q-item>
+        </div>
       </div>
-      <div class="flex justify-center">
-        <q-btn unelevated rounded color="grey-6" label="Back" class="q-mr-md" />
-        <q-btn unelevated rounded color="primary" label="Next" />
-      </div>
+    </div>
+    <div class="flex q-pa-md justify-center">
+      <q-btn
+        unelevated
+        size="10px"
+        rounded
+        style="width: 100px"
+        color="grey-6"
+        label="Back"
+        class="q-mr-md"
+      />
+
+      <q-btn unelevated style="width:100px" size="10px" rounded color="primary" label="Next" />
     </div>
   </div>
 </template>
@@ -133,9 +182,9 @@ import { defineComponent, ref } from "vue";
 import TimeLine from "components/Timeline.vue";
 
 export default defineComponent({
-  components: {
-    TimeLine,
-  },
+  // components: {
+  //   TimeLine,
+  // },
   setup() {
     const submitResult = ref([]);
 
@@ -161,9 +210,75 @@ export default defineComponent({
   },
 });
 </script>
-<style>
-.container {
-  width: 1200px;
-  margin: auto;
-}
+<style lang="sass" scoped>
+.container
+  width: 1200px
+  margin: auto
+.timeline-wrap
+  margin: 20%% 20%
+  top: 100
+  position: relative
+
+
+#timeline
+  height: 4px
+  width: 100%
+  background-color: #48D1CC
+  position: relative
+
+
+.marker
+  z-index: 1000
+  color: #fff
+  width: 32px
+  height: 32px
+  line-height: 32px
+  font-size: 1.4em
+  text-align: center
+  position: absolute
+  margin-left: -25px
+  background-color: #008080
+  border-radius: 50%
+
+
+.timeline-icon.one
+  background-color: #008080 !important
+
+
+.timeline-icon.two
+  background-color: #008080 !important
+
+
+.timeline-icon.three
+  background-color: #008080 !important
+
+
+.timeline-icon.four
+  background-color: #008080 !important
+
+.timeline-icon.five
+  background-color: #48D1CC !important
+
+
+.mfirst
+  top: -16px
+
+
+.m2
+  top: -16px
+  left: 25%
+
+
+.m3
+  top: -16px
+  left: 50%
+
+
+.m4
+  top: -16px
+  left: 75%
+
+.mlast
+  top: -16px
+  left: 100%
 </style>
