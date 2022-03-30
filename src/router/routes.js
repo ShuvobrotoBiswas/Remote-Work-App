@@ -33,6 +33,9 @@ const routes = [
       { path: '/01-remote-work-Client-Post-Proj', component: () => import('src/pages/01-remote-work-Client-Post-Proj.vue') },
       { path: '/09-Remote-Work-Client_list-Of-Application-To-Project-By-Freelancer', component: () => import('src/pages/09-Remote-Work-Client_list-Of-Application-To-Project-By-Freelancer.vue') },
       { path: '/10-Remote-Work-Client-Milestones-List-For-Freelancer', component: () => import('src/pages/10-Remote-Work-Client-Milestones-List-For-Freelancer.vue') },
+      { path: '/11-Remote-Work-Client-Milestones-Details-For-Freelancer', component: () => import('src/pages/11-Remote-Work-Client-Milestones-Details-For-Freelancer.vue') },
+      { path: '/12-Remote-Work-Client-Feedback-To-Freelancer', component: () => import('src/pages/12-Remote-Work-Client-Feedback-To-Freelancer.vue') },
+
 
 
 
