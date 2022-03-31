@@ -130,7 +130,7 @@
                 </div>
 
                 <div class="col-auto">
-                  <q-btn color="grey-7" round flat icon="cancel">
+                  <q-btn color="cyan" round flat icon="cancel">
                     <q-menu cover auto-close>
                       <q-list>
                         <q-item clickable>
@@ -154,7 +154,7 @@
                 </div>
 
                 <div class="col-auto">
-                  <q-btn color="grey-7" round flat icon="cancel">
+                  <q-btn color="cyan" round flat icon="cancel">
                     <q-menu cover auto-close>
                       <q-list>
                         <q-item clickable>

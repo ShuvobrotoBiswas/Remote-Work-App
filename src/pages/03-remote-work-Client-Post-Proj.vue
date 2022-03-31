@@ -153,7 +153,7 @@
         </div>
 
         <div class="q-pa-md">
-          <fieldset style="border-radius: 7px" class="q-pa-md">
+          <fieldset style="border-radius: 7px">
             <legend>Maximum Rate</legend>
             <q-input borderless v-model="text" placeholder="2600" />
           </fieldset>
