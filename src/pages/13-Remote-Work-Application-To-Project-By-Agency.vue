@@ -339,7 +339,7 @@
                   <div class="row" style="width: 700px">
                     <div class="col">
                       <q-item tag="label" v-ripple>
-                        <q-item-section  avatar>
+                        <q-item-section avatar>
                           <q-radio
                             v-model="myChoice1"
                             val="myChoice1"
@@ -347,8 +347,10 @@
                             color="black"
                           />
                         </q-item-section>
-                        <q-item-section >
-                          <q-item-label class="text-bold">ANNA DOYEL</q-item-label>
+                        <q-item-section>
+                          <q-item-label class="text-bold"
+                            >ANNA DOYEL</q-item-label
+                          >
                           <q-item-label caption>Programmer PHP </q-item-label>
                         </q-item-section>
                       </q-item>
@@ -364,7 +366,9 @@
                           />
                         </q-item-section>
                         <q-item-section>
-                          <q-item-label class="text-bold">GIL DOBRICA</q-item-label>
+                          <q-item-label class="text-bold"
+                            >GIL DOBRICA</q-item-label
+                          >
                           <q-item-label caption>Designer </q-item-label>
                         </q-item-section>
                       </q-item>
@@ -380,7 +384,9 @@
                           />
                         </q-item-section>
                         <q-item-section>
-                          <q-item-label class="text-bold">GABI COTABITA</q-item-label>
+                          <q-item-label class="text-bold"
+                            >GABI COTABITA</q-item-label
+                          >
                           <q-item-label caption>Programmer PHP </q-item-label>
                         </q-item-section>
                       </q-item>
@@ -441,7 +447,7 @@
                   </div>
                   <div class="col my-box q-mr-sm">
                     <div class="row flex-center">CV</div>
-                    <div class="row flex-center">
+                    <div class="row flex">
                       <q-img
                         src="~assets/Avator19.png"
                         style="height: 30px; width: 30px"
@@ -607,9 +613,9 @@ export default defineComponent({
           value: "op2",
         },
       ],
-      myChoice1: ref('myChoice1'),
-      myChoice2: ref('myChoice2'),
-      myChoice3: ref('myChoice3'),
+      myChoice1: ref("myChoice1"),
+      myChoice2: ref("myChoice2"),
+      myChoice3: ref("myChoice3"),
     };
   },
 });

@@ -107,7 +107,7 @@
 
         <div class="q-pa-md">
           <p class="text-weight-bold">Project title</p>
-          <fieldset>
+          <fieldset style="border-radius: 7px">
             <legend>Project Title*</legend>
             <q-input
               borderless
@@ -118,7 +118,7 @@
         </div>
         <div class="q-pa-md">
           <p class="text-weight-bold">Project Description</p>
-          <fieldset>
+          <fieldset style="border-radius: 7px">
             <legend>Project Description</legend>
             <q-input
               borderless
@@ -144,7 +144,7 @@
         <div class="q-pa-md">
           <q-item tag="label" v-ripple>
             <q-item-section avatar top>
-              <q-checkbox v-model="color" val="" color="teal" />
+              <q-checkbox v-model="colorbox" val="" color="teal" />
             </q-item-section>
             <q-item-section>
               <q-item-label
@@ -159,14 +159,40 @@
         <div class="q-pa-md">
           <h6>CONTRACTORS</h6>
           <div>
-            <p>Skills required</p>
+            <p class="text-h6 q-pa-md text-bold">Skills required</p>
           </div>
-          <div style="max-width: 300px">
+          <div style="max-width: 400px">
             <q-item>
-              <q-item-section>
-                <q-item-label>Category job project</q-item-label>
-                <q-item-label caption>Full Stack Development</q-item-label>
-              </q-item-section>
+              <div class="row ">
+                <q-btn
+                  size="7px"
+                  rounded
+                  outline
+                  icon-right="cancel"
+                  color="white"
+                  class="text-black q-pq-md q-mr-sm text-h7"
+                  >Angular JS</q-btn
+                >
+                <q-btn
+                  size="7px"
+                  rounded
+                  outline
+                  icon-right="cancel"
+                  color="white"
+                  class="text-black q-pq-md q-mr-sm text-h7"
+                >
+                  Java</q-btn
+                >
+                <q-btn
+                  size="7px"
+                  rounded
+                  outline
+                  icon-right="cancel"
+                  color="white"
+                  class="text-black q-pq-md q-mr-sm text-h7"
+                  >PHP</q-btn
+                >
+              </div>
               <q-item-section side>
                 <q-btn padding="xs" round color="teal-4" icon="edit" />
               </q-item-section>
@@ -177,20 +203,49 @@
               Create specific question to which the contractors will have to
               answer
             </p>
-            <q-card class="my-card bg-teal-1">
+            <q-card flat class="my-card bg-teal-1">
               <q-card-section>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book.
+                <div class="row items-center no-wrap">
+                  <div class="col">
+                    <div class="text-h7 bg-teal-1">{{ lorem }}</div>
+                  </div>
+
+                  <div class="col-auto">
+                    <q-btn color="grey-7" round flat icon="cancel">
+                      <q-menu cover auto-close>
+                        <q-list>
+                          <q-item clickable>
+                            <q-item-section>Remove Card</q-item-section>
+                          </q-item>
+                        </q-list>
+                      </q-menu>
+                    </q-btn>
+                  </div>
+                </div>
               </q-card-section>
             </q-card>
-            <q-card class="my-card q-mt-md bg-teal-1">
-              <q-card-section clearable>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book.
+            <q-card flat class="my-card q-mt-md bg-teal-1">
+              <q-card-section>
+                <div class="row items-center no-wrap">
+                  <div class="col">
+                    <div class="text-h7 bg-teal-1">
+                      Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                      laboris nisi ut aliquip?
+                    </div>
+                  </div>
+
+                  <div class="col-auto">
+                    <q-btn color="grey-7" round flat icon="cancel">
+                      <q-menu cover auto-close>
+                        <q-list>
+                          <q-item clickable>
+                            <q-item-section>Remove Card</q-item-section>
+                          </q-item>
+                        </q-list>
+                      </q-menu>
+                    </q-btn>
+                  </div>
+                </div>
               </q-card-section>
             </q-card>
           </div>
@@ -310,7 +365,7 @@
 
           <div class="q-mt-md">
             <p>Rate of Payment</p>
-            <fieldset style="max-width: 200px">
+            <fieldset style="border-radius: 7px ;max-width: 200px ; max-height:70px">
               <legend>Maximum Rate</legend>
               <q-input borderless v-model="text" placeholder="2600" />
             </fieldset>
@@ -380,11 +435,10 @@
 
           <q-btn
             unelevated
-            style="width: 100px"
             size="10px"
             rounded
             color="primary"
-            label="Next"
+            label="post project"
           />
         </div>
       </div>
@@ -393,7 +447,7 @@
 </template>
 <script>
 import { defineComponent, ref } from "vue";
-import TimeLine from "components/Timeline.vue";
+// import TimeLine from "components/Timeline.vue";
 
 export default defineComponent({
   // components: {
@@ -405,6 +459,9 @@ export default defineComponent({
     return {
       shape: ref("line"),
       submitResult,
+      colorbox: ref(true),
+      lorem:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
 
       onSubmit(evt) {
         const formData = new FormData(evt.target);

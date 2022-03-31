@@ -114,45 +114,11 @@
                     </div>
                     <div class="text-h7 row">
                       <div class="text-h7">
-                        <q-checkbox
-                          v-model="checkbox19"
-                          checked-icon="star"
-                          size="25px"
+                        <q-rating
+                          v-model="ratingModel"
+                          size="20px"
+                          :max="5"
                           color="black"
-                          unchecked-icon="star_border"
-                          indeterminate-icon="help"
-                        />
-                        <q-checkbox
-                          v-model="checkbox20"
-                          size="25px"
-                          color="black"
-                          checked-icon="star"
-                          unchecked-icon="star_border"
-                          indeterminate-icon="help"
-                        />
-                        <q-checkbox
-                          v-model="checkbox21"
-                          color="black"
-                          size="25px"
-                          checked-icon="star"
-                          unchecked-icon="star_border"
-                          indeterminate-icon="help"
-                        />
-                        <q-checkbox
-                          v-model="checkbox22"
-                          color="black"
-                          size="25px"
-                          checked-icon="star"
-                          unchecked-icon="star_border"
-                          indeterminate-icon="help"
-                        />
-                        <q-checkbox
-                          v-model="checkbox23"
-                          color="black"
-                          size="25px"
-                          checked-icon="star"
-                          unchecked-icon="star_border"
-                          indeterminate-icon="help"
                         />
                       </div>
                     </div>
@@ -330,7 +296,7 @@
                       </div>
                     </div>
 
-                    <div class="row" style="max-width:800px">
+                    <div class="row" style="max-width: 800px">
                       <div class="row text-bold">
                         Freelancers who work for the agency and who will be
                         involved in the project.
@@ -549,45 +515,11 @@
                     </div>
                     <div class="text-h7 row">
                       <div class="text-h7">
-                        <q-checkbox
-                          v-model="checkbox19"
-                          checked-icon="star"
-                          size="25px"
+                        <q-rating
+                          v-model="ratingModel"
+                          size="20px"
+                          :max="5"
                           color="black"
-                          unchecked-icon="star_border"
-                          indeterminate-icon="help"
-                        />
-                        <q-checkbox
-                          v-model="checkbox20"
-                          size="25px"
-                          color="black"
-                          checked-icon="star"
-                          unchecked-icon="star_border"
-                          indeterminate-icon="help"
-                        />
-                        <q-checkbox
-                          v-model="checkbox21"
-                          color="black"
-                          size="25px"
-                          checked-icon="star"
-                          unchecked-icon="star_border"
-                          indeterminate-icon="help"
-                        />
-                        <q-checkbox
-                          v-model="checkbox22"
-                          color="black"
-                          size="25px"
-                          checked-icon="star"
-                          unchecked-icon="star_border"
-                          indeterminate-icon="help"
-                        />
-                        <q-checkbox
-                          v-model="checkbox23"
-                          color="black"
-                          size="25px"
-                          checked-icon="star"
-                          unchecked-icon="star_border"
-                          indeterminate-icon="help"
                         />
                       </div>
                     </div>
@@ -690,45 +622,11 @@
                     </div>
                     <div class="text-h7 row">
                       <div class="text-h7">
-                        <q-checkbox
-                          v-model="checkbox19"
-                          checked-icon="star"
-                          size="25px"
+                        <q-rating
+                          v-model="ratingModel"
+                          size="20px"
+                          :max="5"
                           color="black"
-                          unchecked-icon="star_border"
-                          indeterminate-icon="help"
-                        />
-                        <q-checkbox
-                          v-model="checkbox20"
-                          size="25px"
-                          color="black"
-                          checked-icon="star"
-                          unchecked-icon="star_border"
-                          indeterminate-icon="help"
-                        />
-                        <q-checkbox
-                          v-model="checkbox21"
-                          color="black"
-                          size="25px"
-                          checked-icon="star"
-                          unchecked-icon="star_border"
-                          indeterminate-icon="help"
-                        />
-                        <q-checkbox
-                          v-model="checkbox22"
-                          color="black"
-                          size="25px"
-                          checked-icon="star"
-                          unchecked-icon="star_border"
-                          indeterminate-icon="help"
-                        />
-                        <q-checkbox
-                          v-model="checkbox23"
-                          color="black"
-                          size="25px"
-                          checked-icon="star"
-                          unchecked-icon="star_border"
-                          indeterminate-icon="help"
                         />
                       </div>
                     </div>
@@ -838,6 +736,9 @@ export default defineComponent({
       checkbox21: ref(false),
       checkbox22: ref(false),
       checkbox23: ref(false),
+      ratingModel: ref(1),
+      ratingModel1: ref(1),
+      ratingModel2: ref(1),
       price: ref("500 € |"),
       input1: ref("Your answer here."),
       input2: ref("Your answer here."),

@@ -209,7 +209,7 @@
                             <q-btn
                               rounded
                               size="10px"
-                              style="width: 90px"
+                              style="width: 125px"
                               unelevated
                               color="black"
                               class="text-white"
@@ -267,7 +267,7 @@
                               rounded
                               size="10px"
                               unelevated
-                              style="width: 90px"
+                              style="width: 125px"
                               color="black"
                               class="text-white"
                               label="Fund"

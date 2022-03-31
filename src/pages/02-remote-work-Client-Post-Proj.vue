@@ -121,27 +121,57 @@
             Create specific question to which the contractors will have to
             answer
           </p>
-          <q-card class="my-card bg-teal-1">
+
+          <q-card flat class="my-card bg-teal-1">
             <q-card-section>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
+              <div class="row items-center no-wrap">
+                <div class="col">
+                  <div class="text-h7 bg-teal-1">{{ lorem }}</div>
+                </div>
+
+                <div class="col-auto">
+                  <q-btn color="grey-7" round flat icon="cancel">
+                    <q-menu cover auto-close>
+                      <q-list>
+                        <q-item clickable>
+                          <q-item-section>Remove Card</q-item-section>
+                        </q-item>
+                      </q-list>
+                    </q-menu>
+                  </q-btn>
+                </div>
+              </div>
             </q-card-section>
           </q-card>
-          <q-card class="my-card q-mt-md bg-teal-1">
-            <q-card-section clearable>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
+          <q-card flat class="my-card q-mt-md bg-teal-1">
+            <q-card-section>
+              <div class="row items-center no-wrap">
+                <div class="col">
+                  <div class="text-h7 bg-teal-1">
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                    laboris nisi ut aliquip?
+                  </div>
+                </div>
+
+                <div class="col-auto">
+                  <q-btn color="grey-7" round flat icon="cancel">
+                    <q-menu cover auto-close>
+                      <q-list>
+                        <q-item clickable>
+                          <q-item-section>Remove Card</q-item-section>
+                        </q-item>
+                      </q-list>
+                    </q-menu>
+                  </q-btn>
+                </div>
+              </div>
             </q-card-section>
           </q-card>
         </div>
         <div class="q-mt-md">
           <q-item>
             <q-item-section>
-              <fieldset>
+              <fieldset style="border-radius: 7px" class="q-pa-md">
                 <legend>Add Question</legend>
                 <q-input
                   borderless
@@ -294,6 +324,8 @@ export default defineComponent({
     return {
       shape: ref("line"),
       submitResult,
+      lorem:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
 
       onSubmit(evt) {
         const formData = new FormData(evt.target);

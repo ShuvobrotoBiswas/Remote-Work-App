@@ -153,7 +153,7 @@
         </div>
 
         <div class="q-pa-md">
-          <fieldset>
+          <fieldset style="border-radius: 7px" class="q-pa-md">
             <legend>Maximum Rate</legend>
             <q-input borderless v-model="text" placeholder="2600" />
           </fieldset>
@@ -169,7 +169,7 @@
             label="Back"
             class="q-mr-md"
           />
-          <q-btn unelevated size="10px" style="width:100px" rounded color="primary" label="Next" />
+          <q-btn unelevated size="10px" style="width:100px" rounded color="teal-9" label="Next" />
         </div>
       </div>
     </div>

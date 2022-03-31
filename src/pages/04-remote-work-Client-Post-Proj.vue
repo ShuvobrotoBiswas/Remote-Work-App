@@ -173,7 +173,7 @@
         class="q-mr-md"
       />
 
-      <q-btn unelevated style="width:100px" size="10px" rounded color="primary" label="Next" />
+      <q-btn unelevated style="width:100px" size="10px" rounded color="teal-9" label="Next" />
     </div>
   </div>
 </template>
