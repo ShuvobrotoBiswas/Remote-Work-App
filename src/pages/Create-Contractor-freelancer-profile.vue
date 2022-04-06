@@ -114,7 +114,7 @@
                   </template>
                 </q-file>
                 <div class="q-pa-md">
-                  <q-btn outline  bottom-slots rounded> remove exsting </q-btn>
+                  <q-btn outline bottom-slots rounded> remove exsting </q-btn>
                 </div>
                 <div class="q-pa-md text-h7 text-bold">
                   Europass & Portfolio
@@ -310,13 +310,7 @@ export default defineComponent({
   height: 70px
   width: 80px
 
-.company
-  background: white
-  height: 75px
-  width: 85px
-  rounded
 
-.description
 
 .my-home
   border: 1px solid rgba(86,61,124,.2)

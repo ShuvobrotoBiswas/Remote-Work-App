@@ -267,30 +267,10 @@ export default defineComponent({
   // border: 1px solid rgba(86,61,124,.2)
 .row + .row
   margin-top: 1rem
-.bid1
-  // background: rgba(255,0,0,.1)
-  border: 1px solid rgba(86,61,124,.2)
-  margin-top: 1rem
-.bid2
-  border: 1px solid rgba(86,61,124,.2)
-  height: 100px
-
-.image1
-  height: 70px
-  width: 80px
-
-.company
-  background: white
-  height: 75px
-  width: 85px
-  rounded
-
-.description
 
 .this-card
   // background: rgba(255,0,0,.1)
   border-radius: 30px
-
 
 .my-home
   border: 1px solid rgba(86,61,124,.2)

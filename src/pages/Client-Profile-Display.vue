@@ -201,27 +201,7 @@ export default defineComponent({
   // name: "IndexPage",
   setup() {
     return {
-      lorem:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      completeName: ref(""),
-      search: ref(""),
-      tel: ref(""),
-      billingAddress: "",
-      address: "",
-      model: ref(null),
-      group: ref([]),
-      options: [
-        { label: "Adobe Illustrator" },
-        { label: "Adobe Photoshop" },
-        { label: "Adobe XD" },
-      ],
-      group1: ref([]),
-      options1: [{ label: "Branding & Logo Design" }, { label: "Web Design" }],
-      description: ref(
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-      ),
-      pricelist1: ref("15|"),
-      pricelist2: ref("55|"),
+      
     };
   },
 });
@@ -237,23 +217,5 @@ export default defineComponent({
   // border: 1px solid rgba(86,61,124,.2)
 .row + .row
   margin-top: 1rem
-.bid1
-  // background: rgba(255,0,0,.1)
-  border: 1px solid rgba(86,61,124,.2)
-  margin-top: 1rem
-.bid2
-  border: 1px solid rgba(86,61,124,.2)
-  height: 100px
 
-.image1
-  height: 70px
-  width: 80px
-
-.company
-  background: white
-  height: 75px
-  width: 85px
-  rounded
-
-.description
 </style>

@@ -302,28 +302,6 @@ export default defineComponent({
     return {
       lorem:
         "If you were to carry out a project similar to this one, would you want to work with this contractor again or do you want to try a different team?.",
-      text: " We have a logo that is about 13 years old and we are looking to update/change our branding, we need a logo that is more up to date and we want to keep the versatillity. We want to go bold/innovative with this change. Previous logo is attached for reference",
-      checkbox19: ref(true),
-      checkbox20: ref(true),
-      checkbox21: ref(false),
-      checkbox22: ref(false),
-      checkbox23: ref(false),
-      price: ref("500 € |"),
-      input1: ref("Your answer here."),
-      input2: ref("Your answer here."),
-      date: ref("2020/07/08 , 2020/07/17"),
-      group: ref("op1"),
-
-      options: [
-        {
-          label: "Freelancer",
-          value: "op1",
-        },
-        {
-          label: "Agency",
-          value: "op2",
-        },
-      ],
       tab: ref("two"),
       shape: ref("radio1"),
       submit: null,
@@ -342,29 +320,6 @@ export default defineComponent({
   // border: 1px solid rgba(86,61,124,.2)
 .row + .row
   margin-top: 1rem
-.bid1
-  // background: rgba(255,0,0,.1)
-  // border: 1px solid rgba(86,61,124,.2)
-  margin-top: 1rem
-.bid2
-  border: 1px solid rgba(86,61,124,.2)
-  height: 100px
-
-.image1
-  height: 70px
-  width: 80px
-
-.company
-  background: white
-  height: 75px
-  width: 85px
-  rounded
-
-.description
-
-.image2
-  background: grey
-
 
 .my-font
   font-size: 10px

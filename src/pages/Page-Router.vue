@@ -327,6 +327,129 @@
                   >
                   </q-btn>
                 </div>
+
+
+              </q-list>
+            </div>
+          </div>
+        </q-card>
+      </div>
+
+
+      <div
+        class="q-pa-md q-py-md col-6 flex flex-center items-start q-gutter-md">
+        <q-card
+          class="my-card this-card flex flex-center text-black bg-white"
+          style="max-width: 750px">
+          <div class="q-pa-md">
+            <div class="row">
+              <q-list>
+                <p class="flex-center">Phase 3</p>
+
+                <div class="q-pa-md">
+                  <q-btn
+                    to="01-Remote-Work-2-Ongoing-Work-Client-Post-Proj"
+                    label="01-Remote-Work-2-Ongoing-Work-Client-Post-Proj"
+                    outline
+                    style="color: goldenrod"
+                  >
+                  </q-btn>
+                </div>
+                <div class="q-pa-md">
+                  <q-btn
+                    to="02-Remote-Work-2-Ongoing-Work-Contractor-Search-Proj"
+                    label="02-Remote-Work-2-Ongoing-Work-Contractor-Search-Proj"
+                    outline
+                    style="color: goldenrod"
+                  >
+                  </q-btn>
+                </div>
+                <div class="q-pa-md">
+                  <q-btn
+                    to="03-Remote-Work-2-Ongoing-Work-Contractor-Project-Display"
+                    label="03-Remote-Work-2-Ongoing-Work-Contractor-Project-Display"
+                    outline
+                    style="color: goldenrod"
+                  >
+                  </q-btn>
+                </div>
+
+                <div class="q-pa-md">
+                  <q-btn
+                    to="04-Remote-Work-2-Ongoing-Work-Contractor-Application-To-Project"
+                    label="04-Remote-Work-2-Ongoing-Work-Contractor-Application-To-Project"
+                    outline
+                    style="color: goldenrod"
+                  >
+                  </q-btn>
+                </div>
+
+                <div class="q-pa-md">
+                  <q-btn
+                    to="05-Remote-Work-2-Ongoing-Work-Client-List-Application-To-Project"
+                    label="05-Remote-Work-2-Ongoing-Work-Client-List-Application-To-Project"
+                    outline
+                    style="color: goldenrod"
+                  >
+                  </q-btn>
+                </div>
+                <div class="q-pa-md">
+                  <q-btn
+                    to="06-Remote-Work-2-Ongoing-Work-Client-Approve-Contractor-Application-To-Project"
+                    label="06-Remote-Work-2-Ongoing-Work-Client-Approve-Contractor-Application-To-Project"
+                    outline
+                    style="color: goldenrod"
+                  >
+                  </q-btn>
+                </div>
+
+                <div class="q-pa-md">
+                  <q-btn
+                    to="07-Remote-Work-2-Ongoing-Work-Client-Feedback-To-Client"
+                    label="07-Remote-Work-2-Ongoing-Work-Client-Feedback-To-Client"
+                    outline
+                    style="color: goldenrod"
+                  >
+                  </q-btn>
+                </div>
+                <div class="q-pa-md">
+                  <q-btn
+                    to="08-Remote-Work-2-Ongoing-Work-Agency-Application-To-Project"
+                    label="08-Remote-Work-2-Ongoing-Work-Agency-Application-To-Project"
+                    outline
+                    style="color: goldenrod"
+                  >
+                  </q-btn>
+                </div>
+                 <div class="q-pa-md">
+                  <q-btn
+                    to="09-Remote-Work-2-Ongoing-Work-Client-List-Of-Application-To-Project"
+                    label="09-Remote-Work-2-Ongoing-Work-Client-List-Of-Application-To-Project"
+                    outline
+                    style="color: goldenrod"
+                  >
+                  </q-btn>
+                </div>
+                <div class="q-pa-md">
+                  <q-btn
+                    to="10-Remote-Work-2-Ongoing-Work-Client-Approve-Agency-Application-To-Project"
+                    label="10-Remote-Work-2-Ongoing-Work-Client-Approve-Agency-Application-To-Project"
+                    outline
+                    style="color: goldenrod"
+                  >
+                  </q-btn>
+                </div>
+                 <div class="q-pa-md">
+                  <q-btn
+                    to="11-Remote-Work-2-Ongoing-Work-Client-Feedback-To-Client"
+                    label="11-Remote-Work-2-Ongoing-Work-Client-Feedback-To-Client"
+                    outline
+                    style="color: goldenrod"
+                  >
+                  </q-btn>
+                </div>
+
+
               </q-list>
             </div>
           </div>

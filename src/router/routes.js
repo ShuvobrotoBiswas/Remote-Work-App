@@ -46,6 +46,33 @@ const routes = [
       { path: '/17-Remote-Work-Client-Feedback-To-Agency', component: () => import('src/pages/17-Remote-Work-Client-Feedback-To-Agency.vue') },
 
 
+      {
+        path: '/',
+        component: () => import('layouts/Phase-3.vue'),
+        children: [
+          { path: '/01-Remote-Work-2-Ongoing-Work-Client-Post-Proj', component: () => import('src/pages/01-Remote-Work-2-Ongoing-Work-Client-Post-Proj.vue') },
+          { path: '/02-Remote-Work-2-Ongoing-Work-Contractor-Search-Proj', component: () => import('src/pages/02-Remote-Work-2-Ongoing-Work-Contractor-Search-Proj.vue') },
+          { path: '/03-Remote-Work-2-Ongoing-Work-Contractor-Project-Display', component: () => import('src/pages/03-Remote-Work-2-Ongoing-Work-Contractor-Project-Display.vue') },
+          { path: '/04-Remote-Work-2-Ongoing-Work-Contractor-Application-To-Project', component: () => import('src/pages/04-Remote-Work-2-Ongoing-Work-Contractor-Application-To-Project.vue') },
+          { path: '/05-Remote-Work-2-Ongoing-Work-Client-List-Application-To-Project', component: () => import('src/pages/05-Remote-Work-2-Ongoing-Work-Client-List-Application-To-Project.vue') },
+          { path: '/06-Remote-Work-2-Ongoing-Work-Client-Approve-Contractor-Application-To-Project', component: () => import('src/pages/06-Remote-Work-2-Ongoing-Work-Client-Approve-Contractor-Application-To-Project.vue') },
+          { path: '/07-Remote-Work-2-Ongoing-Work-Client-Feedback-To-Client', component: () => import('src/pages/07-Remote-Work-2-Ongoing-Work-Client-Feedback-To-Client.vue') },
+          { path: '/08-Remote-Work-2-Ongoing-Work-Agency-Application-To-Project', component: () => import('src/pages/08-Remote-Work-2-Ongoing-Work-Agency-Application-To-Project.vue') },
+          { path: '/09-Remote-Work-2-Ongoing-Work-Client-List-Of-Application-To-Project', component: () => import('src/pages/09-Remote-Work-2-Ongoing-Work-Client-List-Of-Application-To-Project.vue') },
+          { path: '/10-Remote-Work-2-Ongoing-Work-Client-Approve-Agency-Application-To-Project', component: () => import('src/pages/10-Remote-Work-2-Ongoing-Work-Client-Approve-Agency-Application-To-Project.vue') },
+          { path: '/11-Remote-Work-2-Ongoing-Work-Client-Feedback-To-Client', component: () => import('src/pages/11-Remote-Work-2-Ongoing-Work-Client-Feedback-To-Client.vue') },
+
+
+
+
+
+
+
+
+     ]
+      },
+
+
 
 
 

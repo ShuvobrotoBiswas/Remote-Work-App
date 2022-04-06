@@ -559,13 +559,7 @@ export default defineComponent({
   height: 70px
   width: 80px
 
-.company
-  background: white
-  height: 75px
-  width: 85px
-  rounded
 
-.description
 
 
 .my-home
