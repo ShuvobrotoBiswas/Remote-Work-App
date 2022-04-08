@@ -455,6 +455,121 @@
           </div>
         </q-card>
       </div>
+       <div
+        class="q-pa-md q-py-md col-6 flex flex-center items-start q-gutter-md">
+        <q-card
+          class="my-card this-card flex flex-center text-black bg-white"
+          style="max-width: 750px">
+          <div class="q-pa-md">
+            <div class="row">
+              <q-list>
+                <p class="flex-center">Phase 4</p>
+
+                <div class="q-pa-md">
+                  <q-btn
+                    to="01-Remote-Work-Client-Post-Project-1"
+                    label="01-Remote-Work-Client-Post-Project-1"
+                    outline
+                    style="color: goldenrod"
+                  >
+                  </q-btn>
+                </div>
+                <div class="q-pa-md">
+                  <q-btn
+                    to="02-Remote-Work-Client-Post-Project-2"
+                    label="02-Remote-Work-Client-Post-Project-2"
+                    outline
+                    style="color: goldenrod"
+                  >
+                  </q-btn>
+                </div>
+                <div class="q-pa-md">
+                  <q-btn
+                    to="03-Remote-Work-Client-Post-Project-3"
+                    label="03-Remote-Work-Client-Post-Project-3"
+                    outline
+                    style="color: goldenrod"
+                  >
+                  </q-btn>
+                </div>
+                <div class="q-pa-md">
+                  <q-btn
+                    to="04-Remote-Work-Client-Post-Project-4"
+                    label="04-Remote-Work-Client-Post-Project-4"
+                    outline
+                    style="color: goldenrod"
+                  >
+                  </q-btn>
+                </div>
+                <div class="q-pa-md">
+                  <q-btn
+                    to="05-Remote-Work-Client-Post-Project-5"
+                    label="05-Remote-Work-Client-Post-Project-5"
+                    outline
+                    style="color: goldenrod"
+                  >
+                  </q-btn>
+                </div>
+                <div class="q-pa-md">
+                  <q-btn
+                    to="06-Remote-Work-Client-Post-Project-6"
+                    label="06-Remote-Work-Client-Post-Project-6"
+                    outline
+                    style="color: goldenrod"
+                  >
+                  </q-btn>
+                </div>
+                <div class="q-pa-md">
+                  <q-btn
+                    to="07-Remote-Work-Contractor-Project-Display-07"
+                    label="07-Remote-Work-Contractor-Project-Display-07"
+                    outline
+                    style="color: goldenrod"
+                  >
+                  </q-btn>
+                </div>
+                <div class="q-pa-md">
+                  <q-btn
+                    to="08-Remote-Work-Contractor-Application-To-Project-08"
+                    label="08-Remote-Work-Contractor-Application-To-Project-08"
+                    outline
+                    style="color: goldenrod"
+                  >
+                  </q-btn>
+                </div>
+                <div class="q-pa-md">
+                  <q-btn
+                    to="09-Remote-Work-Client-List-Of-Application-To-Project-09"
+                    label="09-Remote-Work-Client-List-Of-Application-To-Project-09"
+                    outline
+                    style="color: goldenrod"
+                  >
+                  </q-btn>
+                </div>
+                <div class="q-pa-md">
+                  <q-btn
+                    to="10-Remote-Work-Contractor-Application-to-Project-By-Agency-10"
+                    label="10-Remote-Work-Contractor-Application-to-Project-By-Agency-10"
+                    outline
+                    style="color: goldenrod"
+                  >
+                  </q-btn>
+                </div>
+                <div class="q-pa-md">
+                  <q-btn
+                    to="11-Remote-Work-Client-Of-Application-to-Project-By-Agency-11"
+                    label="11-Remote-Work-Client-Of-Application-to-Project-By-Agency-11"
+                    outline
+                    style="color: goldenrod"
+                  >
+                  </q-btn>
+                </div>
+
+              </q-list>
+            </div>
+          </div>
+        </q-card>
+      </div>
 
       <!-- Footer Div -->
     </div>

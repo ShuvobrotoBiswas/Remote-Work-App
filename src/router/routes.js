@@ -61,25 +61,22 @@ const routes = [
           { path: '/09-Remote-Work-2-Ongoing-Work-Client-List-Of-Application-To-Project', component: () => import('src/pages/09-Remote-Work-2-Ongoing-Work-Client-List-Of-Application-To-Project.vue') },
           { path: '/10-Remote-Work-2-Ongoing-Work-Client-Approve-Agency-Application-To-Project', component: () => import('src/pages/10-Remote-Work-2-Ongoing-Work-Client-Approve-Agency-Application-To-Project.vue') },
           { path: '/11-Remote-Work-2-Ongoing-Work-Client-Feedback-To-Client', component: () => import('src/pages/11-Remote-Work-2-Ongoing-Work-Client-Feedback-To-Client.vue') },
-
-
-
-
-
+          { path: '/01-Remote-Work-Client-Post-Project-1', component: () => import('src/pages/01-Remote-Work-Client-Post-Project-1.vue') },
+          { path: '/02-Remote-Work-Client-Post-Project-2', component: () => import('src/pages/02-Remote-Work-Client-Post-Project-2.vue') },
+          { path: '/03-Remote-Work-Client-Post-Project-3', component: () => import('src/pages/03-Remote-Work-Client-Post-Project-3.vue') },
+          { path: '/04-Remote-Work-Client-Post-Project-4', component: () => import('src/pages/04-Remote-Work-Client-Post-Project-4.vue') },
+          { path: '/05-Remote-Work-Client-Post-Project-5', component: () => import('src/pages/05-Remote-Work-Client-Post-Project-5.vue') },
+          { path: '/06-Remote-Work-Client-Post-Project-6', component: () => import('src/pages/06-Remote-Work-Client-Post-Project-6.vue') },
+          { path: '/07-Remote-Work-Contractor-Project-Display-07', component: () => import('src/pages/07-Remote-Work-Contractor-Project-Display-07.vue') },
+          { path: '/08-Remote-Work-Contractor-Application-To-Project-08', component: () => import('src/pages/08-Remote-Work-Contractor-Application-To-Project-08.vue') },
+          { path: '/09-Remote-Work-Client-List-Of-Application-To-Project-09', component: () => import('src/pages/09-Remote-Work-Client-List-Of-Application-To-Project-09.vue') },
+          { path: '/10-Remote-Work-Contractor-Application-to-Project-By-Agency-10', component: () => import('src/pages/10-Remote-Work-Contractor-Application-to-Project-By-Agency-10.vue') },
+          { path: '/11-Remote-Work-Client-Of-Application-to-Project-By-Agency-11', component: () => import('src/pages/11-Remote-Work-Client-Of-Application-to-Project-By-Agency-11.vue') },
 
 
 
      ]
       },
-
-
-
-
-
-
-
-
-
     ]
   },
   // Always leave this as last one,
