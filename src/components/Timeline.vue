@@ -1,5 +1,5 @@
 <template>
-  <div class="row" style="max-width: 1000px" id="timeline-wrap">
+  <div class="row " style="max-width: 1000px" id="timeline-wrap">
     <div id="timeline"></div>
     <div class="marker mfirst timeline-icon one">
       <p>1</p>

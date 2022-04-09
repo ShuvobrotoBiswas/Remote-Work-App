@@ -27,6 +27,7 @@ const routes = [
       { path: '/Contractor-freelancer-profile-display', component: () => import('src/pages/Contractor-freelancer-profile-display.vue') },
       { path: '/Client-Company-Profile-Display', component: () => import('src/pages/Client-Company-Profile-Display.vue') },
       { path: '/Create--Contractor-Company-Profile-Add-Freelancers', component: () => import('src/pages/Create--Contractor-Company-Profile-Add-Freelancers.vue') },
+      //  Phase 2
       { path: '/01-remote-work-Client-Post-Proj', component: () => import('src/pages/01-remote-work-Client-Post-Proj.vue') },
       { path: "/02-remote-work-Client-Post-Proj", component: () => import("src/pages/02-remote-work-Client-Post-Proj.vue"),},
       { path: "/03-remote-work-Client-Post-Proj", component: () => import("src/pages/03-remote-work-Client-Post-Proj.vue"),},
@@ -50,6 +51,7 @@ const routes = [
         path: '/',
         component: () => import('layouts/Phase-3.vue'),
         children: [
+          // Phase 3
           { path: '/01-Remote-Work-2-Ongoing-Work-Client-Post-Proj', component: () => import('src/pages/01-Remote-Work-2-Ongoing-Work-Client-Post-Proj.vue') },
           { path: '/02-Remote-Work-2-Ongoing-Work-Contractor-Search-Proj', component: () => import('src/pages/02-Remote-Work-2-Ongoing-Work-Contractor-Search-Proj.vue') },
           { path: '/03-Remote-Work-2-Ongoing-Work-Contractor-Project-Display', component: () => import('src/pages/03-Remote-Work-2-Ongoing-Work-Contractor-Project-Display.vue') },
@@ -61,6 +63,7 @@ const routes = [
           { path: '/09-Remote-Work-2-Ongoing-Work-Client-List-Of-Application-To-Project', component: () => import('src/pages/09-Remote-Work-2-Ongoing-Work-Client-List-Of-Application-To-Project.vue') },
           { path: '/10-Remote-Work-2-Ongoing-Work-Client-Approve-Agency-Application-To-Project', component: () => import('src/pages/10-Remote-Work-2-Ongoing-Work-Client-Approve-Agency-Application-To-Project.vue') },
           { path: '/11-Remote-Work-2-Ongoing-Work-Client-Feedback-To-Client', component: () => import('src/pages/11-Remote-Work-2-Ongoing-Work-Client-Feedback-To-Client.vue') },
+          //  Phase 4
           { path: '/01-Remote-Work-Client-Post-Project-1', component: () => import('src/pages/01-Remote-Work-Client-Post-Project-1.vue') },
           { path: '/02-Remote-Work-Client-Post-Project-2', component: () => import('src/pages/02-Remote-Work-Client-Post-Project-2.vue') },
           { path: '/03-Remote-Work-Client-Post-Project-3', component: () => import('src/pages/03-Remote-Work-Client-Post-Project-3.vue') },
@@ -72,6 +75,20 @@ const routes = [
           { path: '/09-Remote-Work-Client-List-Of-Application-To-Project-09', component: () => import('src/pages/09-Remote-Work-Client-List-Of-Application-To-Project-09.vue') },
           { path: '/10-Remote-Work-Contractor-Application-to-Project-By-Agency-10', component: () => import('src/pages/10-Remote-Work-Contractor-Application-to-Project-By-Agency-10.vue') },
           { path: '/11-Remote-Work-Client-Of-Application-to-Project-By-Agency-11', component: () => import('src/pages/11-Remote-Work-Client-Of-Application-to-Project-By-Agency-11.vue') },
+          // Phase 5
+          { path: '/Phase5-01-Remote-Work-Client-Post-Project-1', component: () => import('src/pages/Phase5-01-Remote-Work-Client-Post-Project-1.vue') },
+          { path: '/Phase5-02-Remote-Work-Client-Post-Project-2', component: () => import('src/pages/Phase5-02-Remote-Work-Client-Post-Project-2.vue') },
+          { path: '/Phase5-03-Remote-Work-Client-Post-Project-3', component: () => import('src/pages/Phase5-03-Remote-Work-Client-Post-Project-3.vue') },
+          { path: '/Phase5-04-Remote-Work-Client-Post-Project-4', component: () => import('src/pages/Phase5-04-Remote-Work-Client-Post-Project-4.vue') },
+          { path: '/Phase5-05-Remote-Work-Client-Post-Project-5', component: () => import('src/pages/Phase5-05-Remote-Work-Client-Post-Project-5.vue') },
+          { path: '/Phase5-06-Remote-Work-Client-Post-Project-6', component: () => import('src/pages/Phase5-06-Remote-Work-Client-Post-Project-6.vue') },
+          { path: '/Phase5-07-Remote-Work-Client-Post-Project-7', component: () => import('src/pages/Phase5-07-Remote-Work-Client-Post-Project-7.vue') },
+          { path: '/Phase5-08-Remote-Work-Client-Post-Project-8', component: () => import('src/pages/Phase5-08-Remote-Work-Client-Post-Project-8.vue') },
+          { path: '/Phase5-09-Remote-Work-Client-Post-Project-9', component: () => import('src/pages/Phase5-09-Remote-Work-Client-Post-Project-9.vue') },
+          { path: '/Phase5-10-Remote-Work-Client-Post-Project-10', component: () => import('src/pages/Phase5-10-Remote-Work-Client-Post-Project-10.vue') },
+          { path: '/Phase5-11-Remote-Work-Client-Post-Project-11', component: () => import('src/pages/Phase5-11-Remote-Work-Client-Post-Project-11.vue') },
+          { path: '/Phase5-12-Remote-Work-Client-Post-Project-12', component: () => import('src/pages/Phase5-12-Remote-Work-Client-Post-Project-12.vue') },
+          { path: '/Phase5-13-Remote-Work-Client-Post-Project-13', component: () => import('src/pages/Phase5-13-Remote-Work-Client-Post-Project-13.vue') },
 
 
 

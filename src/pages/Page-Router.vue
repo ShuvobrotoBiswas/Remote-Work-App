@@ -570,6 +570,141 @@
           </div>
         </q-card>
       </div>
+      <div
+        class="q-pa-md q-py-md col-6 flex flex-center items-start q-gutter-md">
+        <q-card
+          class="my-card this-card flex flex-center text-black bg-white"
+          style="max-width: 750px">
+          <div class="q-pa-md">
+            <div class="row">
+              <q-list>
+                <p class="flex-center">Phase 5</p>
+
+                <div class="q-pa-md">
+                  <q-btn
+                    to="Phase5-01-Remote-Work-Client-Post-Project-1"
+                    label="Phase5-01-Remote-Work-Client-Post-Project-1"
+                    outline
+                    style="color: goldenrod"
+                  >
+                  </q-btn>
+                </div>
+                <div class="q-pa-md">
+                  <q-btn
+                    to="Phase5-02-Remote-Work-Client-Post-Project-2"
+                    label="Phase5-02-Remote-Work-Client-Post-Project-2"
+                    outline
+                    style="color: goldenrod"
+                  >
+                  </q-btn>
+                </div>
+                <div class="q-pa-md">
+                  <q-btn
+                    to="Phase5-03-Remote-Work-Client-Post-Project-3"
+                    label="Phase5-03-Remote-Work-Client-Post-Project-3"
+                    outline
+                    style="color: goldenrod"
+                  >
+                  </q-btn>
+                </div>
+
+                <div class="q-pa-md">
+                  <q-btn
+                    to="Phase5-04-Remote-Work-Client-Post-Project-4"
+                    label="Phase5-04-Remote-Work-Client-Post-Project-4"
+                    outline
+                    style="color: goldenrod"
+                  >
+                  </q-btn>
+                </div>
+                <div class="q-pa-md">
+                  <q-btn
+                    to="Phase5-05-Remote-Work-Client-Post-Project-5"
+                    label="Phase5-05-Remote-Work-Client-Post-Project-5"
+                    outline
+                    style="color: goldenrod"
+                  >
+                  </q-btn>
+                </div>
+                <div class="q-pa-md">
+                  <q-btn
+                    to="Phase5-06-Remote-Work-Client-Post-Project-6"
+                    label="Phase5-06-Remote-Work-Client-Post-Project-6"
+                    outline
+                    style="color: goldenrod"
+                  >
+                  </q-btn>
+                </div>
+                <div class="q-pa-md">
+                  <q-btn
+                    to="Phase5-07-Remote-Work-Client-Post-Project-7"
+                    label="Phase5-07-Remote-Work-Client-Post-Project-7"
+                    outline
+                    style="color: goldenrod"
+                  >
+                  </q-btn>
+                </div>
+                <div class="q-pa-md">
+                  <q-btn
+                    to="Phase5-08-Remote-Work-Client-Post-Project-8"
+                    label="Phase5-08-Remote-Work-Client-Post-Project-8"
+                    outline
+                    style="color: goldenrod"
+                  >
+                  </q-btn>
+                </div>
+                <div class="q-pa-md">
+                  <q-btn
+                    to="Phase5-09-Remote-Work-Client-Post-Project-9"
+                    label="Phase5-09-Remote-Work-Client-Post-Project-9"
+                    outline
+                    style="color: goldenrod"
+                  >
+                  </q-btn>
+                </div>
+                <div class="q-pa-md">
+                  <q-btn
+                    to="Phase5-10-Remote-Work-Client-Post-Project-10"
+                    label="Phase5-10-Remote-Work-Client-Post-Project-10"
+                    outline
+                    style="color: goldenrod"
+                  >
+                  </q-btn>
+                </div>
+                 <div class="q-pa-md">
+                  <q-btn
+                    to="Phase5-11-Remote-Work-Client-Post-Project-11"
+                    label="Phase5-11-Remote-Work-Client-Post-Project-11"
+                    outline
+                    style="color: goldenrod"
+                  >
+                  </q-btn>
+                </div>
+                <div class="q-pa-md">
+                  <q-btn
+                    to="Phase5-12-Remote-Work-Client-Post-Project-12"
+                    label="Phase5-12-Remote-Work-Client-Post-Project-12"
+                    outline
+                    style="color: goldenrod"
+                  >
+                  </q-btn>
+                </div>
+                 <div class="q-pa-md">
+                  <q-btn
+                    to="Phase5-13-Remote-Work-Client-Post-Project-13"
+                    label="Phase5-13-Remote-Work-Client-Post-Project-13"
+                    outline
+                    style="color: goldenrod"
+                  >
+                  </q-btn>
+                </div>
+
+
+              </q-list>
+            </div>
+          </div>
+        </q-card>
+      </div>
 
       <!-- Footer Div -->
     </div>
