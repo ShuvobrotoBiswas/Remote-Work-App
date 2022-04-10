@@ -5,7 +5,6 @@
     <!-- Card 1 Div -->
     <div class="row flex-center items-start">
       <div style="max-width: 750px">
-        <div class="q-pa-md">
           <div class="row">
             <div>
               <q-card-section>
@@ -58,6 +57,7 @@
                     </div>
                   </div>
                 </div>
+                <q-separator />
                 <div class="row">
                    <div class="col-6">
                     <div class="text-h7 text-bold">Choose preferred type of contractor*</div>
@@ -104,10 +104,8 @@
               </q-card-section>
             </div>
           </div>
-        </div>
       </div>
     </div>
-    <!-- Card 3 div -->
   </div>
 </template>
 

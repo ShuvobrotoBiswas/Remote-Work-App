@@ -31,39 +31,29 @@
                 <q-tab class="text-black" label="Feedback" name="two" />
               </q-tabs>
               <q-separator />
+              <div class="row">
+                <p class="text-bold q-my-none text-h7">
+                  Give feedback to the contractor
+                </p>
+                <p>
+                  {{ lorem }}
+                </p>
+                <q-radio
+                  v-model="shape"
+                  val="radio1"
+                  class="q-mr-sm"
+                  color="black"
+                  label="I want to work with this contractor again"
+                />
+                <q-radio
+                  v-model="shape"
+                  color="black"
+                  class="q-mr-sm"
+                  val="rectangle"
+                  label="I want to try a different contractor"
+                />
+              </div>
 
-              <q-tab-panels v-model="tab" animated style="max-width: 950px">
-                <q-tab-panel name="two">
-                  <div class="row" style="max-width: 950px">
-                    <div class="col-11">
-                      <div class="row">
-                        <div class="row">
-                          <p class="text-bold q-my-none text-h7">
-                            Give feedback to the contractor
-                          </p>
-                          <p>
-                            {{ lorem }}
-                          </p>
-                           <q-radio
-                            v-model="shape"
-                            val="radio1"
-                            class="q-mr-sm"
-                            color="black"
-                            label="I want to work with this contractor again"
-                          />
-                          <q-radio
-                            v-model="shape"
-                            color="black"
-                            class="q-mr-sm"
-                            val="rectangle"
-                            label="I want to try a different contractor"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </q-tab-panel>
-              </q-tab-panels>
             </div>
           </q-card-section>
         </div>
@@ -123,6 +113,4 @@ export default defineComponent({
   // border: 1px solid rgba(86,61,124,.2)
 .row + .row
   margin-top: 1rem
-
-
 </style>

@@ -8,62 +8,52 @@
       <div style="width: 1000px" class="q-pa-md">
         <div class="row" style="max-width: 950px">
           <q-card-section>
-            <div class="text-h5 text-bold q-py-md text-left">
+            <div class="text-h5 row text-bold q-py-md text-left">
               Logo Design for Insurance Agency
             </div>
             <q-separator />
             <div class="row">
-              <div class="col">
-                <div class="row text-h7 text-bold">AGENCY NAME</div>
-                <div class="text-h7 row">
-                  <q-img
-                    style="height: 70px; width: 70px"
-                    src="~/assets/Avator20.png"
-                  ></q-img>
-                </div>
-              </div>
-              <div class="col"></div>
-              <div class="col"></div>
-              <div class="col"></div>
+              <p class="text-h7 q-py-md text-bold">AGENCY NAME</p>
             </div>
-            <div class="row">
-              <q-tabs v-model="tab" class="text-teal">
-                <q-tab class="text-black" label="Feedback" name="two" />
-              </q-tabs>
-              <q-separator />
+            <q-img
+              style="
+                height: 60px;
+                width: 60px;
+                border-radius: 50%;
+                border: 1px solid black;
+              "
+              src="~/assets/Avator20.png"
+            ></q-img>
+            <div>
+              <p class="text-bold q-py-md">FEEDBACK</p>
 
-              <q-tab-panels v-model="tab" animated style="max-width: 950px">
-                <q-tab-panel name="two">
-                  <div class="row" style="max-width: 950px">
-                    <div class="col-11">
-                      <div class="row">
-                        <div class="row">
-                          <p class="text-bold q-my-none text-h7">
-                            Give feedback to the contractor
-                          </p>
-                          <p>
-                            {{ lorem }}
-                          </p>
-                          <q-radio
-                            v-model="shape"
-                            val="radio1"
-                            class="q-mr-sm"
-                            color="black"
-                            label="I want to work with this contractor again"
-                          />
-                          <q-radio
-                            v-model="shape"
-                            color="black"
-                            class="q-mr-sm"
-                            val="rectangle"
-                            label="I want to try a different contractor"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </q-tab-panel>
-              </q-tab-panels>
+              <div>
+                <q-separator
+                  class="bg-black"
+                  style="width: 80px; height: 2px"
+                />
+              </div>
+              <p class="text-bold q-my-none text-h7">
+                Give feedback to the contractor
+              </p>
+              <p>
+                {{ lorem }}
+              </p>
+              <q-radio
+                v-model="shape"
+                val="radio1"
+                class="q-mr-sm"
+                color="black"
+                label="I want to work with this contractor again"
+              />
+              <q-radio
+                v-model="shape"
+                color="black"
+                class="q-mr-sm"
+                val="rectangle"
+                label="I want to try a different contractor"
+              />
+
             </div>
           </q-card-section>
         </div>

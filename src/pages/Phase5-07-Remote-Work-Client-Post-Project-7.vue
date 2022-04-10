@@ -7,7 +7,6 @@
       <div style="max-width: 750px">
         <div class="q-pa-md">
           <div class="row">
-            <div>
               <q-card-section>
                 <div class="text-h5 text-bold q-py-md text-left">
                   Logo design for Insurance Agency
@@ -25,7 +24,7 @@
                   </div>
                   <div class="col">
                     <div class="text-h7 text-bold">Project type</div>
-                    <div class="text-h7">Well Defined Project</div>
+                    <div class="text-h7">Guarenteed Price Contest</div>
                   </div>
                   <div class="col">
                     <div class="text-h7 text-bold">Payment</div>
@@ -35,7 +34,7 @@
                 <div class="row">
                   <div class="col">
                     <div class="text-h7 text-bold">Duration</div>
-                    <div class="text-h7">Max. 2 weeks</div>
+                    <div class="text-h7">Max. 15 Days</div>
                   </div>
                 </div>
                 <div class="row q-py-md">
@@ -141,7 +140,6 @@
               </q-card-section>
             </div>
           </div>
-        </div>
       </div>
     </div>
     <!-- Card 3 div -->

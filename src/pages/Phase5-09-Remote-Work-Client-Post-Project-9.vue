@@ -16,13 +16,18 @@
 
                 <div class="row">
                   <div class="col-3">
-                    <div class="text-h7 row flex-center text-bold">Anna Doyle</div>
-                    <div class="text-h7 row flex-center">
-                      <q-img sizes="100px" style="width:100px; height:100px" src="~/assets/Avator16.png"></q-img>
+                    <div class="text-h7 row flex-center text-bold">
+                      Anna Doyle
                     </div>
-                    <div class="text-h7 ro flex-centerw">
-                      <div class="col">Unverified</div>
-                      <div class="col">
+                    <div class="text-h7 row flex-center">
+                      <q-img
+                        style="max-width: 100px; max-width: 100px"
+                        src="~/assets/Avator16.png"
+                      ></q-img>
+                    </div>
+                    <div>
+                      <p class="row flex-center">Unverified</p>
+                      <div class="row flex-center">
                         <q-btn
                           outline
                           round
@@ -121,7 +126,7 @@
                       </div>
                     </div>
                     <div>
-                      <div class="row text-bold text-h7">Attachments</div>
+                      <div class="row text-bold text-h7">Uploaded files</div>
                       <q-btn
                         size="13px"
                         flat
@@ -145,22 +150,30 @@
                         class="text-black row text-h7"
                       ></q-btn>
                     </div>
-                    <div class="row q-pa-md flex-center">
-                      <q-btn
+                    <div class="row">
+                      <div class="col"></div>
+                      <div class="col">
+                        <q-btn
                         size="8px"
                         rounded
+                        style="width: 100px"
                         color="grey"
                         label="Ask more info"
                         class="text-white text-h7 q-mr-sm"
                       ></q-btn>
-                      <q-btn
+                      </div>
+                      <div class="col"></div>
+                      <div class="col">
+                        <q-btn
                         size="8px"
                         rounded
-                        style="width:80px"
+                        style="width: 100px"
                         color="black"
                         label="hire"
                         class="text-white text-h7"
                       ></q-btn>
+                      </div>
+                      <div class="col"></div>
                     </div>
                   </div>
                 </div>
@@ -168,9 +181,15 @@
                 <q-separator />
                 <div class="row">
                   <div class="col-3">
-                    <div class="text-h7 row flex-center text-bold">Avraam iancu</div>
+                    <div class="text-h7 row flex-center text-bold">
+                      Avraam iancu
+                    </div>
                     <div class="text-h7 row flex-center">
-                      <q-img sizes="100px" style="width:100px; height:100px" src="~/assets/Avator17.png"></q-img>
+                      <q-img
+                        sizes="100px"
+                        style="max-width: 100px; max-width: 100px"
+                        src="~/assets/Avator17.png"
+                      ></q-img>
                     </div>
                     <div class="text-h7 row flex-center">
                       <div class="col">Unverified</div>
@@ -211,7 +230,6 @@
                         <div class="text-h7 text-bold">Exexution time</div>
                         <div class="text-h7">Max. 15 Days</div>
                       </div>
-
                     </div>
                     <div class="row">
                       <div class="col">
@@ -273,9 +291,15 @@
                 <q-separator />
                 <div class="row">
                   <div class="col-3">
-                    <div class="text-h7  flex-centerrow text-bold">alexandru cumpanasu</div>
+                    <div class="text-h7 flex-centerrow text-bold">
+                      alexandru cumpanasu
+                    </div>
                     <div class="text-h7 flex-center row">
-                      <q-img sizes="100px" style="width:100px; height:100px" src="~/assets/Avator18.png"></q-img>
+                      <q-img
+                        sizes="100px"
+                        style="max-width: 100px; max-width: 100px"
+                        src="~/assets/Avator18.png"
+                      ></q-img>
                     </div>
                     <div class="text-h7 row flex-center">
                       <div class="col">Unverified</div>
@@ -314,7 +338,6 @@
                         <div class="text-h7 text-bold">Exexution time</div>
                         <div class="text-h7">Max. 15 Days</div>
                       </div>
-
                     </div>
                     <div class="row">
                       <div class="col">

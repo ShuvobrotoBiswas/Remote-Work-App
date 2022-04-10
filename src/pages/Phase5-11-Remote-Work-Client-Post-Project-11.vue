@@ -58,6 +58,7 @@
                     </div>
                   </div>
                 </div>
+                <q-separator />
                 <div class="row">
                    <div class="col-6">
                     <div class="text-h7 text-bold">Choose preferred type of contractor*</div>
