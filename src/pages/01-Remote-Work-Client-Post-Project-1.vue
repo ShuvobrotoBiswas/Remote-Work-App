@@ -54,34 +54,38 @@
     </div>
     <q-separator />
 
-    <div class="row flex-center items-start">
+    <div class="row q-pa-md flex-center items-start">
       <div style="width: 1000px">
         <div class="q-mt-xl">
           <TimeLine />
         </div>
-        <h5>1. DEFINE PROJECT</h5>
-        <h6>Project Catagory</h6>
-        <div class="q-gutter-sm">
+        <h5 class="text-bold">1. DEFINE PROJECT</h5>
+        <h6 class="text-bold">Project Catagory</h6>
+        <div class="q-gutter-sm text-bold">
           <q-radio
             left-label
+            color="black"
             v-model="shape"
             val="line"
             label="Well Defined Project"
           />
           <q-radio
             left-label
+            color="black"
             v-model="shape"
             val="rectangle"
             label="Ongoing Work"
           />
           <q-radio
             left-label
+            color="black"
             v-model="shape"
             val="ellipse"
             label="Market Research"
           />
           <q-radio
             left-label
+            color="black"
             v-model="shape"
             val="polygon"
             label="Guaranted Prize Contest"
@@ -90,8 +94,8 @@
         <div>
           <q-separator />
           <div>
-            <h6>2. Project infor</h6>
-            <fieldset>
+            <h6 class="text-bold">Project info</h6>
+            <fieldset style="border-radius:5px">
               <legend>Project Title*</legend>
               <q-input
                 borderless
@@ -116,7 +120,7 @@
                 </q-card-section>
               </q-card>
             </q-expansion-item>
-            <fieldset class="q-mt-md">
+            <fieldset class="q-mt-md" style="border-radius:5px">
               <legend>Project Description*</legend>
               <q-input
                 borderless
@@ -164,7 +168,7 @@ export default defineComponent({
     const submitResult = ref([]);
 
     return {
-      shape: ref("line"),
+      shape: ref("ellipse"),
       submitResult,
       color: ref(true),
 
@@ -186,14 +190,6 @@ export default defineComponent({
 });
 </script>
 <style lang="sass" scoped>
-.container
-  width: 1200px
-  margin: auto
-
-.my-card
-  width: 100%
-  max-width: 250px
-
 .row > div
   padding: 10px 15px
   // background: rgba(86,61,124,.15)

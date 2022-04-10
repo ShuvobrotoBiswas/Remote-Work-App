@@ -2,9 +2,9 @@
   <div>
     <!-- Body Div  From Sub-Header Component-->
     <SubHeader />
-    <div class="row flex-center items-start">
+    <div class="row q-pa-md flex-center items-start">
       <div style="width: 1000px">
-        <div class="q-mt-xl">
+        <div class="q-pa-md">
           <div class="row timeline-wrap" style="max-width: 1000px">
             <div id="timeline"></div>
             <div class="marker mfirst timeline-icon one">
@@ -101,7 +101,7 @@
         <div class="q-mt-md">
           <q-item>
             <q-item-section>
-              <fieldset style="border-radius: 7px" class="q-pa-md">
+              <fieldset style="border-radius: 7px ; height:80px" class="q-pa-md">
                 <legend>Add Question</legend>
                 <q-input
                   borderless
@@ -342,9 +342,7 @@ export default defineComponent({
 });
 </script>
 <style lang="sass" scoped>
-.container
-  width: 1200px
-  margin: auto
+
 .timeline-wrap
   margin: 20%% 20%
   top: 100

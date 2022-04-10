@@ -3,9 +3,9 @@
  <!-- Body Div  From Sub-Header Component-->
     <SubHeader />
     <!-- Card 1 Div -->
-    <div class="row flex-center items-start">
+    <div class="row q-pa-md flex-center items-start">
       <div style="width: 1000px">
-          <div class="q-mt-xl">
+          <div class="q-pa-md">
           <div class="row timeline-wrap" style="max-width: 1000px">
             <div id="timeline"></div>
             <div class="marker mfirst timeline-icon one">
@@ -28,7 +28,7 @@
         <p class="q-pa-md text-h6 text-bold">2. PAYMENT & BUDGET</p>
 
         <div class="q-pa-md">
-          <p class="text-weight-bold">Project Duration</p>
+          <p class="text-bold">Project Duration</p>
           <div class="q-gutter-sm">
             <q-radio
               left-label
@@ -61,7 +61,7 @@
           </div>
         </div>
         <div class="q-pa-md">
-          <h6>Payment</h6>
+          <p class="text-bold text-h6">Payment</p>
           <p class="text-weight-bold">Type of Payment</p>
           <div class="q-gutter-sm">
             <q-radio
@@ -82,9 +82,10 @@
         </div>
 
         <div class="q-pa-md">
-          <fieldset  style="border-radius: 7px ; max-width:200px">
+          <p class="text-bold">Rate of Payment</p>
+          <fieldset  style="border-radius: 7px ; max-width:200px ; height:70px">
             <legend>Maximum Rate</legend>
-            <q-input borderless v-model="text" placeholder="2600" />
+            <q-input borderless autofocus v-model="text" placeholder="500" />
           </fieldset>
         </div>
 
