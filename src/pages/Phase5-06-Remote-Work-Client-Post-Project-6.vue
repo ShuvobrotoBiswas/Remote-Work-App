@@ -51,6 +51,45 @@
                         </q-card-section>
                       </q-card>
                     </q-expansion-item>
+                    <q-expansion-item
+                      dense
+                      dense-toggle
+                      expand-separator
+                      label="Project type"
+                    >
+                      <q-card class="bg-grey-2">
+                        <q-card-section>
+                          <div class="row">
+                            <q-checkbox
+                              color="cyan"
+                              v-model="checkbox14"
+                              label="Well Defined Project"
+                            ></q-checkbox>
+                          </div>
+                          <div class="row">
+                            <q-checkbox
+                              color="cyan"
+                              v-model="checkbox15"
+                              label="On Going Work"
+                            ></q-checkbox>
+                          </div>
+                          <div class="row">
+                            <q-checkbox
+                              color="cyan"
+                              v-model="checkbox16"
+                              label="Guranteed Prize Contest"
+                            ></q-checkbox>
+                          </div>
+                          <div class="row">
+                            <q-checkbox
+                              color="cyan"
+                              v-model="checkbox17"
+                              label="Get an Information Quote"
+                            ></q-checkbox>
+                          </div>
+                        </q-card-section>
+                      </q-card>
+                    </q-expansion-item>
 
                     <q-expansion-item
                       dense
@@ -182,78 +221,6 @@
                       dense
                       dense-toggle
                       expand-separator
-                      label="Project  type"
-                    >
-                      <q-card class="bg-grey-2">
-                        <q-card-section>
-                          <div class="row">
-                            <q-checkbox
-                              color="cyan"
-                              v-model="checkbox14"
-                              label="Well Defined Project"
-                            ></q-checkbox>
-                          </div>
-                          <div class="row">
-                            <q-checkbox
-                              color="cyan"
-                              v-model="checkbox15"
-                              label="On Going Work"
-                            ></q-checkbox>
-                          </div>
-                          <div class="row">
-                            <q-checkbox
-                              color="cyan"
-                              v-model="checkbox16"
-                              label="Guranteed Prize Contest"
-                            ></q-checkbox>
-                          </div>
-                          <div class="row">
-                            <q-checkbox
-                              color="cyan"
-                              v-model="checkbox17"
-                              label="Get an Information Quote"
-                            ></q-checkbox>
-                          </div>
-                        </q-card-section>
-                      </q-card>
-                    </q-expansion-item>
-                    <q-expansion-item
-                      dense
-                      dense-toggle
-                      expand-separator
-                      label="Availability in hours/week"
-                    >
-                      <q-card class="bg-grey-2">
-                        <q-card-section>
-                          <div class="row">
-                            <q-checkbox
-                              color="cyan"
-                              v-model="checkbox19"
-                              label="20 h/w"
-                            ></q-checkbox>
-                          </div>
-                          <div class="row">
-                            <q-checkbox
-                              color="cyan"
-                              v-model="checkbox20"
-                              label="20 0 30 h/w"
-                            ></q-checkbox>
-                          </div>
-                          <div class="row">
-                            <q-checkbox
-                              color="cyan"
-                              v-model="checkbox21"
-                              label="More than 30 h/w"
-                            ></q-checkbox>
-                          </div>
-                        </q-card-section>
-                      </q-card>
-                    </q-expansion-item>
-
-                    <q-expansion-item
-                      dense
-                      dense-toggle
-                      expand-separator
                       label="Client location"
                     >
                       <q-card class="bg-grey-2">
@@ -288,6 +255,7 @@
                         </q-card-section>
                       </q-card>
                     </q-expansion-item>
+
                     <q-expansion-item
                       dense
                       dense-toggle
@@ -385,24 +353,24 @@
                                 rounded
                                 color="white"
                                 class="text-black q-mr-sm text-h7"
-                                >Illustrator </q-btn
-                              >
+                                >Illustrator
+                              </q-btn>
                               <q-btn
                                 size="7px"
                                 rounded
                                 color="white"
                                 class="text-black q-mr-sm text-h7"
                               >
-                                Adobe XD </q-btn
-                              >
+                                Adobe XD
+                              </q-btn>
                               <q-btn
                                 size="7px"
                                 rounded
                                 color="white"
                                 class="text-black q-mr-sm text-h7"
                               >
-                                Photoshop </q-btn
-                              >
+                                Photoshop
+                              </q-btn>
                             </div>
                           </div>
                         </q-card-section>
@@ -447,8 +415,8 @@
                       icon-right="cancel"
                       color="light-blue-2"
                       class="text-white q-mr-sm text-h7"
-                      >Branding & Logo Design </q-btn
-                    >
+                      >Branding & Logo Design
+                    </q-btn>
                     <q-btn
                       size="7px"
                       rounded
@@ -456,8 +424,8 @@
                       color="light-blue-2"
                       class="text-white q-mr-sm text-h7"
                     >
-                      Fixed price-Hourly €15-55 </q-btn
-                    >
+                      Fixed price-Hourly €15-55
+                    </q-btn>
                     <q-btn
                       size="7px"
                       rounded
@@ -465,8 +433,8 @@
                       color="light-blue-2"
                       class="text-white q-mr-sm text-h7"
                     >
-                      Fixed price €50 </q-btn
-                    >
+                      Fixed price €50
+                    </q-btn>
                     <q-btn
                       size="7px"
                       rounded
@@ -474,8 +442,8 @@
                       color="light-blue-2"
                       class="text-white q-mr-sm text-h7"
                     >
-                      Fixed price Min. €15-Max. €2000 </q-btn
-                    >
+                      Fixed price Min. €15-Max. €2000
+                    </q-btn>
                     <q-btn
                       size="7px"
                       rounded
@@ -483,8 +451,8 @@
                       color="light-blue-2"
                       class="text-white q-mr-sm text-h7"
                     >
-                      Max. 2 weeks </q-btn
-                    >
+                      Max. 2 weeks
+                    </q-btn>
                     <q-btn
                       size="7px"
                       rounded
@@ -492,8 +460,8 @@
                       color="light-blue-2"
                       class="text-white q-mr-sm text-h7"
                     >
-                      Fixed price </q-btn
-                    >
+                      Fixed price
+                    </q-btn>
                     <q-btn
                       size="7px"
                       rounded
@@ -501,8 +469,8 @@
                       color="light-blue-2"
                       class="text-white q-mr-sm text-h7"
                     >
-                      20 h/w </q-btn
-                    >
+                      20 h/w
+                    </q-btn>
                     <q-btn
                       size="7px"
                       rounded
@@ -510,8 +478,8 @@
                       color="light-blue-2"
                       class="text-white q-mr-sm text-h7"
                     >
-                      Algeria </q-btn
-                    >
+                      Algeria
+                    </q-btn>
                     <q-btn
                       size="7px"
                       rounded
@@ -519,8 +487,8 @@
                       color="light-blue-2"
                       class="text-white q-mr-sm text-h7"
                     >
-                      Illustrator </q-btn
-                    >
+                      Illustrator
+                    </q-btn>
                     <q-btn
                       size="7px"
                       rounded
@@ -528,8 +496,8 @@
                       color="light-blue-2"
                       class="text-white q-mr-sm text-h7"
                     >
-                      Adobe XD </q-btn
-                    >
+                      Adobe XD
+                    </q-btn>
                     <q-btn
                       size="7px"
                       rounded
@@ -537,8 +505,8 @@
                       color="light-blue-2"
                       style="text-bg-white"
                       class="text-white q-mr-sm text-h7"
-                      >Photoshop </q-btn
-                    >
+                      >Photoshop
+                    </q-btn>
                   </div>
                 </div>
                 <div class="row" style="width: 400px">
@@ -577,49 +545,49 @@
                   </div>
                   <div class="row">
                     <q-btn
-                      size="7px"
+                      size="6px"
                       rounded
                       outline
                       icon-right="cancel"
                       color="white"
                       class="text-black q-mr-sm text-h7"
-                      >Graphics Design </q-btn
-                    >
+                      >Graphics Design
+                    </q-btn>
                     <q-btn
-                      size="7px"
+                      size="6px"
                       rounded
                       outline
                       icon-right="cancel"
                       color="white"
                       class="text-black q-mr-sm text-h7"
                     >
-                      Logo Design </q-btn
-                    >
+                      Logo Design
+                    </q-btn>
                     <q-btn
-                      size="7px"
+                      size="6px"
                       rounded
                       outline
                       icon-right="cancel"
                       color="white"
                       class="text-black q-mr-sm text-h7"
-                      >Branding & Logo Design </q-btn
-                    >
+                      >Branding & Logo Design
+                    </q-btn>
                     <q-btn
-                      size="7px"
+                      size="6px"
                       rounded
                       outline
                       icon-right="cancel"
                       color="white"
                       class="text-black q-mr-sm text-h7"
                     >
-                      Illustrator </q-btn
-                    >
+                      Illustrator
+                    </q-btn>
                   </div>
                   <div class="row" style="width: 500px">
                     <div class="col-8"></div>
                     <div class="col-4">
                       <q-btn
-                        size="7px"
+                        size="6px"
                         rounded
                         color="cyan"
                         class="text-black q-ml-md"
@@ -645,49 +613,49 @@
 
                   <div class="row">
                     <q-btn
-                      size="7px"
+                      size="6px"
                       rounded
                       outline
                       icon-right="cancel"
                       color="white"
                       class="text-black q-mr-sm text-h7"
-                      >Graphics Design </q-btn
-                    >
+                      >Graphics Design
+                    </q-btn>
                     <q-btn
-                      size="7px"
+                      size="6px"
                       rounded
                       outline
                       icon-right="cancel"
                       color="white"
                       class="text-black q-mr-sm text-h7"
                     >
-                      Logo Design </q-btn
-                    >
+                      Logo Design
+                    </q-btn>
                     <q-btn
-                      size="7px"
+                      size="6px"
                       rounded
                       outline
                       icon-right="cancel"
                       color="white"
                       class="text-black q-mr-sm text-h7"
-                      >Branding & Logo Design </q-btn
-                    >
+                      >Branding & Logo Design
+                    </q-btn>
                     <q-btn
-                      size="7px"
+                      size="6px"
                       rounded
                       outline
                       icon-right="cancel"
                       color="white"
                       class="text-black q-mr-sm text-h7"
                     >
-                      Illustrator </q-btn
-                    >
+                      Illustrator
+                    </q-btn>
                   </div>
                   <div class="row" style="width: 500px">
                     <div class="col-8"></div>
                     <div class="col-4">
                       <q-btn
-                        size="7px"
+                        size="6px"
                         rounded
                         color="cyan"
                         class="text-black q-ml-md"
@@ -715,49 +683,49 @@
                   </div>
                   <div class="row">
                     <q-btn
-                      size="7px"
+                      size="6px"
                       rounded
                       outline
                       icon-right="cancel"
                       color="white"
                       class="text-black q-mr-sm text-h7"
-                      >Graphics Design </q-btn
-                    >
+                      >Graphics Design
+                    </q-btn>
                     <q-btn
-                      size="7px"
+                      size="6px"
                       rounded
                       outline
                       icon-right="cancel"
                       color="white"
                       class="text-black q-mr-sm text-h7"
                     >
-                      Logo Design </q-btn
-                    >
+                      Logo Design
+                    </q-btn>
                     <q-btn
-                      size="7px"
+                      size="6px"
                       rounded
                       outline
                       icon-right="cancel"
                       color="white"
                       class="text-black q-mr-sm text-h7"
-                      >Branding & Logo Design </q-btn
-                    >
+                      >Branding & Logo Design
+                    </q-btn>
                     <q-btn
-                      size="7px"
+                      size="6px"
                       rounded
                       outline
                       icon-right="cancel"
                       color="white"
                       class="text-black q-mr-sm text-h7"
                     >
-                      Illustrator </q-btn
-                    >
+                      Illustrator
+                    </q-btn>
                   </div>
                   <div class="row" style="width: 500px">
                     <div class="col-8"></div>
                     <div class="col-4">
                       <q-btn
-                        size="7px"
+                        size="6px"
                         rounded
                         color="cyan"
                         class="text-black q-ml-md"
@@ -902,7 +870,7 @@ export default defineComponent({
       checkbox26: ref(true),
       text: " We have a logo that is about 13 years old and we are looking to update/change our branding, we need a logo that is more up to date and we want to keep the versatillity. We want to go bold/innovative with this change. Previous logo is attached for reference",
       ratingModel: ref(1),
-      search:"",
+      search: "",
     };
   },
 });

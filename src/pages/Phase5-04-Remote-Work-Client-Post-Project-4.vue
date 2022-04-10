@@ -35,7 +35,7 @@
         </div>
         <div class="row q-pa-md">
           <div class="col-4"><p class="q-pa-md">Search result: 3 contractors found</p></div>
-          <div class="col-4"><q-checkbox color="black" left-label v-model="val" label="Select all" /></div>
+          <div class="col-4"><q-checkbox color="black" left-label v-model="checkbox1" label="Select all" /></div>
         </div>
 
         <div class="flex q-pa-md">
@@ -50,7 +50,7 @@
               <q-item-label caption>Senior Bacend Developer</q-item-label>
             </q-item-section>
             <q-item-section side>
-              <q-checkbox color="black" v-model="val" />
+              <q-checkbox color="black" v-model="checkbox2" />
             </q-item-section>
           </q-item>
           <q-item clickable v-ripple>
@@ -64,7 +64,7 @@
               <q-item-label caption>Middle Bacend Developer</q-item-label>
             </q-item-section>
             <q-item-section side>
-              <q-checkbox color="black" v-model="val" />
+              <q-checkbox color="black" v-model="checkbox3" />
             </q-item-section>
           </q-item>
           <q-item clickable v-ripple>
@@ -78,7 +78,7 @@
               <q-item-label caption>Java Developer</q-item-label>
             </q-item-section>
             <q-item-section side>
-              <q-checkbox color="black" v-model="val" />
+              <q-checkbox color="black" v-model="checkbox4" />
             </q-item-section>
           </q-item>
         </div>
@@ -124,6 +124,10 @@ export default defineComponent({
       val: ref(true),
       shape: ref("line"),
       submitResult,
+      checkbox1: ref(true),
+      checkbox2: ref(true),
+      checkbox3: ref(false),
+      checkbox4: ref(true),
 
       onSubmit(evt) {
         const formData = new FormData(evt.target);

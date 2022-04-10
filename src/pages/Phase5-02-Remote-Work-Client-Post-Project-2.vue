@@ -38,6 +38,7 @@
                 dense-toggle
                 expand-separator
                 label="Skills required"
+                
                 style="max-width: 350px"
               >
                 <q-list dense bordered padding class="borders">
