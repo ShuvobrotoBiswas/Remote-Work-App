@@ -16,27 +16,32 @@
 
                 <div class="row">
                   <div class="col-3">
-                    <div class="text-h7 row text-bold">AGENCY NAME</div>
-                    <div class="text-h7 row">
+                    <div class="text-h7 row flex-center text-bold">
+                      AGENCY NAME
+                    </div>
+                    <div class="text-h7 row flex-center">
                       <q-img
                         sizes="100px"
+                        style="
+                          max-width: 80px;
+                          max-height: 80px;
+                          border: 2px solid grey;
+                          border-radius: 50%;
+                        "
                         src="~/assets/Avator20.png"
-                        style="width: 100px; height: 110px"
                       ></q-img>
                     </div>
-                    <div class="text-h7 row">
-                      <div class="col">Unverified</div>
-                      <div class="col">
-                        <q-btn
-                          outline
-                          round
-                          size="8px"
-                          color="grey"
-                          icon="military_tech"
-                        />
-                      </div>
+                    <div class="text-h7 flex-center row">
+                      <span class="q-mr-sm">Unverified</span>
+                      <q-btn
+                        outline
+                        round
+                        size="8px"
+                        color="grey"
+                        icon="military_tech"
+                      />
                     </div>
-                    <div class="text-h7 row">
+                    <div class="text-h7 row flex-center">
                       <div class="text-h7">
                         <q-rating
                           v-model="ratingModel"
@@ -155,61 +160,61 @@
                       aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                       ullamco laboris nisi ut aliquip.
                     </div>
-                    <div class="q-pa-md">
-                      <div class="col-9 text-h6 text-bold">
+                    <div class="my-card row" style="max-width: 1000px">
+                      <p class="col-9 text-bold">
                         Relevent projects from you portfolio
-                      </div>
-                    </div>
-                    <div class="row bid1 text-center">
-                      <div class="col-1 my-home q-mr-sm">
-                        <q-btn
-                          round
-                          color="grey"
-                          class="flex-center"
-                          icon="arrow_back_ios_new"
-                        />
-                      </div>
-                      <div class="col my-home bid2 my-font q-mr-sm">
-                        <q-img
-                          src="~assets/Avator24.png"
-                          class="image1"
-                          style="width: 70px; height: 67px"
-                        >
-                        </q-img>
-                        <div class="q-pa-mg text-center custom-text-me">
-                          LOGO Design
+                      </p>
+                      <div class="row flex-center bid1 text-center">
+                        <div class="col my-home q-mr-sm">
+                          <q-btn
+                            round
+                            color="grey"
+                            class="flex-center"
+                            icon="arrow_back_ios_new"
+                          />
                         </div>
-                      </div>
-                      <div class="col my-home bid2 my-font q-mr-sm">
-                        <q-img
-                          src="~assets/Avator25.png"
-                          class="image1"
-                          style="width: 70px; height: 67px"
-                        >
-                        </q-img>
-                        <div class="q-pa-mg text-center custom-text-me">
-                          Website Design
+                        <div class="col my-home bid2 my-font q-mr-sm my-box">
+                          <q-img
+                            src="~assets/Avator24.png"
+                            class="image1"
+                            style="width: 40px; height: 40px"
+                          >
+                          </q-img>
+                          <div class="q-pa-mg text-center custom-text-me">
+                            LOGO Design
+                          </div>
                         </div>
-                      </div>
-                      <div class="col my-home bid2 my-font q-mr-sm">
-                        <q-img
-                          src="~assets/Avator26.png "
-                          class="image1"
-                          style="width: 70px; height: 57px"
-                        >
-                        </q-img>
-                        <div class="q-pa-mg text-center custom-text-me">
-                          UX Design
+                        <div class="col my-home bid2 my-font q-mr-sm my-box">
+                          <q-img
+                            src="~assets/Avator25.png"
+                            class="image1"
+                            style="width: 40px; height: 40px"
+                          >
+                          </q-img>
+                          <div class="q-pa-mg text-center custom-text-me">
+                            Website Design
+                          </div>
                         </div>
-                      </div>
+                        <div class="col my-home bid2 my-font q-mr-sm my-box">
+                          <q-img
+                            src="~assets/Avator26.png "
+                            class="image1"
+                            style="width: 40px; height: 40px"
+                          >
+                          </q-img>
+                          <div class="q-pa-mg text-center custom-text-me">
+                            UX Design
+                          </div>
+                        </div>
 
-                      <div class="col-1 my-home q-mr-sm">
-                        <q-btn
-                          round
-                          color="black"
-                          class="flex-center"
-                          icon="arrow_forward_ios"
-                        />
+                        <div class="col-1 my-home q-mr-sm">
+                          <q-btn
+                            round
+                            color="black"
+                            class="flex-center"
+                            icon="arrow_forward_ios"
+                          />
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -217,12 +222,12 @@
 
                 <div class="flex-center items-start">
                   <div flat bordered class="my-card" style="max-width: 1000px">
-                    <div class="">
-                      <div class="row q-pa-md text-bold">
+                    <div>
+                      <div class="row text-bold">
                         Freelancers who work for the agency and who will be
                         involved in the project.
                       </div>
-                      <div class="row q-pa-md" >
+                      <div class="row q-pa-md">
                         <div class="col-4">
                           <div class="row text-bold">ANNA DOYEL</div>
                           <div class="row">Programmer PHP</div>
@@ -249,7 +254,49 @@
                       </div>
                       <div class="col my-box q-mr-sm">
                         <div class="row flex-center">CV</div>
-                        <div class="row">
+                        <div class="row flex-center">
+                          <q-img
+                            src="~assets/Avator19.png"
+                            style="height: 30px; width: 30px"
+                          ></q-img>
+                        </div>
+                      </div>
+                      <div class="col my-home bid2 my-font my-box q-mr-sm">
+                        Portfolio
+                        <div class="col">
+                          <q-btn
+                            flat
+                            size="5px"
+                            color="black"
+                            padding="5px"
+                            icon="check_box_outline_blank"
+                          />
+                          <q-btn
+                            flat
+                            size="5px"
+                            color="black"
+                            padding="5px"
+                            icon="check_box_outline_blank"
+                          />
+                        </div>
+                        <q-btn
+                          flat
+                          size="5px"
+                          color="black"
+                          padding="5px"
+                          icon="check_box_outline_blank"
+                        />
+                        <q-btn
+                          flat
+                          size="5px"
+                          color="black"
+                          padding="5px"
+                          icon="add"
+                        />
+                      </div>
+                      <div class="col my-box q-mr-sm">
+                        <div class="row flex-center">CV</div>
+                        <div class="row flex-center flex-center">
                           <q-img
                             src="~assets/Avator19.png"
                             style="height: 30px; width: 30px"
@@ -331,48 +378,6 @@
                           icon="add"
                         />
                       </div>
-                      <div class="col my-box q-mr-sm">
-                        <div class="row flex-center">CV</div>
-                        <div class="row">
-                          <q-img
-                            src="~assets/Avator19.png"
-                            style="height: 30px; width: 30px"
-                          ></q-img>
-                        </div>
-                      </div>
-                      <div class="col my-home bid2 my-font my-box q-mr-sm">
-                        Portfolio
-                        <div class="col">
-                          <q-btn
-                            flat
-                            size="5px"
-                            color="black"
-                            padding="5px"
-                            icon="check_box_outline_blank"
-                          />
-                          <q-btn
-                            flat
-                            size="5px"
-                            color="black"
-                            padding="5px"
-                            icon="check_box_outline_blank"
-                          />
-                        </div>
-                        <q-btn
-                          flat
-                          size="5px"
-                          color="black"
-                          padding="5px"
-                          icon="check_box_outline_blank"
-                        />
-                        <q-btn
-                          flat
-                          size="5px"
-                          color="black"
-                          padding="5px"
-                          icon="add"
-                        />
-                      </div>
                       <div class="col my-box1 q-mr-sm my-home">
                         <q-btn
                           round
@@ -384,18 +389,17 @@
                     </div>
                     <div class="flex-break q-pa-md"></div>
 
-
                     <!-- Sub Footer Div -->
 
                     <div class="row flex-center q-pa-md">
-                        <q-btn
-                          style="width: 100px"
-                          size="8px"
-                          rounded
-                          color="grey"
-                          label="ask more info "
-                          class="text-white text-h7"
-                        ></q-btn>
+                      <q-btn
+                        style="width: 100px"
+                        size="8px"
+                        rounded
+                        color="grey"
+                        label="ask more info "
+                        class="text-white text-h7"
+                      ></q-btn>
                     </div>
                   </div>
                 </div>
@@ -403,23 +407,29 @@
                 <q-separator />
                 <div class="row">
                   <div class="col-3">
-                    <div class="text-h7 row text-bold">Avraam iancu</div>
-                    <div class="text-h7 row">
-                      <q-img sizes="100px" src="~/assets/Avator17.png"></q-img>
+                     <div class="text-h7 row flex-center text-bold">
+                      Avraam Iancu
                     </div>
-                    <div class="text-h7 row">
-                      <div class="col">Unverified</div>
-                      <div class="col">
-                        <q-btn
-                          outline
-                          round
-                          size="8px"
-                          color="grey"
-                          icon="military_tech"
-                        />
-                      </div>
+                    <div class="text-h7 row flex-center">
+                      <q-img
+                        sizes="100px"
+                        style="
+                          max-width: 80px;
+                          max-height: 80px;
+                        "
+                        src="~/assets/Avator17.png"
+                      ></q-img>
                     </div>
-                    <div class="text-h7 row">
+                    <div class="text-h7 flex-center row">
+                      <span class="q-mr-sm">Verified</span>
+                      <q-btn
+                        round
+                        size="8px"
+                        color="black"
+                        icon="military_tech"
+                      />
+                    </div>
+                    <div class="text-h7 row flex-center">
                       <div class="text-h7">
                         <q-rating
                           v-model="ratingModel"
@@ -510,23 +520,29 @@
                 <q-separator />
                 <div class="row">
                   <div class="col-3">
-                    <div class="text-h7 row text-bold">alexandru cumpanasu</div>
-                    <div class="text-h7 row">
-                      <q-img sizes="100px" src="~/assets/Avator18.png"></q-img>
+                    <div class="text-h7 row flex-center text-bold">
+                      alexandru cumpanasu
                     </div>
-                    <div class="text-h7 row">
-                      <div class="col">Unverified</div>
-                      <div class="col">
-                        <q-btn
-                          outline
-                          round
-                          size="8px"
-                          color="grey"
-                          icon="military_tech"
-                        />
-                      </div>
+                    <div class="text-h7 row flex-center">
+                      <q-img
+                        sizes="100px"
+                        style="
+                          max-width: 80px;
+                          max-height: 80px;
+                        "
+                        src="~/assets/Avator18.png"
+                      ></q-img>
                     </div>
-                    <div class="text-h7 row">
+                    <div class="text-h7 flex-center row">
+                      <span class="q-mr-sm">Verified</span>
+                      <q-btn
+                        round
+                        size="8px"
+                        color="black"
+                        icon="military_tech"
+                      />
+                    </div>
+                    <div class="text-h7 row flex-center">
                       <div class="text-h7">
                         <q-rating
                           v-model="ratingModel"

@@ -12,6 +12,7 @@
                 <div class="text-h5 text-bold q-py-md text-left">
                   Application to project
                 </div>
+                <q-separator />
                 <div class="row text-7 q-py-md text-left">
                   {{ lorem }}
                 </div>
@@ -45,60 +46,66 @@
                       >
                         <q-card class="bg-grey-2">
                           <q-card-section>
-                            <div class="row">2 Weeks</div>
-                            <div class="row">1 Month</div>
-                            <div class="row">3 Month</div>
+                            <q-list>
+                              <q-item
+                                clickable
+                                class="row q-pa-none item-center"
+                                >2 Weeks</q-item
+                              >
+                              <q-item
+                                clickable
+                                class="row q-pa-none item-center"
+                                >1 Month</q-item
+                              >
+                              <q-item
+                                clickable
+                                class="row q-pa-none item-center"
+                                >3 Month</q-item
+                              >
+                            </q-list>
                           </q-card-section>
                         </q-card>
                       </q-expansion-item>
                     </div>
                   </div>
                 </div>
-
                 <q-separator />
-                <div class="row">
+
+                <div class="row q-py-md">
                   <p class="text-bold text-h7">
                     Answer to the question set by client.*
                   </p>
-                  <div class="row q-pa-md">
-                    <fieldset
-                      style="max-height: 100px; border-radius: 7px"
-                      class="q-pa-md"
-                    >
-                      <legend class="text-h7">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua?
-                      </legend>
-                      <q-input borderless v-model="input1"></q-input>
-                    </fieldset>
-                  </div>
+                  <fieldset
+                    style="max-height: 100px; border-radius: 7px"
+                    class="q-pa-md"
+                  >
+                    <legend class="text-h7">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua?
+                    </legend>
+                    <q-input borderless v-model="input1"></q-input>
+                  </fieldset>
                 </div>
-                <div class="row">
-                  <div class="row q-pa-md">
-                    <fieldset
-                      style="
-                        max-height: 100px;
-                        border-radius: 7px;
-                        width: 600px;
-                      "
-                      class="q-pa-md"
-                    >
-                      <legend class="text-h7">
-                        Ut enim ad minim veniam veniam, quis nostrud
-                        exercitation et nisi ut aliquip?
-                      </legend>
-                      <q-input borderless v-model="input2"></q-input>
-                    </fieldset>
-                  </div>
+                <div class="row q-py-md">
+                  <fieldset
+                    style="max-height: 100px; border-radius: 7px; width: 600px"
+                    class="q-pa-md"
+                  >
+                    <legend class="text-h7">
+                      Ut enim ad minim veniam veniam, quis nostrud exercitation
+                      et nisi ut aliquip?
+                    </legend>
+                    <q-input borderless v-model="input2"></q-input>
+                  </fieldset>
                 </div>
 
                 <q-separator />
                 <div>
-                  <div class="row text-h7 text-bold q-pa-md">
+                  <p class="row text-h7 text-bold q-py-md">
                     Contractor Availability
-                  </div>
-                  <div class="q-pa-md">
+                  </p>
+                  <div>
                     <q-option-group
                       v-model="group1"
                       :options="options1"
@@ -108,17 +115,17 @@
                     />
                   </div>
                 </div>
+                <div class="q-py-md"></div>
                 <q-separator />
-
-                <div class="row q-py-md">
+                <div class="row">
                   <div class="col-4">
-                    <div class="text-h7 text-bold">Offer validity*</div>
+                    <p class="text-h7 text-bold">Offer validity*</p>
+                    <p>Pick a Date</p>
                     <div class="text-h7">
-                      Pick a Date
-                      <div class="q-pa-md" style="max-width: 300px">
+                      <div style="max-width: 300px">
                         <q-input
                           style="width: 250px"
-                          filled
+                          outlined
                           v-model="date"
                           mask="date"
                           :rules="['date']"
@@ -169,96 +176,98 @@
                   </div>
                 </div>
 
-                <div class="row flex-center items-start">
-                  <div flat bordered class="my-card" style="max-width: 1000px">
-                    <div class="q-pa-md">
-                      <div class="col-9 text-h6 text-bold">
-                        Select relevent projects from you portfolio*
+                <div
+                  class="my-card row"
+                  style="max-width: 1300px"
+                >
+                  <div class="q-pa-md">
+                    <div class="col-9 text-bold">
+                      Select relevent projects from you portfolio*
+                    </div>
+                  </div>
+                  <div class="row flex-center bid1 text-center">
+                    <div class="col my-home q-mr-sm">
+                      <q-btn
+                        round
+                        color="grey"
+                        class="flex-center"
+                        icon="arrow_back_ios_new"
+                      />
+                    </div>
+                    <div class="col my-home bid2 my-font q-mr-sm my-box2">
+                      <q-img
+                        src="~assets/Avator24.png"
+                        class="image1"
+                        style="width: 40px; height: 40px"
+                      >
+                      </q-img>
+                      <div class="q-pa-mg text-center custom-text-me">
+                        LOGO Design
                       </div>
                     </div>
-                    <div class="row bid1 text-center">
-                      <div class="col-1 my-home q-mr-sm">
+                    <div class="col my-home bid2 my-font q-mr-sm my-box2">
+                      <q-img
+                        src="~assets/Avator25.png"
+                        class="image1"
+                        style="width: 40px; height: 40px"
+                      >
+                      </q-img>
+                      <div class="q-pa-mg text-center custom-text-me">
+                        Website Design
+                      </div>
+                    </div>
+                    <div class="col my-home bid2 my-font q-mr-sm my-box2">
+                      <q-img
+                        src="~assets/Avator26.png "
+                        class="image1"
+                        style="width: 50px; height: 40px"
+                      >
+                      </q-img>
+                      <div class="q-pa-mg text-center custom-text-me">
+                        UX Design
+                      </div>
+                    </div>
+                    <div class="col my-home bid2 my-font my-box2 q-mr-sm">
+                      <div class="col">
                         <q-btn
-                          round
-                          color="grey"
-                          class="flex-center"
-                          icon="arrow_back_ios_new"
-                        />
-                      </div>
-                      <div class="col my-home bid2 image2 my-font q-mr-sm">
-                        <q-img src="~assets/Avator5.png" class="image1">
-                        </q-img>
-                        <div class="q-pa-mg text-center custom-text-me">
-                          LOGO Design
-                        </div>
-                      </div>
-                      <div class="col my-home bid2 my-font q-mr-sm">
-                        <q-img src="~assets/Avator6.png" class="image1">
-                        </q-img>
-                        <div class="q-pa-mg text-center custom-text-me">
-                          Website Design
-                        </div>
-                      </div>
-                      <div class="col my-home bid2 image2 my-font q-mr-sm">
-                        <q-img src="~assets/Avator7.png " class="image1">
-                        </q-img>
-                        <div class="q-pa-mg text-center custom-text-me">
-                          UX Design
-                        </div>
-                      </div>
-                      <div class="col my-home bid2 my-font">
-                        <div class="row">
-                          <div class="col">
-                            <q-btn
-                              flat
-                              size="5px"
-                              color="black"
-                              padding="5px"
-                              icon="check_box_outline_blank"
-                            />
-                          </div>
-                          <div class="col">
-                            <q-btn
-                              flat
-                              size="5px"
-                              color="black"
-                              padding="5px"
-                              icon="check_box_outline_blank"
-                            />
-                          </div>
-                        </div>
-                        <div class="row">
-                          <div class="col">
-                            <q-btn
-                              flat
-                              size="5px"
-                              color="black"
-                              padding="5px"
-                              icon="check_box_outline_blank"
-                            />
-                          </div>
-                          <div class="col">
-                            <q-btn
-                              flat
-                              size="5px"
-                              color="black"
-                              padding="5px"
-                              icon="add"
-                            />
-                          </div>
-                        </div>
-                        <div class="q-pa-mg text-center custom-text-me">
-                          Others
-                        </div>
-                      </div>
-                      <div class="col-1 my-home q-mr-sm">
-                        <q-btn
-                          round
+                          flat
+                          size="5px"
                           color="black"
-                          class="flex-center"
-                          icon="arrow_forward_ios"
+                          padding="5px"
+                          icon="check_box_outline_blank"
+                        />
+                        <q-btn
+                          flat
+                          size="5px"
+                          color="black"
+                          padding="5px"
+                          icon="check_box_outline_blank"
                         />
                       </div>
+                      <q-btn
+                        flat
+                        size="5px"
+                        color="black"
+                        padding="5px"
+                        icon="check_box_outline_blank"
+                      />
+                      <q-btn
+                        flat
+                        size="5px"
+                        color="black"
+                        padding="5px"
+                        icon="add"
+                      />
+                      Others
+                    </div>
+
+                    <div class="col-1 my-home q-mr-sm">
+                      <q-btn
+                        round
+                        color="black"
+                        class="flex-center"
+                        icon="arrow_forward_ios"
+                      />
                     </div>
                   </div>
                 </div>
@@ -341,7 +350,7 @@
                   </div>
                   <div class="col my-box q-mr-sm">
                     <div class="row flex-center">CV</div>
-                    <div class="row">
+                    <div class="row flex-center">
                       <q-img
                         src="~assets/Avator19.png"
                         style="height: 30px; width: 30px"
@@ -383,7 +392,7 @@
                   </div>
                   <div class="col my-box q-mr-sm">
                     <div class="row flex-center">CV</div>
-                    <div class="row flex">
+                    <div class="row flex-center">
                       <q-img
                         src="~assets/Avator19.png"
                         style="height: 30px; width: 30px"
@@ -425,7 +434,7 @@
                   </div>
                   <div class="col my-box q-mr-sm">
                     <div class="row flex-center">CV</div>
-                    <div class="row">
+                    <div class="row flex-center">
                       <q-img
                         src="~assets/Avator19.png"
                         style="height: 30px; width: 30px"
@@ -530,11 +539,6 @@ export default defineComponent({
       lorem:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
       text: " We have a logo that is about 13 years old and we are looking to update/change our branding, we need a logo that is more up to date and we want to keep the versatillity. We want to go bold/innovative with this change. Previous logo is attached for reference",
-      checkbox19: ref(true),
-      checkbox20: ref(true),
-      checkbox21: ref(false),
-      checkbox22: ref(false),
-      checkbox23: ref(false),
       price: ref("500 € |"),
       input1: ref("Your answer here."),
       input2: ref("Your answer here."),
@@ -597,10 +601,6 @@ export default defineComponent({
   height: 70px
   width: 80px
 
-.image2
-  background: grey
-
-
 .my-font
   font-size: 10px
 
@@ -617,5 +617,9 @@ export default defineComponent({
   // border: 1px solid rgba(86,61,124,.2)
   height: 80px
   width: 80px
+  border-radius: 7px
+
+
+.my-box2
   border-radius: 7px
 </style>
