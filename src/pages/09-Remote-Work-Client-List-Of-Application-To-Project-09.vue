@@ -16,13 +16,12 @@
 
                 <div class="row">
                   <div class="col-3">
-                    <div class="text-h7 row text-bold">Anna Doyle</div>
-                    <div class="text-h7 row">
-                      <q-img sizes="100px" src="~/assets/Avator16.png"></q-img>
+                    <div class="text-h7 row  flex-center text-bold">Anna Doyle</div>
+                    <div class="text-h7 row flex-center">
+                      <q-img sizes="100px" style="max-width:80px; max-height:90px" src="~/assets/Avator16.png"></q-img>
                     </div>
-                    <div class="text-h7 row">
-                      <div class="col">Unverified</div>
-                      <div class="col">
+                    <div class="text-h7  flex-center row">
+                      <span class="q-mr-sm">Unverified</span>
                         <q-btn
                           outline
                           round
@@ -30,9 +29,8 @@
                           color="grey"
                           icon="military_tech"
                         />
-                      </div>
                     </div>
-                    <div class="text-h7 row">
+                    <div class="text-h7 row flex-center">
                       <div class="text-h7">
                         <q-rating
                           v-model="ratingModel"
@@ -277,27 +275,24 @@
 
                 <q-separator />
                 <div class="row">
-                  <div class="col-3">
-                    <div class="text-h7 row text-bold">Avraam iancu</div>
-                    <div class="text-h7 row">
-                      <q-img sizes="100px" src="~/assets/Avator17.png"></q-img>
+                 <div class="col-3">
+                    <div class="text-h7 row  flex-center text-bold">Avraam iancu</div>
+                    <div class="text-h7 row flex-center">
+                      <q-img sizes="100px" style="max-width:80px; max-height:90px" src="~/assets/Avator17.png"></q-img>
                     </div>
-                    <div class="text-h7 row">
-                      <div class="col">Unverified</div>
-                      <div class="col">
+                    <div class="text-h7  flex-center row">
+                      <span class="q-mr-sm">Verified</span>
                         <q-btn
-                          outline
                           round
                           size="8px"
-                          color="grey"
+                          color="black"
                           icon="military_tech"
                         />
-                      </div>
                     </div>
-                    <div class="text-h7 row">
+                    <div class="text-h7 row flex-center">
                       <div class="text-h7">
                         <q-rating
-                          v-model="ratingModel1"
+                          v-model="ratingModel"
                           size="20px"
                           :max="5"
                           color="black"
@@ -385,27 +380,24 @@
                 </div>
                 <q-separator />
                 <div class="row">
-                  <div class="col-3">
-                    <div class="text-h7 row text-bold">alexandru cumpanasu</div>
-                    <div class="text-h7 row">
-                      <q-img sizes="100px" src="~/assets/Avator18.png"></q-img>
+                 <div class="col-3">
+                    <div class="text-h7 row  flex-center text-bold">alexandru cumpanasu</div>
+                    <div class="text-h7 row flex-center">
+                      <q-img sizes="100px" style="max-width:80px; max-height:90px" src="~/assets/Avator18.png"></q-img>
                     </div>
-                    <div class="text-h7 row">
-                      <div class="col">Unverified</div>
-                      <div class="col">
+                    <div class="text-h7  flex-center row">
+                      <span class="q-mr-sm">Verified</span>
                         <q-btn
-                          outline
                           round
                           size="8px"
-                          color="grey"
+                          color="black"
                           icon="military_tech"
                         />
-                      </div>
                     </div>
-                    <div class="text-h7 row">
+                    <div class="text-h7 row flex-center">
                       <div class="text-h7">
                         <q-rating
-                          v-model="ratingModel2"
+                          v-model="ratingModel"
                           size="20px"
                           :max="5"
                           color="black"
@@ -572,17 +564,6 @@ export default defineComponent({
 .image1
   height: 70px
   width: 80px
-
-.company
-  background: white
-  height: 75px
-  width: 85px
-  rounded
-
-
-.image2
-  background: grey
-
 
 .my-font
   font-size: 10px
