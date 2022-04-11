@@ -3,13 +3,10 @@
     <!-- Body Div  From Sub-Header Component-->
     <SubHeader />
     <!-- Body Div -->
-
     <!-- Card 1 Div -->
     <div class="row flex-center items-start">
       <div style="max-width: 950px">
-        <div class="q-pa-md">
-          <div class="row">
-            <div>
+        <div class="q-pa-md row">
               <q-card-section>
                 <div class="text-h5 text-bold q-py-md text-left">
                   Application approval
@@ -18,28 +15,27 @@
 
                 <div class="row">
                   <div class="col-3">
-                    <div class="text-h7 flex-center row text-bold">
+                    <div class="text-h7 row flex-center text-bold">
                       Anna Doyle
                     </div>
-                    <div class="text-h7 flex-center row">
+                    <div class="text-h7 row flex-center">
                       <q-img
-                        style="height: 80px; width: 80px"
+                        sizes="100px"
+                        style="max-width: 80px; max-height: 80px"
                         src="~/assets/Avator10.png"
                       ></q-img>
                     </div>
                     <div class="text-h7 flex-center row">
-                      <div class="col">Unverified</div>
-                      <div class="col">
-                        <q-btn
-                          outline
-                          round
-                          size="8px"
-                          color="grey"
-                          icon="military_tech"
-                        />
-                      </div>
+                      <span class="q-mr-sm">Unverified</span>
+                      <q-btn
+                        outline
+                        round
+                        size="8px"
+                        color="grey"
+                        icon="military_tech"
+                      />
                     </div>
-                    <div class="text-h7 flex-center row">
+                    <div class="text-h7 row flex-center">
                       <div class="text-h7">
                         <q-rating
                           v-model="ratingModel"
@@ -115,22 +111,17 @@
                       {{ answer }}
                     </div>
                     <div class="row">
-                      <div class="col">
-                        <div class="text-h7 text-bold">Type of contractor</div>
-                        <div class="text-h7">Freelancer</div>
-                      </div>
+                      <p class="text-h7 text-bold">Type of contractor</p>
                     </div>
-                    <div
-                      flat
-                      bordered
-                      class="my-card row"
-                      style="max-width: 1000px"
-                    >
-                      <p class="text-h7 text-bold">
+                    <div>
+                      <p class="text-h7">Freelancer</p>
+                    </div>
+                    <div class="my-card row" style="max-width: 1000px">
+                      <p class="col-9 text-bold">
                         Relevent projects from you portfolio
                       </p>
-                      <div class="row bid1 text-center">
-                        <div class="col-2 my-home q-mr-sm">
+                      <div class="row flex-center bid1 text-center">
+                        <div class="col my-home q-mr-sm">
                           <q-btn
                             round
                             color="grey"
@@ -138,39 +129,40 @@
                             icon="arrow_back_ios_new"
                           />
                         </div>
-                        <div class="col my-home bid2 my-font q-mr-sm">
+                        <div class="col my-home bid2 my-font q-mr-sm my-box">
                           <q-img
-                            style="width: 50px; height: 50px"
                             src="~assets/Avator24.png"
                             class="image1"
+                            style="width: 40px; height: 40px"
                           >
                           </q-img>
                           <div class="q-pa-mg text-center custom-text-me">
                             LOGO Design
                           </div>
                         </div>
-                        <div class="col my-home bid2 my-font q-mr-sm">
+                        <div class="col my-home bid2 my-font q-mr-sm my-box">
                           <q-img
-                            style="width: 50px; height: 50px"
                             src="~assets/Avator25.png"
                             class="image1"
+                            style="width: 40px; height: 40px"
                           >
                           </q-img>
                           <div class="q-pa-mg text-center custom-text-me">
                             Website Design
                           </div>
                         </div>
-                        <div class="col my-home bid2 my-font q-mr-sm">
+                        <div class="col my-home bid2 my-font q-mr-sm my-box">
                           <q-img
-                            style="width: 50px; height: 43px"
                             src="~assets/Avator26.png "
                             class="image1"
+                            style="width: 40px; height: 40px"
                           >
                           </q-img>
                           <div class="q-pa-mg text-center custom-text-me">
                             UX Design
                           </div>
                         </div>
+
                         <div class="col-1 my-home q-mr-sm">
                           <q-btn
                             round
@@ -207,8 +199,6 @@
               </q-card-section>
             </div>
           </div>
-        </div>
-      </div>
     </div>
   </div>
 </template>
@@ -256,17 +246,13 @@ export default defineComponent({
   height: 70px
   width: 80px
 
-.company
-  background: white
-  height: 75px
-  width: 85px
-  rounded
-
-
-.image2
-  background: grey
-
-
 .my-font
   font-size: 10px
+
+.my-box
+  // background: grey
+  border: 1px solid rgba(86,61,124,.2)
+  height: 80px
+  width: 80px
+  border-radius: 7px
 </style>

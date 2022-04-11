@@ -220,7 +220,6 @@ export default defineComponent({
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
 
       text: " We have a logo that is about 13 years old and we are looking to update/change our branding, we need a logo that is more up to date and we want to keep the versatillity. We want to go bold/innovative with this change. Previous logo is attached for reference",
-      ratingModel: ref(2),
       shape: ref("2"),
       input1: null,
       input2: ref(
@@ -256,19 +255,8 @@ export default defineComponent({
   // border: 1px solid rgba(86,61,124,.2)
 .row + .row
   margin-top: 1rem
-.bid1
-  // background: rgba(255,0,0,.1)
-  border: 1px solid rgba(86,61,124,.2)
-  margin-top: 1rem
-.bid2
-  border: 1px solid rgba(86,61,124,.2)
-  height: 100px
 
 .bid3
   border: 1px solid rgba(86,61,124,.2)
 
-
-
-.my-font
-  font-size: 10px
 </style>

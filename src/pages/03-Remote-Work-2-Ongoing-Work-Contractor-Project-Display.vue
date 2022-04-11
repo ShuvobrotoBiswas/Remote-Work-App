@@ -2,8 +2,6 @@
   <div>
     <!-- Body Div  From Sub-Header Component-->
     <SubHeader />
-    <!-- Body Div -->
-
     <!-- Card 1 Div -->
     <div class="row flex-center items-start">
       <div style="max-width: 750px">

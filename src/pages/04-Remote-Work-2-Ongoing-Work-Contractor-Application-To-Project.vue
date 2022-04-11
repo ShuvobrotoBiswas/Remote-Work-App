@@ -38,7 +38,7 @@
                     <div class="text-h7">
                       <q-input
                         v-model="price"
-                        style="width: 250px"
+                        style="max-width: 250px"
                         outlined
                       ></q-input>
                     </div>
@@ -85,7 +85,7 @@
                 <p class="text-bold q-py-md text-h7">
                   Answer to the question set by client.*
                 </p>
-                <div class="row q-py-md">
+                <div class="row">
                   <div class="col">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit?
                     <q-input v-model="input1" outlined></q-input>
@@ -125,101 +125,105 @@
                 </div>
                 <q-separator />
 
-                <div class="row flex-center items-start">
-                  <div flat bordered class="my-card" style="max-width: 1000px">
-                    <div class="q-pa-md">
-                      <div class="col-9 text-h6 text-bold">
-                        Select relevent projects from you portfolio*
+                <div
+                  class="my-card row  items-start"
+                  style="max-width: 1000px"
+                >
+                  <div class="text-bold">
+                    Select relevent projects from you portfolio*
+                  </div>
+                  <div class="row flex-center bid1 text-center">
+                    <div class="col my-home q-mr-sm">
+                      <q-btn
+                        round
+                        color="grey"
+                        class="flex-center"
+                        icon="arrow_back_ios_new"
+                      />
+                    </div>
+                    <div
+                      class="col my-home bid2 my-box3 bg-grey-3 my-font q-mr-sm my-box2"
+                    >
+                      <q-img
+                        src="~assets/Avator22.png"
+                        class="image1"
+                        style="max-width: 40px; max-height: 40px"
+                      >
+                      </q-img>
+                      <div class="q-pa-mg text-center custom-text-me">
+                        LOGO Design
                       </div>
                     </div>
-                    <div class="row bid1 text-center">
-                      <div class="col-1 my-home q-mr-sm">
+                    <div class="col my-home bid2 my-font q-mr-sm my-box2">
+                      <q-img
+                        src="~assets/Avator25.png"
+                        class="image1"
+                        style="max-width: 40px; max-height: 40px"
+                      >
+                      </q-img>
+                      <div class="q-pa-mg text-center custom-text-me">
+                        Website Design
+                      </div>
+                    </div>
+                    <div
+                      class="col my-home bid2 my-box3 bg-grey-3 my-font q-mr-sm my-box2"
+                    >
+                      <q-img
+                        src="~assets/Avator23.png "
+                        class="image1"
+                        style="max-width: 50px; max-height: 40px"
+                      >
+                      </q-img>
+                      <div class="q-pa-mg text-center custom-text-me">
+                        UX Design
+                      </div>
+                    </div>
+                    <div class="col my-home bid2 my-font my-box2 q-mr-sm">
+                      <div class="col">
                         <q-btn
-                          round
-                          color="grey"
-                          class="flex-center"
-                          icon="arrow_back_ios_new"
-                        />
-                      </div>
-                      <div class="col my-home bid2 my-font bg-grey-3 q-mr-sm" >
-                        <q-img src="~assets/Avator22.png" class="image1">
-                        </q-img>
-                        <div class="q-pa-mg text-center custom-text-me">
-                          LOGO Design
-                        </div>
-                      </div>
-                      <div class="col my-home bid2 my-font q-mr-sm">
-                        <q-img src="~assets/Avator6.png" class="image1">
-                        </q-img>
-                        <div class="q-pa-mg text-center custom-text-me">
-                          Website Design
-                        </div>
-                      </div>
-                      <div class="col my-home bid2 my-font bg-grey-3 q-mr-sm" >
-                        <q-img src="~assets/Avator23.png " class="image1">
-                        </q-img>
-                        <div class="q-pa-mg text-center custom-text-me">
-                          UX Design
-                        </div>
-                      </div>
-                      <div class="col my-home bid2 my-font">
-                        <div class="row">
-                          <div class="col">
-                            <q-btn
-                              flat
-                              size="5px"
-                              color="black"
-                              padding="5px"
-                              icon="check_box_outline_blank"
-                            />
-                          </div>
-                          <div class="col">
-                            <q-btn
-                              flat
-                              size="5px"
-                              color="black"
-                              padding="5px"
-                              icon="check_box_outline_blank"
-                            />
-                          </div>
-                        </div>
-                        <div class="row">
-                          <div class="col">
-                            <q-btn
-                              flat
-                              size="5px"
-                              color="black"
-                              padding="5px"
-                              icon="check_box_outline_blank"
-                            />
-                          </div>
-                          <div class="col">
-                            <q-btn
-                              flat
-                              size="5px"
-                              color="black"
-                              padding="5px"
-                              icon="add"
-                            />
-                          </div>
-                        </div>
-                        <div class="q-pa-mg text-center custom-text-me">
-                          Others
-                        </div>
-                      </div>
-                      <div class="col-1 my-home q-mr-sm">
-                        <q-btn
-                          round
+                          flat
+                          size="5px"
                           color="black"
-                          class="flex-center"
-                          icon="arrow_forward_ios"
+                          padding="5px"
+                          icon="check_box_outline_blank"
+                        />
+                        <q-btn
+                          flat
+                          size="5px"
+                          color="black"
+                          padding="5px"
+                          icon="check_box_outline_blank"
                         />
                       </div>
+                      <q-btn
+                        flat
+                        size="5px"
+                        color="black"
+                        padding="5px"
+                        icon="check_box_outline_blank"
+                      />
+                      <q-btn
+                        flat
+                        size="5px"
+                        color="black"
+                        padding="5px"
+                        icon="add"
+                      />
+                      Others
                     </div>
 
-                    <div class="row q-pa-md my-font">
-                      <p>* Fields marked with "*" are mandatory.</p>
+                    <div class="col-1 my-home q-mr-sm">
+                      <q-btn
+                        round
+                        color="black"
+                        class="flex-center"
+                        icon="arrow_forward_ios"
+                      />
                     </div>
+                  </div>
+
+                  <div class="row q-pa-md my-font">
+                    <p>* Fields marked with "*" are mandatory.</p>
                   </div>
                 </div>
 
@@ -300,18 +304,13 @@ export default defineComponent({
   height: 70px
   width: 80px
 
-.company
-  background: white
-  height: 75px
-  width: 85px
-  rounded
-
-.description
-
-.image2
-  background: grey
-
-
 .my-font
   font-size: 10px
+
+.my-box2
+  border-radius: 7px
+
+
+.my-box3
+  background: grey
 </style>

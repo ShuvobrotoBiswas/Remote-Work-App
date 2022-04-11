@@ -2,8 +2,6 @@
   <div>
     <!-- Body Div  From Sub-Header Component-->
     <SubHeader />
-    <!-- Body Div -->
-
     <!-- Card 1 Div -->
     <div class="row flex-center items-start">
       <div style="max-width: 1000px">
@@ -662,10 +660,6 @@ export default defineComponent({
     return {
       lorem:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      onItemClick() {
-        // console.log('Clicked on an Item')
-      },
-      description: ref(),
       pricelist1: ref("15|"),
       pricelist2: ref("55|"),
       pricelist3: ref("15|"),
@@ -687,15 +681,6 @@ export default defineComponent({
       checkbox15: ref(true),
       checkbox16: ref(true),
       checkbox17: ref(true),
-      checkbox18: ref(true),
-      checkbox19: ref(true),
-      checkbox20: ref(false),
-      checkbox21: ref(false),
-      checkbox22: ref(false),
-      checkbox23: ref(false),
-      checkbox24: ref(true),
-      checkbox25: ref(true),
-      checkbox26: ref(true),
       text: " We have a logo that is about 13 years old and we are looking to update/change our branding, we need a logo that is more up to date and we want to keep the versatillity. We want to go bold/innovative with this change. Previous logo is attached for reference",
       ratingModel: ref(1),
     };
@@ -703,36 +688,12 @@ export default defineComponent({
 });
 </script>
 <style lang="sass" scoped>
-.my-card
-  width: 100%
-  max-width: 250px
-
 .row > div
   padding: 10px 15px
   // background: rgba(86,61,124,.15)
   // border: 1px solid rgba(86,61,124,.2)
 .row + .row
   margin-top: 1rem
-.bid1
-  // background: rgba(255,0,0,.1)
-  border: 1px solid rgba(86,61,124,.2)
-  margin-top: 1rem
-.bid2
-  border: 1px solid rgba(86,61,124,.2)
-  height: 100px
-
-.image1
-  height: 70px
-  width: 80px
-
-.company
-  background: white
-  height: 75px
-  width: 85px
-  rounded
-
-.description
-
 
 .my-font
   font-size: 10px
