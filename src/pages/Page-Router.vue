@@ -758,9 +758,6 @@ export default defineComponent({
   background: white
   height: 75px
   width: 85px
-  rounded
-
-.description
 
 .this-card
   // background: rgba(255,0,0,.1)

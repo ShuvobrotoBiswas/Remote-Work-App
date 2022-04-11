@@ -712,7 +712,6 @@ export default defineComponent({
   background: white
   height: 75px
   width: 85px
-  rounded
 
 
 .image2
