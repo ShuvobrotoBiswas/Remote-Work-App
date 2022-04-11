@@ -12,6 +12,7 @@
                 <div class="text-h5 text-bold q-py-md text-left">
                   Application to project
                 </div>
+                <q-separator />
                 <div class="row text-7 q-py-md text-left">
                   {{ lorem }}
                 </div>
@@ -51,9 +52,9 @@
                   </div>
                 </div>
                 <div class="row">
-                  <p class="text-bold text-h7">
+                  <div class="text-bold text-h7">
                     Answer to the question set by client.*
-                  </p>
+                  </div>
                   <div class="row q-pa-md">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt ut labore et dolore magna
@@ -76,19 +77,22 @@
                     ></q-input>
                   </div>
                 </div>
-                <div>
-                  <p class=" row text-h7 text-bold">Contractor Availability*</p>
-                    <div class="text-h7">
-                      <div >
-                        <q-option-group
-                          v-model="group1"
-                          :options="options1"
-                          color="black"
-                          left-label
-                          inline
-                        />
-                      </div>
+                <q-separator />
+                <div class="row">
+                  <div class="row text-h7 text-bold">
+                    Contractor Availability*
+                  </div>
+                  <div class="text-h7">
+                    <div>
+                      <q-option-group
+                        v-model="group1"
+                        :options="options1"
+                        color="black"
+                        left-label
+                        inline
+                      />
                     </div>
+                  </div>
                 </div>
                 <q-separator />
 
@@ -96,38 +100,39 @@
                   <div class="col-4">
                     <div class="text-h7 text-bold">Offer validity*</div>
                     <div class="text-h7">
-                      Pick a Date
-                      <div class="q-pa-md" style="max-width: 300px">
-                        <q-input
-                          style="width: 250px"
-                          filled
-                          v-model="date"
-                          mask="date"
-                          :rules="['date']"
-                        >
-                          <!-- {{ date }} -->
-                          <template v-slot:append>
-                            <q-icon name="event" class="cursor-pointer">
-                              <q-popup-proxy
-                                ref="qDateProxy"
-                                cover
-                                transition-show="scale"
-                                transition-hide="scale"
-                              >
-                                <q-date v-model="date" range>
-                                  <div class="row items-center justify-end">
-                                    <q-btn
-                                      v-close-popup
-                                      label="Close"
-                                      color="primary"
-                                      flat
-                                    />
-                                  </div>
-                                </q-date>
-                              </q-popup-proxy>
-                            </q-icon>
-                          </template>
-                        </q-input>
+                      <div style="max-width: 300px">
+                        <fieldset style="height: 90px ; border-radius:5px">
+                          <legend>Pick a Date</legend>
+                          <q-input
+                            style="width: 250px"
+                            v-model="date"
+                            mask="date"
+                            :rules="['date']"
+                          >
+                            <!-- {{ date }} -->
+                            <template v-slot:append>
+                              <q-icon name="event" class="cursor-pointer">
+                                <q-popup-proxy
+                                  ref="qDateProxy"
+                                  cover
+                                  transition-show="scale"
+                                  transition-hide="scale"
+                                >
+                                  <q-date v-model="date" range>
+                                    <div class="row items-center justify-end">
+                                      <q-btn
+                                        v-close-popup
+                                        label="Close"
+                                        color="primary"
+                                        flat
+                                      />
+                                    </div>
+                                  </q-date>
+                                </q-popup-proxy>
+                              </q-icon>
+                            </template>
+                          </q-input>
+                        </fieldset>
                       </div>
                     </div>
                   </div>
@@ -153,7 +158,7 @@
 
                 <div class="row flex-center items-start">
                   <div flat bordered class="my-card" style="max-width: 1000px">
-                    <div class="q-pa-md">
+                    <div class="">
                       <div class="col-9 text-h6 text-bold">
                         Select relevent projects from you portfolio*
                       </div>
@@ -174,8 +179,12 @@
                           LOGO Design
                         </div>
                       </div>
-                      <div class="col my-home bid2 my-font q-mr-sm" >
-                        <q-img src="~assets/Avator25.png" class="image1" style="width:70px; height:70px">
+                      <div class="col my-home bid2 my-font q-mr-sm">
+                        <q-img
+                          src="~assets/Avator25.png"
+                          class="image1"
+                          style="width: 70px; height: 70px"
+                        >
                         </q-img>
                         <div class="q-pa-mg text-center custom-text-me">
                           Website Design

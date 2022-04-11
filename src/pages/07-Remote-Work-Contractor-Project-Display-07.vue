@@ -172,10 +172,6 @@ export default defineComponent({
 });
 </script>
 <style lang="sass" scoped>
-.my-card
-  width: 100%
-  max-width: 250px
-
 .row > div
   padding: 10px 15px
   // background: rgba(86,61,124,.15)

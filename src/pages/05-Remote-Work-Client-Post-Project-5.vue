@@ -2,9 +2,9 @@
   <div>
     <!-- Body Div  From Sub-Header Component-->
     <SubHeader />
-    <div class="row flex-center items-start">
+    <div class="row q-pa-md flex-center items-start">
       <div style="width: 1000px">
-        <div class="q-mt-xl">
+        <div class="q-pa-md">
           <div class="row timeline-wrap" style="max-width: 1000px">
             <div id="timeline"></div>
             <div class="marker mfirst timeline-icon one">
@@ -25,317 +25,325 @@
           </div>
         </div>
 
-        <p class="q-pa-md text-h6 text-bold">5. REVIEW & PUBLISH</p>
-        <p class="q-pa-md text-bold">DEFINE PROJECT</p>
+        <p class="q-pa-md text-h5 text-bold">5. REVIEW & PUBLISH</p>
         <div class="q-pa-md">
-          <p class="text-weight-bold">Project title</p>
-          <fieldset style="border-radius: 7px">
-            <legend>Project Title*</legend>
-            <q-input
-              autofocus
-              borderless
-              v-model="text"
-              placeholder="Lorem ipsum dolor sit amet"
-            />
-          </fieldset>
-        </div>
-        <div class="q-pa-md">
-          <p class="text-weight-bold">Project Description</p>
-          <fieldset style="border-radius: 7px">
-            <legend>Project Description</legend>
-            <q-input
-              borderless
-              v-model="text"
-              placeholder="Lorem ipsum dolor sit amet"
-            />
-          </fieldset>
-        </div>
-        <div class="q-pa-md row">
-          <q-btn color="black" icon="add" label="Upload File" />
-        </div>
-        <div class="q-pa-md row">
-          <q-btn
-            color="black"
-            size="10px"
-            class="q-mr-sm"
-            rounded
-            outline
-            icon-right="cancel"
-            label="Color Scheme.jpg"
-          />
-          <q-btn
-            color="black"
-            size="10px"
-            class="q-mr-sm"
-            rounded
-            outline
-            icon-right="cancel"
-            label="Brand Identity Guidelines.pdf"
-          />
-          <q-btn
-            color="black"
-            size="10px"
-            class="q-mr-sm"
-            rounded
-            outline
-            icon-right="cancel"
-            label="Brief.doc"
-          />
-        </div>
-        <div style="max-width: 300px" class="q-pa-md row">
-          <q-item>
-            <q-item-section>
-              <q-item-label class="text-bold"
-                >Category job project</q-item-label
+          <div class="q-pa-md">
+            <p class="text-bold text-h6">DEFINE PROJECT</p>
+            <div class="q-pa-md">
+              <p class="text-weight-bold">Project title</p>
+              <fieldset style="border-radius: 7px">
+                <legend>Project Title*</legend>
+                <q-input
+                  autofocus
+                  borderless
+                  v-model="text"
+                  placeholder="Lorem ipsum dolor sit amet"
+                />
+              </fieldset>
+            </div>
+            <div class="q-pa-md">
+              <p class="text-weight-bold">Project Description</p>
+              <fieldset style="border-radius: 7px">
+                <legend>Project Description</legend>
+                <q-input
+                  borderless
+                  v-model="text"
+                  placeholder="Lorem ipsum dolor sit amet"
+                />
+              </fieldset>
+            </div>
+            <div class="q-pa-md row">
+              <q-btn color="black" icon="add" label="Upload File" />
+            </div>
+            <div class="q-pa-md row">
+              <q-btn
+                color="black"
+                size="10px"
+                class="q-mr-sm"
+                rounded
+                outline
+                icon-right="cancel"
+                label="Color Scheme.jpg"
+              />
+              <q-btn
+                color="black"
+                size="10px"
+                class="q-mr-sm"
+                rounded
+                outline
+                icon-right="cancel"
+                label="Brand Identity Guidelines.pdf"
+              />
+              <q-btn
+                color="black"
+                size="10px"
+                class="q-mr-sm"
+                rounded
+                outline
+                icon-right="cancel"
+                label="Brief.doc"
+              />
+            </div>
+            <div style="max-width: 300px" class="q-pa-md row">
+              <q-item>
+                <q-item-section>
+                  <q-item-label class="text-bold"
+                    >Category job project</q-item-label
+                  >
+                  <q-item-label caption>Full Stack Development</q-item-label>
+                </q-item-section>
+                <q-item-section side>
+                  <q-btn padding="xs" round color="black" icon="edit" />
+                </q-item-section>
+              </q-item>
+            </div>
+            <q-separator />
+            <div class="q-pa-md">
+              <p class="row text-bold text-h6">CONTRACTORS</p>
+              <p class="text-h6 q-pa-md text-bold">Skills required</p>
+              <div style="max-width: 400px">
+                <q-item>
+                  <div class="row">
+                    <q-btn
+                      size="10px"
+                      rounded
+                      outline
+                      icon-right="cancel"
+                      color="black"
+                      class="text-black q-mr-sm"
+                      label="Angular JS"
+                    >
+                    </q-btn>
+                    <q-btn
+                      size="10px"
+                      rounded
+                      outline
+                      icon-right="cancel"
+                      color="black"
+                      class="text-black q-mr-sm"
+                      label="Java"
+                    ></q-btn>
+                    <q-btn
+                      size="10px"
+                      rounded
+                      outline
+                      icon-right="cancel"
+                      color="black"
+                      class="text-black q-mr-sm"
+                      label="PHP"
+                    ></q-btn>
+                  </div>
+                  <q-item-section side>
+                    <q-btn padding="xs" round color="black" icon="edit" />
+                  </q-item-section>
+                </q-item>
+              </div>
+            </div>
+            <div>
+              <div style="max-width: 500px" class="q-pa-md row">
+                <q-item>
+                  <q-item-section>
+                    <q-item-label class="text-bold text-h6"
+                      >Contractors needed for the project</q-item-label
+                    >
+                    <q-item-label caption>5 Contractor</q-item-label>
+                  </q-item-section>
+                  <q-item-section side>
+                    <q-btn padding="xs" round color="black" icon="edit" />
+                  </q-item-section>
+                </q-item>
+              </div>
+              <div class="q-pa-md">
+                <p class="text-weight-bold q-pa-md">
+                  Questions for contractors
+                </p>
+              </div>
+              <div class="q-pa-md">
+                <q-card flat class="my-card bg-grey-5">
+                  <q-card-section>
+                    <div class="row items-center no-wrap">
+                      <div class="col">
+                        <div class="text-h7 bg-grey-5">{{ lorem }}</div>
+                      </div>
+
+                      <div class="col-auto">
+                        <q-btn color="grey-7" round flat icon="cancel">
+                          <q-menu cover auto-close>
+                            <q-list>
+                              <q-item clickable>
+                                <q-item-section>Remove Card</q-item-section>
+                              </q-item>
+                            </q-list>
+                          </q-menu>
+                        </q-btn>
+                      </div>
+                    </div>
+                  </q-card-section>
+                </q-card>
+
+                <q-card flat class="my-card q-mt-md bg-grey-5">
+                  <q-card-section>
+                    <div class="row items-center no-wrap">
+                      <div class="col">
+                        <div class="text-h7 bg-grey-5">
+                          Ut enim ad minim veniam, quis nostrud exercitation
+                          ullamco laboris nisi ut aliquip?
+                        </div>
+                      </div>
+
+                      <div class="col-auto">
+                        <q-btn color="grey-7" round flat icon="cancel">
+                          <q-menu cover auto-close>
+                            <q-list>
+                              <q-item clickable>
+                                <q-item-section>Remove Card</q-item-section>
+                              </q-item>
+                            </q-list>
+                          </q-menu>
+                        </q-btn>
+                      </div>
+                    </div>
+                  </q-card-section>
+                </q-card>
+              </div>
+            </div>
+            <div style="max-width: 500px" class=" row">
+              <q-item>
+                <q-item-section>
+                  <q-item-label caption class="text-bold text-black"
+                    >Add Questions</q-item-label
+                  >
+                </q-item-section>
+                <q-item-section side>
+                  <q-btn padding="xs" round color="black" icon="add" />
+                </q-item-section>
+              </q-item>
+            </div>
+            <div class="q-pa-md">
+              <p class="text-weight-bold">
+                Desired level of expertise of the contractors
+              </p>
+              <div class="q-gutter-sm">
+                <q-radio
+                  left-label
+                  v-model="shape"
+                  color="black"
+                  val="line"
+                  label="Junior"
+                />
+                <q-radio
+                  left-label
+                  v-model="shape"
+                  color="black"
+                  val="rectangle"
+                  label="Middle"
+                />
+                <q-radio
+                  left-label
+                  v-model="shape"
+                  color="black"
+                  val="rectangle"
+                  label="Senior"
+                />
+              </div>
+            </div>
+            <div class="q-pa-md">
+              <p class="text-weight-bold">Contractor Availability</p>
+              <div class="q-gutter-sm">
+                <q-radio
+                  left-label
+                  v-model="shape"
+                  color="black"
+                  val="line"
+                  label="1 Hour/Day"
+                />
+                <q-radio
+                  left-label
+                  color="black"
+                  v-model="shape"
+                  val="rectangle"
+                  label="2 Hours/Day"
+                />
+                <q-radio
+                  left-label
+                  color="black"
+                  v-model="shape"
+                  val="rectangle"
+                  label="4 Hours/Day"
+                />
+              </div>
+            </div>
+            <q-separator />
+
+            <div class="q-pa-md">
+              <h5>3. PAYMENT & BUDGET</h5>
+              <p class="text-weight-bold">Project Duration</p>
+              <div class="q-gutter-sm">
+                <q-radio
+                  left-label
+                  color="black"
+                  v-model="shape"
+                  val="line"
+                  label="Max. 2 Weeks"
+                />
+                <q-radio
+                  left-label
+                  color="black"
+                  v-model="shape"
+                  val="rectangle"
+                  label="Max. 1 Month"
+                />
+                <q-radio
+                  left-label
+                  color="black"
+                  v-model="shape"
+                  val="rectangle"
+                  label="Max. 3 Months"
+                />
+                <q-radio
+                  left-label
+                  color="black"
+                  v-model="shape"
+                  val="rectangle"
+                  label="More than 3 Months"
+                />
+              </div>
+            </div>
+            <div class="q-pa-md">
+              <h6>Payment</h6>
+              <p class="text-weight-bold">Type of Payment</p>
+              <div class="q-gutter-sm">
+                <q-radio
+                  left-label
+                  color="black"
+                  v-model="shape"
+                  val="line"
+                  label="Hourly Payment"
+                />
+                <q-radio
+                  left-label
+                  color="black"
+                  v-model="shape"
+                  val="line"
+                  label="Fixed Price"
+                />
+              </div>
+            </div>
+
+            <div class="q-pa-md">
+              <p class="text-bold">Rate of Payment</p>
+              <fieldset
+                style="border-radius: 7px; max-width: 200px; max-height: 70px"
               >
-              <q-item-label caption>Full Stack Development</q-item-label>
-            </q-item-section>
-            <q-item-section side>
-              <q-btn padding="xs" round color="black" icon="edit" />
-            </q-item-section>
-          </q-item>
+                <legend>Maximum Rate</legend>
+                <q-input borderless v-model="text" placeholder="2600" />
+              </fieldset>
+            </div>
+          </div>
         </div>
         <q-separator />
-        <div class="q-pa-md">
-          <p class="row text-bold text-h6">CONTRACTORS</p>
-          <p class="text-h6 q-pa-md text-bold">Skills required</p>
-          <div style="max-width: 400px">
-            <q-item>
-              <div class="row">
-                <q-btn
-                  size="10px"
-                  rounded
-                  outline
-                  icon-right="cancel"
-                  color="black"
-                  class="text-black q-mr-sm"
-                  label="Angular JS"
-                >
-                </q-btn>
-                <q-btn
-                  size="10px"
-                  rounded
-                  outline
-                  icon-right="cancel"
-                  color="black"
-                  class="text-black q-mr-sm"
-                  label="Java"
-                ></q-btn>
-                <q-btn
-                  size="10px"
-                  rounded
-                  outline
-                  icon-right="cancel"
-                  color="black"
-                  class="text-black q-mr-sm"
-                  label="PHP"
-                ></q-btn>
-              </div>
-              <q-item-section side>
-                <q-btn padding="xs" round color="black" icon="edit" />
-              </q-item-section>
-            </q-item>
-          </div>
-          <div style="max-width: 500px" class="q-pa-md row">
-            <q-item>
-              <q-item-section>
-                <q-item-label class="text-bold text-h6"
-                  >Contractors needed for the project</q-item-label
-                >
-                <q-item-label caption>5 Contractor</q-item-label>
-              </q-item-section>
-              <q-item-section side>
-                <q-btn padding="xs" round color="black" icon="edit" />
-              </q-item-section>
-            </q-item>
-          </div>
-          <div>
-            <p class="text-weight-bold q-pa-md">Questions for contractors</p>
-            <q-card flat class="my-card bg-grey-5">
-              <q-card-section>
-                <div class="row items-center no-wrap">
-                  <div class="col">
-                    <div class="text-h7 bg-grey-5">{{ lorem }}</div>
-                  </div>
 
-                  <div class="col-auto">
-                    <q-btn color="grey-7" round flat icon="cancel">
-                      <q-menu cover auto-close>
-                        <q-list>
-                          <q-item clickable>
-                            <q-item-section>Remove Card</q-item-section>
-                          </q-item>
-                        </q-list>
-                      </q-menu>
-                    </q-btn>
-                  </div>
-                </div>
-              </q-card-section>
-            </q-card>
-
-            <q-card flat class="my-card q-mt-md bg-grey-5">
-              <q-card-section>
-                <div class="row items-center no-wrap">
-                  <div class="col">
-                    <div class="text-h7 bg-grey-5">
-                      Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                      laboris nisi ut aliquip?
-                    </div>
-                  </div>
-
-                  <div class="col-auto">
-                    <q-btn color="grey-7" round flat icon="cancel">
-                      <q-menu cover auto-close>
-                        <q-list>
-                          <q-item clickable>
-                            <q-item-section>Remove Card</q-item-section>
-                          </q-item>
-                        </q-list>
-                      </q-menu>
-                    </q-btn>
-                  </div>
-                </div>
-              </q-card-section>
-            </q-card>
-          </div>
-          <div style="max-width: 500px" class="q-pa-md row">
-            <q-item>
-              <q-item-section>
-                <q-item-label caption class="text-bold text-black"
-                  >Add Questions</q-item-label
-                >
-              </q-item-section>
-              <q-item-section side>
-                <q-btn padding="xs" round color="black" icon="add" />
-              </q-item-section>
-            </q-item>
-          </div>
-          <div class="q-pa-md">
-            <p class="text-weight-bold">
-              Desired level of expertise of the contractors
-            </p>
-            <div class="q-gutter-sm">
-              <q-radio
-                left-label
-                v-model="shape"
-                color="black"
-                val="line"
-                label="Junior"
-              />
-              <q-radio
-                left-label
-                v-model="shape"
-                color="black"
-                val="rectangle"
-                label="Middle"
-              />
-              <q-radio
-                left-label
-                v-model="shape"
-                color="black"
-                val="rectangle"
-                label="Senior"
-              />
-            </div>
-          </div>
-          <div class="q-pa-md">
-            <p class="text-weight-bold">Contractor Availability</p>
-            <div class="q-gutter-sm">
-              <q-radio
-                left-label
-                v-model="shape"
-                color="black"
-                val="line"
-                label="1 Hour/Day"
-              />
-              <q-radio
-                left-label
-                color="black"
-                v-model="shape"
-                val="rectangle"
-                label="2 Hours/Day"
-              />
-              <q-radio
-                left-label
-                color="black"
-                v-model="shape"
-                val="rectangle"
-                label="4 Hours/Day"
-              />
-            </div>
-          </div>
-          <q-separator />
-
-          <div class="q-pa-md">
-          <h5>3. PAYMENT & BUDGET</h5>
-            <p class="text-weight-bold">Project Duration</p>
-            <div class="q-gutter-sm">
-              <q-radio
-                left-label
-                color="black"
-                v-model="shape"
-                val="line"
-                label="Max. 2 Weeks"
-              />
-              <q-radio
-                left-label
-                color="black"
-                v-model="shape"
-                val="rectangle"
-                label="Max. 1 Month"
-              />
-              <q-radio
-                left-label
-                color="black"
-                v-model="shape"
-                val="rectangle"
-                label="Max. 3 Months"
-              />
-              <q-radio
-                left-label
-                color="black"
-                v-model="shape"
-                val="rectangle"
-                label="More than 3 Months"
-              />
-            </div>
-          </div>
-          <div class="q-pa-md">
-            <h6>Payment</h6>
-            <p class="text-weight-bold">Type of Payment</p>
-            <div class="q-gutter-sm">
-              <q-radio
-                left-label
-                color="black"
-                v-model="shape"
-                val="line"
-                label="Hourly Payment"
-              />
-              <q-radio
-                left-label
-                color="black"
-                v-model="shape"
-                val="line"
-                label="Fixed Price"
-              />
-            </div>
-          </div>
-
-          <div class="q-pa-md">
-            <p class="text-bold">Rate of Payment</p>
-            <fieldset
-              style="border-radius: 7px; max-width: 200px; max-height: 70px"
-            >
-              <legend>Maximum Rate</legend>
-              <q-input borderless v-model="text" placeholder="2600" />
-            </fieldset>
-          </div>
-        </div>
-          <q-separator />
-
-
-          <!-- ho -->
-
+        <!-- ho -->
 
         <div class="q-pa-md">
           <div class="text-bold text-h7">INVITATIONS</div>
@@ -344,12 +352,7 @@
               <q-item-label caption>Add invitations</q-item-label>
             </q-item-section>
             <q-item-section side>
-              <q-btn
-                padding="xs"
-                round
-                color="black"
-                icon="add"
-              />
+              <q-btn padding="xs" round color="black" icon="add" />
             </q-item-section>
           </q-item>
           <div class="flex">
@@ -449,9 +452,6 @@ export default defineComponent({
 });
 </script>
 <style lang="sass" scoped>
-.container
-  width: 1200px
-  margin: auto
 .timeline-wrap
   margin: 20%% 20%
   top: 100
