@@ -79,9 +79,9 @@
       </div>
     </div>
     <q-separator />
-    <div class="row flex-center items-start">
+    <div class="row  q-pa-md flex-center items-start">
       <div style="width: 1000px">
-        <div class="q-mt-xl">
+        <div class="q-pa-md">
           <div class="row timeline-wrap" style="max-width: 1000px">
             <div id="timeline"></div>
             <div class="marker mfirst timeline-icon one">
@@ -101,17 +101,18 @@
             </div>
           </div>
         </div>
-        <p class="q-pa-md text-bold">2. CHOOSE CONTRACTORS</p>
+        <p class="q-pa-md text-h5 text-bold">2. CHOOSE CONTRACTORS</p>
         <div class="q-pa-md">
           <p class="text-bold">
             Choose how many contractors are needed for the project
           </p>
           <div class="q-gutter-sm">
-            <q-radio left-label v-model="shape" val="line" label="One" />
+            <q-radio left-label v-model="shape" val="line" label="One" color="cyan" />
             <q-radio
               left-label
               v-model="shape"
               val="rectangle"
+              color="cyan"
               label="More than One"
             />
           </div>
@@ -172,7 +173,7 @@
           <q-item>
             <q-item-section>
               <fieldset style="border-radius: 7px" class="q-pa-md">
-                <legend>Add Question</legend>
+                <legend class="text-cyan">Add Question</legend>
                 <q-input
                   borderless
                   v-model="text"
@@ -181,7 +182,7 @@
               </fieldset>
             </q-item-section>
             <q-item-section side>
-              <q-btn padding="xs" round color="teal-4" icon="add" />
+              <q-btn padding="xs" round color="cyan" icon="add" />
             </q-item-section>
           </q-item>
         </div>
@@ -221,16 +222,18 @@
             Choose the desired level of expertise of the contractors
           </p>
           <div class="q-gutter-sm">
-            <q-radio left-label v-model="shape" val="line" label="Junior" />
+            <q-radio left-label v-model="shape" val="line" label="Junior" color="cyan" />
             <q-radio
               left-label
               v-model="shape"
+              color="cyan"
               val="rectangle"
               label="Middle"
             />
             <q-radio
               left-label
               v-model="shape"
+              color="cyan"
               val="rectangle"
               label="Senior"
             />
@@ -242,18 +245,21 @@
             <q-radio
               left-label
               v-model="shape"
+              color="cyan"
               val="line"
               label="Less then 20hour/Week"
             />
             <q-radio
               left-label
               v-model="shape"
+              color="cyan"
               val="rectangle"
               label="20-30 hours/Week"
             />
             <q-radio
               left-label
               v-model="shape"
+              color="cyan"
               val="rectangle"
               label="More than 30 hours/Week"
             />
@@ -265,18 +271,21 @@
             <q-radio
               left-label
               v-model="shape"
+              color="cyan"
               val="line"
               label="Only on the platform"
             />
             <q-radio
               left-label
               v-model="shape"
+              color="cyan"
               val="rectangle"
               label="Indexable by search engines"
             />
             <q-radio
               left-label
               v-model="shape"
+              color="cyan"
               val="rectangle"
               label="Available only to invited contractors"
             />
@@ -285,10 +294,11 @@
         <div class="q-pa-md">
           <p class="text-weight-bold">Choose preferred type of contractor</p>
           <div class="q-gutter-sm">
-            <q-radio left-label v-model="shape" val="line" label="Freelancer" />
+            <q-radio left-label v-model="shape" val="line" label="Freelancer" color="cyan"/>
             <q-radio
               left-label
               v-model="shape"
+              color="cyan"
               val="rectangle"
               label="Agency"
             />
@@ -300,11 +310,12 @@
             unelevated
             size="10px"
             rounded
+            style="width:100px"
             color="grey-6"
             label="Back"
             class="q-mr-md"
           />
-          <q-btn unelevated size="10px" rounded color="primary" label="Next" />
+          <q-btn unelevated size="10px" style="width:100px" rounded color="cyan" label="Next" />
         </div>
       </div>
     </div>

@@ -80,9 +80,9 @@
     </div>
     <q-separator />
 
-    <div class="row flex-center items-start">
+    <div class="row q-pa-md flex-center items-start">
       <div style="width: 1000px">
-        <div class="q-mt-xl">
+        <div class="q-pa-md">
           <div class="row timeline-wrap" style="max-width: 1000px">
             <div id="timeline"></div>
             <div class="marker mfirst timeline-icon one">
@@ -102,8 +102,8 @@
             </div>
           </div>
         </div>
-        <p class="q-pa-md text-h6 text-bold">4. SEND INVITATIONS</p>
-        <div style="max-width: 300px" class="q-pq-md">
+        <p class="q-pa-md text-h5 text-bold">4. SEND INVITATIONS</p>
+        <div style="max-width: 300px" class="q-pa-md">
           <p class="text-weight-bold ">Search by name</p>
           <q-input bottom-slots v-model="text" :dense="dense">
             <template v-slot:append>
@@ -113,7 +113,7 @@
         </div>
         <div class="flex">
           <p class="q-ma-md">Search result: 3 contractors found</p>
-          <q-checkbox left-label v-model="val" label="Select all" />
+          <q-checkbox left-label color="cyan" v-model="val" label="Select all" />
         </div>
 
         <div class="flex">
@@ -128,7 +128,7 @@
               <q-item-label caption>Senior Bacend Developer</q-item-label>
             </q-item-section>
             <q-item-section side>
-              <q-checkbox v-model="val" />
+              <q-checkbox v-model="val" color="cyan" />
             </q-item-section>
           </q-item>
           <q-item clickable v-ripple>
@@ -142,7 +142,7 @@
               <q-item-label caption>Middle Bacend Developer</q-item-label>
             </q-item-section>
             <q-item-section side>
-              <q-checkbox v-model="val" />
+              <q-checkbox v-model="val"   color="cyan"/>
             </q-item-section>
           </q-item>
           <q-item clickable v-ripple>
@@ -156,7 +156,7 @@
               <q-item-label caption>Java Developer</q-item-label>
             </q-item-section>
             <q-item-section side>
-              <q-checkbox v-model="val" />
+              <q-checkbox v-model="val"  color="cyan"/>
             </q-item-section>
           </q-item>
         </div>
@@ -173,7 +173,7 @@
         class="q-mr-md"
       />
 
-      <q-btn unelevated style="width:100px" size="10px" rounded color="teal-9" label="Next" />
+      <q-btn unelevated style="width:100px" size="10px" rounded color="cyan" label="Next" />
     </div>
   </div>
 </template>

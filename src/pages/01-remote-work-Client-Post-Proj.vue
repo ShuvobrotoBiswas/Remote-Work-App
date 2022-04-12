@@ -85,7 +85,7 @@
         <div class="q-mt-xl">
           <TimeLine />
         </div>
-        <h5>1. DEFINE PROJECT</h5>
+        <h5 class="text-bold">1. DEFINE PROJECT</h5>
         <h6>Project Catagory</h6>
         <div class="q-gutter-sm">
           <q-radio
@@ -115,7 +115,7 @@
         </div>
         <h6>1.Project Template</h6>
         <div>
-          <div class="row bid1 text-center">
+          <div class="row bid1 q-py-md text-center">
             <div class="col-1 my-home q-mr-sm">
               <q-btn
                 round
@@ -124,62 +124,63 @@
                 icon="arrow_back_ios_new"
               />
             </div>
-            <div class="col my-home bid2 bg-cyan-1 my-font q-mr-sm">
-              <q-img src="~assets/Avator5.png" class="image1"> </q-img>
+            <div class="col my-home my-box bid2 bg-cyan-1 my-font q-mr-sm">
+              <q-img
+                src="~assets/Avator5.png"
+                class="image1"
+                style="width: 40px; height: 40px"
+              >
+              </q-img>
               <div class="q-pa-mg text-center custom-text-me">LOGO Design</div>
             </div>
-            <div class="col my-home bid2 my-font q-mr-sm">
-              <q-img src="~assets/Avator6.png" class="image1"> </q-img>
+            <div class="col my-home bid2 my-box my-font q-mr-sm">
+              <q-img
+                src="~assets/Avator6.png"
+                class="image1"
+                style="width: 40px; height: 40px"
+              >
+              </q-img>
               <div class="q-pa-mg text-center custom-text-me">
                 Website Design
               </div>
             </div>
-            <div class="col my-home bid2 my-font q-mr-sm">
-              <q-img src="~assets/Avator21.png " class="image1"> </q-img>
+            <div class="col my-home bid2 my-box my-font q-mr-sm">
+              <q-img
+                src="~assets/Avator21.png"
+                class="image1"
+                style="width: 40px; height: 40px"
+              >
+              </q-img>
               <div class="q-pa-mg text-center custom-text-me">Translation</div>
             </div>
-            <div class="col my-home bid2 my-font">
-              <div class="row">
-                <div class="col">
-                  <q-btn
-                    flat
-                    size="5px"
-                    color="black"
-                    padding="5px"
-                    icon="check_box_outline_blank"
-                  />
-                </div>
-                <div class="col">
-                  <q-btn
-                    flat
-                    size="5px"
-                    color="black"
-                    padding="5px"
-                    icon="check_box_outline_blank"
-                  />
-                </div>
+            <div class="col my-home bid2 my-font my-box1 q-mr-sm">
+              <div class="col">
+                <q-btn
+                  flat
+                  size="5px"
+                  color="black"
+                  padding="5px"
+                  icon="check_box_outline_blank"
+                />
+                <q-btn
+                  flat
+                  size="5px"
+                  color="black"
+                  padding="5px"
+                  icon="check_box_outline_blank"
+                />
               </div>
-              <div class="row">
-                <div class="col">
-                  <q-btn
-                    flat
-                    size="5px"
-                    color="black"
-                    padding="5px"
-                    icon="check_box_outline_blank"
-                  />
-                </div>
-                <div class="col">
-                  <q-btn
-                    flat
-                    size="5px"
-                    color="black"
-                    padding="5px"
-                    icon="add"
-                  />
-                </div>
+              <div class="col">
+                <q-btn
+                  flat
+                  size="5px"
+                  color="black"
+                  padding="5px"
+                  icon="check_box_outline_blank"
+                />
+                <q-btn flat size="5px" color="black" padding="5px" icon="add" />
               </div>
-              <div class="q-pa-mg text-center custom-text-me">Others</div>
+              Others
             </div>
             <div class="col-1 my-home q-mr-sm">
               <q-btn
@@ -190,11 +191,19 @@
               />
             </div>
           </div>
+          <div class="row">
+            <div class="col-6">
+              <q-separator style="max-width: 500px" color="cyan" />
+            </div>
+            <div class="col-1 my-font">OR</div>
+            <div class="col-5">
+              <q-separator style="max-width: 500px" color="cyan" />
+            </div>
+          </div>
 
-          <q-separator />
           <div>
             <h6>2. Project From Scratch</h6>
-            <fieldset>
+            <fieldset style="border-radius: 5px ; border: 2px solid cyan;">
               <legend>Project Title*</legend>
               <q-input
                 borderless
@@ -219,7 +228,7 @@
                 </q-card-section>
               </q-card>
             </q-expansion-item>
-            <fieldset class="q-mt-md">
+            <fieldset style="border-radius: 5px ; border: 2px solid cyan;">
               <legend>Project Description*</legend>
               <q-input
                 borderless
@@ -233,6 +242,35 @@
               icon="add"
               label="Upload File"
             />
+            <div class="row q-py-md ">
+              <q-btn
+                rounded
+                outline
+                size="8px"
+                icon-right="cancel"
+                color="black"
+                class="q-mr-sm"
+                label="Color scheme.jpg"
+              />
+               <q-btn
+                rounded
+                outline
+                size="8px"
+                icon-right="cancel"
+                color="black"
+                class="q-mr-sm"
+                label="brand identity guidelines.pdf"
+              />
+               <q-btn
+                rounded
+                outline
+                size="8px"
+                icon-right="cancel"
+                color="black"
+                class="q-mr-sm"
+                label="brief.doc"
+              />
+            </div>
             <q-item tag="label" v-ripple>
               <q-item-section avatar top>
                 <q-checkbox v-model="color" val="cyan" color="cyan" />
@@ -253,7 +291,7 @@
         </div>
 
         <div class="flex flex-center q-pa-md">
-          <q-btn  unelevated size="10px" rounded color="primary" label="Next" />
+          <q-btn unelevated size="10px" style="width:100px" rounded color="cyan" label="Next" />
         </div>
       </div>
     </div>
@@ -331,4 +369,18 @@ export default defineComponent({
 
 .my-font
   font-size: 10px
+
+.my-box
+  // background: grey
+  border: 1px solid rgba(86,61,124,.2)
+  border-radius: 7px
+  height: 90px
+  width: 80px
+
+.my-box1
+  // background: grey
+  // border: 1px solid rgba(86,61,124,.2)
+  height: 90px
+  width: 80px
+  border-radius: 7px
 </style>

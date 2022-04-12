@@ -80,9 +80,9 @@
       </div>
     </div>
     <q-separator />
-    <div class="row flex-center items-start">
+    <div class="row q-pa-md flex-center items-start">
       <div style="width: 1000px">
-          <div class="q-mt-xl">
+          <div class="q-pa-md">
           <div class="row timeline-wrap" style="max-width: 1000px">
             <div id="timeline"></div>
             <div class="marker mfirst timeline-icon one">
@@ -102,31 +102,35 @@
             </div>
           </div>
         </div>
-        <p class="q-pa-md text-h6 text-bold">2. PAYMENT & BUDGET</p>
+        <p class=" text-h5 text-bold">3. PAYMENT & BUDGET</p>
 
         <div class="q-pa-md">
           <p class="text-weight-bold">Project Duration</p>
           <div class="q-gutter-sm">
             <q-radio
               left-label
+              color="cyan"
               v-model="shape"
               val="line"
               label="Max. 2 Weeks"
             />
             <q-radio
               left-label
+              color="cyan"
               v-model="shape"
               val="rectangle"
               label="Max. 1 Month"
             />
             <q-radio
               left-label
+              color="cyan"
               v-model="shape"
               val="rectangle"
               label="Max. 3 Months"
             />
             <q-radio
               left-label
+              color="cyan"
               v-model="shape"
               val="rectangle"
               label="More than 3 Months"
@@ -134,17 +138,19 @@
           </div>
         </div>
         <div class="q-pa-md">
-          <h6>Payment</h6>
+          <p class="text-h6">Payment</p>
           <p class="text-weight-bold">Type of Payment</p>
           <div class="q-gutter-sm">
             <q-radio
               left-label
+              color="cyan"
               v-model="shape"
               val="line"
               label="Hourly Payment"
             />
             <q-radio
               left-label
+              color="cyan"
               v-model="shape"
               val="line"
               label="Fixed Price"
@@ -154,7 +160,7 @@
 
         <div class="q-pa-md">
           <fieldset style="border-radius: 7px">
-            <legend>Maximum Rate</legend>
+            <legend class="text-cyan">Maximum Rate</legend>
             <q-input borderless v-model="text" placeholder="2600" />
           </fieldset>
         </div>
@@ -169,7 +175,7 @@
             label="Back"
             class="q-mr-md"
           />
-          <q-btn unelevated size="10px" style="width:100px" rounded color="teal-9" label="Next" />
+          <q-btn unelevated size="10px" style="width:100px" rounded color="cyan" label="Next" />
         </div>
       </div>
     </div>
