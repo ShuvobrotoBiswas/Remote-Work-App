@@ -298,7 +298,7 @@
             </div>
 
             <div>
-              <div class="row text-bold">Projects Categories</div>
+              <div class=" text-bold">Projects Categories</div>
               <q-input
                 style="width: 720px"
                 v-model="search"
@@ -349,11 +349,11 @@
               </div>
             </div>
 
-            <div class="row text-bold">
+            <div class=" text-bold">
               <div class="col text-bold">
                 Skills*
                 <q-input
-                  style="width: 720px"
+                  style="max-width: 720px"
                   v-model="search"
                   outlined
                   type="search"

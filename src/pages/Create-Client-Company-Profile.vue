@@ -116,8 +116,8 @@
                   </template>
                 </q-file>
               </div>
-              <div class="q-pa-md">
-                <q-btn outline bottom-slots rounded> remove exsting </q-btn>
+             <div class="q-pa-md">
+                <q-btn outline style="width:250px" bottom-slots rounded> remove exsting </q-btn>
               </div>
             </div>
             <div class="col-7">

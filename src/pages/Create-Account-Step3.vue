@@ -2,27 +2,25 @@
   <div class="absolute-center">
     <!-- Card 1 -->
 
-    <div
-      class="q-pa-md flex flex-center items-start text-bold text-h7 q-gutter-md"
-    >
-      Log into your account.
-    </div>
-
     <!-- Card 2 Div -->
 
-    <div class="q-pa-md flex flex-center items-start q-gutter-md">
+    <div class=" items-start q-gutter-md">
+      <div class="q-pa-md items-start text-bold text-h7 q-gutter-md">
+        <div class="q-py-none">Log into your account.</div>
+      </div>
       <q-card
         class="my-card flex this-card flex-center text-black bg-white"
         style="max-width: 800px"
       >
         <div class="q-pa-md">
           <div class="row flex flex-center">
-            <div class="col-5  text-bold text-h7" style="width: 300px">
+            <div class="col-5 text-bold text-h7" style="width: 300px">
               <q-input label="Email" type="email" v-model="email"> </q-input>
               <q-input label="Password" type="password" v-model="password">
               </q-input>
               <div class="q-py-md">
-                <q-btn to="Contractor-profile-display"
+                <q-btn
+                  to="Contractor-profile-display"
                   size="10px"
                   rounded
                   color="black"

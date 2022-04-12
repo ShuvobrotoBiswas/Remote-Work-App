@@ -113,17 +113,20 @@
                     />
                   </template>
                 </q-file>
-                <div class="q-pa-md">
-                  <q-btn outline bottom-slots rounded> remove exsting </q-btn>
-                </div>
-                <div class="q-pa-md text-h7 text-bold">
-                  Europass & Portfolio
-                </div>
-                <div class="">
-                  <q-btn icon="link" class="text-h7" rounded color="black">
-                    Link Your Europass CV
-                  </q-btn>
-                </div>
+              </div>
+              <div class="q-pa-md">
+                <q-btn outline style="width:250px" bottom-slots rounded> remove exsting </q-btn>
+              </div>
+              <div class="q-pa-md text-h7 text-bold">Europass & Portfolio</div>
+              <div class="q-pa-md">
+                <q-btn
+                  icon="link"
+                  class="q-mr-sm text-h7"
+                  rounded
+                  color="black"
+                >
+                  Link Your Europass CV
+                </q-btn>
               </div>
             </div>
             <div class="col-7">
