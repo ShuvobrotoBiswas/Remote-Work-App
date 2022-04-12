@@ -147,7 +147,7 @@
                             </div>
                           </div>
                         </div>
-                        <div class="col-2">
+                        <div class="col-3">
                           <div class="row flex-center">
                             <q-btn
                               rounded
@@ -159,7 +159,7 @@
                               label="Release Payment"
                             />
                           </div>
-                          <div class="row ">
+                          <div class="row q-pa-md">
                             <div class="col">
                               <q-btn
                                 round
@@ -186,9 +186,9 @@
                       </div>
 
                       <div class="row" style="max-width: 950px">
-                        <div class="col-3">
+                        <div class="col-4">
                           <div class="row">
-                            <div class="row">
+                            <div class="">
                               <p class="text-bold q-my-none text-h7">
                                 Uploaded files
                               </p>
@@ -296,26 +296,6 @@ export default defineComponent({
   // border: 1px solid rgba(86,61,124,.2)
 .row + .row
   margin-top: 1rem
-.bid1
-  // background: rgba(255,0,0,.1)
-  // border: 1px solid rgba(86,61,124,.2)
-  margin-top: 1rem
-.bid2
-  border: 1px solid rgba(86,61,124,.2)
-  height: 100px
-
-.image1
-  height: 70px
-  width: 80px
-
-.company
-  background: white
-  height: 75px
-  width: 85px
-
-.image2
-  background: grey
-
 
 .my-font
   font-size: 10px

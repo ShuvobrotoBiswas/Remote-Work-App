@@ -147,7 +147,7 @@
                             </div>
                           </div>
                         </div>
-                        <div class="col-2">
+                        <div class="col-3">
                           <div class="row flex-center">
                             <q-btn
                               rounded
@@ -159,7 +159,7 @@
                               label="Release Payment"
                             />
                           </div>
-                          <div class="row">
+                          <div class="row q-pa-md">
                             <div class="col">
                               <q-btn
                                 round

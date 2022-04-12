@@ -159,7 +159,7 @@
                               label="Release Payment"
                             />
                           </div>
-                          <div class="row">
+                          <div class="row q-pa-md">
                             <div class="col">
                               <q-btn
                                 round
@@ -209,14 +209,14 @@
                             <q-btn
                               rounded
                               size="10px"
-                              style="width: 125px"
+                              style="width: 115px"
                               unelevated
                               color="black"
                               class="text-white"
                               label="Fund"
                             />
                           </div>
-                          <div class="row">
+                          <div class="row q-pa-md">
                             <div class="col">
                               <q-btn
                                 round
@@ -261,19 +261,19 @@
                             </div>
                           </div>
                         </div>
-                        <div class="col-3">
+                         <div class="col-3">
                           <div class="row flex-center">
                             <q-btn
                               rounded
                               size="10px"
                               unelevated
-                              style="width: 125px"
+                              style="width: 115px"
                               color="black"
                               class="text-white"
                               label="Fund"
                             />
                           </div>
-                          <div class="row">
+                          <div class="row q-pa-md">
                             <div class="col">
                               <q-btn
                                 round

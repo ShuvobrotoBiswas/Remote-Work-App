@@ -98,7 +98,12 @@
                     <div class="row text-h7 text-bold">AGENCY NAME</div>
                     <div class="text-h7 row">
                       <q-img
-                        style="height: 70px; width: 70px ;border-radius: 50%; ;border: 1px solid black"
+                        style="
+                          height: 70px;
+                          width: 70px;
+                          border-radius: 50%;
+                          border: 1px solid black;
+                        "
                         src="~/assets/Avator20.png"
                       ></q-img>
                     </div>
@@ -147,7 +152,7 @@
                             </div>
                           </div>
                         </div>
-                        <div class="col-2">
+                        <div class="col-3">
                           <div class="row flex-center">
                             <q-btn
                               rounded
@@ -159,7 +164,7 @@
                               label="Release Payment"
                             />
                           </div>
-                          <div class="row">
+                          <div class="row q-pa-md">
                             <div class="col">
                               <q-btn
                                 round
@@ -186,7 +191,7 @@
                       </div>
 
                       <div class="row" style="max-width: 950px">
-                        <div class="col-3">
+                        <div class="col-4">
                           <div class="row">
                             <div class="row">
                               <p class="text-bold q-my-none text-h7">
