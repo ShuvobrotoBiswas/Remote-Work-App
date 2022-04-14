@@ -85,7 +85,7 @@
 
     <!-- Card 1 Div -->
 
-    <div class="row flex-center items-start">
+    <div class="row  flex-center items-start">
       <div flat bordered class="my-card" style="max-width: 800px">
         <q-card-section>
           <div class="text-h6 text-bold text-center">
@@ -102,6 +102,7 @@
               <div class="q-pa-md">
                 <q-file
                   rounded
+                  style="width: 250px"
                   outlined
                   v-model="model"
                   label="upload new picture"
@@ -117,10 +118,13 @@
                 </q-file>
               </div>
               <div class="q-pa-md">
-                <q-btn outline style="width:250px" bottom-slots rounded> remove exsting </q-btn>
+                <q-btn outline style="width: 250px" bottom-slots rounded>
+                  remove exsting
+                </q-btn>
               </div>
             </div>
-            <div class="col-7">
+            <div class="col-1"></div>
+            <div class="col-6">
               <q-input v-model="completeName" label="Complete name*" />
               <q-input v-model="address" label="Address*" />
               <q-input v-model="billingAddress" label="Billing address*" />
@@ -130,24 +134,25 @@
 
           <q-separator />
         </div>
-      </div>
-    </div>
+        <!-- Card 2 Div -->
 
-    <!-- Card 2 Div -->
-
-    <div class="row flex-center">
-      <div flat bordered class="my-card" style="max-width: 800px">
-        <div class="row q-pa-md">
-          <q-btn
-            size="10px"
-            rounded
-            color="black"
-            icon="add"
-            label="Add Companies"
-            class="text-white text-h7"
-          ></q-btn>
+        <div class="row flex-center">
+          <div flat bordered class="my-card" style="max-width: 800px">
+            <div class="row q-pa-md">
+              <q-btn
+                size="10px"
+                rounded
+                color="black"
+                icon="add"
+                label="Add Companies"
+                class="text-white text-h7"
+              ></q-btn>
+            </div>
+            <div class="row q-pa-md">
+              * Fields marked with "*" are mandatory.
+            </div>
+          </div>
         </div>
-        <div class="row q-pa-md">* Fields marked with "*" are mandatory.</div>
       </div>
     </div>
 
@@ -219,5 +224,4 @@ export default defineComponent({
   // border: 1px solid rgba(86,61,124,.2)
 .row + .row
   margin-top: 1rem
-
 </style>

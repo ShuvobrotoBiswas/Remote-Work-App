@@ -65,13 +65,13 @@
         <q-separator />
         <div class="q-pa-md">
           <div class="row">
-            <div class="col-5">
+            <div class="col-4">
               <!-- <q-avatar size="100px" class="q-mb-sm"> -->
               <q-img sizes="200px" src="~/assets/Avator1.png"></q-img>
               <!-- </q-avatar> -->
             </div>
-
-            <div class="col-7">
+            <div class="col-1"></div>
+            <div class="col-6">
               <div class="text-h6 text-bold">Tom Petty</div>
               <div class="text-h7 q-py-md">
                 <strong>Address:</strong> Street Name, etc.
@@ -116,27 +116,17 @@
                 >
               </div>
             </div>
-            <div class="row">
-              <div class="col"></div>
-              <div class="row"></div>
-              <div class="row"></div>
-              <div class="row"></div>
-              <div class="row"></div>
-              <div class="row"></div>
-              <div class="row"></div>
-              <div class="row"></div>
-              <div class="row"></div>
-              <q-btn
-                size="10px"
-                rounded
-                color="black"
-                icon="edit"
-                label="Edit Profile"
-                class="text-white text-h7"
-              ></q-btn>
-            </div>
           </div>
-
+          <div class="row flex-center q-py-md">
+            <q-btn
+              size="10px"
+              rounded
+              color="black"
+              icon="edit"
+              label="Edit Profile"
+              class="text-white text-h7"
+            ></q-btn>
+          </div>
           <q-separator />
         </div>
       </div>
@@ -164,9 +154,20 @@
                 </div>
                 <div class="col-8">
                   <strong>Verification status</strong> <br />
-                  <q-btn round icon="bookmark_border" size="7px" color="black"></q-btn>
+                  <q-btn
+                    round
+                    icon="bookmark_border"
+                    size="7px"
+                    color="black"
+                  ></q-btn>
                   Verified
-                  <q-btn  round icon="done" outline color="black" size="7px" ></q-btn>
+                  <q-btn
+                    round
+                    icon="done"
+                    outline
+                    color="black"
+                    size="7px"
+                  ></q-btn>
                 </div>
               </div>
               <Strong>Company #1</Strong> <br />
@@ -216,8 +217,10 @@
               <div class="text-h7">
                 <strong>Fascial code:</strong> MTS SMI 84R11 Z114H
               </div>
-              <div class="text-h7 q-py-md">
-                <strong>Legal note comapany owner</strong> ✔
+              <div class="q-py-md underline-font q-mr-sm">
+                <strong>Legal Note company owner</strong>
+                <span class="q-mr-sm"></span>
+                <q-btn round outline size="5px" icon="add"></q-btn>
               </div>
               <div class="text-h7">
                 <strong>Register number:</strong> 123 456 789
@@ -300,25 +303,16 @@
                 >
               </div>
             </div>
-            <div class="row">
-              <div class="col"></div>
-              <div class="row"></div>
-              <div class="row"></div>
-              <div class="row"></div>
-              <div class="row"></div>
-              <div class="row"></div>
-              <div class="row"></div>
-              <div class="row"></div>
-              <div class="row"></div>
-              <q-btn
-                size="10px"
-                rounded
-                color="black"
-                icon="edit"
-                label="Edit Profile"
-                class="text-white text-h7"
-              ></q-btn>
-            </div>
+          </div>
+          <div class="row flex-center">
+            <q-btn
+              size="10px"
+              rounded
+              color="black"
+              icon="edit"
+              label="Edit Profile"
+              class="text-white text-h7"
+            ></q-btn>
           </div>
         </div>
       </q-card>
@@ -346,9 +340,20 @@
                 </div>
                 <div class="col-8">
                   <strong>Verification status</strong> <br />
-                  <q-btn round icon="bookmark_border" size="7px" color="black"></q-btn>
+                  <q-btn
+                    round
+                    icon="bookmark_border"
+                    size="7px"
+                    color="black"
+                  ></q-btn>
                   Verified
-                  <q-btn  round icon="done" outline color="black" size="7px" ></q-btn>
+                  <q-btn
+                    round
+                    icon="done"
+                    outline
+                    color="black"
+                    size="7px"
+                  ></q-btn>
                 </div>
               </div>
               <Strong>Company #2</Strong> <br />
@@ -398,8 +403,10 @@
               <div class="text-h7">
                 <strong>Fascial code:</strong> MTS SMI 84R11 Z114H
               </div>
-              <div class="text-h7 q-py-md">
-                <strong>Legal note comapany owner</strong> ✔
+              <div class="q-py-md underline-font q-mr-sm">
+                <strong>Legal Note company owner</strong>
+                <span class="q-mr-sm"></span>
+                <q-btn round outline size="5px" icon="add"></q-btn>
               </div>
               <div class="text-h7">
                 <strong>Register number:</strong> 123 456 789
@@ -482,25 +489,16 @@
                 >
               </div>
             </div>
-            <div class="row">
-              <div class="col"></div>
-              <div class="row"></div>
-              <div class="row"></div>
-              <div class="row"></div>
-              <div class="row"></div>
-              <div class="row"></div>
-              <div class="row"></div>
-              <div class="row"></div>
-              <div class="row"></div>
-              <q-btn
-                size="10px"
-                rounded
-                color="black"
-                icon="edit"
-                label="Edit Profile"
-                class="text-white text-h7"
-              ></q-btn>
-            </div>
+          </div>
+          <div class="row flex-center">
+            <q-btn
+              size="10px"
+              rounded
+              color="black"
+              icon="edit"
+              label="Edit Profile"
+              class="text-white text-h7"
+            ></q-btn>
           </div>
         </div>
       </q-card>

@@ -95,11 +95,12 @@
         <q-separator />
         <div class="q-pa-md">
           <div class="row">
-            <div class="col-5">
+            <div class="col-4">
               <!-- <q-avatar size="100px" class="q-mb-sm"> -->
               <q-img sizes="200px" src="~/assets/Avator11.png"></q-img>
               <!-- </q-avatar> -->
             </div>
+            <div class="col-1"> </div>
             <div class="col-7">
               <div class="text-h6 text-bold">Laura Plamer</div>
               <div class="text-h7 q-py-md">
@@ -145,27 +146,17 @@
                 >
               </div>
             </div>
-            <div class="row flex-center">
-              <div class="col"></div>
-              <div class="row"></div>
-              <div class="row"></div>
-              <div class="row"></div>
-              <div class="row"></div>
-              <div class="row"></div>
-              <div class="row"></div>
-              <div class="row"></div>
-              <div class="row"></div>
-              <q-btn
-                size="10px"
-                rounded
-                color="black"
-                icon="edit"
-                label="Edit Profile"
-                class="text-white flex-center text-h7"
-              ></q-btn>
-            </div>
           </div>
-
+          <div class="row flex-center q-py-md">
+            <q-btn
+              size="10px"
+              rounded
+              color="black"
+              icon="edit"
+              label="Edit Profile"
+              class="text-white flex-center text-h7"
+            ></q-btn>
+          </div>
           <q-separator />
 
           <!-- Card 2 Div -->
@@ -200,9 +191,7 @@ import { ref } from "vue";
 export default defineComponent({
   // name: "IndexPage",
   setup() {
-    return {
-      
-    };
+    return {};
   },
 });
 </script>
@@ -217,5 +206,4 @@ export default defineComponent({
   // border: 1px solid rgba(86,61,124,.2)
 .row + .row
   margin-top: 1rem
-
 </style>

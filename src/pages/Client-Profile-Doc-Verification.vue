@@ -55,18 +55,15 @@
 
     <!-- Card 1 Div -->
 
-    <div class="row q-pa-md flex-center items-start">
-      <div flat bordered class="my-card" style="max-width: 820px">
+    <div class="row q-pa-md flex-center">
+      <div flat bordered class="my-card" style="max-width: 920px">
         <q-card-section>
-          <div class="text-h6 text-center">
-            Your Profile/Document Verification
-          </div>
+          <div class="text-h6">Your Profile/Document Verification</div>
         </q-card-section>
-        <q-separator />
 
-        <!-- Card 2 & 3 Div -->
+        <!-- Card 2 & 3 & 4 Div -->
 
-        <div class="row">
+        <div class="row" style="max-width: 920px">
           <div class="q-pa-md col-6 flex-center items-start q-gutter-md">
             <q-card
               class="my-card this-card text-black bg-grey-4"
@@ -77,17 +74,18 @@
                   <div class="col-9 text-h7 text-bold">
                     Personal ID verification
                   </div>
-                  <div class="col-9 text-h7">
+                  <div class="col-12 text-h7">
                     Upload at least two documents for verification
                   </div>
                 </div>
+
                 <div class="row">
-                  <div class="col-4 q-pa-md text-h7 text center">
+                  <div class="col-3 q-pa-md text-h7 text center">
                     <span
                       style="display: block; margin-bottom: 15px"
                       class="text-bold"
                     >
-                      Add credit card</span
+                      Upload ID Card</span
                     >
                     <q-btn
                       color="black"
@@ -96,20 +94,20 @@
                       icon="done"
                       style="margin-bottom: 15px"
                     ></q-btn>
-                    <div class="text-h7">Credit card added</div>
+                    <div class="text-h7">ID Card file.pdf</div>
                   </div>
                   <div class="col-5 q-pa-md text-h7 text center">
                     <span
                       style="display: block; margin-bottom: 15px"
                       class="text-bold"
                     >
-                      Add bank account</span
+                      Upload Address Proof</span
                     >
                     <q-btn
                       color="black"
                       dense
                       round
-                      icon="add"
+                      icon="done"
                       style="margin-bottom: 15px"
                     ></q-btn>
                     <div class="text-h7">Address Proof.pdf</div>
@@ -118,6 +116,13 @@
               </div>
             </q-card>
           </div>
+
+          <!-- Card 2 -->
+
+        
+
+          <!-- Card 3 -->
+
           <div class="q-pa-md col-6 flex-center items-start q-gutter-md">
             <q-card
               class="my-card this-card text-black bg-grey-4"
@@ -163,7 +168,6 @@
                       icon="add"
                       style="margin-bottom: 15px"
                     ></q-btn>
-                    <div class="text-h7">Address Proof.pdf</div>
                   </div>
                 </div>
               </div>
@@ -194,9 +198,7 @@ import { defineComponent } from "vue";
 export default defineComponent({
   // name: "IndexPage",
   setup() {
-    return {
-      
-    };
+    return {};
   },
 });
 </script>
@@ -213,7 +215,6 @@ export default defineComponent({
   margin-top: 1rem
 .row
   // background: rgba(255,0,0,.1)
-
 
 .this-card
   // background: rgba(255,0,0,.1)

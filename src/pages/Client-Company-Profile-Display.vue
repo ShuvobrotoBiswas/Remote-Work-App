@@ -90,10 +90,10 @@
         <q-separator />
         <div class="q-pa-md">
           <div class="row">
-            <div class="col-5">
+            <div class="col-4">
               <q-img sizes="200px" src="~/assets/Avator14.png"></q-img>
             </div>
-
+            <div class="col-1"></div>
             <div class="col-7">
               <div class="text-h6 text-bold">Meat Loaf</div>
               <div class="text-h7 q-py-md">
@@ -187,9 +187,20 @@
                 </div>
                 <div class="col-8">
                   <strong>Verification status</strong> <br />
-                  <q-btn round icon="bookmark_border" size="7px" color="black"></q-btn>
+                  <q-btn
+                    round
+                    icon="bookmark_border"
+                    size="7px"
+                    color="black"
+                  ></q-btn>
                   Verified
-                  <q-btn  round icon="done" outline color="black" size="7px" ></q-btn>
+                  <q-btn
+                    round
+                    icon="done"
+                    outline
+                    color="black"
+                    size="7px"
+                  ></q-btn>
                 </div>
               </div>
               <Strong>Company #1</Strong> <br />
@@ -201,8 +212,10 @@
               <div class="text-h7">
                 <strong>Fascial code:</strong> MTS SMI 84R11 Z114H
               </div>
-              <div class="text-h7 q-py-md">
-                <strong>Legal note comapany owner</strong> ✔
+              <div class="q-py-md underline-font q-mr-sm">
+                <strong>Legal Note company owner</strong>
+                <span class="q-mr-sm"></span>
+                <q-btn round color="black" size="5px" icon="done"></q-btn>
               </div>
               <div class="text-h7">
                 <strong>Register number:</strong> 123 456 789
@@ -212,25 +225,16 @@
               </div>
               <div class="text-h7"><strong>Phone:</strong> +39 321 654 987</div>
             </div>
-            <div class="row">
-              <div class="col"></div>
-              <div class="row"></div>
-              <div class="row"></div>
-              <div class="row"></div>
-              <div class="row"></div>
-              <div class="row"></div>
-              <div class="row"></div>
-              <div class="row"></div>
-              <div class="row"></div>
-              <q-btn
-                size="10px"
-                rounded
-                color="black"
-                icon="edit"
-                label="Edit Company"
-                class="text-white text-h7"
-              ></q-btn>
-            </div>
+          </div>
+          <div class="row flex-center">
+            <q-btn
+              size="10px"
+              rounded
+              color="black"
+              icon="edit"
+              label="Edit Company"
+              class="text-white text-h7"
+            ></q-btn>
           </div>
         </div>
       </q-card>
@@ -258,9 +262,20 @@
                 </div>
                 <div class="col-8">
                   <strong>Verification status</strong> <br />
-                  <q-btn round icon="bookmark_border" size="7px" color="black"></q-btn>
+                  <q-btn
+                    round
+                    icon="bookmark_border"
+                    size="7px"
+                    color="black"
+                  ></q-btn>
                   Verified
-                  <q-btn  round icon="done" outline color="black" size="7px" ></q-btn>
+                  <q-btn
+                    round
+                    icon="done"
+                    outline
+                    color="black"
+                    size="7px"
+                  ></q-btn>
                 </div>
               </div>
               <Strong>Company #2</Strong> <br />
@@ -271,8 +286,10 @@
               <div class="text-h7">
                 <strong>Fascial code:</strong> MTS SMI 84R11 Z114H
               </div>
-              <div class="text-h7 q-py-md">
-                <strong>Legal note comapany owner</strong> ✔
+              <div class="q-py-md underline-font q-mr-sm">
+                <strong>Legal Note company owner</strong>
+                <span class="q-mr-sm"></span>
+                <q-btn round color="black" size="5px" icon="done"></q-btn>
               </div>
               <div class="text-h7">
                 <strong>Register number:</strong> 123 456 789
@@ -282,25 +299,16 @@
               </div>
               <div class="text-h7"><strong>Phone:</strong> +39 321 654 987</div>
             </div>
-            <div class="row">
-              <div class="col"></div>
-              <div class="row"></div>
-              <div class="row"></div>
-              <div class="row"></div>
-              <div class="row"></div>
-              <div class="row"></div>
-              <div class="row"></div>
-              <div class="row"></div>
-              <div class="row"></div>
-              <q-btn
-                size="10px"
-                rounded
-                color="black"
-                icon="edit"
-                label="Edit Profile"
-                class="text-white text-h7"
-              ></q-btn>
-            </div>
+          </div>
+          <div class="row flex-center">
+            <q-btn
+              size="10px"
+              rounded
+              color="black"
+              icon="edit"
+              label="Edit Profile"
+              class="text-white text-h7"
+            ></q-btn>
           </div>
         </div>
       </q-card>
@@ -324,8 +332,7 @@ import { defineComponent } from "vue";
 export default defineComponent({
   name: "IndexPage",
   setup() {
-    return {
-    };
+    return {};
   },
 });
 </script>

@@ -94,11 +94,10 @@
         <div class="q-pa-md">
           <div class="row">
             <div class="col-5">
-              <!-- <q-avatar size="100px" class="q-mb-sm"> -->
               <q-img sizes="200px" src="~/assets/Avator9.png"></q-img>
-              <!-- </q-avatar> -->
               <div class="q-pa-md">
                 <q-file
+                  style="width: 250px"
                   rounded
                   outlined
                   v-model="model"
@@ -115,13 +114,16 @@
                 </q-file>
               </div>
               <div class="q-pa-md">
-                <q-btn outline style="width:250px" bottom-slots rounded> remove exsting </q-btn>
+                <q-btn outline style="width: 250px" bottom-slots rounded>
+                  remove exsting
+                </q-btn>
               </div>
-              <div class="q-pa-md text-h7 text-bold">Europass & Portfolio</div>
+              <div class="q-pa-md text-h6 text-bold">Europass & Portfolio</div>
               <div class="q-pa-md">
                 <q-btn
                   icon="link"
                   class="q-mr-sm text-h7"
+                  style="width: 250px"
                   rounded
                   color="black"
                 >
@@ -129,7 +131,8 @@
                 </q-btn>
               </div>
             </div>
-            <div class="col-7">
+            <div class="col-1"></div>
+            <div class="col-6">
               <q-input v-model="completeName" label="Complete name*" />
               <q-input v-model="address" label="Address*" />
               <q-input v-model="billingAddress" label="Billing address*" />
@@ -137,7 +140,12 @@
               <div class="text-bold q-py-md">
                 Search/Select your Skills & Tools
               </div>
-              <q-input v-model="search" outlined type="search">
+              <q-input
+                style="max-width: 300px"
+                v-model="search"
+                outlined
+                type="search"
+              >
                 <template v-slot:append>
                   <q-icon name="search" />
                   <q-menu>
@@ -194,7 +202,7 @@
     <!-- Card 2 Div -->
 
     <div class="row flex-center items-start">
-      <div flat bordered class="my-card" style="max-width: 800px">
+      <div flat bordered class="my-card" style="max-width: 600px">
         <div class="q-pa-md">
           <div class="col-9 text-h6 text-bold">
             Add relevent projects from you portfolio
@@ -243,8 +251,8 @@
         size="10px"
         rounded
         color="black"
-        icon="add"
-        label="Add Companies"
+        icon="done"
+        label="setting saved"
         class="text-white text-h7 q-mr-sm"
       ></q-btn>
       <q-btn

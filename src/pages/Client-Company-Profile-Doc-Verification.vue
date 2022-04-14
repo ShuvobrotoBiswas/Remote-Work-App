@@ -55,18 +55,15 @@
 
     <!-- Card 1 Div -->
 
-    <div class="row q-pa-md flex-center items-start">
-      <div flat bordered class="my-card" style="max-width: 820px">
+    <div class="row q-pa-md flex-center">
+      <div flat bordered class="my-card" style="max-width: 920px">
         <q-card-section>
-          <div class="text-h6 text-center">
-            Your Profile/Document Verification
-          </div>
+          <div class="text-h6">Your Profile/Document Verification</div>
         </q-card-section>
-        <q-separator />
 
         <!-- Card 2 & 3 & 4 Div -->
 
-        <div class="row">
+        <div class="row" style="max-width: 920px">
           <div class="q-pa-md col-6 flex-center items-start q-gutter-md">
             <q-card
               class="my-card this-card text-black bg-grey-4"
@@ -125,7 +122,7 @@
           <div class="q-pa-md col-6 flex-center items-start q-gutter-md">
             <q-card
               class="my-card this-card text-black bg-grey-4"
-              style="max-width: 380px"
+              style="max-width: 850px"
             >
               <div class="q-pa-md">
                 <div class="row">
@@ -157,8 +154,8 @@
                       style="display: block; margin-bottom: 15px"
                       class="text-bold"
                     >
-                      Billing Address </span
-                    >
+                      Billing Address
+                    </span>
                     <q-btn
                       color="black"
                       dense
@@ -183,21 +180,26 @@
                       style="margin-bottom: 15px"
                     ></q-btn>
                   </div>
-                  <div class="col-4 q-pa-md text-h7 text center">
-                    <span
-                      style="display: block; margin-bottom: 15px"
-                      class="text-bold"
+                  <div
+                    class="col-4 q-pa-md text-h7"
+                    style="max-width: 140px"
+                  >
+                    <div
+                      style="display: block; "
+                      class="text-bold row"
                     >
-                      Legal Note Company Owner</span
-                    >
-                    <q-btn
-                      color="black"
-                      dense
-                      round
-                      icon="done"
-                      style="margin-bottom: 15px"
-                    ></q-btn>
-                    <div class="text-h7">Legal.pdf</div>
+                      Legal Note Company Owner
+                    </div>
+                    <div class="row">
+                      <q-btn
+                        color="black"
+                        dense
+                        round
+                        icon="done"
+                        style="margin-bottom: 15px"
+                      ></q-btn>
+                    </div>
+                    <div class="text-h7 row">Legal.pdf</div>
                   </div>
                 </div>
               </div>
@@ -251,11 +253,9 @@
                       icon="add"
                       style="margin-bottom: 15px"
                     ></q-btn>
-                    <div class="text-h7">Address Proof.pdf</div>
                   </div>
                 </div>
               </div>
-
             </q-card>
           </div>
         </div>
@@ -283,8 +283,7 @@ import { defineComponent } from "vue";
 export default defineComponent({
   // name: "IndexPage",
   setup() {
-    return {
-    };
+    return {};
   },
 });
 </script>

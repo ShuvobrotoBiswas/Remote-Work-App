@@ -103,6 +103,7 @@
                 <q-file
                   rounded
                   outlined
+                  style="width: 250px"
                   v-model="model"
                   label="upload new picture"
                 >
@@ -116,11 +117,14 @@
                   </template>
                 </q-file>
               </div>
-             <div class="q-pa-md">
-                <q-btn outline style="width:250px" bottom-slots rounded> remove exsting </q-btn>
+              <div class="q-pa-md">
+                <q-btn outline style="width: 250px" bottom-slots rounded>
+                  remove exsting
+                </q-btn>
               </div>
             </div>
-            <div class="col-7">
+            <div class="col-1"></div>
+            <div class="col-6">
               <q-input v-model="completeName" label="Complete name*" />
               <q-input v-model="address" label="Address*" />
               <q-input v-model="billingAddress" label="Billing address*" />
@@ -159,42 +163,43 @@
       >
         <div class="q-pa-md">
           <div class="row">
-            <div class="col-9 text-h6">Company name [Company #2]</div>
+            <div class="col-9 text-h6">Add Company</div>
             <div class="col-6">
               <div class="row justify-between" style="width: 250px">
-                <div class="my-home col-4" style="width: 77px; height: 70px">
+                <div class="my-home col-4" style="width: 130px; height: 130px">
                   <q-img
                     src="~assets/Avator2.png"
-                    style="height: 40px; max-width: 40px"
+                    style="height: 90px; max-width: 90px"
                   >
                   </q-img>
-                  <p class="custom-text-me">Change Logo</p>
-                </div>
-                <div class="col-8">
-                  <strong>Verification status</strong> <br />
-                  <q-btn round icon="bookmark_border" size="7px" color="black"></q-btn>
-                  Verified
-                  <q-btn  round icon="done" outline color="black" size="7px" ></q-btn>
+                  <p class="custom-text-me row flex-center">Change Logo</p>
                 </div>
               </div>
-              <Strong>Company Name</Strong>(Company #1) <br />
-              <div class="q-py-md"></div>
-              <strong>Address:</strong> Via dei Faggi 24 , Rome, 254321, Italy
+              <div class="underline-font">
+                <Strong>Company Name</Strong>(Company #1)
+              </div>
+              <div class="q-py-md underline-font">
+                <strong>Address:</strong> Via dei Faggi 24 , Rome, 254321, Italy
+              </div>
             </div>
             <div class="col-6">
-              <div class="text-h7">
+              <div class="text-h7 underline-font">
                 <strong>Fascial code:</strong> MTS SMI 84R11 Z114H
               </div>
-              <div class="text-h7 q-py-md">
-                <strong>Legal note comapany owner</strong> ✔
+              <div class="q-py-md underline-font q-mr-sm">
+                <strong>Add Legal Note company owner</strong>
+                <span class="q-mr-sm"></span>
+                <q-btn round outline size="5px" icon="add"></q-btn>
               </div>
-              <div class="text-h7">
+              <div class="text-h7 underline-font">
                 <strong>Register number:</strong> 123 456 789
               </div>
-              <div class="text-h7 q-py-md">
+              <div class="text-h7 underline-font q-py-md">
                 <strong>Website:</strong> https://domain.com
               </div>
-              <div class="text-h7"><strong>Phone:</strong> +39 321 654 987</div>
+              <div class="text-h7 underline-font">
+                <strong>Phone:</strong> +39 321 654 987
+              </div>
             </div>
           </div>
         </div>
@@ -279,4 +284,7 @@ export default defineComponent({
 
 .custom-text-me
   font-size: 7px
+
+.underline-font
+  text-decoration: underline
 </style>

@@ -145,27 +145,17 @@
                 >
               </div>
             </div>
-            <div class="row flex-center">
-              <div class="col"></div>
-              <div class="row"></div>
-              <div class="row"></div>
-              <div class="row"></div>
-              <div class="row"></div>
-              <div class="row"></div>
-              <div class="row"></div>
-              <div class="row"></div>
-              <div class="row"></div>
-              <q-btn
-                size="10px"
-                rounded
-                color="black"
-                icon="edit"
-                label="Edit Profile"
-                class="text-white flex-center text-h7"
-              ></q-btn>
-            </div>
           </div>
-
+          <div class="row flex-center q-py-md">
+            <q-btn
+              size="10px"
+              rounded
+              color="black"
+              icon="edit"
+              label="Edit Profile"
+              class="text-white flex-center text-h7"
+            ></q-btn>
+          </div>
           <q-separator />
 
           <!-- Card 2 Div -->
