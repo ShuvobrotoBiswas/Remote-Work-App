@@ -4,12 +4,12 @@
 
     <div class="q-pa-md flex flex-center items-start q-gutter-md">
       <q-card
-        class="my-card this-card q-pa-md  flex-center text-black bg-white"
-        style="max-width: 800px ; min-height: 300px"
+        class="my-card this-card q-pa-md flex-center text-black bg-white"
+        style="max-width: 800px; min-height: 300px"
       >
         <div class="q-pa-md">
           <div class="row">
-            <div class="col-5 flex flex-center text-bold text-h7">
+            <div class="col-5 flex flex-center text-bold my-font">
               I am looking for someone to work on my project.
             </div>
             <div class="col-7">
@@ -23,7 +23,8 @@
               >
               </q-input>
               <div class="q-py-md">
-                <q-btn to="Create-Account-Step3"
+                <q-btn
+                  to="Create-Account-Step3"
                   size="10px"
                   rounded
                   color="black"
@@ -42,15 +43,22 @@
 
     <div class="q-pa-md flex flex-center items-start q-gutter-md">
       <q-card
-        class="my-card this-card q-pa-md  flex-center text-black bg-white"
-        style="max-width: 800px ; min-height: 300px"
+        class="my-card this-card q-pa-md flex-center text-black bg-white"
+        style="max-width: 800px; min-height: 300px"
       >
-        <div class="row" style="min-height:280px">
+        <div class="row" style="min-height: 280px">
           <div class="col-2 flex flex-center">
-            <q-btn round color="black" icon="done"></q-btn>
+            <q-btn
+              round
+              size="10px"
+              class="flex flex-center"
+              outline
+              color="black"
+              icon="done"
+            ></q-btn>
           </div>
           <div class="col-10 flex flex-center">
-            <div class="text-bold  text-h7">
+            <div class="text-bold my-font">
               An email has been send to your address. Please log into email and
               confirm your account.
             </div>
@@ -93,4 +101,7 @@ export default defineComponent({
 .this-card
   // background: rgba(255,0,0,.1)
   border-radius: 30px
+
+.my-font
+  font-size: 15px
 </style>

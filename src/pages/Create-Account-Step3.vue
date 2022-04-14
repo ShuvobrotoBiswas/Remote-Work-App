@@ -6,7 +6,7 @@
 
     <div class=" items-start q-gutter-md">
       <div class="q-pa-md items-start text-bold text-h7 q-gutter-md">
-        <div class="q-py-none">Log into your account.</div>
+        <div class="q-py-none text-bold my-font">Log into your account.</div>
       </div>
       <q-card
         class="my-card flex this-card flex-center text-black bg-white"
@@ -25,6 +25,7 @@
                   rounded
                   color="black"
                   type="submit"
+                  style="width:90px"
                   label="Login"
                   class="text-white text-h7"
                 ></q-btn>
@@ -72,4 +73,7 @@ export default defineComponent({
 .this-card
   // background: rgba(255,0,0,.1)
   border-radius: 30px
+
+.my-font
+  font-size: 15px
 </style>

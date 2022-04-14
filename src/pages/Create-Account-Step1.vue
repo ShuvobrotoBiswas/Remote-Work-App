@@ -9,11 +9,11 @@
       >
         <div class="q-pa-md">
           <div class="row">
-            <div class="col-6 text-bold flex flex-center text-h7">
+            <div class="col-6  flex flex-center text-bold my-font">
               I am looking for someone to work on my project.
             </div>
             <div class="col-6">
-              <q-input label="Email" type="email" v-model="email"> </q-input>
+              <q-input label="Email"  type="email" v-model="email"> </q-input>
               <q-input label="Password" type="password" v-model="password">
               </q-input>
               <q-input
@@ -48,7 +48,7 @@
       >
         <div class="q-pa-md ">
           <div class="row">
-            <div class="col-6 text-bold flex flex-center text-h7">
+            <div class="col-6 text-bold flex flex-center my-font">
               I want to work on a project or get hired.
             </div>
             <div class="col-6">
@@ -117,4 +117,7 @@ export default defineComponent({
 .this-card
   // background: rgba(255,0,0,.1)
   border-radius: 30px
+
+.my-font
+  font-size: 15px
 </style>
