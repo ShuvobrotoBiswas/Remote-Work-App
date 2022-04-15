@@ -35,18 +35,20 @@
                   </template>
                 </q-input>
               </div>
+              <div class="col-12">
+                Search result: 3 contractors found
+                <q-checkbox v-model="checkbox2" color="black"
+                  >Select all
+                </q-checkbox>
+              </div>
               <div class="q-pa-md" style="max-width: 1100px">
-                <p>
-                  Search result: 3 contractors found
-                  <q-checkbox v-model="checkbox2" color="black">Select all </q-checkbox>
-                </p>
                 <div class="row">
                   <div class="row" style="width: 300px">
-                    <div class="" style="max-width: 80px; max-height: 80px">
+                    <div style="max-width: 80px; max-height: 80px">
                       <q-img
                         class="justify-around"
                         style="width: 60px; height: 60px"
-                        src="~assets/Avator13.png"
+                        src="~assets/Avator18.png"
                       ></q-img>
                     </div>
                     <div
@@ -57,7 +59,10 @@
                       Senior Backend Developer
                     </div>
                     <div class="col">
-                      <q-checkbox v-model="checkbox2" color="black"></q-checkbox>
+                      <q-checkbox
+                        v-model="checkbox2"
+                        color="black"
+                      ></q-checkbox>
                     </div>
                   </div>
                   <div class="row" style="width: 300px">
@@ -65,7 +70,7 @@
                       <q-img
                         class="justify-around"
                         style="width: 60px; height: 60px"
-                        src="~assets/Avator13.png"
+                        src="~assets/Avator10.png"
                       ></q-img>
                     </div>
                     <div
@@ -76,7 +81,10 @@
                       Middle Backend Developer
                     </div>
                     <div class="col">
-                      <q-checkbox v-model="checkbox2" color="black"></q-checkbox>
+                      <q-checkbox
+                        v-model="checkbox2"
+                        color="black"
+                      ></q-checkbox>
                     </div>
                   </div>
                   <div class="row" style="width: 300px">
@@ -84,7 +92,7 @@
                       <q-img
                         class="justify-around"
                         style="width: 60px; height: 60px"
-                        src="~assets/Avator13.png"
+                        src="~assets/Avator18.png"
                       ></q-img>
                     </div>
                     <div
@@ -95,7 +103,10 @@
                       Java Developer
                     </div>
                     <div class="col">
-                      <q-checkbox v-model="checkbox2" color="black"></q-checkbox>
+                      <q-checkbox
+                        v-model="checkbox2"
+                        color="black"
+                      ></q-checkbox>
                     </div>
                   </div>
                 </div>
@@ -114,6 +125,7 @@
             class="text-white text-h7"
           ></q-btn>
         </div>
+        <div class="col-2"></div>
         <div>
           <q-btn
             size="15px"
