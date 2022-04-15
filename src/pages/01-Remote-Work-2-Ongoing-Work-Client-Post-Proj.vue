@@ -8,7 +8,7 @@
         <q-card-section>
           <div class="text-h6 q-pa-md flex-left">Project Category</div>
           <div class="row">
-            <div class="col-4" style="max-width: 200px">
+            <div class="col-3">
               <q-radio
                 left-label
                 v-model="shape"
@@ -18,7 +18,7 @@
                 label="Well Defined Project"
               />
             </div>
-            <div class="col-3" style="max-width: 163px">
+            <div class="col-3">
               <q-radio
                 left-label
                 v-model="shape"
@@ -28,7 +28,7 @@
                 label="Ongoing Work"
               />
             </div>
-            <div class="col-3" style="max-width: 180px">
+            <div class="col-3">
               <q-radio
                 left-label
                 v-model="shape"
@@ -38,7 +38,7 @@
                 label="Market Research"
               />
             </div>
-            <div class="col" style="width: 240px">
+            <div class="col-3">
               <q-radio
                 left-label
                 v-model="shape"
@@ -50,7 +50,7 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-6">
+            <div class="col-5">
               <p class="text-h7 text-bold">Job name</p>
               <q-input
                 outlined
@@ -59,13 +59,14 @@
                 placeholder=" Designer"
               ></q-input>
             </div>
+            <div class="col-1"></div>
             <div class="col-6">
               <p class="text-h7 text-bold">Description</p>
               <q-input outlined v-model="input2" type="textarea"></q-input>
             </div>
           </div>
           <div class="row">
-            <div class="col-6">
+            <div class="col-5">
               <q-radio
                 left-label
                 v-model="shape1"
@@ -75,6 +76,7 @@
                 label="Hiring more than one person"
               />
             </div>
+            <div class="col-1"></div>
             <div class="col-6">
               <p class="text-h7 text-bold">Weekly salary</p>
               <q-input
@@ -86,7 +88,7 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-6">
+            <div class="col-5">
               <p class="text-h7">
                 <span class="text-bold">Language of communication </span>
                 <span>(if it is not English)</span>
@@ -94,6 +96,7 @@
 
               <q-select v-model="language" :options="languageOptions" />
             </div>
+            <div class="col-1"></div>
             <div class="col-6">
               <p class="text-h7 text-bold">
                 Minimum requirements of the job-Education
@@ -103,7 +106,7 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-6">
+            <div class="col-5">
               <p class="text-h7">
                 <span class="text-bold"
                   >Minimum requirements of the job-Experience
@@ -111,6 +114,7 @@
               </p>
               <q-select v-model="experience" :options="experienceOptions" />
             </div>
+            <div class="col-1"></div>
             <div class="col-6">
               <p class="text-h7 text-bold">
                 Minimum requirements of the job-Skills
@@ -173,17 +177,23 @@
               </q-card-section>
             </q-card>
             <div class="q-py-md"></div>
-            <q-card flat class="my-card bid3 bg-grey-3" style="max-width: 1000px">
+
+
+            <q-card
+              flat
+              class="my-card bid3 bg-grey-3"
+              style="max-width: 1000px"
+            >
               <q-card-section>
-                <div class="row items-center no-wrap">
-                  <div class="col">
+                <div class="row items-center">
+                  <div class="col-11">
                     <div class="text-h7">
-                      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry.
                     </div>
                   </div>
-                  <div class="col-auto">
-                    <q-btn color="black" round flat icon="add">
-                    </q-btn>
+                  <div class="col-1">
+                    <q-btn color="black" round flat icon="add"> </q-btn>
                   </div>
                 </div>
               </q-card-section>
@@ -195,12 +205,19 @@
             unelevated
             size="10px"
             rounded
-            style="width:100px"
+            style="width: 100px"
             color="grey-6"
             label="Back"
             class="q-mr-md"
           />
-          <q-btn unelevated size="10px" style="width:120px" rounded color="black" label="Post Project" />
+          <q-btn
+            unelevated
+            size="10px"
+            style="width: 120px"
+            rounded
+            color="black"
+            label="Post Project"
+          />
         </div>
       </div>
     </div>
@@ -258,5 +275,4 @@ export default defineComponent({
 
 .bid3
   border: 1px solid rgba(86,61,124,.2)
-
 </style>

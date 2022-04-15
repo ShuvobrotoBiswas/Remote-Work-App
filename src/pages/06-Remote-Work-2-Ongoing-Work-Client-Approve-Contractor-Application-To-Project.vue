@@ -7,198 +7,205 @@
     <div class="row flex-center items-start">
       <div style="max-width: 950px">
         <div class="q-pa-md row">
-              <q-card-section>
-                <div class="text-h5 text-bold q-py-md text-left">
-                  Application approval
-                </div>
-                <q-separator />
+          <q-card-section>
+            <div class="text-h5 text-bold q-py-md text-left">
+              Application approval
+            </div>
+            <q-separator />
 
+            <div class="row">
+              <div class="col-3">
+                <div class="text-h7 row flex-center text-bold">Anna Doyle</div>
+                <div class="text-h7 row flex-center">
+                  <q-img
+                    sizes="100px"
+                    style="max-width: 80px; max-height: 80px"
+                    src="~/assets/Avator10.png"
+                  ></q-img>
+                </div>
+                <div class="text-h7 flex-center row">
+                  <span class="q-mr-sm">Unverified</span>
+                </div>
+                <div class="text-h7 flex-center row">
+                  <q-btn
+                    outline
+                    round
+                    size="8px"
+                    color="grey"
+                    icon="military_tech"
+                  />
+                </div>
+                <div class="text-h7 row flex-center">
+                  <div class="text-h7">
+                    <q-rating
+                      v-model="ratingModel"
+                      size="20px"
+                      :max="5"
+                      color="black"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="col-9">
+                <div class="text-h7 row text-bold">
+                  Programmer PHP/Java/Python
+                </div>
+                <div class="my-font row">
+                  {{ lorem }}
+                </div>
                 <div class="row">
-                  <div class="col-3">
-                    <div class="text-h7 row flex-center text-bold">
-                      Anna Doyle
-                    </div>
-                    <div class="text-h7 row flex-center">
-                      <q-img
-                        sizes="100px"
-                        style="max-width: 80px; max-height: 80px"
-                        src="~/assets/Avator10.png"
-                      ></q-img>
-                    </div>
-                    <div class="text-h7 flex-center row">
-                      <span class="q-mr-sm">Unverified</span>
+                  <div class="col">
+                    <div class="text-h7 text-bold">Requested price</div>
+                    <div class="text-h7">€500</div>
+                  </div>
+                  <div class="col">
+                    <div class="text-h7 text-bold">Availability date</div>
+                    <div class="text-h7">02.15.2022</div>
+                  </div>
+                  <div class="col">
+                    <div class="text-h7 text-bold">Skills</div>
+                    <div class="text-h7">
                       <q-btn
                         outline
-                        round
-                        size="8px"
-                        color="grey"
-                        icon="military_tech"
+                        size="6px"
+                        rounded
+                        class="q-mr-sm"
+                        color="black"
+                        label="PHP"
                       />
-                    </div>
-                    <div class="text-h7 row flex-center">
-                      <div class="text-h7">
-                        <q-rating
-                          v-model="ratingModel"
-                          size="20px"
-                          :max="5"
-                          color="black"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-9">
-                    <div class="text-h7 row text-bold">
-                      Programmer PHP/Java/Python
-                    </div>
-                    <div class="my-font row">
-                      {{ lorem }}
-                    </div>
-                    <div class="row">
-                      <div class="col">
-                        <div class="text-h7 text-bold">Requested price</div>
-                        <div class="text-h7">€500</div>
-                      </div>
-                      <div class="col">
-                        <div class="text-h7 text-bold">Availability date</div>
-                        <div class="text-h7">02.15.2022</div>
-                      </div>
-                      <div class="col">
-                        <div class="text-h7 text-bold">Skills</div>
-                        <div class="text-h7">
-                          <q-btn
-                            outline
-                            size="6px"
-                            rounded
-                            class="q-mr-sm"
-                            color="black"
-                            label="PHP"
-                          />
-                          <q-btn
-                            outline
-                            size="6px"
-                            rounded
-                            class="q-mr-sm"
-                            color="black"
-                            label="Java"
-                          />
-                          <q-btn
-                            outline
-                            size="6px"
-                            rounded
-                            color="black"
-                            label="Python"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row text-h7 text-bold">
-                      Answer to your questions
-                    </div>
-                    <div class="row text-h7 my-font bg-grey-4">
-                      <strong class="q-mr-sm">Q</strong>
-                      {{ question }}
-                    </div>
-                    <div class="row text-h7 my-font text-white bg-grey-5">
-                      <strong class="q-mr-sm">A</strong>
-                      {{ answer }}
-                    </div>
-                    <div class="row text-h7 my-font bg-grey-4">
-                      <strong class="q-mr-sm">Q</strong>
-                      {{ question }}
-                    </div>
-                    <div class="row text-h7 my-font text-white bg-grey-5">
-                      <strong class="q-mr-sm">A</strong>
-                      {{ answer }}
-                    </div>
-                    <div class="row">
-                      <p class="text-h7 text-bold">Type of contractor</p>
-                    </div>
-                    <div>
-                      <p class="text-h7">Freelancer</p>
-                    </div>
-                    <div class="my-card row" style="max-width: 1000px">
-                      <p class="col-9 text-bold">
-                        Relevent projects from you portfolio
-                      </p>
-                      <div class="row flex-center bid1 text-center">
-                        <div class="col my-home q-mr-sm">
-                          <q-btn
-                            round
-                            color="grey"
-                            class="flex-center"
-                            icon="arrow_back_ios_new"
-                          />
-                        </div>
-                        <div class="col my-home bid2 my-font q-mr-sm my-box">
-                          <q-img
-                            src="~assets/Avator24.png"
-                            class="image1"
-                            style="width: 40px; height: 40px"
-                          >
-                          </q-img>
-                          <div class="q-pa-mg text-center custom-text-me">
-                            LOGO Design
-                          </div>
-                        </div>
-                        <div class="col my-home bid2 my-font q-mr-sm my-box">
-                          <q-img
-                            src="~assets/Avator25.png"
-                            class="image1"
-                            style="width: 40px; height: 40px"
-                          >
-                          </q-img>
-                          <div class="q-pa-mg text-center custom-text-me">
-                            Website Design
-                          </div>
-                        </div>
-                        <div class="col my-home bid2 my-font q-mr-sm my-box">
-                          <q-img
-                            src="~assets/Avator26.png "
-                            class="image1"
-                            style="width: 40px; height: 40px"
-                          >
-                          </q-img>
-                          <div class="q-pa-mg text-center custom-text-me">
-                            UX Design
-                          </div>
-                        </div>
-
-                        <div class="col-1 my-home q-mr-sm">
-                          <q-btn
-                            round
-                            color="black"
-                            class="flex-center"
-                            icon="arrow_forward_ios"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row flex-center">
-                      <div>
-                        <q-btn
-                          size="8px"
-                          rounded
-                          color="black"
-                          label="Decline"
-                          class="text-white text-h7"
-                        ></q-btn>
-                      </div>
-
-                      <div>
-                        <q-btn
-                          size="8px"
-                          rounded
-                          color="black"
-                          label="Approve"
-                          class="text-white text-h7"
-                        ></q-btn>
-                      </div>
+                      <q-btn
+                        outline
+                        size="6px"
+                        rounded
+                        class="q-mr-sm"
+                        color="black"
+                        label="Java"
+                      />
+                      <q-btn
+                        outline
+                        size="6px"
+                        rounded
+                        color="black"
+                        label="Python"
+                      />
                     </div>
                   </div>
                 </div>
-              </q-card-section>
+                <div class="row text-h7 text-bold">
+                  Answer to your questions
+                </div>
+                <div class="row text-h7 my-font bg-grey-4" style="max-width:400px">
+                  <strong class="q-mr-sm">Q</strong>
+                  {{ question }}
+                </div>
+                <div class="row text-h7 my-font text-white bg-grey-5">
+                  <strong class="q-mr-sm">A</strong>
+                  {{ answer }}
+                </div>
+                <div class="row text-h7 my-font bg-grey-4" style="max-width:400px">
+                  <strong class="q-mr-sm">Q</strong>
+                  {{ question }}
+                </div>
+                <div class="row text-h7 my-font text-white bg-grey-5">
+                  <strong class="q-mr-sm">A</strong>
+                  {{ answer }}
+                </div>
+                <div class="row">
+                  <p class="text-h7 text-bold">Type of contractor</p>
+                </div>
+                <div>
+                  <p class="text-h7">Freelancer</p>
+                </div>
+                <p class="col-9 text-bold">
+                  Relevent projects from you portfolio
+                </p>
+                <div
+                  class="my-card flex-center bid1 row"
+                  style="max-width: 1000px"
+                >
+                  <div class="col my-home q-mr-sm">
+                    <q-btn
+                      round
+                      color="grey"
+                      class="flex-center"
+                      icon="arrow_back_ios_new"
+                    />
+                  </div>
+                  <div class="col my-home bid2 my-font q-mr-sm my-box">
+                    <div class="row flex-center">
+                      <q-img
+                        src="~assets/Avator24.png"
+                        class="image1"
+                        style="width: 40px; height: 40px"
+                      >
+                      </q-img>
+                    </div>
+                    <div class="q-pa-mg text-center custom-text-me">
+                      LOGO Design
+                    </div>
+                  </div>
+                  <div class="col my-home bid2 my-font q-mr-sm my-box">
+                    <div class="row flex-center">
+                      <q-img
+                        src="~assets/Avator25.png"
+                        class="image1"
+                        style="width: 40px; height: 40px"
+                      >
+                      </q-img>
+                    </div>
+                    <div class="q-pa-mg text-center custom-text-me">
+                      Website Design
+                    </div>
+                  </div>
+                  <div class="col my-home bid2 my-font q-mr-sm my-box">
+                    <div class="row flex-center">
+                      <q-img
+                        src="~assets/Avator26.png"
+                        class="image1"
+                        style="width: 40px; height: 40px"
+                      >
+                      </q-img>
+                    </div>
+                    <div class="q-pa-mg text-center custom-text-me">
+                      UX Design
+                    </div>
+                  </div>
+
+                  <div class="col-1 my-home q-mr-sm">
+                    <q-btn
+                      round
+                      color="grey"
+                      class="flex-center"
+                      icon="arrow_forward_ios"
+                    />
+                  </div>
+                </div>
+                <div class="row flex-center">
+                  <div>
+                    <q-btn
+                      size="8px"
+                      rounded
+                      color="black"
+                      label="Decline"
+                      class="text-white text-h7"
+                    ></q-btn>
+                  </div>
+                  <div class="col-1"></div>
+                  <div>
+                    <q-btn
+                      size="8px"
+                      rounded
+                      color="black"
+                      label="Approve"
+                      class="text-white text-h7"
+                    ></q-btn>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
+          </q-card-section>
+        </div>
+      </div>
     </div>
   </div>
 </template>

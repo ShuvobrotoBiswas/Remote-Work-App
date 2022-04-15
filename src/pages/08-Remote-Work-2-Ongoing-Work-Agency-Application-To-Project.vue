@@ -121,97 +121,103 @@
                     </div>
                   </div>
                 </div>
-
-                <div class="my-card row" style="max-width: 1000px">
-                  <p class="col-9 text-bold">
-                    Relevent projects from you portfolio
-                  </p>
-                  <div class="row flex-center bid1 text-center">
-                    <div class="col my-home q-mr-sm">
-                      <q-btn
-                        round
-                        color="grey"
-                        class="flex-center"
-                        icon="arrow_back_ios_new"
-                      />
-                    </div>
-                    <div class="col my-home bid2 my-font q-mr-sm my-box1">
+                <p class="col-9 text-bold">
+                   Select relevent projects from you portfolio
+                </p>
+                <div
+                  class="my-card flex-center bid1 row"
+                  style="max-width: 1000px"
+                >
+                  <div class="col my-home q-mr-sm">
+                    <q-btn
+                      round
+                      color="grey"
+                      class="flex-center"
+                      icon="arrow_back_ios_new"
+                    />
+                  </div>
+                  <div class="col my-home bid2 my-font q-mr-sm my-box1">
+                    <div class="row flex-center">
                       <q-img
                         src="~assets/Avator24.png"
                         class="image1"
                         style="width: 40px; height: 40px"
                       >
                       </q-img>
-                      <div class="q-pa-mg text-center custom-text-me">
-                        LOGO Design
-                      </div>
                     </div>
-                    <div class="col my-home bid2 my-font q-mr-sm my-box1">
+                    <div class="q-pa-mg text-center custom-text-me">
+                      LOGO Design
+                    </div>
+                  </div>
+                  <div class="col my-home bid2 my-font q-mr-sm my-box1">
+                     <div class="row flex-center">
                       <q-img
                         src="~assets/Avator25.png"
                         class="image1"
                         style="width: 40px; height: 40px"
                       >
                       </q-img>
-                      <div class="q-pa-mg text-center custom-text-me">
-                        Website Design
-                      </div>
                     </div>
-                    <div class="col my-home bid2 my-font q-mr-sm my-box1">
+                    <div class="q-pa-mg text-center custom-text-me">
+                      Website Design
+                    </div>
+                  </div>
+                  <div class="col my-home bid2 my-font q-mr-sm my-box1">
+                     <div class="row flex-center">
                       <q-img
-                        src="~assets/Avator26.png "
+                        src="~assets/Avator26.png"
                         class="image1"
                         style="width: 40px; height: 40px"
                       >
                       </q-img>
-                      <div class="q-pa-mg text-center custom-text-me">
-                        UX Design
-                      </div>
                     </div>
-                    <div class="col my-home bid2 my-font my-box1 q-mr-sm">
-                      <div class="col">
-                        <q-btn
-                          flat
-                          size="5px"
-                          color="black"
-                          padding="5px"
-                          icon="check_box_outline_blank"
-                        />
-                        <q-btn
-                          flat
-                          size="5px"
-                          color="black"
-                          padding="5px"
-                          icon="check_box_outline_blank"
-                        />
-                      </div>
-                      <div class="col">
-                        <q-btn
-                          flat
-                          size="5px"
-                          color="black"
-                          padding="5px"
-                          icon="check_box_outline_blank"
-                        />
-                        <q-btn
-                          flat
-                          size="5px"
-                          color="black"
-                          padding="5px"
-                          icon="add"
-                        />
-                      </div>
-                      Others
+                    <div class="q-pa-mg text-center custom-text-me">
+                      UX Design
                     </div>
-
-                    <div class="col-1 my-home q-mr-sm">
+                  </div>
+                  <div class="col my-home bid2 my-font my-box1 q-mr-sm">
+                    <div class="row flex-center">
                       <q-btn
-                        round
+                        flat
+                        size="5px"
                         color="black"
-                        class="flex-center"
-                        icon="arrow_forward_ios"
+                        padding="5px"
+                        icon="check_box_outline_blank"
+                      />
+                      <q-btn
+                        flat
+                        size="5px"
+                        color="black"
+                        padding="5px"
+                        icon="check_box_outline_blank"
                       />
                     </div>
+                    <div class="row flex-center">
+                      <q-btn
+                        flat
+                        size="5px"
+                        color="black"
+                        padding="5px"
+                        icon="check_box_outline_blank"
+                      />
+                      <q-btn
+                        flat
+                        size="5px"
+                        color="black"
+                        padding="5px"
+                        icon="add"
+                      />
+                    </div>
+                    <div class="row flex-center">Others</div>
+                  </div>
+
+                  <div class="col-1 my-home q-mr-sm">
+                    <q-btn
+                      round
+                      color="black"
+                      class="flex-center"
+                      icon="arrow_forward_ios"
+                    />
                   </div>
                 </div>
                 <div class="flex-break q-pa-md"></div>
@@ -225,7 +231,7 @@
                     be involved in the project.
                   </p>
                   <div class="row" style="max-width: 900px">
-                    <div class="col">
+                    <div class="col text-center">
                       <q-item tag="label" v-ripple>
                         <q-item-section>
                           <q-item-label class="text-bold profile"
@@ -243,7 +249,7 @@
                         </q-item-section>
                       </q-item>
                     </div>
-                    <div class="col">
+                    <div class="col text-center">
                       <q-item tag="label" v-ripple>
                         <q-item-section>
                           <q-item-label class="text-bold profile"
@@ -262,7 +268,7 @@
                         </q-item-section>
                       </q-item>
                     </div>
-                    <div class="col">
+                    <div class="col text-center">
                       <q-item tag="label" v-ripple>
                         <q-item-section>
                           <q-item-label class="text-bold profile"
@@ -284,7 +290,7 @@
                   </div>
                 </div>
 
-                <div class="row" style="max-width:1000px">
+                <div class="row" style="max-width: 1000px">
                   <div class="col my-box1 my-home q-mr-sm">
                     <q-btn
                       round

@@ -1,11 +1,11 @@
 <template>
   <div>
- <!-- Body Div  From Sub-Header Component-->
+    <!-- Body Div  From Sub-Header Component-->
     <SubHeader />
     <!-- Card 1 Div -->
     <div class="row q-pa-md flex-center items-start">
       <div style="width: 1000px">
-          <div class="q-pa-md">
+        <div class="q-pa-md">
           <div class="row timeline-wrap" style="max-width: 1000px">
             <div id="timeline"></div>
             <div class="marker mfirst timeline-icon one">
@@ -25,65 +25,77 @@
             </div>
           </div>
         </div>
-        <p class="q-pa-md text-h6 text-bold">2. PAYMENT & BUDGET</p>
+        <p class="q-pa-md text-h5 text-bold">3. PAYMENT & BUDGET</p>
 
         <div class="q-pa-md">
           <p class="text-bold">Project Duration</p>
-          <div class="q-gutter-sm">
-            <q-radio
-              left-label
-              color="black"
-              v-model="shape"
-              val="line"
-              label="Max. 2 Weeks"
-            />
-            <q-radio
-              left-label
-              color="black"
-              v-model="shape"
-              val="rectangle"
-              label="Max. 1 Month"
-            />
-            <q-radio
-              left-label
-              color="black"
-              v-model="shape"
-              val="rectangle"
-              label="Max. 3 Months"
-            />
-            <q-radio
-              left-label
-              color="black"
-              v-model="shape"
-              val="rectangle"
-              label="More than 3 Months"
-            />
+          <div class="row">
+            <div class="col-3">
+              <q-radio
+                left-label
+                color="black"
+                v-model="shape"
+                val="line"
+                label="Max. 2 Weeks"
+              />
+            </div>
+            <div class="col-3">
+              <q-radio
+                left-label
+                color="black"
+                v-model="shape"
+                val="rectangle"
+                label="Max. 1 Month"
+              />
+            </div>
+            <div class="col-3">
+              <q-radio
+                left-label
+                color="black"
+                v-model="shape"
+                val="rectangle"
+                label="Max. 3 Months"
+              />
+            </div>
+            <div class="col-3">
+              <q-radio
+                left-label
+                color="black"
+                v-model="shape"
+                val="rectangle"
+                label="More than 3 Months"
+              />
+            </div>
           </div>
         </div>
         <div class="q-pa-md">
           <p class="text-bold text-h6">Payment</p>
           <p class="text-weight-bold">Type of Payment</p>
-          <div class="q-gutter-sm">
-            <q-radio
+          <div class="row">
+            <div class="col-3">
+              <q-radio
               left-label
               color="black"
               v-model="shape"
               val="line"
               label="Hourly Payment"
             />
-            <q-radio
+            </div>
+            <div class="col-3">
+              <q-radio
               left-label
               color="black"
               v-model="shape"
               val="line"
               label="Fixed Price"
             />
+            </div>
           </div>
         </div>
 
         <div class="q-pa-md">
           <p class="text-bold">Rate of Payment</p>
-          <fieldset  style="border-radius: 7px ; max-width:200px ; height:70px">
+          <fieldset style="border-radius: 7px; max-width: 200px; height: 70px">
             <legend>Maximum Rate</legend>
             <q-input borderless autofocus v-model="text" placeholder="500" />
           </fieldset>
@@ -94,12 +106,19 @@
             unelevated
             size="10px"
             rounded
-            style="width:100px"
+            style="width: 100px"
             color="grey-6"
             label="Back"
             class="q-mr-md"
           />
-          <q-btn unelevated size="10px" style="width:100px" rounded color="black" label="Next" />
+          <q-btn
+            unelevated
+            size="10px"
+            style="width: 100px"
+            rounded
+            color="black"
+            label="Next"
+          />
         </div>
       </div>
     </div>

@@ -16,22 +16,21 @@
                 <q-separator />
 
                 <div class="row">
-                 <div class="col-3">
+                  <div class="col-3">
                     <div class="text-h7 row flex-center text-bold">
                       Anna Doyle
                     </div>
                     <div class="text-h7 row flex-center">
                       <q-img
                         sizes="100px"
-                        style="
-                          max-width: 80px;
-                          max-height: 80px;
-                        "
+                        style="max-width: 80px; max-height: 80px"
                         src="~/assets/Avator10.png"
                       ></q-img>
                     </div>
                     <div class="text-h7 flex-center row">
-                      <span class="q-mr-sm">Unverified</span>
+                      <span>Unverified</span>
+                    </div>
+                    <div class="text-h7 flex-center row">
                       <q-btn
                         outline
                         round
@@ -116,16 +115,15 @@
                       {{ answer }}
                     </div>
                     <div class="row">
-                        <p class="text-h7 text-bold">Type of contractor</p>
+                      <p class="text-h7 text-bold">Type of contractor</p>
                     </div>
                     <div>
-                        <p class="text-h7">Freelancer</p>
+                      <p class="text-h7">Freelancer</p>
                     </div>
-                    <div class="my-card row" style="max-width: 1000px">
-                      <p class="col-9 text-bold">
-                        Relevent projects from you portfolio
-                      </p>
-                      <div class="row flex-center bid1 text-center">
+                    <p class="col-9 text-bold">
+                      Relevent projects from you portfolio
+                    </p>
+                    <div class="my-card flex-center bid1 row" style="max-width: 1000px">
                         <div class="col my-home q-mr-sm">
                           <q-btn
                             round
@@ -135,34 +133,40 @@
                           />
                         </div>
                         <div class="col my-home bid2 my-font q-mr-sm my-box">
-                          <q-img
+                          <div class="row flex-center">
+                            <q-img
                             src="~assets/Avator24.png"
                             class="image1"
                             style="width: 40px; height: 40px"
                           >
                           </q-img>
+                          </div>
                           <div class="q-pa-mg text-center custom-text-me">
                             LOGO Design
                           </div>
                         </div>
                         <div class="col my-home bid2 my-font q-mr-sm my-box">
-                          <q-img
+                          <div class="row flex-center">
+                            <q-img
                             src="~assets/Avator25.png"
                             class="image1"
                             style="width: 40px; height: 40px"
                           >
                           </q-img>
+                          </div>
                           <div class="q-pa-mg text-center custom-text-me">
                             Website Design
                           </div>
                         </div>
                         <div class="col my-home bid2 my-font q-mr-sm my-box">
-                          <q-img
-                            src="~assets/Avator26.png "
+                         <div class="row flex-center">
+                            <q-img
+                            src="~assets/Avator26.png"
                             class="image1"
                             style="width: 40px; height: 40px"
                           >
                           </q-img>
+                          </div>
                           <div class="q-pa-mg text-center custom-text-me">
                             UX Design
                           </div>
@@ -171,12 +175,11 @@
                         <div class="col-1 my-home q-mr-sm">
                           <q-btn
                             round
-                            color="black"
+                            color="grey"
                             class="flex-center"
                             icon="arrow_forward_ios"
                           />
                         </div>
-                      </div>
                     </div>
                     <div class="row flex-center">
                       <div>
@@ -188,7 +191,7 @@
                           class="text-white text-h7"
                         ></q-btn>
                       </div>
-
+                      <div class="col-1"></div>
                       <div>
                         <q-btn
                           size="8px"
@@ -206,22 +209,21 @@
 
                 <q-separator />
                 <div class="row">
-                 <div class="col-3">
-                     <div class="text-h7 row flex-center text-bold">
+                  <div class="col-3">
+                    <div class="text-h7 row flex-center text-bold">
                       Avraam Iancu
                     </div>
                     <div class="text-h7 row flex-center">
                       <q-img
                         sizes="100px"
-                        style="
-                          max-width: 80px;
-                          max-height: 80px;
-                        "
+                        style="max-width: 80px; max-height: 80px"
                         src="~/assets/Avator17.png"
                       ></q-img>
                     </div>
                     <div class="text-h7 flex-center row">
-                      <span class="q-mr-sm">Verified</span>
+                      <span>Verified</span>
+                    </div>
+                    <div class="text-h7 flex-center row">
                       <q-btn
                         round
                         size="8px"
@@ -301,15 +303,14 @@
                     <div class="text-h7 row flex-center">
                       <q-img
                         sizes="100px"
-                        style="
-                          max-width: 80px;
-                          max-height: 80px;
-                        "
+                        style="max-width: 80px; max-height: 80px"
                         src="~/assets/Avator18.png"
                       ></q-img>
                     </div>
                     <div class="text-h7 flex-center row">
-                      <span class="q-mr-sm">Verified</span>
+                      <span>Verified</span>
+                    </div>
+                    <div class="text-h7 flex-center row">
                       <q-btn
                         round
                         size="8px"
@@ -383,8 +384,7 @@
                 <q-separator />
                 <div class="row flex-center q-pa-md">
                   <q-btn
-                    size="6px"
-                    style="width: 70px"
+                    size="8px"
                     rounded
                     color="black"
                     label="show more"
@@ -472,5 +472,4 @@ export default defineComponent({
   height: 80px
   width: 80px
   border-radius: 7px
-
 </style>

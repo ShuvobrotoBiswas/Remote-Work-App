@@ -1,101 +1,74 @@
 <template>
   <div>
-    <!-- Body Div -->
-    <div class="flex-break"></div>
-    <div class="text-h7 text-center">Hi Florin, welcome to your dashboard!</div>
-    <div class="flex-break q-py-md"></div>
-    <q-separator />
-    <div class="">
-      <div class="row">
-        <div class="col"></div>
-        <div class="col">
-          <div class="text-black text-h7 text-center">
-            <q-btn dense flat color="black" icon="person"></q-btn>
-            <div>Profile</div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="text-black text-h7 text-center">
-            <q-btn dense flat color="black" icon="addchart"></q-btn>
-            <div>Post a Project</div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="text-black text-h7 text-center">
-            <q-btn
-              dense
-              flat
-              color="black"
-              icon="insert_chart_outlined"
-            ></q-btn>
-            <div>Projects</div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="text-black text-h7 text-center">
-            <q-btn dense flat color="black" icon="mark_email_unread"></q-btn>
-            <div>Messages</div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="text-black text-h7 text-center">
-            <q-btn dense flat color="black" icon="local_atm"></q-btn>
-            <div>Accounts</div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="text-black text-h7 text-center">
-            <q-btn dense flat color="black" icon="tune"></q-btn>
-            <div>Settings</div>
-          </div>
-        </div>
-        <div class="col"></div>
-      </div>
-    </div>
-    <q-separator />
-
+    <!-- Body Div  From Sub-Header Component-->
+    <SubHeader />
     <div class="row q-pa-md flex-center items-start">
       <div style="width: 1000px">
-        <div class="q-mt-xl">
-          <TimeLine />
+        <div class="q-pa-md">
+          <div class="row timeline-wrap" style="max-width: 1000px">
+            <div id="timeline"></div>
+            <div class="marker mfirst timeline-icon one">
+              <p>1</p>
+            </div>
+            <div class="marker m2 timeline-icon two">
+              <p>2</p>
+            </div>
+            <div class="marker m3 timeline-icon three">
+              <p>3</p>
+            </div>
+            <div class="marker m4 timeline-icon four">
+              <p>4</p>
+            </div>
+            <div class="marker mlast timeline-icon four">
+              <p>5</p>
+            </div>
+          </div>
         </div>
-        <h5 class="text-bold">1. DEFINE PROJECT</h5>
-        <h6 class="text-bold">Project Catagory</h6>
-        <div class="q-gutter-sm text-bold">
-          <q-radio
-            left-label
-            color="black"
-            v-model="shape"
-            val="line"
-            label="Well Defined Project"
-          />
-          <q-radio
-            left-label
-            color="black"
-            v-model="shape"
-            val="rectangle"
-            label="Ongoing Work"
-          />
-          <q-radio
-            left-label
-            color="black"
-            v-model="shape"
-            val="ellipse"
-            label="Market Research"
-          />
-          <q-radio
-            left-label
-            color="black"
-            v-model="shape"
-            val="polygon"
-            label="Guaranted Prize Contest"
-          />
-        </div>
-        <div>
-          <q-separator />
+        <div class="q-pa-md">
+          <h5 class="text-bold">1. DEFINE PROJECT</h5>
+          <h6 class="text-bold">Project Catagory</h6>
+          <div class="row text-bold">
+            <div class="col">
+              <q-radio
+                left-label
+                color="black"
+                v-model="shape"
+                val="line"
+                label="Well Defined Project"
+              />
+            </div>
+            <div class="col">
+              <q-radio
+                left-label
+                color="black"
+                v-model="shape"
+                val="rectangle"
+                label="Ongoing Work"
+              />
+            </div>
+            <div class="col">
+              <q-radio
+                left-label
+                color="black"
+                v-model="shape"
+                val="ellipse"
+                label="Market Research"
+              />
+            </div>
+            <div class="col">
+              <q-radio
+                left-label
+                color="black"
+                v-model="shape"
+                val="polygon"
+                label="Guaranted Prize Contest"
+              />
+            </div>
+          </div>
+
           <div>
             <h6 class="text-bold">Project info</h6>
-            <fieldset style="border-radius:5px">
+            <fieldset style="border-radius: 5px">
               <legend>Project Title*</legend>
               <q-input
                 borderless
@@ -109,7 +82,7 @@
               dense-toggle
               expand-separator
               label="Project Catagory*"
-              style="max-width: 350px"
+              style="max-width: 250px"
             >
               <q-card class="bg-grey-2">
                 <q-card-section>
@@ -120,7 +93,7 @@
                 </q-card-section>
               </q-card>
             </q-expansion-item>
-            <fieldset class="q-mt-md" style="border-radius:5px">
+            <fieldset class="q-mt-md" style="border-radius: 5px">
               <legend>Project Description*</legend>
               <q-input
                 borderless
@@ -128,7 +101,7 @@
                 placeholder="Lorem ipsum dolor sit amet"
               />
             </fieldset>
-            <div class="row">
+            <div class="row q-py-md">
               <q-btn
                 class="q-mt-md"
                 color="black"
@@ -137,20 +110,53 @@
               />
             </div>
             <div class="row">
-          <q-btn unelevated size="10px" class="q-mr-sm" rounded   outline icon-right="cancel" color="black" label="Color Scheme.jpg " />
-          <q-btn unelevated size="10px" class="q-mr-sm" rounded outline icon-right="cancel" color="black" label="Brand identity guidelines.pdf" />
-          <q-btn unelevated size="10px" class="q-mr-sm" rounded outline icon-right="cancel" color="black" label="brief.doc" />
-
+              <q-btn
+                unelevated
+                size="10px"
+                class="q-mr-sm"
+                rounded
+                outline
+                icon-right="cancel"
+                color="black"
+                label="Color Scheme.jpg "
+              />
+              <q-btn
+                unelevated
+                size="10px"
+                class="q-mr-sm"
+                rounded
+                outline
+                icon-right="cancel"
+                color="black"
+                label="Brand identity guidelines.pdf"
+              />
+              <q-btn
+                unelevated
+                size="10px"
+                class="q-mr-sm"
+                rounded
+                outline
+                icon-right="cancel"
+                color="black"
+                label="brief.doc"
+              />
             </div>
 
             <div class="row q-pa-md my-font">
               <p>* Fields marked with "*" are mandatory.</p>
             </div>
           </div>
-        </div>
 
-        <div class="flex flex-center q-pa-md">
-          <q-btn unelevated size="10px" style="width:100px" rounded color="black" label="Next" />
+          <div class="flex flex-center q-pa-md">
+            <q-btn
+              unelevated
+              size="10px"
+              style="width: 100px"
+              rounded
+              color="black"
+              label="Next"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -158,11 +164,13 @@
 </template>
 <script>
 import { defineComponent, ref } from "vue";
-import TimeLine from "components/Timeline.vue";
-
+// import TimeLine from "components/Timeline.vue";
+import SubHeader from "components/Sub-Header.vue";
 export default defineComponent({
+  components: { SubHeader },
+
   components: {
-    TimeLine,
+    // TimeLine,
   },
   setup() {
     const submitResult = ref([]);
@@ -190,13 +198,75 @@ export default defineComponent({
 });
 </script>
 <style lang="sass" scoped>
-.row > div
-  padding: 10px 15px
-  // background: rgba(86,61,124,.15)
-  // border: 1px solid rgba(86,61,124,.2)
-.row + .row
-  margin-top: 1rem
 
 .my-font
   font-size: 10px
+
+.timeline-wrap
+  margin: 20%% 20%
+  top: 100
+  position: relative
+
+
+#timeline
+  height: 4px
+  width: 100%
+  background-color: #808080
+  position: relative
+
+
+.marker
+  z-index: 1000
+  color: #fff
+  width: 32px
+  height: 32px
+  line-height: 32px
+  font-size: 1.4em
+  text-align: center
+  position: absolute
+  margin-left: -25px
+  background-color: #008080
+  border-radius: 50%
+
+
+.timeline-icon.one
+  background-color: #000000 !important
+
+
+.timeline-icon.two
+  background-color: #808080 !important
+
+
+.timeline-icon.three
+  background-color: #808080 !important
+
+
+.timeline-icon.four
+  background-color: #808080 !important
+
+.timeline-icon.five
+  background-color: #808080 !important
+
+
+.mfirst
+  top: -16px
+
+
+.m2
+  top: -16px
+  left: 25%
+
+
+.m3
+  top: -16px
+  left: 50%
+
+
+.m4
+  top: -16px
+  left: 75%
+
+.mlast
+  top: -16px
+  left: 100%
 </style>

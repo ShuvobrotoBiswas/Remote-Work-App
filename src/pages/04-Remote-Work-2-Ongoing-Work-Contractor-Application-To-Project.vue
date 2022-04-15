@@ -123,14 +123,9 @@
                     </div>
                   </div>
                 </div>
-                <q-separator />
-
-                <div
-                  class="my-card row  items-start"
-                  style="max-width: 1000px"
-                >
+                <div class="my-card row items-start" style="max-width: 1000px">
                   <div class="text-bold">
-                    Select relevent projects from you portfolio*
+                    Select relevent projects from you portfolio
                   </div>
                   <div class="row flex-center bid1 text-center">
                     <div class="col my-home q-mr-sm">
@@ -221,10 +216,6 @@
                       />
                     </div>
                   </div>
-
-                  <div class="row q-pa-md my-font">
-                    <p>* Fields marked with "*" are mandatory.</p>
-                  </div>
                 </div>
 
                 <!-- Footer Div -->
@@ -239,7 +230,7 @@
                       class="text-white text-h7"
                     ></q-btn>
                   </div>
-
+                  <div class="col-1"></div>
                   <div class="q-pa-md">
                     <q-btn
                       size="8px"

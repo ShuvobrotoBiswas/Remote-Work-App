@@ -24,26 +24,30 @@
             </div>
           </div>
         </div>
-        <p class="q-pa-md text-bold">2. CHOOSE CONTRACTORS</p>
+        <p class="q-pa-md text-h5 text-bold">2. CHOOSE CONTRACTORS</p>
         <div class="q-pa-md">
           <p class="text-bold">
             Choose how many contractors are needed for the project
           </p>
-          <div class="q-gutter-sm">
-            <q-radio
-              left-label
-              v-model="shape"
-              color="black"
-              val="line"
-              label="One"
-            />
-            <q-radio
-              left-label
-              v-model="shape"
-              color="black"
-              val="rectangle"
-              label="More than One"
-            />
+          <div class="row">
+            <div class="col-2">
+              <q-radio
+                left-label
+                v-model="shape"
+                color="black"
+                val="line"
+                label="One"
+              />
+            </div>
+            <div class="col-3">
+              <q-radio
+                left-label
+                v-model="shape"
+                color="black"
+                val="rectangle"
+                label="More than One"
+              />
+            </div>
           </div>
         </div>
         <div class="row q-pa-md">
@@ -101,7 +105,10 @@
         <div class="q-mt-md">
           <q-item>
             <q-item-section>
-              <fieldset style="border-radius: 7px ; height:80px" class="q-pa-md">
+              <fieldset
+                style="border-radius: 7px; height: 80px"
+                class="q-pa-md"
+              >
                 <legend>Add Question</legend>
                 <q-input
                   borderless
@@ -186,99 +193,121 @@
           <p class="text-weight-bold">
             Choose the desired level of expertise of the contractors
           </p>
-          <div class="q-gutter-sm">
-            <q-radio
-              left-label
-              color="black"
-              v-model="shape"
-              val="line"
-              label="Junior"
-            />
-            <q-radio
-              left-label
-              color="black"
-              v-model="shape"
-              val="rectangle"
-              label="Middle"
-            />
-            <q-radio
-              left-label
-              color="black"
-              v-model="shape"
-              val="rectangle"
-              label="Senior"
-            />
+          <div class="row">
+            <div class="col-3">
+              <q-radio
+                left-label
+                color="black"
+                v-model="shape"
+                val="line"
+                label="Junior"
+              />
+            </div>
+            <div class="col-3">
+              <q-radio
+                left-label
+                color="black"
+                v-model="shape"
+                val="rectangle"
+                label="Middle"
+              />
+            </div>
+            <div class="col-3">
+              <q-radio
+                left-label
+                color="black"
+                v-model="shape"
+                val="rectangle"
+                label="Senior"
+              />
+            </div>
           </div>
         </div>
         <div class="q-pa-md">
           <p class="text-weight-bold">Contractor Availability</p>
-          <div class="q-gutter-sm">
-            <q-radio
-              left-label
-              color="black"
-              v-model="shape"
-              val="line"
-              label="Less then 20hour/Week"
-            />
-            <q-radio
-              left-label
-              color="black"
-              v-model="shape"
-              val="rectangle"
-              label="20-30 hours/Week"
-            />
-            <q-radio
-              left-label
-              color="black"
-              v-model="shape"
-              val="rectangle"
-              label="More than 30 hours/Week"
-            />
+          <div class="row">
+            <div class="col-4">
+              <q-radio
+                left-label
+                color="black"
+                v-model="shape"
+                val="line"
+                label="Less then 20hour/Week"
+              />
+            </div>
+            <div class="col-4">
+              <q-radio
+                left-label
+                color="black"
+                v-model="shape"
+                val="rectangle"
+                label="20-30 hours/Week"
+              />
+            </div>
+            <div class="col-4">
+              <q-radio
+                left-label
+                color="black"
+                v-model="shape"
+                val="rectangle"
+                label="More than 30 hours/Week"
+              />
+            </div>
           </div>
         </div>
         <div class="q-pa-md">
           <p class="text-weight-bold">Choose project visibility*</p>
-          <div class="q-gutter-sm">
-            <q-radio
-              left-label
-              color="black"
-              v-model="shape"
-              val="line"
-              label="Only on the platform"
-            />
-            <q-radio
-              left-label
-              color="black"
-              v-model="shape"
-              val="rectangle"
-              label="Indexable by search engines"
-            />
-            <q-radio
-              left-label
-              color="black"
-              v-model="shape"
-              val="rectangle"
-              label="Available only to invited contractors"
-            />
+          <div class="row">
+            <div class="col-4">
+              <q-radio
+                left-label
+                color="black"
+                v-model="shape"
+                val="line"
+                label="Only on the platform"
+              />
+            </div>
+            <div class="col-4">
+              <q-radio
+                left-label
+                color="black"
+                v-model="shape"
+                val="rectangle"
+                label="Indexable by search engines"
+              />
+            </div>
+            <div class="col-4">
+              <q-radio
+                left-label
+                color="black"
+                v-model="shape"
+                val="rectangle"
+                label="Available only to invited contractors"
+              />
+            </div>
           </div>
         </div>
         <div class="q-pa-md">
           <p class="text-weight-bold">Choose preferred type of contractor</p>
-          <div class="q-gutter-sm">
-            <q-radio
+          <div class="row">
+            <div class="col-3">
+              <q-radio
               left-label
               color="black"
               v-model="shape"
               val="line"
               label="Freelancer"
             />
-            <q-radio
+            </div>
+            <div class="col-3">
+              <q-radio
               left-label
               color="black"
               v-model="shape"
               val="rectangle"
               label="Agency"
             />
+            </div>
           </div>
         </div>
         <p class="q-pa-md">Fields marked with "*" are mandatory</p>

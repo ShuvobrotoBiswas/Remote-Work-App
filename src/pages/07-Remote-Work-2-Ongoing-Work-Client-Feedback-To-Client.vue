@@ -30,9 +30,9 @@
               <q-separator />
               <div class="row">
                 <div>
-                <p class="text-bold q-my-none text-h7">
-                  Give feedback to the contractor
-                </p>
+                  <p class="text-bold q-my-none text-h7">
+                    Give feedback to the contractor
+                  </p>
                 </div>
                 <div class="row">
                   <p class="text-h7">
@@ -73,6 +73,7 @@
         color="black"
         class="text-white q-mr-lg"
       />
+      <div class="col-1"></div>
       <q-btn
         rounded
         style="width: 120px"

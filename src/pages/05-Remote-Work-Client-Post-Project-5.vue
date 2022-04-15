@@ -207,7 +207,7 @@
                 </q-card>
               </div>
             </div>
-            <div style="max-width: 500px" class=" row">
+            <div style="max-width: 500px" class="row">
               <q-item>
                 <q-item-section>
                   <q-item-label caption class="text-bold text-black"
@@ -223,110 +223,135 @@
               <p class="text-weight-bold">
                 Desired level of expertise of the contractors
               </p>
-              <div class="q-gutter-sm">
-                <q-radio
-                  left-label
-                  v-model="shape"
-                  color="black"
-                  val="line"
-                  label="Junior"
-                />
-                <q-radio
-                  left-label
-                  v-model="shape"
-                  color="black"
-                  val="rectangle"
-                  label="Middle"
-                />
-                <q-radio
-                  left-label
-                  v-model="shape"
-                  color="black"
-                  val="rectangle"
-                  label="Senior"
-                />
+              <div class="row">
+                <div class="col-3">
+                  <q-radio
+                    left-label
+                    v-model="shape"
+                    color="black"
+                    val="line"
+                    label="Junior"
+                  />
+                </div>
+                <div class="col-3">
+                  <q-radio
+                    left-label
+                    v-model="shape"
+                    color="black"
+                    val="rectangle"
+                    label="Middle"
+                  />
+                </div>
+                <div class="col-3">
+                  <q-radio
+                    left-label
+                    v-model="shape"
+                    color="black"
+                    val="rectangle"
+                    label="Senior"
+                  />
+                </div>
               </div>
             </div>
             <div class="q-pa-md">
               <p class="text-weight-bold">Contractor Availability</p>
-              <div class="q-gutter-sm">
-                <q-radio
-                  left-label
-                  v-model="shape"
-                  color="black"
-                  val="line"
-                  label="1 Hour/Day"
-                />
-                <q-radio
-                  left-label
-                  color="black"
-                  v-model="shape"
-                  val="rectangle"
-                  label="2 Hours/Day"
-                />
-                <q-radio
-                  left-label
-                  color="black"
-                  v-model="shape"
-                  val="rectangle"
-                  label="4 Hours/Day"
-                />
+              <div class="row">
+                <div class="col-3">
+                  <q-radio
+                    left-label
+                    v-model="shape"
+                    color="black"
+                    val="line"
+                    label="1 Hour/Day"
+                  />
+                </div>
+                <div class="col-3">
+                  <q-radio
+                    left-label
+                    color="black"
+                    v-model="shape"
+                    val="rectangle"
+                    label="2 Hours/Day"
+                  />
+                </div>
+                <div class="col-3">
+                  <q-radio
+                    left-label
+                    color="black"
+                    v-model="shape"
+                    val="rectangle"
+                    label="4 Hours/Day"
+                  />
+                </div>
               </div>
+              <div class="q-gutter-sm"></div>
             </div>
             <q-separator />
 
             <div class="q-pa-md">
-              <h5>3. PAYMENT & BUDGET</h5>
+              <h5 class="text-bold">PAYMENT & BUDGET</h5>
               <p class="text-weight-bold">Project Duration</p>
-              <div class="q-gutter-sm">
-                <q-radio
-                  left-label
-                  color="black"
-                  v-model="shape"
-                  val="line"
-                  label="Max. 2 Weeks"
-                />
-                <q-radio
-                  left-label
-                  color="black"
-                  v-model="shape"
-                  val="rectangle"
-                  label="Max. 1 Month"
-                />
-                <q-radio
-                  left-label
-                  color="black"
-                  v-model="shape"
-                  val="rectangle"
-                  label="Max. 3 Months"
-                />
-                <q-radio
-                  left-label
-                  color="black"
-                  v-model="shape"
-                  val="rectangle"
-                  label="More than 3 Months"
-                />
+              <div class="row">
+                <div class="col-3">
+                  <q-radio
+                    left-label
+                    color="black"
+                    v-model="shape"
+                    val="line"
+                    label="Max. 2 Weeks"
+                  />
+                </div>
+                <div class="col-3">
+                  <q-radio
+                    left-label
+                    color="black"
+                    v-model="shape"
+                    val="rectangle"
+                    label="Max. 1 Month"
+                  />
+                </div>
+                <div class="col-3">
+                  <q-radio
+                    left-label
+                    color="black"
+                    v-model="shape"
+                    val="rectangle"
+                    label="Max. 3 Months"
+                  />
+                </div>
+                <div class="col-3">
+                  <q-radio
+                    left-label
+                    color="black"
+                    v-model="shape"
+                    val="rectangle"
+                    label="More than 3 Months"
+                  />
+                </div>
               </div>
             </div>
             <div class="q-pa-md">
               <h6>Payment</h6>
               <p class="text-weight-bold">Type of Payment</p>
-              <div class="q-gutter-sm">
-                <q-radio
-                  left-label
-                  color="black"
-                  v-model="shape"
-                  val="line"
-                  label="Hourly Payment"
-                />
-                <q-radio
-                  left-label
-                  color="black"
-                  v-model="shape"
-                  val="line"
-                  label="Fixed Price"
-                />
+              <div class="row">
+                <div class="col-3">
+                  <q-radio
+                    left-label
+                    color="black"
+                    v-model="shape"
+                    val="line"
+                    label="Hourly Payment"
+                  />
+                </div>
+                <div class="col-3">
+                  <q-radio
+                    left-label
+                    color="black"
+                    v-model="shape"
+                    val="line"
+                    label="Fixed Price"
+                  />
+                </div>
               </div>
             </div>
 
@@ -355,40 +380,46 @@
               <q-btn padding="xs" round color="black" icon="add" />
             </q-item-section>
           </q-item>
-          <div class="flex">
-            <q-item clickable v-ripple>
-              <q-item-section side>
-                <q-avatar circle size="48px">
-                  <img src="~assets/Avator10.png" />
-                </q-avatar>
-              </q-item-section>
-              <q-item-section>
-                <q-item-label>Gill Dobrica</q-item-label>
-                <q-item-label caption>Senior Bacend Developer</q-item-label>
-              </q-item-section>
-            </q-item>
-            <q-item clickable v-ripple>
-              <q-item-section side>
-                <q-avatar circle size="48px">
-                  <img src="~assets/Avator12.png" />
-                </q-avatar>
-              </q-item-section>
-              <q-item-section>
-                <q-item-label>Vioroca Dancila</q-item-label>
-                <q-item-label caption>Middle Bacend Developer</q-item-label>
-              </q-item-section>
-            </q-item>
-            <q-item clickable v-ripple>
-              <q-item-section side>
-                <q-avatar circle size="48px">
-                  <img src="~assets/Avator13.png" />
-                </q-avatar>
-              </q-item-section>
-              <q-item-section>
-                <q-item-label>Gabriel Cotabita</q-item-label>
-                <q-item-label caption>Java Developer</q-item-label>
-              </q-item-section>
-            </q-item>
+          <div class="flex row">
+            <div class="col-4">
+              <q-item clickable v-ripple>
+                <q-item-section side>
+                  <q-avatar circle size="48px">
+                    <img src="~assets/Avator10.png" />
+                  </q-avatar>
+                </q-item-section>
+                <q-item-section>
+                  <q-item-label>Gill Dobrica</q-item-label>
+                  <q-item-label caption>Senior Bacend Developer</q-item-label>
+                </q-item-section>
+              </q-item>
+            </div>
+            <div class="col-4">
+              <q-item clickable v-ripple>
+                <q-item-section side>
+                  <q-avatar circle size="48px">
+                    <img src="~assets/Avator12.png" />
+                  </q-avatar>
+                </q-item-section>
+                <q-item-section>
+                  <q-item-label>Vioroca Dancila</q-item-label>
+                  <q-item-label caption>Middle Bacend Developer</q-item-label>
+                </q-item-section>
+              </q-item>
+            </div>
+            <div class="col-4">
+              <q-item clickable v-ripple>
+                <q-item-section side>
+                  <q-avatar circle size="48px">
+                    <img src="~assets/Avator13.png" />
+                  </q-avatar>
+                </q-item-section>
+                <q-item-section>
+                  <q-item-label>Gabriel Cotabita</q-item-label>
+                  <q-item-label caption>Java Developer</q-item-label>
+                </q-item-section>
+              </q-item>
+            </div>
           </div>
         </div>
         <div class="flex q-pa-md justify-center">

@@ -45,22 +45,26 @@
                     {{ lorem }}
                   </p>
                 </div>
-                <div class="">
-                  <q-radio
-                    v-model="shape"
-                    val="radio1"
-                    class="q-mr-sm"
-                    color="black"
-                    label="I want to work with this contractor again"
-                  />
-                  <q-radio
-                    v-model="shape"
-                    color="black"
-                    class="q-mr-sm"
-                    val="rectangle"
-                    label="I want to try a different contractor"
-                  />
-                </div>
+              </div>
+            </div>
+            <div class="row" style="max-width: 800px">
+              <div class="col">
+                <q-radio
+                  v-model="shape"
+                  val="radio1"
+                  class="q-mr-sm"
+                  color="black"
+                  label="I want to work with this contractor again"
+                />
+              </div>
+              <div class="col">
+                <q-radio
+                  v-model="shape"
+                  color="black"
+                  class="q-mr-sm"
+                  val="rectangle"
+                  label="I want to try a different contractor"
+                />
               </div>
             </div>
           </q-card-section>
@@ -79,6 +83,7 @@
         color="black"
         class="text-white q-mr-lg"
       />
+      <div class="col-1"></div>
       <q-btn
         rounded
         style="width: 120px"

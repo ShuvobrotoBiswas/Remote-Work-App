@@ -24,7 +24,7 @@
             </div>
           </div>
         </div>
-        <p class="q-pa-md text-h6 text-bold">4. SEND INVITATIONS</p>
+        <p class="q-pa-md text-h5 text-bold">4. SEND INVITATIONS</p>
         <div style="max-width: 300px" class="q-pa-md">
           <p class="text-weight-bold">Search by name</p>
           <q-input outlined  autofocus bottom-slots v-model="text" :dense="dense">
