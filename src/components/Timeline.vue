@@ -34,7 +34,7 @@ export default defineComponent({
 #timeline
   height: 4px
   width: 100%
-  background-color: #808080
+  background-color: #48D1CC
   position: relative
 
 
@@ -53,19 +53,19 @@ export default defineComponent({
 
 
 .timeline-icon.one
-  background-color: #000000!important
+  background-color: #008080!important
 
 
 .timeline-icon.two
-  background-color: #808080 !important
+  background-color: #48D1CC !important
 
 
 .timeline-icon.three
-  background-color: #808080 !important
+  background-color: #48D1CC !important
 
 
 .timeline-icon.four
-  background-color: #808080 !important
+  background-color: #48D1CC !important
 
 
 .mfirst

@@ -86,33 +86,47 @@
           <TimeLine />
         </div>
         <h5 class="text-bold">1. DEFINE PROJECT</h5>
-        <h6>Project Catagory</h6>
-        <div class="q-gutter-sm">
-          <q-radio
-            left-label
-            v-model="shape"
-            val="line"
-            label="Well Defined Project"
-          />
-          <q-radio
-            left-label
-            v-model="shape"
-            val="rectangle"
-            label="Ongoing Work"
-          />
-          <q-radio
-            left-label
-            v-model="shape"
-            val="ellipse"
-            label="Market Research"
-          />
-          <q-radio
-            left-label
-            v-model="shape"
-            val="polygon"
-            label="Guaranted Prize Contest"
-          />
+        <div class="q-pa-md text-h6">Project Catagory</div>
+
+        <div class="row">
+          <div class="col-3">
+            <q-radio
+              left-label
+              color="cyan"
+              v-model="shape"
+              val="line"
+              label="Well Defined Project"
+            />
+          </div>
+          <div class="col-2">
+            <q-radio
+              left-label
+              color="cyan"
+              v-model="shape"
+              val="rectangle"
+              label="Ongoing Work"
+            />
+          </div>
+          <div class="col-3">
+            <q-radio
+              left-label
+              color="cyan"
+              v-model="shape"
+              val="ellipse"
+              label="Market Research"
+            />
+          </div>
+          <div class="col-3">
+            <q-radio
+              left-label
+              color="cyan"
+              v-model="shape"
+              val="polygon"
+              label="Guaranted Prize Contest"
+            />
+          </div>
         </div>
+
         <h6>1.Project Template</h6>
         <div>
           <div class="row bid1 q-py-md text-center">
@@ -126,16 +140,16 @@
             </div>
             <div class="col my-home my-box bid2 bg-cyan-1 my-font q-mr-sm">
               <q-img
-                src="~assets/Avator5.png"
+                src="~assets/Avator27.png"
                 class="image1"
-                style="width: 40px; height: 40px"
+                style="width: 60px; height:50px"
               >
               </q-img>
               <div class="q-pa-mg text-center custom-text-me">LOGO Design</div>
             </div>
             <div class="col my-home bid2 my-box my-font q-mr-sm">
               <q-img
-                src="~assets/Avator6.png"
+                src="~assets/Avator28.png"
                 class="image1"
                 style="width: 40px; height: 40px"
               >
@@ -203,7 +217,7 @@
 
           <div>
             <h6>2. Project From Scratch</h6>
-            <fieldset style="border-radius: 5px ; border: 2px solid cyan;">
+            <fieldset style="border-radius: 5px; border: 2px solid cyan">
               <legend>Project Title*</legend>
               <q-input
                 borderless
@@ -228,7 +242,7 @@
                 </q-card-section>
               </q-card>
             </q-expansion-item>
-            <fieldset style="border-radius: 5px ; border: 2px solid cyan;">
+            <fieldset style="border-radius: 5px; border: 2px solid cyan">
               <legend>Project Description*</legend>
               <q-input
                 borderless
@@ -242,7 +256,7 @@
               icon="add"
               label="Upload File"
             />
-            <div class="row q-py-md ">
+            <div class="row q-py-md">
               <q-btn
                 rounded
                 outline
@@ -252,7 +266,7 @@
                 class="q-mr-sm"
                 label="Color scheme.jpg"
               />
-               <q-btn
+              <q-btn
                 rounded
                 outline
                 size="8px"
@@ -261,7 +275,7 @@
                 class="q-mr-sm"
                 label="brand identity guidelines.pdf"
               />
-               <q-btn
+              <q-btn
                 rounded
                 outline
                 size="8px"
@@ -291,7 +305,14 @@
         </div>
 
         <div class="flex flex-center q-pa-md">
-          <q-btn unelevated size="10px" style="width:100px" rounded color="cyan" label="Next" />
+          <q-btn
+            unelevated
+            size="10px"
+            style="width: 100px"
+            rounded
+            color="cyan"
+            label="Next"
+          />
         </div>
       </div>
     </div>
@@ -374,13 +395,13 @@ export default defineComponent({
   // background: grey
   border: 1px solid rgba(86,61,124,.2)
   border-radius: 7px
-  height: 90px
+  height: 100px
   width: 80px
 
 .my-box1
   // background: grey
   // border: 1px solid rgba(86,61,124,.2)
-  height: 90px
+  height: 100px
   width: 80px
   border-radius: 7px
 </style>

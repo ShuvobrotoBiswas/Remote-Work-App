@@ -103,19 +103,7 @@
                       ></q-img>
                     </div>
                   </div>
-                  <div class="col"></div>
-                  <div class="col"></div>
-                  <div class="col">
-                    <q-btn
-                      rounded
-                      size="10px"
-                      style="position: absolute"
-                      unelevated
-                      color="black"
-                      class="text-white"
-                      label="Add milestone"
-                    />
-                  </div>
+                  
                 </div>
                 <div class="row">
                   <q-tabs v-model="tab" class="text-teal">

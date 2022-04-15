@@ -238,7 +238,7 @@
     <div class="row q-pa-md flex flex-center">
       <q-btn
         rounded
-        style="width: 90px"
+        style="width: 100px"
         size="10px"
         label="back"
         unelevated

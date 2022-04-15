@@ -104,23 +104,50 @@
         </div>
         <p class="q-pa-md text-h5 text-bold">4. SEND INVITATIONS</p>
         <div style="max-width: 300px" class="q-pa-md">
-          <p class="text-weight-bold ">Search by name</p>
-          <q-input bottom-slots v-model="text" :dense="dense">
+          <p class="text-weight-bold">Search by name</p>
+          <q-input bottom-slots v-model="text"  :dense="dense">
             <template v-slot:append>
               <q-icon name="search" />
             </template>
           </q-input>
+          <q-expansion-item
+            class="  bordered"
+            dense
+            style="max-width: 350px"
+          >
+            <q-list dense bordered padding class="borders">
+              <q-item clickable v-ripple>
+                <q-item-section> {{text}} </q-item-section>
+              </q-item>
+
+              <q-item clickable v-ripple>
+                <q-item-section> {{noData}} </q-item-section>
+              </q-item>
+
+              <q-item clickable v-ripple>
+                <q-item-section>  {{noData}} </q-item-section>
+              </q-item>
+              <q-item clickable v-ripple>
+                <q-item-section>  {{noData}} </q-item-section>
+              </q-item>
+            </q-list>
+          </q-expansion-item>
         </div>
         <div class="flex">
           <p class="q-ma-md">Search result: 3 contractors found</p>
-          <q-checkbox left-label color="cyan" v-model="val" label="Select all" />
+          <q-checkbox
+            left-label
+            color="cyan"
+            v-model="val"
+            label="Select all"
+          />
         </div>
 
         <div class="flex">
           <q-item clickable v-ripple>
             <q-item-section side>
               <q-avatar circle size="48px">
-                <img src="https://cdn.quasar.dev/img/avatar.png" />
+                <img src="~assets/Avator18.png" />
               </q-avatar>
             </q-item-section>
             <q-item-section>
@@ -134,7 +161,7 @@
           <q-item clickable v-ripple>
             <q-item-section side>
               <q-avatar circle size="48px">
-                <img src="https://cdn.quasar.dev/img/avatar.png" />
+                <img src="~assets/Avator10.png" />
               </q-avatar>
             </q-item-section>
             <q-item-section>
@@ -142,13 +169,13 @@
               <q-item-label caption>Middle Bacend Developer</q-item-label>
             </q-item-section>
             <q-item-section side>
-              <q-checkbox v-model="val"   color="cyan"/>
+              <q-checkbox v-model="val" color="cyan" />
             </q-item-section>
           </q-item>
           <q-item clickable v-ripple>
             <q-item-section side>
               <q-avatar circle size="48px">
-                <img src="https://cdn.quasar.dev/img/avatar.png" />
+                <img src="~assets/Avator18.png" />
               </q-avatar>
             </q-item-section>
             <q-item-section>
@@ -156,7 +183,7 @@
               <q-item-label caption>Java Developer</q-item-label>
             </q-item-section>
             <q-item-section side>
-              <q-checkbox v-model="val"  color="cyan"/>
+              <q-checkbox v-model="val" color="cyan" />
             </q-item-section>
           </q-item>
         </div>
@@ -173,13 +200,20 @@
         class="q-mr-md"
       />
 
-      <q-btn unelevated style="width:100px" size="10px" rounded color="cyan" label="Next" />
+      <q-btn
+        unelevated
+        style="width: 100px"
+        size="10px"
+        rounded
+        color="cyan"
+        label="Next"
+      />
     </div>
   </div>
 </template>
 <script>
 import { defineComponent, ref } from "vue";
-import TimeLine from "components/Timeline.vue";
+// import TimeLine from "components/Timeline.vue";
 
 export default defineComponent({
   // components: {
@@ -192,6 +226,8 @@ export default defineComponent({
       val: ref(true),
       shape: ref("line"),
       submitResult,
+      text: ref("Gil Dobrica"),
+      noData: ref("null Data"),
 
       onSubmit(evt) {
         const formData = new FormData(evt.target);

@@ -106,7 +106,8 @@
 
         <div class="q-pa-md">
           <p class="text-weight-bold">Project Duration</p>
-          <div class="q-gutter-sm">
+          <div class="row">
+          <div class="col-3">
             <q-radio
               left-label
               color="cyan"
@@ -114,6 +115,8 @@
               val="line"
               label="Max. 2 Weeks"
             />
+          </div>
+          <div class="col-3">
             <q-radio
               left-label
               color="cyan"
@@ -121,21 +124,26 @@
               val="rectangle"
               label="Max. 1 Month"
             />
+          </div>
+          <div class="col-3">
             <q-radio
               left-label
               color="cyan"
               v-model="shape"
-              val="rectangle"
-              label="Max. 3 Months"
+              val="ellipse"
+              label="Max. 3 Month"
             />
+          </div>
+          <div class="col-3">
             <q-radio
               left-label
               color="cyan"
               v-model="shape"
-              val="rectangle"
+              val="polygon"
               label="More than 3 Months"
             />
           </div>
+        </div>
         </div>
         <div class="q-pa-md">
           <p class="text-h6">Payment</p>
@@ -159,7 +167,8 @@
         </div>
 
         <div class="q-pa-md">
-          <fieldset style="border-radius: 7px">
+          <p class="text-weight-bold">Rate of Payment</p>
+          <fieldset style="border-radius: 7px ; max-width:200px" >
             <legend class="text-cyan">Maximum Rate</legend>
             <q-input borderless v-model="text" placeholder="2600" />
           </fieldset>

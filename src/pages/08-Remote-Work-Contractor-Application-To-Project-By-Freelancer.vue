@@ -96,7 +96,10 @@
               <div class="col-4">
                 <div class="text-h7 text-bold">Type the requested Price</div>
                 <div class="text-h7">
-                  <q-input v-model="price" outlined></q-input>
+                  <fieldset style="border-radius: 5px">
+                    <legend>Requested Price</legend>
+                    <q-input v-model="price"></q-input>
+                  </fieldset>
                 </div>
               </div>
               <div class="col-3">
@@ -156,50 +159,51 @@
             <div class="row q-py-md">
               <div class="col-4">
                 <div class="text-h7 text-bold">Offer validity*</div>
-                <div class="text-h7">
-                  Pick a Date
                   <div class="q-py-md" style="max-width: 300px">
-                    <q-input
-                      style="width: 250px"
-                      filled
-                      v-model="date"
-                      mask="date"
-                      :rules="['date']"
-                    >
-                      <!-- {{ date }} -->
-                      <template v-slot:append>
-                        <q-icon name="event" class="cursor-pointer">
-                          <q-popup-proxy
-                            ref="qDateProxy"
-                            cover
-                            transition-show="scale"
-                            transition-hide="scale"
-                          >
-                            <q-date v-model="date" range>
-                              <div class="row items-center justify-end">
-                                <q-btn
-                                  v-close-popup
-                                  label="Close"
-                                  color="primary"
-                                  flat
-                                />
-                              </div>
-                            </q-date>
-                          </q-popup-proxy>
-                        </q-icon>
-                      </template>
-                    </q-input>
+                    <div class="text-h7">
+                      <fieldset style="border-radius: 5px ; height:82px">
+                        <legend>Pick a Date</legend>
+                        <q-input
+                          style="width: 250px"
+                          v-model="date"
+                          mask="date"
+                          :rules="['date']"
+                        >
+                          <!-- {{ date }} -->
+                          <template v-slot:append>
+                            <q-icon name="event" class="cursor-pointer">
+                              <q-popup-proxy
+                                ref="qDateProxy"
+                                cover
+                                transition-show="scale"
+                                transition-hide="scale"
+                              >
+                                <q-date v-model="date" range>
+                                  <div class="row items-center justify-end">
+                                    <q-btn
+                                      v-close-popup
+                                      label="Close"
+                                      color="primary"
+                                      flat
+                                    />
+                                  </div>
+                                </q-date>
+                              </q-popup-proxy>
+                            </q-icon>
+                          </template>
+                        </q-input>
+                      </fieldset>
                   </div>
                 </div>
               </div>
-              <div class="col-2">
+              <div class="col-3">
                 <div class="text-h7 text-bold"></div>
                 <div class="text-h7"></div>
               </div>
-              <div class="col-6">
+              <div class="col-5">
                 <div class="text-h7 text-bold">Type of contractor*</div>
                 <div class="text-h7">
-                  <div class="">
+                  <div >
                     <q-option-group
                       v-model="group"
                       :options="options"
@@ -216,7 +220,7 @@
               <p class="col-9 text-h7 text-bold">
                 Select relevent projects from you portfolio*
               </p>
-              <div class="row flex-center bid1 text-center">
+              <div class="row flex-center bid1 text-center" style="width: 900px">
                 <div class="col my-home q-mr-sm">
                   <q-btn
                     round
@@ -225,11 +229,11 @@
                     icon="arrow_back_ios_new"
                   />
                 </div>
-                <div class="col my-home bid2 my-font q-mr-sm my-box1">
+                <div class="col my-home bid2 my-font q-mr-sm my-box1 my-box4">
                   <q-img
-                    src="~assets/Avator24.png"
+                    src="~assets/Avator29.png"
                     class="image1"
-                    style="width: 40px; height: 40px"
+                    style="width: 50px; height: 50px"
                   >
                   </q-img>
                   <div class="q-pa-mg text-center custom-text-me">
@@ -247,11 +251,11 @@
                     Website Design
                   </div>
                 </div>
-                <div class="col my-home bid2 my-font q-mr-sm my-box1">
+                <div class="col my-home bid2 my-font q-mr-sm my-box1 my-box4">
                   <q-img
-                    src="~assets/Avator26.png "
+                    src="~assets/Avator30.png "
                     class="image1"
-                    style="width: 40px; height: 40px"
+                    style="width: 50px; height: 40px"
                   >
                   </q-img>
                   <div class="q-pa-mg text-center custom-text-me">
@@ -403,4 +407,7 @@ export default defineComponent({
   // background: grey
   // border: 1px solid rgba(86,61,124,.2)
   border-radius: 7px
+
+.my-box4
+  background: #DBDBDB
 </style>

@@ -79,7 +79,7 @@
       </div>
     </div>
     <q-separator />
-    <div class="row  q-pa-md flex-center items-start">
+    <div class="row q-pa-md flex-center items-start">
       <div style="width: 1000px">
         <div class="q-pa-md">
           <div class="row timeline-wrap" style="max-width: 1000px">
@@ -107,7 +107,13 @@
             Choose how many contractors are needed for the project
           </p>
           <div class="q-gutter-sm">
-            <q-radio left-label v-model="shape" val="line" label="One" color="cyan" />
+            <q-radio
+              left-label
+              v-model="shape"
+              val="line"
+              label="One"
+              color="cyan"
+            />
             <q-radio
               left-label
               v-model="shape"
@@ -123,7 +129,7 @@
             answer
           </p>
 
-          <q-card flat class="my-card bg-teal-1">
+          <q-card flat class="my-card bg-teal-1" style="max-width: 800px">
             <q-card-section>
               <div class="row items-center no-wrap">
                 <div class="col">
@@ -191,38 +197,77 @@
             Choose the technological skills and qualifications required of the
             contractor
           </p>
-          <q-expansion-item
-            class="bg-grey-2 q-mt-md bordered"
-            dense
-            dense-toggle
-            expand-separator
-            label="Skills required"
-            style="max-width: 350px"
-          >
-            <q-list dense bordered padding class="borders">
-              <q-item clickable v-ripple>
-                <q-item-section>Angular JS </q-item-section>
-              </q-item>
+          <div class="row">
+            <div class="col" style="max-width:200px">
+              <q-expansion-item
+                class="bg-grey-2 q-mt-md bordered"
+                dense
+                dense-toggle
+                expand-separator
+                label="Skills required"
+                style="max-width: 350px"
+              >
+                <q-list dense bordered padding class="borders">
+                  <q-item clickable v-ripple>
+                    <q-item-section>Angular JS </q-item-section>
+                  </q-item>
 
-              <q-item clickable v-ripple>
-                <q-item-section>Java</q-item-section>
-              </q-item>
+                  <q-item clickable v-ripple>
+                    <q-item-section>Java</q-item-section>
+                  </q-item>
 
-              <q-item clickable v-ripple>
-                <q-item-section> PHP </q-item-section>
-              </q-item>
-              <q-item clickable v-ripple>
-                <q-item-section> Etc. </q-item-section>
-              </q-item>
-            </q-list>
-          </q-expansion-item>
+                  <q-item clickable v-ripple>
+                    <q-item-section> PHP </q-item-section>
+                  </q-item>
+                  <q-item clickable v-ripple>
+                    <q-item-section> Etc. </q-item-section>
+                  </q-item>
+                </q-list>
+              </q-expansion-item>
+            </div>
+            <div class="col q-pa-md">
+              <q-btn
+                rounded
+                outline
+                size="6px"
+                icon-right="cancel"
+                color="black"
+                class="q-mr-sm"
+                label="Angular js"
+              />
+              <q-btn
+                rounded
+                outline
+                size="6px"
+                icon-right="cancel"
+                color="black"
+                class="q-mr-sm"
+                label="Java"
+              />
+              <q-btn
+                rounded
+                outline
+                size="6px"
+                icon-right="cancel"
+                color="black"
+                class="q-mr-sm"
+                label="PHP"
+              />
+            </div>
+          </div>
         </div>
         <div class="q-pa-md">
           <p class="text-weight-bold">
             Choose the desired level of expertise of the contractors
           </p>
           <div class="q-gutter-sm">
-            <q-radio left-label v-model="shape" val="line" label="Junior" color="cyan" />
+            <q-radio
+              left-label
+              v-model="shape"
+              val="line"
+              label="Junior"
+              color="cyan"
+            />
             <q-radio
               left-label
               v-model="shape"
@@ -294,7 +339,13 @@
         <div class="q-pa-md">
           <p class="text-weight-bold">Choose preferred type of contractor</p>
           <div class="q-gutter-sm">
-            <q-radio left-label v-model="shape" val="line" label="Freelancer" color="cyan"/>
+            <q-radio
+              left-label
+              v-model="shape"
+              val="line"
+              label="Freelancer"
+              color="cyan"
+            />
             <q-radio
               left-label
               v-model="shape"
@@ -310,12 +361,19 @@
             unelevated
             size="10px"
             rounded
-            style="width:100px"
+            style="width: 100px"
             color="grey-6"
             label="Back"
             class="q-mr-md"
           />
-          <q-btn unelevated size="10px" style="width:100px" rounded color="cyan" label="Next" />
+          <q-btn
+            unelevated
+            size="10px"
+            style="width: 100px"
+            rounded
+            color="cyan"
+            label="Next"
+          />
         </div>
       </div>
     </div>
