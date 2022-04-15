@@ -27,7 +27,9 @@
                       ></q-img>
                     </div>
                     <div class="text-h7 flex-center row">
-                      <span class="q-mr-sm">Unverified</span>
+                      <span>Unverified</span>
+                    </div>
+                    <div class="text-h7 flex-center row">
                       <q-btn
                         outline
                         round
@@ -131,7 +133,7 @@
                     <div class="row text-h7 text-bold">
                       Answer to your questions
                     </div>
-                    <div class="row text-h7 bg-grey-4">
+                    <div class="row text-h7 bg-grey-4" style="max-width: 540px">
                       <strong class="q-mr-sm">Q</strong>
                       Ut enim ad minim veniam, quis nostrud exercitation ullamco
                       laboris nisi ut aliquip?
@@ -143,7 +145,7 @@
                       aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                       ullamco laboris nisi ut aliquip.
                     </div>
-                    <div class="row text-h7 bg-grey-4">
+                    <div class="row text-h7 bg-grey-4" style="max-width: 540px">
                       <strong class="q-mr-sm">Q</strong>
                       Ut enim ad minim veniam, quis nostrud exercitation ullamco
                       laboris nisi ut aliquip?
@@ -155,10 +157,10 @@
                       aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                       ullamco laboris nisi ut aliquip.
                     </div>
-                    <div class="my-card row" style="max-width: 1000px">
-                      <p class="col-9 text-bold">
-                        Relevent projects from you portfolio
-                      </p>
+                    <p class="col-9 text-bold q-py-md">
+                      Relevent projects from you portfolio
+                    </p>
+                    <div class="my-card row flex-center" style="max-width: 1000px">
                       <div class="row flex-center bid1 text-center">
                         <div class="col my-home q-mr-sm">
                           <q-btn
@@ -240,7 +242,9 @@
                       ></q-img>
                     </div>
                     <div class="text-h7 flex-center row">
-                      <span class="q-mr-sm">Verified</span>
+                      <span>Verified</span>
+                    </div>
+                    <div class="text-h7 flex-center row">
                       <q-btn
                         round
                         size="8px"
@@ -351,7 +355,9 @@
                       ></q-img>
                     </div>
                     <div class="text-h7 flex-center row">
-                      <span class="q-mr-sm">Verified</span>
+                      <span>Verified</span>
+                    </div>
+                    <div class="text-h7 flex-center row">
                       <q-btn
                         round
                         size="8px"

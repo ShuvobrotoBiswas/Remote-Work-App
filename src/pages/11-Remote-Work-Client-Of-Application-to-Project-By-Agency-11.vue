@@ -32,7 +32,9 @@
                       ></q-img>
                     </div>
                     <div class="text-h7 flex-center row">
-                      <span class="q-mr-sm">Unverified</span>
+                      <span>Unverified</span>
+                    </div>
+                    <div class="text-h7 flex-center row">
                       <q-btn
                         outline
                         round
@@ -136,7 +138,7 @@
                     <div class="row text-h7 text-bold">
                       Answer to your questions
                     </div>
-                    <div class="row text-h7 bg-grey-4">
+                    <div class="row text-h7 bg-grey-4" style="max-width:540px">
                       <strong class="q-mr-sm">Q</strong>
                       Ut enim ad minim veniam, quis nostrud exercitation ullamco
                       laboris nisi ut aliquip?
@@ -148,7 +150,7 @@
                       aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                       ullamco laboris nisi ut aliquip.
                     </div>
-                    <div class="row text-h7 bg-grey-4">
+                    <div class="row text-h7 bg-grey-4" style="max-width:540px">
                       <strong class="q-mr-sm">Q</strong>
                       Ut enim ad minim veniam, quis nostrud exercitation ullamco
                       laboris nisi ut aliquip?
@@ -160,11 +162,11 @@
                       aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                       ullamco laboris nisi ut aliquip.
                     </div>
-                    <div class="my-card row" style="max-width: 1000px">
-                      <p class="col-9 text-bold">
+                    <p class="col-9 q-py-md text-bold">
                         Relevent projects from you portfolio
                       </p>
-                      <div class="row flex-center bid1 text-center">
+                    <div class="my-card row flex-center bid1 text-center" style="max-width: 1000px">
+
                         <div class="col my-home q-mr-sm">
                           <q-btn
                             round
@@ -215,7 +217,6 @@
                             icon="arrow_forward_ios"
                           />
                         </div>
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -244,149 +245,149 @@
                     </div>
 
                     <div class="row">
-                      <div class="col my-box1 my-home q-mr-sm">
-                        <q-btn
-                          round
-                          color="grey"
-                          class="flex-center"
-                          icon="arrow_back_ios_new"
-                        />
-                      </div>
-                      <div class="col my-box q-mr-sm">
-                        <div class="row flex-center">CV</div>
-                        <div class="row flex-center">
-                          <q-img
-                            src="~assets/Avator19.png"
-                            style="height: 30px; width: 30px"
-                          ></q-img>
-                        </div>
-                      </div>
-                      <div class="col my-home bid2 my-font my-box q-mr-sm">
-                        Portfolio
-                        <div class="col">
-                          <q-btn
-                            flat
-                            size="5px"
-                            color="black"
-                            padding="5px"
-                            icon="check_box_outline_blank"
-                          />
-                          <q-btn
-                            flat
-                            size="5px"
-                            color="black"
-                            padding="5px"
-                            icon="check_box_outline_blank"
-                          />
-                        </div>
-                        <q-btn
-                          flat
-                          size="5px"
-                          color="black"
-                          padding="5px"
-                          icon="check_box_outline_blank"
-                        />
-                        <q-btn
-                          flat
-                          size="5px"
-                          color="black"
-                          padding="5px"
-                          icon="add"
-                        />
-                      </div>
-                      <div class="col my-box q-mr-sm">
-                        <div class="row flex-center">CV</div>
-                        <div class="row flex-center flex-center">
-                          <q-img
-                            src="~assets/Avator19.png"
-                            style="height: 30px; width: 30px"
-                          ></q-img>
-                        </div>
-                      </div>
-                      <div class="col my-home bid2 my-font my-box q-mr-sm">
-                        Portfolio
-                        <div class="col">
-                          <q-btn
-                            flat
-                            size="5px"
-                            color="black"
-                            padding="5px"
-                            icon="check_box_outline_blank"
-                          />
-                          <q-btn
-                            flat
-                            size="5px"
-                            color="black"
-                            padding="5px"
-                            icon="check_box_outline_blank"
-                          />
-                        </div>
-                        <q-btn
-                          flat
-                          size="5px"
-                          color="black"
-                          padding="5px"
-                          icon="check_box_outline_blank"
-                        />
-                        <q-btn
-                          flat
-                          size="5px"
-                          color="black"
-                          padding="5px"
-                          icon="add"
-                        />
-                      </div>
-                      <div class="col my-box q-mr-sm">
-                        <div class="row flex-center">CV</div>
-                        <div class="row flex-center">
-                          <q-img
-                            src="~assets/Avator19.png"
-                            style="height: 30px; width: 30px"
-                          ></q-img>
-                        </div>
-                      </div>
-                      <div class="col my-home bid2 my-font my-box q-mr-sm">
-                        Portfolio
-                        <div class="col">
-                          <q-btn
-                            flat
-                            size="5px"
-                            color="black"
-                            padding="5px"
-                            icon="check_box_outline_blank"
-                          />
-                          <q-btn
-                            flat
-                            size="5px"
-                            color="black"
-                            padding="5px"
-                            icon="check_box_outline_blank"
-                          />
-                        </div>
-                        <q-btn
-                          flat
-                          size="5px"
-                          color="black"
-                          padding="5px"
-                          icon="check_box_outline_blank"
-                        />
-                        <q-btn
-                          flat
-                          size="5px"
-                          color="black"
-                          padding="5px"
-                          icon="add"
-                        />
-                      </div>
-                      <div class="col my-box1 q-mr-sm my-home">
-                        <q-btn
-                          round
-                          color="black"
-                          class="flex-center"
-                          icon="arrow_forward_ios"
-                        />
-                      </div>
+                  <div class="col my-box1 my-home q-mr-sm">
+                    <q-btn
+                      round
+                      color="grey"
+                      class="flex-center"
+                      icon="arrow_back_ios_new"
+                    />
+                  </div>
+                  <div class="col my-box q-mr-sm">
+                    <div class="row flex-center">CV</div>
+                    <div class="row flex-center">
+                      <q-img
+                        src="~assets/Avator19.png"
+                        style="height: 30px; width: 30px"
+                      ></q-img>
                     </div>
+                  </div>
+                  <div class="col my-home bid2 my-font my-box q-mr-sm">
+                    Portfolio
+                    <div class="col">
+                      <q-btn
+                        flat
+                        size="5px"
+                        color="black"
+                        padding="5px"
+                        icon="check_box_outline_blank"
+                      />
+                      <q-btn
+                        flat
+                        size="5px"
+                        color="black"
+                        padding="5px"
+                        icon="check_box_outline_blank"
+                      />
+                    </div>
+                    <q-btn
+                      flat
+                      size="5px"
+                      color="black"
+                      padding="5px"
+                      icon="check_box_outline_blank"
+                    />
+                    <q-btn
+                      flat
+                      size="5px"
+                      color="black"
+                      padding="5px"
+                      icon="add"
+                    />
+                  </div>
+                  <div class="col my-box q-mr-sm">
+                    <div class="row flex-center">CV</div>
+                    <div class="row flex-center">
+                      <q-img
+                        src="~assets/Avator19.png"
+                        style="height: 30px; width: 30px"
+                      ></q-img>
+                    </div>
+                  </div>
+                  <div class="col my-home bid2 my-font my-box q-mr-sm">
+                    Portfolio
+                    <div class="col">
+                      <q-btn
+                        flat
+                        size="5px"
+                        color="black"
+                        padding="5px"
+                        icon="check_box_outline_blank"
+                      />
+                      <q-btn
+                        flat
+                        size="5px"
+                        color="black"
+                        padding="5px"
+                        icon="check_box_outline_blank"
+                      />
+                    </div>
+                    <q-btn
+                      flat
+                      size="5px"
+                      color="black"
+                      padding="5px"
+                      icon="check_box_outline_blank"
+                    />
+                    <q-btn
+                      flat
+                      size="5px"
+                      color="black"
+                      padding="5px"
+                      icon="add"
+                    />
+                  </div>
+                  <div class="col my-box q-mr-sm">
+                    <div class="row flex-center">CV</div>
+                    <div class="row flex-center">
+                      <q-img
+                        src="~assets/Avator19.png"
+                        style="height: 30px; width: 30px"
+                      ></q-img>
+                    </div>
+                  </div>
+                  <div class="col my-home bid2 my-font my-box q-mr-sm">
+                    Portfolio
+                    <div class="col">
+                      <q-btn
+                        flat
+                        size="5px"
+                        color="black"
+                        padding="5px"
+                        icon="check_box_outline_blank"
+                      />
+                      <q-btn
+                        flat
+                        size="5px"
+                        color="black"
+                        padding="5px"
+                        icon="check_box_outline_blank"
+                      />
+                    </div>
+                    <q-btn
+                      flat
+                      size="5px"
+                      color="black"
+                      padding="5px"
+                      icon="check_box_outline_blank"
+                    />
+                    <q-btn
+                      flat
+                      size="5px"
+                      color="black"
+                      padding="5px"
+                      icon="add"
+                    />
+                  </div>
+                  <div class="col my-box1 q-mr-sm my-home">
+                    <q-btn
+                      round
+                      color="black"
+                      class="flex-center"
+                      icon="arrow_forward_ios"
+                    />
+                  </div>
+                </div>
                     <div class="flex-break q-pa-md"></div>
 
                     <!-- Sub Footer Div -->
@@ -407,21 +408,20 @@
                 <q-separator />
                 <div class="row">
                   <div class="col-3">
-                     <div class="text-h7 row flex-center text-bold">
+                    <div class="text-h7 row flex-center text-bold">
                       Avraam Iancu
                     </div>
                     <div class="text-h7 row flex-center">
                       <q-img
                         sizes="100px"
-                        style="
-                          max-width: 80px;
-                          max-height: 80px;
-                        "
+                        style="max-width: 80px; max-height: 80px"
                         src="~/assets/Avator17.png"
                       ></q-img>
                     </div>
                     <div class="text-h7 flex-center row">
-                      <span class="q-mr-sm">Verified</span>
+                      <span>Verified</span>
+                    </div>
+                    <div class="text-h7 flex-center row">
                       <q-btn
                         round
                         size="8px"
@@ -526,15 +526,14 @@
                     <div class="text-h7 row flex-center">
                       <q-img
                         sizes="100px"
-                        style="
-                          max-width: 80px;
-                          max-height: 80px;
-                        "
+                        style="max-width: 80px; max-height: 80px"
                         src="~/assets/Avator18.png"
                       ></q-img>
                     </div>
                     <div class="text-h7 flex-center row">
-                      <span class="q-mr-sm">Verified</span>
+                      <span>Verified</span>
+                    </div>
+                    <div class="text-h7 flex-center row">
                       <q-btn
                         round
                         size="8px"
@@ -735,4 +734,6 @@ export default defineComponent({
   height: 80px
   width: 80px
   border-radius: 7px
+
+
 </style>

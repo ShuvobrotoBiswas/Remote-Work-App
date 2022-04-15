@@ -19,10 +19,13 @@
                 <div class="row q-py-md">
                   <div class="col-4">
                     <div class="text-h7 text-bold">
-                      Type the requested Price
+                      Type the requested Price*
                     </div>
                     <div class="text-h7">
-                      <q-input v-model="price" outlined></q-input>
+                      <fieldset style="border-radius: 5px; height: 82px">
+                        <legend>Requested Price</legend>
+                        <q-input v-model="price"></q-input>
+                      </fieldset>
                     </div>
                   </div>
                   <div class="col-3">
@@ -55,35 +58,37 @@
                   <div class="text-bold text-h7">
                     Answer to the question set by client.*
                   </div>
-                  <div class="row q-pa-md">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua?
-                    <q-input
-                      v-model="input1"
-                      outlined
-                      style="width: 550px"
-                    ></q-input>
-                  </div>
+                  <fieldset
+                    class="row q-pa-md"
+                    style="border-radius: 5px; height: 115px"
+                  >
+                    <legend>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua?
+                    </legend>
+                    <q-input v-model="input1" style="width: 550px"></q-input>
+                  </fieldset>
                 </div>
-                <div class="row">
-                  <div class="row q-pa-md">
-                    Ut enim ad minim veniam veniam, quis nostrud exercitation et
-                    nisi ut aliquip?
-                    <q-input
-                      v-model="input2"
-                      outlined
-                      style="width: 550px"
-                    ></q-input>
-                  </div>
+                <div class="row q-py-md">
+                  <fieldset
+                    class="row q-pa-md"
+                    style="border-radius: 5px; height: 94px"
+                  >
+                    <legend>
+                      Ut enim ad minim veniam veniam, quis nostrud exercitation
+                      et nisi ut aliquip?
+                    </legend>
+                    <q-input v-model="input1"></q-input>
+                  </fieldset>
                 </div>
                 <q-separator />
                 <div class="row">
                   <div class="row text-h7 text-bold">
                     Contractor Availability*
                   </div>
-                  <div class="text-h7">
-                    <div>
+                  <div class="text-h7 row">
+                    <div class="coll-12">
                       <q-option-group
                         v-model="group1"
                         :options="options1"
@@ -100,11 +105,9 @@
                   <div class="col-4">
                     <div class="text-h7 text-bold">Offer validity*</div>
                     <div class="text-h7">
-                      <div style="max-width: 300px">
-                        <fieldset style="height: 90px ; border-radius:5px">
+                        <fieldset style="height: 82px; border-radius: 5px ; max-width: 250px">
                           <legend>Pick a Date</legend>
                           <q-input
-                            style="width: 250px"
                             v-model="date"
                             mask="date"
                             :rules="['date']"
@@ -134,13 +137,9 @@
                           </q-input>
                         </fieldset>
                       </div>
-                    </div>
                   </div>
-                  <div class="col-2">
-                    <div class="text-h7 text-bold"></div>
-                    <div class="text-h7"></div>
-                  </div>
-                  <div class="col-6">
+                  <div class="col-2"></div>
+                  <div class="col-5">
                     <div class="text-h7 text-bold">Type of contractor*</div>
                     <div class="text-h7">
                       <div class="">
@@ -159,7 +158,7 @@
                 <div class="row flex-center items-start">
                   <div flat bordered class="my-card" style="max-width: 1000px">
                     <div class="">
-                      <div class="col-9 text-h6 text-bold">
+                      <div class="col-9 text-h7 text-bold">
                         Select relevent projects from you portfolio*
                       </div>
                     </div>
@@ -197,9 +196,17 @@
                           UX Design
                         </div>
                       </div>
-                      <div class="col my-home bid2 my-font">
-                        <div class="row">
-                          <div class="col">
+                       <div
+                          class="col my-home bid2 my-font my-box1 my-box-4 q-mr-sm"
+                        >
+                          <div class="row flex-center">
+                            <q-btn
+                              flat
+                              size="5px"
+                              color="black"
+                              padding="5px"
+                              icon="check_box_outline_blank"
+                            />
                             <q-btn
                               flat
                               size="5px"
@@ -208,7 +215,7 @@
                               icon="check_box_outline_blank"
                             />
                           </div>
-                          <div class="col">
+                          <div class="row flex-center">
                             <q-btn
                               flat
                               size="5px"
@@ -216,19 +223,6 @@
                               padding="5px"
                               icon="check_box_outline_blank"
                             />
-                          </div>
-                        </div>
-                        <div class="row">
-                          <div class="col">
-                            <q-btn
-                              flat
-                              size="5px"
-                              color="black"
-                              padding="5px"
-                              icon="check_box_outline_blank"
-                            />
-                          </div>
-                          <div class="col">
                             <q-btn
                               flat
                               size="5px"
@@ -237,11 +231,8 @@
                               icon="add"
                             />
                           </div>
+                          <p class="row flex-center">Others</p>
                         </div>
-                        <div class="q-pa-mg text-center custom-text-me">
-                          Others
-                        </div>
-                      </div>
                       <div class="col-1 my-home q-mr-sm">
                         <q-btn
                           round
@@ -261,7 +252,6 @@
                 <!-- Footer Div -->
 
                 <div class="row flex-center">
-                  <div class="col-4">
                     <q-btn
                       size="8px"
                       rounded
@@ -269,10 +259,8 @@
                       label="Back to Search"
                       class="text-white text-h7"
                     ></q-btn>
-                  </div>
 
-                  <div class="col-4"></div>
-                  <div class="col-4">
+                  <div class="col-2"></div>
                     <q-btn
                       size="8px"
                       rounded
@@ -280,7 +268,6 @@
                       label="Send"
                       class="text-white text-h7"
                     ></q-btn>
-                  </div>
                 </div>
               </q-card-section>
             </div>

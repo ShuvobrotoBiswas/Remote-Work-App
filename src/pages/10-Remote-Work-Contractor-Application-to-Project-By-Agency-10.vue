@@ -17,7 +17,7 @@
                   {{ lorem }}
                 </div>
                 <div class="row q-py-md">
-                  <div class="col-7">
+                  <div class="col-6">
                     <fieldset
                       style="
                         max-width: 200px;
@@ -76,7 +76,7 @@
                     Answer to the question set by client.*
                   </p>
                   <fieldset
-                    style="max-height: 100px; border-radius: 7px"
+                    style="max-height: 100px; border-radius: 7px ; max-width:600px"
                     class="q-pa-md"
                   >
                     <legend class="text-h7">
@@ -175,17 +175,10 @@
                     </div>
                   </div>
                 </div>
-
-                <div
-                  class="my-card row"
-                  style="max-width: 1300px"
-                >
-                  <div class="q-pa-md">
-                    <div class="col-9 text-bold">
-                      Select relevent projects from you portfolio*
-                    </div>
-                  </div>
-                  <div class="row flex-center bid1 text-center">
+                <div class="col-9 text-bold">
+                  Select relevent projects from you portfolio*
+                </div>
+                <div class="my-card row flex-center bid1 text-center" style="max-width: 750px">
                     <div class="col my-home q-mr-sm">
                       <q-btn
                         round
@@ -228,7 +221,7 @@
                       </div>
                     </div>
                     <div class="col my-home bid2 my-font my-box2 q-mr-sm">
-                      <div class="col">
+                      <div class="row flex-center">
                         <q-btn
                           flat
                           size="5px"
@@ -244,7 +237,8 @@
                           icon="check_box_outline_blank"
                         />
                       </div>
-                      <q-btn
+                      <div class="row flex-center">
+                        <q-btn
                         flat
                         size="5px"
                         color="black"
@@ -258,6 +252,7 @@
                         padding="5px"
                         icon="add"
                       />
+                      </div>
                       Others
                     </div>
 
@@ -269,7 +264,6 @@
                         icon="arrow_forward_ios"
                       />
                     </div>
-                  </div>
                 </div>
                 <div class="flex-break q-pa-md"></div>
 
@@ -281,9 +275,15 @@
                     Select the freelancers who work for the agency and who will
                     be involved in the project.
                   </div>
-                  <div class="row" style="width: 700px">
+                  <div class="row" style="width: 790px">
                     <div class="col">
                       <q-item tag="label" v-ripple>
+                        <q-item-section>
+                          <q-item-label class="text-bold"
+                            >ANNA DOYEL</q-item-label
+                          >
+                          <q-item-label caption>Programmer PHP </q-item-label>
+                        </q-item-section>
                         <q-item-section avatar>
                           <q-radio
                             v-model="myChoice1"
@@ -292,16 +292,16 @@
                             color="black"
                           />
                         </q-item-section>
-                        <q-item-section>
-                          <q-item-label class="text-bold"
-                            >ANNA DOYEL</q-item-label
-                          >
-                          <q-item-label caption>Programmer PHP </q-item-label>
-                        </q-item-section>
                       </q-item>
                     </div>
                     <div class="col">
                       <q-item tag="label" v-ripple>
+                        <q-item-section>
+                          <q-item-label class="text-bold"
+                            >GIL DOBRICA</q-item-label
+                          >
+                          <q-item-label caption>Designer </q-item-label>
+                        </q-item-section>
                         <q-item-section avatar>
                           <q-radio
                             v-model="myChoice2"
@@ -310,16 +310,16 @@
                             color="black"
                           />
                         </q-item-section>
-                        <q-item-section>
-                          <q-item-label class="text-bold"
-                            >GIL DOBRICA</q-item-label
-                          >
-                          <q-item-label caption>Designer </q-item-label>
-                        </q-item-section>
                       </q-item>
                     </div>
                     <div class="col">
                       <q-item tag="label" v-ripple>
+                        <q-item-section>
+                          <q-item-label class="text-bold"
+                            >GABI COTABITA</q-item-label
+                          >
+                          <q-item-label caption>Programmer PHP </q-item-label>
+                        </q-item-section>
                         <q-item-section avatar>
                           <q-radio
                             v-model="myChoice3"
@@ -327,12 +327,6 @@
                             right-label
                             color="black"
                           />
-                        </q-item-section>
-                        <q-item-section>
-                          <q-item-label class="text-bold"
-                            >GABI COTABITA</q-item-label
-                          >
-                          <q-item-label caption>Programmer PHP </q-item-label>
                         </q-item-section>
                       </q-item>
                     </div>
@@ -493,29 +487,23 @@
 
                 <!-- Footer Div -->
 
-                <div class="row">
-                  <div class="col"></div>
-                  <div class="col">
-                    <q-btn
-                      style="width: 100px"
-                      size="8px"
-                      rounded
-                      color="grey"
-                      label="Back to Search"
-                      class="text-white text-h7"
-                    ></q-btn>
-                  </div>
-                  <div class="col"></div>
-                  <div class="col">
-                    <q-btn
-                      size="8px"
-                      rounded
-                      color="black"
-                      label="Send"
-                      class="text-white text-h7"
-                    ></q-btn>
-                  </div>
-                  <div class="col"></div>
+                <div class="row flex-center">
+                  <q-btn
+                    style="width: 100px"
+                    size="8px"
+                    rounded
+                    color="grey"
+                    label="Back to Search"
+                    class="text-white text-h7"
+                  ></q-btn>
+                  <div class="col-2"></div>
+                  <q-btn
+                    size="8px"
+                    rounded
+                    color="black"
+                    label="Send"
+                    class="text-white text-h7"
+                  ></q-btn>
                 </div>
               </q-card-section>
             </div>
