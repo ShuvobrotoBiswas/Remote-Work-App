@@ -31,8 +31,9 @@
                         src="~/assets/Avator20.png"
                       ></q-img>
                     </div>
-                    <div class="text-h7 row flex-center">
-                      <p>Unverified</p>
+                   <div>
+                      <p class="row flex-center">Unverified</p>
+                      <div class="row flex-center">
                         <q-btn
                           outline
                           round
@@ -40,6 +41,7 @@
                           color="grey"
                           icon="military_tech"
                         />
+                      </div>
                     </div>
                     <div class="text-h7 row flex-center">
                       <div class="text-h7">
@@ -196,14 +198,13 @@
                         src="~/assets/Avator17.png"
                       ></q-img>
                     </div>
-                    <div class="text-h7 row flex-center">
-                      <div class="col">Verified</div>
-                      <div class="col">
+                    <div>
+                      <p class="row flex-center">Verified</p>
+                      <div class="row flex-center">
                         <q-btn
-                          outline
                           round
                           size="8px"
-                          color="grey"
+                          color="black"
                           icon="military_tech"
                         />
                       </div>
@@ -306,14 +307,13 @@
                         src="~/assets/Avator18.png"
                       ></q-img>
                     </div>
-                    <div class="text-h7 row flex-center">
-                      <div class="col">Verified</div>
-                      <div class="col">
+                    <div>
+                      <p class="row flex-center">Verified</p>
+                      <div class="row flex-center">
                         <q-btn
-                          outline
                           round
                           size="8px"
-                          color="grey"
+                          color="black"
                           icon="military_tech"
                         />
                       </div>

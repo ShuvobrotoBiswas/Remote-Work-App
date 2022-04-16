@@ -22,9 +22,6 @@
                   ></q-img>
                 </div>
               </div>
-              <div class="col"></div>
-              <div class="col"></div>
-              <div class="col"></div>
             </div>
             <div class="row">
               <q-tabs v-model="tab" class="text-teal">
@@ -32,12 +29,14 @@
               </q-tabs>
               <q-separator />
               <div class="row">
-                <p class="text-bold q-my-none text-h7">
-                  Give feedback to the contractor
-                </p>
+                <p class="text-bold text-h7">Give feedback to the contractor</p>
                 <p>
                   {{ lorem }}
                 </p>
+              </div>
+            </div>
+            <div class="row flex-center">
+              <div class="col-6">
                 <q-radio
                   v-model="shape"
                   val="radio1"
@@ -45,6 +44,8 @@
                   color="black"
                   label="I want to work with this contractor again"
                 />
+              </div>
+              <div class="col-6">
                 <q-radio
                   v-model="shape"
                   color="black"
@@ -53,7 +54,6 @@
                   label="I want to try a different contractor"
                 />
               </div>
-
             </div>
           </q-card-section>
         </div>
@@ -71,6 +71,7 @@
         color="black"
         class="text-white q-mr-lg"
       />
+      <div class="col-1"></div>
       <q-btn
         rounded
         style="width: 120px"

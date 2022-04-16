@@ -29,7 +29,7 @@
                       "
                     >
                       <legend>Requested Price</legend>
-                      <q-input borderless v-model="price"/>
+                      <q-input borderless v-model="price" />
                     </fieldset>
                   </div>
                   <div class="col-3">
@@ -60,8 +60,10 @@
                 </div>
                 <q-separator />
                 <div class="row">
-                   <div class="col-6">
-                    <div class="text-h7 text-bold">Choose preferred type of contractor*</div>
+                  <div class="col-6">
+                    <div class="text-h7 text-bold">
+                      Choose preferred type of contractor*
+                    </div>
                     <div class="text-h7">
                       <div class="">
                         <q-option-group
@@ -75,32 +77,27 @@
                     </div>
                   </div>
                 </div>
-                <q-separator />
                 <!-- Footer Div -->
                 <div class="row q-pa-md my-font">
-                      <p>* Fields marked with "*" are mandatory.</p>
-                    </div>
+                  <p>* Fields marked with "*" are mandatory.</p>
+                </div>
 
                 <div class="row flex-center">
-                  <div>
-                    <q-btn
-                      size="8px"
-                      rounded
-                      color="grey"
-                      label="Back to Search"
-                      class="text-white text-h7"
-                    ></q-btn>
-                  </div>
-
-                  <div>
-                    <q-btn
-                      size="8px"
-                      rounded
-                      color="black"
-                      label="Send"
-                      class="text-white text-h7"
-                    ></q-btn>
-                  </div>
+                  <q-btn
+                    size="8px"
+                    rounded
+                    color="grey"
+                    label="Back to Search"
+                    class="text-white text-h7"
+                  ></q-btn>
+                  <div class="col-2"></div>
+                  <q-btn
+                    size="8px"
+                    rounded
+                    color="black"
+                    label="Send"
+                    class="text-white text-h7"
+                  ></q-btn>
                 </div>
               </q-card-section>
             </div>

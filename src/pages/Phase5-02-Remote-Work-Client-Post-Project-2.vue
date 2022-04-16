@@ -38,7 +38,7 @@
                 dense-toggle
                 expand-separator
                 label="Skills required"
-                
+
                 style="max-width: 350px"
               >
                 <q-list dense bordered padding class="borders">
@@ -59,7 +59,8 @@
                 </q-list>
               </q-expansion-item>
             </div>
-            <div class="col-6">
+            <div class="col-1"></div>
+            <div class="col-5">
               <q-btn
                 unelevated
                 size="10px"

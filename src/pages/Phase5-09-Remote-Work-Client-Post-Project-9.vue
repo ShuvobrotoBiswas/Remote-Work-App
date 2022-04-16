@@ -191,14 +191,13 @@
                         src="~/assets/Avator17.png"
                       ></q-img>
                     </div>
-                    <div class="text-h7 row flex-center">
-                      <div class="col">Unverified</div>
-                      <div class="col">
+                    <div>
+                      <p class="row flex-center">Verified</p>
+                      <div class="row flex-center">
                         <q-btn
-                          outline
                           round
                           size="8px"
-                          color="grey"
+                          color="black"
                           icon="military_tech"
                         />
                       </div>
@@ -291,7 +290,7 @@
                 <q-separator />
                 <div class="row">
                   <div class="col-3">
-                    <div class="text-h7 flex-centerrow text-bold">
+                    <div class="text-h7 flex-center row text-bold">
                       alexandru cumpanasu
                     </div>
                     <div class="text-h7 flex-center row">
@@ -301,14 +300,13 @@
                         src="~/assets/Avator18.png"
                       ></q-img>
                     </div>
-                    <div class="text-h7 row flex-center">
-                      <div class="col">Unverified</div>
-                      <div class="col">
+                    <div>
+                      <p class="row flex-center">Verified</p>
+                      <div class="row flex-center">
                         <q-btn
-                          outline
                           round
                           size="8px"
-                          color="grey"
+                          color="black"
                           icon="military_tech"
                         />
                       </div>

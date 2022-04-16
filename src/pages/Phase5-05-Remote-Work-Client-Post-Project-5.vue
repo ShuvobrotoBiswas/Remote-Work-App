@@ -97,28 +97,34 @@
         </div>
         <div class="q-pa-md">
           <div class="text-weight-bold">Project Duration*</div>
-          <div>
-            <q-radio
-              left-label
-              color="black"
-              v-model="shape"
-              val="line"
-              label="Max. 7 Days"
-            />
-            <q-radio
-              left-label
-              color="black"
-              v-model="shape"
-              val="rectangle"
-              label="Max. 15 Days"
-            />
-            <q-radio
-              left-label
-              color="black"
-              v-model="shape"
-              val="rectangle"
-              label="Max. 30 Days"
-            />
+          <div class="row">
+            <div class="col-3">
+              <q-radio
+                left-label
+                color="black"
+                v-model="shape"
+                val="line"
+                label="Max. 7 Days"
+              />
+            </div>
+            <div class="col-3">
+              <q-radio
+                left-label
+                color="black"
+                v-model="shape"
+                val="rectangle"
+                label="Max. 15 Days"
+              />
+            </div>
+            <div class="col-3">
+              <q-radio
+                left-label
+                color="black"
+                v-model="shape"
+                val="rectangle"
+                label="Max. 30 Days"
+              />
+            </div>
           </div>
         </div>
         <q-separator />
@@ -191,40 +197,46 @@
               <q-btn padding="xs" round color="black" icon="add" />
             </q-item-section>
           </q-item>
-          <div class="flex">
-            <q-item clickable v-ripple>
-              <q-item-section side>
-                <q-avatar circle size="48px">
-                  <img src="~assets/Avator10.png" />
-                </q-avatar>
-              </q-item-section>
-              <q-item-section>
-                <q-item-label>Gill Dobrica</q-item-label>
-                <q-item-label caption>Senior Bacend Developer</q-item-label>
-              </q-item-section>
-            </q-item>
-            <q-item clickable v-ripple>
-              <q-item-section side>
-                <q-avatar circle size="48px">
-                  <img src="~assets/Avator12.png" />
-                </q-avatar>
-              </q-item-section>
-              <q-item-section>
-                <q-item-label>Vioroca Dancila</q-item-label>
-                <q-item-label caption>Middle Bacend Developer</q-item-label>
-              </q-item-section>
-            </q-item>
-            <q-item clickable v-ripple>
-              <q-item-section side>
-                <q-avatar circle size="48px">
-                  <img src="~assets/Avator13.png" />
-                </q-avatar>
-              </q-item-section>
-              <q-item-section>
-                <q-item-label>Gabriel Cotabita</q-item-label>
-                <q-item-label caption>Java Developer</q-item-label>
-              </q-item-section>
-            </q-item>
+            <div class="row">
+              <div class="col-4">
+                <q-item clickable v-ripple>
+                  <q-item-section side>
+                    <q-avatar circle size="48px">
+                      <img src="~assets/Avator10.png" />
+                    </q-avatar>
+                  </q-item-section>
+                  <q-item-section>
+                    <q-item-label>Gill Dobrica</q-item-label>
+                    <q-item-label caption>Senior Bacend Developer</q-item-label>
+                  </q-item-section>
+                </q-item>
+              </div>
+              <div class="col-4">
+                <q-item clickable v-ripple>
+                  <q-item-section side>
+                    <q-avatar circle size="48px">
+                      <img src="~assets/Avator12.png" />
+                    </q-avatar>
+                  </q-item-section>
+                  <q-item-section>
+                    <q-item-label>Vioroca Dancila</q-item-label>
+                    <q-item-label caption>Middle Bacend Developer</q-item-label>
+                  </q-item-section>
+                </q-item>
+              </div>
+              <div class="col-4">
+                <q-item clickable v-ripple>
+                  <q-item-section side>
+                    <q-avatar circle size="48px">
+                      <img src="~assets/Avator13.png" />
+                    </q-avatar>
+                  </q-item-section>
+                  <q-item-section>
+                    <q-item-label>Gabriel Cotabita</q-item-label>
+                    <q-item-label caption>Java Developer</q-item-label>
+                  </q-item-section>
+                </q-item>
+              </div>
           </div>
         </div>
         <div class="flex q-pa-md justify-center">
@@ -265,7 +277,7 @@ export default defineComponent({
 
     return {
       shape: ref("line"),
-      text:"",
+      text: "",
       submitResult,
       lorem:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",

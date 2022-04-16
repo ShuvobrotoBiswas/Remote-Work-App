@@ -33,27 +33,30 @@
                   style="width: 80px; height: 2px"
                 />
               </div>
-              <p class="text-bold q-my-none text-h7">
-                Give feedback to the contractor
-              </p>
+              <p class="text-bold text-h7">Give feedback to the contractor</p>
               <p>
                 {{ lorem }}
               </p>
-              <q-radio
-                v-model="shape"
-                val="radio1"
-                class="q-mr-sm"
-                color="black"
-                label="I want to work with this contractor again"
-              />
-              <q-radio
-                v-model="shape"
-                color="black"
-                class="q-mr-sm"
-                val="rectangle"
-                label="I want to try a different contractor"
-              />
-
+              <div class="row">
+                <div class="col-6">
+                  <q-radio
+                    v-model="shape"
+                    val="radio1"
+                    class="q-mr-sm"
+                    color="black"
+                    label="I want to work with this contractor again"
+                  />
+                </div>
+                <div class="col-6">
+                  <q-radio
+                    v-model="shape"
+                    color="black"
+                    class="q-mr-sm"
+                    val="rectangle"
+                    label="I want to try a different contractor"
+                  />
+                </div>
+              </div>
             </div>
           </q-card-section>
         </div>
@@ -71,6 +74,7 @@
         color="black"
         class="text-white q-mr-lg"
       />
+      <div class="col-1"></div>
       <q-btn
         rounded
         style="width: 120px"
