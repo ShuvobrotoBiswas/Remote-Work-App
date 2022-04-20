@@ -9,31 +9,32 @@
       >
         <div class="q-pa-md">
           <div class="row">
-            <div class="col-6  flex flex-center text-bold my-font">
+            <div class="col-6 flex flex-center text-bold my-font">
               I am looking for someone to work on my project.
             </div>
-            <div class="col-6">
-              <q-input label="Email"  type="email" v-model="email"> </q-input>
-              <q-input label="Password" type="password" v-model="password">
-              </q-input>
-              <q-input
-                label="Confirm Password"
-                type="password"
-                v-model="confirm_password"
-              >
-              </q-input>
-              <div class="q-py-md">
-                <q-btn
-                  to="Create-Account-Step2"
-                  size="10px"
-                  rounded
-                  color="black"
-                  type="submit"
-                  label="Register"
-                  class="text-white text-h7"
-                ></q-btn>
+            <q-form @submit.prevent="registration">
+              <div class="col-6">
+                <q-input label="Email" type="email" v-model="email"> </q-input>
+                <q-input label="Password" type="password" v-model="password">
+                </q-input>
+                <q-input
+                  label="Confirm Password"
+                  type="password"
+                  v-model="password_confirmation"
+                >
+                </q-input>
+                <div class="q-py-md">
+                  <q-btn
+                    size="10px"
+                    rounded
+                    color="black"
+                    type="submit"
+                    label="Register"
+                    class="text-white text-h7"
+                  ></q-btn>
+                </div>
               </div>
-            </div>
+            </q-form>
           </div>
         </div>
       </q-card>
@@ -46,12 +47,12 @@
         class="my-card q-pa-md this-card row flex-center text-black bg-white"
         style="max-width: 750px"
       >
-        <div class="q-pa-md ">
+        <div class="q-pa-md">
           <div class="row">
             <div class="col-6 text-bold flex flex-center my-font">
               I want to work on a project or get hired.
             </div>
-            <div class="col-6">
+            <q-form @submit.prevent="registration1">
               <div class="col-6">
                 <q-input label="Email" type="email" v-model="email1"> </q-input>
                 <q-input label="Password" type="password" v-model="password1">
@@ -64,7 +65,6 @@
                 </q-input>
                 <div class="q-py-md">
                   <q-btn
-                    to="Create-Account-Step2-1"
                     size="10px"
                     rounded
                     color="black"
@@ -74,7 +74,7 @@
                   ></q-btn>
                 </div>
               </div>
-            </div>
+            </q-form>
           </div>
         </div>
       </q-card>
@@ -87,21 +87,49 @@
 <script>
 import { defineComponent } from "vue";
 import { ref } from "vue";
+import axios from "axios";
 export default defineComponent({
   // name: "IndexPage",
   setup() {
     return {
-      confirm_password: ref(null),
-      email: ref(null),
-      password: ref(null),
-      confirm_password1: ref(null),
-      email1: ref(null),
-      password1: ref(null),
-      submit: "",
+      password_confirmation: ref(""),
+      email: ref(""),
+      password: ref(""),
+      confirm_password1: ref(""),
+      email1: ref(""),
+      password1: ref(""),
+      submit: ref(""),
+      register: [],
     };
+  },
+
+  methods: {
+    registration() {
+      const register = new FormData();
+      register.append("password", this.password);
+      register.append("password_confirmation", this.password_confirmation);
+      register.append("email", this.email);
+
+      const options = {
+        method: "POST",
+        url: "http://192.168.0.101:8080/api/auth/register",
+        // headers: { "No Auth": " "},
+        data: register,
+      };
+      axios
+        .request(options)
+        .then((response) => {
+          console.log(response.data);
+          this.admin = response.data;
+        })
+        .catch(function (error) {
+          console.error(error);
+        });
+    },
   },
 });
 </script>
+
 <style lang="sass" scoped>
 .my-card
   width: 100%

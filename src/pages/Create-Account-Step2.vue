@@ -12,6 +12,7 @@
             <div class="col-5 flex flex-center text-bold my-font">
               I am looking for someone to work on my project.
             </div>
+            <q-form @submit.prevent="registration">
             <div class="col-7">
               <q-input label="Email" type="email" v-model="email"> </q-input>
               <q-input label="Password" type="password" v-model="password">
@@ -19,12 +20,11 @@
               <q-input
                 label="Confirm Password"
                 type="password"
-                v-model="confirm_password"
+                v-model="password_confirmation"
               >
               </q-input>
               <div class="q-py-md">
                 <q-btn
-                  to="Create-Account-Step3"
                   size="10px"
                   rounded
                   color="black"
@@ -34,6 +34,7 @@
                 ></q-btn>
               </div>
             </div>
+            </q-form>
           </div>
         </div>
       </q-card>
@@ -74,15 +75,41 @@
 <script>
 import { defineComponent } from "vue";
 import { ref } from "vue";
+import axios from "axios";
 export default defineComponent({
   // name: "IndexPage",
   setup() {
     return {
-      confirm_password: ref(null),
-      email: ref(null),
-      password: ref(null),
+      password_confirmation: ref(""),
+      email: ref(""),
+      password: ref(""),
       submit: "",
     };
+  },
+
+  methods: {
+    registration() {
+      const register = new FormData();
+      register.append("password", this.password);
+      register.append("password_confirmation", this.password_confirmation);
+      register.append("email", this.email);
+
+      const options = {
+        method: "POST",
+        url: "api/auth/register",
+        // headers: { "No Auth": " "},
+        data: register,
+      };
+      axios
+        .request(options)
+        .then((response) => {
+          console.log(response.data);
+          this.admin = response.data;
+        })
+        .catch(function (error) {
+          console.error(error);
+        });
+    },
   },
 });
 </script>
