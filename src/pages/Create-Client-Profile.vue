@@ -1,189 +1,195 @@
 <template>
   <div>
-    <!-- Header Div -->
+    <q-form @submit.prevent="agency">
+      <!-- Header Div -->
 
-    <q-header>
-      <q-toolbar class="bg-white">
-        <q-toolbar-title>
-          <div class="text-green">
-            <q-img
-              src="~assets/Avator3.png"
-              style="height: 35px; max-width: 110px"
-            ></q-img>
-          </div>
-        </q-toolbar-title>
+      <q-header>
+        <q-toolbar class="bg-white">
+          <q-toolbar-title>
+            <div class="text-green">
+              <q-img
+                src="~assets/Avator3.png"
+                style="height: 35px; max-width: 110px"
+              ></q-img>
+            </div>
+          </q-toolbar-title>
 
-        <div class="text-grey text-bold">Hello,</div>
-        <div class="text-black text-bold">Laura</div>
-        <div>
-          <q-avatar>
-            <q-img
-              src="~assets/Avator12.png"
-              style="height: 27px; max-width: 27px"
-            >
-            </q-img>
-          </q-avatar>
-        </div>
-        <div class="text-black q-mr-sm">LOGOUT</div>
-      </q-toolbar>
-    </q-header>
+          <div class="text-grey text-bold">Hello,</div>
+          <div class="text-black text-bold">Laura</div>
+          <div>
+            <q-avatar>
+              <q-img
+                src="~assets/Avator12.png"
+                style="height: 27px; max-width: 27px"
+              >
+              </q-img>
+            </q-avatar>
+          </div>
+          <div class="text-black q-mr-sm">LOGOUT</div>
+        </q-toolbar>
+      </q-header>
 
-    <!-- Body Div -->
+      <!-- Body Div -->
 
-    <div class="flex-break"></div>
-    <div class="text-h7 text-center">Hi Florin, welcome to your dashboard!</div>
-    <div class="flex-break q-py-md"></div>
-    <q-separator />
-    <div class="">
-      <div class="row">
-        <div class="col"></div>
-        <div class="col">
-          <div class="text-black text-h7 text-center">
-            <q-btn dense flat color="black" icon="person"></q-btn>
-            <div>Profile</div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="text-black text-h7 text-center">
-            <q-btn dense flat color="black" icon="addchart"></q-btn>
-            <div>Post a Project</div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="text-black text-h7 text-center">
-            <q-btn
-              dense
-              flat
-              color="black"
-              icon="insert_chart_outlined"
-            ></q-btn>
-            <div>Projects</div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="text-black text-h7 text-center">
-            <q-btn dense flat color="black" icon="mark_email_unread"></q-btn>
-            <div>Messages</div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="text-black text-h7 text-center">
-            <q-btn dense flat color="black" icon="local_atm"></q-btn>
-            <div>Accounts</div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="text-black text-h7 text-center">
-            <q-btn dense flat color="black" icon="tune"></q-btn>
-            <div>Settings</div>
-          </div>
-        </div>
-        <div class="col"></div>
+      <div class="flex-break"></div>
+      <div class="text-h7 text-center">
+        Hi Florin, welcome to your dashboard!
       </div>
-    </div>
-    <q-separator />
-
-    <!-- Card 1 Div -->
-
-    <div class="row  flex-center items-start">
-      <div flat bordered class="my-card" style="max-width: 800px">
-        <q-card-section>
-          <div class="text-h6 text-bold text-center">
-            Create your client profile (client)
-          </div>
-        </q-card-section>
-        <q-separator />
-        <div class="q-pa-md">
-          <div class="row">
-            <div class="col-5">
-              <!-- <q-avatar size="100px" class="q-mb-sm"> -->
-              <q-img sizes="200px" src="~/assets/Avator11.png"></q-img>
-              <!-- </q-avatar> -->
-              <div class="q-pa-md">
-                <q-file
-                  rounded
-                  style="width: 250px"
-                  outlined
-                  v-model="model"
-                  label="upload new picture"
-                >
-                  <template v-slot:append>
-                    <q-icon
-                      v-if="model !== null"
-                      name="close"
-                      @click.stop="model = null"
-                      class="cursor-pointer"
-                    />
-                  </template>
-                </q-file>
-              </div>
-              <div class="q-pa-md">
-                <q-btn outline style="width: 250px" bottom-slots rounded>
-                  remove exsting
-                </q-btn>
-              </div>
-            </div>
-            <div class="col-1"></div>
-            <div class="col-6">
-              <q-input v-model="completeName" label="Complete name*" />
-              <q-input v-model="address" label="Address*" />
-              <q-input v-model="billingAddress" label="Billing address*" />
-              <q-input v-model="tel" type="tel" label="Phone number" />
+      <div class="flex-break q-py-md"></div>
+      <q-separator />
+      <div class="">
+        <div class="row">
+          <div class="col"></div>
+          <div class="col">
+            <div class="text-black text-h7 text-center">
+              <q-btn dense flat color="black" icon="person"></q-btn>
+              <div>Profile</div>
             </div>
           </div>
-
-          <q-separator />
-        </div>
-        <!-- Card 2 Div -->
-
-        <div class="row flex-center">
-          <div flat bordered class="my-card" style="max-width: 800px">
-            <div class="row q-pa-md">
+          <div class="col">
+            <div class="text-black text-h7 text-center">
+              <q-btn dense flat color="black" icon="addchart"></q-btn>
+              <div>Post a Project</div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="text-black text-h7 text-center">
               <q-btn
-                size="10px"
-                rounded
+                dense
+                flat
                 color="black"
-                icon="add"
-                label="Add Companies"
-                class="text-white text-h7"
+                icon="insert_chart_outlined"
               ></q-btn>
+              <div>Projects</div>
             </div>
-            <div class="row q-pa-md">
-              * Fields marked with "*" are mandatory.
+          </div>
+          <div class="col">
+            <div class="text-black text-h7 text-center">
+              <q-btn dense flat color="black" icon="mark_email_unread"></q-btn>
+              <div>Messages</div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="text-black text-h7 text-center">
+              <q-btn dense flat color="black" icon="local_atm"></q-btn>
+              <div>Accounts</div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="text-black text-h7 text-center">
+              <q-btn dense flat color="black" icon="tune"></q-btn>
+              <div>Settings</div>
+            </div>
+          </div>
+          <div class="col"></div>
+        </div>
+      </div>
+      <q-separator />
+
+      <!-- Card 1 Div -->
+
+      <div class="row flex-center items-start">
+        <div flat bordered class="my-card" style="max-width: 800px">
+          <q-card-section>
+            <div class="text-h6 text-bold text-center">
+              Create your client profile (client)
+            </div>
+          </q-card-section>
+          <q-separator />
+          <div class="q-pa-md">
+            <div class="row">
+              <div class="col-5">
+                <!-- <q-avatar size="100px" class="q-mb-sm"> -->
+                <q-img sizes="200px" src="~/assets/Avator11.png"></q-img>
+                <!-- </q-avatar> -->
+                <div class="q-pa-md">
+                  <q-file
+                    rounded
+                    style="width: 250px"
+                    outlined
+                    v-model="model"
+                    label="upload new picture"
+                  >
+                    <template v-slot:append>
+                      <q-icon
+                        v-if="model !== null"
+                        name="close"
+                        @click.stop="model = null"
+                        class="cursor-pointer"
+                      />
+                    </template>
+                  </q-file>
+                </div>
+                <div class="q-pa-md">
+                  <q-btn outline style="width: 250px" bottom-slots rounded>
+                    remove exsting
+                  </q-btn>
+                </div>
+              </div>
+              <div class="col-1"></div>
+              <div class="col-6">
+                <q-input v-model="completeName" label="Complete name*" />
+                <q-input v-model="address" label="Address*" />
+                <q-input v-model="billingAddress" label="Billing address*" />
+                <q-input v-model="tel" type="tel" label="Phone number" />
+              </div>
+            </div>
+
+            <q-separator />
+          </div>
+          <!-- Card 2 Div -->
+
+          <div class="row flex-center">
+            <div flat bordered class="my-card" style="max-width: 800px">
+              <div class="row q-pa-md">
+                <q-btn
+                  size="10px"
+                  rounded
+                  color="black"
+                  icon="add"
+                  label="Add Companies"
+                  class="text-white text-h7"
+                ></q-btn>
+              </div>
+              <div class="row q-pa-md">
+                * Fields marked with "*" are mandatory.
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- Card 3 div -->
-    <!-- <div class="row q-pa-md"> hello</div> -->
+      <!-- Card 3 div -->
+      <!-- <div class="row q-pa-md"> hello</div> -->
 
-    <!-- Footer Div -->
+      <!-- Footer Div -->
 
-    <div class="row flex-center q-pa-md">
-      <q-btn
-        size="10px"
-        rounded
-        color="black"
-        icon="check_circle_outline"
-        label="Settings saved!"
-        class="text-white text-h7 q-mr-sm"
-      ></q-btn>
-      <q-btn
-        size="10px"
-        rounded
-        outlined
-        label="Go to ID verification →"
-        class="text-h7"
-      ></q-btn>
-    </div>
+      <div class="row flex-center q-pa-md">
+        <q-btn
+          size="10px"
+          rounded
+          color="black"
+          icon="check_circle_outline"
+          label="Settings saved!"
+          class="text-white text-h7 q-mr-sm"
+        ></q-btn>
+        <q-btn
+          size="10px"
+          rounded
+          outlined
+          type="submit"
+          label="Go to ID verification →"
+          class="text-h7"
+        ></q-btn>
+      </div>
+    </q-form>
   </div>
 </template>
 
 <script>
 import { defineComponent } from "vue";
 import { ref } from "vue";
+import axios from "axios";
 export default defineComponent({
   // name: "IndexPage",
   setup() {
@@ -210,6 +216,35 @@ export default defineComponent({
       pricelist1: ref("15|"),
       pricelist2: ref("55|"),
     };
+  },
+    methods: {
+    agency() {
+      const agency = new FormData();
+      agency.append("name", this.name);
+      agency.append("billing_country_id", this.billing_country_id);
+      agency.append("vat_code", this.vat_code);
+      agency.append("registration_code", this.registration_code);
+      agency.append("website", this.website);
+      agency.append("phone", this.phone);
+      agency.append("profile_picture", this.profile_picture);
+
+      const options = {
+        method: "POST",
+        url: "https://rwapi.zupria.com/api/user/agency",
+        // headers: { "No Auth": " "},
+        data: agency,
+        headers: { Authorization: "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcndhcGkuenVwcmlhLmNvbVwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY1MDY2NjAyMSwiZXhwIjoxNjgyMjAyMDIxLCJuYmYiOjE2NTA2NjYwMjEsImp0aSI6InVkbmUyZ3NsRHJ5VjY5Z3UiLCJzdWIiOjksInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.4_rBRo4Yo7rQ58dKVNdbUEtp6_EKjF79744-cfrUQWM" }
+      };
+      axios
+        .request(options)
+        .then((response) => {
+          console.log(response.data);
+          this.user = response.data;
+        })
+        .catch(function (error) {
+          console.error(error);
+        });
+    },
   },
 });
 </script>
