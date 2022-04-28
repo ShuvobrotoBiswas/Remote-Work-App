@@ -1,6 +1,6 @@
 <template>
   <div>
-    <q-form @submit.prevent="display">
+    <q-form @submit.prevent="profile">
       <div class="flex-break"></div>
       <div class="text-h7 text-center">
         Hi Florin, welcome to your dashboard!
@@ -67,59 +67,61 @@
           </q-card-section>
           <q-separator />
           <div class="q-pa-md">
-            <div class="row">
-              <div class="col-4">
-                <!-- <q-avatar size="100px" class="q-mb-sm"> -->
-                <q-img sizes="200px" src="~/assets/Avator1.png"></q-img>
-                <!-- </q-avatar> -->
+            <!-- <q-item v-for="user in profile" : key="user.id"> -->
+              <div class="row">
+                <div class="col-4">
+                  <!-- <q-avatar size="100px" class="q-mb-sm"> -->
+                  <q-img sizes="200px" src="~/assets/Avator1.png"></q-img>
+                  <!-- </q-avatar> -->
+                </div>
+                <div class="col-1"></div>
+                <div class="col-6">
+                  <div class="text-h6 text-bold">{{user.name}}</div>
+                  <div class="text-h7 q-py-md">
+                    <strong>Address:</strong> {{user.res_address}}
+                  </div>
+                  <div class="text-h7">
+                    <strong> Billing address:</strong> {{user.billing_address}}
+                  </div>
+                  <div class="text-h7 q-py-md">
+                    <strong>Phone:</strong> {{user.phone}}
+                  </div>
+                  <div class="text-h7">
+                    <strong>CV:</strong> Tom Petty Europass CV
+                  </div>
+                  <div class="q-py-md">
+                    <q-btn
+                      size="7px"
+                      rounded
+                      color="grey-5"
+                      class="text-black q-mr-sm text-h7"
+                      >#{{}}</q-btn
+                    >
+                    <q-btn
+                      size="7px"
+                      rounded
+                      color="grey-5"
+                      class="text-black q-mr-sm text-h7"
+                      >#{{}}</q-btn
+                    >
+                    <q-btn
+                      size="7px"
+                      rounded
+                      color="grey-5"
+                      class="text-black q-mr-sm text-h7"
+                      >#{{}}</q-btn
+                    >
+                    <q-btn
+                      size="7px"
+                      rounded
+                      color="grey-5"
+                      class="text-black text-h7"
+                      >#{{}}</q-btn
+                    >
+                  </div>
+                </div>
               </div>
-              <div class="col-1"></div>
-              <div class="col-6">
-                <div class="text-h6 text-bold">Tom Petty</div>
-                <div class="text-h7 q-py-md">
-                  <strong>Address:</strong> Street Name, etc.
-                </div>
-                <div class="text-h7">
-                  <strong> Billing address:</strong> Lorem ipsum dolor sit amet
-                </div>
-                <div class="text-h7 q-py-md">
-                  <strong>Phone:</strong> +04072123456789
-                </div>
-                <div class="text-h7">
-                  <strong>CV:</strong> Tom Petty Europass CV
-                </div>
-                <div class="q-py-md">
-                  <q-btn
-                    size="7px"
-                    rounded
-                    color="grey-5"
-                    class="text-black q-mr-sm text-h7"
-                    >#photoshop</q-btn
-                  >
-                  <q-btn
-                    size="7px"
-                    rounded
-                    color="grey-5"
-                    class="text-black q-mr-sm text-h7"
-                    >#illustrator</q-btn
-                  >
-                  <q-btn
-                    size="7px"
-                    rounded
-                    color="grey-5"
-                    class="text-black q-mr-sm text-h7"
-                    >#CSS3</q-btn
-                  >
-                  <q-btn
-                    size="7px"
-                    rounded
-                    color="grey-5"
-                    class="text-black text-h7"
-                    >#Adobe XD</q-btn
-                  >
-                </div>
-              </div>
-            </div>
+            <!-- </q-item> -->
             <div class="row flex-center q-py-md">
               <q-btn
                 size="10px"
@@ -175,7 +177,7 @@
                 </div>
                 <Strong>Company #1</Strong> <br />
                 <div class="q-py-md"></div>
-                <strong>Address:</strong> Via dei Faggi 24 , Rome, 254321, Italy
+                <strong>Address:</strong> {{user.address}}
                 <div></div>
                 <br />
                 <strong>Description</strong> <br />
@@ -232,7 +234,7 @@
                   <strong>Website:</strong> https://domain.com
                 </div>
                 <div class="text-h7">
-                  <strong>Phone:</strong> +39 321 654 987
+                  <strong>Phone:</strong> {{user.phone}}
                 </div>
                 <div class="text-h7 q-py-md">
                   <strong>Freelanchers associated</strong>
@@ -363,7 +365,7 @@
                 </div>
                 <Strong>Company #2</Strong> <br />
                 <div class="q-py-md"></div>
-                <strong>Address:</strong> Via dei Faggi 24 , Rome, 254321, Italy
+                <strong>Address:</strong> {{user.address}}
                 <div></div>
                 <br />
                 <strong>Description</strong> <br />
@@ -420,7 +422,7 @@
                   <strong>Website:</strong> https://domain.com
                 </div>
                 <div class="text-h7">
-                  <strong>Phone:</strong> +39 321 654 987
+                  <strong>Phone:</strong> {{user.phone}}
                 </div>
                 <div class="text-h7 q-py-md">
                   <strong>Freelanchers associated</strong>
@@ -530,13 +532,35 @@ import { defineComponent } from "vue";
 import axios from "axios";
 export default defineComponent({
   name: "IndexPage",
-  setup() {
+  data() {
     return {
+      profile: "",
+      user: [],
       lorem:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     };
   },
-  
+
+  // SHOW
+  created() {
+    const options = {
+      method: "GET",
+      url: "https://rwapi.zupria.com/api/user/profile",
+      headers: {
+        Authorization:
+          "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcndhcGkuenVwcmlhLmNvbVwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY1MDY2NTQ3NCwiZXhwIjoxNjgyMjAxNDc0LCJuYmYiOjE2NTA2NjU0NzQsImp0aSI6ImRaUGlZem9YTXZZS25ITU4iLCJzdWIiOjgsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.m127K5q8Fy_6CxXEWJZyXqb_HJL4U-EUcHmdwmHTytI",
+      },
+    };
+    axios
+      .request(options)
+      .then((response) => {
+        console.log(response.data);
+        this.user = response.data;
+      })
+      .catch(function (error) {
+        console.error(error);
+      });
+  },
 });
 </script>
 <style lang="sass" scoped>
