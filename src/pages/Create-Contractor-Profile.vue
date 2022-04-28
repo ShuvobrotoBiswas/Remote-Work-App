@@ -1,6 +1,6 @@
 <template>
   <div>
-    <q-form @submit.prevent="agency">
+    <q-form @submit.prevent="contractorProfile">
       <div class="flex-break"></div>
       <div class="text-h7 text-center">
         Hi Florin, welcome to your dashboard!
@@ -355,7 +355,7 @@
                             class="q-mr-sm bg-grey-4"
                             type="number"
                             maxlength="10"
-                            v-model="pricelist1"
+                            v-model="hourly_rate"
                           />
                         </fieldset>
                       </div>
@@ -373,7 +373,7 @@
                             class="q-mr-sm bg-grey-4"
                             type="number"
                             maxlength="10"
-                            v-model="pricelist1"
+                            v-model="hourly_rate"
                           />
                         </fieldset>
                       </div>
@@ -560,6 +560,7 @@
                         <q-btn
                           size="10px"
                           rounded
+                          type="submit"
                           color="black"
                           icon="add"
                           label="Add Companies"
@@ -633,17 +634,20 @@ export default defineComponent({
   },
 
   methods: {
-    agency() {
-      const agency = new FormData();
-      agency.append("password", this.password);
-      agency.append("password_confirmation", this.password_confirmation);
-      agency.append("email", this.email);
+    contractorProfile() {
+      const contractorProfile = new FormData();
+      contractorProfile.append("title", this.title);
+      contractorProfile.append("description", this.description);
+      contractorProfile.append("exp_level", this.exp_level);
+      contractorProfile.append("hourly_rate", this.hourly_rate);
+      contractorProfile.append("hours_available_per_week", this.hours_available_per_week);
+      contractorProfile.append("current_loading", this.current_loading);
 
       const options = {
         method: "POST",
-        url: "https://rwapi.zupria.com/api/user/agency",
-        // headers: { "No Auth": " "},
-        data: agency,
+        url: "https://rwapi.zupria.com/api/user/contractorProfile",
+        headers: { Authorization: "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcndhcGkuenVwcmlhLmNvbVwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY1MDY2NTQ3NCwiZXhwIjoxNjgyMjAxNDc0LCJuYmYiOjE2NTA2NjU0NzQsImp0aSI6ImRaUGlZem9YTXZZS25ITU4iLCJzdWIiOjgsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.m127K5q8Fy_6CxXEWJZyXqb_HJL4U-EUcHmdwmHTytI"},
+        data: contractorProfile,
       };
       axios
         .request(options)

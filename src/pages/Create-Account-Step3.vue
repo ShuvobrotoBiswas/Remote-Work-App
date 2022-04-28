@@ -4,7 +4,7 @@
 
     <!-- Card 2 Div -->
 
-    <div class=" items-start q-gutter-md">
+    <div class="items-start q-gutter-md">
       <div class="q-pa-md items-start text-bold text-h7 q-gutter-md">
         <div class="q-py-none text-bold my-font">Log into your account.</div>
       </div>
@@ -15,21 +15,22 @@
         <div class="q-pa-md">
           <div class="row flex flex-center">
             <div class="col-5 text-bold text-h7" style="width: 300px">
-              <q-input label="Email" type="email" v-model="email"> </q-input>
-              <q-input label="Password" type="password" v-model="password">
-              </q-input>
-              <div class="q-py-md">
-                <q-btn
-                  to="Contractor-profile-display"
-                  size="10px"
-                  rounded
-                  color="black"
-                  type="submit"
-                  style="width:90px"
-                  label="Login"
-                  class="text-white text-h7"
-                ></q-btn>
-              </div>
+              <q-form @submit.prevent="login">
+                <q-input label="Email" type="email" v-model="email"> </q-input>
+                <q-input label="Password" type="password" v-model="password">
+                </q-input>
+                <div class="q-py-md">
+                  <q-btn
+                    size="10px"
+                    rounded
+                    color="black"
+                    type="submit"
+                    style="width: 90px"
+                    label="Login"
+                    class="text-white text-h7"
+                  ></q-btn>
+                </div>
+              </q-form>
             </div>
             <div class="col-5" style="width: 300px">
               <q-img src="~assets/Avator15.png" sizes="200px"> </q-img>
@@ -46,6 +47,7 @@
 <script>
 import { defineComponent } from "vue";
 import { ref } from "vue";
+import axios from "axios";
 export default defineComponent({
   // name: "IndexPage",
   setup() {
@@ -55,6 +57,35 @@ export default defineComponent({
       password: ref(null),
       submit: "",
     };
+  },
+
+  methods: {
+    login() {
+      const login = new FormData();
+      login.append("password", this.password);
+      login.append("email", this.email);
+
+      const options = {
+        method: "POST",
+        url: "https://rwapi.zupria.com/api/auth/login",
+        // headers: { "No Auth": " "},
+        data: login,
+      };
+      axios;
+      axios
+        .request(options)
+        .then((response) => {
+          console.log(response.data);
+          this.admin = response.data;
+          this.id = response.data.data.id;
+          this.token = response.data.token;
+          localStorage.setItem = ("token", response.data.token);
+          this.$router.push("/Contractor-profile-display");
+        })
+        .catch(function (error) {
+          console.error(error);
+        });
+    },
   },
 });
 </script>

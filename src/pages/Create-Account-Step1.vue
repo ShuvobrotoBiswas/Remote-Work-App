@@ -14,6 +14,7 @@
             </div>
             <q-form @submit.prevent="registration">
               <div class="col-6">
+                <q-input v-model="account_type" :options="options" label="Account Type" />
                 <q-input label="Email" type="email" v-model="email"> </q-input>
                 <q-input label="Password" type="password" v-model="password">
                 </q-input>
@@ -42,7 +43,7 @@
 
     <!-- Card 2 -->
 
-    <div class="q-pa-md this-card row flex flex-center items-start q-gutter-md">
+    <!-- <div class="q-pa-md this-card row flex flex-center items-start q-gutter-md">
       <q-card
         class="my-card q-pa-md this-card row flex-center text-black bg-white"
         style="max-width: 750px"
@@ -78,7 +79,7 @@
           </div>
         </div>
       </q-card>
-    </div>
+    </div> -->
 
     <!-- Footer Div -->
   </div>
@@ -100,19 +101,22 @@ export default defineComponent({
       password1: ref(""),
       submit: ref(""),
       register: [],
+      account_type: ref("agency / client"),
+      options: ["Agency", "Client"],
     };
   },
 
   methods: {
     registration() {
       const register = new FormData();
+      register.append("account_type", this.account_type);
       register.append("password", this.password);
       register.append("password_confirmation", this.password_confirmation);
       register.append("email", this.email);
 
       const options = {
         method: "POST",
-        url: "http://192.168.0.101:8080/api/auth/register",
+        url: "https://rwapi.zupria.com/api/auth/register",
         // headers: { "No Auth": " "},
         data: register,
       };
