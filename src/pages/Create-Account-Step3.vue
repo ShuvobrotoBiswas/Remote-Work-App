@@ -71,7 +71,6 @@ export default defineComponent({
         // headers: { "No Auth": " "},
         data: login,
       };
-      axios;
       axios
         .request(options)
         .then((response) => {
@@ -79,7 +78,10 @@ export default defineComponent({
           this.admin = response.data;
           this.id = response.data.data.id;
           this.token = response.data.token;
-          localStorage.setItem = ("token", response.data.token);
+          // window.localStorage.setItem(key, value);
+          // window.localStorage.getItem(key);
+          localStorage.setItem = ('token', response.data.token);
+          localStorage.getItem('token');
           this.$router.push("/Contractor-profile-display");
         })
         .catch(function (error) {
