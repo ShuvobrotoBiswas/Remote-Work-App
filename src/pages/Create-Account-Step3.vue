@@ -52,16 +52,14 @@ export default defineComponent({
   // name: "IndexPage",
   setup() {
     return {
-      confirm_password: ref(null),
       email: ref(null),
       password: ref(null),
       submit: "",
     };
   },
-
   methods: {
     login() {
-      const login = new FormData();
+      let login = new FormData();
       login.append("password", this.password);
       login.append("email", this.email);
 
@@ -75,13 +73,10 @@ export default defineComponent({
         .request(options)
         .then((response) => {
           console.log(response.data);
-          this.admin = response.data;
+          this.auth = response.data;
           this.id = response.data.data.id;
           this.token = response.data.token;
-          // window.localStorage.setItem(key, value);
-          // window.localStorage.getItem(key);
-          localStorage.setItem = ('token', response.data.token);
-          localStorage.getItem('token');
+          localStorage.setItem("token", response.data.token);
           this.$router.push("/Contractor-profile-display");
         })
         .catch(function (error) {
