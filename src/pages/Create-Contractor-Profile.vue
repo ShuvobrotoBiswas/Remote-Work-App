@@ -110,7 +110,7 @@
               </div>
               <div class="col-1"></div>
               <div class="col-6">
-                <q-input v-model="completeName" label="Complete name*" />
+                <q-input v-model="title" label="Complete name*" />
                 <q-input v-model="address" label="Address*" />
                 <q-input v-model="billingAddress" label="Billing address*" />
                 <q-input v-model="tel" type="tel" label="Phone number" />
@@ -611,7 +611,7 @@ export default defineComponent({
     return {
       lorem:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      completeName: ref(""),
+      title: ref(""),
       search: ref(""),
       tel: ref(""),
       billingAddress: "",
