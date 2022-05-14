@@ -1,8 +1,7 @@
 <template>
   <div>
-    <q-form @submit.prevent="agency">
-      <!-- Header Div -->
-
+    <!-- Header Div -->
+    <q-form @submit.prevent="profilePic">
       <q-header>
         <q-toolbar class="bg-white">
           <q-toolbar-title>
@@ -103,18 +102,31 @@
                 <q-img sizes="200px" src="~/assets/Avator11.png"></q-img>
                 <!-- </q-avatar> -->
                 <div class="q-pa-md">
+                  <!-- <q-input
+                    @update:model-value="
+                      (val) => {
+                        image = val[0];
+                      }
+                    "
+                    rounded
+                    style="width: 250px"
+                    outlined
+                    v-model="profile_picture"
+                    hint="Upload New Picture"
+                    type="file"
+                  /> -->
                   <q-file
                     rounded
                     style="width: 250px"
                     outlined
-                    v-model="model"
+                    v-model="profile_picture"
                     label="upload new picture"
                   >
                     <template v-slot:append>
                       <q-icon
-                        v-if="model !== null"
+                        v-if="profile_picture !== null"
                         name="close"
-                        @click.stop="model = null"
+                        @click.stop="profile_picture = null"
                         class="cursor-pointer"
                       />
                     </template>
@@ -128,10 +140,10 @@
               </div>
               <div class="col-1"></div>
               <div class="col-6">
-                <q-input v-model="completeName" label="Complete name*" />
-                <q-input v-model="address" label="Address*" />
-                <q-input v-model="billingAddress" label="Billing address*" />
-                <q-input v-model="tel" type="tel" label="Phone number" />
+                <q-input v-model="name" label="Complete name*" />
+                <q-input v-model="res_address" label="Address*" />
+                <q-input v-model="billing_address" label="Billing address*" />
+                <q-input v-model="phone" type="tel" label="Phone number" />
               </div>
             </div>
 
@@ -145,6 +157,7 @@
                 <q-btn
                   size="10px"
                   rounded
+                  type="submit"
                   color="black"
                   icon="add"
                   label="Add Companies"
@@ -196,10 +209,12 @@ export default defineComponent({
     return {
       lorem:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      completeName: ref(""),
+      name: ref(" "),
       search: ref(""),
-      tel: ref(""),
-      billingAddress: "",
+      phone: ref(""),
+      res_address: ref(""),
+      billing_address: ref(""),
+      profile_picture:ref(""),
       address: "",
       model: ref(null),
       group: ref([]),
@@ -217,23 +232,27 @@ export default defineComponent({
       pricelist2: ref("55|"),
     };
   },
-    methods: {
-    agency() {
-      const agency = new FormData();
-      agency.append("name", this.name);
-      agency.append("billing_country_id", this.billing_country_id);
-      agency.append("vat_code", this.vat_code);
-      agency.append("registration_code", this.registration_code);
-      agency.append("website", this.website);
-      agency.append("phone", this.phone);
-      agency.append("profile_picture", this.profile_picture);
+  methods: {
+    onFileSelected(event) {
+      console.log(event.target);
+    },
+    profilePic() {
+      const profilePic = new FormData();
+      profilePic.append("name", this.name);
+      profilePic.append("res_address", this.res_address);
+      profilePic.append("billing_address", this.billing_address);
+      profilePic.append("phone", this.phone);
+      profilePic.append("profile_picture", this.profile_picture);
 
       const options = {
         method: "POST",
-        url: "https://rwapi.zupria.com/api/user/agency",
+        url: "https://rwapi.zupria.com/api/user/profilePic",
         // headers: { "No Auth": " "},
-        data: agency,
-        headers: { Authorization: "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcndhcGkuenVwcmlhLmNvbVwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY1MDY2NjAyMSwiZXhwIjoxNjgyMjAyMDIxLCJuYmYiOjE2NTA2NjYwMjEsImp0aSI6InVkbmUyZ3NsRHJ5VjY5Z3UiLCJzdWIiOjksInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.4_rBRo4Yo7rQ58dKVNdbUEtp6_EKjF79744-cfrUQWM" }
+        data: profilePic,
+        headers: {
+          Authorization:
+            "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcndhcGkuenVwcmlhLmNvbVwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY1MDY2NjAyMSwiZXhwIjoxNjgyMjAyMDIxLCJuYmYiOjE2NTA2NjYwMjEsImp0aSI6InVkbmUyZ3NsRHJ5VjY5Z3UiLCJzdWIiOjksInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.4_rBRo4Yo7rQ58dKVNdbUEtp6_EKjF79744-cfrUQWM",
+        },
       };
       axios
         .request(options)

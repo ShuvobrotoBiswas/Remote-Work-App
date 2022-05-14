@@ -645,7 +645,7 @@ export default defineComponent({
 
       const options = {
         method: "POST",
-        url: "https://rwapi.zupria.com/api/user/contractorProfile",
+        url: "https://rwapi.zupria.com/api/user/agency",
         headers: { Authorization: "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcndhcGkuenVwcmlhLmNvbVwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY1MDY2NTQ3NCwiZXhwIjoxNjgyMjAxNDc0LCJuYmYiOjE2NTA2NjU0NzQsImp0aSI6ImRaUGlZem9YTXZZS25ITU4iLCJzdWIiOjgsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.m127K5q8Fy_6CxXEWJZyXqb_HJL4U-EUcHmdwmHTytI"},
         data: contractorProfile,
       };
@@ -660,6 +660,7 @@ export default defineComponent({
         });
     },
   },
+  
 });
 </script>
 <style lang="sass" scoped>
