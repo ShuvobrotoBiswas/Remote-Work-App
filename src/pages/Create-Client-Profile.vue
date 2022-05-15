@@ -123,13 +123,10 @@
             </div>
           </div>
         </div>
-        <!-- Card 2 Div -->
         <div class="row q-pa-md">* Fields marked with "*" are mandatory.</div>
       </div>
     </div>
 
-    <!-- Card 3 div -->
-    <!-- <div class="row q-pa-md"> hello</div> -->
 
     <!-- Footer Div -->
 
@@ -172,34 +169,6 @@ export default defineComponent({
       file: ref(""),
       address: "",
     };
-  },
-  methods: {
-    onFileSelected(event) {
-      console.log(event.target);
-    },
-    profilePic() {
-      const profilePic = new FormData();
-      profilePic.append("file", this.file);
-
-      const options = {
-        method: "POST",
-        url: "https://rwapi.zupria.com/api/user/profilePic",
-        data: profilePic,
-        headers: {
-          Authorization:
-            "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcndhcGkuenVwcmlhLmNvbVwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY1MDY2NjAyMSwiZXhwIjoxNjgyMjAyMDIxLCJuYmYiOjE2NTA2NjYwMjEsImp0aSI6InVkbmUyZ3NsRHJ5VjY5Z3UiLCJzdWIiOjksInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.4_rBRo4Yo7rQ58dKVNdbUEtp6_EKjF79744-cfrUQWM",
-        },
-      };
-      axios
-        .request(options)
-        .then((response) => {
-          console.log(response.data);
-          this.user = response.data;
-        })
-        .catch(function (error) {
-          console.error(error);
-        });
-    },
   },
   methods: {
     profile() {

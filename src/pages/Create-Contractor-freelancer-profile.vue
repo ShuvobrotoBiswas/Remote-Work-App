@@ -94,55 +94,21 @@
         <div class="q-pa-md">
           <div class="row">
             <div class="col-5">
-              <q-img sizes="200px" src="~/assets/Avator9.png"></q-img>
-              <div class="q-pa-md">
-                <q-file
-                  style="width: 250px"
-                  rounded
-                  outlined
-                  v-model="model"
-                  label="upload new picture"
-                >
-                  <template v-slot:append>
-                    <q-icon
-                      v-if="model !== null"
-                      name="close"
-                      @click.stop="model = null"
-                      class="cursor-pointer"
-                    />
-                  </template>
-                </q-file>
-              </div>
-              <div class="q-pa-md">
-                <q-btn outline style="width: 250px" bottom-slots rounded>
-                  remove exsting
-                </q-btn>
-              </div>
-              <div class="q-pa-md text-h6 text-bold">Europass & Portfolio</div>
-              <div class="q-pa-md">
-                <q-btn
-                  icon="link"
-                  class="q-mr-sm text-h7"
-                  style="width: 250px"
-                  rounded
-                  color="black"
-                >
-                  Link Your Europass CV
-                </q-btn>
-              </div>
+              <freelancer-picture />
             </div>
             <div class="col-1"></div>
             <div class="col-6">
-              <q-input v-model="completeName" label="Complete name*" />
-              <q-input v-model="address" label="Address*" />
-              <q-input v-model="billingAddress" label="Billing address*" />
-              <q-input v-model="tel" type="tel" label="Phone number" />
+              <q-form @submit.prevent="profile">
+              <q-input v-model="name" label="Complete name*" />
+              <q-input v-model="res_address" label="Address*" />
+              <q-input v-model="billing_address" label="Billing address*" />
+              <q-input v-model="phone" type="tel" label="Phone number" />
               <div class="text-bold q-py-md">
                 Search/Select your Skills & Tools
               </div>
               <q-input
                 style="max-width: 300px"
-                v-model="search"
+                v-model="skill_ids"
                 outlined
                 type="search"
               >
@@ -192,6 +158,22 @@
                   >CSS3 ✠</q-btn
                 >
               </div>
+              <div class="row flex-center">
+                  <div flat bordered class="my-card" style="max-width: 800px">
+                    <div class="row q-pa-md">
+                      <q-btn
+                        size="10px"
+                        rounded
+                        type="submit"
+                        color="black"
+                        icon="add"
+                        label="Add Companies"
+                        class="text-white text-h7"
+                      ></q-btn>
+                    </div>
+                  </div>
+                </div>
+                </q-form>
             </div>
           </div>
           <q-separator />
@@ -241,9 +223,6 @@
       </div>
     </div>
 
-    <!-- Card 3 div -->
-    <!-- <div class="row q-pa-md"> hello</div> -->
-
     <!-- Footer Div -->
 
     <div class="row flex-center q-pa-md">
@@ -268,18 +247,18 @@
 
 <script>
 import { defineComponent } from "vue";
+import freelancerPicture from "components/freelancer-picture.vue";
+import axios from "axios";
 import { ref } from "vue";
 export default defineComponent({
-  // name: "IndexPage",
+  components: { freelancerPicture },
   setup() {
     return {
-      lorem:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      completeName: ref(""),
+      name: ref(""),
       search: ref(""),
-      tel: ref(""),
-      billingAddress: "",
-      address: "",
+      phone: ref(""),
+      billing_address: ref(""),
+      res_address: ref(""),
       model: ref(null),
       group: ref([]),
       options: [
@@ -287,14 +266,37 @@ export default defineComponent({
         { label: "Adobe Photoshop" },
         { label: "Adobe XD" },
       ],
-      group1: ref([]),
-      options1: [{ label: "Branding & Logo Design" }, { label: "Web Design" }],
-      description: ref(
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-      ),
-      pricelist1: ref("15|"),
-      pricelist2: ref("55|"),
+      skill_ids: ref(""),
     };
+  },
+  methods: {
+    profile() {
+      const profile = new FormData();
+      profile.append("name", this.name);
+      profile.append("res_address", this.res_address);
+      profile.append("billing_address", this.billing_address);
+      profile.append("phone", this.phone);
+      profile.append("skill_ids", this.skill_ids);
+
+      const options = {
+        method: "POST",
+        url: "https://rwapi.zupria.com/api/user/profile",
+        data: profile,
+        headers: {
+          Authorization:
+            "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcndhcGkuenVwcmlhLmNvbVwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY1MDY2NjAyMSwiZXhwIjoxNjgyMjAyMDIxLCJuYmYiOjE2NTA2NjYwMjEsImp0aSI6InVkbmUyZ3NsRHJ5VjY5Z3UiLCJzdWIiOjksInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.4_rBRo4Yo7rQ58dKVNdbUEtp6_EKjF79744-cfrUQWM",
+        },
+      };
+      axios
+        .request(options)
+        .then((response) => {
+          console.log(response.data);
+          this.user = response.data;
+        })
+        .catch(function (error) {
+          console.error(error);
+        });
+    },
   },
 });
 </script>
