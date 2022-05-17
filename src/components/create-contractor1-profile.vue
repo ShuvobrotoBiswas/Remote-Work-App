@@ -2,22 +2,20 @@
   <div>
     <!-- Card 3 div -->
     <q-form @submit.prevent="createContractor">
-
-
-    <div class="q-pa-md row flex-center items-start q-gutter-md">
-      <q-card class="my-card text-black bg-grey-4" style="max-width: 800px">
-        <div class="q-pa-md">
-          <div class="row">
-            <div class="col-9 text-h6">Add Company</div>
-            <div class="col-6">
-              <div class="row justify-between" style="width: 300px">
-                <div class="my-home" style="width: 130px; height: 130px">
-                  <q-img
-                    src="~assets/Avator2.png"
-                    style="height: 90px; max-width: 90px"
-                  >
-                  </q-img>
-                  <p class="custom-text-me row flex-center">
+      <div class="q-pa-md row flex-center items-start q-gutter-md">
+        <q-card class="my-card text-black bg-grey-4" style="max-width: 800px">
+          <div class="q-pa-md">
+            <div class="row">
+              <div class="col-9 text-h6">Add Company</div>
+              <div class="col-6">
+                <div class="row justify-between" style="width: 300px">
+                  <div class="my-home" style="width: 130px; height: 130px">
+                    <q-img
+                      src="~assets/Avator2.png"
+                      style="height: 90px; max-width: 90px"
+                    >
+                    </q-img>
+                    <p class="custom-text-me row flex-center">
                       <q-file
                         style="width: 20px; height: 5px"
                         v-model="profile_picture"
@@ -27,206 +25,153 @@
                         Change Logo</q-file
                       >
                     </p>
+                  </div>
                 </div>
-              </div>
-              <div class="text-bold text-h7 underline-font q-py-md">
-                <q-input borderless v-model="name">
+                <div class="text-bold text-h7 underline-font q-py-md">
+                  <q-input borderless v-model="name">
                     <template v-slot:prepend>
                       <p class="text-bold custom-text-you underline-font">
                         Company Name
                       </p>
                     </template>
                   </q-input>
-              </div>
-              <div class="text-h7 underline-font">
-                <q-input borderless v-model="res_address">
+                </div>
+                <div class="text-h7 underline-font">
+                  <q-input borderless v-model="res_address">
                     <template v-slot:prepend>
                       <p class="text-bold custom-text-you underline-font">
                         Address:
                       </p>
                     </template>
                   </q-input>
+                </div>
               </div>
-            </div>
-            <div class="col-6">
-              <div class="underline-font">
-                 <q-input borderless v-model="vat_code">
+              <div class="col-6">
+                <div class="underline-font">
+                  <q-input borderless v-model="vat_code">
                     <template v-slot:prepend>
                       <p class="text-bold custom-text-you underline-font">
                         Fascial code:
                       </p>
                     </template>
                   </q-input>
-              </div>
-              <div class="q-py-md underline-font q-mr-sm">
-                <strong>Add Legal Note company owner</strong>
-                <span class="q-mr-sm"></span>
-                <q-btn round outline size="5px" icon="add"></q-btn>
-              </div>
-              <div class="underline-font">
-                 <q-input borderless v-model="registration_code">
+                </div>
+                <div class="q-py-md underline-font q-mr-sm">
+                  <strong>Add Legal Note company owner</strong>
+                  <span class="q-mr-sm"></span>
+                  <q-btn round outline size="5px" icon="add"></q-btn>
+                </div>
+                <div class="underline-font">
+                  <q-input borderless v-model="registration_code">
                     <template v-slot:prepend>
                       <p class="text-bold custom-text-you underline-font">
                         Register number:
                       </p>
                     </template>
                   </q-input>
-              </div>
-              <div class="underline-font">
-                 <q-input borderless v-model="website">
+                </div>
+                <div class="underline-font">
+                  <q-input borderless v-model="website">
                     <template v-slot:prepend>
                       <p class="text-bold custom-text-you underline-font">
                         Website:
                       </p>
                     </template>
                   </q-input>
-              </div>
-              <div class="q-py-md underline-font">
-                <q-input borderless v-model="phone">
+                </div>
+                <div class="q-py-md underline-font">
+                  <q-input borderless v-model="phone">
                     <template v-slot:prepend>
                       <p class="text-bold custom-text-you underline-font">
                         Phone:
                       </p>
                     </template>
                   </q-input>
-              </div>
-              <div><strong>Freelanchers associated</strong></div>
-              <div>
-                <div class="q-py-md">
+                </div>
+                <div><strong>Freelanchers associated</strong></div>
+                <div>
+                  <div class="q-py-md">
+                    <q-btn
+                      size="7px"
+                      rounded
+                      color="white"
+                      class="text-black q-mr-sm text-h7"
+                      >Gil Dobrica ✠</q-btn
+                    >
+                    <q-btn
+                      size="7px"
+                      rounded
+                      color="white"
+                      class="text-black q-mr-sm text-h7"
+                    >
+                      Viorica Dancila ✠</q-btn
+                    >
+                    <q-btn
+                      size="7px"
+                      rounded
+                      color="white"
+                      class="text-black q-mr-sm text-h7"
+                      >Gabriel Cotabita ✠</q-btn
+                    >
+                  </div>
                   <q-btn
                     size="7px"
                     rounded
                     color="white"
-                    class="text-black q-mr-sm text-h7"
-                    >Gil Dobrica ✠</q-btn
+                    class="text-black q-mr-sm text-bold text-h7"
+                    icon="add"
+                    >Add freelance account</q-btn
                   >
-                  <q-btn
-                    size="7px"
-                    rounded
-                    color="white"
-                    class="text-black q-mr-sm text-h7"
-                  >
-                    Viorica Dancila ✠</q-btn
-                  >
-                  <q-btn
-                    size="7px"
-                    rounded
-                    color="white"
-                    class="text-black q-mr-sm text-h7"
-                    >Gabriel Cotabita ✠</q-btn
-                  >
-                </div>
-                <q-btn
-                  size="7px"
-                  rounded
-                  color="white"
-                  class="text-black q-mr-sm text-bold text-h7"
-                  icon="add"
-                  >Add freelance account</q-btn
-                >
-              </div>
-            </div>
-            <div class="row text-bold">Add an Company description</div>
-            <div class="q-pa-md" style="max-width: 655px; min-width: 655px">
-              <q-input v-model="description" clearable outlined />
-              <div class="row q-py-md text-bold">Price range*</div>
-              <div class="row">
-                <div class="col-3">
-                  <fieldset
-                    style="
-                      max-width: 80px;
-                      min-height: 40px;
-                      border-radius: 5px;
-                    "
-                  >
-                    <legend class="bg-white">€Min/hour</legend>
-                    <input
-                      style="max-width: 80px; min-height: 40px"
-                      class="q-mr-sm bg-grey-4"
-                      type="number"
-                      maxlength="10"
-                      v-model="hourly_rate"
-                    />
-                  </fieldset>
-                </div>
-                <div class="col-2">
-                  <fieldset
-                    style="
-                      max-width: 80px;
-                      min-height: 40px;
-                      border-radius: 5px;
-                    "
-                  >
-                    <legend class="bg-white">€Max/hour</legend>
-                    <input
-                      style="max-width: 80px; min-height: 40px"
-                      class="q-mr-sm bg-grey-4"
-                      type="number"
-                      maxlength="10"
-                      v-model="hourly_rate"
-                    />
-                  </fieldset>
                 </div>
               </div>
-            </div>
-
-            <div>
-              <div class="text-bold">Projects Categories</div>
-              <q-input
-                style="width: 400px"
-                v-model="search"
-                outlined
-                type="search"
-              >
-                <template v-slot:append>
-                  <q-icon name="search" />
-                  <q-menu>
-                    <q-list style="min-width: 250px">
-                      <q-item clickable v-close-popup>
-                        <q-item-section class="text-bold"
-                          >Design</q-item-section
-                        >
-                      </q-item>
-                      <q-option-group
-                        :options="options1"
-                        type="checkbox"
-                        v-model="group1"
+              <div class="row text-bold">Add an Company description</div>
+              <div class="q-pa-md" style="max-width: 655px; min-width: 655px">
+                <q-input v-model="description" clearable outlined />
+                <div class="row q-py-md text-bold">Price range*</div>
+                <div class="row">
+                  <div class="col-3">
+                    <fieldset
+                      style="
+                        max-width: 80px;
+                        min-height: 40px;
+                        border-radius: 5px;
+                      "
+                    >
+                      <legend class="bg-white">€Min/hour</legend>
+                      <input
+                        style="max-width: 80px; min-height: 40px"
+                        class="q-mr-sm bg-grey-4"
+                        type="number"
+                        maxlength="10"
+                        v-model="hourly_rate"
                       />
-                      <q-item clickable v-close-popup>
-                        <q-item-section class="text-bold"
-                          >Development</q-item-section
-                        >
-                      </q-item>
-                    </q-list>
-                  </q-menu>
-                </template>
-              </q-input>
-              <div>
-                <div class="q-py-md">
-                  <q-btn
-                    size="7px"
-                    rounded
-                    color="white"
-                    class="text-black q-mr-sm text-h7"
-                    >Branding & Logo Design ✠</q-btn
-                  >
-                  <q-btn
-                    size="7px"
-                    rounded
-                    color="white"
-                    class="text-black q-mr-sm text-h7"
-                  >
-                    Web Design ✠</q-btn
-                  >
+                    </fieldset>
+                  </div>
+                  <div class="col-2">
+                    <fieldset
+                      style="
+                        max-width: 80px;
+                        min-height: 40px;
+                        border-radius: 5px;
+                      "
+                    >
+                      <legend class="bg-white">€Max/hour</legend>
+                      <input
+                        style="max-width: 80px; min-height: 40px"
+                        class="q-mr-sm bg-grey-4"
+                        type="number"
+                        maxlength="10"
+                        v-model="hourly_rate"
+                      />
+                    </fieldset>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div class="text-bold" style="max-width: 420px">
-              <div class="col text-bold">
-                Skills*
+              <div>
+                <div class="text-bold">Projects Categories</div>
                 <q-input
-                  style="max-width: 400px"
+                  style="width: 400px"
                   v-model="search"
                   outlined
                   type="search"
@@ -269,98 +214,106 @@
                       color="white"
                       class="text-black q-mr-sm text-h7"
                     >
-                      Graphic Design ✠</q-btn
-                    >
-                    <q-btn
-                      size="7px"
-                      rounded
-                      color="white"
-                      class="text-black q-mr-sm text-h7"
-                    >
-                      Logo Design ✠</q-btn
-                    >
-                    <q-btn
-                      size="7px"
-                      rounded
-                      color="white"
-                      class="text-black q-mr-sm text-h7"
-                    >
                       Web Design ✠</q-btn
                     >
-                    <q-btn
-                      size="7px"
-                      rounded
-                      color="white"
-                      class="text-black q-mr-sm text-h7"
-                    >
-                      UI Design ✠</q-btn
-                    >
-                    <q-btn
-                      size="7px"
-                      rounded
-                      color="white"
-                      class="text-black q-mr-sm text-h7"
-                    >
-                      UX Design ✠</q-btn
-                    >
                   </div>
                 </div>
               </div>
-            </div>
 
-            <div class="row flex-center items-start">
-              <div flat bordered class="my-card" style="max-width: 800px">
-                <div class="q-pa-md">
-                  <div class="col-9 text-h7 text-bold">
-                    Add relevent projects from you portfolio
-                  </div>
-                </div>
-                <div class="row bid1 text-center">
-                  <div class="col my-home bid2 q-mr-sm">
-                    <q-img src="~assets/Avator5.png" class="image1"> </q-img>
-                    <div class="q-pa-mg text-center custom-text-me">
-                      LOGO Design
+              <div class="text-bold" style="max-width: 420px">
+                <div class="col text-bold">
+                  Skills*
+                  <q-input
+                    style="max-width: 400px"
+                    v-model="search"
+                    outlined
+                    type="search"
+                  >
+                    <template v-slot:append>
+                      <q-icon name="search" />
+                      <q-menu>
+                        <q-list style="min-width: 250px">
+                          <q-item clickable v-close-popup>
+                            <q-item-section class="text-bold"
+                              >Design</q-item-section
+                            >
+                          </q-item>
+                          <q-option-group
+                            :options="options1"
+                            type="checkbox"
+                            v-model="group1"
+                          />
+                          <q-item clickable v-close-popup>
+                            <q-item-section class="text-bold"
+                              >Development</q-item-section
+                            >
+                          </q-item>
+                        </q-list>
+                      </q-menu>
+                    </template>
+                  </q-input>
+                  <div>
+                    <div class="q-py-md">
+                      <q-btn
+                        size="7px"
+                        rounded
+                        color="white"
+                        class="text-black q-mr-sm text-h7"
+                        >Branding & Logo Design ✠</q-btn
+                      >
+                      <q-btn
+                        size="7px"
+                        rounded
+                        color="white"
+                        class="text-black q-mr-sm text-h7"
+                      >
+                        Graphic Design ✠</q-btn
+                      >
+                      <q-btn
+                        size="7px"
+                        rounded
+                        color="white"
+                        class="text-black q-mr-sm text-h7"
+                      >
+                        Logo Design ✠</q-btn
+                      >
+                      <q-btn
+                        size="7px"
+                        rounded
+                        color="white"
+                        class="text-black q-mr-sm text-h7"
+                      >
+                        Web Design ✠</q-btn
+                      >
+                      <q-btn
+                        size="7px"
+                        rounded
+                        color="white"
+                        class="text-black q-mr-sm text-h7"
+                      >
+                        UI Design ✠</q-btn
+                      >
+                      <q-btn
+                        size="7px"
+                        rounded
+                        color="white"
+                        class="text-black q-mr-sm text-h7"
+                      >
+                        UX Design ✠</q-btn
+                      >
                     </div>
                   </div>
-                  <div class="col my-home bid2 q-mr-sm">
-                    <q-img src="~assets/Avator6.png" class="image1"> </q-img>
-                    <div class="q-pa-mg text-center custom-text-me">
-                      Website Design
-                    </div>
-                  </div>
-                  <div class="col my-home bid2 q-mr-sm">
-                    <q-img src="~assets/Avator7.png " class="image1"> </q-img>
-                    <div class="q-pa-mg text-center custom-text-me">
-                      UX Design
-                    </div>
-                  </div>
-                  <div class="col my-home bid2">
-                    <q-img src="~assets/Avator8.png" class="image1"> </q-img>
-                    <div class="q-pa-mg text-center custom-text-me">
-                      + Add Project
-                    </div>
-                  </div>
-                </div>
-
-                <div class="row q-pa-md">
-                  <q-btn
-                    size="10px"
-                    rounded
-                    type="submit"
-                    color="black"
-                    icon="add"
-                    label="Add Companies"
-                    class="text-white text-h7"
-                  ></q-btn>
                 </div>
               </div>
+
+              <!-- add project -->
+              <addProject />
             </div>
           </div>
-        </div>
-        <div>* Fields marked with "*" are mendatory.</div>
-      </q-card>
-    </div>
-</q-form>
+          <div>* Fields marked with "*" are mendatory.</div>
+        </q-card>
+      </div>
+    </q-form>
     <!-- Footer Div -->
   </div>
 </template>
@@ -368,9 +321,11 @@
 <script>
 import { defineComponent } from "vue";
 import { ref } from "vue";
+import addProject from "components/add-project.vue";
 import axios from "axios";
 
 export default defineComponent({
+  components: { addProject },
   name: "CreateContractorProfile",
   setup() {
     return {
@@ -382,10 +337,10 @@ export default defineComponent({
       res_address: ref(""),
       billing_address: ref(""),
       model: ref(null),
-      website: ref(''),
+      website: ref(""),
       group: ref([]),
-      registration_code: ref(''),
-      vat_code: ref(''),
+      registration_code: ref(""),
+      vat_code: ref(""),
       options: [
         { label: "Adobe Illustrator" },
         { label: "Adobe Photoshop" },
@@ -415,9 +370,6 @@ export default defineComponent({
       agency.append("profile_picture", this.profile_picture);
       agency.append("vat_code", this.vat_code);
       agency.append("registration_code", this.registration_code);
-
-
-
 
       const options = {
         method: "POST",

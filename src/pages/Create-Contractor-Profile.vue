@@ -166,64 +166,7 @@
 
         <!-- Card 2 Div -->
 
-        <div class="row items-start">
-          <div flat bordered class="my-card" style="max-width: 600px">
-            <div class="q-pa-md">
-              <div class="col-9 text-h6 text-bold">
-                Add relevent projects from you portfolio
-              </div>
-            </div>
-            <div class="row bid1 text-center">
-              <div
-                class="col my-home bid2 q-mr-sm"
-                style="height: 100px; width: 20px"
-              >
-                <q-img src="~assets/Avator5.png" class="image1"> </q-img>
-                <div class="q-pa-mg text-center custom-text-me">
-                  LOGO Design
-                </div>
-              </div>
-              <div
-                class="col my-home bid2 q-mr-sm"
-                style="height: 100px; width: 20px"
-              >
-                <q-img src="~assets/Avator6.png" class="image1"> </q-img>
-                <div class="q-pa-mg text-center custom-text-me">
-                  LOGO Design
-                </div>
-              </div>
-              <div
-                class="col my-home bid2 q-mr-sm"
-                style="height: 100px; width: 20px"
-              >
-                <q-img src="~assets/Avator7.png" class="image1"> </q-img>
-                <div class="q-pa-mg text-center custom-text-me">
-                  LOGO Design
-                </div>
-              </div>
-              <div
-                class="col my-home bid2 q-mr-sm"
-                style="height: 100px; width: 20px"
-              >
-                <q-img src="~assets/Avator8.png" class="image1"> </q-img>
-                <div class="q-pa-mg text-center custom-text-me">
-                  LOGO Design
-                </div>
-              </div>
-            </div>
-
-            <div class="row q-pa-md">
-              <q-btn
-                size="10px"
-                rounded
-                color="black"
-                icon="add"
-                label="Add Companies"
-                class="text-white text-h7"
-              ></q-btn>
-            </div>
-          </div>
-        </div>
+       <addProject />
 
         <!-- Card 3 div -->
 
@@ -257,11 +200,12 @@
 import { defineComponent } from "vue";
 import contractorPicture from "components/contractor-picture.vue";
 import CreateContractorProfile from "components/create-contractor1-profile.vue";
+import addProject from "components/add-project.vue";
 import { ref } from "vue";
 import axios from "axios";
 
 export default defineComponent({
-  components: { contractorPicture , CreateContractorProfile },
+  components: { contractorPicture , CreateContractorProfile , addProject},
   // name: "IndexPage",
   setup() {
     return {
