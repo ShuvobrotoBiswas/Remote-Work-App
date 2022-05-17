@@ -94,19 +94,19 @@
               <q-img sizes="200px" src="~/assets/Avator14.png"></q-img>
             </div>
             <div class="col-1"></div>
-            <div class="col-7">
-              <div class="text-h6 text-bold">Meat Loaf</div>
+            <div class="col-7" >
+              <div class="text-h6 text-bold">{{user.name}}</div>
               <div class="text-h7 q-py-md">
-                <strong>Address:</strong> Street Name, etc.
+                <strong>Address:</strong> {{user.res_address}}
               </div>
               <div class="text-h7">
-                <strong> Billing address:</strong> Lorem ipsum dolor sit amet
+                <strong> Billing address:</strong> {{user.billing_address}}
               </div>
               <div class="text-h7 q-py-md">
-                <strong>Phone:</strong> +04072123456789
+                <strong>Phone:</strong> {{user.phone}}
               </div>
               <div class="text-h7">
-                <strong>CV:</strong> Meat Loaf Europass CV
+                <strong>CV:</strong> {{user.cv}}
               </div>
               <div class="q-py-md">
                 <q-btn
@@ -114,28 +114,28 @@
                   rounded
                   color="grey-5"
                   class="text-black q-mr-sm text-h7"
-                  >#photoshop</q-btn
+                  >#{{user.skil_id}}</q-btn
                 >
                 <q-btn
                   size="7px"
                   rounded
                   color="grey-5"
                   class="text-black q-mr-sm text-h7"
-                  >#illustrator</q-btn
+                  ># {{user.skil_id}} </q-btn
                 >
                 <q-btn
                   size="7px"
                   rounded
                   color="grey-5"
                   class="text-black q-mr-sm text-h7"
-                  >#CSS3</q-btn
+                  >#{{user.skil_id}}</q-btn
                 >
                 <q-btn
                   size="7px"
                   rounded
                   color="grey-5"
                   class="text-black text-h7"
-                  >#Adobe XD</q-btn
+                  >#{{user.skil_id}}</q-btn
                 >
               </div>
             </div>
@@ -165,175 +165,44 @@
       </div>
     </div>
 
-    <!-- Card 2 Div -->
-
-    <div class="q-pa-md row flex-center items-start q-gutter-md">
-      <q-card
-        class="my-card my-home text-black bg-grey-4"
-        style="max-width: 800px"
-      >
-        <div class="q-pa-md">
-          <div class="row">
-            <div class="col-9 text-h6">Company name [Company #1]</div>
-            <div class="col-6">
-              <div class="row justify-between" style="width: 250px">
-                <div class="my-home col-4" style="width: 77px; height: 70px">
-                  <q-img
-                    src="~assets/Avator2.png"
-                    style="height: 40px; max-width: 40px"
-                  >
-                  </q-img>
-                  <p class="custom-text-me">Change Logo</p>
-                </div>
-                <div class="col-8">
-                  <strong>Verification status</strong> <br />
-                  <q-btn
-                    round
-                    icon="bookmark_border"
-                    size="7px"
-                    color="black"
-                  ></q-btn>
-                  Verified
-                  <q-btn
-                    round
-                    icon="done"
-                    outline
-                    color="black"
-                    size="7px"
-                  ></q-btn>
-                </div>
-              </div>
-              <Strong>Company #1</Strong> <br />
-              <div class="q-py-md"></div>
-              <strong>Address:</strong> Via dei Faggi 24 , Rome, 254321, Italy
-              <div></div>
-            </div>
-            <div class="col-6">
-              <div class="text-h7">
-                <strong>Fascial code:</strong> MTS SMI 84R11 Z114H
-              </div>
-              <div class="q-py-md underline-font q-mr-sm">
-                <strong>Legal Note company owner</strong>
-                <span class="q-mr-sm"></span>
-                <q-btn round color="black" size="5px" icon="done"></q-btn>
-              </div>
-              <div class="text-h7">
-                <strong>Register number:</strong> 123 456 789
-              </div>
-              <div class="text-h7 q-py-md">
-                <strong>Website:</strong> https://domain.com
-              </div>
-              <div class="text-h7"><strong>Phone:</strong> +39 321 654 987</div>
-            </div>
-          </div>
-          <div class="row flex-center">
-            <q-btn
-              size="10px"
-              rounded
-              color="black"
-              icon="edit"
-              label="Edit Company"
-              class="text-white text-h7"
-            ></q-btn>
-          </div>
-        </div>
-      </q-card>
-    </div>
-
-    <!-- Card 3 Div -->
-
-    <div class="q-pa-md row flex-center items-start q-gutter-md">
-      <q-card
-        class="my-card my-home text-black bg-grey-4"
-        style="max-width: 800px"
-      >
-        <div class="q-pa-md">
-          <div class="row">
-            <div class="col-9 text-h6">Company name [Company #2]</div>
-            <div class="col-6">
-              <div class="row justify-between" style="width: 250px">
-                <div class="my-home col-4" style="width: 77px; height: 70px">
-                  <q-img
-                    src="~assets/Avator2.png"
-                    style="height: 40px; max-width: 40px"
-                  >
-                  </q-img>
-                  <p class="custom-text-me">Change Logo</p>
-                </div>
-                <div class="col-8">
-                  <strong>Verification status</strong> <br />
-                  <q-btn
-                    round
-                    icon="bookmark_border"
-                    size="7px"
-                    color="black"
-                  ></q-btn>
-                  Verified
-                  <q-btn
-                    round
-                    icon="done"
-                    outline
-                    color="black"
-                    size="7px"
-                  ></q-btn>
-                </div>
-              </div>
-              <Strong>Company #2</Strong> <br />
-              <div class="q-py-md"></div>
-              <strong>Address:</strong> Via dei Faggi 24 , Rome, 254321, Italy
-            </div>
-            <div class="col-6">
-              <div class="text-h7">
-                <strong>Fascial code:</strong> MTS SMI 84R11 Z114H
-              </div>
-              <div class="q-py-md underline-font q-mr-sm">
-                <strong>Legal Note company owner</strong>
-                <span class="q-mr-sm"></span>
-                <q-btn round color="black" size="5px" icon="done"></q-btn>
-              </div>
-              <div class="text-h7">
-                <strong>Register number:</strong> 123 456 789
-              </div>
-              <div class="text-h7 q-py-md">
-                <strong>Website:</strong> https://domain.com
-              </div>
-              <div class="text-h7"><strong>Phone:</strong> +39 321 654 987</div>
-            </div>
-          </div>
-          <div class="row flex-center">
-            <q-btn
-              size="10px"
-              rounded
-              color="black"
-              icon="edit"
-              label="Edit Profile"
-              class="text-white text-h7"
-            ></q-btn>
-          </div>
-        </div>
-      </q-card>
-    </div>
-    <div class="row flex-center q-pa-md">
-      <q-btn
-        size="10px"
-        rounded
-        color="black"
-        icon="add"
-        label="Add Companies"
-        class="text-white text-h7"
-      ></q-btn>
-    </div>
+    <getAgency />
   </div>
 </template>
 
 <script>
 import { defineComponent } from "vue";
-
+import getAgency from "components/get-agency.vue";
+import axios from "axios";
 export default defineComponent({
-  name: "IndexPage",
+  components: { getAgency },
+
   setup() {
-    return {};
+    return {
+      user: [],
+
+    };
   },
+   // SHOW
+  created() {
+    const options = {
+      method: "GET",
+      url: "https://rwapi.zupria.com/api/user/profile",
+      headers: {
+        Authorization:
+          "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcndhcGkuenVwcmlhLmNvbVwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY1MDY2NTQ3NCwiZXhwIjoxNjgyMjAxNDc0LCJuYmYiOjE2NTA2NjU0NzQsImp0aSI6ImRaUGlZem9YTXZZS25ITU4iLCJzdWIiOjgsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.m127K5q8Fy_6CxXEWJZyXqb_HJL4U-EUcHmdwmHTytI",
+      },
+    };
+    axios
+      .request(options)
+      .then((response) => {
+        console.log(response.data);
+        this.user = response.data;
+      })
+      .catch(function (error) {
+        console.error(error);
+      });
+  },
+
 });
 </script>
 <style lang="sass" scoped>

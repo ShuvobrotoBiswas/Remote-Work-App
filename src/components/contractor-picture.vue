@@ -1,7 +1,7 @@
 <template>
   <div>
     <q-form @submit.prevent="profilePic">
-      <q-img sizes="200px" src="~/assets/Avator14.png"></q-img>
+      <q-img sizes="200px" src="~/assets/Avator1.png"></q-img>
       <div class="q-pa-md">
         <q-file
           rounded
@@ -23,6 +23,18 @@
       <div class="q-pa-md">
         <q-btn outline style="width: 250px" bottom-slots rounded>
           remove exsting
+        </q-btn>
+      </div>
+      <div class="q-pa-md text-h6 text-bold">Europass & Portfolio</div>
+      <div class="q-pa-md">
+        <q-btn
+          icon="link"
+          class="q-mr-sm text-h7"
+          style="width: 250px"
+          rounded
+          color="black"
+        >
+          Link Your Europass CV
         </q-btn>
       </div>
       <div class="row flex-center">
@@ -49,7 +61,7 @@ import { defineComponent } from "vue";
 import { ref } from "vue";
 import axios from "axios";
 export default defineComponent({
-  name: "ClientPicture",
+  name: "contractor-picture",
   setup() {
     return {
       name: ref(" "),

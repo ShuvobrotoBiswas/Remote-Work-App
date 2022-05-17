@@ -131,76 +131,7 @@
 
     <!-- Card 3 div -->
 
-    <div class="q-pa-md row flex-center items-start q-gutter-md">
-      <q-card
-        class="my-card this-card text-black bg-grey-4"
-        style="max-width: 800px"
-      >
-        <div class="q-pa-md">
-          <div class="row">
-            <div class="col-9 text-h6">Add Company</div>
-            <div class="col-6">
-              <div class="row justify-between" style="width: 250px">
-                <div class="my-home col-4" style="width: 130px; height: 130px">
-                  <q-img
-                    src="~assets/Avator2.png"
-                    style="height: 90px; max-width: 90px"
-                  >
-                  </q-img>
-                  <p class="custom-text-me row flex-center">Change Logo</p>
-                </div>
-              </div>
-              <div class="underline-font">
-                <Strong>Company Name</Strong>(Company #1)
-              </div>
-              <div class="q-py-md underline-font">
-                <strong>Address:</strong> Via dei Faggi 24 , Rome, 254321, Italy
-              </div>
-            </div>
-            <div class="col-6">
-              <div class="text-h7 underline-font">
-                <strong>Fascial code:</strong> MTS SMI 84R11 Z114H
-              </div>
-              <div class="q-py-md underline-font q-mr-sm">
-                <strong>Add Legal Note company owner</strong>
-                <span class="q-mr-sm"></span>
-                <q-btn round outline size="5px" icon="add"></q-btn>
-              </div>
-              <div class="text-h7 underline-font">
-                <strong>Register number:</strong> 123 456 789
-              </div>
-              <div class="text-h7 underline-font q-py-md">
-                <strong>Website:</strong> https://domain.com
-              </div>
-              <div class="text-h7 underline-font">
-                <strong>Phone:</strong> +39 321 654 987
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row q-pa-md">* Fields marked with "*" are mandatory.</div>
-      </q-card>
-    </div>
-
-    <!-- Footer Div -->
-
-    <div class="row flex-center q-pa-md">
-      <q-btn
-        size="10px"
-        rounded
-        color="black"
-        icon="check_circle_outline"
-        label="Settings saved!"
-        class="text-white text-h7 q-mr-sm"
-      ></q-btn>
-      <q-btn
-        size="10px"
-        rounded
-        outlined
-        label="Go to ID verification →"
-        class="text-h7"
-      ></q-btn>
-    </div>
+    <createAgency />
   </div>
 </template>
 
@@ -209,8 +140,10 @@ import { defineComponent } from "vue";
 import axios from "axios";
 import { ref } from "vue";
 import ClientPicture from "components/Client-Pic.vue";
+import createAgency from "components/create-agency.vue";
 export default defineComponent({
-  components: { ClientPicture },
+  components: { ClientPicture , createAgency },
+  // components: { createAgency },
   // name: "IndexPage",
   setup() {
     return {

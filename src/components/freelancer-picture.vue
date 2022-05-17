@@ -3,19 +3,6 @@
     <q-form @submit.prevent="profilePic">
       <q-img sizes="200px" src="~/assets/Avator9.png"></q-img>
       <div class="q-pa-md">
-        <!-- <q-input
-                    @update:model-value="
-                      (val) => {
-                        image = val[0];
-                      }
-                    "
-                    rounded
-                    style="width: 250px"
-                    outlined
-                    v-model="file"
-                    hint="Upload New Picture"
-                    type="file"
-                  /> -->
         <q-file
           rounded
           style="width: 250px"

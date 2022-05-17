@@ -1,5 +1,6 @@
 <template>
   <div>
+    <q-form @submit.prevent="upDocument">
     <div class="flex-break"></div>
     <div class="text-h7 text-center">Hi Florin, welcome to your dashboard!</div>
     <div class="flex-break q-py-md"></div>
@@ -94,7 +95,7 @@
                       icon="done"
                       style="margin-bottom: 15px"
                     ></q-btn>
-                    <div class="text-h7">ID Card file.pdf</div>
+                    <div class="text-h7"> {{file}} </div>
                   </div>
                   <div class="col-5 q-pa-md text-h7 text center">
                     <span
@@ -141,13 +142,24 @@
                     >
                       Comapny certificate</span
                     >
-                    <q-btn
+                    <!-- <q-btn
                       color="black"
                       dense
                       round
                       icon="add"
                       style="margin-bottom: 15px"
-                    ></q-btn>
+                    ></q-btn> -->
+                    <q-btn
+                      icon="add"
+                      style="margin-bottom: 15px"
+                      round
+                      color="black"
+                    >
+                      <q-file
+                        style="width: 5px; height: 5px"
+                        v-model="file"
+                      ></q-file>
+                    </q-btn>
                   </div>
                   <div class="col-3 q-pa-md text-h7 text center">
                     <span
@@ -172,22 +184,27 @@
                     >
                       Fiscal Code</span
                     >
-                    <q-btn
+                    <!-- <q-btn
                       color="black"
                       dense
                       round
                       icon="add"
                       style="margin-bottom: 15px"
-                    ></q-btn>
-                  </div>
-                  <div
-                    class="col-4 q-pa-md text-h7"
-                    style="max-width: 140px"
-                  >
-                    <div
-                      style="display: block; "
-                      class="text-bold row"
+                    ></q-btn> -->
+                    <q-btn
+                      icon="add"
+                      style="margin-bottom: 15px"
+                      round
+                      color="black"
                     >
+                      <q-file
+                        style="width: 5px; height: 5px"
+                        v-model="file"
+                      ></q-file>
+                    </q-btn>
+                  </div>
+                  <div class="col-4 q-pa-md text-h7" style="max-width: 140px">
+                    <div style="display: block" class="text-bold row">
                       Legal Note Company Owner
                     </div>
                     <div class="row">
@@ -246,13 +263,24 @@
                     >
                       Add bank account</span
                     >
-                    <q-btn
+                    <!-- <q-btn
                       color="black"
                       dense
                       round
                       icon="add"
                       style="margin-bottom: 15px"
-                    ></q-btn>
+                    ></q-btn> -->
+                    <q-btn
+                      icon="add"
+                      style="margin-bottom: 15px"
+                      round
+                      color="black"
+                    >
+                      <q-file
+                        style="width: 5px; height: 5px"
+                        v-model="file"
+                      ></q-file>
+                    </q-btn>
                   </div>
                 </div>
               </div>
@@ -269,22 +297,78 @@
       <q-btn
         size="10px"
         rounded
+        type="submit"
         color="black"
         label="Submit documents -→"
         class="text-white text-h7"
       ></q-btn>
     </div>
+    </q-form>
   </div>
 </template>
 
 <script>
 import { defineComponent } from "vue";
+import axios from "axios";
 
 export default defineComponent({
   // name: "IndexPage",
   setup() {
-    return {};
+    return {
+      // file: ['empty'],
+    };
   },
+  methods: {
+    onFileSelected(event) {
+      console.log(event.target);
+    },
+    upDocument() {
+      const doc = new FormData();
+      doc.append("file", this.file);
+      // doc.append("file1", this.file1);
+      // doc.append("file2", this.file2);
+
+      const options = {
+        method: "POST",
+        url: "https://rwapi.zupria.com/api/user/doc",
+        data: doc,
+        headers: {
+          Authorization:
+            "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcndhcGkuenVwcmlhLmNvbVwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY1MDY2NjAyMSwiZXhwIjoxNjgyMjAyMDIxLCJuYmYiOjE2NTA2NjYwMjEsImp0aSI6InVkbmUyZ3NsRHJ5VjY5Z3UiLCJzdWIiOjksInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.4_rBRo4Yo7rQ58dKVNdbUEtp6_EKjF79744-cfrUQWM",
+        },
+      };
+      axios
+        .request(options)
+        .then((response) => {
+          console.log(response.data);
+          this.user = response.data;
+        })
+        .catch(function (error) {
+          console.error(error);
+        });
+    },
+  },
+  // SHOW
+
+  // created() {
+  //   const options = {
+  //     method: "GET",
+  //     url: "https://rwapi.zupria.com/api/user/verifDocs",
+  //     headers: {
+  //       Authorization:
+  //         "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcndhcGkuenVwcmlhLmNvbVwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY1MDY2NTQ3NCwiZXhwIjoxNjgyMjAxNDc0LCJuYmYiOjE2NTA2NjU0NzQsImp0aSI6ImRaUGlZem9YTXZZS25ITU4iLCJzdWIiOjgsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.m127K5q8Fy_6CxXEWJZyXqb_HJL4U-EUcHmdwmHTytI",
+  //     },
+  //   };
+  //   axios
+  //     .request(options)
+  //     .then((response) => {
+  //       console.log(response.data);
+  //       this.user = response.data;
+  //     })
+  //     .catch(function (error) {
+  //       console.error(error);
+  //     });
+  // },
 });
 </script>
 <style lang="sass" scoped>

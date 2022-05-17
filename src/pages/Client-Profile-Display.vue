@@ -97,23 +97,23 @@
           <div class="row">
             <div class="col-4">
               <!-- <q-avatar size="100px" class="q-mb-sm"> -->
-              <q-img sizes="200px" src="~/assets/Avator11.png"></q-img>
+              <q-img sizes="200px" :src="user.image"></q-img>
               <!-- </q-avatar> -->
             </div>
             <div class="col-1"> </div>
             <div class="col-7">
-              <div class="text-h6 text-bold">Laura Plamer</div>
+              <div class="text-h6 text-bold"> {{user.name}} </div>
               <div class="text-h7 q-py-md">
-                <strong>Address:</strong> Street Name, etc.
+                <strong>Address:</strong> {{user.res_address}}
               </div>
               <div class="text-h7">
-                <strong> Billing address:</strong> Lorem ipsum dolor sit amet
+                <strong> Billing address:</strong> {{user.billing_address}}
               </div>
               <div class="text-h7 q-py-md">
-                <strong>Phone:</strong> +04072123456789
+                <strong>Phone:</strong> {{user.phone}}
               </div>
               <div class="text-h7">
-                <strong>CV:</strong> Tom Petty Europass CV
+                <strong>CV:</strong> {{user.cv}}
               </div>
               <div class="q-py-md">
                 <q-btn
@@ -187,11 +187,34 @@
 
 <script>
 import { defineComponent } from "vue";
-import { ref } from "vue";
+import axios from "axios";
+
 export default defineComponent({
   // name: "IndexPage",
   setup() {
-    return {};
+    return {
+      user: [],
+    };
+  },
+   // SHOW
+  created() {
+    const options = {
+      method: "GET",
+      url: "https://rwapi.zupria.com/api/user/profile",
+      headers: {
+        Authorization:
+          "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcndhcGkuenVwcmlhLmNvbVwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY1MDY2NTQ3NCwiZXhwIjoxNjgyMjAxNDc0LCJuYmYiOjE2NTA2NjU0NzQsImp0aSI6ImRaUGlZem9YTXZZS25ITU4iLCJzdWIiOjgsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.m127K5q8Fy_6CxXEWJZyXqb_HJL4U-EUcHmdwmHTytI",
+      },
+    };
+    axios
+      .request(options)
+      .then((response) => {
+        console.log(response.data);
+        this.user = response.data;
+      })
+      .catch(function (error) {
+        console.error(error);
+      });
   },
 });
 </script>
