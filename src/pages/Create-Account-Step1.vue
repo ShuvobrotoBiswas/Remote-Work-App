@@ -14,7 +14,11 @@
             </div>
             <q-form @submit.prevent="registration">
               <div class="col-6">
-                <q-input v-model="account_type" :options="options" label="Account Type" />
+                <q-input
+                  v-model="account_type"
+                  :options="options"
+                  label="Account Type"
+                />
                 <q-input label="Email" type="email" v-model="email"> </q-input>
                 <q-input label="Password" type="password" v-model="password">
                 </q-input>
