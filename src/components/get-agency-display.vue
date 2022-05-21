@@ -181,6 +181,7 @@
                 size="10px"
                 rounded
                 color="black"
+                to="/Create-Contractor-Profile"
                 icon="edit"
                 label="Edit Profile"
                 class="text-white text-h7"
@@ -370,6 +371,7 @@
                 rounded
                 color="black"
                 icon="edit"
+                to="/Create-Contractor-Profile"
                 label="Edit Profile"
                 class="text-white text-h7"
               ></q-btn>

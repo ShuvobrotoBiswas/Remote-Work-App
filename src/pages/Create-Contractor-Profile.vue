@@ -9,7 +9,7 @@
         <div class="col"></div>
         <div class="col">
           <div class="text-black text-h7 text-center">
-            <q-btn dense flat color="black" icon="person"></q-btn>
+            <q-btn to="/Contractor-profile-display" dense flat color="black" icon="person"></q-btn>
             <div>Profile</div>
           </div>
         </div>
@@ -38,7 +38,7 @@
         </div>
         <div class="col">
           <div class="text-black text-h7 text-center">
-            <q-btn dense flat color="black" icon="local_atm"></q-btn>
+            <q-btn dense flat to="/Client-Company-Profile-Doc-Verification" color="black" icon="local_atm"></q-btn>
             <div>Accounts</div>
           </div>
         </div>
@@ -187,6 +187,7 @@
             size="10px"
             rounded
             outlined
+            to="/Client-Company-Profile-Doc-Verification"
             label="Go to ID verification →"
             class="text-h7"
           ></q-btn>

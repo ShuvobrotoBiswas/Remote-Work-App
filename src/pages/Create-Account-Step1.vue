@@ -129,6 +129,10 @@ export default defineComponent({
         .then((response) => {
           console.log(response.data);
           this.admin = response.data;
+          // this.id = response.data.data.id;
+          // this.token = response.data.token;
+          // localStorage.setItem("token", response.data.token);
+          // this.$router.push("/Create-Account-Step3");
         })
         .catch(function (error) {
           console.error(error);

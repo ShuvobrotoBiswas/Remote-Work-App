@@ -19,16 +19,29 @@
                 <q-input label="Email" type="email" v-model="email"> </q-input>
                 <q-input label="Password" type="password" v-model="password">
                 </q-input>
-                <div class="q-py-md">
-                  <q-btn
-                    size="10px"
-                    rounded
-                    color="black"
-                    type="submit"
-                    style="width: 90px"
-                    label="Login"
-                    class="text-white text-h7"
-                  ></q-btn>
+                <div class="row">
+                  <div class="col">
+                    <q-btn
+                      size="10px"
+                      rounded
+                      color="black"
+                      type="submit"
+                      style="width: 90px"
+                      label="Login"
+                      class="text-white text-h7"
+                    ></q-btn>
+                  </div>
+                  <div class="col">
+                    <q-btn
+                      size="10px"
+                      rounded
+                      to="/Create-Account-Step1"
+                      color="black"
+                      style="width: 90px"
+                      label="Register"
+                      class="text-white q-mr-sm text-h7"
+                    ></q-btn>
+                  </div>
                 </div>
               </q-form>
             </div>
