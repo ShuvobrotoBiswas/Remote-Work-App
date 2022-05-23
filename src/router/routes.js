@@ -5,8 +5,9 @@ const routes = [
     path: '/',
     component: () => import('layouts/CreateNewAccount.vue'),
     children: [
-      { path: '/', component: () => import('src/pages/Page-Router.vue') },
-      { path: '/Create-Account-Step1', component: () => import('src/pages/Create-Account-Step1.vue') },
+      { path: '/', component: () => import('src/pages/Create-Account-Step1.vue') },
+      // { path: '/', component: () => import('src/pages/Page-Router.vue') },
+      { path: '/Page-Router', component: () => import('src/pages/Page-Router.vue') },
       { path: '/Create-Account-Step2', component: () => import('src/pages/Create-Account-Step2.vue') },
       { path: '/Create-Account-Step2-1', component: () => import('src/pages/Create-Account-Step2-1.vue') },
       { path: '/Create-Account-Step3', component: () => import('src/pages/Create-Account-Step3.vue') },

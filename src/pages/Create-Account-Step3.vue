@@ -35,7 +35,7 @@
                     <q-btn
                       size="10px"
                       rounded
-                      to="/Create-Account-Step1"
+                      to="/"
                       color="black"
                       style="width: 90px"
                       label="Register"

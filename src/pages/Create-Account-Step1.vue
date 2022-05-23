@@ -28,15 +28,29 @@
                   v-model="password_confirmation"
                 >
                 </q-input>
-                <div class="q-py-md">
-                  <q-btn
-                    size="10px"
-                    rounded
-                    color="black"
-                    type="submit"
-                    label="Register"
-                    class="text-white text-h7"
-                  ></q-btn>
+
+                <div class="row">
+                  <div class="col">
+                    <q-btn
+                      size="10px"
+                      rounded
+                      color="black"
+                      type="submit"
+                      label="Register"
+                      class="text-white text-h7"
+                    ></q-btn>
+                  </div>
+                  <div class="col">
+                    <q-btn
+                      size="10px"
+                      rounded
+                      to="/Create-Account-Step3"
+                      color="black"
+                      style="width: 90px"
+                      label="Login"
+                      class="text-white q-mr-sm text-h7"
+                    ></q-btn>
+                  </div>
                 </div>
               </div>
             </q-form>
