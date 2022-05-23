@@ -19,8 +19,8 @@
                 <q-input label="Email" type="email" v-model="email"> </q-input>
                 <q-input label="Password" type="password" v-model="password">
                 </q-input>
-                <div class="row">
-                  <div class="col">
+                <div class="row flex-center">
+                  <div class="col-4">
                     <q-btn
                       size="10px"
                       rounded
@@ -31,7 +31,7 @@
                       class="text-white text-h7"
                     ></q-btn>
                   </div>
-                  <div class="col">
+                  <div class="col-4">
                     <q-btn
                       size="10px"
                       rounded
@@ -39,6 +39,17 @@
                       color="black"
                       style="width: 90px"
                       label="Register"
+                      class="text-white q-mr-sm text-h7"
+                    ></q-btn>
+                  </div>
+                   <div class="col-4">
+                    <q-btn
+                      size="10px"
+                      rounded
+                      to="/Create-Account-Step2-1"
+                      color="black"
+                      style="width: 90px"
+                      label="Fotgot"
                       class="text-white q-mr-sm text-h7"
                     ></q-btn>
                   </div>
