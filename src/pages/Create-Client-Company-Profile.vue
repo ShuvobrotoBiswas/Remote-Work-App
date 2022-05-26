@@ -39,13 +39,25 @@
         <div class="col"></div>
         <div class="col">
           <div class="text-black text-h7 text-center">
-            <q-btn to="/Contractor-profile-display" dense flat color="black" icon="person"></q-btn>
+            <q-btn
+              to="/Contractor-profile-display"
+              dense
+              flat
+              color="black"
+              icon="person"
+            ></q-btn>
             <div>Profile</div>
           </div>
         </div>
         <div class="col">
           <div class="text-black text-h7 text-center">
-            <q-btn dense to="/01-remote-work-Client-Post-Proj" flat color="black" icon="addchart"></q-btn>
+            <q-btn
+              dense
+              to="/01-remote-work-Client-Post-Proj"
+              flat
+              color="black"
+              icon="addchart"
+            ></q-btn>
             <div>Post a Project</div>
           </div>
         </div>
@@ -54,6 +66,7 @@
             <q-btn
               dense
               flat
+              to="/06-Remote-Work-Contractor-Search-Proj"
               color="black"
               icon="insert_chart_outlined"
             ></q-btn>
@@ -68,7 +81,13 @@
         </div>
         <div class="col">
           <div class="text-black text-h7 text-center">
-            <q-btn dense flat to="/Client-Company-Profile-Doc-Verification" color="black" icon="local_atm"></q-btn>
+            <q-btn
+              dense
+              flat
+              to="/Client-Company-Profile-Doc-Verification"
+              color="black"
+              icon="local_atm"
+            ></q-btn>
             <div>Accounts</div>
           </div>
         </div>
@@ -142,7 +161,7 @@ import { ref } from "vue";
 import ClientPicture from "components/Client-Pic.vue";
 import createAgency from "components/create-agency.vue";
 export default defineComponent({
-  components: { ClientPicture , createAgency },
+  components: { ClientPicture, createAgency },
   // components: { createAgency },
   // name: "IndexPage",
   setup() {

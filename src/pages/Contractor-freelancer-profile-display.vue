@@ -39,19 +39,32 @@
         <div class="col"></div>
         <div class="col">
           <div class="text-black text-h7 text-center">
-            <q-btn to="/Contractor-profile-display" dense flat color="black" icon="person"></q-btn>
+            <q-btn
+              to="/Contractor-profile-display"
+              dense
+              flat
+              color="black"
+              icon="person"
+            ></q-btn>
             <div>Profile</div>
           </div>
         </div>
         <div class="col">
           <div class="text-black text-h7 text-center">
-            <q-btn dense to="/01-remote-work-Client-Post-Proj" flat color="black" icon="addchart"></q-btn>
+            <q-btn
+              dense
+              to="/01-remote-work-Client-Post-Proj"
+              flat
+              color="black"
+              icon="addchart"
+            ></q-btn>
             <div>Post a Project</div>
           </div>
         </div>
         <div class="col">
           <div class="text-black text-h7 text-center">
             <q-btn
+              to="/06-Remote-Work-Contractor-Search-Proj"
               dense
               flat
               color="black"
@@ -68,7 +81,13 @@
         </div>
         <div class="col">
           <div class="text-black text-h7 text-center">
-            <q-btn dense flat to="/Client-Company-Profile-Doc-Verification" color="black" icon="local_atm"></q-btn>
+            <q-btn
+              dense
+              flat
+              to="/Client-Company-Profile-Doc-Verification"
+              color="black"
+              icon="local_atm"
+            ></q-btn>
             <div>Accounts</div>
           </div>
         </div>
@@ -101,19 +120,17 @@
               <!-- </q-avatar> -->
             </div>
             <div class="col-7">
-              <div class="text-h6 text-bold">{{user.name}}</div>
+              <div class="text-h6 text-bold">{{ user.name }}</div>
               <div class="text-h7 q-py-md">
-                <strong>Address:</strong> {{user.res_address}}
+                <strong>Address:</strong> {{ user.res_address }}
               </div>
               <div class="text-h7">
-                <strong> Billing address:</strong> {{user.billing_address}}
+                <strong> Billing address:</strong> {{ user.billing_address }}
               </div>
               <div class="text-h7 q-py-md">
-                <strong>Phone:</strong> {{user.phone}}
+                <strong>Phone:</strong> {{ user.phone }}
               </div>
-              <div class="text-h7">
-                <strong>CV:</strong> {{user.cv}}
-              </div>
+              <div class="text-h7"><strong>CV:</strong> {{ user.cv }}</div>
               <div class="q-py-md">
                 <q-btn
                   size="7px"
@@ -192,7 +209,6 @@ export default defineComponent({
   setup() {
     return {
       user: [],
-
     };
   },
   // SHOW

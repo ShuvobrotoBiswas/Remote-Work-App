@@ -26,6 +26,7 @@
               dense
               flat
               color="black"
+              to="/06-Remote-Work-Contractor-Search-Proj"
               icon="insert_chart_outlined"
             ></q-btn>
             <div>Projects</div>

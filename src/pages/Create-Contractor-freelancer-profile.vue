@@ -39,13 +39,25 @@
         <div class="col"></div>
         <div class="col">
           <div class="text-black text-h7 text-center">
-            <q-btn to="/Contractor-profile-display" dense flat color="black" icon="person"></q-btn>
+            <q-btn
+              to="/Contractor-profile-display"
+              dense
+              flat
+              color="black"
+              icon="person"
+            ></q-btn>
             <div>Profile</div>
           </div>
         </div>
         <div class="col">
           <div class="text-black text-h7 text-center">
-            <q-btn dense to="/01-remote-work-Client-Post-Proj" flat color="black" icon="addchart"></q-btn>
+            <q-btn
+              dense
+              to="/01-remote-work-Client-Post-Proj"
+              flat
+              color="black"
+              icon="addchart"
+            ></q-btn>
             <div>Post a Project</div>
           </div>
         </div>
@@ -54,6 +66,7 @@
             <q-btn
               dense
               flat
+              to="/06-Remote-Work-Contractor-Search-Proj"
               color="black"
               icon="insert_chart_outlined"
             ></q-btn>
@@ -68,7 +81,13 @@
         </div>
         <div class="col">
           <div class="text-black text-h7 text-center">
-            <q-btn dense flat to="/Client-Company-Profile-Doc-Verification" color="black" icon="local_atm"></q-btn>
+            <q-btn
+              dense
+              flat
+              to="/Client-Company-Profile-Doc-Verification"
+              color="black"
+              icon="local_atm"
+            ></q-btn>
             <div>Accounts</div>
           </div>
         </div>
@@ -99,66 +118,66 @@
             <div class="col-1"></div>
             <div class="col-6">
               <q-form @submit.prevent="profile">
-              <q-input v-model="name" label="Complete name*" />
-              <q-input v-model="res_address" label="Address*" />
-              <q-input v-model="billing_address" label="Billing address*" />
-              <q-input v-model="phone" type="tel" label="Phone number" />
-              <div class="text-bold q-py-md">
-                Search/Select your Skills & Tools
-              </div>
-              <q-input
-                style="max-width: 300px"
-                v-model="skill_ids"
-                outlined
-                type="search"
-              >
-                <template v-slot:append>
-                  <q-icon name="search" />
-                  <q-menu>
-                    <q-list style="min-width: 250px">
-                      <q-item clickable v-close-popup>
-                        <q-item-section>Graphic Tools</q-item-section>
-                      </q-item>
-                      <q-option-group
-                        :options="options"
-                        type="checkbox"
-                        v-model="group"
-                      />
-                    </q-list>
-                  </q-menu>
-                </template>
-              </q-input>
-              <div class="q-py-md">
-                <q-btn
-                  size="7px"
-                  rounded
-                  color="white"
-                  class="text-black q-mr-sm text-h7"
-                  >Adobe Photoshop ✠</q-btn
+                <q-input v-model="name" label="Complete name*" />
+                <q-input v-model="res_address" label="Address*" />
+                <q-input v-model="billing_address" label="Billing address*" />
+                <q-input v-model="phone" type="tel" label="Phone number" />
+                <div class="text-bold q-py-md">
+                  Search/Select your Skills & Tools
+                </div>
+                <q-input
+                  style="max-width: 300px"
+                  v-model="skill_ids"
+                  outlined
+                  type="search"
                 >
-                <q-btn
-                  size="7px"
-                  rounded
-                  color="white"
-                  class="text-black q-mr-sm text-h7"
-                  >Adobe Illustrator ✠</q-btn
-                >
-                <q-btn
-                  size="7px"
-                  rounded
-                  color="white"
-                  class="text-black q-mr-sm text-h7"
-                  >Adobe XD ✠</q-btn
-                >
-                <q-btn
-                  size="7px"
-                  rounded
-                  color="white"
-                  class="text-black text-h7"
-                  >CSS3 ✠</q-btn
-                >
-              </div>
-              <div class="row flex-center">
+                  <template v-slot:append>
+                    <q-icon name="search" />
+                    <q-menu>
+                      <q-list style="min-width: 250px">
+                        <q-item clickable v-close-popup>
+                          <q-item-section>Graphic Tools</q-item-section>
+                        </q-item>
+                        <q-option-group
+                          :options="options"
+                          type="checkbox"
+                          v-model="group"
+                        />
+                      </q-list>
+                    </q-menu>
+                  </template>
+                </q-input>
+                <div class="q-py-md">
+                  <q-btn
+                    size="7px"
+                    rounded
+                    color="white"
+                    class="text-black q-mr-sm text-h7"
+                    >Adobe Photoshop ✠</q-btn
+                  >
+                  <q-btn
+                    size="7px"
+                    rounded
+                    color="white"
+                    class="text-black q-mr-sm text-h7"
+                    >Adobe Illustrator ✠</q-btn
+                  >
+                  <q-btn
+                    size="7px"
+                    rounded
+                    color="white"
+                    class="text-black q-mr-sm text-h7"
+                    >Adobe XD ✠</q-btn
+                  >
+                  <q-btn
+                    size="7px"
+                    rounded
+                    color="white"
+                    class="text-black text-h7"
+                    >CSS3 ✠</q-btn
+                  >
+                </div>
+                <div class="row flex-center">
                   <div flat bordered class="my-card" style="max-width: 800px">
                     <div class="row q-pa-md">
                       <q-btn
@@ -173,7 +192,7 @@
                     </div>
                   </div>
                 </div>
-                </q-form>
+              </q-form>
             </div>
           </div>
           <q-separator />

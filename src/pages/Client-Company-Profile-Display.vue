@@ -49,6 +49,7 @@
             <q-btn
               dense
               flat
+              to="/06-Remote-Work-Contractor-Search-Proj"
               color="black"
               icon="insert_chart_outlined"
             ></q-btn>

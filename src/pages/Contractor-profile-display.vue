@@ -12,13 +12,25 @@
           <div class="col"></div>
           <div class="col">
             <div class="text-black text-h7 text-center">
-              <q-btn to="/Contractor-profile-display" dense flat color="black" icon="person"></q-btn>
+              <q-btn
+                to="/Contractor-profile-display"
+                dense
+                flat
+                color="black"
+                icon="person"
+              ></q-btn>
               <div>Profile</div>
             </div>
           </div>
           <div class="col">
             <div class="text-black text-h7 text-center">
-              <q-btn dense to="/01-remote-work-Client-Post-Proj" flat color="black" icon="addchart"></q-btn>
+              <q-btn
+                dense
+                to="/01-remote-work-Client-Post-Proj"
+                flat
+                color="black"
+                icon="addchart"
+              ></q-btn>
               <div>Post a Project</div>
             </div>
           </div>
@@ -26,6 +38,7 @@
             <div class="text-black text-h7 text-center">
               <q-btn
                 dense
+                to="/06-Remote-Work-Contractor-Search-Proj"
                 flat
                 color="black"
                 icon="insert_chart_outlined"
@@ -41,7 +54,13 @@
           </div>
           <div class="col">
             <div class="text-black text-h7 text-center">
-              <q-btn dense flat to="/Client-Company-Profile-Doc-Verification" color="black" icon="local_atm"></q-btn>
+              <q-btn
+                dense
+                flat
+                to="/Client-Company-Profile-Doc-Verification"
+                color="black"
+                icon="local_atm"
+              ></q-btn>
               <div>Accounts</div>
             </div>
           </div>
@@ -68,59 +87,59 @@
           <q-separator />
           <div class="q-pa-md">
             <!-- <q-item v-for="user in profile" : key="user.id"> -->
-              <div class="row">
-                <div class="col-4">
-                  <!-- <q-avatar size="100px" class="q-mb-sm"> -->
-                  <q-img sizes="200px" src="~/assets/Avator1.png"></q-img>
-                  <!-- </q-avatar> -->
+            <div class="row">
+              <div class="col-4">
+                <!-- <q-avatar size="100px" class="q-mb-sm"> -->
+                <q-img sizes="200px" src="~/assets/Avator1.png"></q-img>
+                <!-- </q-avatar> -->
+              </div>
+              <div class="col-1"></div>
+              <div class="col-6">
+                <div class="text-h6 text-bold">{{ user.name }}</div>
+                <div class="text-h7 q-py-md">
+                  <strong>Address:</strong> {{ user.res_address }}
                 </div>
-                <div class="col-1"></div>
-                <div class="col-6">
-                  <div class="text-h6 text-bold">{{user.name}}</div>
-                  <div class="text-h7 q-py-md">
-                    <strong>Address:</strong> {{user.res_address}}
-                  </div>
-                  <div class="text-h7">
-                    <strong> Billing address:</strong> {{user.billing_address}}
-                  </div>
-                  <div class="text-h7 q-py-md">
-                    <strong>Phone:</strong> {{user.phone}}
-                  </div>
-                  <div class="text-h7">
-                    <strong>CV:</strong> Tom Petty Europass CV
-                  </div>
-                  <div class="q-py-md">
-                    <q-btn
-                      size="7px"
-                      rounded
-                      color="grey-5"
-                      class="text-black q-mr-sm text-h7"
-                      >#{{}}</q-btn
-                    >
-                    <q-btn
-                      size="7px"
-                      rounded
-                      color="grey-5"
-                      class="text-black q-mr-sm text-h7"
-                      >#{{}}</q-btn
-                    >
-                    <q-btn
-                      size="7px"
-                      rounded
-                      color="grey-5"
-                      class="text-black q-mr-sm text-h7"
-                      >#{{}}</q-btn
-                    >
-                    <q-btn
-                      size="7px"
-                      rounded
-                      color="grey-5"
-                      class="text-black text-h7"
-                      >#{{}}</q-btn
-                    >
-                  </div>
+                <div class="text-h7">
+                  <strong> Billing address:</strong> {{ user.billing_address }}
+                </div>
+                <div class="text-h7 q-py-md">
+                  <strong>Phone:</strong> {{ user.phone }}
+                </div>
+                <div class="text-h7">
+                  <strong>CV:</strong> Tom Petty Europass CV
+                </div>
+                <div class="q-py-md">
+                  <q-btn
+                    size="7px"
+                    rounded
+                    color="grey-5"
+                    class="text-black q-mr-sm text-h7"
+                    >#{{}}</q-btn
+                  >
+                  <q-btn
+                    size="7px"
+                    rounded
+                    color="grey-5"
+                    class="text-black q-mr-sm text-h7"
+                    >#{{}}</q-btn
+                  >
+                  <q-btn
+                    size="7px"
+                    rounded
+                    color="grey-5"
+                    class="text-black q-mr-sm text-h7"
+                    >#{{}}</q-btn
+                  >
+                  <q-btn
+                    size="7px"
+                    rounded
+                    color="grey-5"
+                    class="text-black text-h7"
+                    >#{{}}</q-btn
+                  >
                 </div>
               </div>
+            </div>
             <!-- </q-item> -->
             <div class="row flex-center q-py-md">
               <q-btn
@@ -140,7 +159,7 @@
 
       <!-- Card 2 Div -->
 
-     <getAgencyDisplay />
+      <getAgencyDisplay />
     </q-form>
   </div>
 </template>
