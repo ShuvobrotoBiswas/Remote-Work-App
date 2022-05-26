@@ -105,30 +105,26 @@
         <p class="q-pa-md text-h5 text-bold">4. SEND INVITATIONS</p>
         <div style="max-width: 300px" class="q-pa-md">
           <p class="text-weight-bold">Search by name</p>
-          <q-input bottom-slots v-model="text"  :dense="dense">
+          <q-input bottom-slots v-model="text" :dense="dense">
             <template v-slot:append>
               <q-icon name="search" />
             </template>
           </q-input>
-          <q-expansion-item
-            class="  bordered"
-            dense
-            style="max-width: 350px"
-          >
+          <q-expansion-item class="bordered" dense style="max-width: 350px">
             <q-list dense bordered padding class="borders">
               <q-item clickable v-ripple>
-                <q-item-section> {{text}} </q-item-section>
+                <q-item-section> {{ text }} </q-item-section>
               </q-item>
 
               <q-item clickable v-ripple>
-                <q-item-section> {{noData}} </q-item-section>
+                <q-item-section> {{ noData }} </q-item-section>
               </q-item>
 
               <q-item clickable v-ripple>
-                <q-item-section>  {{noData}} </q-item-section>
+                <q-item-section> {{ noData }} </q-item-section>
               </q-item>
               <q-item clickable v-ripple>
-                <q-item-section>  {{noData}} </q-item-section>
+                <q-item-section> {{ noData }} </q-item-section>
               </q-item>
             </q-list>
           </q-expansion-item>
@@ -197,6 +193,7 @@
         style="width: 100px"
         color="grey-6"
         label="Back"
+        to="/03-remote-work-Client-Post-Proj"
         class="q-mr-md"
       />
 
@@ -204,6 +201,7 @@
         unelevated
         style="width: 100px"
         size="10px"
+        to="/05-remote-work-Client-Post-Proj"
         rounded
         color="cyan"
         label="Next"

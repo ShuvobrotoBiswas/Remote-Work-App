@@ -1,6 +1,5 @@
 <template>
   <div>
-
     <!-- Header Div -->
 
     <q-header>
@@ -82,7 +81,7 @@
     <q-separator />
     <div class="row q-pa-md flex-center items-start">
       <div style="width: 1000px">
-          <div class="q-pa-md">
+        <div class="q-pa-md">
           <div class="row timeline-wrap" style="max-width: 1000px">
             <div id="timeline"></div>
             <div class="marker mfirst timeline-icon one">
@@ -102,48 +101,48 @@
             </div>
           </div>
         </div>
-        <p class=" text-h5 text-bold">3. PAYMENT & BUDGET</p>
+        <p class="text-h5 text-bold">3. PAYMENT & BUDGET</p>
 
         <div class="q-pa-md">
           <p class="text-weight-bold">Project Duration</p>
           <div class="row">
-          <div class="col-3">
-            <q-radio
-              left-label
-              color="cyan"
-              v-model="shape"
-              val="line"
-              label="Max. 2 Weeks"
-            />
+            <div class="col-3">
+              <q-radio
+                left-label
+                color="cyan"
+                v-model="shape"
+                val="line"
+                label="Max. 2 Weeks"
+              />
+            </div>
+            <div class="col-3">
+              <q-radio
+                left-label
+                color="cyan"
+                v-model="shape"
+                val="rectangle"
+                label="Max. 1 Month"
+              />
+            </div>
+            <div class="col-3">
+              <q-radio
+                left-label
+                color="cyan"
+                v-model="shape"
+                val="ellipse"
+                label="Max. 3 Month"
+              />
+            </div>
+            <div class="col-3">
+              <q-radio
+                left-label
+                color="cyan"
+                v-model="shape"
+                val="polygon"
+                label="More than 3 Months"
+              />
+            </div>
           </div>
-          <div class="col-3">
-            <q-radio
-              left-label
-              color="cyan"
-              v-model="shape"
-              val="rectangle"
-              label="Max. 1 Month"
-            />
-          </div>
-          <div class="col-3">
-            <q-radio
-              left-label
-              color="cyan"
-              v-model="shape"
-              val="ellipse"
-              label="Max. 3 Month"
-            />
-          </div>
-          <div class="col-3">
-            <q-radio
-              left-label
-              color="cyan"
-              v-model="shape"
-              val="polygon"
-              label="More than 3 Months"
-            />
-          </div>
-        </div>
         </div>
         <div class="q-pa-md">
           <p class="text-h6">Payment</p>
@@ -168,7 +167,7 @@
 
         <div class="q-pa-md">
           <p class="text-weight-bold">Rate of Payment</p>
-          <fieldset style="border-radius: 7px ; max-width:200px" >
+          <fieldset style="border-radius: 7px; max-width: 200px">
             <legend class="text-cyan">Maximum Rate</legend>
             <q-input borderless v-model="text" placeholder="2600" />
           </fieldset>
@@ -179,12 +178,21 @@
             unelevated
             size="10px"
             rounded
-            style="width:100px"
+            style="width: 100px"
             color="grey-6"
+            to="/02-remote-work-Client-Post-Proj"
             label="Back"
             class="q-mr-md"
           />
-          <q-btn unelevated size="10px" style="width:100px" rounded color="cyan" label="Next" />
+          <q-btn
+            unelevated
+            size="10px"
+            to="/04-remote-work-Client-Post-Proj"
+            style="width: 100px"
+            rounded
+            color="cyan"
+            label="Next"
+          />
         </div>
       </div>
     </div>

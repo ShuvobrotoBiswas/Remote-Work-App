@@ -364,6 +364,7 @@
             style="width: 100px"
             color="grey-6"
             label="Back"
+            to="/01-remote-work-Client-Post-Proj"
             class="q-mr-md"
           />
           <q-btn
@@ -371,6 +372,7 @@
             size="10px"
             style="width: 100px"
             rounded
+            to="/03-remote-work-Client-Post-Proj"
             color="cyan"
             label="Next"
           />
