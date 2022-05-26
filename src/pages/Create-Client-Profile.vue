@@ -136,6 +136,7 @@
         rounded
         color="black"
         type="submit"
+        to="/Client-Profile-Display"
         icon="check_circle_outline"
         label="Settings saved!"
         class="text-white text-h7 q-mr-sm"
@@ -143,6 +144,7 @@
       <q-btn
         size="10px"
         rounded
+        to="/Client-Profile-Doc-Verification"
         outlined
         type="submit"
         label="Go to ID verification →"

@@ -117,11 +117,13 @@
           type="submit"
           icon="check_circle_outline"
           label="Settings saved!"
+          to="/Client-Company-Profile-Display"
           class="text-white text-h7 q-mr-sm"
         ></q-btn>
         <q-btn
           size="10px"
           rounded
+          to="/Client-Company-Profile-Doc-Verification"
           outlined
           label="Go to ID verification →"
           class="text-h7"

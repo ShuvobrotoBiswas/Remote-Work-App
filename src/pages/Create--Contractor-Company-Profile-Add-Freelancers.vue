@@ -120,6 +120,7 @@
             style="width: 180px"
             rounded
             color="black"
+            to="/Create-Contractor-Profile"
             icon="cancel"
             label="Cancel"
             class="text-white text-h7"
@@ -130,6 +131,7 @@
           <q-btn
             size="15px"
             rounded
+            to="/Create-Contractor-Profile"
             style="width: 180px"
             color="black"
             icon="check_circle"

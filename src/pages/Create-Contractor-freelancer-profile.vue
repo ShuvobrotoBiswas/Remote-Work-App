@@ -230,12 +230,14 @@
         size="10px"
         rounded
         color="black"
+        to="/Contractor-freelancer-profile-display"
         icon="done"
         label="setting saved"
         class="text-white text-h7 q-mr-sm"
       ></q-btn>
       <q-btn
         size="10px"
+        to="/Client-Profile-Doc-Verification"
         rounded
         outlined
         label="Go to ID verification →"

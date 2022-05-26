@@ -79,13 +79,13 @@
                   Search/Select your Skills & Tools
                 </div>
                 <q-input
-                  v-model="skill_ids"
+                  v-model="skill_ids" 
                   outlined
                   style="max-width: 300px"
                   type="search"
                 >
                   <template v-slot:append>
-                    <q-icon name="search" />
+                    <q-icon  name="search" />
                     <q-menu>
                       <q-list style="min-width: 250px">
                         <q-item clickable v-close-popup>

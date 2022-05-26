@@ -191,6 +191,7 @@
         <q-btn
           size="10px"
           rounded
+          to="/Client-Company-Profile-Doc-Verification"
           color="black"
           type="submit"
           label="Submit documents -→"

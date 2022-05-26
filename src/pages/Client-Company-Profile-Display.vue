@@ -153,6 +153,7 @@
                 size="10px"
                 rounded
                 color="black"
+                to="/Create-Client-Company-Profile"
                 icon="edit"
                 label="Edit Profile"
                 class="text-white text-h7"

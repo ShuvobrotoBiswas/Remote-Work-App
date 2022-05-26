@@ -101,7 +101,7 @@ export default defineComponent({
           this.id = response.data.data.id;
           this.token = response.data.token;
           localStorage.setItem("token", response.data.token);
-          this.$router.push("/Contractor-profile-display");
+          this.$router.push("/Create-Contractor-Profile");
         })
         .catch(function (error) {
           console.error(error);

@@ -151,6 +151,7 @@
               size="10px"
               rounded
               color="black"
+              to="/Create-Contractor-freelancer-profile"
               icon="edit"
               label="Edit Profile"
               class="text-white flex-center text-h7"

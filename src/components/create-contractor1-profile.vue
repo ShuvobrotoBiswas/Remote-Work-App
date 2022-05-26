@@ -117,6 +117,7 @@
                   <q-btn
                     size="7px"
                     rounded
+                    to="/Create--Contractor-Company-Profile-Add-Freelancers"
                     color="white"
                     class="text-black q-mr-sm text-bold text-h7"
                     icon="add"
