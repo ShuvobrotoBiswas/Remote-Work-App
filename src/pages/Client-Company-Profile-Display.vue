@@ -40,7 +40,7 @@
         </div>
         <div class="col">
           <div class="text-black text-h7 text-center">
-            <q-btn dense flat color="black" icon="addchart"></q-btn>
+            <q-btn dense flat color="black" to="/01-remote-work-Client-Post-Proj" icon="addchart"></q-btn>
             <div>Post a Project</div>
           </div>
         </div>

@@ -15,7 +15,7 @@
         </div>
         <div class="col">
           <div class="text-black text-h7 text-center">
-            <q-btn dense flat color="black" icon="addchart"></q-btn>
+            <q-btn dense to="/01-remote-work-Client-Post-Proj" flat color="black" icon="addchart"></q-btn>
             <div>Post a Project</div>
           </div>
         </div>
@@ -79,7 +79,7 @@
                   Search/Select your Skills & Tools
                 </div>
                 <q-input
-                  v-model="skill_ids" 
+                  v-model="skill_ids"
                   outlined
                   style="max-width: 300px"
                   type="search"
