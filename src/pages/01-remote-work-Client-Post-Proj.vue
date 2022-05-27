@@ -79,249 +79,284 @@
       </div>
     </div>
     <q-separator />
+    <q-form @submit.prevent="post">
+      <div class="row flex-center items-start">
+        <div style="width: 1000px">
+          <div class="q-mt-xl">
+            <TimeLine />
+          </div>
+          <h5 class="text-bold">1. DEFINE PROJECT</h5>
+          <div class="q-pa-md text-h6">Project Catagory</div>
 
-    <div class="row flex-center items-start">
-      <div style="width: 1000px">
-        <div class="q-mt-xl">
-          <TimeLine />
-        </div>
-        <h5 class="text-bold">1. DEFINE PROJECT</h5>
-        <div class="q-pa-md text-h6">Project Catagory</div>
-
-        <div class="row">
-          <div class="col-3">
-            <q-radio
-              left-label
-              color="cyan"
-              v-model="shape"
-              val="line"
-              label="Well Defined Project"
-            />
-          </div>
-          <div class="col-2">
-            <q-radio
-              left-label
-              color="cyan"
-              v-model="shape"
-              val="rectangle"
-              label="Ongoing Work"
-            />
-          </div>
-          <div class="col-3">
-            <q-radio
-              left-label
-              color="cyan"
-              v-model="shape"
-              val="ellipse"
-              label="Market Research"
-            />
-          </div>
-          <div class="col-3">
-            <q-radio
-              left-label
-              color="cyan"
-              v-model="shape"
-              val="polygon"
-              label="Guaranted Prize Contest"
-            />
-          </div>
-        </div>
-
-        <h6>1.Project Template</h6>
-        <div>
-          <div class="row bid1 q-py-md text-center">
-            <div class="col-1 my-home q-mr-sm">
-              <q-btn
-                round
-                color="cyan"
-                class="flex-center"
-                icon="arrow_back_ios_new"
-              />
-            </div>
-            <div class="col my-home my-box bid2 bg-cyan-1 my-font q-mr-sm">
-              <q-img
-                src="~assets/Avator27.png"
-                class="image1"
-                style="width: 60px; height:50px"
-              >
-              </q-img>
-              <div class="q-pa-mg text-center custom-text-me">LOGO Design</div>
-            </div>
-            <div class="col my-home bid2 my-box my-font q-mr-sm">
-              <q-img
-                src="~assets/Avator28.png"
-                class="image1"
-                style="width: 40px; height: 40px"
-              >
-              </q-img>
-              <div class="q-pa-mg text-center custom-text-me">
-                Website Design
-              </div>
-            </div>
-            <div class="col my-home bid2 my-box my-font q-mr-sm">
-              <q-img
-                src="~assets/Avator21.png"
-                class="image1"
-                style="width: 40px; height: 40px"
-              >
-              </q-img>
-              <div class="q-pa-mg text-center custom-text-me">Translation</div>
-            </div>
-            <div class="col my-home bid2 my-font my-box1 q-mr-sm">
-              <div class="col">
-                <q-btn
-                  flat
-                  size="5px"
-                  color="black"
-                  padding="5px"
-                  icon="check_box_outline_blank"
-                />
-                <q-btn
-                  flat
-                  size="5px"
-                  color="black"
-                  padding="5px"
-                  icon="check_box_outline_blank"
-                />
-              </div>
-              <div class="col">
-                <q-btn
-                  flat
-                  size="5px"
-                  color="black"
-                  padding="5px"
-                  icon="check_box_outline_blank"
-                />
-                <q-btn flat size="5px" color="black" padding="5px" icon="add" />
-              </div>
-              Others
-            </div>
-            <div class="col-1 my-home q-mr-sm">
-              <q-btn
-                round
-                color="cyan"
-                class="flex-center"
-                icon="arrow_forward_ios"
-              />
-            </div>
-          </div>
           <div class="row">
-            <div class="col-6">
-              <q-separator style="max-width: 500px" color="cyan" />
+            <div class="col-3">
+              <q-radio
+                left-label
+                color="cyan"
+                v-model="project_type"
+                val="line"
+                label="Well Defined Project"
+              />
             </div>
-            <div class="col-1 my-font">OR</div>
-            <div class="col-5">
-              <q-separator style="max-width: 500px" color="cyan" />
+            <div class="col-2">
+              <q-radio
+                left-label
+                color="cyan"
+                v-model="project_type"
+                val="rectangle"
+                label="Ongoing Work"
+              />
+            </div>
+            <div class="col-3">
+              <q-radio
+                left-label
+                color="cyan"
+                v-model="project_type"
+                val="ellipse"
+                label="Market Research"
+              />
+            </div>
+            <div class="col-3">
+              <q-radio
+                left-label
+                color="cyan"
+                v-model="project_type"
+                val="polygon"
+                label="Guaranted Prize Contest"
+              />
             </div>
           </div>
 
+          <h6>1.Project Template</h6>
           <div>
-            <h6>2. Project From Scratch</h6>
-            <fieldset style="border-radius: 5px; border: 2px solid cyan">
-              <legend>Project Title*</legend>
-              <q-input
-                borderless
-                v-model="text"
-                placeholder="Lorem ipsum dolor sit amet"
-              />
-            </fieldset>
-            <q-expansion-item
-              class="q-mt-md"
-              dense
-              dense-toggle
-              expand-separator
-              label="Project Catagory*"
-              style="max-width: 350px"
-            >
-              <q-card class="bg-grey-2">
-                <q-card-section>
-                  <div class="row">Logo Design</div>
-                  <div class="row">Cerate Website</div>
-                  <div class="row">Translation</div>
-                  <div class="row">Etc.</div>
-                </q-card-section>
-              </q-card>
-            </q-expansion-item>
-            <fieldset style="border-radius: 5px; border: 2px solid cyan">
-              <legend>Project Description*</legend>
-              <q-input
-                borderless
-                v-model="text"
-                placeholder="Lorem ipsum dolor sit amet"
-              />
-            </fieldset>
-            <q-btn
-              class="q-mt-md"
-              color="cyan"
-              icon="add"
-              label="Upload File"
-            />
-            <div class="row q-py-md">
-              <q-btn
-                rounded
-                outline
-                size="8px"
-                icon-right="cancel"
-                color="black"
-                class="q-mr-sm"
-                label="Color scheme.jpg"
-              />
-              <q-btn
-                rounded
-                outline
-                size="8px"
-                icon-right="cancel"
-                color="black"
-                class="q-mr-sm"
-                label="brand identity guidelines.pdf"
-              />
-              <q-btn
-                rounded
-                outline
-                size="8px"
-                icon-right="cancel"
-                color="black"
-                class="q-mr-sm"
-                label="brief.doc"
-              />
-            </div>
-            <q-item tag="label" v-ripple>
-              <q-item-section avatar top>
-                <q-checkbox v-model="color" val="cyan" color="cyan" />
-              </q-item-section>
-              <q-item-section>
-                <q-item-label class="text-h7"
-                  >NDA(Non Disclosure agreement)- contractor undertakes not to
-                  disclose to anyone what is in the document for a period
-                  established by the client only contractors who sign the NDA
-                  will receive access to the project data.</q-item-label
+            <div class="row bid1 q-py-md text-center">
+              <div class="col-1 my-home q-mr-sm">
+                <q-btn
+                  round
+                  color="cyan"
+                  class="flex-center"
+                  icon="arrow_back_ios_new"
+                />
+              </div>
+              <div class="col my-home my-box bid2 bg-cyan-1 my-font q-mr-sm">
+                <q-img
+                  src="~assets/Avator27.png"
+                  class="image1"
+                  style="width: 60px; height: 50px"
                 >
-              </q-item-section>
-            </q-item>
-            <div class="row q-pa-md my-font">
-              <p>* Fields marked with "*" are mandatory.</p>
+                </q-img>
+                <div class="q-pa-mg text-center custom-text-me">
+                  LOGO Design
+                </div>
+              </div>
+              <div class="col my-home bid2 my-box my-font q-mr-sm">
+                <q-img
+                  src="~assets/Avator28.png"
+                  class="image1"
+                  style="width: 40px; height: 40px"
+                >
+                </q-img>
+                <div class="q-pa-mg text-center custom-text-me">
+                  Website Design
+                </div>
+              </div>
+              <div class="col my-home bid2 my-box my-font q-mr-sm">
+                <q-img
+                  src="~assets/Avator21.png"
+                  class="image1"
+                  style="width: 40px; height: 40px"
+                >
+                </q-img>
+                <div class="q-pa-mg text-center custom-text-me">
+                  Translation
+                </div>
+              </div>
+              <div class="col my-home bid2 my-font my-box1 q-mr-sm">
+                <div class="col">
+                  <q-btn
+                    flat
+                    size="5px"
+                    color="black"
+                    padding="5px"
+                    icon="check_box_outline_blank"
+                  />
+                  <q-btn
+                    flat
+                    size="5px"
+                    color="black"
+                    padding="5px"
+                    icon="check_box_outline_blank"
+                  />
+                </div>
+                <div class="col">
+                  <q-btn
+                    flat
+                    size="5px"
+                    color="black"
+                    padding="5px"
+                    icon="check_box_outline_blank"
+                  />
+                  <q-btn
+                    flat
+                    size="5px"
+                    color="black"
+                    padding="5px"
+                    icon="add"
+                  />
+                </div>
+                Others
+              </div>
+              <div class="col-1 my-home q-mr-sm">
+                <q-btn
+                  round
+                  color="cyan"
+                  class="flex-center"
+                  icon="arrow_forward_ios"
+                />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <q-separator style="max-width: 500px" color="cyan" />
+              </div>
+              <div class="col-1 my-font">OR</div>
+              <div class="col-5">
+                <q-separator style="max-width: 500px" color="cyan" />
+              </div>
+            </div>
+
+            <div>
+              <h6>2. Project From Scratch</h6>
+              <fieldset style="border-radius: 5px; border: 2px solid cyan">
+                <legend>Project Title*</legend>
+                <q-input
+                  borderless
+                  v-model="title"
+                  placeholder="Lorem ipsum dolor sit amet"
+                />
+              </fieldset>
+              <q-expansion-item
+                class="q-mt-md"
+                dense
+                dense-toggle
+                expand-separator
+                label="Project Catagory*"
+                style="max-width: 350px"
+              >
+                <q-list dense bordered padding class="borders bg-grey-2">
+                  <q-item clickable v-ripple>
+                    <q-item-section v-model="project_catagory"
+                      >Logo Design
+                    </q-item-section>
+                  </q-item>
+
+                  <q-item clickable v-ripple>
+                    <q-item-section v-model="project_catagory"
+                      >Cerate Website</q-item-section
+                    >
+                  </q-item>
+
+                  <q-item clickable v-ripple>
+                    <q-item-section v-model="project_catagory">
+                      Translation
+                    </q-item-section>
+                  </q-item>
+                  <q-item clickable v-ripple>
+                    <q-item-section v-model="project_catagory">
+                      Etc.
+                    </q-item-section>
+                  </q-item>
+                </q-list>
+              </q-expansion-item>
+              <fieldset style="border-radius: 5px; border: 2px solid cyan">
+                <legend>Project Description*</legend>
+                <q-input
+                  borderless
+                  v-model="description"
+                  placeholder="Lorem ipsum dolor sit amet"
+                />
+              </fieldset>
+              <q-file
+                bg-color="cyan"
+                style="width: 150px"
+                class="q-mt-md"
+                filled
+                v-model="attachments"
+                label="Upload File"
+              >
+                <template v-slot:prepend>
+                  <q-icon name="add" />
+                </template>
+              </q-file>
+
+              <div class="row q-py-md">
+                <q-btn
+                  rounded
+                  outline
+                  size="8px"
+                  icon-right="cancel"
+                  color="black"
+                  class="q-mr-sm"
+                  label="Color scheme.jpg"
+                />
+                <q-btn
+                  rounded
+                  outline
+                  size="8px"
+                  icon-right="cancel"
+                  color="black"
+                  class="q-mr-sm"
+                  label="brand identity guidelines.pdf"
+                />
+                <q-btn
+                  rounded
+                  outline
+                  size="8px"
+                  icon-right="cancel"
+                  color="black"
+                  class="q-mr-sm"
+                  label="brief.doc"
+                />
+              </div>
+              <q-item tag="label" v-ripple>
+                <q-item-section avatar top>
+                  <q-checkbox v-model="color" val="cyan" color="cyan" />
+                </q-item-section>
+                <q-item-section>
+                  <q-item-label class="text-h7"
+                    >NDA(Non Disclosure agreement)- contractor undertakes not to
+                    disclose to anyone what is in the document for a period
+                    established by the client only contractors who sign the NDA
+                    will receive access to the project data.</q-item-label
+                  >
+                </q-item-section>
+              </q-item>
+              <div class="row q-pa-md my-font">
+                <p>* Fields marked with "*" are mandatory.</p>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="flex flex-center q-pa-md">
-          <q-btn
-            unelevated
-            size="10px"
-            style="width: 100px"
-            rounded
-            to="/02-remote-work-Client-Post-Proj"
-            color="cyan"
-            label="Next"
-          />
+          <div class="flex flex-center q-pa-md">
+            <q-btn
+              unelevated
+              size="10px"
+              style="width: 100px"
+              rounded
+              type="submit"
+              color="cyan"
+              label="Next"
+            />
+          </div>
         </div>
       </div>
-    </div>
+    </q-form>
   </div>
 </template>
 <script>
 import { defineComponent, ref } from "vue";
 import TimeLine from "components/Timeline.vue";
+import axios from "axios";
 
 export default defineComponent({
   components: {
@@ -331,9 +366,13 @@ export default defineComponent({
     const submitResult = ref([]);
 
     return {
-      shape: ref("line"),
+      project_type: ref("line"),
       submitResult,
       color: ref(true),
+      project_catagory: ref(null),
+      title: ref(null),
+      description: ref(null),
+      attachments: ref(null),
 
       onSubmit(evt) {
         const formData = new FormData(evt.target);
@@ -349,6 +388,38 @@ export default defineComponent({
         submitResult.value = data;
       },
     };
+  },
+  methods: {
+    post() {
+      const post = new FormData();
+      post.append("project_type", this.project_type);
+      post.append("title", this.title);
+      post.append("description", this.description);
+      post.append("attachments", this.attachments);
+
+      const options = {
+        method: "POST",
+        url: "https://rwapi.zupria.com/api/user/post",
+        data: post,
+        headers: {
+          Authorization:
+            "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcndhcGkuenVwcmlhLmNvbVwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY1MDY2NjAyMSwiZXhwIjoxNjgyMjAyMDIxLCJuYmYiOjE2NTA2NjYwMjEsImp0aSI6InVkbmUyZ3NsRHJ5VjY5Z3UiLCJzdWIiOjksInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.4_rBRo4Yo7rQ58dKVNdbUEtp6_EKjF79744-cfrUQWM",
+        },
+      };
+      axios
+        .request(options)
+        .then((response) => {
+          console.log(response.data);
+          this.user = response.data;
+          this.id = response.data.data.id;
+          this.token = response.data.token;
+          localStorage.setItem("token", response.data.token);
+          this.$router.push("/02-remote-work-Client-Post-Proj");
+        })
+        .catch(function (error) {
+          console.error(error);
+        });
+    },
   },
 });
 </script>
