@@ -102,105 +102,107 @@
           </div>
         </div>
         <p class="text-h5 text-bold">3. PAYMENT & BUDGET</p>
-
-        <div class="q-pa-md">
-          <p class="text-weight-bold">Project Duration</p>
-          <div class="row">
-            <div class="col-3">
-              <q-radio
-                left-label
-                color="cyan"
-                v-model="shape"
-                val="line"
-                label="Max. 2 Weeks"
-              />
+        <q-form @submit.prevent="post">
+          <div class="q-pa-md">
+            <p class="text-weight-bold">Project Duration</p>
+            <div class="row">
+              <div class="col-3">
+                <q-radio
+                  left-label
+                  color="cyan"
+                  v-model="project_duration_weeks"
+                  val="2"
+                  label="Max. 2 Weeks"
+                />
+              </div>
+              <div class="col-3">
+                <q-radio
+                  left-label
+                  color="cyan"
+                  v-model="project_duration_weeks"
+                  val="4"
+                  label="Max. 1 Month"
+                />
+              </div>
+              <div class="col-3">
+                <q-radio
+                  left-label
+                  color="cyan"
+                  v-model="project_duration_weeks"
+                  val="12"
+                  label="Max. 3 Month"
+                />
+              </div>
+              <div class="col-3">
+                <q-radio
+                  left-label
+                  color="cyan"
+                  v-model="project_duration_weeks"
+                  val="13"
+                  label="More than 3 Months"
+                />
+              </div>
             </div>
-            <div class="col-3">
+          </div>
+          <div class="q-pa-md">
+            <p class="text-h6">Payment</p>
+            <p class="text-weight-bold">Type of Payment</p>
+            <div class="q-gutter-sm">
               <q-radio
                 left-label
                 color="cyan"
-                v-model="shape"
-                val="rectangle"
-                label="Max. 1 Month"
+                v-model="price_type"
+                val="hourly"
+                label="Hourly Payment"
               />
-            </div>
-            <div class="col-3">
               <q-radio
                 left-label
                 color="cyan"
-                v-model="shape"
-                val="ellipse"
-                label="Max. 3 Month"
-              />
-            </div>
-            <div class="col-3">
-              <q-radio
-                left-label
-                color="cyan"
-                v-model="shape"
-                val="polygon"
-                label="More than 3 Months"
+                v-model="price_type"
+                val="fixed"
+                label="Fixed Price"
               />
             </div>
           </div>
-        </div>
-        <div class="q-pa-md">
-          <p class="text-h6">Payment</p>
-          <p class="text-weight-bold">Type of Payment</p>
-          <div class="q-gutter-sm">
-            <q-radio
-              left-label
-              color="cyan"
-              v-model="shape"
-              val="line"
-              label="Hourly Payment"
+
+          <div class="q-pa-md">
+            <p class="text-weight-bold">Rate of Payment</p>
+            <fieldset style="border-radius: 7px; max-width: 200px">
+              <legend class="text-cyan">Maximum Rate</legend>
+              <q-input borderless v-model="maximum_rate" placeholder="2600" />
+            </fieldset>
+          </div>
+
+          <div class="flex q-pa-md justify-center">
+            <q-btn
+              unelevated
+              size="10px"
+              rounded
+              style="width: 100px"
+              color="grey-6"
+              to="/02-remote-work-Client-Post-Proj"
+              label="Back"
+              class="q-mr-md"
             />
-            <q-radio
-              left-label
+            <q-btn
+              unelevated
+              size="10px"
+              style="width: 100px"
+              rounded
+              type="submit"
               color="cyan"
-              v-model="shape"
-              val="line"
-              label="Fixed Price"
+              label="Next"
             />
           </div>
-        </div>
-
-        <div class="q-pa-md">
-          <p class="text-weight-bold">Rate of Payment</p>
-          <fieldset style="border-radius: 7px; max-width: 200px">
-            <legend class="text-cyan">Maximum Rate</legend>
-            <q-input borderless v-model="text" placeholder="2600" />
-          </fieldset>
-        </div>
-
-        <div class="flex q-pa-md justify-center">
-          <q-btn
-            unelevated
-            size="10px"
-            rounded
-            style="width: 100px"
-            color="grey-6"
-            to="/02-remote-work-Client-Post-Proj"
-            label="Back"
-            class="q-mr-md"
-          />
-          <q-btn
-            unelevated
-            size="10px"
-            to="/04-remote-work-Client-Post-Proj"
-            style="width: 100px"
-            rounded
-            color="cyan"
-            label="Next"
-          />
-        </div>
+        </q-form>
       </div>
     </div>
   </div>
 </template>
 <script>
 import { defineComponent, ref } from "vue";
-import TimeLine from "components/Timeline.vue";
+import axios from "axios";
+// import TimeLine from "components/Timeline.vue";
 
 export default defineComponent({
   // components: {
@@ -210,6 +212,10 @@ export default defineComponent({
     const submitResult = ref([]);
 
     return {
+      project_duration_weeks: ref("2"),
+      price_type: ref("fixed"),
+      maximum_rate: "",
+
       shape: ref("line"),
       submitResult,
 
@@ -227,6 +233,37 @@ export default defineComponent({
         submitResult.value = data;
       },
     };
+  },
+  methods: {
+    post() {
+      const post = new FormData();
+      post.append("project_duration_weeks", this.project_duration_weeks);
+      post.append("price_type", this.price_type);
+      post.append("maximum_rate", this.maximum_rate);
+
+      const options = {
+        method: "POST",
+        url: "https://rwapi.zupria.com/api/post",
+        data: post,
+        headers: {
+          Authorization:
+            "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcndhcGkuenVwcmlhLmNvbVwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY1MDY2NjAyMSwiZXhwIjoxNjgyMjAyMDIxLCJuYmYiOjE2NTA2NjYwMjEsImp0aSI6InVkbmUyZ3NsRHJ5VjY5Z3UiLCJzdWIiOjksInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.4_rBRo4Yo7rQ58dKVNdbUEtp6_EKjF79744-cfrUQWM",
+        },
+      };
+      axios
+        .request(options)
+        .then((response) => {
+          console.log(response.data);
+          this.user = response.data;
+          this.id = response.data.data.id;
+          this.token = response.data.token;
+          localStorage.setItem("token", response.data.token);
+          this.$router.push("/04-remote-work-Client-Post-Proj");
+        })
+        .catch(function (error) {
+          console.error(error);
+        });
+    },
   },
 });
 </script>

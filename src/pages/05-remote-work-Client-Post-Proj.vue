@@ -79,8 +79,10 @@
       </div>
     </div>
     <q-separator />
+        <q-form @submit.prevent="post">
 
     <div class="row q-pa-md flex-center items-start">
+
       <div style="width: 1000px">
         <div class="q-pa-md">
           <div class="row timeline-wrap" style="max-width: 1000px">
@@ -109,7 +111,7 @@
           <p class="text-weight-bold">Project title</p>
           <fieldset style="border-radius: 7px; max-width: 850px">
             <legend class="text-cyan">Project Title*</legend>
-            <q-input borderless v-model="text" placeholder="Project name" />
+            <q-input borderless v-model="title" placeholder="Project name" />
           </fieldset>
         </div>
         <div class="q-pa-md">
@@ -118,13 +120,24 @@
             <legend class="text-cyan">Project Description</legend>
             <q-input
               borderless
-              v-model="text"
+              v-model="description"
               placeholder="Lorem ipsum dolor sit amet"
             />
           </fieldset>
         </div>
         <div class="q-pa-md">
-          <q-btn class="q-mt-md" color="cyan" icon="add" label="Upload File" />
+          <q-file
+            bg-color="cyan"
+            style="width: 150px"
+            class="q-mt-md"
+            filled
+            v-model="attachments"
+            label="Upload File"
+          >
+            <template v-slot:prepend>
+              <q-icon name="add" />
+            </template>
+          </q-file>
         </div>
         <div class="row q-pa-md">
           <q-btn
@@ -306,27 +319,27 @@
               <div class="col-2">
                 <q-radio
                   left-label
-                  color="cyan"
-                  v-model="shape"
-                  val="line"
+                  v-model="exp_level"
+                  val="Junior"
                   label="Junior"
+                  color="cyan"
                 />
               </div>
               <div class="col-2">
                 <q-radio
                   left-label
+                  v-model="exp_level"
                   color="cyan"
-                  v-model="shape"
-                  val="rectangle"
+                  val="Middle"
                   label="Middle"
                 />
               </div>
               <div class="col-2">
                 <q-radio
                   left-label
+                  v-model="exp_level"
                   color="cyan"
-                  v-model="shape"
-                  val="rectangle"
+                  val="Senior"
                   label="Senior"
                 />
               </div>
@@ -335,32 +348,32 @@
           <div class="q-mt-md">
             <p class="text-weight-bold">Contractor Availability</p>
             <div class="row">
-              <div class="col-2">
+              <div class="col">
                 <q-radio
-                  left-label
-                  color="cyan"
-                  v-model="shape"
-                  val="line"
-                  label="1 Hour/Day"
-                />
+                left-label
+                v-model="contractor_availability"
+                color="cyan"
+                val="Less then 20hour/Week"
+                label="Less then 20hour/Week"
+              />
               </div>
-              <div class="col-2">
+              <div class="col">
                 <q-radio
-                  left-label
-                  color="cyan"
-                  v-model="shape"
-                  val="rectangle"
-                  label="2 Hours/Day"
-                />
+                left-label
+                v-model="contractor_availability"
+                color="cyan"
+                val="20-30 hours/Week"
+                label="20-30 hours/Week"
+              />
               </div>
-              <div class="col-2">
-                <q-radio
-                  left-label
-                  color="cyan"
-                  v-model="shape"
-                  val="rectangle"
-                  label="4 Hours/Day"
-                />
+              <div class="col">
+                 <q-radio
+                left-label
+                v-model="contractor_availability"
+                color="More Than"
+                val="More than 30 hours/Week"
+                label="More than 30 hours/Week"
+              />
               </div>
             </div>
           </div>
@@ -391,31 +404,31 @@
           <div>
             <p class="text-bold text-h6">Project Time</p>
             <div class="row">
-              <div class="col-2">
+              <div class="col">
                 <q-radio
                   left-label
                   color="cyan"
-                  v-model="shape"
-                  val="line"
+                  v-model="project_duration_weeks"
+                  val="2"
                   label="Max. 2 Weeks"
                 />
               </div>
-              <div class="col-2">
+              <div class="col">
                 <q-radio
                   left-label
                   color="cyan"
-                  v-model="shape"
-                  val="rectangle"
+                  v-model="project_duration_weeks"
+                  val="4"
                   label="Max. 1 Month"
                 />
               </div>
-              <div class="col-2">
+              <div class="col">
                 <q-radio
                   left-label
                   color="cyan"
-                  v-model="shape"
-                  val="rectangle"
-                  label="Max. 3 Months"
+                  v-model="project_duration_weeks"
+                  val="12"
+                  label="Max. 3 Month"
                 />
               </div>
             </div>
@@ -424,23 +437,23 @@
             <p class="text-h6">Payment</p>
             <p class="text-weight-bold">Type of Payment</p>
             <div class="row">
-              <div class="col-2">
-                <q-radio
-                  left-label
-                  color="cyan"
-                  v-model="shape"
-                  val="line"
-                  label="Hourly Payment"
-                />
+              <div class="col">
+               <q-radio
+                left-label
+                color="cyan"
+                v-model="price_type"
+                val="hourly"
+                label="Hourly Payment"
+              />
               </div>
-              <div class="col-2">
-                <q-radio
-                  left-label
-                  color="cyan"
-                  v-model="shape"
-                  val="line"
-                  label="Project payment"
-                />
+              <div class="col">
+                 <q-radio
+                left-label
+                color="cyan"
+                v-model="price_type"
+                val="fixed"
+                label="Fixed Price"
+              />
               </div>
             </div>
           </div>
@@ -451,7 +464,7 @@
               style="border-radius: 7px; max-width: 200px; max-height: 70px"
             >
               <legend class="text-cyan">Maximum Rate</legend>
-              <q-input borderless v-model="text" placeholder="2600" />
+              <q-input borderless v-model="maximum_rate" placeholder="2600" />
             </fieldset>
           </div>
         </div>
@@ -472,7 +485,7 @@
             </q-item-section>
           </q-item>
           <div class="flex">
-            <q-item clickable v-ripple>
+            <q-item clickable v-ripple v-model="invitation_profile_ids">
               <q-item-section side>
                 <q-avatar circle size="48px">
                   <img src="~assets/Avator18.png" />
@@ -483,7 +496,7 @@
                 <q-item-label caption>Senior Bacend Developer</q-item-label>
               </q-item-section>
             </q-item>
-            <q-item clickable v-ripple>
+            <q-item clickable v-ripple v-model="invitation_profile_ids">
               <q-item-section side>
                 <q-avatar circle size="48px">
                   <img src="~assets/Avator10.png" />
@@ -494,7 +507,7 @@
                 <q-item-label caption>Middle Bacend Developer</q-item-label>
               </q-item-section>
             </q-item>
-            <q-item clickable v-ripple>
+            <q-item clickable v-ripple v-model="invitation_profile_ids">
               <q-item-section side>
                 <q-avatar circle size="48px">
                   <img src="~assets/Avator18.png" />
@@ -523,16 +536,19 @@
             unelevated
             size="10px"
             rounded
+            type="submit"
             color="cyan"
             label="post project"
           />
         </div>
       </div>
     </div>
+    </q-form>
   </div>
 </template>
 <script>
 import { defineComponent, ref } from "vue";
+import axios from "axios";
 // import TimeLine from "components/Timeline.vue";
 
 export default defineComponent({
@@ -546,6 +562,35 @@ export default defineComponent({
       shape: ref("line"),
       submitResult,
       colorbox: ref(true),
+
+      // From page1
+      project_type: ref("line"),
+      color: ref(true),
+      project_catagory: ref(null),
+      title: ref(null),
+      description: ref(null),
+      attachments: ref(null),
+
+      // from page 2
+      contractors_no: ref("1"),
+      skill_ids: ref(null),
+      questions: "",
+      exp_level: ref("Junior"),
+      contractor_availability: ref("Less then 20hour/Week"),
+      project_visibility: ref("Available only to invited contractors"),
+      profile_type: ref("Agency"),
+
+      // from page 3
+      project_duration_weeks: ref("2"),
+      price_type: ref("fixed"),
+      maximum_rate: "",
+
+      // from page 4
+      val: ref(true),
+      text: ref("Gil Dobrica"),
+      noData: ref("null Data"),
+      invitation_profile_ids: ref("id"),
+
       lorem:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
 
@@ -563,6 +608,57 @@ export default defineComponent({
         submitResult.value = data;
       },
     };
+  },
+  methods: {
+    post() {
+      const post = new FormData();
+      // from page 1
+      post.append("project_type", this.project_type);
+      post.append("title", this.title);
+      post.append("description", this.description);
+      post.append("attachments", this.attachments);
+      post.append("project_catagory", this.project_catagory);
+
+      // from page 2
+      post.append("profile_type", this.profile_type);
+      post.append("contractors_no", this.contractors_no);
+      post.append("questions", this.questions);
+      post.append("skill_ids", this.skill_ids);
+      post.append("exp_level", this.exp_level);
+      post.append("contractor_availability", this.contractor_availability);
+      post.append("project_visibility", this.project_visibility);
+
+      // from page 3
+      post.append("project_duration_weeks", this.project_duration_weeks);
+      post.append("price_type", this.price_type);
+      post.append("maximum_rate", this.maximum_rate);
+
+      // from page 4
+      post.append("invitation_profile_ids", this.invitation_profile_ids);
+
+      const options = {
+        method: "POST",
+        url: "https://rwapi.zupria.com/api/post",
+        data: post,
+        headers: {
+          Authorization:
+            "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcndhcGkuenVwcmlhLmNvbVwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY1MDY2NjAyMSwiZXhwIjoxNjgyMjAyMDIxLCJuYmYiOjE2NTA2NjYwMjEsImp0aSI6InVkbmUyZ3NsRHJ5VjY5Z3UiLCJzdWIiOjksInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.4_rBRo4Yo7rQ58dKVNdbUEtp6_EKjF79744-cfrUQWM",
+        },
+      };
+      axios
+        .request(options)
+        .then((response) => {
+          console.log(response.data);
+          this.user = response.data;
+          this.id = response.data.data.id;
+          this.token = response.data.token;
+          localStorage.setItem("token", response.data.token);
+          this.$router.push("/06-Remote-Work-Contractor-Search-Proj");
+        })
+        .catch(function (error) {
+          console.error(error);
+        });
+    },
   },
 });
 </script>

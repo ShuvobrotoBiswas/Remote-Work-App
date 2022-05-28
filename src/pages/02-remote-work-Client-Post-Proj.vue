@@ -101,289 +101,297 @@
             </div>
           </div>
         </div>
-        <p class="q-pa-md text-h5 text-bold">2. CHOOSE CONTRACTORS</p>
-        <div class="q-pa-md">
-          <p class="text-bold">
-            Choose how many contractors are needed for the project
-          </p>
-          <div class="q-gutter-sm">
-            <q-radio
-              left-label
-              v-model="shape"
-              val="line"
-              label="One"
-              color="cyan"
-            />
-            <q-radio
-              left-label
-              v-model="shape"
-              val="rectangle"
-              color="cyan"
-              label="More than One"
-            />
+        <q-form @submit.prevent="post">
+          <p class="q-pa-md text-h5 text-bold">2. CHOOSE CONTRACTORS</p>
+          <div class="q-pa-md">
+            <p class="text-bold">
+              Choose how many contractors are needed for the project
+            </p>
+            <div class="q-gutter-sm">
+              <q-radio
+                left-label
+                v-model="contractors_no"
+                val="1"
+                label="One"
+                color="cyan"
+              />
+              <q-radio
+                left-label
+                v-model="contractors_no"
+                val="2,3.."
+                color="cyan"
+                label="More than One"
+              />
+            </div>
           </div>
-        </div>
-        <div class="row q-pa-md">
-          <p class="text-bold">
-            Create specific question to which the contractors will have to
-            answer
-          </p>
+          <div class="row q-pa-md">
+            <p class="text-bold">
+              Create specific question to which the contractors will have to
+              answer
+            </p>
 
-          <q-card flat class="my-card bg-teal-1" style="max-width: 800px">
-            <q-card-section>
-              <div class="row items-center no-wrap">
-                <div class="col">
-                  <div class="text-h7 bg-teal-1">{{ lorem }}</div>
-                </div>
+            <q-card flat class="my-card bg-teal-1" style="max-width: 800px">
+              <q-card-section>
+                <div class="row items-center no-wrap">
+                  <div class="col">
+                    <div class="text-h7 bg-teal-1">{{ lorem }}</div>
+                  </div>
 
-                <div class="col-auto">
-                  <q-btn color="cyan" round flat icon="cancel">
-                    <q-menu cover auto-close>
-                      <q-list>
-                        <q-item clickable>
-                          <q-item-section>Remove Card</q-item-section>
-                        </q-item>
-                      </q-list>
-                    </q-menu>
-                  </q-btn>
-                </div>
-              </div>
-            </q-card-section>
-          </q-card>
-          <q-card flat class="my-card q-mt-md bg-teal-1">
-            <q-card-section>
-              <div class="row items-center no-wrap">
-                <div class="col">
-                  <div class="text-h7 bg-teal-1">
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                    laboris nisi ut aliquip?
+                  <div class="col-auto">
+                    <q-btn color="cyan" round flat icon="cancel">
+                      <q-menu cover auto-close>
+                        <q-list>
+                          <q-item clickable>
+                            <q-item-section>Remove Card</q-item-section>
+                          </q-item>
+                        </q-list>
+                      </q-menu>
+                    </q-btn>
                   </div>
                 </div>
+              </q-card-section>
+            </q-card>
+            <q-card flat class="my-card q-mt-md bg-teal-1">
+              <q-card-section>
+                <div class="row items-center no-wrap">
+                  <div class="col">
+                    <div class="text-h7 bg-teal-1">
+                      Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                      laboris nisi ut aliquip?
+                    </div>
+                  </div>
 
-                <div class="col-auto">
-                  <q-btn color="cyan" round flat icon="cancel">
-                    <q-menu cover auto-close>
-                      <q-list>
-                        <q-item clickable>
-                          <q-item-section>Remove Card</q-item-section>
-                        </q-item>
-                      </q-list>
-                    </q-menu>
-                  </q-btn>
+                  <div class="col-auto">
+                    <q-btn color="cyan" round flat icon="cancel">
+                      <q-menu cover auto-close>
+                        <q-list>
+                          <q-item clickable>
+                            <q-item-section>Remove Card</q-item-section>
+                          </q-item>
+                        </q-list>
+                      </q-menu>
+                    </q-btn>
+                  </div>
                 </div>
+              </q-card-section>
+            </q-card>
+          </div>
+          <div class="q-mt-md">
+            <q-item>
+              <q-item-section>
+                <fieldset style="border-radius: 7px" class="q-pa-md">
+                  <legend class="text-cyan">Add Question</legend>
+                  <q-input
+                    borderless
+                    v-model="questions"
+                    placeholder="Lorem ipsum dolor sit amet"
+                  />
+                </fieldset>
+              </q-item-section>
+              <q-item-section side>
+                <q-btn padding="xs" round color="cyan" icon="add" />
+              </q-item-section>
+            </q-item>
+          </div>
+          <div class="q-pa-md">
+            <p class="text-weight-bold">
+              Choose the technological skills and qualifications required of the
+              contractor
+            </p>
+            <div class="row">
+              <div class="col" style="max-width: 200px">
+                <q-expansion-item
+                  class="bg-grey-2 q-mt-md bordered"
+                  dense
+                  v-model="skill_ids"
+                  dense-toggle
+                  expand-separator
+                  label="Skills required"
+                  style="max-width: 350px"
+                >
+                  <q-list dense bordered padding class="borders">
+                    <q-item clickable v-ripple>
+                      <q-item-section v-model="skill_ids"
+                        >Angular JS
+                      </q-item-section>
+                    </q-item>
+
+                    <q-item clickable v-ripple>
+                      <q-item-section v-model="skill_ids">Java</q-item-section>
+                    </q-item>
+
+                    <q-item clickable v-ripple>
+                      <q-item-section v-model="skill_ids"> PHP </q-item-section>
+                    </q-item>
+                    <q-item clickable v-ripple>
+                      <q-item-section v-model="skill_ids">
+                        Etc.
+                      </q-item-section>
+                    </q-item>
+                  </q-list>
+                </q-expansion-item>
               </div>
-            </q-card-section>
-          </q-card>
-        </div>
-        <div class="q-mt-md">
-          <q-item>
-            <q-item-section>
-              <fieldset style="border-radius: 7px" class="q-pa-md">
-                <legend class="text-cyan">Add Question</legend>
-                <q-input
-                  borderless
-                  v-model="text"
-                  placeholder="Lorem ipsum dolor sit amet"
+              <div class="col q-pa-md">
+                <q-btn
+                  rounded
+                  outline
+                  size="6px"
+                  icon-right="cancel"
+                  color="black"
+                  class="q-mr-sm"
+                  label="Angular js"
                 />
-              </fieldset>
-            </q-item-section>
-            <q-item-section side>
-              <q-btn padding="xs" round color="cyan" icon="add" />
-            </q-item-section>
-          </q-item>
-        </div>
-        <div class="q-pa-md">
-          <p class="text-weight-bold">
-            Choose the technological skills and qualifications required of the
-            contractor
-          </p>
-          <div class="row">
-            <div class="col" style="max-width:200px">
-              <q-expansion-item
-                class="bg-grey-2 q-mt-md bordered"
-                dense
-                dense-toggle
-                expand-separator
-                label="Skills required"
-                style="max-width: 350px"
-              >
-                <q-list dense bordered padding class="borders">
-                  <q-item clickable v-ripple>
-                    <q-item-section>Angular JS </q-item-section>
-                  </q-item>
-
-                  <q-item clickable v-ripple>
-                    <q-item-section>Java</q-item-section>
-                  </q-item>
-
-                  <q-item clickable v-ripple>
-                    <q-item-section> PHP </q-item-section>
-                  </q-item>
-                  <q-item clickable v-ripple>
-                    <q-item-section> Etc. </q-item-section>
-                  </q-item>
-                </q-list>
-              </q-expansion-item>
+                <q-btn
+                  rounded
+                  outline
+                  size="6px"
+                  icon-right="cancel"
+                  color="black"
+                  class="q-mr-sm"
+                  label="Java"
+                />
+                <q-btn
+                  rounded
+                  outline
+                  size="6px"
+                  icon-right="cancel"
+                  color="black"
+                  class="q-mr-sm"
+                  label="PHP"
+                />
+              </div>
             </div>
-            <div class="col q-pa-md">
-              <q-btn
-                rounded
-                outline
-                size="6px"
-                icon-right="cancel"
-                color="black"
-                class="q-mr-sm"
-                label="Angular js"
+          </div>
+          <div class="q-pa-md">
+            <p class="text-weight-bold">
+              Choose the desired level of expertise of the contractors
+            </p>
+            <div class="q-gutter-sm">
+              <q-radio
+                left-label
+                v-model="exp_level"
+                val="Junior"
+                label="Junior"
+                color="cyan"
               />
-              <q-btn
-                rounded
-                outline
-                size="6px"
-                icon-right="cancel"
-                color="black"
-                class="q-mr-sm"
-                label="Java"
+              <q-radio
+                left-label
+                v-model="exp_level"
+                color="cyan"
+                val="Middle"
+                label="Middle"
               />
-              <q-btn
-                rounded
-                outline
-                size="6px"
-                icon-right="cancel"
-                color="black"
-                class="q-mr-sm"
-                label="PHP"
+              <q-radio
+                left-label
+                v-model="exp_level"
+                color="cyan"
+                val="Senior"
+                label="Senior"
               />
             </div>
           </div>
-        </div>
-        <div class="q-pa-md">
-          <p class="text-weight-bold">
-            Choose the desired level of expertise of the contractors
-          </p>
-          <div class="q-gutter-sm">
-            <q-radio
-              left-label
-              v-model="shape"
-              val="line"
-              label="Junior"
-              color="cyan"
+          <div class="q-pa-md">
+            <p class="text-weight-bold">Contractor Availability</p>
+            <div class="q-gutter-sm">
+              <q-radio
+                left-label
+                v-model="contractor_availability"
+                color="cyan"
+                val="Less then 20hour/Week"
+                label="Less then 20hour/Week"
+              />
+              <q-radio
+                left-label
+                v-model="contractor_availability"
+                color="cyan"
+                val="20-30 hours/Week"
+                label="20-30 hours/Week"
+              />
+              <q-radio
+                left-label
+                v-model="contractor_availability"
+                color="More Than"
+                val="More than 30 hours/Week"
+                label="More than 30 hours/Week"
+              />
+            </div>
+          </div>
+          <div class="q-pa-md">
+            <p class="text-weight-bold">Choose project visibility*</p>
+            <div class="q-gutter-sm">
+              <q-radio
+                left-label
+                v-model="project_visibility"
+                color="cyan"
+                val="Only on the platform"
+                label="Only on the platform"
+              />
+              <q-radio
+                left-label
+                v-model="project_visibility"
+                color="cyan"
+                val="Indexable by search engines"
+                label="Indexable by search engines"
+              />
+              <q-radio
+                left-label
+                v-model="project_visibility"
+                color="cyan"
+                val="Available only to invited contractors"
+                label="Available only to invited contractors"
+              />
+            </div>
+          </div>
+          <div class="q-pa-md">
+            <p class="text-weight-bold">Choose preferred type of contractor</p>
+            <div class="q-gutter-sm">
+              <q-radio
+                left-label
+                v-model="profile_type"
+                val="Freelancer"
+                label="Freelancer"
+                color="cyan"
+              />
+              <q-radio
+                left-label
+                v-model="profile_type"
+                color="cyan"
+                val="Agency"
+                label="Agency"
+              />
+            </div>
+          </div>
+          <p class="q-pa-md">Fields marked with "*" are mandatory</p>
+          <div class="flex justify-center">
+            <q-btn
+              unelevated
+              size="10px"
+              rounded
+              style="width: 100px"
+              color="grey-6"
+              label="Back"
+              to="/01-remote-work-Client-Post-Proj"
+              class="q-mr-md"
             />
-            <q-radio
-              left-label
-              v-model="shape"
+            <q-btn
+              unelevated
+              size="10px"
+              type="submit"
+              style="width: 100px"
+              rounded
               color="cyan"
-              val="rectangle"
-              label="Middle"
-            />
-            <q-radio
-              left-label
-              v-model="shape"
-              color="cyan"
-              val="rectangle"
-              label="Senior"
+              label="Next"
             />
           </div>
-        </div>
-        <div class="q-pa-md">
-          <p class="text-weight-bold">Contractor Availability</p>
-          <div class="q-gutter-sm">
-            <q-radio
-              left-label
-              v-model="shape"
-              color="cyan"
-              val="line"
-              label="Less then 20hour/Week"
-            />
-            <q-radio
-              left-label
-              v-model="shape"
-              color="cyan"
-              val="rectangle"
-              label="20-30 hours/Week"
-            />
-            <q-radio
-              left-label
-              v-model="shape"
-              color="cyan"
-              val="rectangle"
-              label="More than 30 hours/Week"
-            />
-          </div>
-        </div>
-        <div class="q-pa-md">
-          <p class="text-weight-bold">Choose project visibility*</p>
-          <div class="q-gutter-sm">
-            <q-radio
-              left-label
-              v-model="shape"
-              color="cyan"
-              val="line"
-              label="Only on the platform"
-            />
-            <q-radio
-              left-label
-              v-model="shape"
-              color="cyan"
-              val="rectangle"
-              label="Indexable by search engines"
-            />
-            <q-radio
-              left-label
-              v-model="shape"
-              color="cyan"
-              val="rectangle"
-              label="Available only to invited contractors"
-            />
-          </div>
-        </div>
-        <div class="q-pa-md">
-          <p class="text-weight-bold">Choose preferred type of contractor</p>
-          <div class="q-gutter-sm">
-            <q-radio
-              left-label
-              v-model="shape"
-              val="line"
-              label="Freelancer"
-              color="cyan"
-            />
-            <q-radio
-              left-label
-              v-model="shape"
-              color="cyan"
-              val="rectangle"
-              label="Agency"
-            />
-          </div>
-        </div>
-        <p class="q-pa-md">Fields marked with "*" are mandatory</p>
-        <div class="flex justify-center">
-          <q-btn
-            unelevated
-            size="10px"
-            rounded
-            style="width: 100px"
-            color="grey-6"
-            label="Back"
-            to="/01-remote-work-Client-Post-Proj"
-            class="q-mr-md"
-          />
-          <q-btn
-            unelevated
-            size="10px"
-            style="width: 100px"
-            rounded
-            to="/03-remote-work-Client-Post-Proj"
-            color="cyan"
-            label="Next"
-          />
-        </div>
+        </q-form>
       </div>
     </div>
   </div>
 </template>
 <script>
 import { defineComponent, ref } from "vue";
-import TimeLine from "components/Timeline.vue";
+import axios from "axios";
+// import TimeLine from "components/Timeline.vue";
 
 export default defineComponent({
   // components: {
@@ -393,8 +401,15 @@ export default defineComponent({
     const submitResult = ref([]);
 
     return {
-      shape: ref("line"),
       submitResult,
+      contractors_no: ref("1"),
+      skill_ids: ref(null),
+      questions: "",
+      exp_level: ref("Junior"),
+      contractor_availability: ref("Less then 20hour/Week"),
+      project_visibility: ref("Available only to invited contractors"),
+      profile_type: ref("Agency"),
+
       lorem:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
 
@@ -412,6 +427,41 @@ export default defineComponent({
         submitResult.value = data;
       },
     };
+  },
+  methods: {
+    post() {
+      const post = new FormData();
+      post.append("profile_type", this.profile_type);
+      post.append("contractors_no", this.contractors_no);
+      post.append("questions", this.questions);
+      post.append("skill_ids", this.skill_ids);
+      post.append("exp_level", this.exp_level);
+      post.append("contractor_availability", this.contractor_availability);
+      post.append("project_visibility", this.project_visibility);
+
+      const options = {
+        method: "POST",
+        url: "https://rwapi.zupria.com/api/post",
+        data: post,
+        headers: {
+          Authorization:
+            "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcndhcGkuenVwcmlhLmNvbVwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY1MDY2NjAyMSwiZXhwIjoxNjgyMjAyMDIxLCJuYmYiOjE2NTA2NjYwMjEsImp0aSI6InVkbmUyZ3NsRHJ5VjY5Z3UiLCJzdWIiOjksInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.4_rBRo4Yo7rQ58dKVNdbUEtp6_EKjF79744-cfrUQWM",
+        },
+      };
+      axios
+        .request(options)
+        .then((response) => {
+          console.log(response.data);
+          this.user = response.data;
+          this.id = response.data.data.id;
+          this.token = response.data.token;
+          localStorage.setItem("token", response.data.token);
+          this.$router.push("/03-remote-work-Client-Post-Proj");
+        })
+        .catch(function (error) {
+          console.error(error);
+        });
+    },
   },
 });
 </script>

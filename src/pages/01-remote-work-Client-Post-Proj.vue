@@ -251,7 +251,7 @@
                   </q-item>
 
                   <q-item clickable v-ripple>
-                    <q-item-section v-model="project_catagory"
+                    <q-item-section v-model="project_catagory" val="1"
                       >Cerate Website</q-item-section
                     >
                   </q-item>
@@ -372,6 +372,7 @@ export default defineComponent({
       project_catagory: ref(null),
       title: ref(null),
       description: ref(null),
+      skill_ids: "",
       attachments: ref(null),
 
       onSubmit(evt) {
@@ -396,10 +397,11 @@ export default defineComponent({
       post.append("title", this.title);
       post.append("description", this.description);
       post.append("attachments", this.attachments);
+      post.append("project_catagory", this.project_catagory);
 
       const options = {
         method: "POST",
-        url: "https://rwapi.zupria.com/api/user/post",
+        url: "https://rwapi.zupria.com/api/post",
         data: post,
         headers: {
           Authorization:

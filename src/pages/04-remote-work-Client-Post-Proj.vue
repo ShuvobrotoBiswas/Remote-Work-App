@@ -138,79 +138,90 @@
             label="Select all"
           />
         </div>
+        <q-form @submit.prevent="post">
+          <div class="flex">
+            <q-item clickable v-ripple>
+              <q-item-section side>
+                <q-avatar circle size="48px">
+                  <img src="~assets/Avator18.png" />
+                </q-avatar>
+              </q-item-section>
+              <q-item-section>
+                <q-item-label>Gill Dobrica</q-item-label>
+                <q-item-label caption>Senior Bacend Developer</q-item-label>
+              </q-item-section>
+              <q-item-section side>
+                <q-checkbox
+                  v-model="invitation_profile_ids"
+                  color="cyan"
+                />
+              </q-item-section>
+            </q-item>
+            <q-item clickable v-ripple>
+              <q-item-section side>
+                <q-avatar circle size="48px">
+                  <img src="~assets/Avator10.png" />
+                </q-avatar>
+              </q-item-section>
+              <q-item-section>
+                <q-item-label>Vioroca Dancila</q-item-label>
+                <q-item-label caption>Middle Bacend Developer</q-item-label>
+              </q-item-section>
+              <q-item-section side>
+                <q-checkbox
+                  v-model="invitation_profile_ids"
+                  color="cyan"
+                />
+              </q-item-section>
+            </q-item>
+            <q-item clickable v-ripple>
+              <q-item-section side>
+                <q-avatar circle size="48px">
+                  <img src="~assets/Avator18.png" />
+                </q-avatar>
+              </q-item-section>
+              <q-item-section>
+                <q-item-label>Gabriel Cotabita</q-item-label>
+                <q-item-label caption>Java Developer</q-item-label>
+              </q-item-section>
+              <q-item-section side>
+                <q-checkbox
+                  v-model="invitation_profile_ids"
+                  color="cyan"
+                />
+              </q-item-section>
+            </q-item>
+          </div>
+          <div class="flex q-pa-md justify-center">
+            <q-btn
+              unelevated
+              size="10px"
+              rounded
+              style="width: 100px"
+              color="grey-6"
+              label="Back"
+              to="/03-remote-work-Client-Post-Proj"
+              class="q-mr-md"
+            />
 
-        <div class="flex">
-          <q-item clickable v-ripple>
-            <q-item-section side>
-              <q-avatar circle size="48px">
-                <img src="~assets/Avator18.png" />
-              </q-avatar>
-            </q-item-section>
-            <q-item-section>
-              <q-item-label>Gill Dobrica</q-item-label>
-              <q-item-label caption>Senior Bacend Developer</q-item-label>
-            </q-item-section>
-            <q-item-section side>
-              <q-checkbox v-model="val" color="cyan" />
-            </q-item-section>
-          </q-item>
-          <q-item clickable v-ripple>
-            <q-item-section side>
-              <q-avatar circle size="48px">
-                <img src="~assets/Avator10.png" />
-              </q-avatar>
-            </q-item-section>
-            <q-item-section>
-              <q-item-label>Vioroca Dancila</q-item-label>
-              <q-item-label caption>Middle Bacend Developer</q-item-label>
-            </q-item-section>
-            <q-item-section side>
-              <q-checkbox v-model="val" color="cyan" />
-            </q-item-section>
-          </q-item>
-          <q-item clickable v-ripple>
-            <q-item-section side>
-              <q-avatar circle size="48px">
-                <img src="~assets/Avator18.png" />
-              </q-avatar>
-            </q-item-section>
-            <q-item-section>
-              <q-item-label>Gabriel Cotabita</q-item-label>
-              <q-item-label caption>Java Developer</q-item-label>
-            </q-item-section>
-            <q-item-section side>
-              <q-checkbox v-model="val" color="cyan" />
-            </q-item-section>
-          </q-item>
-        </div>
+            <q-btn
+              unelevated
+              style="width: 100px"
+              size="10px"
+              rounded
+              type="submit"
+              color="cyan"
+              label="Next"
+            />
+          </div>
+        </q-form>
       </div>
-    </div>
-    <div class="flex q-pa-md justify-center">
-      <q-btn
-        unelevated
-        size="10px"
-        rounded
-        style="width: 100px"
-        color="grey-6"
-        label="Back"
-        to="/03-remote-work-Client-Post-Proj"
-        class="q-mr-md"
-      />
-
-      <q-btn
-        unelevated
-        style="width: 100px"
-        size="10px"
-        to="/05-remote-work-Client-Post-Proj"
-        rounded
-        color="cyan"
-        label="Next"
-      />
     </div>
   </div>
 </template>
 <script>
 import { defineComponent, ref } from "vue";
+import axios from "axios";
 // import TimeLine from "components/Timeline.vue";
 
 export default defineComponent({
@@ -226,6 +237,7 @@ export default defineComponent({
       submitResult,
       text: ref("Gil Dobrica"),
       noData: ref("null Data"),
+      invitation_profile_ids: ref("id"),
 
       onSubmit(evt) {
         const formData = new FormData(evt.target);
@@ -241,6 +253,35 @@ export default defineComponent({
         submitResult.value = data;
       },
     };
+  },
+  methods: {
+    post() {
+      const post = new FormData();
+      post.append("invitation_profile_ids", this.invitation_profile_ids);
+
+      const options = {
+        method: "POST",
+        url: "https://rwapi.zupria.com/api/post",
+        data: post,
+        headers: {
+          Authorization:
+            "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcndhcGkuenVwcmlhLmNvbVwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY1MDY2NjAyMSwiZXhwIjoxNjgyMjAyMDIxLCJuYmYiOjE2NTA2NjYwMjEsImp0aSI6InVkbmUyZ3NsRHJ5VjY5Z3UiLCJzdWIiOjksInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.4_rBRo4Yo7rQ58dKVNdbUEtp6_EKjF79744-cfrUQWM",
+        },
+      };
+      axios
+        .request(options)
+        .then((response) => {
+          console.log(response.data);
+          this.user = response.data;
+          this.id = response.data.data.id;
+          this.token = response.data.token;
+          localStorage.setItem("token", response.data.token);
+          this.$router.push("/05-remote-work-Client-Post-Proj");
+        })
+        .catch(function (error) {
+          console.error(error);
+        });
+    },
   },
 });
 </script>
