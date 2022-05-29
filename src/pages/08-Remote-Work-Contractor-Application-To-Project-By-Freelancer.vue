@@ -328,6 +328,7 @@
                 <q-btn
                   size="8px"
                   rounded
+                  to="09-REMOTE-WORK-CLIENT_LIST-OF-APPLICATION-TO-PROJECT-BY-FREELANCER"
                   color="black"
                   label="Send"
                   class="text-white text-h7"

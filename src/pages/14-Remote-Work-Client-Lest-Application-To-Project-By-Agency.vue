@@ -655,7 +655,7 @@
                     <div class="text-h7 flex-center row">
                       <span>Verified</span>
                     </div>
-                      <div class="text-h7 flex-center row">
+                    <div class="text-h7 flex-center row">
                       <q-btn
                         round
                         size="8px"
@@ -759,7 +759,7 @@
 
     <!-- Main Footer -->
     <div class="row flex-center q-pa-md">
-      <q-btn size="8px" rounded color="black" label="show more info" />
+      <q-btn size="8px" rounded color="black" to="15-REMOTE-WORK-CLIENT-MILESTONES-LIST-FOR-AGENCY" label="show more info" />
     </div>
   </div>
 </template>

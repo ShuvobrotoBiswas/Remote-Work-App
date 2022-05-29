@@ -252,6 +252,7 @@
                   size="8px"
                   rounded
                   color="black"
+                  to="08-REMOTE-WORK-CONTRACTOR-APPLICATION-TO-PROJECT-BY-FREELANCER"
                   label="Apply to project"
                   class="text-white text-h7"
                 ></q-btn>

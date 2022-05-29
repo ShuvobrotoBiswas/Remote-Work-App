@@ -318,6 +318,7 @@
         rounded
         style="width: 90px"
         size="10px"
+        to="12-REMOTE-WORK-CLIENT-FEEDBACK-TO-FREELANCER"
         label="hire"
         unelevated
         color="black"

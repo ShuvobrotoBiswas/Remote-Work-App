@@ -103,7 +103,7 @@
                       ></q-img>
                     </div>
                   </div>
-                  
+
                 </div>
                 <div class="row">
                   <q-tabs v-model="tab" class="text-teal">
@@ -262,6 +262,7 @@
         style="width: 90px"
         size="10px"
         label="back"
+        to="10-REMOTE-WORK-CLIENT-MILESTONES-LIST-FOR-FREELANCER"
         unelevated
         color="black"
         class="text-white q-mr-lg"

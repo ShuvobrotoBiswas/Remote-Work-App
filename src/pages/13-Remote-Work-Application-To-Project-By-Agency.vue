@@ -561,6 +561,7 @@
                   <div class="col">
                     <q-btn
                       style="width: 100px"
+                      to="07-REMOTE-WORK-FREELANCER-PROJECT-DISPLAY"
                       size="8px"
                       rounded
                       color="grey"
@@ -573,6 +574,7 @@
                     <q-btn
                       size="8px"
                       rounded
+                      to="14-REMOTE-WORK-CLIENT-LEST-APPLICATION-TO-PROJECT-BY-AGENCY"
                       color="black"
                       label="Send"
                       class="text-white text-h7"

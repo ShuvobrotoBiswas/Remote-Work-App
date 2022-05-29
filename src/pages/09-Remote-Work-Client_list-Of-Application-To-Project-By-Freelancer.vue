@@ -340,6 +340,7 @@
                       <q-btn
                         size="8px"
                         rounded
+                        to="10-REMOTE-WORK-CLIENT-MILESTONES-LIST-FOR-FREELANCER"
                         color="black"
                         label="Hire"
                         class="text-white text-h7"
