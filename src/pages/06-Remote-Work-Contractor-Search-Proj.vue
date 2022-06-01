@@ -101,27 +101,27 @@
                       >
                         <q-card class="bg-grey-2">
                           <q-card-section>
-                            <q-input v-model="search" outlined type="search">
+                            <q-input v-model="search_text" outlined type="search">
                               <template v-slot:append>
                                 <q-icon name="search" />
                                 <q-menu>
                                   <q-list style="min-width: 250px">
                                     <q-item clickable v-close-popup>
                                       <q-item-section
-                                        >Gill dobrica</q-item-section
+                                        >{{}}</q-item-section
                                       >
                                     </q-item>
                                     <q-item clickable v-close-popup>
                                       <q-item-section
-                                        >Gian Doodle</q-item-section
+                                        >{{}}</q-item-section
                                       > </q-item
                                     ><q-item clickable v-close-popup>
                                       <q-item-section
-                                        >Gironde Xavier</q-item-section
+                                        >{{}}</q-item-section
                                       > </q-item
                                     ><q-item clickable v-close-popup>
                                       <q-item-section
-                                        >Gogu Radulescu</q-item-section
+                                        >{{}}</q-item-section
                                       >
                                     </q-item>
                                   </q-list>
@@ -156,13 +156,13 @@
                                 class="q-mr-sm"
                                 type="number"
                                 maxlength="10"
-                                v-model="hourly_min_rate"
+                                v-model="hourly_min_price"
                               />
                               <input
                                 style="max-width: 80px; min-height: 50px"
                                 type="number"
                                 maxlength="10"
-                                v-model="hourly_max_rate"
+                                v-model="hourly_max_price"
                               />
                               <q-checkbox
                                 class="text-bold"
@@ -175,39 +175,39 @@
                                 <q-checkbox
                                   color="cyan"
                                   val="50"
-                                  v-model="maximum_rate"
+                                  v-model="weekly_max_price"
                                   label="Less than €50"
                                 ></q-checkbox>
                                 <q-checkbox
                                   color="cyan"
                                   val="500"
-                                  v-model="maximum_rate"
+                                  v-model="weekly_max_price"
                                   label="€50 - €500"
                                 >
                                 </q-checkbox>
                                 <q-checkbox
                                   val="1000"
                                   color="cyan"
-                                  v-model="maximum_rate"
+                                  v-model="weekly_max_price"
                                   label="€500 - €1000"
                                 ></q-checkbox>
                                 <q-checkbox
                                   color="cyan"
-                                  val="maximum_rate"
-                                  v-model="maximum_rate"
+                                  val="weekly_max_price"
+                                  v-model="weekly_max_price"
                                 ></q-checkbox>
                                 <input
                                   style="max-width: 80px; min-height: 50px"
                                   class="q-mr-sm"
                                   type="number"
                                   maxlength="10"
-                                  v-model="fixed_min_rate"
+                                  v-model="weekly_min_price"
                                 />
                                 <input
                                   style="max-width: 80px; min-height: 50px"
                                   type="number"
                                   maxlength="10"
-                                  v-model="fixed_max_rate"
+                                  v-model="weekly_max_price"
                                 />
                               </div>
                             </div>
@@ -226,25 +226,25 @@
                             <q-checkbox
                               color="cyan"
                               val="2"
-                              v-model="project_duration"
+                              v-model="project_duration_max_weeks"
                               label="Max. 2 weeks"
                             ></q-checkbox>
                             <q-checkbox
                               color="cyan"
                               val="4"
-                              v-model="project_duration"
+                              v-model="project_duration_max_weeks"
                               label="Max. 1 month"
                             ></q-checkbox>
                             <q-checkbox
                               color="cyan"
                               val="12"
-                              v-model="project_duration"
+                              v-model="project_duration_max_weeks"
                               label="Max. 3 month"
                             ></q-checkbox>
                             <q-checkbox
                               color="cyan"
                               val="48"
-                              v-model="project_duration"
+                              v-model="project_duration_max_weeks"
                               label="More than 3 month"
                             ></q-checkbox>
                           </q-card-section>
@@ -305,7 +305,7 @@
                               <q-checkbox
                                 color="cyan"
                                 val="20"
-                                v-model="contractor_availability"
+                                v-model="min_hrs_per_week"
                                 label="20 h/w"
                               ></q-checkbox>
                             </div>
@@ -313,7 +313,7 @@
                               <q-checkbox
                                 color="cyan"
                                 val="20/30"
-                                v-model="contractor_availability"
+                                v-model="min_hrs_per_week"
                                 label="20 / 30 h/w"
                               ></q-checkbox>
                             </div>
@@ -321,7 +321,7 @@
                               <q-checkbox
                                 color="cyan"
                                 val="30"
-                                v-model="contractor_availability"
+                                v-model="min_hrs_per_week"
                                 label="More than 30 h/w"
                               ></q-checkbox>
                             </div>
@@ -337,7 +337,7 @@
                       >
                         <q-card class="bg-grey-2">
                           <q-card-section>
-                            <q-input v-model="search" outlined type="search">
+                            <q-input v-model="client_country_ids" outlined type="search">
                               <template v-slot:append>
                                 <q-icon name="search" />
                                 <q-menu>
@@ -376,7 +376,7 @@
                         <q-card class="bg-grey-2">
                           <q-card-section>
                             <q-rating
-                              v-model="client_rating"
+                              v-model="min_client_rating"
                               size="2em"
                               :max="5"
                               color="cyan"
@@ -392,29 +392,16 @@
                       >
                         <q-card class="bg-grey-2">
                           <q-card-section>
-                            <q-input v-model="search" outlined type="search">
+                            <q-input
+                              v-model="post_types"
+                              outlined
+                              type="search"
+                            >
                               <template v-slot:append>
                                 <q-icon name="search" />
                                 <q-menu>
                                   <q-list style="min-width: 250px">
-                                    <q-item clickable v-close-popup>
-                                      <q-item-section
-                                        >Gill dobrica</q-item-section
-                                      >
-                                    </q-item>
-                                    <q-item clickable v-close-popup>
-                                      <q-item-section
-                                        >Gian Doodle</q-item-section
-                                      > </q-item
-                                    ><q-item clickable v-close-popup>
-                                      <q-item-section
-                                        >Gironde Xavier</q-item-section
-                                      > </q-item
-                                    ><q-item clickable v-close-popup>
-                                      <q-item-section
-                                        >Gogu Radulescu</q-item-section
-                                      >
-                                    </q-item>
+                                    {{}}
                                   </q-list>
                                 </q-menu>
                               </template>
@@ -430,29 +417,12 @@
                       >
                         <q-card class="bg-grey-2">
                           <q-card-section>
-                            <q-input v-model="search" outlined type="search">
+                            <q-input v-model="skill_ids" outlined type="skill_ids">
                               <template v-slot:append>
                                 <q-icon name="search" />
                                 <q-menu>
                                   <q-list style="min-width: 250px">
-                                    <q-item clickable v-close-popup>
-                                      <q-item-section
-                                        >Gill dobrica</q-item-section
-                                      >
-                                    </q-item>
-                                    <q-item clickable v-close-popup>
-                                      <q-item-section
-                                        >Gian Doodle</q-item-section
-                                      > </q-item
-                                    ><q-item clickable v-close-popup>
-                                      <q-item-section
-                                        >Gironde Xavier</q-item-section
-                                      > </q-item
-                                    ><q-item clickable v-close-popup>
-                                      <q-item-section
-                                        >Gogu Radulescu</q-item-section
-                                      >
-                                    </q-item>
+                                    {{}}
                                   </q-list>
                                 </q-menu>
                               </template>
@@ -487,6 +457,23 @@
                           </q-card-section>
                         </q-card>
                       </q-expansion-item>
+                      <q-expansion-item
+                        dense
+                        dense-toggle
+                        expand-separator
+                        label="Sub Service IDs"
+                      >
+                        <q-card class="bg-grey-2">
+                          <q-card-section>
+                            <q-input
+                              v-model="sub_service_ids"
+                              outlined
+                              type="search"
+                            >
+                            </q-input>
+                          </q-card-section>
+                        </q-card>
+                      </q-expansion-item>
                     </q-list>
                   </div>
                 </q-card>
@@ -498,12 +485,18 @@
                   <q-separator color="light-blue-3" />
                   <div class="text-h6 q-py-md text-center">
                     <q-input
-                      v-model="search"
+                      v-model="search_text"
                       outlined
                       style="width: 400px"
                       type="search"
                     >
-                      <q-btn round size="15px" flat type="submit" icon="search"></q-btn>
+                      <q-btn
+                        round
+                        size="15px"
+                        flat
+                        type="submit"
+                        icon="search"
+                      ></q-btn>
                       <!-- <template v-slot:append>
                         <q-icon name="search" />
                         <q-menu>
@@ -614,21 +607,52 @@
                     <div class="col-">24 Project found</div>
                     <div class="col"></div>
                     <div class="col-">
-                      <q-expansion-item
+                      <q-select
+                        borderless
+                        v-model="sort_by"
+                        style="width:100px"
+                        :options="options"
+                        label="Sort By"
+                      />
+                      <!-- <q-expansion-item
                         dense
                         dense-toggle
                         expand-separator
                         label="Sort by"
                       >
-                        <q-card class="bg-grey-2">
-                          <q-card-section>
+                        <q-card class="bg-grey-2"> -->
+                      <!-- <q-card-section>
                             <div class="row">relevence</div>
                             <div class="row">Newest</div>
                             <div class="row">Other</div>
                             <div class="row">Etc.</div>
-                          </q-card-section>
-                        </q-card>
-                      </q-expansion-item>
+                          </q-card-section> -->
+
+                      <!-- <q-list
+                            v-model="sort_by"
+                            dense
+                            bordered
+                            padding
+                            class="borders"
+                          >
+                            <q-item clickable val="Relevence" v-ripple>
+                              <q-item-section> Relevence </q-item-section>
+                            </q-item>
+
+                            <q-item val="Newest" clickable v-ripple>
+                              <q-item-section> Newest </q-item-section>
+                            </q-item>
+
+                            <q-item val="Other" clickable v-ripple>
+                              <q-item-section> Other </q-item-section>
+                            </q-item>
+                            <q-item val="Etc." clickable v-ripple>
+                              <q-item-section> Etc. </q-item-section>
+                            </q-item>
+                          </q-list> -->
+
+                      <!-- </q-card>
+                      </q-expansion-item> -->
                     </div>
                   </div>
                   <q-separator color="light-blue-3" />
@@ -918,38 +942,47 @@ export default defineComponent({
         // console.log('Clicked on an Item')
       },
       price_type: ref(["Hourly"]),
-      minimum_rate: "",
-      maximum_rate: ref(["1000"]),
-      hourly_min_rate: "",
-      hourly_max_rate: "",
-      fixed_min_rate: "",
-      fixed_max_rate: "",
-      project_duration: ref(["48", "4"]),
+      weekly_max_price: ref(["1000"]),
+      hourly_min_price: "",
+      hourly_max_price: "",
+      weekly_min_price: "",
+      project_duration_max_weeks: ref(["48", "4"]),
       project_type: ref(["On Going Work"]),
-      contractor_availability: ref(["20"]),
-      client_rating: ref(4),
-      search: "",
-      text:"",
+      min_hrs_per_week: ref(["20"]),
+      min_client_rating: ref(4),
+      search_text: ref(""),
+      text: "",
+      post_types: ref(["ongoing_job"]),
+      sort_by: ref("Newest"),
+      options: ["newest", "priceAsc", "priceDesc", "relevance"],
+      sub_service_ids: ref([]),
+      skill_ids: ref(["1" , "2", "3"]),
+      client_country_ids: ref([""]),
     };
   },
   methods: {
     postSearch() {
       const post = new FormData();
       post.append("price_type", this.price_type);
-      post.append("minimum_rate", this.minimum_rate);
-      post.append("maximum_rate", this.maximum_rate);
-      post.append("hourly_min_rate", this.hourly_min_rate);
-      post.append("hourly_max_rate", this.hourly_max_rate);
-      post.append("fixed_min_rate", this.fixed_min_rate);
+      post.append("weekly_max_price", this.weekly_max_price);
+      post.append("hourly_min_price", this.hourly_min_price);
+      post.append("hourly_max_price", this.hourly_max_price);
+      post.append("weekly_min_price", this.weekly_min_price);
+      post.append("search_text", this.search_text);
 
-      post.append("project_duration", this.project_duration);
+      post.append("project_duration_max_weeks", this.project_duration_max_weeks);
       post.append("project_type", this.project_type);
-      post.append("contractor_availability", this.contractor_availability);
-      post.append("client_rating", this.client_rating);
+      post.append("min_hrs_per_week", this.min_hrs_per_week);
+      post.append("min_client_rating", this.min_client_rating);
+      post.append("post_types", this.post_types);
+      post.append("sort_by", this.sort_by);
+      post.append("sub_service_ids", this.sub_service_ids);
+      post.append("skill_ids", this.skill_ids);
+      post.append("client_country_ids", this.client_country_ids);
 
       const options = {
         method: "POST",
-        url: "https://rwapi.zupria.com/api/post",
+        url: "https://rwapi.zupria.com/api/post/search",
         data: post,
         headers: {
           Authorization:
