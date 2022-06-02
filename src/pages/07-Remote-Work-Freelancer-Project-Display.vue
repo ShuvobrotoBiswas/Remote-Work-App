@@ -82,59 +82,61 @@
     <q-separator />
 
     <!-- Card 1 Div -->
-    <div class="row flex-center items-start">
+    <div v-for="post in posts" :key="post.id"  class="row flex-center items-start">
       <div style="max-width: 750px">
         <div class="row">
           <q-card-section>
             <div class="text-h5 text-bold q-py-md text-left">
-              Logo design for Insurance Agency
+              {{ post.title }}
+              <!-- <li v-for="post in posts" :key="post.id" > {{post.title}} </li> -->
+              <!-- <div v-for="post in posts" :key="post.id"> Hello {{post.title}} </div> -->
             </div>
             <q-separator />
             <div class="my-font row text-left">Posted 1 hr ago</div>
             <div class="row text-7 q-py-md text-left">
-              {{ text }}
+              {{ post.description }}
             </div>
             <q-separator />
             <div class="row q-py-md">
               <div class="col">
                 <div class="text-h7 text-bold">Category job Project</div>
-                <div class="text-h7">Branding & logo Design</div>
+                <div class="text-h7">{{post.post_type}}</div>
               </div>
               <div class="col">
                 <div class="text-h7 text-bold">Project type</div>
-                <div class="text-h7">Well Defined Project</div>
+                <div class="text-h7">{{post.post_type_text}}</div>
               </div>
               <div class="col">
                 <div class="text-h7 text-bold">Payment</div>
-                <div class="text-h7">Fixed price - €500</div>
+                <div class="text-h7">{{post.price_type}} price - €{{post.budget}}</div>
               </div>
             </div>
             <div class="row">
               <div class="col">
                 <div class="text-h7 text-bold">Duration</div>
-                <div class="text-h7">Max. 2 weeks</div>
+                <div class="text-h7">Max. {{post.project_duration_weeks}} weeks</div>
               </div>
               <div class="col">
                 <div class="text-h7 text-bold">Availability in hours</div>
-                <div class="text-h7">20 h/week</div>
+                <div class="text-h7">{{post.max_hrs_per_week}} h/week</div>
               </div>
               <div class="col">
                 <div class="text-h7 text-bold">Level of expertise</div>
-                <div class="text-h7">Middle</div>
+                <div class="text-h7">{{post.exp_level}}</div>
               </div>
             </div>
             <div class="row q-py-md">
               <div class="col">
                 <div class="text-h7 text-bold">Required skills</div>
-                <div class="text-h7">Design</div>
+                <div class="text-h7">{{post.skills}}</div>
               </div>
               <div class="col">
                 <div class="text-h7 text-bold">Type of contractor</div>
-                <div class="text-h7">Freelancer</div>
+                <div class="text-h7">{{post.profile_type}}</div>
               </div>
               <div class="col">
                 <div class="text-h7 text-bold">Contractor availability</div>
-                <div class="text-h7">20-30h/week</div>
+                <div class="text-h7">{{post.min_hrs_per_week}}h/week</div>
               </div>
             </div>
             <div class="q-pa-md">
@@ -233,6 +235,7 @@
                   size="8px"
                   rounded
                   color="grey"
+                  to="06-Remote-Work-Contractor-Search-Proj"
                   label="Back to Search"
                   class="text-white text-h7"
                 ></q-btn>
@@ -267,15 +270,37 @@
 </template>
 
 <script>
-import { defineComponent } from "vue";
 import { ref } from "vue";
-export default defineComponent({
+import axios from "axios";
+export default ({
   // name: "IndexPage",
-  setup() {
+  data() {
     return {
       text: " We have a logo that is about 13 years old and we are looking to update/change our branding, we need a logo that is more up to date and we want to keep the versatillity. We want to go bold/innovative with this change. Previous logo is attached for reference",
       ratingModel: ref(2),
+      posts:[],
+      title:"",
     };
+  },
+  // SHOW
+  created() {
+    const options = {
+      method: "GET",
+      url: "https://rwapi.zupria.com/api/post/1",
+      headers: {
+        Authorization:
+          "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcndhcGkuenVwcmlhLmNvbVwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY1MDY2NTQ3NCwiZXhwIjoxNjgyMjAxNDc0LCJuYmYiOjE2NTA2NjU0NzQsImp0aSI6ImRaUGlZem9YTXZZS25ITU4iLCJzdWIiOjgsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.m127K5q8Fy_6CxXEWJZyXqb_HJL4U-EUcHmdwmHTytI",
+      },
+    };
+    axios
+      .request(options)
+      .then((response) => {
+        console.log(response.data);
+        this.posts = response.data;
+      })
+      .catch(function (error) {
+        console.error(error);
+      });
   },
 });
 </script>

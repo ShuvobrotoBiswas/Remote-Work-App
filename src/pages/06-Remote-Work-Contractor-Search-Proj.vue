@@ -101,15 +101,17 @@
                       >
                         <q-card class="bg-grey-2">
                           <q-card-section>
-                            <q-input v-model="search_text" outlined type="search">
+                            <q-input
+                              v-model="search_text"
+                              outlined
+                              type="search"
+                            >
                               <template v-slot:append>
                                 <q-icon name="search" />
                                 <q-menu>
                                   <q-list style="min-width: 250px">
                                     <q-item clickable v-close-popup>
-                                      <q-item-section
-                                        >{{}}</q-item-section
-                                      >
+                                      <q-item-section>{{}}</q-item-section>
                                     </q-item>
                                     <q-item clickable v-close-popup>
                                       <q-item-section
@@ -120,9 +122,7 @@
                                         >{{}}</q-item-section
                                       > </q-item
                                     ><q-item clickable v-close-popup>
-                                      <q-item-section
-                                        >{{}}</q-item-section
-                                      >
+                                      <q-item-section>{{}}</q-item-section>
                                     </q-item>
                                   </q-list>
                                 </q-menu>
@@ -337,7 +337,11 @@
                       >
                         <q-card class="bg-grey-2">
                           <q-card-section>
-                            <q-input v-model="client_country_ids" outlined type="search">
+                            <q-input
+                              v-model="client_country_id"
+                              outlined
+                              type="search"
+                            >
                               <template v-slot:append>
                                 <q-icon name="search" />
                                 <q-menu>
@@ -388,12 +392,12 @@
                         dense
                         dense-toggle
                         expand-separator
-                        label="Free search in the job title"
+                        label="Post Type"
                       >
                         <q-card class="bg-grey-2">
                           <q-card-section>
-                            <q-input
-                              v-model="post_types"
+                            <!-- <q-input
+                              v-model="post_type"
                               outlined
                               type="search"
                             >
@@ -405,7 +409,14 @@
                                   </q-list>
                                 </q-menu>
                               </template>
-                            </q-input>
+                            </q-input> -->
+                            <q-select
+                              v-model="post_type"
+                              bordered
+                              :options="options1"
+                              use-chips
+                              stack-label
+                            />
                           </q-card-section>
                         </q-card>
                       </q-expansion-item>
@@ -417,7 +428,11 @@
                       >
                         <q-card class="bg-grey-2">
                           <q-card-section>
-                            <q-input v-model="skill_ids" outlined type="skill_ids">
+                            <q-input
+                              v-model="skill_id"
+                              outlined
+                              type="skill_id"
+                            >
                               <template v-slot:append>
                                 <q-icon name="search" />
                                 <q-menu>
@@ -466,7 +481,7 @@
                         <q-card class="bg-grey-2">
                           <q-card-section>
                             <q-input
-                              v-model="sub_service_ids"
+                              v-model="sub_service_id"
                               outlined
                               type="search"
                             >
@@ -610,7 +625,7 @@
                       <q-select
                         borderless
                         v-model="sort_by"
-                        style="width:100px"
+                        style="width: 100px"
                         :options="options"
                         label="Sort By"
                       />
@@ -946,44 +961,50 @@ export default defineComponent({
       hourly_min_price: "",
       hourly_max_price: "",
       weekly_min_price: "",
-      project_duration_max_weeks: ref(["48", "4"]),
+      project_duration_max_weeks: ref(["4"]),
       project_type: ref(["On Going Work"]),
       min_hrs_per_week: ref(["20"]),
       min_client_rating: ref(4),
       search_text: ref(""),
       text: "",
-      post_types: ref(["ongoing_job"]),
-      sort_by: ref("Newest"),
+      // post_type: ref([]),
+      // post_type[]="ongoingJob",
+      sort_by: ref("newest"),
       options: ["newest", "priceAsc", "priceDesc", "relevance"],
-      sub_service_ids: ref([]),
-      skill_ids: ref(["1" , "2", "3"]),
-      client_country_ids: ref([""]),
+      skill_id: ref(["1"]),
+      client_country_id: ref("2"),
+      sub_service_id: ref("1"),
+      post_type: ref("project"),
+      options1: ["project", "enquiry", "ongoingJob", "contest"],
     };
   },
   methods: {
     postSearch() {
-      const post = new FormData();
-      post.append("price_type", this.price_type);
-      post.append("weekly_max_price", this.weekly_max_price);
-      post.append("hourly_min_price", this.hourly_min_price);
-      post.append("hourly_max_price", this.hourly_max_price);
-      post.append("weekly_min_price", this.weekly_min_price);
-      post.append("search_text", this.search_text);
+      const search = new FormData();
+      search.append("price_type", this.price_type);
+      search.append("weekly_max_price", this.weekly_max_price);
+      search.append("hourly_min_price", this.hourly_min_price);
+      search.append("hourly_max_price", this.hourly_max_price);
+      search.append("weekly_min_price", this.weekly_min_price);
+      search.append("search_text", this.search_text);
 
-      post.append("project_duration_max_weeks", this.project_duration_max_weeks);
-      post.append("project_type", this.project_type);
-      post.append("min_hrs_per_week", this.min_hrs_per_week);
-      post.append("min_client_rating", this.min_client_rating);
-      post.append("post_types", this.post_types);
-      post.append("sort_by", this.sort_by);
-      post.append("sub_service_ids", this.sub_service_ids);
-      post.append("skill_ids", this.skill_ids);
-      post.append("client_country_ids", this.client_country_ids);
+      search.append(
+        "project_duration_max_weeks",
+        this.project_duration_max_weeks
+      );
+      search.append("project_type", this.project_type);
+      search.append("min_hrs_per_week", this.min_hrs_per_week);
+      search.append("min_client_rating", this.min_client_rating);
+      search.append("post_type", this.post_type);
+      search.append("sort_by", this.sort_by);
+      search.append("sub_service_id", this.sub_service_id);
+      search.append("skill_id", this.skill_id);
+      search.append("client_country_id", this.client_country_id);
 
       const options = {
         method: "POST",
         url: "https://rwapi.zupria.com/api/post/search",
-        data: post,
+        data: search,
         headers: {
           Authorization:
             "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcndhcGkuenVwcmlhLmNvbVwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY1MDY2NjAyMSwiZXhwIjoxNjgyMjAyMDIxLCJuYmYiOjE2NTA2NjYwMjEsImp0aSI6InVkbmUyZ3NsRHJ5VjY5Z3UiLCJzdWIiOjksInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.4_rBRo4Yo7rQ58dKVNdbUEtp6_EKjF79744-cfrUQWM",
