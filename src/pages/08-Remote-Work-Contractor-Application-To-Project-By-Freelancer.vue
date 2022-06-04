@@ -82,103 +82,113 @@
     <q-separator />
 
     <!-- Card 1 Div -->
-    <div class="row flex-center items-start">
-      <div style="max-width: 750px">
-        <div class="q-pa-md">
-          <q-card-section>
-            <div class="text-h5 text-bold q-py-md text-left">
-              Application to project
-            </div>
-            <div class="row text-7 text-left">
-              {{ lorem }}
-            </div>
-            <div class="row q-py-md">
-              <div class="col-4">
-                <div class="text-h7 text-bold">Type the requested Price</div>
-                <div class="text-h7">
-                  <fieldset style="border-radius: 5px">
-                    <legend>Requested Price</legend>
-                    <q-input v-model="price"></q-input>
-                  </fieldset>
+    <q-form @submit.prevent="projectProposal">
+      <div class="row flex-center items-start">
+        <div style="max-width: 750px">
+          <div class="q-pa-md">
+            <q-card-section>
+              <div class="text-h5 text-bold q-py-md text-left">
+                Application to project
+              </div>
+              <div class="row text-7 text-left">
+                {{ lorem }}
+              </div>
+              <div class="row q-py-md">
+                <div class="col-4">
+                  <div class="text-h7 text-bold">Type the requested Price</div>
+                  <div class="text-h7">
+                    <fieldset style="border-radius: 5px">
+                      <legend>Requested Price</legend>
+                      <q-input v-model="price"></q-input>
+                    </fieldset>
+                  </div>
                 </div>
-              </div>
-              <div class="col-3">
-                <div class="text-h7 text-bold"></div>
-                <div class="text-h7"></div>
-              </div>
-              <div class="col-5">
-                <div class="text-h7 text-bold">Type total execution time*</div>
-                <div class="text-h7">
-                  <q-expansion-item
-                    dense
-                    dense-toggle
-                    expand-separator
-                    label="Execution Time"
-                  >
-                    <q-card class="bg-grey-2">
-                      <q-card-section>
-                        <div class="row">2 Weeks</div>
+                <div class="col-3">
+                  <div class="text-h7 text-bold"></div>
+                  <div class="text-h7"></div>
+                </div>
+                <div class="col-5">
+                  <div class="text-h7 text-bold">
+                    Type total execution time*
+                  </div>
+                  <div class="text-h7">
+                    <q-expansion-item
+                      dense
+                      dense-toggle
+                      expand-separator
+                      label="Execution Time"
+                    >
+                      <q-card class="bg-grey-2">
+                        <q-card-section>
+                          <select
+                            v-model="project_execution_weeks"
+                            rounded
+                            multiple
+                            style="width: 150px"
+                          >
+                            <option value="2">2 Weeks</option>
+                            <option value="4">1 Month</option>
+                            <option value="12">3 Month</option>
+                          </select>
+                          <!-- <div class="row">2 Weeks</div>
                         <div class="row">1 Month</div>
-                        <div class="row">3 Month</div>
-                      </q-card-section>
-                    </q-card>
-                  </q-expansion-item>
+                        <div class="row">3 Month</div> -->
+                        </q-card-section>
+                      </q-card>
+                    </q-expansion-item>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <q-separator />
-            <div class="row">
-              <p class="text-bold text-h7">
-                Answer to the question set by client.*
-              </p>
+              <q-separator />
               <div class="row">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua?
-                <q-input
-                  v-model="input1"
-                  outlined
-                  style="width: 550px"
-                ></q-input>
+                <p class="text-bold text-h7">
+                  Answer to the question set by client.*
+                </p>
+                <div class="row">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua?
+                  <q-input
+                    v-model="interview_answers"
+                    outlined
+                    style="width: 550px"
+                  ></q-input>
+                </div>
               </div>
-            </div>
-            <div class="row">
               <div class="row">
-                Ut enim ad minim veniam veniam, quis nostrud exercitation et
-                nisi ut aliquip?
-                <q-input
-                  v-model="input2"
-                  outlined
-                  style="width: 550px"
-                ></q-input>
+                <div class="row">
+                  Ut enim ad minim veniam veniam, quis nostrud exercitation et
+                  nisi ut aliquip?
+                  <q-input
+                    v-model="interview_answers"
+                    outlined
+                    style="width: 550px"
+                  ></q-input>
+                </div>
               </div>
-            </div>
 
-            <q-separator />
+              <q-separator />
 
-            <div class="row q-py-md">
-              <div class="col-4">
-                <div class="text-h7 text-bold">Offer validity*</div>
+              <div class="row q-py-md">
+                <div class="col-4">
+                  <div class="text-h7 text-bold">Offer validity*</div>
                   <div class="q-py-md" style="max-width: 300px">
                     <div class="text-h7">
-                      <fieldset style="border-radius: 5px ; height:82px">
+                      <fieldset style="border-radius: 5px; height: 82px">
                         <legend>Pick a Date</legend>
                         <q-input
-                          style="width: 250px"
-                          v-model="date"
+                          v-model="validity"
                           mask="date"
                           :rules="['date']"
                         >
-                          <!-- {{ date }} -->
                           <template v-slot:append>
                             <q-icon name="event" class="cursor-pointer">
                               <q-popup-proxy
-                                ref="qDateProxy"
                                 cover
                                 transition-show="scale"
                                 transition-hide="scale"
                               >
-                                <q-date v-model="date" range>
+                                <q-date v-model="validity">
                                   <div class="row items-center justify-end">
                                     <q-btn
                                       v-close-popup
@@ -193,152 +203,160 @@
                           </template>
                         </q-input>
                       </fieldset>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="text-h7 text-bold"></div>
+                  <div class="text-h7"></div>
+                </div>
+                <div class="col-5">
+                  <div class="text-h7 text-bold">Type of contractor*</div>
+                  <div class="text-h7">
+                    <div>
+                      <q-option-group
+                        v-model="group"
+                        :options="options"
+                        color="black"
+                        left-label
+                        inline
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="col-3">
-                <div class="text-h7 text-bold"></div>
-                <div class="text-h7"></div>
-              </div>
-              <div class="col-5">
-                <div class="text-h7 text-bold">Type of contractor*</div>
-                <div class="text-h7">
-                  <div >
-                    <q-option-group
-                      v-model="group"
-                      :options="options"
+
+              <div class="my-card row" style="max-width: 1000px">
+                <p class="col-9 text-h7 text-bold">
+                  Select relevent projects from you portfolio*
+                </p>
+                <div
+                  class="row flex-center bid1 text-center"
+                  style="width: 900px"
+                >
+                  <div class="col my-home q-mr-sm">
+                    <q-btn
+                      round
+                      color="grey"
+                      class="flex-center"
+                      icon="arrow_back_ios_new"
+                    />
+                  </div>
+
+                  <div class="col my-home bid2 my-font q-mr-sm my-box1 my-box4">
+                    <q-img
+                      src="~assets/Avator29.png"
+                      class="image1"
+                      style="width: 50px; height: 50px"
+                    >
+                    </q-img>
+                    <div class="q-pa-mg text-center custom-text-me">
+                      LOGO Design
+                    </div>
+                  </div>
+
+                  <div class="col my-home bid2 my-font q-mr-sm my-box1">
+                    <q-img
+                      src="~assets/Avator25.png"
+                      class="image1"
+                      style="width: 40px; height: 40px"
+                    >
+                    </q-img>
+                    <div class="q-pa-mg text-center custom-text-me">
+                      Website Design
+                    </div>
+                  </div>
+
+                  <div class="col my-home bid2 my-font q-mr-sm my-box1 my-box4">
+                    <q-img
+                      src="~assets/Avator30.png "
+                      class="image1"
+                      style="width: 50px; height: 40px"
+                    >
+                    </q-img>
+                    <div class="q-pa-mg text-center custom-text-me">
+                      UX Design
+                    </div>
+                  </div>
+
+                  <div class="col my-home bid2 my-font my-box1 q-mr-sm">
+                    <div class="col">
+                      <q-btn
+                        flat
+                        size="5px"
+                        color="black"
+                        padding="5px"
+                        icon="check_box_outline_blank"
+                      />
+                      <q-btn
+                        flat
+                        size="5px"
+                        color="black"
+                        padding="5px"
+                        icon="check_box_outline_blank"
+                      />
+                    </div>
+                    <div class="col">
+                      <q-btn
+                        flat
+                        size="5px"
+                        color="black"
+                        padding="5px"
+                        icon="check_box_outline_blank"
+                      />
+                      <q-btn
+                        flat
+                        size="5px"
+                        color="black"
+                        padding="5px"
+                        icon="add"
+                      />
+                    </div>
+                    Others
+                  </div>
+
+                  <div class="col-1 my-home q-mr-sm">
+                    <q-btn
+                      round
                       color="black"
-                      left-label
-                      inline
+                      class="flex-center"
+                      icon="arrow_forward_ios"
                     />
                   </div>
                 </div>
               </div>
-            </div>
+              <div class="row q-pa-md my-font">
+                <p>* Fields marked with "*" are mandatory.</p>
+              </div>
+              <!-- Footer Div -->
 
-            <div class="my-card row" style="max-width: 1000px">
-              <p class="col-9 text-h7 text-bold">
-                Select relevent projects from you portfolio*
-              </p>
-              <div class="row flex-center bid1 text-center" style="width: 900px">
-                <div class="col my-home q-mr-sm">
+              <div class="row flex-center">
+                <div class="col-4">
                   <q-btn
-                    round
+                    size="8px"
+                    rounded
                     color="grey"
-                    class="flex-center"
-                    icon="arrow_back_ios_new"
-                  />
-                </div>
-                <div class="col my-home bid2 my-font q-mr-sm my-box1 my-box4">
-                  <q-img
-                    src="~assets/Avator29.png"
-                    class="image1"
-                    style="width: 50px; height: 50px"
-                  >
-                  </q-img>
-                  <div class="q-pa-mg text-center custom-text-me">
-                    LOGO Design
-                  </div>
-                </div>
-                <div class="col my-home bid2 my-font q-mr-sm my-box1">
-                  <q-img
-                    src="~assets/Avator25.png"
-                    class="image1"
-                    style="width: 40px; height: 40px"
-                  >
-                  </q-img>
-                  <div class="q-pa-mg text-center custom-text-me">
-                    Website Design
-                  </div>
-                </div>
-                <div class="col my-home bid2 my-font q-mr-sm my-box1 my-box4">
-                  <q-img
-                    src="~assets/Avator30.png "
-                    class="image1"
-                    style="width: 50px; height: 40px"
-                  >
-                  </q-img>
-                  <div class="q-pa-mg text-center custom-text-me">
-                    UX Design
-                  </div>
-                </div>
-                <div class="col my-home bid2 my-font my-box1 q-mr-sm">
-                  <div class="col">
-                    <q-btn
-                      flat
-                      size="5px"
-                      color="black"
-                      padding="5px"
-                      icon="check_box_outline_blank"
-                    />
-                    <q-btn
-                      flat
-                      size="5px"
-                      color="black"
-                      padding="5px"
-                      icon="check_box_outline_blank"
-                    />
-                  </div>
-                  <div class="col">
-                    <q-btn
-                      flat
-                      size="5px"
-                      color="black"
-                      padding="5px"
-                      icon="check_box_outline_blank"
-                    />
-                    <q-btn
-                      flat
-                      size="5px"
-                      color="black"
-                      padding="5px"
-                      icon="add"
-                    />
-                  </div>
-                  Others
+                    label="Back to Search"
+                    class="text-white text-h7"
+                  ></q-btn>
                 </div>
 
-                <div class="col-1 my-home q-mr-sm">
+                <div class="col-4">
                   <q-btn
-                    round
+                    size="8px"
+                    rounded
+                    type="submit"
                     color="black"
-                    class="flex-center"
-                    icon="arrow_forward_ios"
-                  />
+                    label="Send"
+                    class="text-white text-h7"
+                  ></q-btn>
                 </div>
               </div>
-            </div>
-            <div class="row q-pa-md my-font">
-              <p>* Fields marked with "*" are mandatory.</p>
-            </div>
-            <!-- Footer Div -->
-
-            <div class="row flex-center">
-              <div class="col-4">
-                <q-btn
-                  size="8px"
-                  rounded
-                  color="grey"
-                  label="Back to Search"
-                  class="text-white text-h7"
-                ></q-btn>
-              </div>
-
-              <div class="col-4">
-                <q-btn
-                  size="8px"
-                  rounded
-                  to="09-REMOTE-WORK-CLIENT_LIST-OF-APPLICATION-TO-PROJECT-BY-FREELANCER"
-                  color="black"
-                  label="Send"
-                  class="text-white text-h7"
-                ></q-btn>
-              </div>
-            </div>
-          </q-card-section>
+            </q-card-section>
+          </div>
         </div>
       </div>
-    </div>
+    </q-form>
     <!-- Card 3 div -->
   </div>
 </template>
@@ -346,6 +364,8 @@
 <script>
 import { defineComponent } from "vue";
 import { ref } from "vue";
+import axios from "axios";
+
 export default defineComponent({
   // name: "IndexPage",
   setup() {
@@ -353,21 +373,17 @@ export default defineComponent({
       lorem:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
       text: " We have a logo that is about 13 years old and we are looking to update/change our branding, we need a logo that is more up to date and we want to keep the versatillity. We want to go bold/innovative with this change. Previous logo is attached for reference",
-      checkbox19: ref(true),
-      checkbox20: ref(true),
-      checkbox21: ref(false),
-      checkbox22: ref(false),
-      checkbox23: ref(false),
-      price: ref("500 € |"),
-      input1: ref("Your answer here."),
-      input2: ref("Your answer here."),
-      date: ref("2020/07/08 , 2020/07/17"),
       group: ref("op1"),
+
+      project_execution_weeks: ref(["2"]),
+      price: ref("500"),
+      interview_answers: ref(["Your answer here."]),
+      validity: ref("2019/02/01"),
 
       options: [
         {
           label: "Freelancer",
-          value: "op1",
+          value: [],
         },
         {
           label: "Agency",
@@ -375,6 +391,36 @@ export default defineComponent({
         },
       ],
     };
+  },
+  methods: {
+    projectProposal() {
+      const proposal = new FormData();
+      proposal.append("project_execution_weeks", this.project_execution_weeks);
+      proposal.append("price", this.price);
+      proposal.append("interview_answers", this.interview_answers);
+      proposal.append("validity", this.validity);
+
+      const options = {
+        method: "POST",
+        url: "https://rwapi.zupria.com/api/proposal/project/1",
+        data: proposal,
+        headers: {
+          Authorization:
+            "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcndhcGkuenVwcmlhLmNvbVwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY1MDY2NjAyMSwiZXhwIjoxNjgyMjAyMDIxLCJuYmYiOjE2NTA2NjYwMjEsImp0aSI6InVkbmUyZ3NsRHJ5VjY5Z3UiLCJzdWIiOjksInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.4_rBRo4Yo7rQ58dKVNdbUEtp6_EKjF79744-cfrUQWM",
+        },
+      };
+      axios
+        .request(options)
+        .then((response) => {
+          console.log(response.data);
+          this.user = response.data;
+          this.id = response.data.data.id;
+          this.$router.push("/09-REMOTE-WORK-CLIENT_LIST-OF-APPLICATION-TO-PROJECT-BY-FREELANCER");
+        })
+        .catch(function (error) {
+          console.error(error);
+        });
+    },
   },
 });
 </script>

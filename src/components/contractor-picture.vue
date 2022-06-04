@@ -1,27 +1,38 @@
 <template>
   <div>
     <q-form @submit.prevent="profilePic">
-      <q-img sizes="200px" src="~/assets/Avator1.png"></q-img>
+      <div class="row flex-center">
+        <q-img
+          :src="imageUrl"
+          sizes="180px"
+          style="border-radius: 50%; height: 180px; width: 170px"
+        ></q-img>
+      </div>
       <div class="q-pa-md">
         <q-file
           rounded
-          style="width: 250px"
+          class="bg-grey-3 text-bold"
+          style="width: 250px; border-radius: 30px;"
           outlined
+          type="file"
           v-model="file"
           label="upload new picture"
+          @update:model-value="handleUpload()"
+          ref="fileInput"
         >
-          <template v-slot:append>
-            <q-icon
-              v-if="file !== null"
-              name="close"
-              @click.stop="file = null"
-              class="cursor-pointer"
-            />
-          </template>
         </q-file>
+        <!-- <q-btn
+          @click="$refs.fileInput.click()"
+          style="width: 250px"
+          outline
+          rounded
+          color="grey"
+          label="upload new picture"
+        >
+        </q-btn> -->
       </div>
       <div class="q-pa-md">
-        <q-btn outline style="width: 250px" bottom-slots rounded>
+        <q-btn outline style="width: 250px" type="submit" bottom-slots rounded>
           remove exsting
         </q-btn>
       </div>
@@ -37,21 +48,6 @@
           Link Your Europass CV
         </q-btn>
       </div>
-      <div class="row flex-center">
-        <div flat bordered class="my-card" style="max-width: 800px">
-          <div class="row q-pa-md">
-            <q-btn
-              size="10px"
-              rounded
-              type="submit"
-              color="black"
-              icon="add"
-              label="Add Companies"
-              class="text-white text-h7"
-            ></q-btn>
-          </div>
-        </div>
-      </div>
     </q-form>
   </div>
 </template>
@@ -63,14 +59,21 @@ import axios from "axios";
 export default defineComponent({
   name: "contractor-picture",
   setup() {
+    const file = ref(null);
+    const imageUrl = ref("https://rwapi.zupria.com/api/user/profilePic");
+    const handleUpload = () => {
+      console.log("Initially Uploaded Successful");
+      if (file.value) {
+        imageUrl.value = URL.createObjectURL(file.value);
+      }
+    };
+
     return {
-      name: ref(" "),
-      search: ref(""),
-      phone: ref(""),
-      res_address: ref(""),
-      billing_address: ref(""),
-      file: ref(""),
-      address: "",
+      document,
+      other: true,
+      file,
+      imageUrl,
+      handleUpload,
     };
   },
   methods: {
