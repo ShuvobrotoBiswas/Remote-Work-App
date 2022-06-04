@@ -224,35 +224,7 @@
               <div class="text-bold" style="max-width: 420px">
                 <div class="col text-bold">
                   Skills*
-                  <q-input
-                    style="max-width: 400px"
-                    v-model="search"
-                    outlined
-                    type="search"
-                  >
-                    <template v-slot:append>
-                      <q-icon name="search" />
-                      <q-menu>
-                        <q-list style="min-width: 250px">
-                          <q-item clickable v-close-popup>
-                            <q-item-section class="text-bold"
-                              >Design</q-item-section
-                            >
-                          </q-item>
-                          <q-option-group
-                            :options="options1"
-                            type="checkbox"
-                            v-model="group1"
-                          />
-                          <q-item clickable v-close-popup>
-                            <q-item-section class="text-bold"
-                              >Development</q-item-section
-                            >
-                          </q-item>
-                        </q-list>
-                      </q-menu>
-                    </template>
-                  </q-input>
+                  <skillSearch />
                   <div>
                     <div class="q-py-md">
                       <q-btn
@@ -342,10 +314,11 @@
 import { defineComponent } from "vue";
 import { ref } from "vue";
 import addProject from "components/add-project.vue";
+import skillSearch from "components/skillSearch.vue";
 import axios from "axios";
 
 export default defineComponent({
-  components: { addProject },
+  components: { addProject , skillSearch },
   name: "CreateContractorProfile",
   setup() {
     return {

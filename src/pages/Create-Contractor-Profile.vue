@@ -97,29 +97,8 @@
                 <div class="text-bold q-py-md">
                   Search/Select your Skills & Tools
                 </div>
-                <q-input
-                  v-model="skill_ids"
-                  outlined
-                  style="max-width: 300px"
-                  type="search"
-                >
-                  <template v-slot:append>
-                    <q-icon name="search" />
-                    <q-menu>
-                      <q-list style="min-width: 250px">
-                        <q-item clickable v-close-popup>
-                          <q-item-section>Graphic Tools</q-item-section>
-                        </q-item>
-                        <q-option-group
-                          :options="options"
-                          type="checkbox"
-                          v-model="group"
-                          color="cyan"
-                        />
-                      </q-list>
-                    </q-menu>
-                  </template>
-                </q-input>
+                <skillSearch />
+              
                 <div class="q-py-md">
                   <q-btn
                     size="7px"
@@ -192,8 +171,6 @@
         <CreateContractorProfile />
 
         <!-- Footer Div -->
-
-        
       </div>
     </div>
   </div>
@@ -204,11 +181,17 @@ import { defineComponent } from "vue";
 import contractorPicture from "components/contractor-picture.vue";
 import CreateContractorProfile from "components/create-contractor1-profile.vue";
 import addProject from "components/add-project.vue";
+import skillSearch from "components/skillSearch.vue";
 import { ref } from "vue";
 import axios from "axios";
 
 export default defineComponent({
-  components: { contractorPicture, CreateContractorProfile, addProject },
+  components: {
+    contractorPicture,
+    CreateContractorProfile,
+    addProject,
+    skillSearch,
+  },
   // name: "IndexPage",
   setup() {
     return {

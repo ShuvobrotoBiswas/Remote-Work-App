@@ -63,7 +63,7 @@
                   <q-file borderless v-model="file">
                     <q-img
                       src="~assets/Avator8.png"
-                      style="width: 50px"
+                      style="width: 90px"
                       class="image1"
                     >
                     </q-img>

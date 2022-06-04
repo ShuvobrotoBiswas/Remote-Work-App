@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <q-form @submit.prevent="profile">
+  <div v-for="user in users" :key="user.id">
+    <!-- <q-form @submit.prevent="profile"> -->
       <div class="flex-break"></div>
       <div class="text-h7 text-center">
         Hi Florin, welcome to your dashboard!
@@ -160,7 +160,7 @@
       <!-- Card 2 Div -->
 
       <getAgencyDisplay />
-    </q-form>
+    <!-- </q-form> -->
   </div>
 </template>
 
@@ -174,7 +174,7 @@ export default defineComponent({
   data() {
     return {
       profile: "",
-      user: [],
+      users: [],
       lorem:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     };
@@ -194,7 +194,7 @@ export default defineComponent({
       .request(options)
       .then((response) => {
         console.log(response.data);
-        this.user = response.data;
+        this.users = response.data;
       })
       .catch(function (error) {
         console.error(error);
