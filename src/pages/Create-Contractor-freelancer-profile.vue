@@ -125,28 +125,7 @@
                 <div class="text-bold q-py-md">
                   Search/Select your Skills & Tools
                 </div>
-                <q-input
-                  style="max-width: 300px"
-                  v-model="skill_ids"
-                  outlined
-                  type="search"
-                >
-                  <template v-slot:append>
-                    <q-icon name="search" />
-                    <q-menu>
-                      <q-list style="min-width: 250px">
-                        <q-item clickable v-close-popup>
-                          <q-item-section>Graphic Tools</q-item-section>
-                        </q-item>
-                        <q-option-group
-                          :options="options"
-                          type="checkbox"
-                          v-model="group"
-                        />
-                      </q-list>
-                    </q-menu>
-                  </template>
-                </q-input>
+                <skillSearch />
                 <div class="q-py-md">
                   <q-btn
                     size="7px"
@@ -269,10 +248,11 @@
 <script>
 import { defineComponent } from "vue";
 import freelancerPicture from "components/freelancer-picture.vue";
+import skillSearch from "components/skillSearch.vue";
 import axios from "axios";
 import { ref } from "vue";
 export default defineComponent({
-  components: { freelancerPicture },
+  components: { freelancerPicture , skillSearch},
   setup() {
     return {
       name: ref(""),

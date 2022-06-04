@@ -73,23 +73,22 @@
     <q-separator />
 
     <!-- Card 1 Div -->
-
-    <div class="row flex-center items-start">
-      <div flat bordered class="my-card" style="max-width: 800px">
-        <q-card-section>
-          <div class="text-h6 text-bold text-center">
-            Create your profile (contractor + company)
-          </div>
-        </q-card-section>
-        <q-separator />
-        <div class="q-pa-md">
-          <div class="row">
-            <div class="col-5">
-              <contractorPicture />
+    <q-form @submit.prevent="profile">
+      <div class="row flex-center items-start">
+        <div flat bordered class="my-card" style="max-width: 800px">
+          <q-card-section>
+            <div class="text-h6 text-bold text-center">
+              Create your profile (contractor + company)
             </div>
-            <div class="col-1"></div>
-            <div class="col-6">
-              <q-form @submit.prevent="profile">
+          </q-card-section>
+          <q-separator />
+          <div class="q-pa-md">
+            <div class="row">
+              <div class="col-5">
+                <contractorPicture />
+              </div>
+              <div class="col-1"></div>
+              <div class="col-6">
                 <q-input v-model="name" label="Complete name*" />
                 <q-input v-model="res_address" label="Address*" />
                 <q-input v-model="billing_address" label="Billing address*" />
@@ -98,7 +97,7 @@
                   Search/Select your Skills & Tools
                 </div>
                 <skillSearch />
-              
+
                 <div class="q-py-md">
                   <q-btn
                     size="7px"
@@ -129,50 +128,56 @@
                     >CSS3 ✠</q-btn
                   >
                 </div>
-                <div class="row flex-center">
-                  <div flat bordered class="my-card" style="max-width: 800px">
-                    <div class="row q-pa-md">
-                      <q-btn
-                        size="10px"
-                        rounded
-                        type="submit"
-                        color="black"
-                        icon="add"
-                        label="Add Companies"
-                        class="text-white text-h7"
-                      ></q-btn>
-                    </div>
-                  </div>
-                </div>
-              </q-form>
+                
+              </div>
+              <div class="row">
+                <div class="col"></div>
+                <div class="row"></div>
+                <div class="row"></div>
+                <div class="row"></div>
+                <div class="row"></div>
+                <div class="row"></div>
+                <div class="row"></div>
+                <div class="row"></div>
+                <div class="row"></div>
+              </div>
             </div>
-            <div class="row">
-              <div class="col"></div>
-              <div class="row"></div>
-              <div class="row"></div>
-              <div class="row"></div>
-              <div class="row"></div>
-              <div class="row"></div>
-              <div class="row"></div>
-              <div class="row"></div>
-              <div class="row"></div>
-            </div>
+
+            <q-separator />
           </div>
 
+          <!-- Card 2 Div -->
+
+          <addProject />
           <q-separator />
+
+          <!-- Card 3 div -->
+
+          <CreateContractorProfile />
+
+          <!-- Footer Div -->
+          <div class="row flex-center q-pa-md">
+            <q-btn
+              size="10px"
+              rounded
+              color="black"
+              type="submit"
+              icon="done"
+              label="settings saved"
+              class="text-white text-h7 q-mr-sm"
+            ></q-btn>
+            <q-btn
+              size="10px"
+              rounded
+              outlined
+              to="/Client-Company-Profile-Doc-Verification"
+              label="Go to ID verification →"
+              class="text-h7"
+            ></q-btn>
+          </div>
         </div>
-
-        <!-- Card 2 Div -->
-
-        <addProject />
-
-        <!-- Card 3 div -->
-
-        <CreateContractorProfile />
-
-        <!-- Footer Div -->
       </div>
-    </div>
+    </q-form>
   </div>
 </template>
 

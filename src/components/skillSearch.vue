@@ -27,8 +27,8 @@ import { defineComponent } from "vue";
 import { ref } from "vue";
 
 const stringOptions = [
-  "XD",
   "Adobe XD",
+  "1",
   "Photoshop",
   "Adobe Photoshop",
   "CSS3",
@@ -37,6 +37,7 @@ const stringOptions = [
   "Java",
   "Python",
   "Javascript",
+  // { label: "XD", value: '1' },
 ];
 
 export default defineComponent({

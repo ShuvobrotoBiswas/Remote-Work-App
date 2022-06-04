@@ -70,21 +70,11 @@
                   </q-file>
 
                   <div class="q-pa-mg text-center custom-text-me">
-                    LOGO Design
+                    <q-btn size="6px" icon="add" dense flat type="submit"
+                      >add project</q-btn
+                    >
                   </div>
                 </div>
-              </div>
-
-              <div class="row q-pa-md">
-                <q-btn
-                  size="10px"
-                  rounded
-                  type="submit"
-                  color="black"
-                  icon="add"
-                  label="Add Companies"
-                  class="text-white text-h7"
-                ></q-btn>
               </div>
             </div>
           </div>

@@ -2,6 +2,17 @@
   <div>
     <!-- Card 3 div -->
     <q-form @submit.prevent="createContractor">
+      <div class="row q-pa-md">
+        <q-btn
+          size="10px"
+          rounded
+          type="submit"
+          color="black"
+          icon="add"
+          label="Add Companies"
+          class="text-white text-h7"
+        ></q-btn>
+      </div>
       <div class="q-pa-md row flex-center items-start q-gutter-md">
         <q-card class="my-card text-black bg-grey-4" style="max-width: 800px">
           <div class="q-pa-md">
@@ -285,25 +296,7 @@
           </div>
           <div>* Fields marked with "*" are mendatory.</div>
         </q-card>
-        <div class="row flex-center q-pa-md">
-          <q-btn
-            size="10px"
-            rounded
-            color="black"
-            type="submit"
-            icon="done"
-            label="settings saved"
-            class="text-white text-h7 q-mr-sm"
-          ></q-btn>
-          <q-btn
-            size="10px"
-            rounded
-            outlined
-            to="/Client-Company-Profile-Doc-Verification"
-            label="Go to ID verification →"
-            class="text-h7"
-          ></q-btn>
-        </div>
+        
       </div>
     </q-form>
     <!-- Footer Div -->
@@ -318,7 +311,7 @@ import skillSearch from "components/skillSearch.vue";
 import axios from "axios";
 
 export default defineComponent({
-  components: { addProject , skillSearch },
+  components: { addProject, skillSearch },
   name: "CreateContractorProfile",
   setup() {
     return {
