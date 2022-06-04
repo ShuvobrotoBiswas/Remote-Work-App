@@ -18,11 +18,10 @@
           v-model="file"
           label="upload new picture"
           @update:model-value="handleUpload()"
-          ref="fileInput"
         >
         </q-file>
         <!-- <q-btn
-          @click="$refs.fileInput.click()"
+          @click="getFile"
           style="width: 250px"
           outline
           rounded
@@ -68,14 +67,23 @@ export default defineComponent({
       }
     };
 
+
+// const getFile = function () {
+//   let fileUpload = document.getElementById('fileUpload')
+//   if (fileUpload != null) {
+//     fileUpload.click()
+//   }
+// }
     return {
       document,
       other: true,
       file,
       imageUrl,
       handleUpload,
+      getFile: true,
     };
   },
+
   methods: {
     onFileSelected(event) {
       console.log(event.target);

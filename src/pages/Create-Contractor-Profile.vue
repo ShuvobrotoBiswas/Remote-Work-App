@@ -193,24 +193,7 @@
 
         <!-- Footer Div -->
 
-        <div class="row flex-center q-pa-md">
-          <q-btn
-            size="10px"
-            rounded
-            color="black"
-            icon="add"
-            label="Add Companies"
-            class="text-white text-h7 q-mr-sm"
-          ></q-btn>
-          <q-btn
-            size="10px"
-            rounded
-            outlined
-            to="/Client-Company-Profile-Doc-Verification"
-            label="Go to ID verification →"
-            class="text-h7"
-          ></q-btn>
-        </div>
+        
       </div>
     </div>
   </div>

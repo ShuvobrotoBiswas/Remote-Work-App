@@ -313,6 +313,25 @@
           </div>
           <div>* Fields marked with "*" are mendatory.</div>
         </q-card>
+        <div class="row flex-center q-pa-md">
+          <q-btn
+            size="10px"
+            rounded
+            color="black"
+            type="submit"
+            icon="done"
+            label="settings saved"
+            class="text-white text-h7 q-mr-sm"
+          ></q-btn>
+          <q-btn
+            size="10px"
+            rounded
+            outlined
+            to="/Client-Company-Profile-Doc-Verification"
+            label="Go to ID verification →"
+            class="text-h7"
+          ></q-btn>
+        </div>
       </div>
     </q-form>
     <!-- Footer Div -->
