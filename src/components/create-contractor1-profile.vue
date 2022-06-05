@@ -296,7 +296,7 @@
           </div>
           <div>* Fields marked with "*" are mendatory.</div>
         </q-card>
-        
+
       </div>
     </q-form>
     <!-- Footer Div -->

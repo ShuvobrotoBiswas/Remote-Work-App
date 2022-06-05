@@ -102,49 +102,51 @@
     <q-separator />
 
     <!-- Card 1 Div -->
-
-    <div class="row flex-center items-start">
-      <div flat bordered class="my-card" style="max-width: 800px">
-        <q-card-section>
-          <div class="text-h6 text-bold text-center">
-            Create your client profile (client)
-          </div>
-        </q-card-section>
-        <q-separator />
-        <div class="q-pa-md">
-          <div class="row">
-            <div class="col-5">
-              <picture-form />
+    <q-form @submit.prevent="profile">
+      <div class="row flex-center items-start">
+        <div flat bordered class="my-card" style="max-width: 800px">
+          <q-card-section>
+            <div class="text-h6 text-bold text-center">
+              Create your client profile (client)
             </div>
-            <div class="col-1"></div>
-            <div class="col-6">
-              <q-form @submit.prevent="profile">
+          </q-card-section>
+          <q-separator />
+          <div class="q-pa-md">
+            <div class="row">
+              <div class="col-5">
+                <contractor-picture />
+              </div>
+              <div class="col-1"></div>
+              <div class="col-6">
                 <q-input v-model="name" label="Complete name*" />
                 <q-input v-model="res_address" label="Address*" />
                 <q-input v-model="billing_address" label="Billing address*" />
                 <q-input v-model="phone" type="tel" label="Phone number" />
                 <div class="row flex-center">
                   <div flat bordered class="my-card" style="max-width: 800px">
-                    <div class="row q-pa-md">
-                      <q-btn
-                        size="10px"
-                        rounded
-                        type="submit"
-                        color="black"
-                        icon="add"
-                        label="Add Companies"
-                        class="text-white text-h7"
-                      ></q-btn>
-                    </div>
+                    <div class="row q-pa-md"></div>
                   </div>
                 </div>
-              </q-form>
+              </div>
+            </div>
+            <div class="q-pa-md">
+              <q-btn
+                size="12px"
+                rounded
+                type="submit"
+                color="black"
+                icon="add"
+                label="Add Companies"
+                class="text-white text-h7"
+              ></q-btn>
+            </div>
+            <div class="row q-pa-md">
+              * Fields marked with "*" are mandatory.
             </div>
           </div>
         </div>
-        <div class="row q-pa-md">* Fields marked with "*" are mandatory.</div>
       </div>
-    </div>
+    </q-form>
 
     <!-- Footer Div -->
 
@@ -153,7 +155,6 @@
         size="10px"
         rounded
         color="black"
-        type="submit"
         to="/Client-Profile-Display"
         icon="check_circle_outline"
         label="Settings saved!"
@@ -176,9 +177,9 @@
 import { defineComponent } from "vue";
 import { ref } from "vue";
 import axios from "axios";
-import pictureForm from "components/picture-form.vue";
+import contractorPicture from "components/contractor-picture.vue";
 export default defineComponent({
-  components: { pictureForm },
+  components: { contractorPicture },
   setup() {
     return {
       name: ref(" "),

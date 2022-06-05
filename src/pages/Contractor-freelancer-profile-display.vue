@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-for="user in users" :key="user.id">
     <!-- Header Div -->
 
     <q-header>
@@ -103,7 +103,6 @@
     <q-separator />
 
     <!-- Card 1 Div -->
-
     <div class="row flex-center items-start">
       <div flat bordered class="my-card" style="max-width: 800px">
         <q-card-section>
@@ -206,9 +205,9 @@
 import { defineComponent } from "vue";
 import axios from "axios";
 export default defineComponent({
-  setup() {
+  data() {
     return {
-      user: [],
+      users: [],
     };
   },
   // SHOW
@@ -225,7 +224,7 @@ export default defineComponent({
       .request(options)
       .then((response) => {
         console.log(response.data);
-        this.user = response.data;
+        this.users = response.data;
       })
       .catch(function (error) {
         console.error(error);

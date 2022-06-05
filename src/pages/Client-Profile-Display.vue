@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-for="user in users" :key="user.id">
     <!-- Header Div -->
 
     <q-header>
@@ -209,9 +209,9 @@ import axios from "axios";
 
 export default defineComponent({
   // name: "IndexPage",
-  setup() {
+  data() {
     return {
-      user: [],
+      users: [],
     };
   },
   // SHOW
@@ -228,7 +228,7 @@ export default defineComponent({
       .request(options)
       .then((response) => {
         console.log(response.data);
-        this.user = response.data;
+        this.users = response.data;
       })
       .catch(function (error) {
         console.error(error);

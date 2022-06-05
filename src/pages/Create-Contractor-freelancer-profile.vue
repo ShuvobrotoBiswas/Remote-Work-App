@@ -103,21 +103,22 @@
     <q-separator />
 
     <!-- Card 1 Div -->
-
-    <div class="row flex-center items-start">
-      <div flat bordered class="my-card" style="max-width: 800px">
-        <q-card-section>
-          <div class="text-h6 text-bold">Create your profile (freelancer)</div>
-        </q-card-section>
-        <q-separator />
-        <div class="q-pa-md">
-          <div class="row">
-            <div class="col-5">
-              <freelancer-picture />
+    <q-form @submit.prevent="profile">
+      <div class="row flex-center items-start">
+        <div flat bordered class="my-card" style="max-width: 800px">
+          <q-card-section>
+            <div class="text-h6 text-bold">
+              Create your profile (freelancer)
             </div>
-            <div class="col-1"></div>
-            <div class="col-6">
-              <q-form @submit.prevent="profile">
+          </q-card-section>
+          <q-separator />
+          <div class="q-pa-md">
+            <div class="row">
+              <div class="col-5">
+                <contractorPicture />
+              </div>
+              <div class="col-1"></div>
+              <div class="col-6">
                 <q-input v-model="name" label="Complete name*" />
                 <q-input v-model="res_address" label="Address*" />
                 <q-input v-model="billing_address" label="Billing address*" />
@@ -156,70 +157,39 @@
                     >CSS3 ✠</q-btn
                   >
                 </div>
-                <div class="row flex-center">
-                  <div flat bordered class="my-card" style="max-width: 800px">
-                    <div class="row q-pa-md">
-                      <q-btn
-                        size="10px"
-                        rounded
-                        type="submit"
-                        color="black"
-                        icon="add"
-                        label="Add Companies"
-                        class="text-white text-h7"
-                      ></q-btn>
-                    </div>
-                  </div>
-                </div>
-              </q-form>
+              </div>
             </div>
+            <q-separator />
           </div>
-          <q-separator />
         </div>
       </div>
-    </div>
 
-    <!-- Card 2 Div -->
-
-    <div class="row flex-center items-start">
-      <div flat bordered class="my-card" style="max-width: 600px">
-        <div class="q-pa-md">
-          <div class="col-9 text-h6 text-bold">
-            Add relevent projects from you portfolio
-          </div>
-        </div>
-        <div class="row bid1 text-center">
-          <div class="col my-home bid2 q-mr-sm">
-            <q-img src="~assets/Avator5.png" class="image1"> </q-img>
-            <div class="q-pa-mg text-center custom-text-me">LOGO Design</div>
-          </div>
-          <div class="col my-home bid2 q-mr-sm">
-            <q-img src="~assets/Avator6.png" class="image1"> </q-img>
-            <div class="q-pa-mg text-center custom-text-me">Website Design</div>
-          </div>
-          <div class="col my-home bid2 q-mr-sm">
-            <q-img src="~assets/Avator7.png" class="image1"> </q-img>
-            <div class="q-pa-mg text-center custom-text-me">UX Design</div>
-          </div>
-          <div class="col my-home bid2 q-mr-sm">
-            <q-img src="~assets/Avator8.png" class="image1"> </q-img>
-            <div class="q-pa-mg text-center custom-text-me">+ Add Project</div>
-          </div>
-        </div>
-
-        <div class="row q-pa-md">
+      <!-- Card 2 Div -->
+      <addProject />
+      <div class="row flex-center q-pa-md">
+        <div class="col"></div>
+        <div class="col">
           <q-btn
             size="10px"
             rounded
+            type="submit"
             color="black"
             icon="add"
-            label="Add Companies"
-            class="text-white text-h7"
+            label="add company"
+            class="text-white text-h7 q-mr-sm"
           ></q-btn>
         </div>
-        <div class="row q-pa-md">* Fields marked with "*" are mandatory.</div>
+        <div class="col"></div>
+        <div class="col"></div>
       </div>
-    </div>
+
+      <div class="row flex-center q-pa-md">
+        <div class="col"></div>
+        <div class="col">* Fields marked with "*" are mandatory.</div>
+        <div class="col"></div>
+        <div class="col"></div>
+      </div>
+    </q-form>
 
     <!-- Footer Div -->
 
@@ -247,12 +217,13 @@
 
 <script>
 import { defineComponent } from "vue";
-import freelancerPicture from "components/freelancer-picture.vue";
+import contractorPicture from "components/contractor-picture.vue";
+import addProject from "components/add-project.vue";
 import skillSearch from "components/skillSearch.vue";
 import axios from "axios";
 import { ref } from "vue";
 export default defineComponent({
-  components: { freelancerPicture , skillSearch},
+  components: { contractorPicture, addProject, skillSearch },
   setup() {
     return {
       name: ref(""),
