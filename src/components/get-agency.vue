@@ -1,5 +1,6 @@
 <template>
-  <div>
+  <!-- <div v-for="user in users" :key="user.id"> -->
+    <div>
     <!-- Card 2 Div -->
 
     <div class="q-pa-md row flex-center items-start q-gutter-md">
@@ -167,7 +168,7 @@ import axios from "axios";
 
 export default defineComponent({
   name: "getAgency",
-  setup() {
+  data() {
     return {
       agency: [],
 

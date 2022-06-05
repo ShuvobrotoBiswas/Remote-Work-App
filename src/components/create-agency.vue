@@ -2,7 +2,17 @@
   <div>
     <q-form @submit.prevent="createAgency">
       <!-- Card 3 div -->
-
+      <div class="row  q-pa-md" style="margin-left: 22%">
+          <q-btn
+            size="13px"
+            rounded
+            type="submit"
+            color="black"
+            icon="add"
+            label="Add Companies"
+            class="text-white text-h7"
+          ></q-btn>
+      </div>
       <div class="q-pa-md row flex-center items-start q-gutter-md">
         <q-card
           class="my-card this-card text-black bg-grey-4"
@@ -106,29 +116,6 @@
           <div class="row q-pa-md">* Fields marked with "*" are mandatory.</div>
         </q-card>
       </div>
-
-      <!-- Footer Div -->
-
-      <div class="row flex-center q-pa-md">
-        <q-btn
-          size="10px"
-          rounded
-          color="black"
-          type="submit"
-          icon="check_circle_outline"
-          label="Settings saved!"
-          to="/Client-Company-Profile-Display"
-          class="text-white text-h7 q-mr-sm"
-        ></q-btn>
-        <q-btn
-          size="10px"
-          rounded
-          to="/Client-Company-Profile-Doc-Verification"
-          outlined
-          label="Go to ID verification →"
-          class="text-h7"
-        ></q-btn>
-      </div>
     </q-form>
   </div>
 </template>
@@ -144,9 +131,11 @@ export default defineComponent({
       name: ref(""),
       search: ref(""),
       phone: ref(""),
-      vat_code:ref(""),
+      profile_picture: ref(""),
+      vat_code: ref(""),
       website: ref(""),
       res_address: ref(""),
+      registration_code: ref(""),
       model: ref(null),
       group: ref([]),
       options: [

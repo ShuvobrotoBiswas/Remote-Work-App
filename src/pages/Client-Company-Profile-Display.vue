@@ -81,7 +81,7 @@
 
     <!-- Card 1 Div -->
 
-    <div class="row flex-center items-start">
+    <div v-for="user in users" :key="user.id" class="row flex-center items-start">
       <div flat bordered class="my-card" style="max-width: 750px">
         <q-card-section>
           <div class="text-h6 text-center">
@@ -178,9 +178,9 @@ import axios from "axios";
 export default defineComponent({
   components: { getAgency },
 
-  setup() {
+  data() {
     return {
-      user: [],
+      users: [],
 
     };
   },
@@ -198,7 +198,7 @@ export default defineComponent({
       .request(options)
       .then((response) => {
         console.log(response.data);
-        this.user = response.data;
+        this.users = response.data;
       })
       .catch(function (error) {
         console.error(error);

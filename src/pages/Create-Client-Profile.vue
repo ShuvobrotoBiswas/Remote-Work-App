@@ -114,7 +114,7 @@
           <div class="q-pa-md">
             <div class="row">
               <div class="col-5">
-                <contractor-picture />
+                <clientProfilePic />
               </div>
               <div class="col-1"></div>
               <div class="col-6">
@@ -129,6 +129,8 @@
                 </div>
               </div>
             </div>
+            <q-separator />
+
             <div class="q-pa-md">
               <q-btn
                 size="12px"
@@ -177,9 +179,9 @@
 import { defineComponent } from "vue";
 import { ref } from "vue";
 import axios from "axios";
-import contractorPicture from "components/contractor-picture.vue";
+import clientProfilePic from "components/client-profile-pic.vue";
 export default defineComponent({
-  components: { contractorPicture },
+  components: { clientProfilePic },
   setup() {
     return {
       name: ref(" "),

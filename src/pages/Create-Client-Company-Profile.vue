@@ -103,6 +103,7 @@
     <q-separator />
 
     <!-- Card 1 Div -->
+              <q-form @submit.prevent="profile">
 
     <div class="row flex-center items-start">
       <div flat bordered class="my-card" style="max-width: 800px">
@@ -115,31 +116,14 @@
         <div class="q-pa-md">
           <div class="row">
             <div class="col-5">
-              <ClientPicture />
+              <clientProfilePic />
             </div>
             <div class="col-1"></div>
             <div class="col-6">
-              <q-form @submit.prevent="profile">
                 <q-input v-model="name" type="name" label="Complete name*" />
                 <q-input v-model="res_address" label="Address*" />
                 <q-input v-model="billing_address" label="Billing address*" />
                 <q-input v-model="phone" type="tel" label="Phone number" />
-                <div class="row flex-center">
-                  <div flat bordered class="my-card" style="max-width: 800px">
-                    <div class="row q-pa-md">
-                      <q-btn
-                        size="10px"
-                        rounded
-                        type="submit"
-                        color="black"
-                        icon="add"
-                        label="Add Companies"
-                        class="text-white text-h7"
-                      ></q-btn>
-                    </div>
-                  </div>
-                </div>
-              </q-form>
             </div>
           </div>
 
@@ -151,6 +135,28 @@
     <!-- Card 3 div -->
 
     <createAgency />
+    <!-- Footer Div -->
+
+    <div class="row flex-center q-pa-md">
+      <q-btn
+        size="10px"
+        rounded
+        color="black"
+        type="submit"
+        icon="check_circle_outline"
+        label="Settings saved!"
+        class="text-white text-h7 q-mr-sm"
+      ></q-btn>
+      <q-btn
+        size="10px"
+        rounded
+        outline
+        to="/Client-Company-Profile-Doc-Verification"
+        label="Go to ID verification →"
+        class="text-h7"
+      ></q-btn>
+    </div>
+</q-form>
   </div>
 </template>
 
@@ -158,10 +164,10 @@
 import { defineComponent } from "vue";
 import axios from "axios";
 import { ref } from "vue";
-import ClientPicture from "components/Client-Pic.vue";
+import clientProfilePic from "components/client-profile-pic.vue";
 import createAgency from "components/create-agency.vue";
 export default defineComponent({
-  components: { ClientPicture, createAgency },
+  components: { clientProfilePic, createAgency },
   // components: { createAgency },
   // name: "IndexPage",
   setup() {
