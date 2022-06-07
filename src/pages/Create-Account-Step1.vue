@@ -1,59 +1,57 @@
 <template>
-  <div class="absolute-center">
+  <div class="row fixed-center">
     <!-- Card 1 Div -->
 
-    <div class="q-pa-md row flex flex-center items-start q-gutter-md">
-      <q-card
-        class="my-card this-card flex flex-center text-black bg-white"
-        style="max-width: 750px"
-      >
-        <div class="q-pa-md">
-          <div class="row">
-            <div class="col-6 flex flex-center text-bold my-font">
-              I am looking for someone to work on my project.
-            </div>
-            <q-form @submit.prevent="registration">
-              <div class="col-6">
-                <q-select v-model="account_type" :options="options" label="Account Type" />
-                <q-input label="Email" type="email" v-model="email"> </q-input>
-                <q-input label="Password" type="password" v-model="password">
-                </q-input>
-                <q-input
-                  label="Confirm Password"
-                  type="password"
-                  v-model="password_confirmation"
-                >
-                </q-input>
-
-                <div class="row">
-                  <div class="col">
-                    <q-btn
-                      size="10px"
-                      rounded
-                      color="black"
-                      type="submit"
-                      label="Register"
-                      class="text-white text-h7"
-                    ></q-btn>
-                  </div>
-                  <div class="col">
-                    <q-btn
-                      size="10px"
-                      rounded
-                      to="/Create-Account-Step3"
-                      color="black"
-                      style="width: 90px"
-                      label="Login"
-                      class="text-white q-mr-sm text-h7"
-                    ></q-btn>
-                  </div>
-                </div>
-              </div>
-            </q-form>
+    <q-card
+      class="my-card this-card flex-center text-black bg-white"
+      style="max-width: 750px"
+    >
+      <div class="q-pa-md">
+        <div class="row">
+          <div class="col-6 flex flex-center text-bold my-font">
+            I am looking for someone to work on my project.
           </div>
+          <q-form @submit.prevent="registration">
+            <div class="col-6">
+              <q-select
+                v-model="account_type"
+                :options="options"
+                label="Account Type"
+              />
+              <q-input label="Email" type="email" v-model="email"> </q-input>
+              <q-input label="Password" type="password" v-model="password">
+              </q-input>
+              <q-input
+                label="Confirm Password"
+                type="password"
+                v-model="password_confirmation"
+              >
+              </q-input>
+
+              <div class="row flex-center ">
+                  <q-btn
+                    size="10px"
+                    rounded
+                    color="black"
+                    type="submit"
+                    label="Register"
+                    class="text-white q-mr-sm   text-h7"
+                  ></q-btn>
+                  <q-btn
+                    size="10px"
+                    rounded
+                    to="/Create-Account-Step3"
+                    color="black"
+                    style="width: 80px"
+                    label="Login"
+                    class="text-white  text-h7"
+                  ></q-btn>
+              </div>
+            </div>
+          </q-form>
         </div>
-      </q-card>
-    </div>
+      </div>
+    </q-card>
 
     <!-- Card 2 -->
 
@@ -139,10 +137,10 @@ export default defineComponent({
         .then((response) => {
           console.log(response.data);
           this.admin = response.data;
-          // this.id = response.data.data.id;
-          // this.token = response.data.token;
-          // localStorage.setItem("token", response.data.token);
-          // this.$router.push("/Create-Account-Step3");
+          this.id = response.data.data.id;
+          this.token = response.data.token;
+          localStorage.setItem("token", response.data.token);
+          this.$router.push("/Create-Account-Step3");
         })
         .catch(function (error) {
           console.error(error);
