@@ -12,8 +12,8 @@
           <div class="row">
             <div class="col-9 text-h6">Company name {{ agency.name }}</div>
             <div class="col-6">
-              <div class="row justify-between" style="width: 250px">
-                <div class="my-home col-4" style="width: 77px; height: 70px">
+              <div class="row justify-between" style="max-width: 250px">
+                <div class="my-home" style="max-width: 77px; max-height: 70px">
                   <q-img
                     src="~assets/Avator2.png"
                     style="height: 40px; max-width: 40px"
@@ -21,7 +21,7 @@
                   </q-img>
                   <p class="custom-text-me">Change Logo</p>
                 </div>
-                <div class="col-8">
+                <div>
                   <strong>Verification status</strong> <br />
                   <q-btn
                     round
@@ -205,8 +205,8 @@
           <div class="row">
             <div class="col-9 text-h6">Company name {{ agency.name }}</div>
             <div class="col-6">
-              <div class="row justify-between" style="width: 250px">
-                <div class="my-home col-4" style="width: 77px; height: 70px">
+             <div class="row justify-between" style="max-width: 250px">
+                <div class="my-home" style="max-width: 77px; max-height: 70px">
                   <q-img
                     src="~assets/Avator2.png"
                     style="height: 40px; max-width: 40px"
@@ -214,7 +214,7 @@
                   </q-img>
                   <p class="custom-text-me">Change Logo</p>
                 </div>
-                <div class="col-8">
+                <div>
                   <strong>Verification status</strong> <br />
                   <q-btn
                     round

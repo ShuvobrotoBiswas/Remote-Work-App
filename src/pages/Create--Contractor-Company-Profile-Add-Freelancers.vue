@@ -1,6 +1,6 @@
 <template>
   <div class="row q-pa-md flex-center">
-    <q-card bordered class="this-card" style="width: 1100px; height: 600px">
+    <q-card bordered class="this-card" style="max-width: 1100px">
       <!-- Card 1 Div -->
 
       <div class="row flex-center items-start">
@@ -114,30 +114,31 @@
             </div>
           </div>
         </div>
-        <div class="row q-pa-md">
-          <q-btn
-            size="15px"
-            style="width: 180px"
-            rounded
-            color="black"
-            to="/Create-Contractor-Profile"
-            icon="cancel"
-            label="Cancel"
-            class="text-white text-h7"
-          ></q-btn>
-        </div>
-        <div class="col-2"></div>
-        <div>
-          <q-btn
-            size="15px"
-            rounded
-            to="/Create-Contractor-Profile"
-            style="width: 180px"
-            color="black"
-            icon="check_circle"
-            label="Done"
-            class="text-white text-h7"
-          ></q-btn>
+        <div class="row flex-center">
+          <div class="q-pa-md">
+            <q-btn
+              size="15px"
+              style="width: 180px"
+              rounded
+              color="black"
+              to="/Create-Contractor-Profile"
+              icon="cancel"
+              label="Cancel"
+              class="text-white text-h7"
+            ></q-btn>
+          </div>
+          <div>
+            <q-btn
+              size="15px"
+              rounded
+              to="/Create-Contractor-Profile"
+              style="width: 180px"
+              color="black"
+              icon="check_circle"
+              label="Done"
+              class="text-white text-h7"
+            ></q-btn>
+          </div>
         </div>
       </div>
     </q-card>

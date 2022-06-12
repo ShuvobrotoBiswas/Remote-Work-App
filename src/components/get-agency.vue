@@ -1,6 +1,6 @@
 <template>
   <!-- <div v-for="user in users" :key="user.id"> -->
-    <div>
+  <div>
     <!-- Card 2 Div -->
 
     <div class="q-pa-md row flex-center items-start q-gutter-md">
@@ -10,10 +10,10 @@
       >
         <div class="q-pa-md">
           <div class="row">
-            <div class="col-9 text-h6">Company name {{agency.name}}</div>
+            <div class="col-9 text-h6">Company name {{ agency.name }}</div>
             <div class="col-6">
-              <div class="row justify-between" style="width: 250px">
-                <div class="my-home col-4" style="width: 77px; height: 70px">
+              <div class="row justify-between" style="max-width: 250px">
+                <div class="my-home" style="width: 77px; height: 70px">
                   <q-img
                     src="~assets/Avator2.png"
                     style="height: 40px; max-width: 40px"
@@ -21,7 +21,7 @@
                   </q-img>
                   <p class="custom-text-me">Change Logo</p>
                 </div>
-                <div class="col-8">
+                <div>
                   <strong>Verification status</strong> <br />
                   <q-btn
                     round
@@ -39,14 +39,14 @@
                   ></q-btn>
                 </div>
               </div>
-              <Strong> {{agency.name}}</Strong> <br />
+              <strong> {{ agency.name }}</strong> <br />
               <div class="q-py-md"></div>
-              <strong>Address:</strong> {{agency.billing_address}}
+              <strong>Address:</strong> {{ agency.billing_address }}
               <div></div>
             </div>
             <div class="col-6">
               <div class="text-h7">
-                <strong>Fascial code:</strong> {{agency.vat_code}}
+                <strong>Fascial code:</strong> {{ agency.vat_code }}
               </div>
               <div class="q-py-md underline-font q-mr-sm">
                 <strong>Legal Note company owner</strong>
@@ -54,12 +54,14 @@
                 <q-btn round color="black" size="5px" icon="done"></q-btn>
               </div>
               <div class="text-h7">
-                <strong>Register number:</strong> {{agency.registration_code}}
+                <strong>Register number:</strong> {{ agency.registration_code }}
               </div>
               <div class="text-h7 q-py-md">
-                <strong>Website:</strong> {{agency.website}}
+                <strong>Website:</strong> {{ agency.website }}
               </div>
-              <div class="text-h7"><strong>Phone:</strong> {{agency.phone}}</div>
+              <div class="text-h7">
+                <strong>Phone:</strong> {{ agency.phone }}
+              </div>
             </div>
           </div>
           <div class="row flex-center">
@@ -85,9 +87,9 @@
       >
         <div class="q-pa-md">
           <div class="row">
-            <div class="col-9 text-h6">Company name {{agency.name}}</div>
+            <div class="col-9 text-h6">Company name {{ agency.name }}</div>
             <div class="col-6">
-              <div class="row justify-between" style="width: 250px">
+              <div class="row justify-between" style="max-width: 250px">
                 <div class="my-home col-4" style="width: 77px; height: 70px">
                   <q-img
                     src="~assets/Avator2.png"
@@ -114,13 +116,13 @@
                   ></q-btn>
                 </div>
               </div>
-              <Strong>Company #2</Strong> <br />
+              <strong>Company #2</strong> <br />
               <div class="q-py-md"></div>
-              <strong>Address:</strong> {{agency.billing_address}}
+              <strong>Address:</strong> {{ agency.billing_address }}
             </div>
             <div class="col-6">
               <div class="text-h7">
-                <strong>Fascial code:</strong> {{agency.vat_code}}
+                <strong>Fascial code:</strong> {{ agency.vat_code }}
               </div>
               <div class="q-py-md underline-font q-mr-sm">
                 <strong>Legal Note company owner</strong>
@@ -128,12 +130,14 @@
                 <q-btn round color="black" size="5px" icon="done"></q-btn>
               </div>
               <div class="text-h7">
-                <strong>Register number:</strong> {{agency.registration_code}}
+                <strong>Register number:</strong> {{ agency.registration_code }}
               </div>
               <div class="text-h7 q-py-md">
-                <strong>Website:</strong> {{agency.website}}
+                <strong>Website:</strong> {{ agency.website }}
               </div>
-              <div class="text-h7"><strong>Phone:</strong> {{agency.phone}}</div>
+              <div class="text-h7">
+                <strong>Phone:</strong> {{ agency.phone }}
+              </div>
             </div>
           </div>
           <div class="row flex-center">
@@ -171,7 +175,6 @@ export default defineComponent({
   data() {
     return {
       agency: [],
-
     };
   },
 

@@ -8,73 +8,79 @@
 
           <div class="row items-start">
             <div flat bordered class="my-card" style="max-width: 600px">
-              <div class="q-pa-md">
-                <div class="col-9 text-h6 text-bold">
+                <p class="text-h6 text-bold">
                   Add relevent projects from you portfolio
-                </div>
-              </div>
-              <div class="row bid1 text-center">
-                <div
-                  class="col my-home bid2 q-mr-sm"
-                  style="height: 100px; width: 10px"
-                >
-                  <q-img
-                    src="~assets/Avator5.png"
-                    style="width: 74px"
-                    class="image1"
+                </p>
+              <div class="row">
+                <q-item  clickable>
+                  <div
+                    class="col my-home bid2"
+                    style="max-height: 100px; max-width: 100px"
                   >
-                  </q-img>
-                  <div class="q-pa-mg text-center custom-text-me">
-                    LOGO Design
-                  </div>
-                </div>
-                <div
-                  class="col my-home bid2 q-mr-sm"
-                  style="height: 100px; width: 20px"
-                >
-                  <q-img
-                    src="~assets/Avator6.png"
-                    style="width: 74px"
-                    class="image1"
-                  >
-                  </q-img>
-                  <div class="q-pa-mg text-center custom-text-me">
-                    LOGO Design
-                  </div>
-                </div>
-                <div
-                  class="col my-home bid2 q-mr-sm"
-                  style="height: 100px; width: 20px"
-                >
-                  <q-img
-                    src="~assets/Avator7.png"
-                    style="width: 74px"
-                    class="image1"
-                  >
-                  </q-img>
-                  <div class="q-pa-mg text-center custom-text-me">
-                    LOGO Design
-                  </div>
-                </div>
-                <div
-                  class="col my-home bid2 q-mr-sm"
-                  style="height: 100px; width: 20px"
-                >
-                  <q-file borderless v-model="file">
                     <q-img
-                      src="~assets/Avator8.png"
-                      style="width: 90px"
+                      src="~assets/Avator5.png"
+                      style="width: 74px"
                       class="image1"
                     >
                     </q-img>
-                  </q-file>
-
-                  <div class="q-pa-mg text-center custom-text-me">
-                    <q-btn size="6px" icon="add" dense flat type="submit"
-                      >add project</q-btn
-                    >
+                    <div class="q-pa-mg text-center custom-text-me">
+                      LOGO Design
+                    </div>
                   </div>
-                </div>
+                </q-item>
+                <q-item clickable>
+                  <div
+                    class="col my-home bid2"
+                    style="max-height: 100px; max-width: 100px"
+                  >
+                    <q-img
+                      src="~assets/Avator6.png"
+                      style="width: 74px"
+                      class="image1"
+                    >
+                    </q-img>
+                    <div class="q-pa-mg text-center custom-text-me">
+                      LOGO Design
+                    </div>
+                  </div>
+                </q-item>
+                <q-item clickable>
+                  <div
+                    class="col my-home bid2"
+                    style="max-height: 100px; max-width: 100px"
+                  >
+                    <q-img
+                      src="~assets/Avator7.png"
+                      style="width: 74px"
+                      class="image1"
+                    >
+                    </q-img>
+                    <div class="q-pa-mg text-center custom-text-me">
+                      LOGO Design
+                    </div>
+                  </div>
+                </q-item>
+                <q-item clickable>
+                  <div
+                    class="col my-home bid2 q-mr-sm"
+                    style="max-height: 100px; max-width: 90px"
+                  >
+                    <q-file borderless v-model="file">
+                      <q-img
+                        src="~assets/Avator8.png"
+                        style="width: 90px"
+                        class="image1"
+                      >
+                      </q-img>
+                    </q-file>
+
+                    <div class="q-pa-mg text-center custom-text-me">
+                      <q-btn size="6px" icon="add" dense flat type="submit"
+                        >add project</q-btn
+                      >
+                    </div>
+                  </div>
+                </q-item>
               </div>
             </div>
           </div>

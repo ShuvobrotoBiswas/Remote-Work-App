@@ -7,70 +7,54 @@
       </div>
       <div class="flex-break q-py-md"></div>
       <q-separator />
-      <div class="">
-        <div class="row">
-          <div class="col"></div>
-          <div class="col">
-            <div class="text-black text-h7 text-center">
-              <q-btn
-                to="/Contractor-profile-display"
-                dense
-                flat
-                color="black"
-                icon="person"
-              ></q-btn>
-              <div>Profile</div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="text-black text-h7 text-center">
-              <q-btn
-                dense
-                to="/01-remote-work-Client-Post-Proj"
-                flat
-                color="black"
-                icon="addchart"
-              ></q-btn>
-              <div>Post a Project</div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="text-black text-h7 text-center">
-              <q-btn
-                dense
-                to="/06-Remote-Work-Contractor-Search-Proj"
-                flat
-                color="black"
-                icon="insert_chart_outlined"
-              ></q-btn>
-              <div>Projects</div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="text-black text-h7 text-center">
-              <q-btn dense flat color="black" icon="mark_email_unread"></q-btn>
-              <div>Messages</div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="text-black text-h7 text-center">
-              <q-btn
-                dense
-                flat
-                to="/Client-Company-Profile-Doc-Verification"
-                color="black"
-                icon="local_atm"
-              ></q-btn>
-              <div>Accounts</div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="text-black text-h7 text-center">
-              <q-btn dense flat color="black" icon="tune"></q-btn>
-              <div>Settings</div>
-            </div>
-          </div>
-          <div class="col"></div>
+      <div class="row flex-center q-pa-md">
+        <div class="text-black text-h7 text-center">
+          <q-btn
+            to="/Contractor-profile-display"
+            dense
+            flat
+            color="black"
+            icon="person"
+          ></q-btn>
+          <div>Profile</div>
+        </div>
+        <div class="text-black text-h7 text-center">
+          <q-btn
+            dense
+            to="/01-remote-work-Client-Post-Proj"
+            flat
+            color="black"
+            icon="addchart"
+          ></q-btn>
+          <div>Post a Project</div>
+        </div>
+        <div class="text-black text-h7 text-center">
+          <q-btn
+            dense
+            flat
+            to="/06-Remote-Work-Contractor-Search-Proj"
+            color="black"
+            icon="insert_chart_outlined"
+          ></q-btn>
+          <div>Projects</div>
+        </div>
+        <div class="text-black text-h7 text-center">
+          <q-btn dense flat color="black" icon="mark_email_unread"></q-btn>
+          <div>Messages</div>
+        </div>
+        <div class="text-black text-h7 text-center">
+          <q-btn
+            dense
+            flat
+            to="/Client-Company-Profile-Doc-Verification"
+            color="black"
+            icon="local_atm"
+          ></q-btn>
+          <div>Accounts</div>
+        </div>
+        <div class="text-black text-h7 text-center">
+          <q-btn dense flat color="black" icon="tune"></q-btn>
+          <div>Settings</div>
         </div>
       </div>
       <q-separator />
@@ -82,11 +66,12 @@
           <q-card-section>
             <div class="text-h6">Your Profile/Document Verification</div>
           </q-card-section>
-
+          <q-separator />
+          
           <!-- Card 2 & 3 & 4 Div -->
 
-          <div class="row" style="max-width: 920px">
-            <div class="q-pa-md col-6 flex-center items-start q-gutter-md">
+          <div class="row flex-center" style="max-width: 920px">
+            <div class="q-pa-md  flex-center items-start q-gutter-md">
               <q-card
                 class="my-card this-card text-black bg-grey-4"
                 style="max-width: 360px"
@@ -143,7 +128,7 @@
 
             <!-- Card 3 -->
 
-            <div class="q-pa-md col-6 flex-center items-start q-gutter-md">
+            <div class="q-pa-md flex-center items-start q-gutter-md">
               <q-card
                 class="my-card this-card text-black bg-grey-4"
                 style="max-width: 360px"
@@ -181,13 +166,6 @@
                       >
                         Add bank account</span
                       >
-                      <!-- <q-btn
-                        color="black"
-                        dense
-                        round
-                        icon="add"
-                        style="margin-bottom: 15px"
-                      ></q-btn> -->
                       <q-btn
                         icon="add"
                         style="margin-bottom: 15px"
@@ -235,6 +213,7 @@ export default defineComponent({
   setup() {
     return {
       // flag: this.$route.params.id,
+      file: [],
     };
   },
   methods: {

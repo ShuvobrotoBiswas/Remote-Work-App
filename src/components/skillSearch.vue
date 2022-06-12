@@ -12,7 +12,7 @@
         input-debounce="0"
         :options="options"
         @filter="filterFn"
-        style="width: 500px"
+        style="max-width: 500px"
       >
         <template v-slot:append>
           <q-icon name="search" />

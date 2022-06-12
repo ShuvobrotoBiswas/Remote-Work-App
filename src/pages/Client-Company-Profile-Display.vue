@@ -1,6 +1,6 @@
 <template>
   <div>
-    <q-header>
+    <!-- <q-header>
       <q-toolbar class="bg-white">
         <q-toolbar-title>
           <div class="text-green">
@@ -24,64 +24,70 @@
         </div>
         <div class="text-black q-mr-sm">LOGOUT</div>
       </q-toolbar>
-    </q-header>
+    </q-header> -->
     <div class="flex-break"></div>
     <div class="text-h7 text-center">Hi Florin, welcome to your dashboard!</div>
     <div class="flex-break q-py-md"></div>
     <q-separator />
-    <div class="">
-      <div class="row">
-        <div class="col"></div>
-        <div class="col">
-          <div class="text-black text-h7 text-center">
-            <q-btn dense flat to="/Contractor-profile-display" color="black" icon="person"></q-btn>
-            <div>Profile</div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="text-black text-h7 text-center">
-            <q-btn dense flat color="black" to="/01-remote-work-Client-Post-Proj" icon="addchart"></q-btn>
-            <div>Post a Project</div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="text-black text-h7 text-center">
-            <q-btn
-              dense
-              flat
-              to="/06-Remote-Work-Contractor-Search-Proj"
-              color="black"
-              icon="insert_chart_outlined"
-            ></q-btn>
-            <div>Projects</div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="text-black text-h7 text-center">
-            <q-btn dense flat color="black" icon="mark_email_unread"></q-btn>
-            <div>Messages</div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="text-black text-h7 text-center">
-            <q-btn dense flat to="/Client-Company-Profile-Doc-Verification" color="black" icon="local_atm"></q-btn>
-            <div>Accounts</div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="text-black text-h7 text-center">
-            <q-btn dense flat color="black" icon="tune"></q-btn>
-            <div>Settings</div>
-          </div>
-        </div>
-        <div class="col"></div>
+    <div class="row flex-center q-pa-md">
+      <div class="text-black text-h7 text-center">
+        <q-btn
+          to="/Contractor-profile-display"
+          dense
+          flat
+          color="black"
+          icon="person"
+        ></q-btn>
+        <div>Profile</div>
+      </div>
+      <div class="text-black text-h7 text-center">
+        <q-btn
+          dense
+          to="/01-remote-work-Client-Post-Proj"
+          flat
+          color="black"
+          icon="addchart"
+        ></q-btn>
+        <div>Post a Project</div>
+      </div>
+      <div class="text-black text-h7 text-center">
+        <q-btn
+          dense
+          flat
+          to="/06-Remote-Work-Contractor-Search-Proj"
+          color="black"
+          icon="insert_chart_outlined"
+        ></q-btn>
+        <div>Projects</div>
+      </div>
+      <div class="text-black text-h7 text-center">
+        <q-btn dense flat color="black" icon="mark_email_unread"></q-btn>
+        <div>Messages</div>
+      </div>
+      <div class="text-black text-h7 text-center">
+        <q-btn
+          dense
+          flat
+          to="/Client-Company-Profile-Doc-Verification"
+          color="black"
+          icon="local_atm"
+        ></q-btn>
+        <div>Accounts</div>
+      </div>
+      <div class="text-black text-h7 text-center">
+        <q-btn dense flat color="black" icon="tune"></q-btn>
+        <div>Settings</div>
       </div>
     </div>
     <q-separator />
 
     <!-- Card 1 Div -->
 
-    <div v-for="user in users" :key="user.id" class="row flex-center items-start">
+    <div
+      v-for="user in users"
+      :key="user.id"
+      class="row flex-center items-start"
+    >
       <div flat bordered class="my-card" style="max-width: 750px">
         <q-card-section>
           <div class="text-h6 text-center">
@@ -95,48 +101,46 @@
               <q-img sizes="200px" src="~/assets/Avator14.png"></q-img>
             </div>
             <div class="col-1"></div>
-            <div class="col-7" >
-              <div class="text-h6 text-bold">{{user.name}}</div>
+            <div class="col-7">
+              <div class="text-h6 text-bold">{{ user.name }}</div>
               <div class="text-h7 q-py-md">
-                <strong>Address:</strong> {{user.res_address}}
+                <strong>Address:</strong> {{ user.res_address }}
               </div>
               <div class="text-h7">
-                <strong> Billing address:</strong> {{user.billing_address}}
+                <strong> Billing address:</strong> {{ user.billing_address }}
               </div>
               <div class="text-h7 q-py-md">
-                <strong>Phone:</strong> {{user.phone}}
+                <strong>Phone:</strong> {{ user.phone }}
               </div>
-              <div class="text-h7">
-                <strong>CV:</strong> {{user.cv}}
-              </div>
+              <div class="text-h7"><strong>CV:</strong> {{ user.cv }}</div>
               <div class="q-py-md">
                 <q-btn
                   size="7px"
                   rounded
                   color="grey-5"
                   class="text-black q-mr-sm text-h7"
-                  >#{{user.skil_id}}</q-btn
+                  >#{{ user.skil_id }}</q-btn
                 >
                 <q-btn
                   size="7px"
                   rounded
                   color="grey-5"
                   class="text-black q-mr-sm text-h7"
-                  ># {{user.skil_id}} </q-btn
-                >
+                  ># {{ user.skil_id }}
+                </q-btn>
                 <q-btn
                   size="7px"
                   rounded
                   color="grey-5"
                   class="text-black q-mr-sm text-h7"
-                  >#{{user.skil_id}}</q-btn
+                  >#{{ user.skil_id }}</q-btn
                 >
                 <q-btn
                   size="7px"
                   rounded
                   color="grey-5"
                   class="text-black text-h7"
-                  >#{{user.skil_id}}</q-btn
+                  >#{{ user.skil_id }}</q-btn
                 >
               </div>
             </div>
@@ -181,10 +185,9 @@ export default defineComponent({
   data() {
     return {
       users: [],
-
     };
   },
-   // SHOW
+  // SHOW
   created() {
     const options = {
       method: "GET",
@@ -204,7 +207,6 @@ export default defineComponent({
         console.error(error);
       });
   },
-
 });
 </script>
 <style lang="sass" scoped>

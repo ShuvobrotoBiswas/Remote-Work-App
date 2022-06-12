@@ -124,24 +124,32 @@
                       class="text-black q-mr-sm text-h7"
                       >Gabriel Cotabita ✠</q-btn
                     >
+                    <q-btn
+                      size="7px"
+                      style="width: 140px"
+                      rounded
+                      to="/Create--Contractor-Company-Profile-Add-Freelancers"
+                      color="white"
+                      class="text-black q-mr-sm text-bold text-h7"
+                      icon="add"
+                      >Add freelance account</q-btn
+                    >
                   </div>
-                  <q-btn
-                    size="7px"
-                    rounded
-                    to="/Create--Contractor-Company-Profile-Add-Freelancers"
-                    color="white"
-                    class="text-black q-mr-sm text-bold text-h7"
-                    icon="add"
-                    >Add freelance account</q-btn
-                  >
                 </div>
               </div>
-              <div class="row text-bold">Add an Company description</div>
-              <div class="q-pa-md" style="max-width: 655px; min-width: 655px">
-                <q-input v-model="description" clearable outlined />
-                <div class="row q-py-md text-bold">Price range*</div>
-                <div class="row">
-                  <div class="col-3">
+              <!-- <div class="row text-bold" style="max-width: 800px">Add an Company description</div> -->
+              <div class="q-pa-md" style="max-width: 800px">
+                <p class="text-bold">Add an Company description</p>
+                <q-input
+                  style="max-width: 800px"
+                  v-model="description"
+                  clearable
+                  autogrow
+                  outlined
+                />
+                <div class="q-py-md text-bold">Price range*</div>
+                <div class="row" style="max-width: 800px">
+                  <div class="col">
                     <fieldset
                       style="
                         max-width: 80px;
@@ -159,7 +167,7 @@
                       />
                     </fieldset>
                   </div>
-                  <div class="col-2">
+                  <div class="col">
                     <fieldset
                       style="
                         max-width: 80px;
@@ -181,9 +189,9 @@
               </div>
 
               <div>
-                <div class="text-bold">Projects Categories</div>
+                <p class="text-bold">Projects Categories</p>
                 <q-input
-                  style="width: 400px"
+                  style="max-width: 400px"
                   v-model="search"
                   outlined
                   type="search"
@@ -232,7 +240,7 @@
                 </div>
               </div>
 
-              <div class="text-bold" style="max-width: 420px">
+              <div class="text-bold" style="max-width: 800px">
                 <div class="col text-bold">
                   Skills*
                   <skillSearch />
@@ -296,7 +304,6 @@
           </div>
           <div>* Fields marked with "*" are mendatory.</div>
         </q-card>
-
       </div>
     </q-form>
     <!-- Footer Div -->
@@ -334,9 +341,7 @@ export default defineComponent({
       ],
       group1: ref([]),
       options1: [{ label: "Branding & Logo Design" }, { label: "Web Design" }],
-      description: ref(
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-      ),
+      description: ref(""),
       pricelist1: ref("15"),
       pricelist2: ref("55"),
       skill_ids: ref(""),
