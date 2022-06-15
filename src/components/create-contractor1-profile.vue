@@ -28,7 +28,7 @@
                     </q-img>
                     <p class="custom-text-me row flex-center">
                       <q-file
-                        style="width: 20px; height: 5px"
+                        style="width: 40px; height: 25px"
                         v-model="profile_picture"
                         borderless
                         class="custom-text-me row flex-center"
@@ -48,10 +48,19 @@
                   </q-input>
                 </div>
                 <div class="text-h7 underline-font">
-                  <q-input borderless v-model="res_address">
+                  <q-input borderless v-model="billing_address">
                     <template v-slot:prepend>
                       <p class="text-bold custom-text-you underline-font">
                         Address:
+                      </p>
+                    </template>
+                  </q-input>
+                </div>
+                <div class="text-h7 underline-font">
+                  <q-input borderless v-model="billing_country_id">
+                    <template v-slot:prepend>
+                      <p class="text-bold custom-text-you underline-font">
+                        Country ID
                       </p>
                     </template>
                   </q-input>
@@ -327,7 +336,6 @@ export default defineComponent({
       search: ref(""),
       name: ref(" "),
       phone: ref(""),
-      res_address: ref(""),
       billing_address: ref(""),
       model: ref(null),
       website: ref(""),
@@ -345,19 +353,24 @@ export default defineComponent({
       pricelist1: ref("15"),
       pricelist2: ref("55"),
       skill_ids: ref(""),
+      billing_country_id: ref(""),
+      profile_picture: ref(""),
+      hourly_rate: ref(""),
     };
   },
-
+  onFileSelected(event) {
+    console.log(event.target.files);
+    this.file = event.target.files[0];
+  },
   methods: {
     createContractor() {
       const agency = new FormData();
       agency.append("name", this.name);
-      agency.append("res_address", this.res_address);
+      agency.append("billing_address", this.billing_address);
       agency.append("website", this.website);
-      // agency.append("skill_ids", this.skill_ids);
       agency.append("phone", this.phone);
-      agency.append("description", this.description);
-      agency.append("hourly_rate", this.hourly_rate);
+      agency.append("billing_country_id", this.billing_country_id);
+      // agency.append("hourly_rate", this.hourly_rate);
       agency.append("profile_picture", this.profile_picture);
       agency.append("vat_code", this.vat_code);
       agency.append("registration_code", this.registration_code);

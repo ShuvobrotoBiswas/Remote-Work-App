@@ -114,7 +114,7 @@ export default defineComponent({
       submit: ref(""),
       register: [],
       account_type: ref(null),
-      options: ["Agency", "Client"],
+      options: ["contractor", "client" ],
     };
   },
 

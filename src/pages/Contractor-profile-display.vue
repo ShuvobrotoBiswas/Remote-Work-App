@@ -76,7 +76,7 @@
         <div class="q-pa-md">
           <div class="row">
             <div class="col-4">
-              <q-img sizes="200px" src="~/assets/Avator1.png"></q-img>
+              <q-img sizes="200px" src="user.image"></q-img>
             </div>
             <div class="col-1"></div>
             <div class="col-6">

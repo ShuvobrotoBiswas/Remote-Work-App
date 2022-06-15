@@ -15,7 +15,7 @@
               <div class="row justify-between" style="max-width: 250px">
                 <div class="my-home" style="max-width: 77px; max-height: 70px">
                   <q-img
-                    src="~assets/Avator2.png"
+                    src="agency.image"
                     style="height: 40px; max-width: 40px"
                   >
                   </q-img>
@@ -39,7 +39,7 @@
                   ></q-btn>
                 </div>
               </div>
-              <Strong>{{ agency.name }}</Strong> <br />
+              <strong>{{ agency.name }}</strong> <br />
               <div class="q-py-md"></div>
               <strong>Address:</strong> {{ agency.billing_address }}
               <div></div>
@@ -50,7 +50,7 @@
               <div class="q-py-md"></div>
               <strong>Price range:</strong> {{ agency.price }}/hour <br />
               <div class="q-py-md"></div>
-              <Strong>Skills</Strong>
+              <strong>Skills</strong>
               <div>
                 <q-btn
                   size="7px"
@@ -208,7 +208,7 @@
              <div class="row justify-between" style="max-width: 250px">
                 <div class="my-home" style="max-width: 77px; max-height: 70px">
                   <q-img
-                    src="~assets/Avator2.png"
+                    src="agency.image"
                     style="height: 40px; max-width: 40px"
                   >
                   </q-img>
@@ -232,7 +232,7 @@
                   ></q-btn>
                 </div>
               </div>
-              <Strong>{{ agency.name }}</Strong> <br />
+              <strong>{{ agency.name }}</strong> <br />
               <div class="q-py-md"></div>
               <strong>Address:</strong> {{ agency.billing_address }}
               <div></div>
@@ -243,7 +243,7 @@
               <div class="q-py-md"></div>
               <strong>Price range:</strong> {{ agency.hourly_rate }}/hour <br />
               <div class="q-py-md"></div>
-              <Strong>Skills</Strong>
+              <strong>Skills</strong>
               <div>
                 <q-btn
                   size="7px"
@@ -302,21 +302,21 @@
                   rounded
                   color="white"
                   class="text-black q-mr-sm text-h7"
-                  >{{ agency.user }}</q-btn
+                  >{{ agency.skill_id }}</q-btn
                 >
                 <q-btn
                   size="7px"
                   rounded
                   color="white"
                   class="text-black q-mr-sm text-h7"
-                  >{{ agency.user }}</q-btn
+                  >{{ agency.skill_id }}</q-btn
                 >
                 <q-btn
                   size="7px"
                   rounded
                   color="white"
                   class="text-black text-h7"
-                  >{{ agency.user }}</q-btn
+                  >{{ agency.skill_id }}</q-btn
                 >
               </div>
               <br />
