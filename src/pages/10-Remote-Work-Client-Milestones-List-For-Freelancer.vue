@@ -300,7 +300,9 @@
                       </div>
                     </q-tab-panel>
 
-                    <q-tab-panel name="two"> Blank </q-tab-panel>
+                    <q-tab-panel name="two">
+                      <clientFeedback />
+                    </q-tab-panel>
                   </q-tab-panels>
                 </div>
 
@@ -329,9 +331,11 @@
 </template>
 
 <script>
+import clientFeedback from "components/Client-Feedback-freelancer.vue";
 import { defineComponent } from "vue";
 import { ref } from "vue";
 export default defineComponent({
+  components: { clientFeedback },
   // name: "IndexPage",
   setup() {
     return {
