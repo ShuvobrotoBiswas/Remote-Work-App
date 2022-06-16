@@ -45,7 +45,6 @@
               <div></div>
               <br />
               <strong>Description</strong> <br />
-              <!-- <div class="q-py-md"></div> -->
               {{ agency.description }} <br />
               <div class="q-py-md"></div>
               <strong>Price range:</strong> {{ agency.price }}/hour <br />
