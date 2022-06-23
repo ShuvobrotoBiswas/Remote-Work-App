@@ -83,6 +83,7 @@
     <q-separator />
 
     <!-- Card 1 Div -->
+    <!-- v-for="contract in contracts" :key="contract.id" -->
     <div class="row flex-center items-start">
       <div style="max-width: 950px">
         <div class="q-pa-md">
@@ -131,7 +132,7 @@
                     </div>
                     <div class="col-9">
                       <div class="text-h7 row text-bold">
-                        Graphic Designer | UX | UI
+                        {{ title }} | UX | UI
                       </div>
                       <div class="my-font row">
                         {{ designer }}
@@ -139,7 +140,7 @@
                       <div class="row">
                         <div class="col">
                           <div class="text-h7 text-bold">Requested price</div>
-                          <div class="text-h7">€500</div>
+                          <div class="text-h7">€ {{ price }}</div>
                         </div>
                         <div class="col">
                           <div class="text-h7 text-bold">Exexution time</div>
@@ -214,110 +215,111 @@
                   <p class="q-py-md text-h7 text-bold">
                     Select relevent projects from you portfolio*
                   </p>
-                  <div class="my-card flex-center row" style="max-width: 1300px">
-
-                      <div class="col-2 my-home flex-center q-mr-sm">
-                        <q-btn
-                          round
-                          color="grey"
-                          class="flex-center"
-                          icon="arrow_back_ios_new"
-                        />
-                      </div>
-                      <div
-                        class="col my-home  bid2 my-font q-mr-sm my-box1 my-box-4"
-                      >
-                        <div class="row flex-center">
-                          <q-img
+                  <div
+                    class="my-card flex-center row"
+                    style="max-width: 1300px"
+                  >
+                    <div class="col-2 my-home flex-center q-mr-sm">
+                      <q-btn
+                        round
+                        color="grey"
+                        class="flex-center"
+                        icon="arrow_back_ios_new"
+                      />
+                    </div>
+                    <div
+                      class="col my-home bid2 my-font q-mr-sm my-box1 my-box-4"
+                    >
+                      <div class="row flex-center">
+                        <q-img
                           src="~assets/Avator24.png"
                           class="image1 flex-center"
                           style="width: 40px; height: 40px"
                         >
                         </q-img>
-                        </div>
-                        <div class="q-pa-mg text-center custom-text-me">
-                          LOGO Design
-                        </div>
                       </div>
-                      <div
-                        class="col my-home bid2 my-font q-mr-sm my-box1 my-box-4"
-                      >
-                       <div class="row flex-center">
-                          <q-img
+                      <div class="q-pa-mg text-center custom-text-me">
+                        LOGO Design
+                      </div>
+                    </div>
+                    <div
+                      class="col my-home bid2 my-font q-mr-sm my-box1 my-box-4"
+                    >
+                      <div class="row flex-center">
+                        <q-img
                           src="~assets/Avator25.png"
                           class="image1 flex-center"
                           style="width: 40px; height: 40px"
                         >
                         </q-img>
-                        </div>
-                        <div class="q-pa-mg text-center custom-text-me">
-                          Website Design
-                        </div>
                       </div>
-                      <div
-                        class="col my-home bid2 my-font q-mr-sm my-box1 my-box-4"
-                      >
-                        <div class="row flex-center">
-                          <q-img
+                      <div class="q-pa-mg text-center custom-text-me">
+                        Website Design
+                      </div>
+                    </div>
+                    <div
+                      class="col my-home bid2 my-font q-mr-sm my-box1 my-box-4"
+                    >
+                      <div class="row flex-center">
+                        <q-img
                           src="~assets/Avator26.png"
                           class="image1 flex-center"
                           style="width: 40px; height: 40px"
                         >
                         </q-img>
-                        </div>
-                        <div class="q-pa-mg text-center custom-text-me">
-                          UX Design
-                        </div>
                       </div>
-                      <div
-                        class="col my-home bid2 my-font my-box1 my-box-4 q-mr-sm"
-                      >
-                        <div class="row flex-center">
-                          <q-btn
-                            flat
-                            size="5px"
-                            color="black"
-                            padding="5px"
-                            icon="check_box_outline_blank"
-                          />
-                          <q-btn
-                            flat
-                            size="5px"
-                            color="black"
-                            padding="5px"
-                            icon="check_box_outline_blank"
-                          />
-                        </div>
-                        <div class="row flex-center">
-                          <q-btn
-                            flat
-                            size="5px"
-                            color="black"
-                            padding="5px"
-                            icon="check_box_outline_blank"
-                          />
-                          <q-btn
-                            flat
-                            size="5px"
-                            color="black"
-                            padding="5px"
-                            icon="add"
-                          />
-                        </div>
-                        <p class="row flex-center"> Others</p>
-
+                      <div class="q-pa-mg text-center custom-text-me">
+                        UX Design
                       </div>
+                    </div>
+                    <div
+                      class="col my-home bid2 my-font my-box1 my-box-4 q-mr-sm"
+                    >
+                      <div class="row flex-center">
+                        <q-btn
+                          flat
+                          size="5px"
+                          color="black"
+                          padding="5px"
+                          icon="check_box_outline_blank"
+                        />
+                        <q-btn
+                          flat
+                          size="5px"
+                          color="black"
+                          padding="5px"
+                          icon="check_box_outline_blank"
+                        />
+                      </div>
+                      <div class="row flex-center">
+                        <q-btn
+                          flat
+                          size="5px"
+                          color="black"
+                          padding="5px"
+                          icon="check_box_outline_blank"
+                        />
+                        <q-btn
+                          flat
+                          size="5px"
+                          color="black"
+                          padding="5px"
+                          icon="add"
+                        />
+                      </div>
+                      <p class="row flex-center">Others</p>
+                    </div>
 
-                      <div class="col-2 my-home q-mr-sm">
-                        <div class="row flex-center">
-                          <q-btn
+                    <div class="col-2 my-home q-mr-sm">
+                      <div class="row flex-center">
+                        <q-btn
                           round
                           color="black"
                           class="flex-center"
                           icon="arrow_forward_ios"
                         />
-                        </div>
                       </div>
+                    </div>
                   </div>
                   <div class="row q-pa-md my-font">
                     <p>* Fields marked with "*" are mandatory.</p>
@@ -595,23 +597,24 @@
 <script>
 import { defineComponent } from "vue";
 import { ref } from "vue";
+import axios from "axios";
 export default defineComponent({
   // name: "IndexPage",
-  setup() {
+  data() {
     return {
-      lorem:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      text: " We have a logo that is about 13 years old and we are looking to update/change our branding, we need a logo that is more up to date and we want to keep the versatillity. We want to go bold/innovative with this change. Previous logo is attached for reference",
+      lorem: "",
+      text: "",
       checkbox19: ref(true),
       checkbox20: ref(false),
       checkbox21: ref(false),
       checkbox22: ref(false),
       checkbox23: ref(false),
-      price: ref("500 € |"),
+      price: ref("500"),
       input1: ref("Your answer here."),
       input2: ref("Your answer here."),
       date: ref("2020/07/08 , 2020/07/17"),
       group: ref("op1"),
+      contracts: [],
 
       options: [
         {
@@ -623,12 +626,31 @@ export default defineComponent({
           value: "op2",
         },
       ],
-      designer:
-        "Senior Graphic Design Specialist with 6+ years of experience in the management of the complete design process, from conceptualization to delivery. Skilled with Adobe Creative Suite (Illustrator, Photoshop, InDesign) and web design applications. Able to stretch the boundaries of web design and digital storytelling to help my client's brands stand out. ",
+      designer: "",
       ratingModel: ref(1),
       ratingModel1: ref(1),
       ratingModel2: ref(1),
     };
+  },
+  // SHOW
+  created() {
+    const options = {
+      method: "GET",
+      url: "https://rwapi.zupria.com/api/contract",
+      headers: {
+        Authorization:
+          "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcndhcGkuenVwcmlhLmNvbVwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY1MDY2NTQ3NCwiZXhwIjoxNjgyMjAxNDc0LCJuYmYiOjE2NTA2NjU0NzQsImp0aSI6ImRaUGlZem9YTXZZS25ITU4iLCJzdWIiOjgsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.m127K5q8Fy_6CxXEWJZyXqb_HJL4U-EUcHmdwmHTytI",
+      },
+    };
+    axios
+      .request(options)
+      .then((response) => {
+        console.log(response.data);
+        this.contracts = response.data;
+      })
+      .catch(function (error) {
+        console.error(error);
+      });
   },
 });
 </script>
