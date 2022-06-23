@@ -2,7 +2,7 @@
   <div class="row fixed-center">
     <!-- Card 1 Div -->
 
-    <q-card
+    <!-- <q-card
       class="my-card this-card flex-center text-black bg-white"
       style="max-width: 750px"
     >
@@ -28,72 +28,32 @@
               >
               </q-input>
 
-              <div class="row flex-center ">
-                  <q-btn
-                    size="10px"
-                    rounded
-                    color="black"
-                    type="submit"
-                    label="Register"
-                    class="text-white q-mr-sm   text-h7"
-                  ></q-btn>
-                  <q-btn
-                    size="10px"
-                    rounded
-                    to="/Create-Account-Step3"
-                    color="black"
-                    style="width: 80px"
-                    label="Login"
-                    class="text-white  text-h7"
-                  ></q-btn>
+              <div class="row flex-center">
+                <q-btn
+                  size="10px"
+                  rounded
+                  color="black"
+                  type="submit"
+                  label="Register"
+                  class="text-white q-mr-sm text-h7"
+                ></q-btn>
+                <q-btn
+                  size="10px"
+                  rounded
+                  to="/Create-Account-Step3"
+                  color="black"
+                  style="width: 80px"
+                  label="Login"
+                  class="text-white text-h7"
+                ></q-btn>
               </div>
             </div>
           </q-form>
         </div>
       </div>
-    </q-card>
+    </q-card> -->
 
-    <!-- Card 2 -->
-
-    <!-- <div class="q-pa-md this-card row flex flex-center items-start q-gutter-md">
-      <q-card
-        class="my-card q-pa-md this-card row flex-center text-black bg-white"
-        style="max-width: 750px"
-      >
-        <div class="q-pa-md">
-          <div class="row">
-            <div class="col-6 text-bold flex flex-center my-font">
-              I want to work on a project or get hired.
-            </div>
-            <q-form @submit.prevent="registration1">
-              <div class="col-6">
-                <q-input label="Email" type="email" v-model="email1"> </q-input>
-                <q-input label="Password" type="password" v-model="password1">
-                </q-input>
-                <q-input
-                  label="Confirm Password"
-                  type="password"
-                  v-model="confirm_password1"
-                >
-                </q-input>
-                <div class="q-py-md">
-                  <q-btn
-                    size="10px"
-                    rounded
-                    color="black"
-                    type="submit"
-                    label="Register"
-                    class="text-white text-h7"
-                  ></q-btn>
-                </div>
-              </div>
-            </q-form>
-          </div>
-        </div>
-      </q-card>
-    </div> -->
-
-    <!-- Footer Div -->
+    <login-activity />
   </div>
 </template>
 
@@ -101,8 +61,13 @@
 import { defineComponent } from "vue";
 import { ref } from "vue";
 import axios from "axios";
+import LoginActivity from "src/components/login-activity.vue";
 export default defineComponent({
   // name: "IndexPage",
+  components: {
+    LoginActivity,
+  },
+
   setup() {
     return {
       password_confirmation: ref(""),
@@ -114,7 +79,7 @@ export default defineComponent({
       submit: ref(""),
       register: [],
       account_type: ref(null),
-      options: ["contractor", "client" ],
+      options: ["contractor", "client"],
     };
   },
 
@@ -129,7 +94,6 @@ export default defineComponent({
       const options = {
         method: "POST",
         url: "https://rwapi.zupria.com/api/auth/register",
-        // headers: { "No Auth": " "},
         data: register,
       };
       axios
