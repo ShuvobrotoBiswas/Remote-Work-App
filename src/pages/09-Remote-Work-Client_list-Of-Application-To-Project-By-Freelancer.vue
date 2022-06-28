@@ -84,7 +84,7 @@
 
     <!-- Card 1 Div -->
     <!-- v-for="contract in contracts" :key="contract.id" -->
-    <div class="row flex-center items-start">
+    <div class="row flex-center items-start" >
       <div style="max-width: 950px">
         <div class="q-pa-md">
           <div class="row">
@@ -104,11 +104,11 @@
                         <q-img
                           sizes="100px"
                           style="max-width: 80px; max-height: 90px"
-                          src="~/assets/Avator16.png"
+                          src="profile_picture"
                         ></q-img>
                       </div>
                       <div class="text-h7 flex-center row">
-                        <span>Unverified</span>
+                        <span>{{account_status}}</span>
                       </div>
                       <div class="text-h7 flex-center row">
                         <q-btn
@@ -122,7 +122,7 @@
                       <div class="text-h7 row flex-center">
                         <div class="text-h7">
                           <q-rating
-                            v-model="ratingModel"
+                            v-model="avg_rating"
                             size="20px"
                             :max="5"
                             color="black"
@@ -144,11 +144,11 @@
                         </div>
                         <div class="col">
                           <div class="text-h7 text-bold">Exexution time</div>
-                          <div class="text-h7">2 weeks</div>
+                          <div class="text-h7">{{project_execution_weeks}} weeks</div>
                         </div>
                         <div class="col">
                           <div class="text-h7 text-bold">Offer validity</div>
-                          <div class="text-h7">3 days</div>
+                          <div class="text-h7">{{offer_validity}} days</div>
                         </div>
                       </div>
                       <div class="row">
@@ -176,7 +176,7 @@
                           <div class="text-h7 text-bold">
                             Type of contractor
                           </div>
-                          <div class="text-h7">Freelancer</div>
+                          <div class="text-h7">{{account_type}}</div>
                         </div>
                         <div class="col">
                           <div class="text-h7 text-bold"></div>
@@ -188,27 +188,19 @@
                       </div>
                       <div class="row text-h7 bg-grey-4">
                         <strong class="q-mr-sm">Q</strong>
-                        Ut enim ad minim veniam, quis nostrud exercitation
-                        ullamco laboris nisi ut aliquip?
+                        {{questionAnswers}}
                       </div>
                       <div class="row text-h7 text-white bg-black">
                         <strong class="q-mr-sm">A</strong>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip.
+                        {{questionAnswers}}
                       </div>
                       <div class="row text-h7 bg-grey-4">
                         <strong class="q-mr-sm">Q</strong>
-                        Ut enim ad minim veniam, quis nostrud exercitation
-                        ullamco laboris nisi ut aliquip?
+                        {{questionAnswers}}
                       </div>
                       <div class="row text-h7 text-white bg-black">
                         <strong class="q-mr-sm">A</strong>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip.
+                        {{questionAnswers}}
                       </div>
                     </div>
                   </div>
@@ -376,7 +368,7 @@
                       <div class="text-h7 row flex-center">
                         <div class="text-h7">
                           <q-rating
-                            v-model="ratingModel"
+                            v-model="avg_rating"
                             size="20px"
                             :max="5"
                             color="black"
@@ -489,7 +481,7 @@
                       <div class="text-h7 row flex-center">
                         <div class="text-h7">
                           <q-rating
-                            v-model="ratingModel"
+                            v-model="avg_rating"
                             size="20px"
                             :max="5"
                             color="black"
@@ -609,12 +601,12 @@ export default defineComponent({
       checkbox21: ref(false),
       checkbox22: ref(false),
       checkbox23: ref(false),
-      price: ref("500"),
+      price: ref(""),
       input1: ref("Your answer here."),
       input2: ref("Your answer here."),
       date: ref("2020/07/08 , 2020/07/17"),
       group: ref("op1"),
-      contracts: [],
+      listProposal: [],
 
       options: [
         {
@@ -627,16 +619,22 @@ export default defineComponent({
         },
       ],
       designer: "",
-      ratingModel: ref(1),
+      avg_rating: ref(1),
       ratingModel1: ref(1),
       ratingModel2: ref(1),
+      account_status:"",
+      title:"",
+      project_execution_weeks:"",
+      offer_validity:"",
+      account_type:"",
+      questionAnswers:"",
     };
   },
   // SHOW
   created() {
     const options = {
       method: "GET",
-      url: "https://rwapi.zupria.com/api/contract",
+      url: "https://rwapi.zupria.com/api/proposal/received/1",
       headers: {
         Authorization:
           "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcndhcGkuenVwcmlhLmNvbVwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY1MDY2NTQ3NCwiZXhwIjoxNjgyMjAxNDc0LCJuYmYiOjE2NTA2NjU0NzQsImp0aSI6ImRaUGlZem9YTXZZS25ITU4iLCJzdWIiOjgsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.m127K5q8Fy_6CxXEWJZyXqb_HJL4U-EUcHmdwmHTytI",
@@ -646,7 +644,7 @@ export default defineComponent({
       .request(options)
       .then((response) => {
         console.log(response.data);
-        this.contracts = response.data;
+        this.listProposal = response.data;
       })
       .catch(function (error) {
         console.error(error);
