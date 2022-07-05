@@ -83,7 +83,7 @@ export default defineComponent({
 
       const options = {
         method: "POST",
-        url: "https://rwapi.zupria.com/api/user/profilePic",
+        url: "https://rwapi.zupria.com/api/user/updateProfilePic",
         data: profilePic,
         headers: {
           Authorization:

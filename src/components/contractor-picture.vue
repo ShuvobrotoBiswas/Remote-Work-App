@@ -59,7 +59,7 @@ export default defineComponent({
   name: "contractor-picture",
   setup() {
     const file = ref(null);
-    const imageUrl = ref("https://rwapi.zupria.com/api/user/profilePic");
+    const imageUrl = ref("https://rwapi.zupria.com/api/user/updateProfilePic");
     const handleUpload = () => {
       console.log("Initially Uploaded Successful");
       if (file.value) {
@@ -94,7 +94,7 @@ export default defineComponent({
 
       const options = {
         method: "POST",
-        url: "https://rwapi.zupria.com/api/user/profilePic",
+        url: "https://rwapi.zupria.com/api/user/updateProfilePic",
         data: profilePic,
         headers: {
           Authorization:
