@@ -53,7 +53,6 @@
         <q-btn dense flat color="black" icon="tune"></q-btn>
         <div>Settings</div>
       </div>
-      <!-- <div class="col"></div> -->
     </div>
     <q-separator />
 

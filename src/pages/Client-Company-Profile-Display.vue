@@ -1,30 +1,5 @@
 <template>
   <div>
-    <!-- <q-header>
-      <q-toolbar class="bg-white">
-        <q-toolbar-title>
-          <div class="text-green">
-            <q-img
-              src="~assets/Avator3.png"
-              style="height: 35px; max-width: 110px"
-            ></q-img>
-          </div>
-        </q-toolbar-title>
-
-        <div class="text-grey text-bold">Hello,</div>
-        <div class="text-black text-bold">Meat</div>
-        <div>
-          <q-avatar>
-            <q-img
-              src="~assets/Avator14.png"
-              style="height: 27px; max-width: 27px"
-            >
-            </q-img>
-          </q-avatar>
-        </div>
-        <div class="text-black q-mr-sm">LOGOUT</div>
-      </q-toolbar>
-    </q-header> -->
     <div class="flex-break"></div>
     <div class="text-h7 text-center">Hi Florin, welcome to your dashboard!</div>
     <div class="flex-break q-py-md"></div>
