@@ -112,7 +112,6 @@ export default defineComponent({
       const options = {
         method: "POST",
         url: "https://rwapi.zupria.com/api/auth/register",
-        // headers: { "No Auth": " "},
         data: register,
       };
       axios
@@ -143,7 +142,7 @@ export default defineComponent({
           color: "green-4",
           textColor: "white",
           icon: "cloud_done",
-          message: "You should be able to register in the application.",
+          message: "Registration is successful , An email has been send to your address. Please log into your email and confirm your account.",
         });
       }
     },
