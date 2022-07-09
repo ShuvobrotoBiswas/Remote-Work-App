@@ -24,7 +24,9 @@
             </q-img>
           </q-avatar>
         </div>
-        <div class="text-black q-mr-sm">LOGOUT</div>
+        <div class="text-black q-mr-sm">
+          <q-btn flat label="LOGOUT" dense to="/Create-Account-Step3"></q-btn>
+        </div>
       </q-toolbar>
     </q-header>
 
@@ -34,7 +36,7 @@
     <div class="text-h7 text-center">Hi Florin, welcome to your dashboard!</div>
     <div class="flex-break q-py-md"></div>
     <q-separator />
-     <div class="row flex-center q-pa-md">
+    <div class="row flex-center q-pa-md">
       <!-- <div class="col"></div> -->
       <div class="text-black text-h7 text-center">
         <q-btn
@@ -89,60 +91,59 @@
     <q-separator />
 
     <!-- Card 1 Div -->
-              <q-form @submit.prevent="profile">
-
-    <div class="row flex-center items-start">
-      <div flat bordered class="my-card" style="max-width: 800px">
-        <q-card-section>
-          <div class="text-h6 text-bold text-center">
-            Create your client profile (client + company)
-          </div>
-        </q-card-section>
-        <q-separator />
-        <div class="q-pa-md">
-          <div class="row">
-            <div class="col-5">
-              <clientProfilePic />
+    <q-form @submit.prevent="profile">
+      <div class="row flex-center items-start">
+        <div flat bordered class="my-card" style="max-width: 800px">
+          <q-card-section>
+            <div class="text-h6 text-bold text-center">
+              Create your client profile (client + company)
             </div>
-            <div class="col-1"></div>
-            <div class="col-6">
+          </q-card-section>
+          <q-separator />
+          <div class="q-pa-md">
+            <div class="row">
+              <div class="col-5">
+                <clientProfilePic />
+              </div>
+              <div class="col-1"></div>
+              <div class="col-6">
                 <q-input v-model="name" type="name" label="Complete name*" />
                 <q-input v-model="res_address" label="Address*" />
                 <q-input v-model="billing_address" label="Billing address*" />
                 <q-input v-model="phone" type="tel" label="Phone number" />
+              </div>
             </div>
-          </div>
 
-          <q-separator />
+            <q-separator />
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- Card 3 div -->
+      <!-- Card 3 div -->
 
-    <createAgency />
-    <!-- Footer Div -->
+      <createAgency />
+      <!-- Footer Div -->
 
-    <div class="row flex-center q-pa-md">
-      <q-btn
-        size="10px"
-        rounded
-        color="black"
-        type="submit"
-        icon="check_circle_outline"
-        label="Settings saved!"
-        class="text-white text-h7 q-mr-sm"
-      ></q-btn>
-      <q-btn
-        size="10px"
-        rounded
-        outline
-        to="/Client-Company-Profile-Doc-Verification"
-        label="Go to ID verification →"
-        class="text-h7"
-      ></q-btn>
-    </div>
-</q-form>
+      <div class="row flex-center q-pa-md">
+        <q-btn
+          size="10px"
+          rounded
+          color="black"
+          type="submit"
+          icon="check_circle_outline"
+          label="Settings saved!"
+          class="text-white text-h7 q-mr-sm"
+        ></q-btn>
+        <q-btn
+          size="10px"
+          rounded
+          outline
+          to="/Client-Company-Profile-Doc-Verification"
+          label="Go to ID verification →"
+          class="text-h7"
+        ></q-btn>
+      </div>
+    </q-form>
   </div>
 </template>
 

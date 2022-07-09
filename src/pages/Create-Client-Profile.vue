@@ -23,7 +23,9 @@
             </q-img>
           </q-avatar>
         </div>
-        <div class="text-black q-mr-sm">LOGOUT</div>
+        <div class="text-black q-mr-sm">
+          <q-btn flat label="LOGOUT" dense to="/Create-Account-Step3"></q-btn>
+        </div>
       </q-toolbar>
     </q-header>
 
