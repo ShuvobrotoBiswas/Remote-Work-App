@@ -2,7 +2,6 @@
   <div class="q-pa-md">
     <div class="flex-center row q-pa-md">
       <!-- Card 1 Div -->
-
       <div class="q-py-md col-6 flex flex-center">
         <q-card
           class="my-card this-card flex flex-center text-black bg-white"

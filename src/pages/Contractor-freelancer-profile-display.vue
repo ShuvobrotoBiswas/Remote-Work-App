@@ -5,6 +5,7 @@
     <div class="flex-break q-py-md"></div>
     <q-separator />
      <div class="row flex-center q-pa-md">
+      
         <div class="text-black text-h7 text-center">
           <q-btn
             to="/Contractor-profile-display"

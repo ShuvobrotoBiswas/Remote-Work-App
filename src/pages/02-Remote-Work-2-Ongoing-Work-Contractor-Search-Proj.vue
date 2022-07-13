@@ -28,7 +28,8 @@
                                 <q-list style="min-width: 250px">
                                   <q-item clickable v-close-popup>
                                     <q-item-section
-                                      >Desktop Software Development</q-item-section
+                                      >Desktop Software
+                                      Development</q-item-section
                                     >
                                   </q-item>
                                   <q-item clickable v-close-popup>
@@ -36,10 +37,8 @@
                                       >Mobile Design</q-item-section
                                     > </q-item
                                   ><q-item clickable v-close-popup>
-                                    <q-item-section
-                                      >Web Design</q-item-section
-                                    > </q-item
-                                  >
+                                    <q-item-section>Web Design</q-item-section>
+                                  </q-item>
                                 </q-list>
                               </q-menu>
                             </template>
@@ -139,19 +138,15 @@
                               <q-menu>
                                 <q-list style="min-width: 250px">
                                   <q-item clickable v-close-popup>
-                                    <q-item-section
-                                      >Albania</q-item-section
-                                    >
+                                    <q-item-section>Albania</q-item-section>
                                   </q-item>
                                   <q-item clickable v-close-popup>
                                     <q-item-section
                                       >Algeria</q-item-section
                                     > </q-item
                                   ><q-item clickable v-close-popup>
-                                    <q-item-section
-                                      >Argentina</q-item-section
-                                    > </q-item
-                                  >
+                                    <q-item-section>Argentina</q-item-section>
+                                  </q-item>
                                 </q-list>
                               </q-menu>
                             </template>
@@ -203,8 +198,8 @@
                                   ><q-item clickable v-close-popup>
                                     <q-item-section
                                       >Programmer JAVA</q-item-section
-                                    > </q-item
-                                  >
+                                    >
+                                  </q-item>
                                 </q-list>
                               </q-menu>
                             </template>
@@ -226,18 +221,14 @@
                               <q-menu>
                                 <q-list style="min-width: 250px">
                                   <q-item clickable v-close-popup>
-                                    <q-item-section
-                                      >Java</q-item-section
-                                    >
+                                    <q-item-section>Java</q-item-section>
                                   </q-item>
                                   <q-item clickable v-close-popup>
                                     <q-item-section
                                       >PHP</q-item-section
                                     > </q-item
                                   ><q-item clickable v-close-popup>
-                                    <q-item-section
-                                      >Python</q-item-section
-                                    >
+                                    <q-item-section>Python</q-item-section>
                                   </q-item>
                                 </q-list>
                               </q-menu>

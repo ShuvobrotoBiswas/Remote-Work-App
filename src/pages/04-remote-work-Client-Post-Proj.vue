@@ -1,6 +1,5 @@
 <template>
   <!-- Header Div -->
-
   <q-header>
     <q-toolbar class="bg-white">
       <q-toolbar-title>

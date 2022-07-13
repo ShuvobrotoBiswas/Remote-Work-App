@@ -2,7 +2,6 @@
   <div class="row q-pa-md flex-center">
     <q-card bordered class="this-card" style="max-width: 1100px">
       <!-- Card 1 Div -->
-
       <div class="row flex-center items-start">
         <div flat bordered class="my-card" style="max-width: 1100px">
           <q-card-section>
