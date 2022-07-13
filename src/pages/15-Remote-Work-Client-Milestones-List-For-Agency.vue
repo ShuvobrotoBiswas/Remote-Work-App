@@ -22,7 +22,9 @@
             </q-img>
           </q-avatar>
         </div>
-        <div class="text-black q-mr-sm">LOGOUT</div>
+        <div class="text-black q-mr-sm">
+          <q-btn flat label="LOGOUT" dense to="/Create-Account-Step3"></q-btn>
+        </div>
       </q-toolbar>
     </q-header>
 
@@ -37,13 +39,25 @@
         <div class="col"></div>
         <div class="col">
           <div class="text-black text-h7 text-center">
-            <q-btn dense flat color="black" icon="person"></q-btn>
+            <q-btn
+              dense
+              to="/Contractor-profile-display"
+              flat
+              color="black"
+              icon="person"
+            ></q-btn>
             <div>Profile</div>
           </div>
         </div>
         <div class="col">
           <div class="text-black text-h7 text-center">
-            <q-btn dense flat color="black" icon="addchart"></q-btn>
+            <q-btn
+              dense
+              to="/01-remote-work-Client-Post-Proj"
+              flat
+              color="black"
+              icon="addchart"
+            ></q-btn>
             <div>Post a Project</div>
           </div>
         </div>
@@ -51,6 +65,7 @@
           <div class="text-black text-h7 text-center">
             <q-btn
               dense
+              to="/06-Remote-Work-Contractor-Search-Proj"
               flat
               color="black"
               icon="insert_chart_outlined"
@@ -66,7 +81,13 @@
         </div>
         <div class="col">
           <div class="text-black text-h7 text-center">
-            <q-btn dense flat color="black" icon="local_atm"></q-btn>
+            <q-btn
+              dense
+              to="/Client-Company-Profile-Doc-Verification"
+              flat
+              color="black"
+              icon="local_atm"
+            ></q-btn>
             <div>Accounts</div>
           </div>
         </div>
@@ -98,7 +119,12 @@
                     <div class="row text-h7 text-bold">AGENCY NAME</div>
                     <div class="text-h7 row">
                       <q-img
-                        style="height: 70px; width: 70px ;border-radius: 50%; ;border: 1px solid black"
+                        style="
+                          height: 70px;
+                          width: 70px;
+                          border-radius: 50%;
+                          border: 1px solid black;
+                        "
                         src="~/assets/Avator20.png"
                       ></q-img>
                     </div>
@@ -261,7 +287,7 @@
                             </div>
                           </div>
                         </div>
-                         <div class="col-3">
+                        <div class="col-3">
                           <div class="row flex-center">
                             <q-btn
                               rounded

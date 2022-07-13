@@ -22,7 +22,9 @@
             </q-img>
           </q-avatar>
         </div>
-        <div class="text-black q-mr-sm">LOGOUT</div>
+        <div class="text-black q-mr-sm">
+          <q-btn flat label="LOGOUT" dense to="/Create-Account-Step3"></q-btn>
+        </div>
       </q-toolbar>
     </q-header>
 
@@ -38,13 +40,25 @@
         <div class="col"></div>
         <div class="col">
           <div class="text-black text-h7 text-center">
-            <q-btn dense flat color="black" icon="person"></q-btn>
+            <q-btn
+              dense
+              to="/Contractor-profile-display"
+              flat
+              color="black"
+              icon="person"
+            ></q-btn>
             <div>Profile</div>
           </div>
         </div>
         <div class="col">
           <div class="text-black text-h7 text-center">
-            <q-btn dense flat color="black" icon="addchart"></q-btn>
+            <q-btn
+              dense
+              to="/01-remote-work-Client-Post-Proj"
+              flat
+              color="black"
+              icon="addchart"
+            ></q-btn>
             <div>Post a Project</div>
           </div>
         </div>
@@ -52,6 +66,7 @@
           <div class="text-black text-h7 text-center">
             <q-btn
               dense
+              to="/06-Remote-Work-Contractor-Search-Proj"
               flat
               color="black"
               icon="insert_chart_outlined"
@@ -67,7 +82,13 @@
         </div>
         <div class="col">
           <div class="text-black text-h7 text-center">
-            <q-btn dense flat color="black" icon="local_atm"></q-btn>
+            <q-btn
+              dense
+              to="/Client-Company-Profile-Doc-Verification"
+              flat
+              color="black"
+              icon="local_atm"
+            ></q-btn>
             <div>Accounts</div>
           </div>
         </div>
@@ -84,7 +105,7 @@
 
     <!-- Card 1 Div -->
     <!-- v-for="contract in contracts" :key="contract.id" -->
-    <div class="row flex-center items-start" >
+    <div class="row flex-center items-start">
       <div style="max-width: 950px">
         <div class="q-pa-md">
           <div class="row">
@@ -108,7 +129,7 @@
                         ></q-img>
                       </div>
                       <div class="text-h7 flex-center row">
-                        <span>{{account_status}}</span>
+                        <span>{{ account_status }}</span>
                       </div>
                       <div class="text-h7 flex-center row">
                         <q-btn
@@ -144,11 +165,13 @@
                         </div>
                         <div class="col">
                           <div class="text-h7 text-bold">Exexution time</div>
-                          <div class="text-h7">{{project_execution_weeks}} weeks</div>
+                          <div class="text-h7">
+                            {{ project_execution_weeks }} weeks
+                          </div>
                         </div>
                         <div class="col">
                           <div class="text-h7 text-bold">Offer validity</div>
-                          <div class="text-h7">{{offer_validity}} days</div>
+                          <div class="text-h7">{{ offer_validity }} days</div>
                         </div>
                       </div>
                       <div class="row">
@@ -176,7 +199,7 @@
                           <div class="text-h7 text-bold">
                             Type of contractor
                           </div>
-                          <div class="text-h7">{{account_type}}</div>
+                          <div class="text-h7">{{ account_type }}</div>
                         </div>
                         <div class="col">
                           <div class="text-h7 text-bold"></div>
@@ -188,19 +211,19 @@
                       </div>
                       <div class="row text-h7 bg-grey-4">
                         <strong class="q-mr-sm">Q</strong>
-                        {{questionAnswers}}
+                        {{ questionAnswers }}
                       </div>
                       <div class="row text-h7 text-white bg-black">
                         <strong class="q-mr-sm">A</strong>
-                        {{questionAnswers}}
+                        {{ questionAnswers }}
                       </div>
                       <div class="row text-h7 bg-grey-4">
                         <strong class="q-mr-sm">Q</strong>
-                        {{questionAnswers}}
+                        {{ questionAnswers }}
                       </div>
                       <div class="row text-h7 text-white bg-black">
                         <strong class="q-mr-sm">A</strong>
-                        {{questionAnswers}}
+                        {{ questionAnswers }}
                       </div>
                     </div>
                   </div>
@@ -622,12 +645,12 @@ export default defineComponent({
       avg_rating: ref(1),
       ratingModel1: ref(1),
       ratingModel2: ref(1),
-      account_status:"",
-      title:"",
-      project_execution_weeks:"",
-      offer_validity:"",
-      account_type:"",
-      questionAnswers:"",
+      account_status: "",
+      title: "",
+      project_execution_weeks: "",
+      offer_validity: "",
+      account_type: "",
+      questionAnswers: "",
     };
   },
   // SHOW

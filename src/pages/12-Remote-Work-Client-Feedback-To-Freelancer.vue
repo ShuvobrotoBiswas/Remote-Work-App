@@ -22,7 +22,9 @@
             </q-img>
           </q-avatar>
         </div>
-        <div class="text-black q-mr-sm">LOGOUT</div>
+        <div class="text-black q-mr-sm">
+          <q-btn flat label="LOGOUT" dense to="/Create-Account-Step3"></q-btn>
+        </div>
       </q-toolbar>
     </q-header>
 
@@ -37,13 +39,25 @@
         <div class="col"></div>
         <div class="col">
           <div class="text-black text-h7 text-center">
-            <q-btn dense flat color="black" icon="person"></q-btn>
+            <q-btn
+              dense
+              to="/Contractor-profile-display"
+              flat
+              color="black"
+              icon="person"
+            ></q-btn>
             <div>Profile</div>
           </div>
         </div>
         <div class="col">
           <div class="text-black text-h7 text-center">
-            <q-btn dense flat color="black" icon="addchart"></q-btn>
+            <q-btn
+              dense
+              to="/01-remote-work-Client-Post-Proj"
+              flat
+              color="black"
+              icon="addchart"
+            ></q-btn>
             <div>Post a Project</div>
           </div>
         </div>
@@ -52,6 +66,7 @@
             <q-btn
               dense
               flat
+              to="/06-Remote-Work-Contractor-Search-Proj"
               color="black"
               icon="insert_chart_outlined"
             ></q-btn>
@@ -66,7 +81,13 @@
         </div>
         <div class="col">
           <div class="text-black text-h7 text-center">
-            <q-btn dense flat color="black" icon="local_atm"></q-btn>
+            <q-btn
+              dense
+              flat
+              to="/Client-Company-Profile-Doc-Verification"
+              color="black"
+              icon="local_atm"
+            ></q-btn>
             <div>Accounts</div>
           </div>
         </div>
@@ -103,7 +124,6 @@
                       ></q-img>
                     </div>
                   </div>
-
                 </div>
                 <div class="row">
                   <q-tabs v-model="tab" class="text-teal">
@@ -225,21 +245,21 @@
                               </p>
                             </div>
                             <div class="row q-gutter-sm">
-                                  <q-radio
-                                    v-model="shape"
-                                    val="radio1"
-                                    class="q-mr-sm"
-                                    color="black"
-                                    label="I want to work with this contractor again"
-                                  />
-                                  <q-radio
-                                    v-model="shape"
-                                    color="black"
-                                    class="q-mr-sm"
-                                    val="rectangle"
-                                    label="I want to try a different contractor"
-                                  />
-                              </div>
+                              <q-radio
+                                v-model="shape"
+                                val="radio1"
+                                class="q-mr-sm"
+                                color="black"
+                                label="I want to work with this contractor again"
+                              />
+                              <q-radio
+                                v-model="shape"
+                                color="black"
+                                class="q-mr-sm"
+                                val="rectangle"
+                                label="I want to try a different contractor"
+                              />
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -276,7 +296,7 @@
         unelevated
         v-model="submit"
         color="black"
-        class="text-white "
+        class="text-white"
       />
     </div>
   </div>

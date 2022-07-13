@@ -22,7 +22,9 @@
             </q-img>
           </q-avatar>
         </div>
-        <div class="text-black q-mr-sm">LOGOUT</div>
+        <div class="text-black q-mr-sm">
+          <q-btn flat label="LOGOUT" dense to="/Create-Account-Step3"></q-btn>
+        </div>
       </q-toolbar>
     </q-header>
 
@@ -37,13 +39,25 @@
         <div class="col"></div>
         <div class="col">
           <div class="text-black text-h7 text-center">
-            <q-btn dense flat color="black" icon="person"></q-btn>
+            <q-btn
+              dense
+              flat
+              to="/Contractor-profile-display"
+              color="black"
+              icon="person"
+            ></q-btn>
             <div>Profile</div>
           </div>
         </div>
         <div class="col">
           <div class="text-black text-h7 text-center">
-            <q-btn dense flat color="black" icon="addchart"></q-btn>
+            <q-btn
+              dense
+              flat
+              to="/01-remote-work-Client-Post-Proj"
+              color="black"
+              icon="addchart"
+            ></q-btn>
             <div>Post a Project</div>
           </div>
         </div>
@@ -51,6 +65,7 @@
           <div class="text-black text-h7 text-center">
             <q-btn
               dense
+              to="/06-Remote-Work-Contractor-Search-Proj"
               flat
               color="black"
               icon="insert_chart_outlined"
@@ -66,7 +81,13 @@
         </div>
         <div class="col">
           <div class="text-black text-h7 text-center">
-            <q-btn dense flat color="black" icon="local_atm"></q-btn>
+            <q-btn
+              dense
+              flat
+              to="/Client-Company-Profile-Doc-Verification"
+              color="black"
+              icon="local_atm"
+            ></q-btn>
             <div>Accounts</div>
           </div>
         </div>
@@ -82,7 +103,11 @@
     <q-separator />
 
     <!-- Card 1 Div -->
-    <div v-for="post in posts" :key="post.id"  class="row flex-center items-start">
+    <div
+      v-for="post in posts"
+      :key="post.id"
+      class="row flex-center items-start"
+    >
       <div style="max-width: 750px">
         <div class="row">
           <q-card-section>
@@ -100,43 +125,47 @@
             <div class="row q-py-md">
               <div class="col">
                 <div class="text-h7 text-bold">Category job Project</div>
-                <div class="text-h7">{{post.post_type}}</div>
+                <div class="text-h7">{{ post.post_type }}</div>
               </div>
               <div class="col">
                 <div class="text-h7 text-bold">Project type</div>
-                <div class="text-h7">{{post.post_type_text}}</div>
+                <div class="text-h7">{{ post.post_type_text }}</div>
               </div>
               <div class="col">
                 <div class="text-h7 text-bold">Payment</div>
-                <div class="text-h7">{{post.price_type}} price - €{{post.budget}}</div>
+                <div class="text-h7">
+                  {{ post.price_type }} price - €{{ post.budget }}
+                </div>
               </div>
             </div>
             <div class="row">
               <div class="col">
                 <div class="text-h7 text-bold">Duration</div>
-                <div class="text-h7">Max. {{post.project_duration_weeks}} weeks</div>
+                <div class="text-h7">
+                  Max. {{ post.project_duration_weeks }} weeks
+                </div>
               </div>
               <div class="col">
                 <div class="text-h7 text-bold">Availability in hours</div>
-                <div class="text-h7">{{post.max_hrs_per_week}} h/week</div>
+                <div class="text-h7">{{ post.max_hrs_per_week }} h/week</div>
               </div>
               <div class="col">
                 <div class="text-h7 text-bold">Level of expertise</div>
-                <div class="text-h7">{{post.exp_level}}</div>
+                <div class="text-h7">{{ post.exp_level }}</div>
               </div>
             </div>
             <div class="row q-py-md">
               <div class="col">
                 <div class="text-h7 text-bold">Required skills</div>
-                <div class="text-h7">{{post.skills}}</div>
+                <div class="text-h7">{{ post.skills }}</div>
               </div>
               <div class="col">
                 <div class="text-h7 text-bold">Type of contractor</div>
-                <div class="text-h7">{{post.profile_type}}</div>
+                <div class="text-h7">{{ post.profile_type }}</div>
               </div>
               <div class="col">
                 <div class="text-h7 text-bold">Contractor availability</div>
-                <div class="text-h7">{{post.min_hrs_per_week}}h/week</div>
+                <div class="text-h7">{{ post.min_hrs_per_week }}h/week</div>
               </div>
             </div>
             <div class="q-pa-md">
@@ -180,7 +209,7 @@
 
             <q-separator />
 
-            <div class=" q-py-md text-bold text-h7">Attachments</div>
+            <div class="q-py-md text-bold text-h7">Attachments</div>
             <q-btn
               size="13px"
               flat
@@ -272,14 +301,14 @@
 <script>
 import { ref } from "vue";
 import axios from "axios";
-export default ({
+export default {
   // name: "IndexPage",
   data() {
     return {
       text: " We have a logo that is about 13 years old and we are looking to update/change our branding, we need a logo that is more up to date and we want to keep the versatillity. We want to go bold/innovative with this change. Previous logo is attached for reference",
       ratingModel: ref(2),
-      posts:[],
-      title:"",
+      posts: [],
+      title: "",
     };
   },
   // SHOW
@@ -302,7 +331,7 @@ export default ({
         console.error(error);
       });
   },
-});
+};
 </script>
 <style lang="sass" scoped>
 .my-card

@@ -21,7 +21,9 @@
           </q-img>
         </q-avatar>
       </div>
-      <div class="text-black q-mr-sm">LOGOUT</div>
+      <div class="text-black q-mr-sm">
+        <q-btn flat label="LOGOUT" dense to="/Create-Account-Step3"></q-btn>
+      </div>
     </q-toolbar>
   </q-header>
 
@@ -36,13 +38,25 @@
         <div class="col"></div>
         <div class="col">
           <div class="text-black text-h7 text-center">
-            <q-btn dense flat color="black" icon="person"></q-btn>
+            <q-btn
+              dense
+              to="/Contractor-profile-display"
+              flat
+              color="black"
+              icon="person"
+            ></q-btn>
             <div>Profile</div>
           </div>
         </div>
         <div class="col">
           <div class="text-black text-h7 text-center">
-            <q-btn dense flat color="black" icon="addchart"></q-btn>
+            <q-btn
+              dense
+              to="/01-remote-work-Client-Post-Proj"
+              flat
+              color="black"
+              icon="addchart"
+            ></q-btn>
             <div>Post a Project</div>
           </div>
         </div>
@@ -51,6 +65,7 @@
             <q-btn
               dense
               flat
+              to="/06-Remote-Work-Contractor-Search-Proj"
               color="black"
               icon="insert_chart_outlined"
             ></q-btn>
@@ -65,7 +80,13 @@
         </div>
         <div class="col">
           <div class="text-black text-h7 text-center">
-            <q-btn dense flat color="black" icon="local_atm"></q-btn>
+            <q-btn
+              dense
+              flat
+              to="/Client-Company-Profile-Doc-Verification"
+              color="black"
+              icon="local_atm"
+            ></q-btn>
             <div>Accounts</div>
           </div>
         </div>
@@ -151,10 +172,7 @@
                 <q-item-label caption>Senior Bacend Developer</q-item-label>
               </q-item-section>
               <q-item-section side>
-                <q-checkbox
-                  v-model="invitation_profile_ids"
-                  color="cyan"
-                />
+                <q-checkbox v-model="invitation_profile_ids" color="cyan" />
               </q-item-section>
             </q-item>
             <q-item clickable v-ripple>
@@ -168,10 +186,7 @@
                 <q-item-label caption>Middle Bacend Developer</q-item-label>
               </q-item-section>
               <q-item-section side>
-                <q-checkbox
-                  v-model="invitation_profile_ids"
-                  color="cyan"
-                />
+                <q-checkbox v-model="invitation_profile_ids" color="cyan" />
               </q-item-section>
             </q-item>
             <q-item clickable v-ripple>
@@ -185,10 +200,7 @@
                 <q-item-label caption>Java Developer</q-item-label>
               </q-item-section>
               <q-item-section side>
-                <q-checkbox
-                  v-model="invitation_profile_ids"
-                  color="cyan"
-                />
+                <q-checkbox v-model="invitation_profile_ids" color="cyan" />
               </q-item-section>
             </q-item>
           </div>
