@@ -32,70 +32,54 @@
     <div class="text-h7 text-center">Hi Florin, welcome to your dashboard!</div>
     <div class="flex-break q-py-md"></div>
     <q-separator />
-    <div class="">
-      <div class="row">
-        <div class="col"></div>
-        <div class="col">
-          <div class="text-black text-h7 text-center">
-            <q-btn
-              dense
-              flat
-              to="/Contractor-profile-display"
-              color="black"
-              icon="person"
-            ></q-btn>
-            <div>Profile</div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="text-black text-h7 text-center">
-            <q-btn
-              dense
-              flat
-              to="/01-remote-work-Client-Post-Proj"
-              color="black"
-              icon="addchart"
-            ></q-btn>
-            <div>Post a Project</div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="text-black text-h7 text-center">
-            <q-btn
-              dense
-              flat
-              to="/06-Remote-Work-Contractor-Search-Proj"
-              color="black"
-              icon="insert_chart_outlined"
-            ></q-btn>
-            <div>Projects</div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="text-black text-h7 text-center">
-            <q-btn dense flat color="black" icon="mark_email_unread"></q-btn>
-            <div>Messages</div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="text-black text-h7 text-center">
-            <q-btn
-              dense
-              flat
-              to="/Client-Company-Profile-Doc-Verification"
-              color="black"
-              icon="local_atm"
-            ></q-btn>
-            <div>Accounts</div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="text-black text-h7 text-center">
-            <q-btn dense flat color="black" icon="tune"></q-btn>
-            <div>Settings</div>
-          </div>
-        </div>
-        <div class="col"></div>
+    <div class="row flex-center q-pa-md">
+      <div class="text-black text-h7 text-center q-pr-md">
+        <q-btn
+          to="/Contractor-profile-display"
+          dense
+          flat
+          color="black"
+          icon="person"
+        ></q-btn>
+        <div>Profile</div>
+      </div>
+      <div class="text-black text-h7 text-center q-pr-md">
+        <q-btn
+          dense
+          to="/01-remote-work-Client-Post-Proj"
+          flat
+          color="black"
+          icon="addchart"
+        ></q-btn>
+        <div>Post a Project</div>
+      </div>
+      <div class="text-black text-h7 text-center q-pr-md">
+        <q-btn
+          dense
+          flat
+          to="/06-Remote-Work-Contractor-Search-Proj"
+          color="black"
+          icon="insert_chart_outlined"
+        ></q-btn>
+        <div>Projects</div>
+      </div>
+      <div class="text-black text-h7 text-center q-pr-md">
+        <q-btn dense flat color="black" icon="mark_email_unread"></q-btn>
+        <div>Messages</div>
+      </div>
+      <div class="text-black text-h7 text-center q-pr-md">
+        <q-btn
+          dense
+          flat
+          to="/Client-Company-Profile-Doc-Verification"
+          color="black"
+          icon="local_atm"
+        ></q-btn>
+        <div>Accounts</div>
+      </div>
+      <div class="text-black text-h7 text-center q-pr-md">
+        <q-btn dense flat color="black" icon="tune"></q-btn>
+        <div>Settings</div>
       </div>
     </div>
     <q-separator />
@@ -221,31 +205,58 @@
             <div class="row">
               <div class="col" style="max-width: 200px">
                 <q-expansion-item
-                  class="bg-grey-2 q-mt-md bordered"
+                  class="q-mt-md"
                   dense
-                  v-model="skill_ids"
                   dense-toggle
                   expand-separator
-                  label="Skills required"
+                  label="Project Catagory*"
                   style="max-width: 350px"
                 >
-                  <q-list dense bordered padding class="borders">
+                  <q-list dense bordered padding class="borders bg-grey-2">
                     <q-item clickable v-ripple>
-                      <q-item-section v-model="skill_ids"
-                        >Angular JS
+                      <q-item-section>
+                        <q-checkbox
+                          v-model="skill_ids"
+                          size="0px"
+                          dence
+                          true-value="Angular JS"
+                          label="Angular JS"
+                        />
                       </q-item-section>
                     </q-item>
 
                     <q-item clickable v-ripple>
-                      <q-item-section v-model="skill_ids">Java</q-item-section>
+                      <q-item-section>
+                        <q-checkbox
+                          v-model="skill_ids"
+                          size="0px"
+                          dence
+                          true-value="Java"
+                          label="Java"
+                        />
+                      </q-item-section>
                     </q-item>
 
                     <q-item clickable v-ripple>
-                      <q-item-section v-model="skill_ids"> PHP </q-item-section>
+                      <q-item-section>
+                        <q-checkbox
+                          v-model="skill_ids"
+                          size="0px"
+                          dence
+                          true-value="PHP"
+                          label="PHP"
+                        />
+                      </q-item-section>
                     </q-item>
                     <q-item clickable v-ripple>
-                      <q-item-section v-model="skill_ids">
-                        Etc.
+                      <q-item-section>
+                        <q-checkbox
+                          v-model="skill_ids"
+                          size="0px"
+                          dence
+                          true-value="Etc."
+                          label="Etc."
+                        />
                       </q-item-section>
                     </q-item>
                   </q-list>
@@ -423,7 +434,7 @@ export default defineComponent({
     return {
       submitResult,
       contractors_no: ref("1"),
-      skill_ids: ref(null),
+      skill_ids: ref("Angular JS"),
       questions: "",
       exp_level: ref("Junior"),
       contractor_availability: ref("Less then 20hour/Week"),
@@ -489,6 +500,9 @@ export default defineComponent({
 .container
   width: 1200px
   margin: auto
+
+.row + .row
+  margin-top: 1rem
 .timeline-wrap
   margin: 20%% 20%
   top: 100

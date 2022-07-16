@@ -32,70 +32,54 @@
     <div class="text-h7 text-center">Hi Florin, welcome to your dashboard!</div>
     <div class="flex-break q-py-md"></div>
     <q-separator />
-    <div class="">
-      <div class="row">
-        <div class="col"></div>
-        <div class="col">
-          <div class="text-black text-h7 text-center">
-            <q-btn
-              dense
-              flat
-              color="black"
-              to="/Contractor-profile-display"
-              icon="person"
-            ></q-btn>
-            <div>Profile</div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="text-black text-h7 text-center">
-            <q-btn
-              dense
-              flat
-              to="/01-remote-work-Client-Post-Proj"
-              color="black"
-              icon="addchart"
-            ></q-btn>
-            <div>Post a Project</div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="text-black text-h7 text-center">
-            <q-btn
-              dense
-              flat
-              to="/06-Remote-Work-Contractor-Search-Proj"
-              color="black"
-              icon="insert_chart_outlined"
-            ></q-btn>
-            <div>Projects</div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="text-black text-h7 text-center">
-            <q-btn dense flat color="black" icon="mark_email_unread"></q-btn>
-            <div>Messages</div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="text-black text-h7 text-center">
-            <q-btn
-              dense
-              flat
-              color="black"
-              to="/Client-Company-Profile-Doc-Verification"
-              icon="local_atm"
-            ></q-btn>
-            <div>Accounts</div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="text-black text-h7 text-center">
-            <q-btn dense flat color="black" icon="tune"></q-btn>
-            <div>Settings</div>
-          </div>
-        </div>
-        <div class="col"></div>
+    <div class="row flex-center q-pa-md">
+      <div class="text-black text-h7 text-center">
+        <q-btn
+          to="/Contractor-profile-display"
+          dense
+          flat
+          color="black"
+          icon="person"
+        ></q-btn>
+        <div>Profile</div>
+      </div>
+      <div class="text-black text-h7 text-center">
+        <q-btn
+          dense
+          to="/01-remote-work-Client-Post-Proj"
+          flat
+          color="black"
+          icon="addchart"
+        ></q-btn>
+        <div>Post a Project</div>
+      </div>
+      <div class="text-black text-h7 text-center">
+        <q-btn
+          dense
+          flat
+          to="/06-Remote-Work-Contractor-Search-Proj"
+          color="black"
+          icon="insert_chart_outlined"
+        ></q-btn>
+        <div>Projects</div>
+      </div>
+      <div class="text-black text-h7 text-center">
+        <q-btn dense flat color="black" icon="mark_email_unread"></q-btn>
+        <div>Messages</div>
+      </div>
+      <div class="text-black text-h7 text-center">
+        <q-btn
+          dense
+          flat
+          to="/Client-Company-Profile-Doc-Verification"
+          color="black"
+          icon="local_atm"
+        ></q-btn>
+        <div>Accounts</div>
+      </div>
+      <div class="text-black text-h7 text-center">
+        <q-btn dense flat color="black" icon="tune"></q-btn>
+        <div>Settings</div>
       </div>
     </div>
     <q-separator />
@@ -114,7 +98,7 @@
                 left-label
                 color="cyan"
                 v-model="project_type"
-                val="line"
+                val="Well Defined Project"
                 label="Well Defined Project"
               />
             </div>
@@ -123,7 +107,7 @@
                 left-label
                 color="cyan"
                 v-model="project_type"
-                val="rectangle"
+                val="Ongoing Work"
                 label="Ongoing Work"
               />
             </div>
@@ -132,7 +116,7 @@
                 left-label
                 color="cyan"
                 v-model="project_type"
-                val="ellipse"
+                val="Market Research"
                 label="Market Research"
               />
             </div>
@@ -141,7 +125,7 @@
                 left-label
                 color="cyan"
                 v-model="project_type"
-                val="polygon"
+                val="Guaranted Prize Contest"
                 label="Guaranted Prize Contest"
               />
             </div>
@@ -265,25 +249,49 @@
               >
                 <q-list dense bordered padding class="borders bg-grey-2">
                   <q-item clickable v-ripple>
-                    <q-item-section v-model="project_catagory"
-                      >Logo Design
+                    <q-item-section>
+                      <q-checkbox
+                        v-model="project_catagory"
+                        size="0px"
+                        dence
+                        true-value="Logo Design"
+                        label="Logo Design"
+                      />
                     </q-item-section>
                   </q-item>
 
                   <q-item clickable v-ripple>
-                    <q-item-section v-model="project_catagory" val="1"
-                      >Cerate Website</q-item-section
-                    >
+                    <q-item-section>
+                      <q-checkbox
+                        v-model="project_catagory"
+                        size="0px"
+                        dence
+                        true-value="Cerate Website"
+                        label="Cerate Website"
+                      />
+                    </q-item-section>
                   </q-item>
 
                   <q-item clickable v-ripple>
-                    <q-item-section v-model="project_catagory">
-                      Translation
+                    <q-item-section>
+                      <q-checkbox
+                        v-model="project_catagory"
+                        size="0px"
+                        dence
+                        true-value="Translation"
+                        label="Translation"
+                      />
                     </q-item-section>
                   </q-item>
                   <q-item clickable v-ripple>
-                    <q-item-section v-model="project_catagory">
-                      Etc.
+                    <q-item-section>
+                      <q-checkbox
+                        v-model="project_catagory"
+                        size="0px"
+                        dence
+                        true-value="Etc."
+                        label="Etc."
+                      />
                     </q-item-section>
                   </q-item>
                 </q-list>
@@ -386,14 +394,15 @@ export default defineComponent({
     const submitResult = ref([]);
 
     return {
-      project_type: ref("line"),
+      project_type: ref("Well Defined Project"),
       submitResult,
       color: ref(true),
-      project_catagory: ref(null),
+      project_catagory: ref("Cerate Website"),
       title: ref(null),
       description: ref(null),
       skill_ids: "",
       attachments: ref(null),
+      right: ref(false),
 
       onSubmit(evt) {
         const formData = new FormData(evt.target);

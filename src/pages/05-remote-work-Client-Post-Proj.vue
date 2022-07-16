@@ -32,70 +32,54 @@
     <div class="text-h7 text-center">Hi Florin, welcome to your dashboard!</div>
     <div class="flex-break q-py-md"></div>
     <q-separator />
-    <div class="">
-      <div class="row">
-        <div class="col"></div>
-        <div class="col">
-          <div class="text-black text-h7 text-center">
-            <q-btn
-              dense
-              to="/Contractor-profile-display"
-              flat
-              color="black"
-              icon="person"
-            ></q-btn>
-            <div>Profile</div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="text-black text-h7 text-center">
-            <q-btn
-              dense
-              flat
-              to="/01-remote-work-Client-Post-Proj"
-              color="black"
-              icon="addchart"
-            ></q-btn>
-            <div>Post a Project</div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="text-black text-h7 text-center">
-            <q-btn
-              dense
-              to="/06-Remote-Work-Contractor-Search-Proj"
-              flat
-              color="black"
-              icon="insert_chart_outlined"
-            ></q-btn>
-            <div>Projects</div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="text-black text-h7 text-center">
-            <q-btn dense flat color="black" icon="mark_email_unread"></q-btn>
-            <div>Messages</div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="text-black text-h7 text-center">
-            <q-btn
-              dense
-              flat
-              to="/Client-Company-Profile-Doc-Verification"
-              color="black"
-              icon="local_atm"
-            ></q-btn>
-            <div>Accounts</div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="text-black text-h7 text-center">
-            <q-btn dense flat color="black" icon="tune"></q-btn>
-            <div>Settings</div>
-          </div>
-        </div>
-        <div class="col"></div>
+    <div class="row flex-center q-pa-md">
+      <div class="text-black text-h7 text-center q-pr-md">
+        <q-btn
+          to="/Contractor-profile-display"
+          dense
+          flat
+          color="black"
+          icon="person"
+        ></q-btn>
+        <div>Profile</div>
+      </div>
+      <div class="text-black text-h7 text-center q-pr-md">
+        <q-btn
+          dense
+          to="/01-remote-work-Client-Post-Proj"
+          flat
+          color="black"
+          icon="addchart"
+        ></q-btn>
+        <div>Post a Project</div>
+      </div>
+      <div class="text-black text-h7 text-center q-pr-md">
+        <q-btn
+          dense
+          flat
+          to="/06-Remote-Work-Contractor-Search-Proj"
+          color="black"
+          icon="insert_chart_outlined"
+        ></q-btn>
+        <div>Projects</div>
+      </div>
+      <div class="text-black text-h7 text-center q-pr-md">
+        <q-btn dense flat color="black" icon="mark_email_unread"></q-btn>
+        <div>Messages</div>
+      </div>
+      <div class="text-black text-h7 text-center q-pr-md">
+        <q-btn
+          dense
+          flat
+          to="/Client-Company-Profile-Doc-Verification"
+          color="black"
+          icon="local_atm"
+        ></q-btn>
+        <div>Accounts</div>
+      </div>
+      <div class="text-black text-h7 text-center q-pr-md">
+        <q-btn dense flat color="black" icon="tune"></q-btn>
+        <div>Settings</div>
       </div>
     </div>
     <q-separator />
@@ -334,65 +318,57 @@
                 Choose the desired level of expertise of the contractors
               </p>
               <div class="row">
-                <div class="col-2">
-                  <q-radio
-                    left-label
-                    v-model="exp_level"
-                    val="Junior"
-                    label="Junior"
-                    color="cyan"
-                  />
-                </div>
-                <div class="col-2">
-                  <q-radio
-                    left-label
-                    v-model="exp_level"
-                    color="cyan"
-                    val="Middle"
-                    label="Middle"
-                  />
-                </div>
-                <div class="col-2">
-                  <q-radio
-                    left-label
-                    v-model="exp_level"
-                    color="cyan"
-                    val="Senior"
-                    label="Senior"
-                  />
-                </div>
+                <q-radio
+                  left-label
+                  v-model="exp_level"
+                  val="Junior"
+                  label="Junior"
+                  color="cyan"
+                />
+
+                <q-radio
+                  left-label
+                  v-model="exp_level"
+                  color="cyan"
+                  val="Middle"
+                  label="Middle"
+                />
+
+                <q-radio
+                  left-label
+                  v-model="exp_level"
+                  color="cyan"
+                  val="Senior"
+                  label="Senior"
+                />
               </div>
             </div>
             <div class="q-mt-md">
               <p class="text-weight-bold">Contractor Availability</p>
               <div class="row">
-                <div class="col">
-                  <q-radio
-                    left-label
-                    v-model="contractor_availability"
-                    color="cyan"
-                    val="Less then 20hour/Week"
-                    label="Less then 20hour/Week"
-                  />
-                </div>
-                <div class="col">
-                  <q-radio
-                    left-label
-                    v-model="contractor_availability"
-                    color="cyan"
-                    val="20-30 hours/Week"
-                    label="20-30 hours/Week"
-                  />
-                </div>
-                <div class="col">
-                  <q-radio
-                    left-label
-                    v-model="contractor_availability"
-                    color="More Than"
-                    val="More than 30 hours/Week"
-                    label="More than 30 hours/Week"
-                  />
-                </div>
+                <q-radio
+                  left-label
+                  v-model="contractor_availability"
+                  color="cyan"
+                  val="Less then 20hour/Week"
+                  label="Less then 20hour/Week"
+                />
+
+                <q-radio
+                  left-label
+                  v-model="contractor_availability"
+                  color="cyan"
+                  val="20-30 hours/Week"
+                  label="20-30 hours/Week"
+                />
+
+                <q-radio
+                  left-label
+                  v-model="contractor_availability"
+                  color="More Than"
+                  val="More than 30 hours/Week"
+                  label="More than 30 hours/Week"
+                />
               </div>
             </div>
             <div style="max-width: 300px" class="q-py-md">
@@ -422,57 +398,50 @@
             <div>
               <p class="text-bold text-h6">Project Time</p>
               <div class="row">
-                <div class="col">
-                  <q-radio
-                    left-label
-                    color="cyan"
-                    v-model="project_duration_weeks"
-                    val="2"
-                    label="Max. 2 Weeks"
-                  />
-                </div>
-                <div class="col">
-                  <q-radio
-                    left-label
-                    color="cyan"
-                    v-model="project_duration_weeks"
-                    val="4"
-                    label="Max. 1 Month"
-                  />
-                </div>
-                <div class="col">
-                  <q-radio
-                    left-label
-                    color="cyan"
-                    v-model="project_duration_weeks"
-                    val="12"
-                    label="Max. 3 Month"
-                  />
-                </div>
+                <q-radio
+                  left-label
+                  color="cyan"
+                  v-model="project_duration_weeks"
+                  val="2"
+                  label="Max. 2 Weeks"
+                />
+
+                <q-radio
+                  left-label
+                  color="cyan"
+                  v-model="project_duration_weeks"
+                  val="4"
+                  label="Max. 1 Month"
+                />
+
+                <q-radio
+                  left-label
+                  color="cyan"
+                  v-model="project_duration_weeks"
+                  val="12"
+                  label="Max. 3 Month"
+                />
               </div>
             </div>
             <div>
               <p class="text-h6">Payment</p>
               <p class="text-weight-bold">Type of Payment</p>
               <div class="row">
-                <div class="col">
-                  <q-radio
-                    left-label
-                    color="cyan"
-                    v-model="price_type"
-                    val="hourly"
-                    label="Hourly Payment"
-                  />
-                </div>
-                <div class="col">
-                  <q-radio
-                    left-label
-                    color="cyan"
-                    v-model="price_type"
-                    val="fixed"
-                    label="Fixed Price"
-                  />
-                </div>
+                <q-radio
+                  left-label
+                  color="cyan"
+                  v-model="price_type"
+                  val="hourly"
+                  label="Hourly Payment"
+                />
+
+                <q-radio
+                  left-label
+                  color="cyan"
+                  v-model="price_type"
+                  val="fixed"
+                  label="Fixed Price"
+                />
               </div>
             </div>
 

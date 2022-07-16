@@ -32,70 +32,54 @@
     <div class="text-h7 text-center">Hi Florin, welcome to your dashboard!</div>
     <div class="flex-break q-py-md"></div>
     <q-separator />
-    <div class="">
-      <div class="row">
-        <div class="col"></div>
-        <div class="col">
-          <div class="text-black text-h7 text-center">
-            <q-btn
-              dense
-              to="/Contractor-profile-display"
-              flat
-              color="black"
-              icon="person"
-            ></q-btn>
-            <div>Profile</div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="text-black text-h7 text-center">
-            <q-btn
-              dense
-              to="/01-remote-work-Client-Post-Proj"
-              flat
-              color="black"
-              icon="addchart"
-            ></q-btn>
-            <div>Post a Project</div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="text-black text-h7 text-center">
-            <q-btn
-              dense
-              flat
-              to="/06-Remote-Work-Contractor-Search-Proj"
-              color="black"
-              icon="insert_chart_outlined"
-            ></q-btn>
-            <div>Projects</div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="text-black text-h7 text-center">
-            <q-btn dense flat color="black" icon="mark_email_unread"></q-btn>
-            <div>Messages</div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="text-black text-h7 text-center">
-            <q-btn
-              dense
-              flat
-              to="/Client-Company-Profile-Doc-Verification"
-              color="black"
-              icon="local_atm"
-            ></q-btn>
-            <div>Accounts</div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="text-black text-h7 text-center">
-            <q-btn dense flat color="black" icon="tune"></q-btn>
-            <div>Settings</div>
-          </div>
-        </div>
-        <div class="col"></div>
+    <div class="row flex-center q-pa-md">
+      <div class="text-black text-h7 text-center q-pr-md">
+        <q-btn
+          to="/Contractor-profile-display"
+          dense
+          flat
+          color="black"
+          icon="person"
+        ></q-btn>
+        <div>Profile</div>
+      </div>
+      <div class="text-black text-h7 text-center q-pr-md">
+        <q-btn
+          dense
+          to="/01-remote-work-Client-Post-Proj"
+          flat
+          color="black"
+          icon="addchart"
+        ></q-btn>
+        <div>Post a Project</div>
+      </div>
+      <div class="text-black text-h7 text-center q-pr-md">
+        <q-btn
+          dense
+          flat
+          to="/06-Remote-Work-Contractor-Search-Proj"
+          color="black"
+          icon="insert_chart_outlined"
+        ></q-btn>
+        <div>Projects</div>
+      </div>
+      <div class="text-black text-h7 text-center q-pr-md">
+        <q-btn dense flat color="black" icon="mark_email_unread"></q-btn>
+        <div>Messages</div>
+      </div>
+      <div class="text-black text-h7 text-center q-pr-md">
+        <q-btn
+          dense
+          flat
+          to="/Client-Company-Profile-Doc-Verification"
+          color="black"
+          icon="local_atm"
+        ></q-btn>
+        <div>Accounts</div>
+      </div>
+      <div class="text-black text-h7 text-center q-pr-md">
+        <q-btn dense flat color="black" icon="tune"></q-btn>
+        <div>Settings</div>
       </div>
     </div>
     <q-separator />
@@ -125,30 +109,44 @@
         <p class="q-pa-md text-h5 text-bold">4. SEND INVITATIONS</p>
         <div style="max-width: 300px" class="q-pa-md">
           <p class="text-weight-bold">Search by name</p>
-          <q-input bottom-slots v-model="text" :dense="dense">
-            <template v-slot:append>
-              <q-icon name="search" />
-            </template>
-          </q-input>
+          <div class="q-gutter-md row">
+            <q-select
+              v-model="invitation_profile_ids"
+              use-input
+              hide-selected
+              fill-input
+              hide-dropdown-icon
+              use-chips
+              input-debounce="0"
+              :options="options"
+              @filter="filterFn"
+              style="width: 300px"
+            >
+              <template v-slot:append>
+                <q-icon name="search" />
+              </template>
+            </q-select>
+          </div>
           <q-expansion-item class="bordered" dense style="max-width: 350px">
             <q-list dense bordered padding class="borders">
               <q-item clickable v-ripple>
-                <q-item-section> {{ text }} </q-item-section>
+                <q-item-section> {{ invitation_profile_ids }} </q-item-section>
               </q-item>
 
               <q-item clickable v-ripple>
-                <q-item-section> {{ noData }} </q-item-section>
+                <q-item-section> {{ invitation_profile_ids }} </q-item-section>
               </q-item>
 
               <q-item clickable v-ripple>
-                <q-item-section> {{ noData }} </q-item-section>
+                <q-item-section> {{ invitation_profile_ids }} </q-item-section>
               </q-item>
               <q-item clickable v-ripple>
-                <q-item-section> {{ noData }} </q-item-section>
+                <q-item-section> {{ invitation_profile_ids }} </q-item-section>
               </q-item>
             </q-list>
           </q-expansion-item>
         </div>
+
         <div class="flex">
           <p class="q-ma-md">Search result: 3 contractors found</p>
           <q-checkbox
@@ -167,7 +165,7 @@
                 </q-avatar>
               </q-item-section>
               <q-item-section>
-                <q-item-label>Gill Dobrica</q-item-label>
+                <q-item-label> {{ invitation_profile_ids }}</q-item-label>
                 <q-item-label caption>Senior Bacend Developer</q-item-label>
               </q-item-section>
               <q-item-section side>
@@ -181,7 +179,7 @@
                 </q-avatar>
               </q-item-section>
               <q-item-section>
-                <q-item-label>Vioroca Dancila</q-item-label>
+                <q-item-label>{{ invitation_profile_ids }}</q-item-label>
                 <q-item-label caption>Middle Bacend Developer</q-item-label>
               </q-item-section>
               <q-item-section side>
@@ -195,7 +193,7 @@
                 </q-avatar>
               </q-item-section>
               <q-item-section>
-                <q-item-label>Gabriel Cotabita</q-item-label>
+                <q-item-label>{{ invitation_profile_ids }}</q-item-label>
                 <q-item-label caption>Java Developer</q-item-label>
               </q-item-section>
               <q-item-section side>
@@ -233,14 +231,54 @@
 <script>
 import { defineComponent, ref } from "vue";
 import axios from "axios";
+import NameSearch from "src/components/Name-Search.vue";
 // import TimeLine from "components/Timeline.vue";
-
+const stringOptions = [
+  "Gill Dobrica",
+  "1",
+  "Gabriel Cotabita",
+  "Vioroca Dancila",
+  "Akila",
+  "Amunet",
+  "Anat",
+  "Anippe",
+  "Asenath",
+  "Auset",
+  "Bahiti",
+  "Bastet",
+  "Khepri",
+  "Kissa",
+  "Kleopatra",
+  "Lapis",
+  "Lateefah",
+  "Lotus",
+  "Maibe",
+  "Mandisa",
+  "Mariam",
+  "Masika",
+  "Massika",
+  "Maye",
+  "Midge",
+  "Moswen",
+  "Nailah",
+  "Nane",
+  "Nanu",
+  "Nefertari",
+  "Neferteri",
+  "Nefertiri",
+  "Neferure",
+  "Nefret",
+  "Neith",
+  "Nenet",
+];
 export default defineComponent({
   // components: {
   //   TimeLine,
   // },
+
   setup() {
     const submitResult = ref([]);
+    const options = ref(stringOptions);
 
     return {
       val: ref(true),
@@ -248,20 +286,32 @@ export default defineComponent({
       submitResult,
       text: ref("Gil Dobrica"),
       noData: ref("null Data"),
-      invitation_profile_ids: ref("id"),
-
+      invitation_profile_ids:ref([]),
+      // invitation_users: ref(null),
+      options,
       onSubmit(evt) {
         const formData = new FormData(evt.target);
         const data = [];
-
         for (const [name, value] of formData.entries()) {
           data.push({
             name,
             value,
           });
         }
-
         submitResult.value = data;
+      },
+      filterFn(val, update, abort) {
+        if (val.length < 1) {
+          abort();
+          return;
+        }
+
+        update(() => {
+          const needle = val.toLowerCase();
+          options.value = stringOptions.filter(
+            (v) => v.toLowerCase().indexOf(needle) > -1
+          );
+        });
       },
     };
   },
@@ -269,7 +319,6 @@ export default defineComponent({
     post() {
       const post = new FormData();
       post.append("invitation_profile_ids", this.invitation_profile_ids);
-
       const options = {
         method: "POST",
         url: "https://rwapi.zupria.com/api/post",
