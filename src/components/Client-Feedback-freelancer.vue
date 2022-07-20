@@ -1,69 +1,71 @@
 <template>
   <div>
     <!-- Card 1 Div -->
-
-    <div class="row" style="max-width: 950px">
-      <div class="col-11">
-        <div class="row">
+    <q-form @submit.prevent="postSearch">
+      <div class="row" style="max-width: 950px">
+        <div class="col-11">
           <div class="row">
-            <p class="text-bold q-my-none text-h7">
-              Give feedback to the contractor
-            </p>
-          </div>
-          <div class="row">
-            <p class="text-h7">
-              {{ lorem }}
-            </p>
-          </div>
-          <div class="row q-gutter-sm">
-            <q-radio
-              v-model="shape"
-              val="radio1"
-              class="q-mr-sm"
-              color="black"
-              label="I want to work with this contractor again"
-            />
-            <q-radio
-              v-model="shape"
-              color="black"
-              class="q-mr-sm"
-              val="rectangle"
-              label="I want to try a different contractor"
-            />
+            <div class="row">
+              <p class="text-bold q-my-none text-h7">
+                Give feedback to the contractor
+              </p>
+            </div>
+            <div class="row">
+              <p class="text-h7">
+                {{ lorem }}
+              </p>
+            </div>
+            <div class="row q-gutter-sm">
+              <q-radio
+                v-model="contractor_feedback"
+                val="I want to work with this contractor again"
+                class="q-mr-sm"
+                color="black"
+                label="I want to work with this contractor again"
+              />
+              <q-radio
+                v-model="contractor_feedback"
+                color="black"
+                class="q-mr-sm"
+                val="I want to try a different contractor"
+                label="I want to try a different contractor"
+              />
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-  <!-- Footer Div -->
+      <!-- Footer Div -->
 
-  <div class="row q-pa-md flex flex-center">
-    <q-btn
-      rounded
-      style="width: 90px"
-      size="10px"
-      label="back"
-      to="10-REMOTE-WORK-CLIENT-MILESTONES-LIST-FOR-FREELANCER"
-      unelevated
-      color="black"
-      class="text-white q-mr-lg"
-    />
-    <q-btn
-      rounded
-      style="width: 120px"
-      size="10px"
-      type="submit"
-      label="Send feedback"
-      unelevated
-      v-model="submit"
-      color="black"
-      class="text-white"
-    />
+      <div class="row q-pa-md flex flex-center">
+        <q-btn
+          rounded
+          style="width: 90px"
+          size="10px"
+          label="back"
+          to="10-REMOTE-WORK-CLIENT-MILESTONES-LIST-FOR-FREELANCER"
+          unelevated
+          color="black"
+          class="text-white q-mr-lg"
+        />
+        <q-btn
+          rounded
+          style="width: 120px"
+          size="10px"
+          type="submit"
+          label="Send feedback"
+          unelevated
+          v-model="submit"
+          color="black"
+          class="text-white"
+        />
+      </div>
+    </q-form>
   </div>
 </template>
 
 <script>
 import { defineComponent } from "vue";
+import axios from "axios";
 import { ref } from "vue";
 export default defineComponent({
   name: "clientFeedback",
@@ -71,32 +73,36 @@ export default defineComponent({
     return {
       lorem:
         "If you were to carry out a project similar to this one, would you want to work with this contractor again or do you want to try a different team?.",
-      text: " We have a logo that is about 13 years old and we are looking to update/change our branding, we need a logo that is more up to date and we want to keep the versatillity. We want to go bold/innovative with this change. Previous logo is attached for reference",
-      checkbox19: ref(true),
-      checkbox20: ref(true),
-      checkbox21: ref(false),
-      checkbox22: ref(false),
-      checkbox23: ref(false),
-      price: ref("500 € |"),
-      input1: ref("Your answer here."),
-      input2: ref("Your answer here."),
-      date: ref("2020/07/08 , 2020/07/17"),
-      group: ref("op1"),
 
-      options: [
-        {
-          label: "Freelancer",
-          value: "op1",
-        },
-        {
-          label: "Agency",
-          value: "op2",
-        },
-      ],
-      tab: ref("two"),
-      shape: ref("radio1"),
+      contractor_feedback: ref("I want to try a different contractor"),
       submit: null,
     };
+  },
+  methods: {
+    postSearch() {
+      const search = new FormData();
+      search.append("contractor_feedback", this.contractor_feedback);
+
+      const options = {
+        method: "POST",
+        url: "https://rwapi.zupria.com/api/contract/feedback/1",
+        data: search,
+        headers: {
+          Authorization:
+            "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcndhcGkuenVwcmlhLmNvbVwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY1MDY2NjAyMSwiZXhwIjoxNjgyMjAyMDIxLCJuYmYiOjE2NTA2NjYwMjEsImp0aSI6InVkbmUyZ3NsRHJ5VjY5Z3UiLCJzdWIiOjksInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.4_rBRo4Yo7rQ58dKVNdbUEtp6_EKjF79744-cfrUQWM",
+        },
+      };
+      axios
+        .request(options)
+        .then((response) => {
+          console.log(response.data);
+          this.user = response.data;
+          this.id = response.data.data.id;
+        })
+        .catch(function (error) {
+          console.error(error);
+        });
+    },
   },
 });
 </script>

@@ -34,70 +34,54 @@
     <div class="text-h7 text-center">Hi Florin, welcome to your dashboard!</div>
     <div class="flex-break q-py-md"></div>
     <q-separator />
-    <div class="">
-      <div class="row">
-        <div class="col"></div>
-        <div class="col">
-          <div class="text-black text-h7 text-center">
-            <q-btn
-              dense
-              to="/Contractor-profile-display"
-              flat
-              color="black"
-              icon="person"
-            ></q-btn>
-            <div>Profile</div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="text-black text-h7 text-center">
-            <q-btn
-              dense
-              to="/01-remote-work-Client-Post-Proj"
-              flat
-              color="black"
-              icon="addchart"
-            ></q-btn>
-            <div>Post a Project</div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="text-black text-h7 text-center">
-            <q-btn
-              dense
-              to="/06-Remote-Work-Contractor-Search-Proj"
-              flat
-              color="black"
-              icon="insert_chart_outlined"
-            ></q-btn>
-            <div>Projects</div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="text-black text-h7 text-center">
-            <q-btn dense flat color="black" icon="mark_email_unread"></q-btn>
-            <div>Messages</div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="text-black text-h7 text-center">
-            <q-btn
-              dense
-              to="/Client-Company-Profile-Doc-Verification"
-              flat
-              color="black"
-              icon="local_atm"
-            ></q-btn>
-            <div>Accounts</div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="text-black text-h7 text-center">
-            <q-btn dense flat color="black" icon="tune"></q-btn>
-            <div>Settings</div>
-          </div>
-        </div>
-        <div class="col"></div>
+    <div class="row flex-center q-pa-md">
+      <div class="text-black text-h7 text-center q-pr-md">
+        <q-btn
+          to="/Contractor-profile-display"
+          dense
+          flat
+          color="black"
+          icon="person"
+        ></q-btn>
+        <div>Profile</div>
+      </div>
+      <div class="text-black text-h7 text-center q-pr-md">
+        <q-btn
+          dense
+          to="/01-remote-work-Client-Post-Proj"
+          flat
+          color="black"
+          icon="addchart"
+        ></q-btn>
+        <div>Post a Project</div>
+      </div>
+      <div class="text-black text-h7 text-center q-pr-md">
+        <q-btn
+          dense
+          flat
+          to="/06-Remote-Work-Contractor-Search-Proj"
+          color="black"
+          icon="insert_chart_outlined"
+        ></q-btn>
+        <div>Projects</div>
+      </div>
+      <div class="text-black text-h7 text-center q-pr-md">
+        <q-btn dense flat color="black" icon="mark_email_unread"></q-btn>
+        <div>Messages</div>
+      </div>
+      <div class="text-black text-h7 text-center q-pr-md">
+        <q-btn
+          dense
+          flat
+          to="/Client-Company-Profile-Doc-Verification"
+          color="black"
+          icon="local_atm"
+        ></q-btn>
+        <div>Accounts</div>
+      </div>
+      <div class="text-black text-h7 text-center q-pr-md">
+        <q-btn dense flat color="black" icon="tune"></q-btn>
+        <div>Settings</div>
       </div>
     </div>
     <q-separator />
@@ -111,16 +95,16 @@
             <div class="row" style="max-width: 950px">
               <q-card-section>
                 <div class="text-h5 text-bold q-py-md text-left">
-                  Logo Design for Insurance Agency
+                  {{project_title}}
                 </div>
                 <q-separator />
                 <div class="row">
                   <div class="col">
-                    <div class="row text-h7 text-bold">Anna Doyle</div>
+                    <div class="row text-h7 text-bold">{{name}}</div>
                     <div class="text-h7 row">
                       <q-img
                         style="height: 70px; width: 70px"
-                        src="~/assets/Avator16.png"
+                        src="profile.picture"
                       ></q-img>
                     </div>
                   </div>
@@ -152,7 +136,7 @@
                           <div class="row">
                             <div class="row">
                               <p class="text-bold q-my-none text-h7">
-                                Milestone name 1
+                                {{milestone_name}}
                               </p>
                             </div>
                             <div class="row">
@@ -163,7 +147,7 @@
                                 Change requested
                               </p>
                               <p class="text-h7">
-                                {{ lorem }}
+                                {{ milestone_details }}
                               </p>
                             </div>
                           </div>
@@ -210,7 +194,7 @@
                           <div class="row">
                             <div class="row">
                               <p class="text-bold q-my-none text-h7">
-                                Milestone name 2
+                                {{milestone_name}}
                               </p>
                             </div>
                             <div class="row">
@@ -220,7 +204,7 @@
                                 >
                               </p>
                               <p class="text-h7">
-                                {{ lorem }}
+                                {{milestone_details}}
                               </p>
                             </div>
                           </div>
@@ -267,7 +251,7 @@
                           <div class="row">
                             <div class="row">
                               <p class="text-bold q-my-none text-h7">
-                                Milestone name 3
+                                {{milestone_name}}
                               </p>
                             </div>
                             <div class="row">
@@ -277,7 +261,7 @@
                                 >
                               </p>
                               <p class="text-h7">
-                                {{ lorem }}
+                                {{milestone_details}}
                               </p>
                             </div>
                           </div>
@@ -341,7 +325,7 @@
         rounded
         style="width: 90px"
         size="10px"
-        to="12-REMOTE-WORK-CLIENT-FEEDBACK-TO-FREELANCER"
+        to="11-Remote-Work-Client-Milestones-Details-For-Freelancer"
         label="hire"
         unelevated
         color="black"
@@ -354,6 +338,7 @@
 <script>
 import clientFeedback from "components/Client-Feedback-freelancer.vue";
 import { defineComponent } from "vue";
+import axios from "axios";
 import { ref } from "vue";
 export default defineComponent({
   components: { clientFeedback },
@@ -385,8 +370,32 @@ export default defineComponent({
         },
       ],
       tab: ref("one"),
+      project_title: "",
+      milestone_details:"",
+      milestone_name:"",
+      name:"",
+      contracts:[],
     };
   },
+   // SHOW
+    created() {
+        const options = {
+            method: "GET",
+            url: "https://rwapi.zupria.com/api/contract/stages/1",
+            headers: {
+                Authorization: "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcndhcGkuenVwcmlhLmNvbVwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY1MDY2NTQ3NCwiZXhwIjoxNjgyMjAxNDc0LCJuYmYiOjE2NTA2NjU0NzQsImp0aSI6ImRaUGlZem9YTXZZS25ITU4iLCJzdWIiOjgsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.m127K5q8Fy_6CxXEWJZyXqb_HJL4U-EUcHmdwmHTytI",
+            },
+        };
+        axios
+            .request(options)
+            .then((response) => {
+            console.log(response.data);
+            this.contracts = response.data;
+        })
+            .catch(function (error) {
+            console.error(error);
+        });
+    },
 });
 </script>
 <style lang="sass" scoped>

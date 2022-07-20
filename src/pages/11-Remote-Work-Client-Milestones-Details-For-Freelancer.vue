@@ -34,70 +34,54 @@
     <div class="text-h7 text-center">Hi Florin, welcome to your dashboard!</div>
     <div class="flex-break q-py-md"></div>
     <q-separator />
-    <div class="">
-      <div class="row">
-        <div class="col"></div>
-        <div class="col">
-          <div class="text-black text-h7 text-center">
-            <q-btn
-              dense
-              flat
-              to="/Contractor-profile-display"
-              color="black"
-              icon="person"
-            ></q-btn>
-            <div>Profile</div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="text-black text-h7 text-center">
-            <q-btn
-              dense
-              to="/01-remote-work-Client-Post-Proj"
-              flat
-              color="black"
-              icon="addchart"
-            ></q-btn>
-            <div>Post a Project</div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="text-black text-h7 text-center">
-            <q-btn
-              dense
-              flat
-              to="/06-Remote-Work-Contractor-Search-Proj"
-              color="black"
-              icon="insert_chart_outlined"
-            ></q-btn>
-            <div>Projects</div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="text-black text-h7 text-center">
-            <q-btn dense flat color="black" icon="mark_email_unread"></q-btn>
-            <div>Messages</div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="text-black text-h7 text-center">
-            <q-btn
-              dense
-              to="/Client-Company-Profile-Doc-Verification"
-              flat
-              color="black"
-              icon="local_atm"
-            ></q-btn>
-            <div>Accounts</div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="text-black text-h7 text-center">
-            <q-btn dense flat color="black" icon="tune"></q-btn>
-            <div>Settings</div>
-          </div>
-        </div>
-        <div class="col"></div>
+     <div class="row flex-center q-pa-md">
+      <div class="text-black text-h7 text-center q-pr-md">
+        <q-btn
+          to="/Contractor-profile-display"
+          dense
+          flat
+          color="black"
+          icon="person"
+        ></q-btn>
+        <div>Profile</div>
+      </div>
+      <div class="text-black text-h7 text-center q-pr-md">
+        <q-btn
+          dense
+          to="/01-remote-work-Client-Post-Proj"
+          flat
+          color="black"
+          icon="addchart"
+        ></q-btn>
+        <div>Post a Project</div>
+      </div>
+      <div class="text-black text-h7 text-center q-pr-md">
+        <q-btn
+          dense
+          flat
+          to="/06-Remote-Work-Contractor-Search-Proj"
+          color="black"
+          icon="insert_chart_outlined"
+        ></q-btn>
+        <div>Projects</div>
+      </div>
+      <div class="text-black text-h7 text-center q-pr-md">
+        <q-btn dense flat color="black" icon="mark_email_unread"></q-btn>
+        <div>Messages</div>
+      </div>
+      <div class="text-black text-h7 text-center q-pr-md">
+        <q-btn
+          dense
+          flat
+          to="/Client-Company-Profile-Doc-Verification"
+          color="black"
+          icon="local_atm"
+        ></q-btn>
+        <div>Accounts</div>
+      </div>
+      <div class="text-black text-h7 text-center q-pr-md">
+        <q-btn dense flat color="black" icon="tune"></q-btn>
+        <div>Settings</div>
       </div>
     </div>
     <q-separator />
@@ -262,6 +246,7 @@
         style="width: 100px"
         size="10px"
         label="back"
+        to="11-Remote-Work-Client-Milestones-Details-For-Freelancer"
         unelevated
         color="black"
         class="text-white"
@@ -273,6 +258,7 @@
 <script>
 import { defineComponent } from "vue";
 import clientFeedback from "components/Client-Feedback-freelancer.vue";
+import axios from "axios";
 import { ref } from "vue";
 export default defineComponent({
   components: { clientFeedback },
@@ -306,6 +292,25 @@ export default defineComponent({
       tab: ref("one"),
     };
   },
+  // SHOW
+    created() {
+        const options = {
+            method: "GET",
+            url: "https://rwapi.zupria.com/api/proposal/1/1",
+            headers: {
+                Authorization: "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcndhcGkuenVwcmlhLmNvbVwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY1MDY2NTQ3NCwiZXhwIjoxNjgyMjAxNDc0LCJuYmYiOjE2NTA2NjU0NzQsImp0aSI6ImRaUGlZem9YTXZZS25ITU4iLCJzdWIiOjgsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.m127K5q8Fy_6CxXEWJZyXqb_HJL4U-EUcHmdwmHTytI",
+            },
+        };
+        axios
+            .request(options)
+            .then((response) => {
+            console.log(response.data);
+            this.contracts = response.data;
+        })
+            .catch(function (error) {
+            console.error(error);
+        });
+    },
 });
 </script>
 <style lang="sass" scoped>

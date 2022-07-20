@@ -34,77 +34,61 @@
     <div class="text-h7 text-center">Hi Florin, welcome to your dashboard!</div>
     <div class="flex-break q-py-md"></div>
     <q-separator />
-    <div class="">
-      <div class="row">
-        <div class="col"></div>
-        <div class="col">
-          <div class="text-black text-h7 text-center">
-            <q-btn
-              dense
-              to="/Contractor-profile-display"
-              flat
-              color="black"
-              icon="person"
-            ></q-btn>
-            <div>Profile</div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="text-black text-h7 text-center">
-            <q-btn
-              dense
-              to="/01-remote-work-Client-Post-Proj"
-              flat
-              color="black"
-              icon="addchart"
-            ></q-btn>
-            <div>Post a Project</div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="text-black text-h7 text-center">
-            <q-btn
-              dense
-              to="/06-Remote-Work-Contractor-Search-Proj"
-              flat
-              color="black"
-              icon="insert_chart_outlined"
-            ></q-btn>
-            <div>Projects</div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="text-black text-h7 text-center">
-            <q-btn dense flat color="black" icon="mark_email_unread"></q-btn>
-            <div>Messages</div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="text-black text-h7 text-center">
-            <q-btn
-              dense
-              to="/Client-Company-Profile-Doc-Verification"
-              flat
-              color="black"
-              icon="local_atm"
-            ></q-btn>
-            <div>Accounts</div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="text-black text-h7 text-center">
-            <q-btn dense flat color="black" icon="tune"></q-btn>
-            <div>Settings</div>
-          </div>
-        </div>
-        <div class="col"></div>
+     <div class="row flex-center q-pa-md">
+      <div class="text-black text-h7 text-center q-pr-md">
+        <q-btn
+          to="/Contractor-profile-display"
+          dense
+          flat
+          color="black"
+          icon="person"
+        ></q-btn>
+        <div>Profile</div>
+      </div>
+      <div class="text-black text-h7 text-center q-pr-md">
+        <q-btn
+          dense
+          to="/01-remote-work-Client-Post-Proj"
+          flat
+          color="black"
+          icon="addchart"
+        ></q-btn>
+        <div>Post a Project</div>
+      </div>
+      <div class="text-black text-h7 text-center q-pr-md">
+        <q-btn
+          dense
+          flat
+          to="/06-Remote-Work-Contractor-Search-Proj"
+          color="black"
+          icon="insert_chart_outlined"
+        ></q-btn>
+        <div>Projects</div>
+      </div>
+      <div class="text-black text-h7 text-center q-pr-md">
+        <q-btn dense flat color="black" icon="mark_email_unread"></q-btn>
+        <div>Messages</div>
+      </div>
+      <div class="text-black text-h7 text-center q-pr-md">
+        <q-btn
+          dense
+          flat
+          to="/Client-Company-Profile-Doc-Verification"
+          color="black"
+          icon="local_atm"
+        ></q-btn>
+        <div>Accounts</div>
+      </div>
+      <div class="text-black text-h7 text-center q-pr-md">
+        <q-btn dense flat color="black" icon="tune"></q-btn>
+        <div>Settings</div>
       </div>
     </div>
     <q-separator />
 
     <!-- Card 1 Div -->
-    <!-- v-for="contract in contracts" :key="contract.id" -->
-    <div class="row flex-center items-start">
+    <!-- v-for="proposal in proposals" :key="proposal.id" -->
+    <div class="row flex-center items-start" >
       <div style="max-width: 950px">
         <div class="q-pa-md">
           <div class="row">
@@ -158,23 +142,23 @@
                         {{ designer }}
                       </div>
                       <div class="row">
-                        <div class="col">
+                        <div class="col-12 col-md">
                           <div class="text-h7 text-bold">Requested price</div>
                           <div class="text-h7">€ {{ price }}</div>
                         </div>
-                        <div class="col">
+                        <div class="col-12 col-md">
                           <div class="text-h7 text-bold">Exexution time</div>
                           <div class="text-h7">
                             {{ project_execution_weeks }} weeks
                           </div>
                         </div>
-                        <div class="col">
+                        <div class="col-12 col-md">
                           <div class="text-h7 text-bold">Offer validity</div>
                           <div class="text-h7">{{ offer_validity }} days</div>
                         </div>
                       </div>
                       <div class="row">
-                        <div class="col">
+                        <div class="col-12 col-md">
                           <div class="text-h7 text-bold">Skills</div>
                           <div class="text-h7">
                             <q-btn
@@ -194,7 +178,7 @@
                             />
                           </div>
                         </div>
-                        <div class="col">
+                        <div class="col-12 col-md">
                           <div class="text-h7 text-bold">
                             Type of contractor
                           </div>
@@ -226,115 +210,8 @@
                       </div>
                     </div>
                   </div>
-                  <p class="q-py-md text-h7 text-bold">
-                    Select relevent projects from you portfolio*
-                  </p>
-                  <div
-                    class="my-card flex-center row"
-                    style="max-width: 1300px"
-                  >
-                    <div class="col-2 my-home flex-center q-mr-sm">
-                      <q-btn
-                        round
-                        color="grey"
-                        class="flex-center"
-                        icon="arrow_back_ios_new"
-                      />
-                    </div>
-                    <div
-                      class="col my-home bid2 my-font q-mr-sm my-box1 my-box-4"
-                    >
-                      <div class="row flex-center">
-                        <q-img
-                          src="~assets/Avator24.png"
-                          class="image1 flex-center"
-                          style="width: 40px; height: 40px"
-                        >
-                        </q-img>
-                      </div>
-                      <div class="q-pa-mg text-center custom-text-me">
-                        LOGO Design
-                      </div>
-                    </div>
-                    <div
-                      class="col my-home bid2 my-font q-mr-sm my-box1 my-box-4"
-                    >
-                      <div class="row flex-center">
-                        <q-img
-                          src="~assets/Avator25.png"
-                          class="image1 flex-center"
-                          style="width: 40px; height: 40px"
-                        >
-                        </q-img>
-                      </div>
-                      <div class="q-pa-mg text-center custom-text-me">
-                        Website Design
-                      </div>
-                    </div>
-                    <div
-                      class="col my-home bid2 my-font q-mr-sm my-box1 my-box-4"
-                    >
-                      <div class="row flex-center">
-                        <q-img
-                          src="~assets/Avator26.png"
-                          class="image1 flex-center"
-                          style="width: 40px; height: 40px"
-                        >
-                        </q-img>
-                      </div>
-                      <div class="q-pa-mg text-center custom-text-me">
-                        UX Design
-                      </div>
-                    </div>
-                    <div
-                      class="col my-home bid2 my-font my-box1 my-box-4 q-mr-sm"
-                    >
-                      <div class="row flex-center">
-                        <q-btn
-                          flat
-                          size="5px"
-                          color="black"
-                          padding="5px"
-                          icon="check_box_outline_blank"
-                        />
-                        <q-btn
-                          flat
-                          size="5px"
-                          color="black"
-                          padding="5px"
-                          icon="check_box_outline_blank"
-                        />
-                      </div>
-                      <div class="row flex-center">
-                        <q-btn
-                          flat
-                          size="5px"
-                          color="black"
-                          padding="5px"
-                          icon="check_box_outline_blank"
-                        />
-                        <q-btn
-                          flat
-                          size="5px"
-                          color="black"
-                          padding="5px"
-                          icon="add"
-                        />
-                      </div>
-                      <p class="row flex-center">Others</p>
-                    </div>
 
-                    <div class="col-2 my-home q-mr-sm">
-                      <div class="row flex-center">
-                        <q-btn
-                          round
-                          color="black"
-                          class="flex-center"
-                          icon="arrow_forward_ios"
-                        />
-                      </div>
-                    </div>
-                  </div>
+                 <add-project />
                   <div class="row q-pa-md my-font">
                     <p>* Fields marked with "*" are mandatory.</p>
                   </div>
@@ -342,17 +219,18 @@
                   <!-- Footer Div -->
 
                   <div class="row flex-center">
-                    <div class="col-4">
+                    <div class="col-12 col-md">
                       <q-btn
                         size="8px"
                         rounded
+                        style="width:100px"
                         color="black"
                         label="Ask more info"
                         class="text-white text-h7"
                       ></q-btn>
                     </div>
 
-                    <div class="col-4">
+                    <div class="col-12 col-md">
                       <q-btn
                         size="8px"
                         rounded
@@ -406,21 +284,21 @@
                         {{ designer }}
                       </div>
                       <div class="row">
-                        <div class="col">
+                        <div class="col-12 col-md">
                           <div class="text-h7 text-bold">Requested price</div>
                           <div class="text-h7">€500</div>
                         </div>
-                        <div class="col">
+                        <div class="col-12 col-md">
                           <div class="text-h7 text-bold">Exexution time</div>
                           <div class="text-h7">2 weeks</div>
                         </div>
-                        <div class="col">
+                        <div class="col-12 col-md">
                           <div class="text-h7 text-bold">Offer validity</div>
                           <div class="text-h7">3 days</div>
                         </div>
                       </div>
                       <div class="row">
-                        <div class="col">
+                        <div class="col-12 col-md">
                           <div class="text-h7 row text-bold">Skills</div>
                           <div class="text-h7 r">
                             <q-btn
@@ -517,21 +395,21 @@
                         {{ designer }}
                       </div>
                       <div class="row">
-                        <div class="col">
+                        <div class="col-12 col-md">
                           <div class="text-h7 text-bold">Requested price</div>
                           <div class="text-h7">€500</div>
                         </div>
-                        <div class="col">
+                        <div class="col-12 col-md">
                           <div class="text-h7 text-bold">Exexution time</div>
                           <div class="text-h7">2 weeks</div>
                         </div>
-                        <div class="col">
+                        <div class="col-12 col-md">
                           <div class="text-h7 text-bold">Offer validity</div>
                           <div class="text-h7">3 days</div>
                         </div>
                       </div>
                       <div class="row">
-                        <div class="col">
+                        <div class="col-12 col-md">
                           <div class="text-h7 row text-bold">Skills</div>
                           <div class="text-h7 r">
                             <q-btn
@@ -612,66 +490,67 @@
 import { defineComponent } from "vue";
 import { ref } from "vue";
 import axios from "axios";
+import AddProject from "src/components/add-project.vue";
 export default defineComponent({
-  // name: "IndexPage",
-  data() {
-    return {
-      lorem: "",
-      text: "",
-      checkbox19: ref(true),
-      checkbox20: ref(false),
-      checkbox21: ref(false),
-      checkbox22: ref(false),
-      checkbox23: ref(false),
-      price: ref(""),
-      input1: ref("Your answer here."),
-      input2: ref("Your answer here."),
-      date: ref("2020/07/08 , 2020/07/17"),
-      group: ref("op1"),
-      listProposal: [],
-
-      options: [
-        {
-          label: "Freelancer",
-          value: "op1",
-        },
-        {
-          label: "Agency",
-          value: "op2",
-        },
-      ],
-      designer: "",
-      avg_rating: ref(1),
-      ratingModel1: ref(1),
-      ratingModel2: ref(1),
-      account_status: "",
-      title: "",
-      project_execution_weeks: "",
-      offer_validity: "",
-      account_type: "",
-      questionAnswers: "",
-    };
-  },
-  // SHOW
-  created() {
-    const options = {
-      method: "GET",
-      url: "https://rwapi.zupria.com/api/proposal/received/1",
-      headers: {
-        Authorization:
-          "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcndhcGkuenVwcmlhLmNvbVwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY1MDY2NTQ3NCwiZXhwIjoxNjgyMjAxNDc0LCJuYmYiOjE2NTA2NjU0NzQsImp0aSI6ImRaUGlZem9YTXZZS25ITU4iLCJzdWIiOjgsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.m127K5q8Fy_6CxXEWJZyXqb_HJL4U-EUcHmdwmHTytI",
-      },
-    };
-    axios
-      .request(options)
-      .then((response) => {
-        console.log(response.data);
-        this.listProposal = response.data;
-      })
-      .catch(function (error) {
-        console.error(error);
-      });
-  },
+    // name: "IndexPage",
+    data() {
+        return {
+            lorem: "",
+            text: "",
+            checkbox19: ref(true),
+            checkbox20: ref(false),
+            checkbox21: ref(false),
+            checkbox22: ref(false),
+            checkbox23: ref(false),
+            price: ref(""),
+            input1: ref("Your answer here."),
+            input2: ref("Your answer here."),
+            date: ref("2020/07/08 , 2020/07/17"),
+            group: ref("op1"),
+            listProposal: [],
+            options: [
+                {
+                    label: "Freelancer",
+                    value: "op1",
+                },
+                {
+                    label: "Agency",
+                    value: "op2",
+                },
+            ],
+            designer: "",
+            avg_rating: ref(1),
+            ratingModel1: ref(1),
+            ratingModel2: ref(1),
+            account_status: "",
+            title: "",
+            project_execution_weeks: "",
+            offer_validity: "",
+            account_type: "",
+            questionAnswers: "",
+            proposals: [],
+        };
+    },
+    // SHOW
+    created() {
+        const options = {
+            method: "GET",
+            url: "https://rwapi.zupria.com/api/proposal/received/1",
+            headers: {
+                Authorization: "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcndhcGkuenVwcmlhLmNvbVwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY1MDY2NTQ3NCwiZXhwIjoxNjgyMjAxNDc0LCJuYmYiOjE2NTA2NjU0NzQsImp0aSI6ImRaUGlZem9YTXZZS25ITU4iLCJzdWIiOjgsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.m127K5q8Fy_6CxXEWJZyXqb_HJL4U-EUcHmdwmHTytI",
+            },
+        };
+        axios
+            .request(options)
+            .then((response) => {
+            console.log(response.data);
+            this.proposals = response.data;
+        })
+            .catch(function (error) {
+            console.error(error);
+        });
+    },
+    components: { AddProject }
 });
 </script>
 <style lang="sass" scoped>
