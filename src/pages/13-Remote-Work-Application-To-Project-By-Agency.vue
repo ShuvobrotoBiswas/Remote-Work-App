@@ -114,6 +114,7 @@
                   <q-expansion-item
                     dense
                     dense-toggle
+                    v-model="project_execution_weeks"
                     expand-separator
                     label="Execution Time"
                   >
@@ -144,7 +145,7 @@
                     do eiusmod tempor incididunt ut labore et dolore magna
                     aliqua?
                   </legend>
-                  <q-input borderless v-model="input1"></q-input>
+                  <q-input borderless v-model="interview_answers"></q-input>
                 </fieldset>
               </div>
             </div>
@@ -178,11 +179,11 @@
                     <q-input
                       style="max-width: 250px"
                       filled
-                      v-model="date"
+                      v-model="validity"
                       mask="date"
                       :rules="['date']"
                     >
-                      {{ date }}
+                      {{ validity }}
                       <template v-slot:append>
                         <q-icon name="event" class="cursor-pointer">
                           <q-popup-proxy
@@ -191,7 +192,7 @@
                             transition-show="scale"
                             transition-hide="scale"
                           >
-                            <q-date v-model="date" range>
+                            <q-date v-model="validity" range>
                               <div class="row items-center justify-end">
                                 <q-btn
                                   v-close-popup
@@ -446,7 +447,7 @@
                 <q-btn
                   size="8px"
                   rounded
-                  to="14-REMOTE-WORK-CLIENT-LEST-APPLICATION-TO-PROJECT-BY-AGENCY"
+                  type="submit"
                   color="black"
                   label="Send"
                   class="text-white text-h7"
@@ -499,6 +500,9 @@ export default defineComponent({
       myChoice1: ref("myChoice1"),
       myChoice2: ref("myChoice2"),
       myChoice3: ref("myChoice3"),
+      project_execution_weeks:ref(""),
+      interview_answers:ref(""),
+      validity:ref(""),
     };
   },
   methods: {

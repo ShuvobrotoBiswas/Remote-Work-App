@@ -435,7 +435,7 @@ export default defineComponent({
       submitResult,
       contractors_no: ref("1"),
       skill_ids: ref("Angular JS"),
-      questions: "",
+      questions: ref(""),
       exp_level: ref("Junior"),
       contractor_availability: ref("Less then 20hour/Week"),
       project_visibility: ref("Available only to invited contractors"),
