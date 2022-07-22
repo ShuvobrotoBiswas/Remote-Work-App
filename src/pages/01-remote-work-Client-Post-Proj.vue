@@ -93,7 +93,7 @@
           <div class="q-pa-md text-h6">Project Catagory</div>
 
           <div class="row">
-            <div class="col-3">
+            <div class="col-12 col-md">
               <q-radio
                 left-label
                 color="cyan"
@@ -102,7 +102,7 @@
                 label="Well Defined Project"
               />
             </div>
-            <div class="col-2">
+            <div class="col-12 col-md">
               <q-radio
                 left-label
                 color="cyan"
@@ -111,7 +111,7 @@
                 label="Ongoing Work"
               />
             </div>
-            <div class="col-3">
+            <div class="col-12 col-md">
               <q-radio
                 left-label
                 color="cyan"
@@ -120,7 +120,7 @@
                 label="Market Research"
               />
             </div>
-            <div class="col-3">
+            <div class="col-12 col-md">
               <q-radio
                 left-label
                 color="cyan"
@@ -134,7 +134,7 @@
           <h6>1.Project Template</h6>
           <div>
             <div class="row bid1 q-py-md text-center">
-              <div class="col-1 my-home q-mr-sm">
+              <div class="col-12 col-md my-home q-mr-sm">
                 <q-btn
                   round
                   color="cyan"
@@ -142,7 +142,7 @@
                   icon="arrow_back_ios_new"
                 />
               </div>
-              <div class="col my-home my-box bid2 bg-cyan-1 my-font q-mr-sm">
+              <div class="col-12 col-md my-home my-box bid2 bg-cyan-1 my-font q-mr-sm">
                 <q-img
                   src="~assets/Avator27.png"
                   class="image1"
@@ -153,7 +153,7 @@
                   LOGO Design
                 </div>
               </div>
-              <div class="col my-home bid2 my-box my-font q-mr-sm">
+              <div class="col-12 col-md my-home bid2 my-box my-font q-mr-sm">
                 <q-img
                   src="~assets/Avator28.png"
                   class="image1"
@@ -164,7 +164,7 @@
                   Website Design
                 </div>
               </div>
-              <div class="col my-home bid2 my-box my-font q-mr-sm">
+              <div class="col-12 col-md my-home bid2 my-box my-font q-mr-sm">
                 <q-img
                   src="~assets/Avator21.png"
                   class="image1"
@@ -175,7 +175,7 @@
                   Translation
                 </div>
               </div>
-              <div class="col my-home bid2 my-font my-box1 q-mr-sm">
+              <div class="col-12 col-md my-home bid2 my-font my-box1 q-mr-sm">
                 <div class="col">
                   <q-btn
                     flat
