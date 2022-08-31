@@ -1,0 +1,109 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2638
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 List of Contracts															\
+endpoint	contract														\
+method	GET														\
+															\
+Response:															\
+	message														\
+	data: [ \{ 														\
+		id: 1,													\
+		title: "Project",													\
+		post_type: "project",													\
+		price_type: "fixed",													\
+		price: 500,													\
+		is_client: false,													\
+		is_contractor: true,													\
+		proposal_url: "https://rwapi.zupria.com/api/proposal/1/1",													\
+		post_url: "https://rwapi.zupria.com/api/post/1",													\
+		status: "notStarted",													\
+		started_at: "Jun 8 15:07",													\
+		ended_at: "Jun 8 15:07"													\
+	\}],														\
+	pagination_meta : \{\}  * check masters sheet														\
+															\
+															\
+Show Contract															\
+endpoint	contract/\{ id \}														\
+method	GET														\
+															\
+Response:															\
+	message														\
+	data: \{ 														\
+		id: 1,													\
+		title: "Project",													\
+		post_type: "project",													\
+		price_type: "fixed",													\
+		price: 500,													\
+		is_client: false,													\
+		is_contractor: true,													\
+		proposal_url: "https://rwapi.zupria.com/api/proposal/1/1",													\
+		post_url: "https://rwapi.zupria.com/api/post/1",													\
+		status: "notStarted",													\
+		started_at: "Jun 8 15:07",													\
+		ended_at: "Jun 8 15:07"													\
+	\}														\
+															\
+															\
+Break Project into Single Milestone (Only Client can do)															\
+endpoint	/contract/organizeIntoSingleStage														\
+method	POST														\
+params:															\
+	* title														\
+	* description														\
+	* deadline_date: yyyy-mm-dd														\
+	* price = equal to contract price														\
+															\
+Response:															\
+	message														\
+															\
+															\
+Break Project into Multiple Milestones (Only Client can do)															\
+endpoint	/contract/createStages														\
+method	POST														\
+params:															\
+	* title[ ]														\
+	* description[ ]														\
+	* deadline_date[ ]: yyyy-mm-dd														\
+	* price[ ] = sum of all milestones should not be more than contract price														\
+															\
+Response:															\
+	message														\
+															\
+															\
+List of Milestones															\
+endpoint	/contract/stages														\
+method	GET														\
+															\
+Response:															\
+	message														\
+	"data: [\
+        \{\
+            ""id"": 1,\
+            ""title"": ""Stage1"",\
+            ""description"": ""Stage1 description"",\
+            ""contract_id"": 1,\
+            ""price"": 300,\
+            ""deadline_date"": ""June 16, 2022"",\
+            ""status"": pending | accepted | funded | inProgress | submitted | approved,\
+            ""status_text"":  text to display as per status\
+        \}\
+    ]"														\
+															\
+															\
+Edit Stage (can be edited if not funded yet, and only Client can edit)															\
+endpoint	/contract/editStage/\{ contract id \} / \{ stage id \}														\
+method	POST														\
+params:															\
+	* title														\
+	* description														\
+	* deadline_date: yyyy-mm-dd														\
+	* price = equal to contract price														\
+															\
+Response:															\
+	message}

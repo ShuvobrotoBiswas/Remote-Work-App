@@ -1,0 +1,4342 @@
+{
+	"info": {
+		"_postman_id": "8473a01f-e711-41c3-ada8-e52b0c8ee84e",
+		"name": "zupria-rw",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "account_type",
+									"value": "client",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "client2@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "123456",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{zupria_rw_live}}/api/auth/register",
+							"host": [
+								"{{zupria_rw_live}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "superadmin@rw.com",
+									"description": "\n",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{zupria_rw_live}}/api/auth/login",
+							"host": [
+								"{{zupria_rw_live}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Resend verification mail",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "client2@gmail.com",
+									"description": "\n",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local_8000}}/api/auth/resend-verification-mail",
+							"host": [
+								"{{local_8000}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"resend-verification-mail"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Forgot password",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "client1@gmail.com",
+									"description": "\n",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local_8000}}/api/auth/forgot-password",
+							"host": [
+								"{{local_8000}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"forgot-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reset password",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "client1@gmail.com",
+									"description": "\n",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local_8000}}/api/auth/reset-password",
+							"host": [
+								"{{local_8000}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"reset-password"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Agency",
+					"item": [
+						{
+							"name": "members",
+							"item": [
+								{
+									"name": "send invitation",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0NjQwNTY2NSwiZXhwIjoxNjc3OTQxNjY1LCJuYmYiOjE2NDY0MDU2NjUsImp0aSI6Ikx3TUtvOEVBWkdFVjR4SEwiLCJzdWIiOjMsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.4_YdiXfIeXFfm8au78dq1oiUIJjpvUhYPgt0VxUegcY"
+											},
+											{
+												"key": "Agency-id",
+												"value": "14"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "user_profile_id",
+													"value": "13",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{local_8000}}/api/user/agency/sendInvitation",
+											"host": [
+												"{{local_8000}}"
+											],
+											"path": [
+												"api",
+												"user",
+												"agency",
+												"sendInvitation"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "add self as agency member",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0MzAzOTc1NiwiZXhwIjoxNjc0NTc1NzU2LCJuYmYiOjE2NDMwMzk3NTYsImp0aSI6Ik9ydTUzdE9xMG9VdFMyY1UiLCJzdWIiOjIyLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.yRDL98hWJQiIOIWcTrfkvIYKDEH10UKvrLnrIb8hGAw"
+											},
+											{
+												"key": "Agency-id",
+												"value": "38"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": []
+										},
+										"url": {
+											"raw": "{{local_8000}}/api/user/agency/addSelfAsMember",
+											"host": [
+												"{{local_8000}}"
+											],
+											"path": [
+												"api",
+												"user",
+												"agency",
+												"addSelfAsMember"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "list sent invitations",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0NjM5NzYzNiwiZXhwIjoxNjc3OTMzNjM2LCJuYmYiOjE2NDYzOTc2MzYsImp0aSI6IlVrTzM4a0M1TldQY01DOEciLCJzdWIiOjYsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.aWgNP47yFpOkoyrPC1narZyzw5D0Y6i_kUaKyJfmWiI"
+											},
+											{
+												"key": "Agency-id",
+												"value": "11"
+											}
+										],
+										"url": {
+											"raw": "{{local_8000}}/api/user/agency/sentInvitations",
+											"host": [
+												"{{local_8000}}"
+											],
+											"path": [
+												"api",
+												"user",
+												"agency",
+												"sentInvitations"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "cancel invitation",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0NjM5NzYzNiwiZXhwIjoxNjc3OTMzNjM2LCJuYmYiOjE2NDYzOTc2MzYsImp0aSI6IlVrTzM4a0M1TldQY01DOEciLCJzdWIiOjYsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.aWgNP47yFpOkoyrPC1narZyzw5D0Y6i_kUaKyJfmWiI"
+											},
+											{
+												"key": "Agency-id",
+												"value": "11"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "_method",
+													"value": "PUT",
+													"type": "text"
+												},
+												{
+													"key": "invitation_id",
+													"value": "5",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{local_8000}}/api/user/agency/cancelSentInvitation",
+											"host": [
+												"{{local_8000}}"
+											],
+											"path": [
+												"api",
+												"user",
+												"agency",
+												"cancelSentInvitation"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "User agency members",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0NjQwMzI5NCwiZXhwIjoxNjc3OTM5Mjk0LCJuYmYiOjE2NDY0MDMyOTQsImp0aSI6InNNb3VVUnZJMDZpTGFJMGsiLCJzdWIiOjYsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.48TcLMT6woznTNOsQjb27qDgP9B71rdblj3L17fun58"
+											},
+											{
+												"key": "Agency-id",
+												"value": "11"
+											}
+										],
+										"url": {
+											"raw": "{{local_8000}}/api/user/agency/members",
+											"host": [
+												"{{local_8000}}"
+											],
+											"path": [
+												"api",
+												"user",
+												"agency",
+												"members"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "remove agencies member",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0NjM5NzYzNiwiZXhwIjoxNjc3OTMzNjM2LCJuYmYiOjE2NDYzOTc2MzYsImp0aSI6IlVrTzM4a0M1TldQY01DOEciLCJzdWIiOjYsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.aWgNP47yFpOkoyrPC1narZyzw5D0Y6i_kUaKyJfmWiI"
+											},
+											{
+												"key": "Agency-id",
+												"value": "11"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "_method",
+													"value": "DELETE",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{local_8000}}/api/user/agency/member/6",
+											"host": [
+												"{{local_8000}}"
+											],
+											"path": [
+												"api",
+												"user",
+												"agency",
+												"member",
+												"6"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Create agency",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0NjQwNjM2NCwiZXhwIjoxNjc3OTQyMzY0LCJuYmYiOjE2NDY0MDYzNjQsImp0aSI6IkU4SUpEeFhhdDlzMUhhRFYiLCJzdWIiOjMsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.elsesdchrYxqF5-WHD-vEQ2Np3iF_h95i5JjrjfDiLQ"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Client1 agency1",
+											"description": "\n",
+											"type": "text"
+										},
+										{
+											"key": "billing_address",
+											"value": "Shubham Corporate1",
+											"type": "text"
+										},
+										{
+											"key": "billing_country_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "vat_code",
+											"value": "VAT123424",
+											"type": "text"
+										},
+										{
+											"key": "registration_code",
+											"value": "Regis887",
+											"type": "text"
+										},
+										{
+											"key": "website",
+											"value": "https://www.google.com",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "919993414777",
+											"type": "text"
+										},
+										{
+											"key": "profile_picture",
+											"value": "test-file",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local_8000}}/api/user/agency",
+									"host": [
+										"{{local_8000}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"agency"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update agency",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0NjQwNjM2NCwiZXhwIjoxNjc3OTQyMzY0LCJuYmYiOjE2NDY0MDYzNjQsImp0aSI6IkU4SUpEeFhhdDlzMUhhRFYiLCJzdWIiOjMsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.elsesdchrYxqF5-WHD-vEQ2Np3iF_h95i5JjrjfDiLQ"
+									},
+									{
+										"key": "Agency-id",
+										"value": "9"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "_method",
+											"value": "PUT",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "Client1 Agency1 edit 9",
+											"description": "\n",
+											"type": "text"
+										},
+										{
+											"key": "profile_picture",
+											"value": "uploads/profile/122021/zzzded50e747d71e560b219876161de7578.jpg",
+											"type": "text"
+										},
+										{
+											"key": "billing_address",
+											"value": "Shubham Corporate12",
+											"type": "text"
+										},
+										{
+											"key": "billing_country_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "vat_code",
+											"value": "VAT12333",
+											"type": "text"
+										},
+										{
+											"key": "registration_code",
+											"value": "Regis887",
+											"type": "text"
+										},
+										{
+											"key": "website",
+											"value": "www.yashasaa.com",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "919993414777",
+											"type": "text"
+										},
+										{
+											"key": "edit_approved_data",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local_8000}}/api/user/agency",
+									"host": [
+										"{{local_8000}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"agency"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "User agencies",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0NjM4ODE4MywiZXhwIjoxNjc3OTI0MTgzLCJuYmYiOjE2NDYzODgxODMsImp0aSI6IlRqelQ4T0xRSjZPZFhQSUgiLCJzdWIiOjMsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.35WGOBOlEXJxHNUN7533WnWlKI5X7GXDK4HBK9V0gRI"
+									}
+								],
+								"url": {
+									"raw": "{{local_8000}}/api/user/agency",
+									"host": [
+										"{{local_8000}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"agency"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Contractor Profile",
+					"item": [
+						{
+							"name": "Projects",
+							"item": [
+								{
+									"name": "upload project image",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0NjQwMzI5NCwiZXhwIjoxNjc3OTM5Mjk0LCJuYmYiOjE2NDY0MDMyOTQsImp0aSI6InNNb3VVUnZJMDZpTGFJMGsiLCJzdWIiOjYsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.48TcLMT6woznTNOsQjb27qDgP9B71rdblj3L17fun58"
+											},
+											{
+												"key": "Agency-id",
+												"value": "11"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "file",
+													"value": "",
+													"type": "file"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{local_8000}}/api/user/projectImage",
+											"host": [
+												"{{local_8000}}"
+											],
+											"path": [
+												"api",
+												"user",
+												"projectImage"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Create Freelancer Project",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0NjQwMzI5NCwiZXhwIjoxNjc3OTM5Mjk0LCJuYmYiOjE2NDY0MDMyOTQsImp0aSI6InNNb3VVUnZJMDZpTGFJMGsiLCJzdWIiOjYsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.48TcLMT6woznTNOsQjb27qDgP9B71rdblj3L17fun58"
+											},
+											{
+												"key": "Agency-id",
+												"value": "11",
+												"disabled": true
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "title",
+													"value": "Agency11 Project11",
+													"description": "\n",
+													"type": "text"
+												},
+												{
+													"key": "description",
+													"value": "test description Agency11 Project1",
+													"type": "text"
+												},
+												{
+													"key": "image",
+													"value": "uploads/tmp/032022/d3d4a1ae3e82b2d561c66f337b328548.jpg",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{local_8000}}/api/user/contractorProfile/project",
+											"host": [
+												"{{local_8000}}"
+											],
+											"path": [
+												"api",
+												"user",
+												"contractorProfile",
+												"project"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Update Freelancer Project",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0NjQwMzI5NCwiZXhwIjoxNjc3OTM5Mjk0LCJuYmYiOjE2NDY0MDMyOTQsImp0aSI6InNNb3VVUnZJMDZpTGFJMGsiLCJzdWIiOjYsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.48TcLMT6woznTNOsQjb27qDgP9B71rdblj3L17fun58"
+											},
+											{
+												"key": "Agency-id",
+												"value": "11"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "_method",
+													"value": "PUT",
+													"type": "text"
+												},
+												{
+													"key": "title",
+													"value": "Agency11 Project4 edited",
+													"description": "\n",
+													"type": "text"
+												},
+												{
+													"key": "description",
+													"value": "test description Agency11 Project1 edited",
+													"type": "text"
+												},
+												{
+													"key": "image",
+													"value": "uploads/tmp/032022/b550d71b0643a65883ffdb1213b99cee.jpg",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{local_8000}}/api/user/contractorProfile/project/4",
+											"host": [
+												"{{local_8000}}"
+											],
+											"path": [
+												"api",
+												"user",
+												"contractorProfile",
+												"project",
+												"4"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Delete Freelancer Project",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0NjQ5NTc4OCwiZXhwIjoxNjc4MDMxNzg4LCJuYmYiOjE2NDY0OTU3ODgsImp0aSI6IkhpdjQydWxtcUltQmJOTG0iLCJzdWIiOjcsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.ipZJgCpMcJeUyTDzPauQk0sjdPmwEDtRm9o089Xt1PA"
+											},
+											{
+												"key": "Agency-id",
+												"value": "11",
+												"disabled": true
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "_method",
+													"value": "DELETE",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{local_8000}}/api/user/contractorProfile/project/6",
+											"host": [
+												"{{local_8000}}"
+											],
+											"path": [
+												"api",
+												"user",
+												"contractorProfile",
+												"project",
+												"6"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Proposal specific project",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0NjQwMzI5NCwiZXhwIjoxNjc3OTM5Mjk0LCJuYmYiOjE2NDY0MDMyOTQsImp0aSI6InNNb3VVUnZJMDZpTGFJMGsiLCJzdWIiOjYsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.48TcLMT6woznTNOsQjb27qDgP9B71rdblj3L17fun58"
+											},
+											{
+												"key": "Agency-id",
+												"value": "11",
+												"disabled": true
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "title",
+													"value": "Agency project1",
+													"description": "\n",
+													"type": "text"
+												},
+												{
+													"key": "description",
+													"value": "test description",
+													"type": "text"
+												},
+												{
+													"key": "image",
+													"value": "uploads/tmp/032022/d968760fc87a1c812f69f4ced98a84e2.jpg",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{local_8000}}/api/user/proposalSpecificProject",
+											"host": [
+												"{{local_8000}}"
+											],
+											"path": [
+												"api",
+												"user",
+												"proposalSpecificProject"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Freelancer Projects",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0NjQwMzI5NCwiZXhwIjoxNjc3OTM5Mjk0LCJuYmYiOjE2NDY0MDMyOTQsImp0aSI6InNNb3VVUnZJMDZpTGFJMGsiLCJzdWIiOjYsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.48TcLMT6woznTNOsQjb27qDgP9B71rdblj3L17fun58"
+											},
+											{
+												"key": "Agency-id",
+												"value": "11",
+												"disabled": true
+											}
+										],
+										"url": {
+											"raw": "{{local_8000}}/api/user/contractorProfile/project",
+											"host": [
+												"{{local_8000}}"
+											],
+											"path": [
+												"api",
+												"user",
+												"contractorProfile",
+												"project"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Freelancer Project view",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0NjQwMzI5NCwiZXhwIjoxNjc3OTM5Mjk0LCJuYmYiOjE2NDY0MDMyOTQsImp0aSI6InNNb3VVUnZJMDZpTGFJMGsiLCJzdWIiOjYsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.48TcLMT6woznTNOsQjb27qDgP9B71rdblj3L17fun58"
+											},
+											{
+												"key": "Agency-id",
+												"value": "11"
+											}
+										],
+										"url": {
+											"raw": "{{local_8000}}/api/user/contractorProfile/project/4",
+											"host": [
+												"{{local_8000}}"
+											],
+											"path": [
+												"api",
+												"user",
+												"contractorProfile",
+												"project",
+												"4"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Freelancer profile",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0NjQwMzI5NCwiZXhwIjoxNjc3OTM5Mjk0LCJuYmYiOjE2NDY0MDMyOTQsImp0aSI6InNNb3VVUnZJMDZpTGFJMGsiLCJzdWIiOjYsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.48TcLMT6woznTNOsQjb27qDgP9B71rdblj3L17fun58"
+									},
+									{
+										"key": "Agency-id",
+										"value": "11"
+									}
+								],
+								"url": {
+									"raw": "{{local_8000}}/api/user/contractorProfile",
+									"host": [
+										"{{local_8000}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"contractorProfile"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create or Update Freelancer profile",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0NjQwMzI5NCwiZXhwIjoxNjc3OTM5Mjk0LCJuYmYiOjE2NDY0MDMyOTQsImp0aSI6InNNb3VVUnZJMDZpTGFJMGsiLCJzdWIiOjYsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.48TcLMT6woznTNOsQjb27qDgP9B71rdblj3L17fun58"
+									},
+									{
+										"key": "Agency-id",
+										"value": "11"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "_method",
+											"value": "PUT",
+											"type": "text"
+										},
+										{
+											"key": "title",
+											"value": "Contractor8 Fr Profile",
+											"description": "\n",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "test description Contractor8 Fr Profile",
+											"type": "text"
+										},
+										{
+											"key": "exp_level",
+											"value": "expert",
+											"type": "text"
+										},
+										{
+											"key": "hourly_rate",
+											"value": "30.50",
+											"type": "text"
+										},
+										{
+											"key": "hours_available_per_week",
+											"value": "20",
+											"type": "text"
+										},
+										{
+											"key": "current_loading",
+											"value": "20",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local_8000}}/api/user/contractorProfile",
+									"host": [
+										"{{local_8000}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"contractorProfile"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Freelancer Languages",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0NjQwMzI5NCwiZXhwIjoxNjc3OTM5Mjk0LCJuYmYiOjE2NDY0MDMyOTQsImp0aSI6InNNb3VVUnZJMDZpTGFJMGsiLCJzdWIiOjYsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.48TcLMT6woznTNOsQjb27qDgP9B71rdblj3L17fun58"
+									},
+									{
+										"key": "Agency-id",
+										"value": "11"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "_method",
+											"value": "PUT",
+											"type": "text"
+										},
+										{
+											"key": "language_ids[]",
+											"value": "1",
+											"description": "\n",
+											"type": "text"
+										},
+										{
+											"key": "language_ids[]",
+											"value": "2",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local_8000}}/api/user/contractorProfile/languages",
+									"host": [
+										"{{local_8000}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"contractorProfile",
+										"languages"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Freelancer Services",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0NjQwMzI5NCwiZXhwIjoxNjc3OTM5Mjk0LCJuYmYiOjE2NDY0MDMyOTQsImp0aSI6InNNb3VVUnZJMDZpTGFJMGsiLCJzdWIiOjYsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.48TcLMT6woznTNOsQjb27qDgP9B71rdblj3L17fun58"
+									},
+									{
+										"key": "Agency-id",
+										"value": "11"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "_method",
+											"value": "PUT",
+											"type": "text"
+										},
+										{
+											"key": "sub_service_ids[]",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "sub_service_ids[]",
+											"value": "2",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local_8000}}/api/user/contractorProfile/services",
+									"host": [
+										"{{local_8000}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"contractorProfile",
+										"services"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Freelancer Skills",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0NjQwMzI5NCwiZXhwIjoxNjc3OTM5Mjk0LCJuYmYiOjE2NDY0MDMyOTQsImp0aSI6InNNb3VVUnZJMDZpTGFJMGsiLCJzdWIiOjYsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.48TcLMT6woznTNOsQjb27qDgP9B71rdblj3L17fun58"
+									},
+									{
+										"key": "Agency-id",
+										"value": "11"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "_method",
+											"value": "PUT",
+											"type": "text"
+										},
+										{
+											"key": "skill_ids[]",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "skill_ids[]",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local_8000}}/api/user/contractorProfile/skills",
+									"host": [
+										"{{local_8000}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"contractorProfile",
+										"skills"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Invitations",
+					"item": [
+						{
+							"name": "received agency invitations (pending)",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0NjQwNTA4NCwiZXhwIjoxNjc3OTQxMDg0LCJuYmYiOjE2NDY0MDUwODQsImp0aSI6IkdEOFpqZEExdEE2ZUdLMTUiLCJzdWIiOjEwLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.RUxAKQCB0qFy5rzf25FUaKUdad7v8iwpsR60oKwWWkI"
+									}
+								],
+								"url": {
+									"raw": "{{local_8000}}/api/user/invitations",
+									"host": [
+										"{{local_8000}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"invitations"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "reply",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0NjQwNTA4NCwiZXhwIjoxNjc3OTQxMDg0LCJuYmYiOjE2NDY0MDUwODQsImp0aSI6IkdEOFpqZEExdEE2ZUdLMTUiLCJzdWIiOjEwLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.RUxAKQCB0qFy5rzf25FUaKUdad7v8iwpsR60oKwWWkI"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "_method",
+											"value": "PUT",
+											"type": "text"
+										},
+										{
+											"key": "invitation_id",
+											"value": "6",
+											"type": "text"
+										},
+										{
+											"key": "reply",
+											"value": "accepted",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local_8000}}/api/user/replyInvitation",
+									"host": [
+										"{{local_8000}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"replyInvitation"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Update Profile Pic  or agency logo",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0MTU0NjIyMiwiZXhwIjoxNjczMDgyMjIyLCJuYmYiOjE2NDE1NDYyMjIsImp0aSI6InZQeTFLWWdIY1VDU3JhR0MiLCJzdWIiOjIwLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.WIHTyDaqKGkjiS91qj7GGw0IAW-E-PCQ58oT9S_HANc"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"value": "",
+									"type": "file"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local_8000}}/api/user/profilePic",
+							"host": [
+								"{{local_8000}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"profilePic"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User profile",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0NjQwMjg3MSwiZXhwIjoxNjc3OTM4ODcxLCJuYmYiOjE2NDY0MDI4NzEsImp0aSI6IndBT09LMkpKUmNlbnFoMXUiLCJzdWIiOjcsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Ehz2xi5cKPWV2BwjvNShpfLYpAwkFSdxJt5avRJe6hw"
+							},
+							{
+								"key": "Agency-id",
+								"value": "11",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "_method",
+									"value": "PUT",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Contractor7",
+									"type": "text"
+								},
+								{
+									"key": "res_address",
+									"value": "Parshwanath Nagar",
+									"type": "text"
+								},
+								{
+									"key": "billing_address",
+									"value": "Shubham Corporate4",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "919993414704",
+									"type": "text"
+								},
+								{
+									"key": "res_country_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "billing_country_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "edit_approved_data",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local_8000}}/api/user/profile",
+							"host": [
+								"{{local_8000}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User profile",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0NjQwMjg3MSwiZXhwIjoxNjc3OTM4ODcxLCJuYmYiOjE2NDY0MDI4NzEsImp0aSI6IndBT09LMkpKUmNlbnFoMXUiLCJzdWIiOjcsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Ehz2xi5cKPWV2BwjvNShpfLYpAwkFSdxJt5avRJe6hw"
+							}
+						],
+						"url": {
+							"raw": "{{local_8000}}/api/user/profile",
+							"host": [
+								"{{local_8000}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Verify VAT",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0NjQwMjg3MSwiZXhwIjoxNjc3OTM4ODcxLCJuYmYiOjE2NDY0MDI4NzEsImp0aSI6IndBT09LMkpKUmNlbnFoMXUiLCJzdWIiOjcsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Ehz2xi5cKPWV2BwjvNShpfLYpAwkFSdxJt5avRJe6hw"
+							}
+						],
+						"url": {
+							"raw": "{{local_8000}}/api/user/verifyVAT",
+							"host": [
+								"{{local_8000}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"verifyVAT"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Upload verif document",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0NzAwMDE2NywiZXhwIjoxNjc4NTM2MTY3LCJuYmYiOjE2NDcwMDAxNjcsImp0aSI6Ik9GVFR6Y3NhVmlvV2xZdHUiLCJzdWIiOjQsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.CL-BBkDEWFII7k--ehtTfq754z5-vO4a0t0UXIiAskY"
+							},
+							{
+								"key": "Agency-id",
+								"value": "11",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"value": "",
+									"type": "file"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local_8000}}/api/user/verifDoc",
+							"host": [
+								"{{local_8000}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"verifDoc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Upload file",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0NzA5OTAzMiwiZXhwIjoxNjc4NjM1MDMyLCJuYmYiOjE2NDcwOTkwMzIsImp0aSI6IjBYNXNLVklBSWtlOWYza0kiLCJzdWIiOjEyLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.W5XiXN4yv9qjeQefXuzPfFjQnIJ1V5qaDUXYvPBZucU"
+							},
+							{
+								"key": "Agency-id",
+								"value": "11",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "asww-005-arum-original-imaf84kwqcdyg3c4.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local_8000}}/api/user/file",
+							"host": [
+								"{{local_8000}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"file"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Submit verification",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0NzA5OTAzMiwiZXhwIjoxNjc4NjM1MDMyLCJuYmYiOjE2NDcwOTkwMzIsImp0aSI6IjBYNXNLVklBSWtlOWYza0kiLCJzdWIiOjEyLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.W5XiXN4yv9qjeQefXuzPfFjQnIJ1V5qaDUXYvPBZucU"
+							},
+							{
+								"key": "Agency-id",
+								"value": "11",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "files[]",
+									"value": "uploads/tmp/032022/f9d5e2b9ee0fc398270e50ae0e78da69.jpg",
+									"type": "text"
+								},
+								{
+									"key": "files[]",
+									"value": "uploads/tmp/032022/5a4926dfe24059eeab3ae9657fd26e0b.jpg",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local_8000}}/api/user/submitForVerification",
+							"host": [
+								"{{local_8000}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"submitForVerification"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Upload doc",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0NzAwMDE2NywiZXhwIjoxNjc4NTM2MTY3LCJuYmYiOjE2NDcwMDAxNjcsImp0aSI6Ik9GVFR6Y3NhVmlvV2xZdHUiLCJzdWIiOjQsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.CL-BBkDEWFII7k--ehtTfq754z5-vO4a0t0UXIiAskY"
+							},
+							{
+								"key": "Agency-id",
+								"value": "11",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"value": "",
+									"type": "file"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local_8000}}/api/user/doc",
+							"host": [
+								"{{local_8000}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"doc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User docs",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0NzAwMDE2NywiZXhwIjoxNjc4NTM2MTY3LCJuYmYiOjE2NDcwMDAxNjcsImp0aSI6Ik9GVFR6Y3NhVmlvV2xZdHUiLCJzdWIiOjQsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.CL-BBkDEWFII7k--ehtTfq754z5-vO4a0t0UXIiAskY"
+							},
+							{
+								"key": "Agency-id",
+								"value": "11",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{local_8000}}/api/user/verifDocs",
+							"host": [
+								"{{local_8000}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"verifDocs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Feed setting",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0NjQwMzI5NCwiZXhwIjoxNjc3OTM5Mjk0LCJuYmYiOjE2NDY0MDMyOTQsImp0aSI6InNNb3VVUnZJMDZpTGFJMGsiLCJzdWIiOjYsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.48TcLMT6woznTNOsQjb27qDgP9B71rdblj3L17fun58"
+							}
+						],
+						"url": {
+							"raw": "{{local_8000}}/api/user/feedSetting",
+							"host": [
+								"{{local_8000}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"feedSetting"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Feed setting",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0NjQwMzI5NCwiZXhwIjoxNjc3OTM5Mjk0LCJuYmYiOjE2NDY0MDMyOTQsImp0aSI6InNNb3VVUnZJMDZpTGFJMGsiLCJzdWIiOjYsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.48TcLMT6woznTNOsQjb27qDgP9B71rdblj3L17fun58"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "_method",
+									"value": "PUT",
+									"type": "text"
+								},
+								{
+									"key": "post_types[]",
+									"value": "ongoing_job",
+									"description": "\n",
+									"type": "text"
+								},
+								{
+									"key": "price_types[]",
+									"value": "hourly",
+									"type": "text"
+								},
+								{
+									"key": "skill_ids[]",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "skill_ids[]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "email_frequency",
+									"value": "onceADay",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local_8000}}/api/user/feedSetting",
+							"host": [
+								"{{local_8000}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"feedSetting"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Post",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0NzA5OTAzMiwiZXhwIjoxNjc4NjM1MDMyLCJuYmYiOjE2NDcwOTkwMzIsImp0aSI6IjBYNXNLVklBSWtlOWYza0kiLCJzdWIiOjEyLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.W5XiXN4yv9qjeQefXuzPfFjQnIJ1V5qaDUXYvPBZucU"
+							},
+							{
+								"key": "Agency-id",
+								"value": "31",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "post_type",
+									"value": "project",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "Project",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "<p>hello sample</p>",
+									"type": "text"
+								},
+								{
+									"key": "sub_service_id",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "price_type",
+									"value": "fixed",
+									"type": "text"
+								},
+								{
+									"key": "profile_type",
+									"value": "individual",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "exp_level",
+									"value": "expert",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "project_duration_weeks",
+									"value": "4",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "budget",
+									"value": "11",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "contractors_no",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "is_nda_required",
+									"value": "0",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "min_hrs_per_week",
+									"value": "2",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "max_hrs_per_week",
+									"value": "20",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "education_level",
+									"value": "bachelors",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "language_id",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "is_remote",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "contest_prize",
+									"value": "2000",
+									"type": "text"
+								},
+								{
+									"key": "contest_expire_at",
+									"value": "2022-03-16",
+									"type": "text"
+								},
+								{
+									"key": "city_ids[]",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "city_ids[]",
+									"value": "2",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "questions[]",
+									"value": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "questions[]",
+									"value": "sdsds",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "skill_ids[]",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "skill_ids[]",
+									"value": "2",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "is_private",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "invitation_profile_ids[]",
+									"value": "7",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "invitation_profile_ids[]",
+									"value": "13",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "attachments[]",
+									"value": "uploads/tmp/032022/02aafddcfa6ced409d75be69a691c7a6.jpg",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local_8000}}/api/post",
+							"host": [
+								"{{local_8000}}"
+							],
+							"path": [
+								"api",
+								"post"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "upload post attachment",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0NjY3MzkwMywiZXhwIjoxNjc4MjA5OTAzLCJuYmYiOjE2NDY2NzM5MDMsImp0aSI6IjNwSkxQdVR4T1huMnpQVHoiLCJzdWIiOjMsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Izsc22RoCutBDXZRt8PfBjNnrrYZZ0TmQkhEaOBbqbs"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"value": "",
+									"type": "file"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local_8000}}/api/post/attachment",
+							"host": [
+								"{{local_8000}}"
+							],
+							"path": [
+								"api",
+								"post",
+								"attachment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Suspend by client",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0MjQ0MDE3MSwiZXhwIjoxNjczOTc2MTcxLCJuYmYiOjE2NDI0NDAxNzEsImp0aSI6ImxYNWh4RG13WGRQUnpTbHoiLCJzdWIiOjIxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.mGCQmNXl4nYnQQapDQEIQ4GkZIWuzyN988BH8Ii7UTk"
+							},
+							{
+								"key": "Agency-id",
+								"value": "31"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "_method",
+									"value": "DELETE",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local_8000}}/api/post/3",
+							"host": [
+								"{{local_8000}}"
+							],
+							"path": [
+								"api",
+								"post",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0NzA5OTAzMiwiZXhwIjoxNjc4NjM1MDMyLCJuYmYiOjE2NDcwOTkwMzIsImp0aSI6IjBYNXNLVklBSWtlOWYza0kiLCJzdWIiOjEyLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.W5XiXN4yv9qjeQefXuzPfFjQnIJ1V5qaDUXYvPBZucU"
+							},
+							{
+								"key": "Agency-id",
+								"value": "11",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{local_8000}}/api/post/26",
+							"host": [
+								"{{local_8000}}"
+							],
+							"path": [
+								"api",
+								"post",
+								"26"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "posts I own",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0NzA5OTAzMiwiZXhwIjoxNjc4NjM1MDMyLCJuYmYiOjE2NDcwOTkwMzIsImp0aSI6IjBYNXNLVklBSWtlOWYza0kiLCJzdWIiOjEyLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.W5XiXN4yv9qjeQefXuzPfFjQnIJ1V5qaDUXYvPBZucU"
+							},
+							{
+								"key": "Agency-id",
+								"value": "31",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{local_8000}}/api/post/myPosts",
+							"host": [
+								"{{local_8000}}"
+							],
+							"path": [
+								"api",
+								"post",
+								"myPosts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "posts custom feed",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0NjQwMzI5NCwiZXhwIjoxNjc3OTM5Mjk0LCJuYmYiOjE2NDY0MDMyOTQsImp0aSI6InNNb3VVUnZJMDZpTGFJMGsiLCJzdWIiOjYsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.48TcLMT6woznTNOsQjb27qDgP9B71rdblj3L17fun58"
+							},
+							{
+								"key": "Agency-id",
+								"value": "31",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{local_8000}}/api/post/myFeed",
+							"host": [
+								"{{local_8000}}"
+							],
+							"path": [
+								"api",
+								"post",
+								"myFeed"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Post Queries (Not Required)",
+			"item": [
+				{
+					"name": "Submit query",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0NjQwMzE0MywiZXhwIjoxNjc3OTM5MTQzLCJuYmYiOjE2NDY0MDMxNDMsImp0aSI6ImFyTVp4bFhUTWxaa285RHciLCJzdWIiOjcsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.4fLYwEJj2Srn2ngeH7Vw71OKEyLZVxPmErZqTmbXvA0"
+							},
+							{
+								"key": "Agency-id",
+								"value": "31",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "question",
+									"value": "test question 4",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local_8000}}/api/post/query/2",
+							"host": [
+								"{{local_8000}}"
+							],
+							"path": [
+								"api",
+								"post",
+								"query",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Queries",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0NjQwMzI5NCwiZXhwIjoxNjc3OTM5Mjk0LCJuYmYiOjE2NDY0MDMyOTQsImp0aSI6InNNb3VVUnZJMDZpTGFJMGsiLCJzdWIiOjYsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.48TcLMT6woznTNOsQjb27qDgP9B71rdblj3L17fun58"
+							},
+							{
+								"key": "Agency-id",
+								"value": "31",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{local_8000}}/api/post/query/2/",
+							"host": [
+								"{{local_8000}}"
+							],
+							"path": [
+								"api",
+								"post",
+								"query",
+								"2",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show query",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0MjQ0MDE3MSwiZXhwIjoxNjczOTc2MTcxLCJuYmYiOjE2NDI0NDAxNzEsImp0aSI6ImxYNWh4RG13WGRQUnpTbHoiLCJzdWIiOjIxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.mGCQmNXl4nYnQQapDQEIQ4GkZIWuzyN988BH8Ii7UTk"
+							},
+							{
+								"key": "Agency-id",
+								"value": "31"
+							}
+						],
+						"url": {
+							"raw": "{{local_8000}}/api/post/query/12/3?includes=askedBy",
+							"host": [
+								"{{local_8000}}"
+							],
+							"path": [
+								"api",
+								"post",
+								"query",
+								"12",
+								"3"
+							],
+							"query": [
+								{
+									"key": "includes",
+									"value": "askedBy"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update query",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0NjQwMzE0MywiZXhwIjoxNjc3OTM5MTQzLCJuYmYiOjE2NDY0MDMxNDMsImp0aSI6ImFyTVp4bFhUTWxaa285RHciLCJzdWIiOjcsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.4fLYwEJj2Srn2ngeH7Vw71OKEyLZVxPmErZqTmbXvA0"
+							},
+							{
+								"key": "Agency-id",
+								"value": "31",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "_method",
+									"value": "PUT",
+									"type": "text"
+								},
+								{
+									"key": "question",
+									"value": "edited owmzds updated",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local_8000}}/api/post/query/2/4",
+							"host": [
+								"{{local_8000}}"
+							],
+							"path": [
+								"api",
+								"post",
+								"query",
+								"2",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Answer query",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0NjM4ODE4MywiZXhwIjoxNjc3OTI0MTgzLCJuYmYiOjE2NDYzODgxODMsImp0aSI6IlRqelQ4T0xRSjZPZFhQSUgiLCJzdWIiOjMsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.35WGOBOlEXJxHNUN7533WnWlKI5X7GXDK4HBK9V0gRI"
+							},
+							{
+								"key": "Agency-id",
+								"value": "31",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "_method",
+									"value": "PUT",
+									"type": "text"
+								},
+								{
+									"key": "answer",
+									"value": "updated answer 4",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local_8000}}/api/post/answerQuery/2/4",
+							"host": [
+								"{{local_8000}}"
+							],
+							"path": [
+								"api",
+								"post",
+								"answerQuery",
+								"2",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete query",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0NjQwMzE0MywiZXhwIjoxNjc3OTM5MTQzLCJuYmYiOjE2NDY0MDMxNDMsImp0aSI6ImFyTVp4bFhUTWxaa285RHciLCJzdWIiOjcsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.4fLYwEJj2Srn2ngeH7Vw71OKEyLZVxPmErZqTmbXvA0"
+							},
+							{
+								"key": "Agency-id",
+								"value": "31",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "_method",
+									"value": "DELETE",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local_8000}}/api/post/query/2/4",
+							"host": [
+								"{{local_8000}}"
+							],
+							"path": [
+								"api",
+								"post",
+								"query",
+								"2",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Master",
+			"item": [
+				{
+					"name": "services",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0NjQwMzE0MywiZXhwIjoxNjc3OTM5MTQzLCJuYmYiOjE2NDY0MDMxNDMsImp0aSI6ImFyTVp4bFhUTWxaa285RHciLCJzdWIiOjcsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.4fLYwEJj2Srn2ngeH7Vw71OKEyLZVxPmErZqTmbXvA0"
+							}
+						],
+						"url": {
+							"raw": "{{local_8000}}/api/masters/services",
+							"host": [
+								"{{local_8000}}"
+							],
+							"path": [
+								"api",
+								"masters",
+								"services"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "app masters",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0NjQwMzE0MywiZXhwIjoxNjc3OTM5MTQzLCJuYmYiOjE2NDY0MDMxNDMsImp0aSI6ImFyTVp4bFhUTWxaa285RHciLCJzdWIiOjcsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.4fLYwEJj2Srn2ngeH7Vw71OKEyLZVxPmErZqTmbXvA0"
+							}
+						],
+						"url": {
+							"raw": "{{local_8000}}/api/masters/app",
+							"host": [
+								"{{local_8000}}"
+							],
+							"path": [
+								"api",
+								"masters",
+								"app"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "skills",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0NjQwMzE0MywiZXhwIjoxNjc3OTM5MTQzLCJuYmYiOjE2NDY0MDMxNDMsImp0aSI6ImFyTVp4bFhUTWxaa285RHciLCJzdWIiOjcsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.4fLYwEJj2Srn2ngeH7Vw71OKEyLZVxPmErZqTmbXvA0"
+							}
+						],
+						"url": {
+							"raw": "{{local_8000}}/api/masters/skills",
+							"host": [
+								"{{local_8000}}"
+							],
+							"path": [
+								"api",
+								"masters",
+								"skills"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editPostMasters",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0MTEyNjQ1NywiZXhwIjoxNjcyNjYyNDU3LCJuYmYiOjE2NDExMjY0NTcsImp0aSI6Ik1hVTRKanZQRDNVcnRya3oiLCJzdWIiOjMsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Meh-oDjjdnNab76Y4EFjCQEXx150yAH5jxjr4vu5Jlc"
+							}
+						],
+						"url": {
+							"raw": "{{local_8000}}/api/master/editPostMasters",
+							"host": [
+								"{{local_8000}}"
+							],
+							"path": [
+								"api",
+								"master",
+								"editPostMasters"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Search",
+			"item": [
+				{
+					"name": "search skills",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0NjQwMzE0MywiZXhwIjoxNjc3OTM5MTQzLCJuYmYiOjE2NDY0MDMxNDMsImp0aSI6ImFyTVp4bFhUTWxaa285RHciLCJzdWIiOjcsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.4fLYwEJj2Srn2ngeH7Vw71OKEyLZVxPmErZqTmbXvA0"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "search_text",
+									"value": "php developers",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local_8000}}/api/user/searchSkill",
+							"host": [
+								"{{local_8000}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"searchSkill"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search posts",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0NjQwMzE0MywiZXhwIjoxNjc3OTM5MTQzLCJuYmYiOjE2NDY0MDMxNDMsImp0aSI6ImFyTVp4bFhUTWxaa285RHciLCJzdWIiOjcsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.4fLYwEJj2Srn2ngeH7Vw71OKEyLZVxPmErZqTmbXvA0"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "search_text",
+									"value": "hourly xyz contest",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "price_type",
+									"value": "hourly",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "sub_service_ids[]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "sub_service_ids[]",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "sub_service_ids[]",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "hourly_min_price",
+									"value": "22",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "hourly_max_price",
+									"value": "23",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "project_duration_min_weeks",
+									"value": "15",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "project_duration_max_weeks",
+									"value": "16",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "min_hrs_per_week",
+									"value": "4",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "skill_ids[]",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "skill_ids[]",
+									"value": "4",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "skill_ids[]",
+									"value": "3",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "min_client_rating",
+									"value": "3.5",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "post_types[]",
+									"value": "project",
+									"type": "text"
+								},
+								{
+									"key": "post_types[]",
+									"value": "enquiry",
+									"type": "text"
+								},
+								{
+									"key": "post_types[]",
+									"value": "ongoing_job",
+									"type": "text"
+								},
+								{
+									"key": "post_types[]",
+									"value": "contest",
+									"type": "text"
+								},
+								{
+									"key": "sort_by",
+									"value": "newest",
+									"type": "text"
+								},
+								{
+									"key": "weekly_min_price",
+									"value": "11",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "weekly_max_price",
+									"value": "100000",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "client_country_ids[]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "client_country_ids[]",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local_8000}}/api/post/search",
+							"host": [
+								"{{local_8000}}"
+							],
+							"path": [
+								"api",
+								"post",
+								"search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search contractors",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0NjgyNjQ0OSwiZXhwIjoxNjc4MzYyNDQ5LCJuYmYiOjE2NDY4MjY0NDksImp0aSI6InJJTEVETENFWmJ4OWRyclgiLCJzdWIiOjMsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.BpalElF5g6aZpH4rdUx5QIoNIBv_LjvXmCjwfJH7tEQ"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "search_text",
+									"value": "contractor6@gmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local_8000}}/api/user/searchContractor",
+							"host": [
+								"{{local_8000}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"searchContractor"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Contest",
+			"item": [
+				{
+					"name": "fund contest",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0NzA5OTAzMiwiZXhwIjoxNjc4NjM1MDMyLCJuYmYiOjE2NDcwOTkwMzIsImp0aSI6IjBYNXNLVklBSWtlOWYza0kiLCJzdWIiOjEyLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.W5XiXN4yv9qjeQefXuzPfFjQnIJ1V5qaDUXYvPBZucU"
+							},
+							{
+								"key": "Agency-id",
+								"value": "31",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "amount",
+									"value": "200",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local_8000}}/api/contest/fund/13",
+							"host": [
+								"{{local_8000}}"
+							],
+							"path": [
+								"api",
+								"contest",
+								"fund",
+								"13"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "npm post test",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"new course\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/courses",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"courses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "extend contest",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0NzA5OTAzMiwiZXhwIjoxNjc4NjM1MDMyLCJuYmYiOjE2NDcwOTkwMzIsImp0aSI6IjBYNXNLVklBSWtlOWYza0kiLCJzdWIiOjEyLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.W5XiXN4yv9qjeQefXuzPfFjQnIJ1V5qaDUXYvPBZucU"
+							},
+							{
+								"key": "Agency-id",
+								"value": "11",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "contest_expire_at",
+									"value": "2022-03-17",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local_8000}}/api/contest/extend/13",
+							"host": [
+								"{{local_8000}}"
+							],
+							"path": [
+								"api",
+								"contest",
+								"extend",
+								"13"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "participate",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0NjQwMzA4NSwiZXhwIjoxNjc3OTM5MDg1LCJuYmYiOjE2NDY0MDMwODUsImp0aSI6Ik9kZ3cxQnFjczlNY2xDWmYiLCJzdWIiOjgsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.BNW4BVs_TPczoHb96usS3Y3dir7aDsMpC0ohuhljc64"
+							},
+							{
+								"key": "Agency-id",
+								"value": "14",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "agency_member_ids[]",
+									"value": "6",
+									"type": "text"
+								},
+								{
+									"key": "agency_member_ids[]",
+									"value": "8",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local_8000}}/api/contest/participate/13",
+							"host": [
+								"{{local_8000}}"
+							],
+							"path": [
+								"api",
+								"contest",
+								"participate",
+								"13"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "contestants",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0NzA5OTAzMiwiZXhwIjoxNjc4NjM1MDMyLCJuYmYiOjE2NDcwOTkwMzIsImp0aSI6IjBYNXNLVklBSWtlOWYza0kiLCJzdWIiOjEyLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.W5XiXN4yv9qjeQefXuzPfFjQnIJ1V5qaDUXYvPBZucU"
+							},
+							{
+								"key": "Agency-id",
+								"value": "11",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{local_8000}}/api/contest/contestants/13/active",
+							"host": [
+								"{{local_8000}}"
+							],
+							"path": [
+								"api",
+								"contest",
+								"contestants",
+								"13",
+								"active"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "submit deliverables",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0NjQwMzA4NSwiZXhwIjoxNjc3OTM5MDg1LCJuYmYiOjE2NDY0MDMwODUsImp0aSI6Ik9kZ3cxQnFjczlNY2xDWmYiLCJzdWIiOjgsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.BNW4BVs_TPczoHb96usS3Y3dir7aDsMpC0ohuhljc64"
+							},
+							{
+								"key": "Agency-id",
+								"value": "11",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "remarks",
+									"value": "submission2",
+									"type": "text"
+								},
+								{
+									"key": "attachments[]",
+									"value": "uploads/tmp/032022/9ca050be02adbb476f255b8b73c18d0e.jpg",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "attachments[]",
+									"value": "uploads/tmp/032022/e92f51fbf432892d007991f8aa81b47d.jpg",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local_8000}}/api/contest/submit/13",
+							"host": [
+								"{{local_8000}}"
+							],
+							"path": [
+								"api",
+								"contest",
+								"submit",
+								"13"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "My submissions",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0NjQwMzA4NSwiZXhwIjoxNjc3OTM5MDg1LCJuYmYiOjE2NDY0MDMwODUsImp0aSI6Ik9kZ3cxQnFjczlNY2xDWmYiLCJzdWIiOjgsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.BNW4BVs_TPczoHb96usS3Y3dir7aDsMpC0ohuhljc64"
+							},
+							{
+								"key": "Agency-id",
+								"value": "11",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{local_8000}}/api/contest/mySubmissions/13",
+							"host": [
+								"{{local_8000}}"
+							],
+							"path": [
+								"api",
+								"contest",
+								"mySubmissions",
+								"13"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Received submissions",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0NzA5OTAzMiwiZXhwIjoxNjc4NjM1MDMyLCJuYmYiOjE2NDcwOTkwMzIsImp0aSI6IjBYNXNLVklBSWtlOWYza0kiLCJzdWIiOjEyLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.W5XiXN4yv9qjeQefXuzPfFjQnIJ1V5qaDUXYvPBZucU"
+							},
+							{
+								"key": "Agency-id",
+								"value": "11",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{local_8000}}/api/contest/submissions/13/8",
+							"host": [
+								"{{local_8000}}"
+							],
+							"path": [
+								"api",
+								"contest",
+								"submissions",
+								"13",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Review contest submission",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0NzA5OTAzMiwiZXhwIjoxNjc4NjM1MDMyLCJuYmYiOjE2NDcwOTkwMzIsImp0aSI6IjBYNXNLVklBSWtlOWYza0kiLCJzdWIiOjEyLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.W5XiXN4yv9qjeQefXuzPfFjQnIJ1V5qaDUXYvPBZucU"
+							},
+							{
+								"key": "Agency-id",
+								"value": "11",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "remarks",
+									"value": "review remarks4",
+									"type": "text"
+								},
+								{
+									"key": "attachments[]",
+									"value": "uploads/tmp/032022/10c7027dd636793a7c0bd86116f98b6e.jpg",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "attachments[]",
+									"value": "uploads/tmp/032022/e92f51fbf432892d007991f8aa81b47d.jpg",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local_8000}}/api/contest/review/13/3",
+							"host": [
+								"{{local_8000}}"
+							],
+							"path": [
+								"api",
+								"contest",
+								"review",
+								"13",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminate contestant",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0NzA5OTAzMiwiZXhwIjoxNjc4NjM1MDMyLCJuYmYiOjE2NDcwOTkwMzIsImp0aSI6IjBYNXNLVklBSWtlOWYza0kiLCJzdWIiOjEyLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.W5XiXN4yv9qjeQefXuzPfFjQnIJ1V5qaDUXYvPBZucU"
+							},
+							{
+								"key": "Agency-id",
+								"value": "11",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "remarks",
+									"value": "review remarks4",
+									"type": "text"
+								},
+								{
+									"key": "attachments[]",
+									"value": "uploads/tmp/032022/10c7027dd636793a7c0bd86116f98b6e.jpg",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "attachments[]",
+									"value": "uploads/tmp/032022/e92f51fbf432892d007991f8aa81b47d.jpg",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local_8000}}/api/contest/eliminate/13/8",
+							"host": [
+								"{{local_8000}}"
+							],
+							"path": [
+								"api",
+								"contest",
+								"eliminate",
+								"13",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Declare winner",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0NzA5OTAzMiwiZXhwIjoxNjc4NjM1MDMyLCJuYmYiOjE2NDcwOTkwMzIsImp0aSI6IjBYNXNLVklBSWtlOWYza0kiLCJzdWIiOjEyLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.W5XiXN4yv9qjeQefXuzPfFjQnIJ1V5qaDUXYvPBZucU"
+							},
+							{
+								"key": "Agency-id",
+								"value": "11",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{local_8000}}/api/contest/declareWinner/13/8",
+							"host": [
+								"{{local_8000}}"
+							],
+							"path": [
+								"api",
+								"contest",
+								"declareWinner",
+								"13",
+								"8"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Proposals",
+			"item": [
+				{
+					"name": "submit project proposal",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0NjQwMzI5NCwiZXhwIjoxNjc3OTM5Mjk0LCJuYmYiOjE2NDY0MDMyOTQsImp0aSI6InNNb3VVUnZJMDZpTGFJMGsiLCJzdWIiOjYsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.48TcLMT6woznTNOsQjb27qDgP9B71rdblj3L17fun58"
+							},
+							{
+								"key": "Agency-id",
+								"value": "11"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "agency_member_ids[]",
+									"value": "6",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "agency_member_ids[]",
+									"value": "7",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "price",
+									"value": "500",
+									"type": "text"
+								},
+								{
+									"key": "validity",
+									"value": "2022-03-20",
+									"type": "text"
+								},
+								{
+									"key": "project_execution_weeks",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "interview_answers[]",
+									"value": "answer to question1",
+									"type": "text"
+								},
+								{
+									"key": "interview_answers[]",
+									"value": "answer to question2",
+									"type": "text"
+								},
+								{
+									"key": "proposal_specific_project_ids[]",
+									"value": "13",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "profile_project_ids[]",
+									"value": "7",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "availability",
+									"value": "2022-03-20",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local_8000}}/api/proposal/project/26",
+							"host": [
+								"{{local_8000}}"
+							],
+							"path": [
+								"api",
+								"proposal",
+								"project",
+								"26"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "submit regularJob proposal",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0NjQwMzI5NCwiZXhwIjoxNjc3OTM5Mjk0LCJuYmYiOjE2NDY0MDMyOTQsImp0aSI6InNNb3VVUnZJMDZpTGFJMGsiLCJzdWIiOjYsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.48TcLMT6woznTNOsQjb27qDgP9B71rdblj3L17fun58"
+							},
+							{
+								"key": "Agency-id",
+								"value": "11"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{local_8000}}/api/proposal/ongoingJob/11",
+							"host": [
+								"{{local_8000}}"
+							],
+							"path": [
+								"api",
+								"proposal",
+								"ongoingJob",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "submit contest proposal",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0NjQwMzI5NCwiZXhwIjoxNjc3OTM5Mjk0LCJuYmYiOjE2NDY0MDMyOTQsImp0aSI6InNNb3VVUnZJMDZpTGFJMGsiLCJzdWIiOjYsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.48TcLMT6woznTNOsQjb27qDgP9B71rdblj3L17fun58"
+							},
+							{
+								"key": "Agency-id",
+								"value": "11"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "post_id",
+									"value": "23",
+									"type": "text"
+								},
+								{
+									"key": "agency_member_ids[]",
+									"value": "11",
+									"type": "text"
+								},
+								{
+									"key": "agency_member_ids[]",
+									"value": "13",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local_8000}}/api/proposal/contest/12",
+							"host": [
+								"{{local_8000}}"
+							],
+							"path": [
+								"api",
+								"proposal",
+								"contest",
+								"12"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Proposals sent",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0NjQwMzI5NCwiZXhwIjoxNjc3OTM5Mjk0LCJuYmYiOjE2NDY0MDMyOTQsImp0aSI6InNNb3VVUnZJMDZpTGFJMGsiLCJzdWIiOjYsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.48TcLMT6woznTNOsQjb27qDgP9B71rdblj3L17fun58"
+							},
+							{
+								"key": "Agency-id",
+								"value": "11",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{local_8000}}/api/proposal/sent",
+							"host": [
+								"{{local_8000}}"
+							],
+							"path": [
+								"api",
+								"proposal",
+								"sent"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Proposals received",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0NzA5OTAzMiwiZXhwIjoxNjc4NjM1MDMyLCJuYmYiOjE2NDcwOTkwMzIsImp0aSI6IjBYNXNLVklBSWtlOWYza0kiLCJzdWIiOjEyLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.W5XiXN4yv9qjeQefXuzPfFjQnIJ1V5qaDUXYvPBZucU"
+							},
+							{
+								"key": "Agency-id",
+								"value": "31",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{local_8000}}/api/proposal/received/26/",
+							"host": [
+								"{{local_8000}}"
+							],
+							"path": [
+								"api",
+								"proposal",
+								"received",
+								"26",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cancel Proposal",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0NjQwMzE0MywiZXhwIjoxNjc3OTM5MTQzLCJuYmYiOjE2NDY0MDMxNDMsImp0aSI6ImFyTVp4bFhUTWxaa285RHciLCJzdWIiOjcsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.4fLYwEJj2Srn2ngeH7Vw71OKEyLZVxPmErZqTmbXvA0"
+							},
+							{
+								"key": "Agency-id",
+								"value": "38",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{local_8000}}/api/proposal/cancel/2/2",
+							"host": [
+								"{{local_8000}}"
+							],
+							"path": [
+								"api",
+								"proposal",
+								"cancel",
+								"2",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Accept nda",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0NjQwMzI5NCwiZXhwIjoxNjc3OTM5Mjk0LCJuYmYiOjE2NDY0MDMyOTQsImp0aSI6InNNb3VVUnZJMDZpTGFJMGsiLCJzdWIiOjYsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.48TcLMT6woznTNOsQjb27qDgP9B71rdblj3L17fun58"
+							},
+							{
+								"key": "Agency-id",
+								"value": "11",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{local_8000}}/api/proposal/acceptNda/2",
+							"host": [
+								"{{local_8000}}"
+							],
+							"path": [
+								"api",
+								"proposal",
+								"acceptNda",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Accept Proposal",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0NzA5OTAzMiwiZXhwIjoxNjc4NjM1MDMyLCJuYmYiOjE2NDcwOTkwMzIsImp0aSI6IjBYNXNLVklBSWtlOWYza0kiLCJzdWIiOjEyLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.W5XiXN4yv9qjeQefXuzPfFjQnIJ1V5qaDUXYvPBZucU"
+							},
+							{
+								"key": "Agency-id",
+								"value": "31"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{local_8000}}/api/proposal/accept/26/16",
+							"host": [
+								"{{local_8000}}"
+							],
+							"path": [
+								"api",
+								"proposal",
+								"accept",
+								"26",
+								"16"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cancel Acceptance",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0NjM4ODE4MywiZXhwIjoxNjc3OTI0MTgzLCJuYmYiOjE2NDYzODgxODMsImp0aSI6IlRqelQ4T0xRSjZPZFhQSUgiLCJzdWIiOjMsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.35WGOBOlEXJxHNUN7533WnWlKI5X7GXDK4HBK9V0gRI"
+							},
+							{
+								"key": "Agency-id",
+								"value": "31",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{local_8000}}/api/proposal/cancelAcceptance/2/14",
+							"host": [
+								"{{local_8000}}"
+							],
+							"path": [
+								"api",
+								"proposal",
+								"cancelAcceptance",
+								"2",
+								"14"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Confirm participation",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0NjQwMzI5NCwiZXhwIjoxNjc3OTM5Mjk0LCJuYmYiOjE2NDY0MDMyOTQsImp0aSI6InNNb3VVUnZJMDZpTGFJMGsiLCJzdWIiOjYsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.48TcLMT6woznTNOsQjb27qDgP9B71rdblj3L17fun58"
+							},
+							{
+								"key": "Agency-id",
+								"value": "11"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{local_8000}}/api/proposal/confirmParticipation/26/16",
+							"host": [
+								"{{local_8000}}"
+							],
+							"path": [
+								"api",
+								"proposal",
+								"confirmParticipation",
+								"26",
+								"16"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Contract",
+			"item": [
+				{
+					"name": "contracts",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0NzA5OTAzMiwiZXhwIjoxNjc4NjM1MDMyLCJuYmYiOjE2NDcwOTkwMzIsImp0aSI6IjBYNXNLVklBSWtlOWYza0kiLCJzdWIiOjEyLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.W5XiXN4yv9qjeQefXuzPfFjQnIJ1V5qaDUXYvPBZucU"
+							},
+							{
+								"key": "Agency-id",
+								"value": "31",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{local_8000}}/api/contract",
+							"host": [
+								"{{local_8000}}"
+							],
+							"path": [
+								"api",
+								"contract"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get min advance required",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0NzA5OTAzMiwiZXhwIjoxNjc4NjM1MDMyLCJuYmYiOjE2NDcwOTkwMzIsImp0aSI6IjBYNXNLVklBSWtlOWYza0kiLCJzdWIiOjEyLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.W5XiXN4yv9qjeQefXuzPfFjQnIJ1V5qaDUXYvPBZucU"
+							},
+							{
+								"key": "Agency-id",
+								"value": "31",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{local_8000}}/api/contract/getMinimumAdvance/9",
+							"host": [
+								"{{local_8000}}"
+							],
+							"path": [
+								"api",
+								"contract",
+								"getMinimumAdvance",
+								"9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pay advance",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0NzA5OTAzMiwiZXhwIjoxNjc4NjM1MDMyLCJuYmYiOjE2NDcwOTkwMzIsImp0aSI6IjBYNXNLVklBSWtlOWYza0kiLCJzdWIiOjEyLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.W5XiXN4yv9qjeQefXuzPfFjQnIJ1V5qaDUXYvPBZucU"
+							},
+							{
+								"key": "Agency-id",
+								"value": "31",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "amount",
+									"value": "100",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local_8000}}/api/contract/payAdvance/9",
+							"host": [
+								"{{local_8000}}"
+							],
+							"path": [
+								"api",
+								"contract",
+								"payAdvance",
+								"9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create stages",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0NzA5OTAzMiwiZXhwIjoxNjc4NjM1MDMyLCJuYmYiOjE2NDcwOTkwMzIsImp0aSI6IjBYNXNLVklBSWtlOWYza0kiLCJzdWIiOjEyLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.W5XiXN4yv9qjeQefXuzPfFjQnIJ1V5qaDUXYvPBZucU"
+							},
+							{
+								"key": "Agency-id",
+								"value": "31",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title[]",
+									"value": "Stage1",
+									"type": "text"
+								},
+								{
+									"key": "description[]",
+									"value": "Stage1 description",
+									"type": "text"
+								},
+								{
+									"key": "deadline_date[]",
+									"value": "2022-03-20",
+									"type": "text"
+								},
+								{
+									"key": "price[]",
+									"value": "300",
+									"type": "text"
+								},
+								{
+									"key": "title[]",
+									"value": "stage2",
+									"type": "text"
+								},
+								{
+									"key": "price[]",
+									"value": "100",
+									"type": "text"
+								},
+								{
+									"key": "deadline_date[]",
+									"value": "2022-03-17",
+									"type": "text"
+								},
+								{
+									"key": "description[]",
+									"value": "Stage2 description",
+									"type": "text"
+								},
+								{
+									"key": "deadline_date[]",
+									"value": "2022-03-17",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local_8000}}/api/contract/createStages/9",
+							"host": [
+								"{{local_8000}}"
+							],
+							"path": [
+								"api",
+								"contract",
+								"createStages",
+								"9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add stage",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0NzA5OTAzMiwiZXhwIjoxNjc4NjM1MDMyLCJuYmYiOjE2NDcwOTkwMzIsImp0aSI6IjBYNXNLVklBSWtlOWYza0kiLCJzdWIiOjEyLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.W5XiXN4yv9qjeQefXuzPfFjQnIJ1V5qaDUXYvPBZucU"
+							},
+							{
+								"key": "Agency-id",
+								"value": "31",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Stage4",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Stage4 description",
+									"type": "text"
+								},
+								{
+									"key": "deadline_date",
+									"value": "2022-03-24",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "50",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local_8000}}/api/contract/createStage/9",
+							"host": [
+								"{{local_8000}}"
+							],
+							"path": [
+								"api",
+								"contract",
+								"createStage",
+								"9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Stages",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0NjQwMzI5NCwiZXhwIjoxNjc3OTM5Mjk0LCJuYmYiOjE2NDY0MDMyOTQsImp0aSI6InNNb3VVUnZJMDZpTGFJMGsiLCJzdWIiOjYsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.48TcLMT6woznTNOsQjb27qDgP9B71rdblj3L17fun58"
+							},
+							{
+								"key": "Agency-id",
+								"value": "11"
+							}
+						],
+						"url": {
+							"raw": "{{local_8000}}/api/contract/stages/9",
+							"host": [
+								"{{local_8000}}"
+							],
+							"path": [
+								"api",
+								"contract",
+								"stages",
+								"9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Accept stages",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0NjQwMzI5NCwiZXhwIjoxNjc3OTM5Mjk0LCJuYmYiOjE2NDY0MDMyOTQsImp0aSI6InNNb3VVUnZJMDZpTGFJMGsiLCJzdWIiOjYsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.48TcLMT6woznTNOsQjb27qDgP9B71rdblj3L17fun58"
+							},
+							{
+								"key": "Agency-id",
+								"value": "11"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title[]",
+									"value": "Stage1",
+									"type": "text"
+								},
+								{
+									"key": "description[]",
+									"value": "Stage1 description",
+									"type": "text"
+								},
+								{
+									"key": "deadline_date[]",
+									"value": "2022-03-20",
+									"type": "text"
+								},
+								{
+									"key": "price[]",
+									"value": "300",
+									"type": "text"
+								},
+								{
+									"key": "title[]",
+									"value": "stage2",
+									"type": "text"
+								},
+								{
+									"key": "price[]",
+									"value": "100",
+									"type": "text"
+								},
+								{
+									"key": "deadline_date[]",
+									"value": "2022-03-17",
+									"type": "text"
+								},
+								{
+									"key": "description[]",
+									"value": "Stage2 description",
+									"type": "text"
+								},
+								{
+									"key": "deadline_date[]",
+									"value": "2022-03-17",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local_8000}}/api/contract/acceptStages/9",
+							"host": [
+								"{{local_8000}}"
+							],
+							"path": [
+								"api",
+								"contract",
+								"acceptStages",
+								"9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Feedback",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0MjQ0MDE3MSwiZXhwIjoxNjczOTc2MTcxLCJuYmYiOjE2NDI0NDAxNzEsImp0aSI6ImxYNWh4RG13WGRQUnpTbHoiLCJzdWIiOjIxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.mGCQmNXl4nYnQQapDQEIQ4GkZIWuzyN988BH8Ii7UTk"
+							},
+							{
+								"key": "Agency-id",
+								"value": "31"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "amount",
+									"value": "100000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local_8000}}/api/contract/feedback/1",
+							"host": [
+								"{{local_8000}}"
+							],
+							"path": [
+								"api",
+								"contract",
+								"feedback",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Backend",
+			"item": [
+				{
+					"name": "UserProfile",
+					"item": [
+						{
+							"name": "User docs",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0NjM4ODQwNywiZXhwIjoxNjc3OTI0NDA3LCJuYmYiOjE2NDYzODg0MDcsImp0aSI6ImVHN2k0NTJ4WUNpZDZQYUwiLCJzdWIiOjIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.baPuC2M1FCDtW3TcXjvoCTZXf9RYI2F8k6ZfdSkIsLA"
+									}
+								],
+								"url": {
+									"raw": "{{local_8000}}/api/backend/user/docs/20",
+									"host": [
+										"{{local_8000}}"
+									],
+									"path": [
+										"api",
+										"backend",
+										"user",
+										"docs",
+										"20"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Agency docs",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0NjM4ODQwNywiZXhwIjoxNjc3OTI0NDA3LCJuYmYiOjE2NDYzODg0MDcsImp0aSI6ImVHN2k0NTJ4WUNpZDZQYUwiLCJzdWIiOjIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.baPuC2M1FCDtW3TcXjvoCTZXf9RYI2F8k6ZfdSkIsLA"
+									}
+								],
+								"url": {
+									"raw": "{{local_8000}}/api/backend/agency/docs/11",
+									"host": [
+										"{{local_8000}}"
+									],
+									"path": [
+										"api",
+										"backend",
+										"agency",
+										"docs",
+										"11"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Verify User",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0NjM4ODQwNywiZXhwIjoxNjc3OTI0NDA3LCJuYmYiOjE2NDYzODg0MDcsImp0aSI6ImVHN2k0NTJ4WUNpZDZQYUwiLCJzdWIiOjIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.baPuC2M1FCDtW3TcXjvoCTZXf9RYI2F8k6ZfdSkIsLA"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "_method",
+											"value": "PUT",
+											"type": "text"
+										},
+										{
+											"key": "user_profile_id",
+											"value": "20",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "remarks",
+											"value": "Verif done",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local_8000}}/api/backend/user/verify",
+									"host": [
+										"{{local_8000}}"
+									],
+									"path": [
+										"api",
+										"backend",
+										"user",
+										"verify"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Verify Agency",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY0NjM4ODQwNywiZXhwIjoxNjc3OTI0NDA3LCJuYmYiOjE2NDYzODg0MDcsImp0aSI6ImVHN2k0NTJ4WUNpZDZQYUwiLCJzdWIiOjIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.baPuC2M1FCDtW3TcXjvoCTZXf9RYI2F8k6ZfdSkIsLA"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "_method",
+											"value": "PUT",
+											"type": "text"
+										},
+										{
+											"key": "agency_id",
+											"value": "14",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "remarks",
+											"value": "Test verfiied remarks",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local_8000}}/api/backend/agency/verify",
+									"host": [
+										"{{local_8000}}"
+									],
+									"path": [
+										"api",
+										"backend",
+										"agency",
+										"verify"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
