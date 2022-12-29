@@ -1,0 +1,12 @@
+[1] Full concept in Github
+https://github.com/ShuvobrotoBiswas/Emotion-Recognetion
+14/05/2022 , 02:30AM , Shuvobroto Biswas
+[2] Concept , Edureka
+https://www.edureka.co/blog/tensorflow-object-detection-tutorial/
+Kislay Keshari, Last updated on Dec 19,2021
+[3] Video Concept , Youtube
+https://www.youtube.com/watch?v=fkgpvkqcoJc
+DeepLearning_by_PhDScholar, Sep 26, 2020
+[4] Dataset , Edureka
+https://www.dropbox.com/s/w3zlhing4dkgeyb/train.zip?dl=0
+Academy NIT Warangal, Sep 17, 2021
